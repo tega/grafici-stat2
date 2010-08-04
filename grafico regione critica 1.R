@@ -17,8 +17,8 @@ testUnilateraleDestro <- function() {
   plot(x,y,type="l",lwd=2,xlim=c(xMin,xMax),ylim=c(yMin,yMax),xlab=expression(x[1]),ylab=expression(x[2]),
 		  panel.first=polygon(xPol,yPol,col="lightcyan",border = NA))
 
-  text(-0.548,-0.537,expression(paste("Non rifiuto", H[0])))
-  text(-0.546,0.-0.530,expression(paste("Rifiuto", H[0])))
+  text(-0.548,-0.537,expression(paste("Non rifiuto ", H[0])))
+  text(-0.546,0.-0.530,expression(paste("Rifiuto ", H[0])))
 }
 testUnilateraleDestro()
 print("");
@@ -53,10 +53,10 @@ testBilaterale <- function() {
     
 	lines(x,y1,lwd=2)
 
-	text(0.58,0.62,expression(paste("Non rifiuto", H[0])))
-	text(0.62,0.63,expression(paste("Rifiuto", H[0])))
+	text(0.58,0.62,expression(paste("Non rifiuto ", H[0])))
+	text(0.62,0.63,expression(paste("Rifiuto ", H[0])))
 	text(0.62,0.64,label="R")
-	text(x=0.57,y=0.57,labels=expression(paste("Rifiuto", H[0])))
+	text(x=0.57,y=0.57,labels=expression(paste("Rifiuto ", H[0])))
 	text(0.57,0.58,label="R")
 }
 
@@ -83,8 +83,8 @@ regioneCritica3 <- function() {
   
 
   
-  text(-0.55,-0.55,expression(paste("Non rifiuto", H[0])))
-  text(-0.54,0.-0.535,expression(paste("Rifiuto", H[0])))
+  text(-0.55,-0.55,expression(paste("Non rifiuto ", H[0])))
+  text(-0.54,0.-0.535,expression(paste("Rifiuto ", H[0])))
 }
 
 regioneCritica3()
