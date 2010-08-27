@@ -20,7 +20,7 @@ lines(x,y,type="l")
 text(3.5, 0.7, 
 		expression(f(x)==frac(1, sigma*sqrt(2*pi))~ ~exp~ ~
 						bgroup("(",-~ ~frac((x-mu)^2, 2~ ~sigma^2),")")
-				)
+		)
 		,cex = 1
 )
 
