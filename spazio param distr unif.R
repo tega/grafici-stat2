@@ -12,7 +12,8 @@ spazioParamDistrUnif <- function() {
 
 	# esegui il plot
 	plot(-5:5,-5:5,type="l",lwd=2,xlab="a",ylab="b",
-			panel.first=polygon(x,y,col="lightcyan",border = NA))
+			panel.first=polygon(x,y,col="lightcyan",border = NA),
+			las=1)
 
 	abline(h=0)
 	abline(v=0)

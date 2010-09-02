@@ -33,3 +33,26 @@ text(-2, 0.35,
 		)
 		,cex = 1
 )
+
+
+account <- function() 
+{
+	a <- list()
+	saldo = 0
+	a$aggiungi <- function(x){saldo <<- x+saldo}
+	a$togli <- function(x){saldo <<- -x+saldo}
+	a$print <- function(){print(saldo)}
+	return(a)
+}
+
+
+modifica_account <- function(x) {x$aggiungi(20)}
+f <- function() {
+	y <- 10
+	g <- function(x) x + y
+	
+	return(g)
+}
+
+
+
