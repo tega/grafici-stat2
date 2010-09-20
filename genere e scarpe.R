@@ -4,9 +4,7 @@
 ###############################################################################
 
 
-dati <- read.csv(file=paste("\\\\usi/dfs/Utenti/O/ortellic/",
-				"My Documents/corsiMiei/Statistica II/",
-				"dati genere e numero scarpa 2009.csv",sep=""),
+dati <- read.csv(file="dati genere e numero scarpa 2009.csv",
 		header=TRUE)
 
 y <- as.vector(table(dati[,1])/nrow(dati))

@@ -66,6 +66,6 @@ for (i in 1:6) {
 		text(i,j-0.1,labels=paste("(",i,",",j,")"),cex=0.75)
 	}
 }
-
+text(4.55,4.55,label=expression(E))
 
 

@@ -8,8 +8,10 @@ x <- seq(-4,5,length.out = 100)
 
 y <- dnorm(x,mean=1.5,sd=1)
 plot(x,y,xlab="x",type="l",lty=1,
-		las=1,ylab=expression(f(x)),main="Funzione di densità della distribuzione Normale")
-
+		las=1,ylab=expression(f(x)),main="Funzione di densita' della distribuzione Normale",
+		axes=FALSE,xlim=c(-4,5),ylim=c(0,0.4))
+Axis(at=(0:4)/10,side=2,las=1)
+Axis(at=-4:5,side=1)
 
 y <- dnorm(x,mean=0,sd=2)
 lines(x,y,type="l",lty=2)
@@ -33,26 +35,4 @@ text(-2, 0.35,
 		)
 		,cex = 1
 )
-
-
-account <- function() 
-{
-	a <- list()
-	saldo = 0
-	a$aggiungi <- function(x){saldo <<- x+saldo}
-	a$togli <- function(x){saldo <<- -x+saldo}
-	a$print <- function(){print(saldo)}
-	return(a)
-}
-
-
-modifica_account <- function(x) {x$aggiungi(20)}
-f <- function() {
-	y <- 10
-	g <- function(x) x + y
-	
-	return(g)
-}
-
-
 
