@@ -3,9 +3,12 @@
 # Author: ortellic
 ###############################################################################
 
+#jpeg(file="funzioneRipartizioneUniformeDiscreta.jpg")
+pdf(file="funzioneRipartizioneUniformeDiscreta.pdf")
 
 plot(x=ecdf(seq(0.2,1,by=0.2)),ylab="F(x)",
-		main="Distribuzione Uniforme",
+#		main="Distribuzione Uniforme",
+		main="",
 		axes=FALSE
 )
 
@@ -18,7 +21,11 @@ text(0.35,0.9,
 		),
 		cex = 1.7
 )
+dev.off()
 
+
+
+pdf(file="funzioneRipartizioneUniformeContinua.pdf")
 x = seq(0,1.2,by=0.2)
 y = punif(x, min=0, max=1)
 x = c(-0.2,x)
@@ -38,3 +45,4 @@ text(0.2,0.9,
 		),
 		cex=1.7
 )
+def.off()

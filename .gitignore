@@ -1,3 +1,7 @@
 .project
 .RData
 *.pdf
+*.toc
+*.aux
+*.lyx~
+*.log
