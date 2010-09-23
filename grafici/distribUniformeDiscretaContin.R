@@ -32,7 +32,8 @@ x = c(-0.2,x)
 y = c(0,y)
 
 plot(x,y,ylab="F(x)",type="l",
-		main="Distribuzione Uniforme",
+#		main="Distribuzione Uniforme",
+		main="",
 		axes=FALSE
 )
 
@@ -45,4 +46,4 @@ text(0.2,0.9,
 		),
 		cex=1.7
 )
-def.off()
+dev.off()

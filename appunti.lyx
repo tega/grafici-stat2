@@ -51,6 +51,7 @@
 \tracking_changes false
 \output_changes false
 \author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -1317,22 +1318,6 @@ status collapsed
 
 
 \backslash
-pagebreak
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
 begin{esempio}
 \end_layout
 
@@ -1362,6 +1347,7 @@ end{esempio}
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1369,7 +1355,8 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename grafici/funzioneRipartizioneUnivormeDiscreta.pdf
+	filename grafici/funzioneRipartizioneUniformeDiscreta.pdf
+	scale 40
 
 \end_inset
 
@@ -1383,26 +1370,6 @@ Distribuzione uniforme discreta
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagebreak
 \end_layout
 
 \end_inset
@@ -1437,6 +1404,38 @@ status collapsed
 
 \backslash
 end{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename grafici/funzioneRipartizioneUniformeContinua.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Distribuzione uniforme continua
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
