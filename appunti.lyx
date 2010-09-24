@@ -1355,7 +1355,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename grafici/funzioneRipartizioneUniformeDiscreta.pdf
+	filename codiceR/grafici/funzioneRipartizioneUniformeDiscreta.pdf
 	scale 40
 
 \end_inset
@@ -1421,7 +1421,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename grafici/funzioneRipartizioneUniformeContinua.pdf
+	filename codiceR/grafici/funzioneRipartizioneUniformeContinua.pdf
 	scale 40
 
 \end_inset
@@ -1533,6 +1533,52 @@ si statistica è la definizione di una popolazione obiettivo (o popolazione
 \end_layout
 
 \begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename codiceR/grafici/numeroScarpeUomoDonnaFreqRelative.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename codiceR/grafici/numeroScarpeFreqRelative.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Frequenze relative popolazione studenti Statistica II - 2009
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 Notiamo che la seconda caratteristica è numerica.
  In questo semplice e\SpecialChar \-
@@ -1552,22 +1598,6 @@ pio non abbiamo definito delle classi di valore:
  hanno un peso superiore a 72 chilogrammi.
  Per tale motivo quando abbiamo a che fare con caratteristiche numeriche
  preferiamo studiare la funzione di ripartizione della popolazione obiettivo.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagebreak
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1616,6 +1646,46 @@ status collapsed
 
 \backslash
 end{definizione}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/numeroScarpeFunzioneRipartizione.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Funzione di ripartizione del numero di scarpe della popolazione studenti
+ Statistica II - 2009 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -1806,11 +1876,57 @@ Il grafico sottostante esplicita quanto affermato mostrando la funzione
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/confrontoDueDensitaNormali.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Due funzioni di densità della famiglia parametrica Normale
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:graficoConfrontoDueNormali"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 Nella Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "graficoconfrontoDueNormali"
+reference "Flo:graficoConfrontoDueNormali"
 
 \end_inset
 
@@ -2089,7 +2205,7 @@ Bernoulli
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2102,7 +2218,7 @@ Spazio parametrico
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2114,7 +2230,7 @@ Spazio parametrico
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2128,7 +2244,7 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2163,7 +2279,7 @@ Valore atteso
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2346,7 +2462,7 @@ x\end{array}\right)p^{r}(1-p)^{x}I_{\{0,1,...\}}(x)$
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2359,7 +2475,7 @@ Spazio parametrico
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2371,7 +2487,7 @@ Spazio parametrico
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2385,7 +2501,7 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2394,7 +2510,7 @@ Valore atteso
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2406,7 +2522,7 @@ Valore atteso
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2420,7 +2536,7 @@ Valore atteso
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2429,7 +2545,7 @@ Varianza
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2441,7 +2557,7 @@ Varianza
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2605,7 +2721,7 @@ n\end{array}\right)}I_{\{0,1,...,n\}}(x)$
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2644,7 +2760,7 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2679,7 +2795,7 @@ Valore atteso
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2846,7 +2962,7 @@ Normale
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2885,7 +3001,7 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2920,7 +3036,7 @@ Valore atteso
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3081,7 +3197,7 @@ Pareto
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3120,7 +3236,7 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3163,7 +3279,7 @@ con
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none" special="|l||">
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" special="|l||">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -5024,6 +5140,45 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/esitiEsperimentoStat.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Esiti dell'esperimento statistico: lancio di due dadi.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
@@ -5161,17 +5316,68 @@ Avendo definito lo spazio campionario di un esperimento statistico dovremo
 \begin_inset Formula $\Omega^{n}$
 \end_inset
 
-.Le Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "esitiEsperimentoStatistico2"
+.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename codiceR/grafici/prodottoCartesianoEventi.pdf
+	scale 40
 
 \end_inset
 
- e 
+
+\begin_inset Graphics
+	filename codiceR/grafici/eventoGenerico.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Esempi di eventi dello spazio campionario prodotto
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:eventiEsperimentoStatistico"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Le due immagini della Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "esitiEsperimentoStatistico3"
+reference "Flo:eventiEsperimentoStatistico"
 
 \end_inset
 
@@ -5184,15 +5390,8 @@ reference "lancio due dadi"
 \end_inset
 
 .
- Come potete notare nella Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "esitiEsperimentoStatistico2"
-
-\end_inset
-
-, l'evento definito dall'area colorata corrisponde al prodotto cartesiano
- 
+ Come potete notare nella prima immagine, l'evento definito dall'area colorata
+ corrisponde al prodotto cartesiano 
 \begin_inset Formula $E_{1}\times E_{2}$
 \end_inset
 
@@ -5214,19 +5413,12 @@ reference "esitiEsperimentoStatistico2"
 \end_inset
 
  è molto vasto .
- La Figura 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "esitiEsperimentoStatistico3"
-
-\end_inset
-
- ci mostra infatti che esso comprende eventi che non sono semplicemente
- riconducibili ad un prodotto cartesiano 
+ La seconda immagine ci mostra infatti che esso comprende eventi che non
+ sono semplicemente riconducibili ad un prodotto cartesiano 
 \begin_inset Formula $E_{1}\times E_{2}$
 \end_inset
 
- di eventi di 
+ di eventi rispettivamente di 
 \begin_inset Formula $\Omega_{1}$
 \end_inset
 
@@ -5244,11 +5436,7 @@ reference "esitiEsperimentoStatistico3"
 \begin_inset Quotes eld
 \end_inset
 
-particolare”
-\begin_inset space \space{}
-\end_inset
-
-insieme i cui 
+particolare” insieme i cui 
 \emph on
 elementi
 \emph default
@@ -5267,7 +5455,7 @@ sottoinsiemi
 \begin_inset VSpace medskip
 \end_inset
 
- Grazie alla proprietà di indipendenza tra le varie ripetizioni dell'esperimento
+Grazie alla proprietà di indipendenza tra le varie ripetizioni dell'esperimento
  aleatorio varrà che la legge di probabilità di un esperimento statistico
  è semplicemente il prodotto delle singole leggi di probabilità 
 \begin_inset Formula $P$

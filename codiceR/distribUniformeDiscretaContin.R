@@ -4,7 +4,7 @@
 ###############################################################################
 
 #jpeg(file="funzioneRipartizioneUniformeDiscreta.jpg")
-pdf(file="funzioneRipartizioneUniformeDiscreta.pdf")
+pdf(file="grafici/funzioneRipartizioneUniformeDiscreta.pdf")
 
 plot(x=ecdf(seq(0.2,1,by=0.2)),ylab="F(x)",
 #		main="Distribuzione Uniforme",
@@ -25,7 +25,7 @@ dev.off()
 
 
 
-pdf(file="funzioneRipartizioneUniformeContinua.pdf")
+pdf(file="grafici/funzioneRipartizioneUniformeContinua.pdf")
 x = seq(0,1.2,by=0.2)
 y = punif(x, min=0, max=1)
 x = c(-0.2,x)
