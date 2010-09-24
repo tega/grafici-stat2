@@ -16,6 +16,10 @@
 \makeatother
 
 \usepackage{babel}
+
+\makeatother
+
+\usepackage{babel}
 \end_preamble
 \use_default_options false
 \language italian
@@ -40,8 +44,8 @@
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
-\secnumdepth 2
-\tocdepth 2
+\secnumdepth 3
+\tocdepth 3
 \paragraph_separation indent
 \defskip medskip
 \quotes_language english
@@ -50,7 +54,6 @@
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
 \author "" 
 \end_header
 
@@ -99,7 +102,8 @@ li dell'analisi statistica e della teoria della probabilità.
  In particolare avete visto
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
+\noindent
 Capitolo 1: introduzione
 \end_layout
 
@@ -113,7 +117,7 @@ Il campione.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 2: elementi di statistica descrittiva
 \end_layout
 
@@ -122,7 +126,7 @@ Le distribuzioni di frequenze (assolute o relative), istogrammi.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 3: misure empiriche di centralità e variabilità
 \end_layout
 
@@ -141,7 +145,7 @@ e variabilità (range, intervallo interquartile, deviazione standard).
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 4: Elementi di probabilità I
 \end_layout
 
@@ -178,7 +182,7 @@ P(A)+P(A^{c})=1.\]
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 5: Elementi di probabilità II
 \end_layout
 
@@ -306,7 +310,7 @@ o e per il calcolo delle probabilità corrispondenti.
 Teorema di Bayes 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 6: Introduzione alle variabili aleatorie
 \end_layout
 
@@ -379,7 +383,7 @@ Distribuzione di Bernoulli e distribuzione uniforme.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 7: alcune variabili aleatorie discrete
 \end_layout
 
@@ -404,7 +408,7 @@ Esperimenti e distribuzioni di Poisson.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 8: variabili aleatorie continue I
 \end_layout
 
@@ -418,7 +422,7 @@ Distribuzione uniforme e triangolare.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 9: variabili aleatorie continue II
 \end_layout
 
@@ -437,7 +441,7 @@ Aree e probabilità di densità normali.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 10: variabili aleatorie continue III
 \end_layout
 
@@ -461,11 +465,11 @@ Aree sotto qualsiasi densità normale.
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitoli 11 e 12: tecnica di calcolo integrale
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 13: variabili aleatorie continue (continuazione)
 \end_layout
 
@@ -505,11 +509,11 @@ Densità di funzioni biiettive e derivabili di
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 14: Teorema del Limite Centrale
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Standard
 Capitolo 15: Distribuzioni Multivariate Discrete
 \end_layout
 
@@ -1353,9 +1357,33 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename codiceR/grafici/funzioneRipartizioneUniformeDiscreta.pdf
+	filename codiceR/grafici/funzioneRipartizioneUniformeDiscreta.eps
 	scale 40
 
 \end_inset
@@ -1419,9 +1447,33 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
 \begin_inset Graphics
-	filename codiceR/grafici/funzioneRipartizioneUniformeContinua.pdf
+	filename codiceR/grafici/funzioneRipartizioneUniformeContinua.eps
 	scale 40
 
 \end_inset
@@ -1540,19 +1592,15 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
-	filename codiceR/grafici/numeroScarpeUomoDonnaFreqRelative.pdf
+	filename codiceR/grafici/numeroScarpeUomoDonnaFreqRelative.eps
 	scale 40
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename codiceR/grafici/numeroScarpeFreqRelative.pdf
+	filename codiceR/grafici/numeroScarpeFreqRelative.eps
 	scale 40
 
 \end_inset
@@ -1566,10 +1614,6 @@ Frequenze relative popolazione studenti Statistica II - 2009
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1660,13 +1704,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename codiceR/grafici/numeroScarpeFunzioneRipartizione.pdf
+	filename codiceR/grafici/numeroScarpeFunzioneRipartizione.eps
 	scale 40
 
 \end_inset
@@ -1681,10 +1721,6 @@ Funzione di ripartizione del numero di scarpe della popolazione studenti
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1882,13 +1918,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename codiceR/grafici/confrontoDueDensitaNormali.pdf
+	filename codiceR/grafici/confrontoDueDensitaNormali.eps
 	scale 40
 
 \end_inset
@@ -1903,17 +1935,17 @@ Due funzioni di densità della famiglia parametrica Normale
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
 \begin_inset CommandInset label
 LatexCommand label
 name "Flo:graficoConfrontoDueNormali"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-
+ 
 \end_layout
 
 \end_inset
@@ -2205,7 +2237,7 @@ Bernoulli
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2213,12 +2245,12 @@ Spazio parametrico
 \begin_inset Formula $\Theta$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2230,7 +2262,7 @@ Spazio parametrico
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2244,11 +2276,11 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Valore atteso
+Valore atteso 
 \end_layout
 
 \end_inset
@@ -2279,11 +2311,11 @@ Valore atteso
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Varianza
+Varianza 
 \end_layout
 
 \end_inset
@@ -2462,7 +2494,7 @@ x\end{array}\right)p^{r}(1-p)^{x}I_{\{0,1,...\}}(x)$
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2470,12 +2502,12 @@ Spazio parametrico
 \begin_inset Formula $\Theta$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2487,7 +2519,7 @@ Spazio parametrico
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2501,16 +2533,16 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Valore atteso
+Valore atteso 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2522,7 +2554,7 @@ Valore atteso
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2536,16 +2568,16 @@ Valore atteso
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Varianza
+Varianza 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2557,7 +2589,7 @@ Varianza
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2721,7 +2753,7 @@ n\end{array}\right)}I_{\{0,1,...,n\}}(x)$
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2729,7 +2761,7 @@ Spazio parametrico
 \begin_inset Formula $\Theta$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
@@ -2760,11 +2792,11 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Valore atteso
+Valore atteso 
 \end_layout
 
 \end_inset
@@ -2795,11 +2827,11 @@ Valore atteso
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Varianza
+Varianza 
 \end_layout
 
 \end_inset
@@ -2962,7 +2994,7 @@ Normale
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2970,7 +3002,7 @@ Spazio parametrico
 \begin_inset Formula $\Theta$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
@@ -3001,11 +3033,11 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Valore atteso
+Valore atteso 
 \end_layout
 
 \end_inset
@@ -3036,11 +3068,11 @@ Valore atteso
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Varianza
+Varianza 
 \end_layout
 
 \end_inset
@@ -3197,7 +3229,7 @@ Pareto
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -3205,7 +3237,7 @@ Spazio parametrico
 \begin_inset Formula $\Theta$
 \end_inset
 
-
+ 
 \end_layout
 
 \end_inset
@@ -3236,11 +3268,11 @@ Spazio parametrico
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Valore atteso
+Valore atteso 
 \end_layout
 
 \end_inset
@@ -3279,11 +3311,11 @@ con
 </cell>
 </row>
 <row>
-<cell multicolumn="1" alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none" special="|l||">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Varianza
+Varianza 
 \end_layout
 
 \end_inset
@@ -4924,6 +4956,10 @@ end{esercizio}
 \end_inset
 
 
+\begin_inset Newpage pagebreak
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -4999,7 +5035,7 @@ begin{definizione}
 .
  
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -5141,18 +5177,15 @@ end{esempio}
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename codiceR/grafici/esitiEsperimentoStat.pdf
+	filename codiceR/grafici/esitiEsperimentoStat.eps
 	scale 40
 
 \end_inset
@@ -5166,10 +5199,6 @@ Esiti dell'esperimento statistico: lancio di due dadi.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -5214,10 +5243,7 @@ begin{esempio}
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-Un esito di questo particolare esperimento statistico potrebbe essere 
+ Un esito di questo particolare esperimento statistico potrebbe essere 
 \begin_inset Formula $(3,4)$
 \end_inset
 
@@ -5245,11 +5271,27 @@ end{esempio}
 \end_inset
 
 
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \noindent
-In generale chiameremo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definizione}
+\end_layout
+
+\end_inset
+
+Chiamiamo 
 \emph on
 spazio campionario prodotto
 \emph default
@@ -5289,10 +5331,24 @@ spazio campionario prodotto
 \end_inset
 
 .
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definizione}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -5302,8 +5358,8 @@ spazio campionario prodotto
 \noindent
 Avendo definito lo spazio campionario di un esperimento statistico dovremo
  ora definire gli eventi ad esso associati.
- Come per la definizione di evento di un esperimento aleatorio, l'evento
- di un esperimento statistico è un sottoinsieme di 
+ In maniera del tutto identica alla definizione di evento di un esperimento
+ aleatorio, l'evento di un esperimento statistico è un sottoinsieme di 
 \begin_inset Formula $\Omega^{n}$
 \end_inset
 
@@ -5322,24 +5378,21 @@ Avendo definito lo spazio campionario di un esperimento statistico dovremo
 \begin_layout Standard
 \align center
 \begin_inset Float figure
+placement h
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
 \begin_inset Graphics
-	filename codiceR/grafici/prodottoCartesianoEventi.pdf
+	filename codiceR/grafici/prodottoCartesianoEventi.eps
 	scale 40
 
 \end_inset
 
 
 \begin_inset Graphics
-	filename codiceR/grafici/eventoGenerico.pdf
+	filename codiceR/grafici/eventoGenerico.eps
 	scale 40
 
 \end_inset
@@ -5354,16 +5407,15 @@ Esempi di eventi dello spazio campionario prodotto
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
 name "Flo:eventiEsperimentoStatistico"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -5381,8 +5433,8 @@ reference "Flo:eventiEsperimentoStatistico"
 
 \end_inset
 
- rappresentano graficamente due eventi dell'esperimento statistico discusso
- nell'Esempio 
+ rappresentano graficamente due possibili eventi dell'esperimento statistico
+ discusso nell'Esempio 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "lancio due dadi"
@@ -5452,11 +5504,12 @@ sottoinsiemi
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset VSpace medskip
 \end_inset
 
-Grazie alla proprietà di indipendenza tra le varie ripetizioni dell'esperimento
- aleatorio varrà che la legge di probabilità di un esperimento statistico
+Utilizzando la proprietà di indipendenza tra le varie ripetizioni dell'esperimen
+to aleatorio varrà che la legge di probabilità di un esperimento statistico
  è semplicemente il prodotto delle singole leggi di probabilità 
 \begin_inset Formula $P$
 \end_inset
@@ -5487,13 +5540,16 @@ Q(E_{1}\times E_{2}\times\ldots\times E_{n})=P\left(E_{1}\right)\ P\left(E_{2}\r
 
 \end_inset
 
- Un esperimento statistico può quindi essere rappresentato dalla tripla
+ In maniera del tutto simile ad un esperimento aleatorio, un esperimento
+ statistico può quindi essere rappresentato dalla tripla
 \begin_inset Formula \begin{equation}
 \left(\Omega^{n},\overset{n}{\underset{i=1}{\otimes}}\mathcal{E}_{i},Q=\overset{n}{\underset{i=1}{\otimes}}P_{i}\right).\label{spazio prodotto}\end{equation}
 
 \end_inset
 
- Chiariamo subito il concetto con un esempio.
+Un esperimento statistico possiede la medesima struttura di un esperimento
+ aleatorio e soddisfa quindi le caratteristiche di uno spazio di probabilità.
+ Vediamo ora un esempio di esperimento statistico.
 \end_layout
 
 \begin_layout Standard
@@ -5519,7 +5575,7 @@ begin{esempio}
 \begin_inset Formula $P$
 \end_inset
 
- prendiamo la distribuzione esponenziale
+ utilizziamo la distribuzione esponenziale
 \begin_inset Formula \[
 \mathcal{P}=\left\{ f(x;\lambda)=\lambda e^{-\lambda x}I_{(0,\infty)}(x):\right\} .\]
 
@@ -5589,7 +5645,7 @@ La terza lampadina prima o poi si spegne”
 
 \begin_layout Standard
 \noindent
-Grazie all'ipotesi d'indipendenza nell'esecuzione dei tre esperimenti la
+Grazie all'ipotesi di indipendenza nell'esecuzione dei tre esperimenti la
  legge di probabilità su 
 \begin_inset Formula $\overset{3}{\underset{i=1}{\otimes}}\mathcal{E}_{i}$
 \end_inset
@@ -5610,8 +5666,8 @@ Q(E_{1}\times E_{2}\times E_{3})=P(E_{1})P(E_{2})P(E_{3}).\]
 
  sarà semplicemente 
 \begin_inset Formula \begin{eqnarray*}
-\mathcal{P} & = & \left\{ g(\left(x_{1},x_{2},x_{3}\right);\lambda)=f\left(x_{1};\lambda\right)\ f\left(x_{2};\lambda\right)\ f\left(x_{3};\lambda\right):\ \lambda>0\right\} \\
- & = & \left\{ g(\left(x_{1},x_{2},x_{3}\right);\lambda)=\lambda^{3}e^{-\lambda(x_{1}+x_{2}+x_{3})}I_{(0,\infty)}(x_{1})I_{(0,\infty)}(x_{2})I_{(0,\infty)}(x_{3}):\ \lambda>0\right\} .\end{eqnarray*}
+\mathcal{P} & = & \left\{ g(x_{1},x_{2},x_{3};\lambda)=f\left(x_{1};\lambda\right)\ f\left(x_{2};\lambda\right)\ f\left(x_{3};\lambda\right):\ \lambda>0\right\} \\
+ & = & \left\{ g(x_{1},x_{2},x_{3};\lambda)=\lambda^{3}e^{-\lambda(x_{1}+x_{2}+x_{3})}I_{(0,\infty)}(x_{1})I_{(0,\infty)}(x_{2})I_{(0,\infty)}(x_{3}):\ \lambda>0\right\} .\end{eqnarray*}
 
 \end_inset
 
@@ -5635,6 +5691,149 @@ end{esempio}
 \noindent
 Come potete constatare, la difficoltà è più formale (cioè nella forma e
  nella notazione) che concettuale.
+\end_layout
+
+\begin_layout Section
+Variabili aleatorie
+\end_layout
+
+\begin_layout Standard
+Una variabile aleatoria a valori reali è una 
+\emph on
+particolare funzione
+\emph default
+ 
+\begin_inset Formula $X\,:\,\Omega\rightarrow\mathbb{R}$
+\end_inset
+
+ (il suo dominio è quindi uno spazio campionario 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ ed i valori che può assumere sono numeri reali).
+ Cosa significa 
+\emph on
+particolare
+\emph default
+? Particolare significa che preso un evento 
+\begin_inset Formula $E'\subset\mathbb{R}$
+\end_inset
+
+ l'insieme 
+\begin_inset Formula $X$
+\end_inset
+
+
+\begin_inset Formula $^{-1}(E')$
+\end_inset
+
+ deve essere un evento in 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Ancora una volta lasciamo ai matematici lo studio delle condizioni sotto
+ le quali una funzione da uno spazio campionario 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ in 
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+ possiede una proprietà simile.
+ Per noi questa condizione sarà sempre vera.
+ Ma perché una simile condizione? Prendiamo il seguente esempio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+Consideriamo l'esperimento aleatorio di lanciare una volta un dado e di
+ fare una scommessa sul possibile esito.
+ La vincita o perdita in franchi, notata 
+\begin_inset Formula $X$
+\end_inset
+
+, dipende dall'esito secondo lo schema 
+\begin_inset Formula $X=\omega-2$
+\end_inset
+
+ dove 
+\begin_inset Formula $\omega$
+\end_inset
+
+ rappresenta l'esito del lancio.
+ Consideriamo l'evento 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $E'$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ di guadagnare almeno 3 franchi.
+ Qual è la probabilità di 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $E'$
+\end_inset
+
+
+\begin_inset Formula $?$
+\end_inset
+
+Per calcolare la probabilità 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5700,7 +5899,7 @@ La stessa argomentazione è applicabile nell'ambito delle variabili aleatorie.
 
 \end_inset
 
- Se la legge di probabilità 
+Se la legge di probabilità 
 \begin_inset Formula $P_{X}$
 \end_inset
 
@@ -5716,7 +5915,7 @@ La stessa argomentazione è applicabile nell'ambito delle variabili aleatorie.
 
  apparterrà alla famiglia 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ g(\left(x_{1},...,x_{n}\right);\theta)=\overset{n}{\underset{i=1}{\Pi}}f_{X_{i}}\left(x_{i};\theta\right):\ \theta\in\Theta\right\} .\]
+\mathcal{P}=\left\{ g(x_{1},...,x_{n};\theta)=\overset{n}{\underset{i=1}{\Pi}}f_{X_{i}}\left(x_{i};\theta\right):\ \theta\in\Theta\right\} .\]
 
 \end_inset
 
@@ -25787,6 +25986,32 @@ status collapsed
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+global
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+long
 \end_layout
 
 \end_inset
