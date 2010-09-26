@@ -5753,7 +5753,32 @@ Variabili aleatorie
 \end_layout
 
 \begin_layout Standard
-Dato l'esperimento aleatorio 
+Talvolta succede che ciò a cui siamo veramente interessati non sia l'esito
+ di un esperimento aleatorio ma una sua particolare funzione.
+ Pensate ad esempio ad una compagnia aerea.
+ Supponiamo che il ritardo di un volo di linea sia una variabile aleatoria.
+ Alla compagnia probabilmente interessa soprattutto sapere i costi che un
+ ritardo può generare in funzione della sua gravità piuttosto che l'ammontare
+ in minuti del ritardo.
+ I costi saranno quindi una certa funzione dei minuti di ritardo.
+ Generalizzando al caso astratto, introduciamo la seguente definizione.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definizione}
+\end_layout
+
+\end_inset
+
+Dato un esperimento aleatorio 
 \begin_inset Formula $(\Omega,\mathcal{E},P)$
 \end_inset
 
@@ -5778,7 +5803,25 @@ Dato l'esperimento aleatorio
 \end_inset
 
 .
- In altre parole, diremo che la funzione 
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definizione}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In altre parole, diremo che la funzione 
 \begin_inset Formula $g$
 \end_inset
 
@@ -5805,24 +5848,45 @@ reference "Flo:preimmagine"
 
 \end_inset
 
- mostrano astrattamente la situazione.
- I valori che la funzione 
+ mostrano astrattamente la situazione
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Per convenienza assumeremo che i valori che la funzione 
 \begin_inset Formula $g$
 \end_inset
 
- assume sono numeri reali.
- Lo spazio campionario non deve essere necessariamente numerio.
- Il lancio di una moneta, con 
-\begin_inset Formula $\Omega=\{testa,\, crocie\}$
+ assume siano numeri reali.
+ Tuttavia ci preme sottolineare che la definizione generale di variabile
+ aleatoria non impone questa restrizione sul codominio di 
+\begin_inset Formula $g$
 \end_inset
 
-, è un esempio valido.
+.
+ Un esempio in cui il codominio di 
+\begin_inset Formula $g$
+\end_inset
+
+ non è numerico è descritto nella Sezione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:CampionamentoConReinser"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
 \noindent
 \begin_inset Float figure
-placement H
 wide false
 sideways false
 status open
@@ -6014,10 +6078,6 @@ end{definizione}
 wide false
 sideways false
 status open
-
-\begin_layout Plain Layout
-
-\end_layout
 
 \begin_layout Plain Layout
 \align center
@@ -6280,14 +6340,6 @@ reference "Flo: variabile aleatoria"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset VSpace medskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -6649,7 +6701,7 @@ X(\omega_{5})=1 & ,\: X(\omega_{6})=1 & ,\: X(\omega_{7})=1 & ,\: X(\omega_{8})=
 \begin_inset Formula $0$
 \end_inset
 
-? Andando a guardare la tabella dei possibili valori deduciamo che 
+? Guardando la tabella dei possibili valori deduciamo che 
 \begin_inset Formula $X=0$
 \end_inset
 
@@ -6658,12 +6710,13 @@ X(\omega_{5})=1 & ,\: X(\omega_{6})=1 & ,\: X(\omega_{7})=1 & ,\: X(\omega_{8})=
 \end_inset
 
 , quindi 
-\begin_inset Formula $P(X=0)=P(\left\{ \omega_{1}\right\} )$
+\begin_inset Formula \[
+P_{X}(\left\{ 0\right\} )=P(X=0)=P(\left\{ \omega_{1}\right\} ).\]
+
 \end_inset
 
-.
- Allo stesso modo dato un qualsiasi evento 
-\begin_inset Formula $E'\subset\mathbb{R}$
+In maniera analoga, dato l'evento 
+\begin_inset Formula $E'=[\frac{1}{2},1]\subset\mathbb{R}$
 \end_inset
 
  diremo che 
@@ -6688,10 +6741,12 @@ X(\omega_{5})=1 & ,\: X(\omega_{6})=1 & ,\: X(\omega_{7})=1 & ,\: X(\omega_{8})=
 \end_inset
 
  si realizzi è uguale a 
-\begin_inset Formula $P(X^{-1}(E')).$
+\begin_inset Formula \[
+P_{X}(E')=P(X^{-1}(E'))=P(\left\{ \omega_{2},\omega_{3},\omega_{4},\omega_{5},\omega_{6},\omega_{7}\right\} ).\]
+
 \end_inset
 
- Ad esempio, la probabilità dell'evento 
+La probabilità dell'evento 
 \begin_inset Formula $E'=\{0,\frac{3}{2}\}$
 \end_inset
 
@@ -6700,7 +6755,7 @@ X(\omega_{5})=1 & ,\: X(\omega_{6})=1 & ,\: X(\omega_{7})=1 & ,\: X(\omega_{8})=
 \end_inset
 
  e la probabilità di 
-\begin_inset Formula $E'=[0,1)$
+\begin_inset Formula $P_{X}\left([0,1)\right)$
 \end_inset
 
  è semplicemente uguale a 
@@ -6708,7 +6763,18 @@ X(\omega_{5})=1 & ,\: X(\omega_{6})=1 & ,\: X(\omega_{7})=1 & ,\: X(\omega_{8})=
 \end_inset
 
 .
- La variabile aleatoria 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La variabile aleatoria 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6912,7 +6978,7 @@ Come in precedenza la densità di
 \begin_inset Formula $Q_{X_{1,...,}X_{n}}$
 \end_inset
 
- altro non è che il prodotto delle 
+ è il prodotto delle 
 \begin_inset Formula $n$
 \end_inset
 
@@ -7190,13 +7256,13 @@ begin{remark}
 
 \end_inset
 
-Eseguito l'esperimento, il ricercatore avrà a disposizione le realizzazioni
+Osservato l'esperimento, il ricercatore avrà a disposizione le realizzazioni
  di 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
  che sono dei numeri.
- Tali realizzazioni saranno disposte in modo ordinato in una lista 
+ Le realizzazioni saranno disposte in modo ordinato in una lista 
 \begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
@@ -7236,17 +7302,20 @@ begin{remark}
 
 \end_inset
 
-L'ultima osservazione relativa al concetto di 
-\begin_inset Formula $campione$
-\end_inset
-
- riguarda la stima della distribuzione statistica di una caratteristica
+Consideriamo la stima della distribuzione statistica di una caratteristica
  della popolazione obiettivo.
- In tal caso il campione è stato definito come un sottoinsieme della popolazione
+ In tal caso il campione è definito come un sottoinsieme della popolazione
  obiettivo.
  Questa definizione non considera il modo come si è ottenuto questo sottoinsieme.
- Che regola di selezione è stata adottata? Come sono stati selezionati gli
  
+\end_layout
+
+\begin_layout Itemize
+Che regola di selezione è stata adottata? 
+\end_layout
+
+\begin_layout Itemize
+Come sono stati selezionati gli 
 \begin_inset Formula $n$
 \end_inset
 
@@ -7254,9 +7323,13 @@ L'ultima osservazione relativa al concetto di
 \begin_inset Formula $n$
 \end_inset
 
- unità della popolazione? Vedremo che applicando dei criteri aleatori è
- possibile ricondure il problema del campionamento da una popolazione campione
- a quello relativo alla costruzione di un 
+ unità dalla popolazione? 
+\end_layout
+
+\begin_layout Standard
+Vedremo che applicando dei criteri aleatori è possibile ricondure il problema
+ del campionamento da una popolazione campione a quello relativo alla costruzion
+e di un 
 \begin_inset Formula $n$
 \end_inset
 
@@ -7268,8 +7341,8 @@ L'ultima osservazione relativa al concetto di
 \begin_inset Formula $campione$
 \end_inset
 
- osservato è il risultato di un procedimento aleatorio e quindi è da considerars
-i anch'esso come la realizzazione di 
+ osservato sarà il risultato di un procedimento aleatorio e quindi è da
+ considerarsi anch'esso come la realizzazione di 
 \begin_inset Formula $n$
 \end_inset
 
@@ -7484,11 +7557,7 @@ si passa alla fase di stima.
 \begin_inset Formula $T(x_{1},...,x_{n})$
 \end_inset
 
-
-\begin_inset space \space{}
-\end_inset
-
-del vettore di parametri
+ del vettore di parametri
 \begin_inset Foot
 status collapsed
 
@@ -7524,8 +7593,11 @@ i cambia a seconda delle circostanze.
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- quale insieme ordinato di variabili aleatorie ed il campione osservato
- 
+ quale insieme ordinato di 
+\begin_inset Formula $V.A.$
+\end_inset
+
+ ed il campione osservato 
 \begin_inset Formula $x_{1},...,x_{n}$
 \end_inset
 
@@ -8521,6 +8593,12 @@ to sistematico.
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:CampionamentoConReinser"
+
+\end_inset
+
 Campionamento tramite selezione con re\SpecialChar \-
 in\SpecialChar \-
 se\SpecialChar \-
@@ -8532,15 +8610,13 @@ to
 \begin_layout Standard
 Supponiamo di avere quale popolazione obiettivo l'insieme delle automobili
  immatricolate in Svizzera ad una certa data.
- La numerosità della popolazione è indicata come al solito con la lettera
- 
+ La numerosità della popolazione è indicata con la lettera 
 \begin_inset Formula $N$
 \end_inset
 
 .
  Una casa automobilistica potrebbe essere interessata alla distribuzione
- del colore dell'automobile così da poi prevedere il consumo di vernice
- dei vari colori.
+ del colore dell'automobile così da poi prevedere il consumo di vernice.
  Per semplicità supponiamo che i colori siano solo tre:
 \begin_inset space \space{}
 \end_inset
@@ -8581,7 +8657,7 @@ equiprobabile
 
  con 
 \begin_inset Formula \[
-P(\{i\})=\frac{1}{N}\text{ per ogni }i\in\Omega\ .\]
+P(\{i\})=\frac{1}{N}\text{ per ogni }i\in\Omega.\]
 
 \end_inset
 
@@ -8600,7 +8676,7 @@ P(\{i\})=\frac{1}{N}\text{ per ogni }i\in\Omega\ .\]
  verso l'insieme dei co\SpecialChar \-
 lo\SpecialChar \-
 ri 
-\begin_inset Formula $\left\{ \text{“nero”,“bianco”,“rosso”}\right\} $
+\begin_inset Formula $\Omega'=\left\{ \text{“nero”,“bianco”,“rosso”}\right\} $
 \end_inset
 
  in modo tale che per ogni 

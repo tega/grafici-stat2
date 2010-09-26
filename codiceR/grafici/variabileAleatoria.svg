@@ -94,7 +94,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="2.8"
      inkscape:cx="192.17822"
-     inkscape:cy="136.25"
+     inkscape:cy="135.53571"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -212,7 +212,7 @@
        sodipodi:cy="116.50028"
        sodipodi:rx="19.107143"
        sodipodi:ry="31.607143"
-       d="m 335.35714,116.50028 a 19.107143,31.607143 0 1 1 -38.21428,0 19.107143,31.607143 0 1 1 38.21428,0 z"
+       d="m 335.35714,116.50028 c 0,17.45615 -8.55456,31.60715 -19.10714,31.60715 -10.55258,0 -19.10714,-14.151 -19.10714,-31.60715 0,-17.456141 8.55456,-31.607141 19.10714,-31.607141 10.55258,0 19.10714,14.151 19.10714,31.607141 z"
        transform="translate(0,768.89631)" />
     <path
        sodipodi:type="arc"
@@ -222,7 +222,7 @@
        sodipodi:cy="125.60743"
        sodipodi:rx="14.642858"
        sodipodi:ry="21.785715"
-       d="m 325.35715,125.60743 a 14.642858,21.785715 0 1 1 -29.28571,0 14.642858,21.785715 0 1 1 29.28571,0 z"
+       d="m 325.35715,125.60743 c 0,12.03192 -6.55583,21.78571 -14.64286,21.78571 -8.08702,0 -14.64285,-9.75379 -14.64285,-21.78571 0,-12.03192 6.55583,-21.78572 14.64285,-21.78572 8.08703,0 14.64286,9.7538 14.64286,21.78572 z"
        transform="translate(0,768.89631)" />
     <path
        sodipodi:type="arc"
@@ -232,11 +232,11 @@
        sodipodi:cy="46.857426"
        sodipodi:rx="15"
        sodipodi:ry="14.464286"
-       d="m 198.92857,46.857426 a 15,14.464286 0 1 1 -30,0 15,14.464286 0 1 1 30,0 z"
+       d="m 198.92857,46.857426 c 0,7.988404 -6.71573,14.464286 -15,14.464286 -8.28427,0 -15,-6.475882 -15,-14.464286 0,-7.988405 6.71573,-14.464286 15,-14.464286 8.28427,0 15,6.475881 15,14.464286 z"
        transform="translate(0,768.89631)" />
     <g
        id="g4481"
-       transform="translate(2.1428571,-39.285714)">
+       transform="translate(-3.5714287,-37.142857)">
       <path
          d="m 153.92857,132.75029 c 0,45.169 -24.22459,81.78571 -54.107144,81.78571 -29.88255,0 -54.107143,-36.61671 -54.107143,-81.78571 0,-45.169002 24.224593,-81.785713 54.107143,-81.785713 29.882554,0 54.107144,36.616711 54.107144,81.785713 z"
          sodipodi:ry="81.785713"
@@ -294,17 +294,19 @@
        sodipodi:cy="132.75029"
        sodipodi:rx="54.107143"
        sodipodi:ry="81.785713"
-       d="m 153.92857,132.75029 a 54.107143,81.785713 0 1 1 -108.214287,0 54.107143,81.785713 0 1 1 108.214287,0 z" />
+       d="m 153.92857,132.75029 c 0,45.169 -24.22459,81.78571 -54.107144,81.78571 -29.88255,0 -54.107143,-36.61671 -54.107143,-81.78571 0,-45.169002 24.224593,-81.785713 54.107143,-81.785713 29.882554,0 54.107144,36.616711 54.107144,81.785713 z" />
     <text
        xml:space="preserve"
        style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
-       x="97.681503"
-       y="863.98492"
-       id="text3045-7"><tspan
+       x="60.538647"
+       y="867.19922"
+       id="text3045-7"
+       inkscape:transform-center-x="-37.5"
+       inkscape:transform-center-y="4.3740234"><tspan
          sodipodi:role="line"
          id="tspan3047-2"
-         x="97.681503"
-         y="863.98492"
+         x="60.538647"
+         y="867.19922"
          style="font-size:12px">E</tspan></text>
     <text
        xml:space="preserve"
@@ -328,6 +330,82 @@
          x="298.57144"
          y="1014.5037"
          style="font-size:8px">X</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+       x="293.92856"
+       y="911.28943"
+       id="text2860"><tspan
+         sodipodi:role="line"
+         id="tspan2862"
+         x="293.92856"
+         y="911.28943">[3,∞)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+       x="80"
+       y="888.0752"
+       id="text2864"><tspan
+         sodipodi:role="line"
+         id="tspan2866"
+         x="80"
+         y="888.0752">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+       x="80.357147"
+       y="932.00372"
+       id="text2868"
+       inkscape:transform-center-y="-10.357143"><tspan
+         sodipodi:role="line"
+         id="tspan2870"
+         x="80.357147"
+         y="932.00372">6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+       x="108.21429"
+       y="72.393143"
+       id="text2872"
+       transform="translate(0,768.89631)"><tspan
+         sodipodi:role="line"
+         id="tspan2874"
+         x="108.21429"
+         y="72.393143">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+       x="123.57143"
+       y="100.60743"
+       id="text2876"
+       transform="translate(0,768.89631)"><tspan
+         sodipodi:role="line"
+         id="tspan2878"
+         x="123.57143"
+         y="100.60743">2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+       x="124.64285"
+       y="934.14661"
+       id="text2880"
+       inkscape:transform-center-x="-2.8798828"
+       inkscape:transform-center-y="-8.9285714"><tspan
+         sodipodi:role="line"
+         id="tspan2882"
+         x="124.64285"
+         y="934.14661">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:OpenSymbol;-inkscape-font-specification:OpenSymbol"
+       x="105.71429"
+       y="195.96457"
+       id="text2884"
+       transform="translate(0,768.89631)"><tspan
+         sodipodi:role="line"
+         id="tspan2886"
+         x="105.71429"
+         y="195.96457">4</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
