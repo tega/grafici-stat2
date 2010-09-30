@@ -5173,20 +5173,7 @@ L'esperimento statistico corrisponde a lanciare 2 volte un dado.
 
  è la distribuzione uniforme discreta (dado non truccato).
  Gli esiti dell'esperimento statistico possono essere rappresentati graficamente
- come segue 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{esempio}
-\end_layout
-
-\end_inset
-
-
+ come segue:
 \end_layout
 
 \begin_layout Standard
@@ -5222,19 +5209,8 @@ Esiti dell'esperimento statistico: lancio di due dadi.
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{esempio}
-\end_layout
-
-\end_inset
-
- Indicando con 
+\noindent
+Indicando con 
 \begin_inset Formula $\Omega_{1}$
 \end_inset
 
@@ -6815,6 +6791,14 @@ La tripla
 \begin_inset Formula $Bin(3,p)$
 \end_inset
 
+ con supporto 
+\begin_inset Formula $\{0,\frac{1}{2},1,\frac{3}{2}\}$
+\end_inset
+
+ anziché 
+\begin_inset Formula $\{0,1,2,3\}$
+\end_inset
+
 .
 \end_layout
 
@@ -6889,7 +6873,7 @@ reference "sec:Esperimento-statistico"
 \begin_inset Formula $X$
 \end_inset
 
- genera un nuovo esperimento statistico su 
+ genera un nuovo esperimento aleatorio su 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
@@ -7971,6 +7955,46 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+Si dimostri che lo stimatore 
+\begin_inset Formula $\widetilde{S}^{2}$
+\end_inset
+
+ non è uno stimatore corretto di 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ 
+\lang italian
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -8661,7 +8685,8 @@ P(\{i\})=\frac{1}{N}\text{ per ogni }i\in\Omega.\]
 
 \end_inset
 
- Assegnamo ora in modo univoco a ciascuna automobile un numero 
+Assegnamo ora in modo univoco a ciascuna automobile immatricolata in Svizzera
+ un numero 
 \begin_inset Formula $i\in\Omega$
 \end_inset
 
@@ -8708,8 +8733,20 @@ i\mapsto X(i)=\text{“il colore della }i\text{-esima automobile”\ .}\]
 \begin_inset VSpace 0.5cm
 \end_inset
 
- Domanda 1: Qual è la legge di probabilità indotta dalla variabile aleatoria
- 
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{domanda}
+\end_layout
+
+\end_inset
+
+Qual è la legge di probabilità indotta dalla variabile aleatoria 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8718,6 +8755,19 @@ i\mapsto X(i)=\text{“il colore della }i\text{-esima automobile”\ .}\]
 \end_inset
 
 , sull'insieme dei tre colori?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{domanda}
+\end_layout
+
+\end_inset
+
+
 \begin_inset VSpace 0.5cm
 \end_inset
 
@@ -8749,13 +8799,10 @@ Risposta: la legge di probabilità
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset VSpace bigskip
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 È dunque possibile, partendo da un semplice spazio di probabilità discreto,
  definire una variabile aleatoria 
 \begin_inset Formula $X$
