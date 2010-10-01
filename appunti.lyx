@@ -371,7 +371,7 @@ Valore atteso e varianza di una variabile
 Regole di calcolo:
 \begin_inset Formula \begin{eqnarray*}
 \mu_{X+bY} & = & \mu_{X}+b\mu_{Y}\\
-\sigma_{a+bX}^{2} & = & b\sigma_{X}^{2}\\
+\sigma_{a+bX}^{2} & = & b^{2}\sigma_{X}^{2}\\
 \sigma_{X}^{2} & = & \mu_{X^{2}}+\left(\mu_{X}\right)^{2}\end{eqnarray*}
 
 \end_inset
@@ -3587,7 +3587,7 @@ livello di confidenza.
 .
  Un esempio di una realizzazione di intervallo di confidenza potrebbe essere:
 \begin_inset Formula \[
-\lbrack0.2,0.4].\]
+[0.2,0.4].\]
 
 \end_inset
 
@@ -7967,7 +7967,6 @@ begin{esercizio}
 
 \end_inset
 
-
 Si dimostri che lo stimatore 
 \begin_inset Formula $\widetilde{S}^{2}$
 \end_inset
@@ -7977,8 +7976,6 @@ Si dimostri che lo stimatore
 \end_inset
 
  
-\lang italian
-
 \begin_inset ERT
 status open
 
@@ -8679,18 +8676,31 @@ equiprobabile
 \begin_inset Formula $\left(\Omega,\mathcal{E},P\right)$
 \end_inset
 
- con 
+ dove in questo caso 
+\begin_inset Formula $P$
+\end_inset
+
+ è la distribuzione uniforme su 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ 
 \begin_inset Formula \[
 P(\{i\})=\frac{1}{N}\text{ per ogni }i\in\Omega.\]
 
 \end_inset
 
-Assegnamo ora in modo univoco a ciascuna automobile immatricolata in Svizzera
- un numero 
+Supponiamo di avere una scheda per ogni automobile immatricolata.
+ Nella scheda sono riportati il propritario ed i dati tecnici del veicolo:
+ colore, cilindrata, anno d'immatricolazione, ecc..
+ Numeriamo le schede da 1 a N.
+ Ad ogni automobile immatricolata in Svizzera sarà così assegnato un numero
+ 
 \begin_inset Formula $i\in\Omega$
 \end_inset
 
- e definiamo la variabile aleatoria (funzione!)
+.
+ Definiamo ora la variabile aleatoria (funzione!)
 \begin_inset Formula $\ X$
 \end_inset
 
@@ -8780,9 +8790,128 @@ Risposta: la legge di probabilità
 \begin_inset Formula $P_{X}$
 \end_inset
 
- non è altro che la distribuzione statistica della caratteristica in esame
- della popolazione obiettivo.
- Inoltre, se la caratteristica in esame fosse la cilindrata in 
+ non è altro che la distribuzione statistica 
+\begin_inset Formula $P_{p}$
+\end_inset
+
+ della caratteristica in esame della popolazione obiettivo.
+ Infatti, sia 
+\begin_inset Formula $N_{1}$
+\end_inset
+
+ il numero di automobili di colore nero.
+ Sappiamo che 
+\begin_inset Formula $\frac{N_{1}}{N}=0.45$
+\end_inset
+
+ è la frequenza relativa di automobili nere nella popolazione.
+ Qual è la probabilità di selezionare una macchina nera? Questa probabilità
+ corrisponde a
+\begin_inset Formula \[
+P_{X}(\left\{ \text{“nero”}\right\} )=P(X=\text{“nero”})=P(E)\]
+
+\end_inset
+
+dove 
+\begin_inset Formula $E$
+\end_inset
+
+ corrisponde agli indici delle schede con automobili di colore nero.
+ Il numero di esiti in 
+\begin_inset Formula $E$
+\end_inset
+
+ è 
+\begin_inset Formula $N_{1}$
+\end_inset
+
+.
+ Come calcolato precedentemente la probabilità di ciascun esito è 
+\begin_inset Formula $\frac{1}{N}$
+\end_inset
+
+ e quindi 
+\begin_inset Formula $P(E)=\frac{N_{1}}{N}=0.45$
+\end_inset
+
+.
+ La situazione è rappresentata graficamente nella Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:graficoColoreNero"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/automobiliNere.pdf
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Estrazione colore automobile
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:graficoColoreNero"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La legge di probabilità 
+\begin_inset Formula $P_{X}$
+\end_inset
+
+ corrisponde esattamente alla distribuzione statistica 
+\begin_inset Formula $P_{p}$
+\end_inset
+
+ del colore della popolazione obiettivo.
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Se la caratteristica in esame fosse stata la cilindrata in 
 \begin_inset Formula $cm^{3}$
 \end_inset
 
@@ -8794,17 +8923,97 @@ Risposta: la legge di probabilità
 \begin_inset Formula $F_{X}$
 \end_inset
 
- identica alla funzione di ripartizione della cilindrata della popolazione
+.
+ Ancora una volta la situazione è riportata graficamente nella Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:estrazioneCilindrataAutomobile"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/automobiliCilindrata.pdf
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Estrazione cilindrata automobile
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:estrazioneCilindrataAutomobile"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \begin{align}
+F_{X}(x) & =P_{X}\left((-\infty,x]\right)\nonumber \\
+ & =P(X\in(-\infty,x]))\nonumber \\
+ & =P(E)\nonumber \\
+ & =(\#\text{ unità con caratteristica }\leq x)\frac{1}{N}\nonumber \\
+ & =\frac{\#\text{ unità con caratteristica }\leq x}{\#\text{ unità della popolazione}}\label{eq:ugualeAllaRipartizione}\end{align}
+
+\end_inset
+
+Come si evince dalla (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:ugualeAllaRipartizione"
+
+\end_inset
+
+) la funzione di ripartizione della variabile aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ è identica alla funzione di ripartizione della cilindrata della popolazione
  obiettivo.
+ 
 \end_layout
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace bigskip
+\begin_inset VSpace 0.1cm
 \end_inset
 
-È dunque possibile, partendo da un semplice spazio di probabilità discreto,
- definire una variabile aleatoria 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+È dunque possibile, partendo da un semplice spazio di probabilità discreto
+ la cui legge di probabilità è uniforme, costruire una variabile aleatoria
+ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -8813,24 +9022,50 @@ Risposta: la legge di probabilità
 \end_inset
 
  è uguale alla distribuzione dell'intera popolazione obiettivo.
- Si potrebbe allora pensare di ripetere l'esperimento 
+\begin_inset Formula \[
+(\Omega,\mathcal{E},P)\underset{X}{\longrightarrow}(\mathbb{R},\mathcal{E},P_{X})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La problematica della non conoscenza della distribuzione statistica 
+\begin_inset Formula $P_{p}$
+\end_inset
+
+ della popolazione obiettivo risulta quindi identica alla problematica della
+ stima della legge di probabilità di una variabile aleatoria!
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ripetiamo l'esperimento 
 \begin_inset Formula $n$
 \end_inset
 
  volte in maniera indipendente l'una dall'altra, reinserendo nell'urna il
  numero scelto dopo ogni estrazione e mescolando nuovamente molto bene.
- Il nuovo spazio campionario consiste ora nei vettori (liste) di lunghezza
- 
+ Il nuovo spazio campionario è 
+\begin_inset Formula $\Omega^{n}=\{1,2,...N\}^{n}$
+\end_inset
+
+, le liste di lunghezza 
 \begin_inset Formula $n$
 \end_inset
 
  i cui elementi appartengono all'insieme 
-\begin_inset Formula $\{1,2,...N\}$
-\end_inset
-
-.
- Scriviamo semplicemente 
-\begin_inset Formula $\Omega^{n}=\{1,2,...N\}^{n}$
+\begin_inset Formula $\Omega=\{1,2,...N\}$
 \end_inset
 
 .
@@ -8838,26 +9073,22 @@ Risposta: la legge di probabilità
 \begin_inset Formula $\Omega^{n}$
 \end_inset
 
- che corrisponde al numero di esiti
-\begin_inset space \space{}
-\end_inset
-
-possibili è 
+ è 
 \begin_inset Formula $N^{n}$
 \end_inset
 
 .
  Poiché il numero selezionato ad ogni estrazione è reinserito nell'urna,
  è possibile osservare vettori in cui un numero si ripete più volte.
- Ad esempio, per 
+ Ad esempio, se la popolazione contasse 
 \begin_inset Formula $N=5$
 \end_inset
 
- e 
+ elementi e 
 \begin_inset Formula $n=3$
 \end_inset
 
- un possibile esito potrebbe essere 
+ (sorteggiamo 3 volte) un possibile esito potrebbe essere 
 \begin_inset Formula $\omega=(2,5,2)$
 \end_inset
 
@@ -8900,8 +9131,8 @@ Ora
 \end_inset
 
  vale
-\begin_inset Formula \[
-Q\left(\omega\right)=\frac{1}{N^{n}}\ \text{per ogni }\omega\in\Omega^{n}\ .\]
+\begin_inset Formula \begin{equation}
+Q\left(\omega\right)=\frac{1}{N^{n}}\ \text{per ogni }\omega\in\Omega^{n}\ .\label{eq:probEsitoConReimmissione}\end{equation}
 
 \end_inset
 
@@ -8925,12 +9156,12 @@ Q\left(\omega\right)=\frac{1}{N^{n}}\ \text{per ogni }\omega\in\Omega^{n}\ .\]
  tramite la procedura 
 \begin_inset Formula \[
 X_{i}(\omega):=\left\{ \begin{array}{l}
-\text{1)\ Estraggo l' }i-\text{esimo numero da }\omega\text{, notato }j_{i}\in\{1,2,...N\}\text{.}\\
-\text{2) Associo la cilindrata dell'}j_{i}-\text{esima automobile.}\end{array}\right.\]
+\text{1. Estraggo l' }i-\text{esimo elemento da }\omega\text{, notato }\omega(i)\in\{1,2,...N\}\text{.}\\
+\text{2. Associo la cilindrata della }\omega(i)-\text{esima automobile.}\end{array}\right.\]
 
 \end_inset
 
- Continuando con l'esempio dove 
+Proseguendo con l'esempio in cui 
 \begin_inset Formula $N=5$
 \end_inset
 
@@ -8938,20 +9169,20 @@ X_{i}(\omega):=\left\{ \begin{array}{l}
 \begin_inset Formula $n=3$
 \end_inset
 
-, data una realizzazione 
+, data la realizzazione 
 \begin_inset Formula $\omega=(2,5,2)$
 \end_inset
 
- avremmo 
-\begin_inset Formula $j_{1}=2$
+ abbiamo 
+\begin_inset Formula $\omega(1)=2$
 \end_inset
 
 , 
-\begin_inset Formula $j_{2}=5$
+\begin_inset Formula $\omega(2)=5$
 \end_inset
 
 , 
-\begin_inset Formula $j_{3}=2$
+\begin_inset Formula $\omega(3)=2$
 \end_inset
 
  (praticamente abbiamo selezionato due volte la seconda automobile ed una
@@ -8995,22 +9226,40 @@ esclusivamente
 \end_inset
 
  è semplicemente il prodotto delle singole leggi di probabilità 
-\begin_inset Formula $Q_{X_{i}}$
+\begin_inset Formula $P_{X_{i}}$
 \end_inset
 
 .
+ L'esperimento aleatorio 
+\begin_inset Formula \[
+(\Omega,\mathcal{E},P)\underset{X}{\longrightarrow}(\mathbb{R},\mathcal{E},P_{X})\]
+
+\end_inset
+
+viene così generalizzato in un esperimento statistico
+\begin_inset Formula \[
+(\Omega^{n},\overset{n}{\underset{i=1}{\otimes}}\mathcal{E}_{i},Q)\underset{{\scriptstyle X_{1},\ldots,X_{n}}}{\longrightarrow}(\mathbb{R}^{n},\overset{n}{\underset{i=1}{\otimes}}\mathcal{E}_{i},Q_{X_{1},...,X_{n}})\ .\]
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\noindent
+\begin_inset VSpace 0.1cm
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Quando la distribuzione statistica della popolazione obiettivo è sconosciuta
- possiamo pensare di stimare 
+\noindent
+Quando la distribuzione statistica 
+\begin_inset Formula $P_{p}$
+\end_inset
+
+ della popolazione obiettivo è sconosciuta possiamo pensare di stimare 
 \begin_inset Formula $P_{X}$
 \end_inset
 
@@ -9026,6 +9275,10 @@ Quando la distribuzione statistica della popolazione obiettivo è sconosciuta
 
  osservazioni) in nostro possesso.
  È quindi possibile ricondurre il problema della stima della distribuzione
+ 
+\begin_inset Formula $P_{p}$
+\end_inset
+
  della popolazione obiettivo alla definizione di esperimento statistico
  e di 
 \begin_inset Formula $n$
@@ -9053,24 +9306,75 @@ Quando la distribuzione statistica della popolazione obiettivo è sconosciuta
 \end_inset
 
 -campione di un esperimento statistico 
-\begin_inset Formula $(\mathbb{R},\mathcal{E},\mathcal{P})$
+\begin_inset Formula $(\mathbb{R},\mathcal{E},P_{X})$
 \end_inset
 
 .
- La problematica della non conoscenza della distribuzione statistica della
- popolazione obiettivo risulta quindi identica alla problematica della stima
- della legge di probabilità di un esperimento aleatorio o di una variabile
- aleatoria.
-\end_layout
+ Poiché la legge di probabilità di 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
 
-\begin_layout Standard
-\begin_inset VSpace 8cm
+\begin_inset Formula $P_{X}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ è sconosciuta, scriveremo 
+\begin_inset Formula $(\mathbb{R},\mathcal{E},\mathcal{P})$
+\end_inset
+
+ dove 
+\begin_inset Formula $\mathcal{P}$
+\end_inset
+
+ rappresenta la famiglia parametrica a cui 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $P_{X}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ appartiene.
+\begin_inset VSpace 0.2cm
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+\noindent
 La tecnica di selezione casuale con reinserimento utilizzata precedentemente
  per la costruzione di un 
 \begin_inset Formula $n$
@@ -9110,8 +9414,8 @@ Si estrae a caso una sola pallina da un'urna contenente
 \begin_inset Formula $1$
 \end_inset
 
- a
-\begin_inset Formula $\ N$
+ a 
+\begin_inset Formula $N$
 \end_inset
 
 .
@@ -9147,7 +9451,7 @@ Le
 \begin_inset Formula $n$
 \end_inset
 
- osservazioni, raccolte in un vettore 
+ osservazioni, raccolte in una lista 
 \begin_inset Formula $(x_{1},...,x_{n}),$
 \end_inset
 
@@ -9179,26 +9483,15 @@ to
 \begin_layout Standard
 Questa tecnica è identica alla precedente con l'unica differenza che le
  palline estratte non vengono reinserite nell'urna.
- Cosa cambia rispetto al paragrafo precedente?
-\begin_inset space \space{}
-\end_inset
-
-Possiamo ancora parlare di esperimento statistico? Quali sono le proprietà
- della nuova legge di probabilità 
+ Cosa cambia rispetto al paragrafo precedente? Lo spazio campionario è lo
+ stesso? Possiamo ancora parlare di esperimento statistico? Quali sono le
+ proprietà della nuova legge di probabilità 
 \begin_inset Formula $Q$
 \end_inset
 
- che con 
-\begin_inset Formula $\Omega^{n}$
-\end_inset
-
- e 
-\begin_inset Formula $\overset{n}{\underset{i=1}{\otimes}}\mathcal{E}_{i}$
-\end_inset
-
- definisce il nuovo spazio di probabilità? Per rispondere a queste domande
- partiamo dalla definizione del nuovo spazio campione.
- Supponiamo per semplicità di utilizzare ancora 
+? Per rispondere a queste domande partiamo innanzi tutto dalla definizione
+ del nuovo spazio campione.
+ Supponiamo per un momento di utilizzare ancora 
 \begin_inset Formula $\Omega^{n}$
 \end_inset
 
@@ -9208,16 +9501,16 @@ Possiamo ancora parlare di esperimento statistico? Quali sono le proprietà
 \end_inset
 
  conterrà esiti che non osserveremo mai.
- Ad esempio, prendiamo nuovamente 
+ Ad esempio, prendiamo 
 \begin_inset Formula $N=5$
 \end_inset
 
- e 
-\begin_inset Formula $n=3$
+, 
+\begin_inset Formula $n=2$
 \end_inset
 
  e l'esito 
-\begin_inset Formula $\omega=(2,5,2)$
+\begin_inset Formula $\omega=(2,2)$
 \end_inset
 
 .
@@ -9225,16 +9518,47 @@ Possiamo ancora parlare di esperimento statistico? Quali sono le proprietà
 \begin_inset Formula $\omega$
 \end_inset
 
- non sarà mai osservabile e potremmo escluderlo dallo spazio campione.
+ non sarà mai osservabile in quanto la selezione ora è senza reinserimento.
+ In teoria potremmo escluderlo dallo spazio campionario.
  Tuttavia per semplicità nella definizione del nostro spazio campionario
  lo lasciamo.
- Gli esiti in cui un numero si ripete due o più volte avranno semplicemente
- probabilità nulla.
- Dobbiamo ora calcolare la probabilità di un qualsiasi esito 
+ L'esito 
+\begin_inset Formula $\omega=(2,2)$
+\end_inset
+
+ avrà semplicemente probabilità zero.
+ In generale, dato un numero 
+\begin_inset Formula $n$
+\end_inset
+
+ qualsiasi di estrazioni, tutti gli esiti 
 \begin_inset Formula $\omega$
 \end_inset
 
- le cui componenti sono tutte diverse.
+ in cui un numero si ripete due o più volte avranno probabilità zero.
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dobbiamo ora calcolare la probabilità di un esito 
+\begin_inset Formula $\omega$
+\end_inset
+
+ le cui componenti sono tutte diverse fra loro.
+ Quanti esiti del genere ci sono? Per rispondere a questa domanda calcoliamo
+ quante liste di lunghezza 
+\begin_inset Formula $n$
+\end_inset
+
+ si possono costruire partendo da un numero 
+\begin_inset Formula $N$
+\end_inset
+
+ di elementi diversi.
  Tenendo conto dell'ordine (disposizioni), ci sono 
 \begin_inset Formula $D_{N}^{n}=N!/(N-n)!$
 \end_inset
@@ -9248,10 +9572,7 @@ Possiamo ancora parlare di esperimento statistico? Quali sono le proprietà
 \end_inset
 
  elementi.
-\begin_inset space \space{}
-\end_inset
-
-Se l'esperimento è condotto correttamente gli esiti con probabilità positiva
+ Se l'esperimento è condotto correttamente gli esiti con probabilità positiva
  saranno tutti equiprobabili.
  La probabilità di osservare un esito 
 \begin_inset Formula $\omega$
@@ -9259,17 +9580,32 @@ Se l'esperimento è condotto correttamente gli esiti con probabilità positiva
 
  a componenti tutte diverse è dunque 
 \begin_inset Formula \[
-\frac{1}{\#\text{ esiti a componenti diverse}}=\frac{(N-n)!}{N!}\ .\]
+Q(\omega)=\frac{1}{\#\text{ esiti a componenti diverse}}=\frac{(N-n)!}{N!}\ .\]
 
 \end_inset
 
- La nuova legge di probabilità 
+La nuova legge di probabilità 
 \begin_inset Formula $Q$
 \end_inset
 
  è dunque diversa dalla legge di probabilità vista nel caso di un'estrazione
- con reinserimento.
- Applichiamo la definizione delle 
+ con reinserimento (confronta la 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:probEsitoConReimmissione"
+
+\end_inset
+
+).
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Applichiamo la definizione delle 
 \begin_inset Formula $n$
 \end_inset
 
@@ -9284,13 +9620,18 @@ Se l'esperimento è condotto correttamente gli esiti con probabilità positiva
  al nuovo spazio di probabilità: 
 \begin_inset Formula \[
 X_{i}(\omega):=\left\{ \begin{array}{l}
-\text{1)\ Estraggo l' }i-\text{esimo numero da }\omega\text{, notato }j_{i}\in\{1,2,...N\}\text{.}\\
-\text{2) Associo la cilindrata dell'}j_{i}-\text{esima automobile.}\end{array}\right.\]
+\text{1. Estraggo l' }i-\text{esimo numero da }\omega\text{, notato }\omega(i)\in\{1,2,...N\}\text{.}\\
+\text{2. Associo la cilindrata dell'}\omega(i)-\text{esima automobile.}\end{array}\right.\]
 
 \end_inset
 
- Il nome delle variabili aleatorie è lo stesso ma la loro distribuzione
- è cambiata.
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il nome delle variabili aleatorie è lo stesso ma la loro distribuzione è
+ cambiata.
  In particolare, 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
@@ -9354,8 +9695,17 @@ o essere uguali fra loro e uguali a
 \end_inset
 
 .
- Esse sono fra loro diverse e da ciò concludiamo che non sono indipendenti.
- Per tale motivo le 
+ Le due probabilità condizionate sono fra loro diverse e da ciò concludiamo
+ che 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+non sono indipendenti.
+ Questa conclusione è generalizzabile alle 
 \begin_inset Formula $n$
 \end_inset
 
@@ -9363,8 +9713,8 @@ o essere uguali fra loro e uguali a
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- così costruite, sebbene utili ai fini dell'inferenza statistica, non sono
- 
+ costruite tramite selezione senza reinserimento.
+ Sebbene utili ai fini dell'inferenza statistica, esse non sono 
 \begin_inset Formula $i.i.d.$
 \end_inset
 
@@ -9377,6 +9727,11 @@ o essere uguali fra loro e uguali a
 \end_inset
 
 .
+ La tripla 
+\begin_inset Formula $(\mathbb{R}^{n},\overset{n}{\underset{i=1}{\otimes}}\mathcal{E}_{i},Q_{X_{1},...,X_{n}})$
+\end_inset
+
+ è uno spazio di probabilità ma non costituisce un esperimento statistico.
  Per quanto riguarda questo corso utilizzeremo quindi il termine 
 \begin_inset Formula $n$
 \end_inset
@@ -9592,9 +9947,14 @@ end{esercizio}
 \end_inset
 
 
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 Quando 
 \begin_inset Formula $N/n$
 \end_inset
@@ -9653,7 +10013,7 @@ Includiamo nel campione le
 
  unità aventi posizioni
 \begin_inset Formula \[
-r,\ r+k^{\ast},\ r+2k^{\ast},\ldots,r+(n-1)k^{\ast}\]
+r,\ r+k^{\ast},\ r+2k^{\ast},\ldots,\ r+(n-1)k^{\ast}\]
 
 \end_inset
 
@@ -9732,8 +10092,8 @@ reference "esempio cobb-douglas"
 \begin_inset Formula $\beta_{3}$
 \end_inset
 
- corrispondono alle elasticità della produzione rispetto al lavoro e rispettivam
-ente al capitale.
+ corrispondono rispettivamente alle elasticità della produzione rispetto
+ al lavoro e al capitale.
  Potremmo chiederci se una simile tecnologia possiede rendimenti di scala
  costanti.
  In termine dei coefficienti 
@@ -9777,7 +10137,7 @@ he
 \end_inset
 
  sono quindi delle variabili aleatorie, generalmente correlate fra loro
- in quanto funzioni delle medesime osservazioni.
+ in quanto funzioni delle stesse variabili aleatorie.
  Per verificare tramite un opportuno test d'ipotesi la validità dell'ipotesi
  di rendimenti di scala costanti procederemo come segue: 
 \end_layout
@@ -9829,51 +10189,11 @@ tra il valore osservato
 
 \begin_layout Enumerate
 Se la differenza in valore assoluto risulterà essere 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes eld
 \end_inset
 
 grande
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes erd
 \end_inset
 
  rifiuteremo l'ipotesi di rendimenti di scala costanti altrimenti non la
@@ -9884,99 +10204,19 @@ status collapsed
 \begin_layout Standard
 \noindent
 Per stabilire se la differenza così calcolata è significativa (
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes eld
 \end_inset
 
 grande
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes erd
 \end_inset
 
 ) o non significativa (
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes eld
 \end_inset
 
 piccola
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes erd
 \end_inset
 
 ) sarà necessario calcolare la varianza di 
@@ -10546,52 +10786,12 @@ E\left(\sum_{i=1}^{n}a_{i}X_{i}\right)=\sum_{i=1}^{n}a_{i}E\left(X_{i}\right)\te
 \end_inset
 
  A parole possiamo dire che 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes eld
 \end_inset
 
 il valore atteso di una somma pesata è uguale alla somma pesata dei valori
  attesi
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes erd
 \end_inset
 
 .
@@ -10611,18 +10811,18 @@ begin{esempio}
 \end_inset
 
  (continuato) Supponiamo che i valori attesi di 
-\begin_inset Formula $X_{1},\ X_{2}$
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{2}$
 \end_inset
 
  e 
 \begin_inset Formula $X_{3}$
 \end_inset
 
- siano rispettivamente uguali a 
-\begin_inset Formula $1,-2,\ 3$
-\end_inset
-
-.
+ siano rispettivamente uguali a 1, -2, 3.
  Il valore atteso di 
 \begin_inset Formula $X$
 \end_inset
@@ -10666,6 +10866,13 @@ bilineare
 \emph default
 .
  Cosa significa bilineare? La spiegazione è molto semplice.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10810,105 +11017,33 @@ Ora, si può dimostrare (si veda l'appendice) che la covarianza è un operatore
  bilineare.
  Da ciò risulta che la covarianza si comporta in maniera simile al valore
  atteso quando noi 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes eld
 \end_inset
 
 fissiamo
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes erd
 \end_inset
 
  uno dei due argomenti.
- Ad esempio, supponiamo di voler calcolare 
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ad esempio, supponiamo di voler calcolare 
 \begin_inset Formula $Cov\left(2X_{1}-3X_{2}+X_{3},Y_{1}-2Y_{2}\right)$
 \end_inset
 
 .
  Partiamo considerando 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes eld
 \end_inset
 
 fisso
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes erd
 \end_inset
 
  il secondo argomento che in questo caso è dato da 
@@ -10971,9 +11106,17 @@ Cov\left(2X_{1}-3X_{2}+X_{3},Y_{1}-2Y_{2}\right) & = & 2Cov\left(X_{1},Y_{1}\rig
 \end_inset
 
  Come potete vedere il calcolo della covarianza fra somme di variabili aleatorie
- è semplice ma laborioso.
- È tuttavia possibile aiutarsi utilizzando una tabella che ricorda la battaglia
- navale.
+ è laborioso ma fondamentalmente semplice una volta capite le proprietà
+ della covarianza.
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+È possibile aiutarsi utilizzando una tabella che ricorda la battaglia navale.
  La tabella consiste in 
 \begin_inset Formula $n$
 \end_inset
@@ -11063,8 +11206,9 @@ Cov\left(2X_{1}-3X_{2}+X_{3},Y_{1}-2Y_{2}\right)=2c_{11}-4c_{12}-3c_{21}+6c_{22}
 
 \end_inset
 
- Per completezza d'informazione diamo la formula generale per il calcolo
- della covarianza fra due combinazioni lineari qualsiasi di 
+ Per completezza di informazione diamo la formula generale in termini di
+ sommatoria per il calcolo della covarianza fra due combinazioni lineari
+ qualsiasi di 
 \begin_inset Formula $V.A.$
 \end_inset
 
@@ -11107,8 +11251,7 @@ V\left(X\right)=E\left[\left(X-E(X)\right)^{2}\right]=E\left[\left(X-E(X)\right)
 
 \end_inset
 
- Da quest'ultima osservazione notiamo che la varianza di una somma pesata
- di 
+La varianza di una somma pesata di 
 \begin_inset Formula $V.A.$
 \end_inset
 
@@ -11141,6 +11284,7 @@ begin{esempio}
 \end_layout
 
 \begin_layout Standard
+\noindent
 Costruiamo la tabella delle covarianze fra 
 \begin_inset Formula $X_{1},X_{2},X_{3}$
 \end_inset
@@ -11205,7 +11349,19 @@ varianze-covarianze
 \end_inset
 
 .
- Fuori dalla diagonale troviamo le covarianze fra 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Fuori dalla diagonale troviamo le covarianze fra 
 \begin_inset Formula $X_{i}$
 \end_inset
 
@@ -11233,7 +11389,20 @@ c_{ij}=c_{ji}.\]
 
 \end_inset
 
- Per il calcolo della varianza procediamo come per il calcolo della covarianza
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Per il calcolo della varianza procediamo come per il calcolo della covarianza
  fra somme di 
 \begin_inset Formula $V.A.$
 \end_inset
@@ -11322,12 +11491,8 @@ V\left(\sum_{i=1}^{n}a_{i}X_{i}\right) & = & \sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}a_
 
 \end_inset
 
- Caso particolare: variabili non correlate
-\end_layout
-
-\begin_layout Standard
-\noindent
-Quando le 
+ Caso particolare: variabili non correlate.
+ Quando le 
 \begin_inset Formula $V.A.$
 \end_inset
 
@@ -11358,58 +11523,18 @@ V\left(\sum_{i=1}^{n}a_{i}X_{i}\right)=\sum_{i=1}^{n}a_{i}^{2}V\left(X_{i}\right
 
 \end_inset
 
- In pratica, nel caso di variabili non correlate, la varianza di una somma
+In pratica, nel caso di variabili non correlate, la varianza di una somma
  è la somma delle varianze pesate per il 
 \emph on
 quadrato
 \emph default
  dei coefficienti della combinazione lineare.
  Ricordate che la varianza è il valore atteso 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes eld
 \end_inset
 
 di un quadrato
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
+\begin_inset Quotes erd
 \end_inset
 
 : per tale motivo i coefficienti sono al quadrato!
@@ -11425,7 +11550,23 @@ Consideriamo una popolazione di numerosità
 \end_inset
 
 .
- Chiameremo campione casuale semplice un campione di numerosità 
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definizione}
+\end_layout
+
+\end_inset
+
+Chiameremo campione casuale semplice un campione di numerosità 
 \begin_inset Formula $n$
 \end_inset
 
@@ -11438,6 +11579,18 @@ ad ogni passo
 \end_inset
 
  di essere estratta.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{definizione}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -11456,12 +11609,12 @@ begin{esercizio}
  Mostrate che entrambe le tecniche di campionamento con e senza reinserimento
  soddisfano la condizione imposta dalla definizione di campione casuale
  semplice.
- Suggerimento:
-\begin_inset space \space{}
-\end_inset
+\end_layout
 
-per quanto riguarda la selezione senza reinserimento, aiutatevi utilizzando
- la proprietà condizionata.
+\begin_layout Standard
+\noindent
+Suggerimento: per quanto riguarda la selezione senza reinserimento, aiutatevi
+ utilizzando la proprietà condizionata.
  
 \begin_inset ERT
 status collapsed
@@ -11484,7 +11637,20 @@ end{esercizio}
  delle due tecniche di selezione casuale con o senza reinserimento viste
  in precedenza.
  
-\begin_inset Formula $``$
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{quotation}
+\end_layout
+
 \end_inset
 
 Il campionamento casuale semplice è raramente applicato nelle indagini statistic
@@ -11492,17 +11658,39 @@ he, sia perché la selezione è completamente affidata al caso e non incorpora
  le informazione note a priori sulla popolazione o sulle caratteristiche
  distributive delle variabili, sia perché nelle indagini su vasta scala
  è pesante quanto a costi di relevazione dei dati e a organizzazione del
- lavoro
+ lavoro 
 \begin_inset Quotes eld
 \end_inset
 
-sul campo”
-\begin_inset space \space{}
+sul campo” ...
+ Il campionamento casuale semplice è invece quello che si assume nella teoria
+ dell'inferenza statistica quando non è precisato il di
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
 \end_inset
 
-...
- Il campionamento casuale semplice è invece quello che si assume nella teoria
- dell'inferenza statistica quando non è precisato il disegno adottato.
+se
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+gno adottato.
  Per questo tipo di campionamento sono, infatti proposte 
 \emph on
 metodiche
@@ -11517,13 +11705,30 @@ verifica
 \emph default
  della significatività statistica di ipotesi sui più disparati parametri
  delle distribuzioni, anche multivariate, di indici di relazione tra variabili,
- di dati organizzati in serie temporali ecc.”
-\begin_inset space \space{}
+ di dati organizzati in serie temporali ecc.
+ (Fabbris, pp.
+ 53-54)
+.
+\lang italian
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{quotation}
+\end_layout
+
 \end_inset
 
-(Fabbris, pp.
- 53-54).
- Il campionamento casuale semplice è lo standard verso il quale confrontare
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il campionamento casuale semplice è lo standard verso il quale confrontare
  gli altri tipi di campionamento.
  Per tale motivo sarà quello da noi maggiormente trattato.
 \end_layout
@@ -11534,55 +11739,7 @@ Valore atteso e varianza della media campionaria
 
 \begin_layout Standard
 In questo e nei prossimi paragrafi desideriamo studiare le proprietà di
- correttezza e di 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-precisione
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
- della media campionaria 
+ correttezza e di precisione della media campionaria 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
@@ -11595,7 +11752,7 @@ status collapsed
 \begin_inset Formula $P_{p}$
 \end_inset
 
- della popolazione campione quale principale oggetto di studio.
+ della popolazione obiettivo quale principale oggetto di studio.
  Con modestia ci accontentiamo di stimare il valore medio 
 \begin_inset Formula $\mu$
 \end_inset
