@@ -9095,7 +9095,7 @@ Ripetiamo l'esperimento
 .
  Qual è la probabilità di osservare un qualsiasi esito
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Ora 
@@ -9112,7 +9112,7 @@ Ora
 
 \end_inset
 
- di un vettore a 
+ di una lista a 
 \begin_inset Formula $n$
 \end_inset
 
@@ -9263,7 +9263,7 @@ Quando la distribuzione statistica
 \begin_inset Formula $P_{X}$
 \end_inset
 
- andando a pescare da una particolare famiglia parametrica di distribuzioni
+ andando a selezionare da una particolare famiglia parametrica di distribuzioni
  
 \begin_inset Formula $\mathcal{P}$
 \end_inset
@@ -9310,7 +9310,7 @@ Quando la distribuzione statistica
 \end_inset
 
 .
- Poiché la legge di probabilità di 
+ Poiché la legge di probabilità 
 \family roman
 \series medium
 \shape up
@@ -9490,7 +9490,7 @@ Questa tecnica è identica alla precedente con l'unica differenza che le
 \end_inset
 
 ? Per rispondere a queste domande partiamo innanzi tutto dalla definizione
- del nuovo spazio campione.
+ del nuovo spazio campionario.
  Supponiamo per un momento di utilizzare ancora 
 \begin_inset Formula $\Omega^{n}$
 \end_inset
@@ -9652,7 +9652,7 @@ Il nome delle variabili aleatorie è lo stesso ma la loro distribuzione è
 .
  Facciamo un esempio prendendo quale popolazione obiettivo il colore delle
  automobili immatricolate.
- Supponiamo che ci siano 
+ Supponiamo che nella popolazione obiettivo ci siano 
 \begin_inset Formula $k$
 \end_inset
 
@@ -9704,7 +9704,7 @@ o essere uguali fra loro e uguali a
 \begin_inset Formula $X_{2}$
 \end_inset
 
-non sono indipendenti.
+ non sono indipendenti.
  Questa conclusione è generalizzabile alle 
 \begin_inset Formula $n$
 \end_inset
@@ -11584,6 +11584,7 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 end{definizione}
 \end_layout
@@ -11707,10 +11708,7 @@ verifica
  delle distribuzioni, anche multivariate, di indici di relazione tra variabili,
  di dati organizzati in serie temporali ecc.
  (Fabbris, pp.
- 53-54)
-.
-\lang italian
-
+ 53-54).
 \begin_inset ERT
 status open
 
