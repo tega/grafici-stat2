@@ -9472,6 +9472,12 @@ Le
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Campionamento-no-reins"
+
+\end_inset
+
 Campionamento tramite selezione senza re\SpecialChar \-
 in\SpecialChar \-
 se\SpecialChar \-
@@ -11745,7 +11751,12 @@ In questo e nei prossimi paragrafi desideriamo studiare le proprietà di
 \begin_inset Formula $\mu$
 \end_inset
 
- della popolazione.
+ di una particolare caratteristica numerica 
+\begin_inset Formula $X$
+\end_inset
+
+ della popolazione (reddito da lavoro, patrimonio, spesa in beni alimentari,
+ ecc.).
  In questo caso scalziamo dal trono la distribuzione statistica 
 \begin_inset Formula $P_{p}$
 \end_inset
@@ -11755,44 +11766,91 @@ In questo e nei prossimi paragrafi desideriamo studiare le proprietà di
 \begin_inset Formula $\mu$
 \end_inset
 
- della popolazione.
- Supponiamo quindi che la popolazione sia composta da 
+ della caratteristica 
+\begin_inset Formula $X$
+\end_inset
+
+ della popolazione 
+\begin_inset Formula \[
+\mu=\sum_{k=1}^{K}x_{k}p_{k}\]
+
+\end_inset
+
+dove 
+\begin_inset Formula $K$
+\end_inset
+
+ è il numero dei diversi volori di 
+\begin_inset Formula $X$
+\end_inset
+
+ osservabili nella popolazione e 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $p_{k}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ rappresenta la frazione di unità della popolazione aventi un valore della
+ caratteristica uguale a 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+.
+ Sappiamo che la popolazione è costituita da 
 \begin_inset Formula $N$
 \end_inset
 
  unità.
  Denotiamo con 
-\begin_inset Formula $a_{i}$
+\begin_inset Formula $a_{j}$
 \end_inset
 
- il valore della caratteristica studiata dell'
-\begin_inset Formula $i$
+ il valore della caratteristica studiata della 
+\begin_inset Formula $j$
 \end_inset
 
 -esima unità.
  Ad esempio, se decidessimo di studiare la distribuzione del reddito della
- popolazione svizzera 
-\begin_inset Formula $a_{i}$
+ popolazione svizzera, 
+\begin_inset Formula $a_{j}$
 \end_inset
 
- rappresenterebbe il reddito dell'
-\begin_inset Formula $i$
+ rappresenterebbe il reddito dello 
+\begin_inset Formula $j$
 \end_inset
 
 -esimo individuo alla data in cui è eseguito lo studio.
  Il parametro sconosciuto da stimare è dunque uguale a 
 \begin_inset Formula \[
-\mu=\sum_{i=1}^{N}a_{i}\frac{1}{N}\]
+\mu=\sum_{k=1}^{K}x_{k}p_{k}=\sum_{j=1}^{N}a_{j}\frac{1}{N}\]
 
 \end_inset
 
  mentre la varianza della distribuzione del reddito è
 \begin_inset Formula \[
-\sigma^{2}=\sum_{i=1}^{N}\left(a_{i}-\mu\right)^{2}\frac{1}{N}\ .\]
+\sigma^{2}=\sum_{k=1}^{K}\left(x_{k}-\mu\right)^{2}p_{k}=\sum_{j=1}^{N}\left(a_{j}-\mu\right)^{2}\frac{1}{N}\ .\]
 
 \end_inset
 
- 
+
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -11805,8 +11863,8 @@ In questo e nei prossimi paragrafi desideriamo studiare le proprietà di
  In realtà entrambe queste quantità sono sconosciute e pertanto dovranno
  essere stimate.
  Poiché non desideriamo stimare la distribuzione della popolazione ma solo
- il primo momento (valore atteso o valore medio) e la varianza per questa
- volta eviteremo di specificare una famiglia parametrica di distribuzioni.
+ il primo momento e la varianza, per questa volta eviteremo di specificare
+ una famiglia parametrica di distribuzioni.
 \end_layout
 
 \begin_layout Standard
@@ -11922,6 +11980,13 @@ V(X_{i})=E(X_{i}^{2})-\left(E(X_{i})\right)^{2}\text{.}\]
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "footnote formula altern varianza"
+
+\end_inset
+
  che per un qualsiasi 
 \begin_inset Formula $i\in(1,\ldots,n)$
 \end_inset
@@ -11974,13 +12039,15 @@ La varianza della popolazione: il recercatore non ha alcun influsso su questo
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\noindent
+\begin_inset VSpace smallskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
+\noindent
 Da ultimo sottolineamo ancora che 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
@@ -11995,7 +12062,7 @@ Da ultimo sottolineamo ancora che
 
  non è derivabile analiticamente.
  Ci sono però delle eccezioni.
- Una fra queste è la distribuzione normale.
+ Una fra queste è la distribuzione Normale.
  Infatti, se le variabili aleatorie 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
@@ -12004,11 +12071,11 @@ Da ultimo sottolineamo ancora che
 \begin_inset Formula $i.i.d.$
 \end_inset
 
- e distribuite secondo la legge normale 
+ e distribuite secondo la legge Normale 
 \begin_inset Formula $N(\mu,\sigma^{2})$
 \end_inset
 
-, allora anche la loro media è una variabile aleatoria normale.
+, allora anche la loro media è una variabile aleatoria Normale.
 \end_layout
 
 \begin_layout Standard
@@ -12024,7 +12091,8 @@ begin{esercizio}
 
 \end_inset
 
- simulazione e studio dei risultati 
+ Utilizzando il file di excel sulla distribuzione del numero di scarpe eseguite
+ una simulazione ed uno studio dei risultati.
 \begin_inset ERT
 status collapsed
 
@@ -12113,19 +12181,29 @@ begin{esercizio}
 
 \end_inset
 
- Per 
+ Consideriamo una popolazione obiettivo di 
 \begin_inset Formula $N=5$
 \end_inset
 
- e 
+ unità ed un numero 
 \begin_inset Formula $n=3$
 \end_inset
 
- è dato lo spazio di probabilità 
-\begin_inset Formula $\left(\Omega^{3},\overset{3}{\underset{i=1}{\otimes}}\mathcal{E}_{i},Q\right)$
+ di estrazioni senza reinserimento.
+ Lo spazio di probabilità è quello studiato nella Sezione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Campionamento-no-reins"
+
 \end_inset
 
- sul quale definiamo le variabili aleatorie 
+ 
+\begin_inset Formula \[
+\left(\Omega^{3},\overset{3}{\underset{i=1}{\otimes}}\mathcal{E}_{i},Q\right).\]
+
+\end_inset
+
+Prendiamo le variabili aleatorie 
 \begin_inset Formula $U_{13}$
 \end_inset
 
@@ -12140,9 +12218,9 @@ begin{esercizio}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 \noindent
-1) Definite a parole le tre variabili 
+Definite a parole le tre variabili aleatorie 
 \begin_inset Formula $U_{13}$
 \end_inset
 
@@ -12157,9 +12235,9 @@ begin{esercizio}
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Enumerate
 \noindent
-2) Sono dati gli esiti 
+Considerate gli esiti 
 \begin_inset Formula $\omega_{1}=(1,2,5)$
 \end_inset
 
@@ -12171,8 +12249,7 @@ begin{esercizio}
 \begin_inset Formula $\omega_{3}=(1,1,1)$
 \end_inset
 
-.
- Calcolate per ciascuna delle tre variabili 
+ e calcolate per ciascuna delle tre variabili 
 \begin_inset Formula $U$
 \end_inset
 
@@ -12184,7 +12261,11 @@ begin{esercizio}
 \begin_inset Formula $i=1,2,3.$
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 \begin_inset ERT
 status collapsed
 
@@ -12201,6 +12282,7 @@ end{esercizio}
 \end_layout
 
 \begin_layout Standard
+\noindent
 Possiamo riassumere il tutto nella seguente tabella
 \begin_inset Formula \[
 \begin{tabular}{ccccccccc}
@@ -12213,11 +12295,11 @@ Possiamo riassumere il tutto nella seguente tabella
 
 \end_inset
 
- Questa tabella possiede più colonne che righe (
+ Questa tabella possiede più colonne che righe: 
 \begin_inset Formula $n\leq N$
 \end_inset
 
-: non posso estrare più di 
+ (non posso estrare più di 
 \begin_inset Formula $N$
 \end_inset
 
@@ -12230,11 +12312,11 @@ Possiamo riassumere il tutto nella seguente tabella
 \begin_inset Formula $T_{j}$
 \end_inset
 
- sono la somma rispetto al numero di estrazioni 
-\begin_inset Formula $(i)$
+ sono la somma rispetto al numero di estrazioni (indice 
+\begin_inset Formula $i$
 \end_inset
 
- delle variabili 
+) delle variabili 
 \begin_inset Formula $U_{ij}$
 \end_inset
 
@@ -12259,7 +12341,7 @@ Possiamo riassumere il tutto nella seguente tabella
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\begin_inset VSpace smallskip
 \end_inset
 
 
@@ -12305,7 +12387,7 @@ reference "def media x"
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\begin_inset VSpace smallskip
 \end_inset
 
 
@@ -12346,14 +12428,25 @@ P(T_{i}=1)=\frac{\#\text{ esiti favorevoli}}{\#\text{ esiti possibili}}\text{.}\
 
 \end_inset
 
- Il numero di esiti possibili è già stato calcolato in precedenza ed è uguale
- a
+ Il numero di esiti possibili è già stato calcolato nella Sezione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Campionamento-no-reins"
+
+\end_inset
+
+ ed è
 \begin_inset Formula \[
 D_{N}^{n}=\frac{N!}{(N-n)!}\text{.}\]
 
 \end_inset
 
- Il numero degli esiti favorevoli è uguale al numero di esiti con probabilità
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il numero degli esiti favorevoli è uguale al numero di esiti con probabilità
  positiva
 \begin_inset Foot
 status collapsed
@@ -12418,7 +12511,7 @@ Ricordiamo che gli elementi
  elementi.
  Il risultato è dunque 
 \begin_inset Formula \[
-\frac{n\ \left(N-1\right)!}{(N-1-(n-1))!}.\]
+n\, D_{N-1}^{n-1}=\frac{n\ \left(N-1\right)!}{(N-1-(n-1))!}=\frac{n\ \left(N-1\right)!}{(N-n)!}.\]
 
 \end_inset
 
@@ -12550,7 +12643,7 @@ Degli
 
 \end_deeper
 \begin_layout Enumerate
-Esiti possibili (calcolati in precedenza)
+Esiti possibili (calcolati in precedenza) uguali a 
 \begin_inset Formula $\frac{N!}{(N-n)!}\ .$
 \end_inset
 
@@ -12663,10 +12756,18 @@ V(\overline{X}_{n}) & = & \frac{1}{n^{2}}\left(\frac{n(N-n)}{N^{2}}\sum_{j=1}^{N
 \end_inset
 
  Ma 
-\begin_inset Formula $\sum_{ij=1}^{N}a_{j}^{2}\frac{1}{N}-\mu^{2}$
+\begin_inset Formula $\sum_{j=1}^{N}a_{j}^{2}\frac{1}{N}-\mu^{2}$
 \end_inset
 
- è la formula alternativa della varianza della popolazione.
+ è la formula alternativa della varianza della popolazione (confronta la
+ Sezione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "footnote formula altern varianza"
+
+\end_inset
+
+).
  Per tale motivo otteniamo quale risultato finale
 \begin_inset Formula \begin{equation}
 V(\overline{X}_{n})=\frac{N-n}{N-1}\frac{\sigma^{2}}{n}.\label{varianza media senza reimmissione}\end{equation}
@@ -12707,48 +12808,10 @@ reference "varianza media senza reimmissione"
 e.
  In questo caso la tecnica di reinserimento si rivela persino 
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
 dannosa
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
 \end_layout
 
 \end_inset
@@ -12788,6 +12851,11 @@ reference "selezione sistematica"
 \end_inset
 
  corrisponde al numero di gruppi in cui l'intera popolazione è partizionata.
+ Ciascun gruppo conterrà dunque 
+\begin_inset Formula $n$
+\end_inset
+
+ unità della popolazione.
  La probabilità di includere un particolare individuo nel campione è uguale
  alla probabilità di selezionare il suo gruppo d'appartenenza:
 \begin_inset space \space{}
@@ -12821,12 +12889,19 @@ poiché in totale ci sono
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- è come al solito uguale alla somma dei redditi degli individui selezionati
+ è come al solito uguale alla somma delle 
+\begin_inset Formula $n$
+\end_inset
+
+ variabili aleatorie 
+\begin_inset Formula $X_{i}$
+\end_inset
+
  divisa per 
 \begin_inset Formula $n$
 \end_inset
 
-, il numero di individui selezionati.
+.
  Tuttavia, mentre nei casi della tecnica di selezione con e senza reinserimento
  avevamo potuto definire le variabili aleatorie 
 \begin_inset Formula $X_{i}$
@@ -12846,37 +12921,47 @@ poiché in totale ci sono
 \begin_inset Formula $\sum_{i=1}^{n}X_{i}$
 \end_inset
 
- che, nel caso del campionamento sistematico, corrisponde alla somma dei
- redditi degli 
+ che, nel caso del campionamento sistematico, corrisponde alla somma della
+ caratteristica degli 
 \begin_inset Formula $n$
 \end_inset
 
  individui appartenenti al gruppo selezionato.
+ Per tale motivo in questa Sezione utilizzeremo la seguente convenzione:
+ l'indice 
+\begin_inset Formula $j$
+\end_inset
+
+ denoterà il gruppo mentre l'indice 
+\begin_inset Formula $i$
+\end_inset
+
+ verrà utilizzato per indicare l'individuo all'interno del gruppo.
  Definiamo per ciascun gruppo 
-\begin_inset Formula $i\in\left(1,...,k\right)$
+\begin_inset Formula $j\in\left(1,...,k\right)$
 \end_inset
 
  la quantità
 \begin_inset Formula \[
-g_{i}=\sum_{j=1}^{n}a_{ij}\]
+g_{j}=\sum_{i=1}^{n}a_{ji}\]
 
 \end_inset
 
  dove 
-\begin_inset Formula $a_{ij}$
+\begin_inset Formula $a_{ji}$
 \end_inset
 
- corrisponde per definizione alla 
-\begin_inset Formula $j$
-\end_inset
-
--esima persona dell' 
+ corrisponde per definizione alla caratteristica della 
 \begin_inset Formula $i$
+\end_inset
+
+-esima persona dello 
+\begin_inset Formula $j$
 \end_inset
 
 -esimo gruppo.
  Le quantità 
-\begin_inset Formula $g_{i}$
+\begin_inset Formula $g_{j}$
 \end_inset
 
  non sono aleatorie ma 
@@ -12889,29 +12974,29 @@ in quanto il partizionamento della popolazione in
 
  gruppi è avvenuto in maniera deterministica.
  La casualità viene introdotta definendo le variabili aleatorie 
-\begin_inset Formula $T_{i}$
+\begin_inset Formula $T_{j}$
 \end_inset
 
  nel modo seguente
 \begin_inset Formula \[
-T_{i}=\left\{ \begin{array}{ll}
-1 & \text{l'}i\text{-esimo gruppo è selezionato}\\
+T_{j}=\left\{ \begin{array}{ll}
+1 & \text{lo }j\text{-esimo gruppo è selezionato}\\
 0 & \text{altrimenti}\end{array}\right.\text{.}\]
 
 \end_inset
 
  Come calcolato in precedenza è facile dimostrare che
 \begin_inset Formula \begin{eqnarray*}
-E(T_{i}) & = & \frac{1}{k},\\
-V(T_{i}) & = & \left(\frac{1}{k}-\frac{1}{k^{2}}\right),\\
-Cov(T_{i},T_{s}) & = & -\frac{1}{k^{2}}.\end{eqnarray*}
+E(T_{j}) & = & \frac{1}{k},\\
+V(T_{j}) & = & \left(\frac{1}{k}-\frac{1}{k^{2}}\right),\\
+Cov(T_{j},T_{s}) & = & -\frac{1}{k^{2}}.\end{eqnarray*}
 
 \end_inset
 
  A questo punto è semplice convincersi che la media campionaria di un campioname
 nto sistematico altro non è che 
 \begin_inset Formula \[
-\overline{X}_{n}=\frac{1}{n}\sum_{i=1}^{k}g_{i}T_{i}\text{.}\]
+\overline{X}_{n}=\frac{1}{n}\sum_{j=1}^{k}g_{j}T_{j}\text{.}\]
 
 \end_inset
 
@@ -12929,14 +13014,14 @@ Il valore atteso di
 \begin_layout Standard
 Utilizziamo le proprietà ormai note del valore atteso:
 \begin_inset Formula \begin{eqnarray*}
-E\left(\overline{X}_{n}\right) & = & E\left(\frac{1}{n}\sum_{i=1}^{k}g_{i}T_{i}\right)=\frac{1}{n}\sum_{i=1}^{k}g_{i}E\left(T_{i}\right)=\frac{1}{n}\frac{1}{k}\sum_{i=1}^{k}g_{i}\\
- & = & \frac{1}{N}\underset{\text{somma sull'intera pop.}}{\underbrace{\sum_{i=1}^{k}\sum_{j=1}^{n}a_{ji}}}=\mu\text{.}\end{eqnarray*}
+E\left(\overline{X}_{n}\right) & = & E\left(\frac{1}{n}\sum_{j=1}^{k}g_{j}T_{j}\right)=\frac{1}{n}\sum_{j=1}^{k}g_{j}E\left(T_{j}\right)=\frac{1}{n}\frac{1}{k}\sum_{j=1}^{k}g_{j}\\
+ & = & \frac{1}{N}\underset{\text{somma sull'intera pop.}}{\underbrace{\sum_{j=1}^{k}\sum_{i=1}^{n}a_{ji}}}=\mu\text{.}\end{eqnarray*}
 
 \end_inset
 
- La media campionaria è dunque uno stimatore corretto del valore atteso
- della popolazione anche quando la tecnica di campionamento è quella del
- campionamento sistematico.
+La media campionaria è dunque uno stimatore corretto del valore atteso della
+ popolazione anche quando la tecnica di campionamento è quella del campionamento
+ sistematico.
  Veniamo ora alla calcolo del suo grado di precisione.
 \end_layout
 
@@ -12950,10 +13035,10 @@ La varianza di
 
 \begin_layout Standard
 \begin_inset Formula \begin{eqnarray*}
-V(\overline{X}_{n}) & = & \frac{1}{n^{2}}V(\sum_{i=1}^{k}g_{i}T_{i})=\frac{1}{n^{2}}\sum_{i=1}^{k}\sum_{s=1}^{k}g_{i}g_{s}Cov(T_{i},T_{s})\\
- & = & \frac{1}{n^{2}}\left(\sum_{i=1}^{k}g_{i}^{2}V(T_{i})+\underset{i\neq s}{\sum_{i=1}^{k}\sum_{s=1}^{k}}g_{i}g_{s}Cov(T_{i},T_{s})\right)\\
- & = & \frac{1}{n^{2}}\left(\left(\frac{1}{k}-\frac{1}{k^{2}}\right)\sum_{i=1}^{k}g_{i}^{2}-\frac{1}{k^{2}}\underset{i\neq s}{\sum_{i=1}^{k}\sum_{s=1}^{k}}g_{i}g_{s}\right)\\
- & = & \frac{1}{n^{2}}\left(\frac{1}{k}\sum_{i=1}^{k}g_{i}^{2}-\frac{1}{k^{2}}\sum_{i=1}^{k}\sum_{s=1}^{k}g_{i}g_{s}\right).\end{eqnarray*}
+V(\overline{X}_{n}) & = & \frac{1}{n^{2}}V(\sum_{j=1}^{k}g_{j}T_{j})=\frac{1}{n^{2}}\sum_{j=1}^{k}\sum_{s=1}^{k}g_{j}g_{s}Cov(T_{j},T_{s})\\
+ & = & \frac{1}{n^{2}}\left(\sum_{j=1}^{k}g_{j}^{2}V(T_{j})+\underset{j\neq s}{\sum_{j=1}^{k}\sum_{s=1}^{k}}g_{j}g_{s}Cov(T_{j},T_{s})\right)\\
+ & = & \frac{1}{n^{2}}\left(\left(\frac{1}{k}-\frac{1}{k^{2}}\right)\sum_{j=1}^{k}g_{j}^{2}-\frac{1}{k^{2}}\underset{j\neq s}{\sum_{j=1}^{k}\sum_{s=1}^{k}}g_{j}g_{s}\right)\\
+ & = & \frac{1}{n^{2}}\left(\frac{1}{k}\sum_{j=1}^{k}g_{j}^{2}-\frac{1}{k^{2}}\sum_{j=1}^{k}\sum_{s=1}^{k}g_{j}g_{s}\right).\end{eqnarray*}
 
 \end_inset
 
@@ -12966,7 +13051,7 @@ reference "equazione d'esempio"
 
 ) si ottiene
 \begin_inset Formula \[
-V(\overline{X}_{n})=\frac{1}{n^{2}}\frac{1}{k}\sum_{i=1}^{k}\left(g_{i}-\overline{g}\right)^{2}\text{.}\]
+V(\overline{X}_{n})=\frac{1}{n^{2}}\frac{1}{k}\sum_{j=1}^{k}\left(g_{j}-\overline{g}\right)^{2}\text{.}\]
 
 \end_inset
 
@@ -13023,53 +13108,9 @@ Campionamento stratificato
 Stratificare una popolazione consiste nel creare una partizione della stessa
  sulla base di determinati criteri.
  Ogni sottoinsieme è detto 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
+\emph on
 strato
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
+\emph default
 .
  I criteri utilizzati per definire gli strati dipendono dalle caratteristiche
  della popolazione nonché dall'obiettivo dello studio.
@@ -13402,154 +13443,22 @@ f_{h}=c\ \ \ \forall h\label{campione stratificato proporzionale}\end{equation}
 \end_inset
 
  allora il campione si dice 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
+\emph on
 stratificato proporzionale
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
+\emph default
 .
  Quando invece 
 \begin_inset Formula $f_{h}$
 \end_inset
 
  non è costante si parlerà di campione 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
+\emph on
 stratificato non proporzionale
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
+\emph default
  o 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
+\emph on
 a probabilità variabili
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
+\emph default
 .
  Si noti che nel caso di campione stratificato proporzionale, 
 \begin_inset Formula $c$
@@ -13600,7 +13509,12 @@ n_{h}=\frac{N_{h}}{N}n\text{ o equivalentemente }\frac{n_{h}}{n}=\frac{N_{h}}{N}
 
 \end_inset
 
- Fissata la numerosità del campione sulla base di vincoli economici dettati
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Fissata la numerosità del campione sulla base di vincoli economici dettati
  dalla limitatezza delle risorse a disposizione, il numero di unità da estrarre
  dall'
 \begin_inset Formula $h$
@@ -14617,7 +14531,9 @@ begin{remark}
 \begin_inset Formula $h$
 \end_inset
 
- è perfettamente omogeneo allora la sua varianza è nulla.
+ è perfettamente omogeneo (tutte le unità dello strato presentano lo stesso
+ valore della caratteristica in esame) allora la sua varianza è evidentemente
+ nulla.
  Nasce da qui il vantaggio di stratificare la popolazione quando gli strati
  possiedono una certa uniformità rispetto alla caratteristica studiata.
  
@@ -14767,15 +14683,24 @@ begin{theorem}
 \begin_inset Formula $(SS_{h})$
 \end_inset
 
- la somma degli scarti dal valore atteso al quadrato, ovvero
+ la somma del quadrato degli scarti dal valore atteso, ovvero
 \begin_inset Formula \[
 SS=\sum_{i=1}^{N}\left(a_{i}-\mu\right)^{2}\text{ e }SS_{h}=\sum_{j=1}^{N_{h}}\left(a_{h,i}-\mu_{h}\right)^{2}\text{.}\]
 
 \end_inset
 
  Vale la seguente relazione
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
-\sigma^{2}=\sum_{h=1}^{H}\pi_{h}\sigma_{h}^{2}+\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\label{scomposizione varianza in strati}\end{equation}
+\sigma^{2}=\sum_{h=1}^{H}\pi_{h}\sigma_{h}^{2}+\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\label{eq:a}\end{equation}
+
+\end_inset
+
+
+\begin_inset Formula \[
+\sigma^{2}=\sum_{h=1}^{H}\pi_{h}\sigma_{h}^{2}+\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\]
 
 \end_inset
 
@@ -14796,6 +14721,7 @@ end{theorem}
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \series bold
 Interpretazione
@@ -14807,6 +14733,23 @@ tà fra strati).
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.2cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 
 \series bold
 Dimostrazione
@@ -14906,7 +14849,7 @@ V(\overline{X}_{n})-V(\overline{X}_{str,n}) & = & \frac{1-f}{n}\frac{N}{N-1}\sig
  dimodoché 
 \begin_inset Formula \begin{eqnarray*}
 V(\overline{X}_{n})-V(\overline{X}_{str,n}) & \simeq & \frac{1-f}{n}\left(\sigma^{2}-\sum_{h=1}^{H}\pi_{h}\sigma_{h}^{2}\right)\\
- & \underset{(\ref{scomposizionevarianzainstrati})}{=} & \frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\geq0\text{.}\end{eqnarray*}
+ & \underset{(\ref{eq:a})}{=} & \frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\geq0\text{.}\end{eqnarray*}
 
 \end_inset
 
@@ -15405,7 +15348,7 @@ end{esempio}
 \begin_inset Formula $X_{1},X_{2},X_{3},...$
 \end_inset
 
- sono distribuite secondo la legge normale.
+ sono distribuite secondo la legge Normale.
  
 \end_layout
 
@@ -15419,7 +15362,7 @@ Poiché la somma pesata di
 \begin_inset Formula $V.A.$
 \end_inset
 
- normale, possiamo eseguire il grafico della funzione di densità degli 
+ Normale, possiamo eseguire il grafico della funzione di densità degli 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
@@ -15880,7 +15823,7 @@ reference "esempio sequenza normale"
 \end_inset
 
 .
- Ancora una volta, grazie alla proprietà della normale, dopo la standardizzazion
+ Ancora una volta, grazie alla proprietà della Normale, dopo la standardizzazion
 e le variabili aleatorie 
 \begin_inset Formula $Y_{n}$
 \end_inset
@@ -15944,7 +15887,7 @@ reference "esempio somme di normali"
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- non sarà più distribuita secondo la legge normale e, di riflesso, pure
+ non sarà più distribuita secondo la legge Normale e, di riflesso, pure
  
 \begin_inset Formula $Y_{n}$
 \end_inset
@@ -16218,7 +16161,7 @@ per valori di
 \end_inset
 
  sufficientemente grandi la media standardizzata è distribuita come una
- variabile aleatoria normale standard.
+ variabile aleatoria Normale standard.
  È importante notare e 
 \emph on
 ricordarsi
@@ -16253,7 +16196,7 @@ end{remark}
 
 \begin_layout Standard
 \noindent
-Una variabile aleatoria normale standard è generalmente indicata con la
+Una variabile aleatoria Normale standard è generalmente indicata con la
  lettera 
 \begin_inset Formula $Z$
 \end_inset
@@ -16264,7 +16207,7 @@ Z\sim N(0,1)\text{.}\]
 
 \end_inset
 
- Il vantaggio di lavorare con una variabile aleatoria normale standard risiede
+ Il vantaggio di lavorare con una variabile aleatoria Normale standard risiede
  nel fatto che per essa è possibile calcolare probabilità del tipo
 \begin_inset Formula \[
 P(Z\leq c)\]
@@ -16373,7 +16316,7 @@ one di
 \begin_inset Formula $Z$
 \end_inset
 
- è una variabile aleatoria normale standard è immediato verificare che 
+ è una variabile aleatoria Normale standard è immediato verificare che 
 \begin_inset Formula \begin{equation}
 P(|Z|<1.96)=0.95\ \text{.}\label{equazione livello confidenza}\end{equation}
 
@@ -16848,7 +16791,7 @@ reference "realizzazione intervallo aleatorio"
 \begin_inset Formula $\frac{1+\alpha}{2}$
 \end_inset
 
--quantile della distribuzione normale.
+-quantile della distribuzione Normale.
  Ad esempio, per 
 \begin_inset Formula $\alpha=90\%$
 \end_inset
@@ -17561,7 +17504,7 @@ begin{esempio}
 \begin_inset Formula $X$
 \end_inset
 
- sia distribuita secondo la legge normale 
+ sia distribuita secondo la legge Normale 
 \begin_inset Formula $N(0,\sigma^{2})$
 \end_inset
 
@@ -18783,7 +18726,7 @@ Supponiamo che
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- sia un campione casuale da una distribuzione normale 
+ sia un campione casuale da una distribuzione Normale 
 \begin_inset Formula $N\left(\mu_{0},\sigma_{0}^{2}\right)$
 \end_inset
 
@@ -20115,7 +20058,7 @@ begin{esempio}
 \begin_inset Formula $n=4$
 \end_inset
 
- da una popolazione normale 
+ da una popolazione Normale 
 \begin_inset Formula $N(\mu_{0},\sigma_{0}^{2})$
 \end_inset
 
@@ -20455,7 +20398,7 @@ e.
 \begin_inset Formula $X_{3}$
 \end_inset
 
- un campione aleatorio estratto da una popolazione normale 
+ un campione aleatorio estratto da una popolazione Normale 
 \begin_inset Formula $N(\mu,1)$
 \end_inset
 
@@ -21392,7 +21335,7 @@ Lo stimatore di massima verosimiglianza è consistente per il parametro
 \begin_inset Formula $\sqrt{n}\left(\widehat{\theta}_{n}-\theta\right)$
 \end_inset
 
- è asintoticamente normale 
+ è asintoticamente Normale 
 \begin_inset Formula \[
 \sqrt{n}\left(\widehat{\theta}_{n}-\theta\right)\underset{n\rightarrow\infty}{\sim}N(0,\frac{1}{I(\theta)})\]
 
@@ -21495,7 +21438,7 @@ Quest'ultimo teorema è particolarmente importante in quanto stabilisce che
 \begin_inset Formula $\theta$
 \end_inset
 
- e asintoticamente normale.
+ e asintoticamente Normale.
  Infatti, come nel caso della media campionaria 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
@@ -21504,7 +21447,7 @@ Quest'ultimo teorema è particolarmente importante in quanto stabilisce che
 \begin_inset Formula $\sqrt{n}\left(\widehat{\theta}_{n}-\theta\right)$
 \end_inset
 
- è anch'essa normale con una varianza che dipende da un'espressione conosciuta
+ è anch'essa Normale con una varianza che dipende da un'espressione conosciuta
  col nome di 
 \emph on
 informazione di Fisher
@@ -21543,7 +21486,7 @@ begin{esempio}
 \begin_inset Formula $n$
 \end_inset
 
- da una popolazione normale 
+ da una popolazione Normale 
 \begin_inset Formula $N(\mu,\sigma^{2})$
 \end_inset
 
@@ -21587,7 +21530,7 @@ L(\mu) & = & \prod_{i=1}^{n}f_{\mu}(x_{i})\\
 
 .
  Inoltre, poiché la somma di variabili aleatorie normali indipendenti è
- ancora normale (è questa una particolarità della distribuzione normale),
+ ancora Normale (è questa una particolarità della distribuzione Normale),
  la distribuzione di 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
@@ -21659,7 +21602,7 @@ reference "verifica uguaglianza fisher"
 \begin_inset Formula $X$
 \end_inset
 
- è distribuita secondo la legge di normale 
+ è distribuita secondo la legge di Normale 
 \begin_inset Formula $N(\mu,\sigma^{2})$
 \end_inset
 
@@ -22311,7 +22254,7 @@ Un caseificio ha il forte sospetto che un suo fornitore diluisca il latte
  con acqua.
  Da numerosi test eseguiti in passato dal Laboratorio cantonale si sa che
  la temperatura di gelo di un campione di latte è una variabile aleatoria
- normale di valore atteso 
+ Normale di valore atteso 
 \begin_inset Formula $-0.545$
 \end_inset
 
@@ -22332,7 +22275,7 @@ Un caseificio ha il forte sospetto che un suo fornitore diluisca il latte
 
 \begin_layout Standard
 \noindent
-La famiglia parametrica di densità è ancora normale 
+La famiglia parametrica di densità è ancora Normale 
 \begin_inset Formula \[
 \mathcal{P}=\left\{ f(x\mid\mu)=\frac{1}{\sqrt{2\pi}0.008}\exp\left(-\frac{1}{2\cdot0.008^{2}}\left(x-\mu\right)^{2}\right),\ \mu\in\mathbb{R}\right\} .\]
 
@@ -22690,7 +22633,7 @@ o una statistica
 \end_inset
 
 .
- Grazie alle proprietà della distribuzione normale sappiamo che la media
+ Grazie alle proprietà della distribuzione Normale sappiamo che la media
  campionaria 
 \begin_inset Formula $\overline{X}\sim N(\mu,\frac{0.008^{2}}{5})$
 \end_inset
@@ -23456,7 +23399,7 @@ P_{H_{0}}(\overline{X}>k)=0.05\text{.}\label{k alpha media}\end{equation}
 
 \begin_layout Standard
 Il quantile può essere ricavato utilizzando le tavole della distribuzione
- normale.
+ Normale.
  Infatti
 \begin_inset Formula \begin{eqnarray*}
 P_{H_{0}}(\overline{X}+0.545>k+0.545) & = & 0.05\\
@@ -23506,7 +23449,7 @@ q_{\alpha}=\mu+z_{\alpha}\sigma\]
 \begin_inset Formula $\alpha$
 \end_inset
 
--quantile della distribuzione normale standard.
+-quantile della distribuzione Normale standard.
 \end_layout
 
 \end_inset
@@ -23940,7 +23883,7 @@ P(Z>z_{0.975})=2.5\%\end{array}\right.\Leftrightarrow P(|\frac{\overline{X}-0.6}
 
 \end_inset
 
- Utilizzando le tavole della distribuzione normale standard e la sua simmetria
+ Utilizzando le tavole della distribuzione Normale standard e la sua simmetria
  attorno allo 
 \begin_inset Formula $0$
 \end_inset
@@ -25333,7 +25276,7 @@ z_{1-\alpha} & 1.645 & 1.96 & 2.33\end{array}\]
 
 \end_inset
 
- Ricordiamo che grazie alla simmetria della distribuzione normale avremo
+ Ricordiamo che grazie alla simmetria della distribuzione Normale avremo
  per un test unilaterale sinistro i seguenti valori di 
 \begin_inset Formula $z_{\alpha}:$
 \end_inset
@@ -25458,7 +25401,7 @@ begin{esempio}
 \begin_inset Formula $X$
 \end_inset
 
- sia distribuita secondo la legge normale 
+ sia distribuita secondo la legge Normale 
 \begin_inset Formula $N(\mu,1)$
 \end_inset
 
@@ -26395,7 +26338,7 @@ reference "formulazione test xmin"
 \begin_inset Formula $V.A.$
 \end_inset
 
- normale di valore atteso 
+ Normale di valore atteso 
 \begin_inset Formula $-0.54$
 \end_inset
 
@@ -92305,7 +92248,7 @@ reference "a1"
 \begin_layout Standard
 \noindent
 Il risultato così ottenuto ha la seguente interpretazione.
- Quando la popolazione è distribuita secondo la legge normale con 
+ Quando la popolazione è distribuita secondo la legge Normale con 
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
@@ -92547,7 +92490,7 @@ Il calcolo della potenza del test presuppone il calcolo della probabilità
 \begin_inset Formula $\Phi$
 \end_inset
 
- rappresenta la funzione di ripartizione della normale standard, cioé 
+ rappresenta la funzione di ripartizione della Normale standard, cioé 
 \begin_inset Formula \[
 \Phi\left(x\right)=\int\limits _{-\infty}^{x}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{1}{2}x^{2}\right)dx.\]
 
@@ -92829,7 +92772,7 @@ Test sulla media con
 \begin_inset Formula $X$
 \end_inset
 
- non normale
+ non Normale
 \end_layout
 
 \begin_layout Standard
@@ -92844,7 +92787,7 @@ Il test sulla media fino ad ora considerato si basa sull'ipotesi di normalità
 \begin_inset Formula $X\sim F$
 \end_inset
 
- (non necessariamente normale quindi) con 
+ (non necessariamente Normale quindi) con 
 \begin_inset Formula $E(X)=\mu$
 \end_inset
 
@@ -92975,7 +92918,7 @@ P_{H_{0}}\left(\underset{\text{circa }Z}{\underbrace{\frac{\overline{X}_{n}-\mu_
 \begin_inset Formula $X$
 \end_inset
 
- sia normale.
+ sia Normale.
 \end_layout
 
 \begin_layout Section
@@ -92988,7 +92931,7 @@ Vogliamo riprendere nuovamente il test sulla media riportandoci al caso
 \begin_inset Formula $X$
 \end_inset
 
- è normale 
+ è Normale 
 \begin_inset Formula $N(\mu,\sigma^{2})$
 \end_inset
 
@@ -93073,7 +93016,7 @@ Numeratore: variabile casuale
 \begin_inset Formula $H_{0}$
 \end_inset
 
- come una normale standard, 
+ come una Normale standard, 
 \begin_inset Formula $\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}\sim N(0,1)$
 \end_inset
 
@@ -93270,16 +93213,16 @@ end{definizione}
 
 \begin_layout Standard
 \noindent
-La distribuzione-t è simile alla normale, simmetrica rispetto allo zero,
+La distribuzione-t è simile alla Normale, simmetrica rispetto allo zero,
  ma possiede delle code più pesanti (tendono meno velocemente a zero rispetto
- alla distribuzione normale).
- Come per la distribuzione normale standard esistono delle tavole per il
+ alla distribuzione Normale).
+ Come per la distribuzione Normale standard esistono delle tavole per il
  calcolo dell' 
 \begin_inset Formula $\alpha-$
 \end_inset
 
 quantile.
- A differenza della distribuzione normale, per la distribuzione 
+ A differenza della distribuzione Normale, per la distribuzione 
 \begin_inset Formula $t$
 \end_inset
 
@@ -93437,7 +93380,7 @@ P\left(t_{n-1}>\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & =
 \emph on
 identico
 \emph default
- a quello con la normale:
+ a quello con la Normale:
 \begin_inset Formula \begin{eqnarray*}
 1-P\left(t_{n-1}\leq\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
 P\left(t_{n-1}\leq\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & 1-\alpha.\end{eqnarray*}
@@ -93501,7 +93444,7 @@ reference "valore critico test sulla media normale"
 \begin_inset Formula $1-\alpha$
 \end_inset
 
--quantile della distribuzione normale è stato rimpiazzato dall'
+-quantile della distribuzione Normale è stato rimpiazzato dall'
 \begin_inset Formula $1-\alpha$
 \end_inset
 
@@ -93858,7 +93801,7 @@ V(\overline{X}-\overline{Y}) & = & V(\overline{X})+V(\overline{Y})-2cov(\overlin
 \begin_inset Formula $\overline{X}-\overline{Y}$
 \end_inset
 
- sarà distribuita secondo la legge normale, con valore atteso 
+ sarà distribuita secondo la legge Normale, con valore atteso 
 \begin_inset Formula $0$
 \end_inset
 
@@ -94419,7 +94362,7 @@ Il test di conformità (”goodness-of-fit”
 
 test) non è un test su un'ipotesi parametrica.
  Ciò che si desidera verificare è se la distribuzione dei dati è uguale
- ad una distribuzione data (ad esempio normale, di Pareto, esponenziale,
+ ad una distribuzione data (ad esempio Normale, di Pareto, esponenziale,
  ecc.) che indicheremo con 
 \begin_inset Formula $F$
 \end_inset
