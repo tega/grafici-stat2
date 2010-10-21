@@ -11616,11 +11616,7 @@ begin{esercizio}
  Mostrate che entrambe le tecniche di campionamento con e senza reinserimento
  soddisfano la condizione imposta dalla definizione di campione casuale
  semplice.
-\end_layout
-
-\begin_layout Standard
-\noindent
-Suggerimento: per quanto riguarda la selezione senza reinserimento, aiutatevi
+ Suggerimento: per quanto riguarda la selezione senza reinserimento, aiutatevi
  utilizzando la proprietà condizionata.
  
 \begin_inset ERT
@@ -11808,8 +11804,8 @@ dove
 \noun default
 \color inherit
 \lang italian
- rappresenta la frazione di unità della popolazione aventi un valore della
- caratteristica uguale a 
+ rappresenta la frazione di unità della popolazione (la frequenza dunque)
+ aventi un valore della caratteristica uguale a 
 \begin_inset Formula $x_{k}$
 \end_inset
 
@@ -12015,8 +12011,8 @@ V(\overline{X}_{n}) & = & V\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{
 
 \end_inset
 
- La media campionaria è uno stimatore corretto del valore atteso della popolazio
-ne.
+ Conclusioni: la media campionaria è uno stimatore corretto del valore atteso
+ della popolazione.
  La sua precisione, valutata utilizzando la varianza quale misura di dispersione
 , dipende da due fattori.
  
@@ -12048,22 +12044,22 @@ La varianza della popolazione: il recercatore non ha alcun influsso su questo
 
 \begin_layout Standard
 \noindent
-Da ultimo sottolineamo ancora che 
+Da ultimo sottolineamo nuovamente che 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
  è una variabile aleatoria la cui distribuzione dipende indirettamente dalla
  distribuzione della popolazione campione.
  Purtroppo vale la seguente osservazione.
- Anche quando la distribuzione della popolazione obiettivo è conosciuta
- la forma della distribuzione della media 
+ Anche qualora la distribuzione della popolazione obiettivo fosse conosciuta,
+ la distribuzione della media 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- non è derivabile analiticamente.
+ non sarebbe, in generale, derivabile analiticamente.
  Ci sono però delle eccezioni.
  Una fra queste è la distribuzione Normale.
- Infatti, se le variabili aleatorie 
+ Infatti, quando le variabili aleatorie 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
@@ -12092,7 +12088,7 @@ begin{esercizio}
 \end_inset
 
  Utilizzando il file di excel sulla distribuzione del numero di scarpe eseguite
- una simulazione ed uno studio dei risultati.
+ una simulazione ed una analisi dei risultati.
 \begin_inset ERT
 status collapsed
 
@@ -12219,6 +12215,22 @@ Prendiamo le variabili aleatorie
 \end_layout
 
 \begin_layout Enumerate
+Definite a parole le variabili aleatorie 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $X_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
 \noindent
 Definite a parole le tre variabili aleatorie 
 \begin_inset Formula $U_{13}$
@@ -12262,6 +12274,39 @@ Considerate gli esiti
 \end_inset
 
 
+\end_layout
+
+\begin_layout Enumerate
+Mostrate che 
+\begin_inset Formula $X_{1}=$
+\end_inset
+
+
+\begin_inset Formula $U_{11}$
+\end_inset
+
++
+\begin_inset Formula $U_{12}$
+\end_inset
+
++
+\begin_inset Formula $U_{13}$
+\end_inset
+
+ per 
+\begin_inset Formula $\omega_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $\omega_{2}$
+\end_inset
+
+.
+ Vale anche per 
+\begin_inset Formula $\omega_{3}$
+\end_inset
+
+?
 \end_layout
 
 \begin_layout Standard
@@ -12811,6 +12856,7 @@ e.
 status open
 
 \begin_layout Plain Layout
+
 dannosa
 \end_layout
 
@@ -14853,7 +14899,7 @@ V(\overline{X}_{n})-V(\overline{X}_{str,n}) & \simeq & \frac{1-f}{n}\left(\sigma
 
 \end_inset
 
- Da quest'ultima disuguaglianza deduciamo che la varianza della media calcolata
+Da quest'ultima disuguaglianza deduciamo che la varianza della media calcolata
  utilizzando un campione stratificato proporzionale è in genere inferiore
  a quella di un campione casuale semplice di uguale numerosità.
  Il guadagno risultante dal processo di stratificazione della popolazione
