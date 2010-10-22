@@ -13202,7 +13202,25 @@ Individuare sottopopolazioni al massimo omogenee rispetto alla variabile
 \noindent
 Supponiamo per un istante di osservare l'intera popolazione.
  Potremmo suddividere gli uomini dalle donne e calcolare per ciascun strato
- i rispettivi valori medi 
+ i rispettivi valori attesi
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Per la precisione le due quantità 
+\begin_inset Formula $\mu_{d}$
+\end_inset
+
+ e 
+\begin_inset Formula $\mu_{u}$
+\end_inset
+
+ corrispondono ai valori attesi condizionati rispetto all'attributo uomo/donna.
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $\mu_{d}$
 \end_inset
 
@@ -13211,7 +13229,7 @@ Supponiamo per un istante di osservare l'intera popolazione.
 \end_inset
 
 .
- Qual è la relazione tra il valore medio 
+ Qual è la relazione tra il valore atteso 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -13304,33 +13322,67 @@ della popolazione
 
 \begin_layout Standard
 \noindent
-L'idea fondamentale del campionamento stratificato è quella di stimare i
- valori medi 
+L'idea fondamentale del campionamento stratificato è quella di sfruttare
+ l'informazione disponibile e riguardante 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+i pesi 
+\begin_inset Formula $\pi_{h}$
+\end_inset
+
+ sulla struttura della popolazione;
+\end_layout
+
+\begin_layout Itemize
+l'omogeneità degli strati al loro interno
+\end_layout
+
+\begin_layout Standard
+per migliorare la qualità della stima.
+ Anziché stimare direttamente il valore atteso dell'intera popolazione si
+ utilizzerà un approccio indiretto costituito da due fasi.
+\end_layout
+
+\begin_layout Itemize
+Fase 1: si stimano i valori attesi 
 \begin_inset Formula $\mu_{h}$
 \end_inset
 
- delle sottopopolazioni (strati) selezionando da ciascuna di esse un campione
- casuale.
- In seguito, utilizzando le stime dei singoli 
+ delle sottopopolazioni (strati) selezionando da ciascuna sottopopolazione
+ un campione casuale di numerosità 
+\begin_inset Formula $n_{h}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Fase 2: utilizzando le stime dei singoli 
 \begin_inset Formula $\mu_{h}$
 \end_inset
 
-, si stimerà il valore medio 
+ e grazie alla conoscenza dei pesi 
+\begin_inset Formula $\pi_{h}$
+\end_inset
+
+ si stima il valore atteso 
 \begin_inset Formula $\mu$
 \end_inset
 
- della popolazione tramite la formula (
+ della popolazione con la formula (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "strato media scomposta come somma pesata"
 
 \end_inset
 
-), sostituendo ai valori sconosciuti 
+), sostituendo ai valori attesi sconosciuti 
 \begin_inset Formula $\mu_{h}$
 \end_inset
 
- i rispettivi stimatori, notati 
+ le rispettive medie campionarie, notate 
 \begin_inset Formula $\overline{X}_{n_{h}}$
 \end_inset
 
@@ -13727,7 +13779,7 @@ begin{remark}
 
  
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -13738,30 +13790,42 @@ end{remark}
 
 \end_inset
 
+ 
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tabella riassuntiva
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace bigskip
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-\align center
-Tabella riassuntiva 
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.3cm}
 \end_layout
 
-\begin_layout Standard
-\align center
-\begin_inset VSpace bigskip
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="8">
@@ -14366,6 +14430,11 @@ Frazione di campionamento
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 La correttezza di 
 \begin_inset Formula $\overline{X}_{str,n}$
@@ -14600,6 +14669,71 @@ end{remark}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+
+Caso estremo di stratificazione.
+ Supponiamo che
+\end_layout
+
+\begin_layout Itemize
+
+la popolazione conti 100 individui;
+\end_layout
+
+\begin_layout Itemize
+
+i possibili valori dell'attributo in esame siano solo 4;
+\end_layout
+
+\begin_layout Itemize
+
+i 4 valori siano sconosciuti;
+\end_layout
+
+\begin_layout Itemize
+si sappia quali e quanti siano gli individui col medesimo attributo.
+\end_layout
+
+\begin_layout Standard
+
+Si potrebbe dunque stratificare la popolazione in quattro strati perfettamente
+ omogenei al loro interno.
+ La varianza delle sottopopolazioni è nulla! Sarebbe sufficiente campionare
+ 
+\begin_inset Formula $n=4$
+\end_inset
+
+ individui - un individuo da ogni strato - per riuscire in questo caso estremo
+ a stimare con precisione assoluta il valore atteso della popolazione
+\lang italian
+!
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -14706,6 +14840,19 @@ reference "varianza stratificato"
  Tuttavia, prima di procedere al confronto vero e proprio, occorre chiarire
  che relazione sussiste tra la varianza dell'intera popolazione e la varianza
  di ogni singolo strato.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.2cm}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -14721,32 +14868,19 @@ begin{theorem}
 
 \end_inset
 
- Notiamo con 
-\begin_inset Formula $SS$
-\end_inset
-
  
-\begin_inset Formula $(SS_{h})$
-\end_inset
-
- la somma del quadrato degli scarti dal valore atteso, ovvero
-\begin_inset Formula \[
-SS=\sum_{i=1}^{N}\left(a_{i}-\mu\right)^{2}\text{ e }SS_{h}=\sum_{j=1}^{N_{h}}\left(a_{h,i}-\mu_{h}\right)^{2}\text{.}\]
+\begin_inset CommandInset label
+LatexCommand label
+name "teorema scomposizione varianza"
 
 \end_inset
 
- Vale la seguente relazione
+Per qualsiasi popolazione stratificata vale la seguente relazione
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
 \sigma^{2}=\sum_{h=1}^{H}\pi_{h}\sigma_{h}^{2}+\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\label{eq:a}\end{equation}
-
-\end_inset
-
-
-\begin_inset Formula \[
-\sigma^{2}=\sum_{h=1}^{H}\pi_{h}\sigma_{h}^{2}+\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\]
 
 \end_inset
 
@@ -14796,11 +14930,103 @@ vspace{0.2cm}
 
 \begin_layout Standard
 \noindent
+Utilizzando l'enunciato del Teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "teorema scomposizione varianza"
 
-\series bold
-Dimostrazione
-\series default
-:
+\end_inset
+
+ per il confronto fra le varianze 
+\begin_inset Formula $V(\overline{X}_{n})$
+\end_inset
+
+ e 
+\begin_inset Formula $V(\overline{X}_{str,n})$
+\end_inset
+
+ dei due stimatori notiamo che
+\begin_inset Formula \begin{eqnarray*}
+V(\overline{X}_{n})-V(\overline{X}_{str,n}) & = & \frac{1-f}{n}\frac{N}{N-1}\sigma^{2}-\frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\frac{N_{h}}{N_{h}-1}\sigma_{h}^{2}\\
+ & = & \frac{1-f}{n}\left(\frac{N}{N-1}\sigma^{2}-\sum_{h=1}^{H}\pi_{h}\frac{N_{h}}{N_{h}-1}\sigma_{h}^{2}\right)\end{eqnarray*}
+
+\end_inset
+
+ Per 
+\begin_inset Formula $N$
+\end_inset
+
+ e 
+\begin_inset Formula $N_{h}$
+\end_inset
+
+ sufficientemente grandi 
+\begin_inset Formula $\frac{N}{N-1}\simeq1$
+\end_inset
+
+ e 
+\begin_inset Formula $\frac{N_{h}}{N_{h}-1}\simeq1$
+\end_inset
+
+ dimodoché 
+\begin_inset Formula \begin{eqnarray*}
+V(\overline{X}_{n})-V(\overline{X}_{str,n}) & \simeq & \frac{1-f}{n}\left(\sigma^{2}-\sum_{h=1}^{H}\pi_{h}\sigma_{h}^{2}\right)\\
+ & \underset{(\ref{eq:a})}{=} & \frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\geq0\text{.}\end{eqnarray*}
+
+\end_inset
+
+Da quest'ultima disuguaglianza deduciamo che la varianza della media calcolata
+ utilizzando un campione stratificato proporzionale è in genere inferiore
+ a quella di un campione casuale semplice di uguale numerosità.
+ Il guadagno risultante dal processo di stratificazione della popolazione
+ rappresentato dalla quantità 
+\begin_inset Formula \[
+\frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\]
+
+\end_inset
+
+ è proporzionale alla varianza dei valori medi di strato.
+ Esso sarà nullo se tutti i valori medi sono uguali fra loro.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{0.2cm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dimostrazione del Teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "teorema scomposizione varianza"
+
+\end_inset
+
+.
+ Notiamo con 
+\begin_inset Formula $SS$
+\end_inset
+
+ 
+\begin_inset Formula $(SS_{h})$
+\end_inset
+
+ la somma del quadrato degli scarti dal valore atteso, ovvero
+\begin_inset Formula \[
+SS=\sum_{i=1}^{N}\left(a_{i}-\mu\right)^{2}\text{ e }SS_{h}=\sum_{j=1}^{N_{h}}\left(a_{h,i}-\mu_{h}\right)^{2}\text{.}\]
+
+\end_inset
+
+
 \begin_inset Formula \begin{eqnarray*}
 SS & = & \sum_{i=1}^{N}\left(a_{i}-\mu\right)^{2}=\sum_{i=1}^{N}a_{i}^{2}-N\mu^{2}=\sum_{h=1}^{H}\sum_{i=1}^{N_{h}}a_{h,i}^{2}-N\mu^{2}\\
  & = & \sum_{h=1}^{H}\sum_{i=1}^{N_{h}}\left(a_{h,i}^{2}-\mu_{h}^{2}+\mu_{h}^{2}\right)-N\mu^{2}\\
@@ -14811,7 +15037,7 @@ SS & = & \sum_{i=1}^{N}\left(a_{i}-\mu\right)^{2}=\sum_{i=1}^{N}a_{i}^{2}-N\mu^{
 
 \end_inset
 
- Il secondo termine,
+ Il secondo termine, 
 \begin_inset Formula $\sum_{h=1}^{H}N_{h}\left(\mu_{h}^{2}-\mu^{2}\right)$
 \end_inset
 
@@ -14859,60 +15085,6 @@ SS=\sum_{h=1}^{H}SS_{h}+\sum_{h=1}^{H}N_{h}\left(\mu_{h}-\mu\right)^{2}\text{.}\
 
 \end_layout
 
-\begin_layout Standard
-\noindent
-Tornando ora al confronto fra la varianza 
-\begin_inset Formula $V(\overline{X}_{n})$
-\end_inset
-
- e 
-\begin_inset Formula $V(\overline{X}_{str,n})$
-\end_inset
-
- notiamo che
-\begin_inset Formula \begin{eqnarray*}
-V(\overline{X}_{n})-V(\overline{X}_{str,n}) & = & \frac{1-f}{n}\frac{N}{N-1}\sigma^{2}-\frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\frac{N_{h}}{N_{h}-1}\sigma_{h}^{2}\\
- & = & \frac{1-f}{n}\left(\frac{N}{N-1}\sigma^{2}-\sum_{h=1}^{H}\pi_{h}\frac{N_{h}}{N_{h}-1}\sigma_{h}^{2}\right)\end{eqnarray*}
-
-\end_inset
-
- Per 
-\begin_inset Formula $N$
-\end_inset
-
- e 
-\begin_inset Formula $N_{h}$
-\end_inset
-
- sufficientemente grandi 
-\begin_inset Formula $\frac{N}{N-1}\simeq1$
-\end_inset
-
- e 
-\begin_inset Formula $\frac{N_{h}}{N_{h}-1}\simeq1$
-\end_inset
-
- dimodoché 
-\begin_inset Formula \begin{eqnarray*}
-V(\overline{X}_{n})-V(\overline{X}_{str,n}) & \simeq & \frac{1-f}{n}\left(\sigma^{2}-\sum_{h=1}^{H}\pi_{h}\sigma_{h}^{2}\right)\\
- & \underset{(\ref{eq:a})}{=} & \frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\geq0\text{.}\end{eqnarray*}
-
-\end_inset
-
-Da quest'ultima disuguaglianza deduciamo che la varianza della media calcolata
- utilizzando un campione stratificato proporzionale è in genere inferiore
- a quella di un campione casuale semplice di uguale numerosità.
- Il guadagno risultante dal processo di stratificazione della popolazione
- rappresentato dalla quantità 
-\begin_inset Formula \[
-\frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\]
-
-\end_inset
-
- è proporzionale alla varianza dei valori medi di strato.
- Esso sarà nullo se tutti i valori medi sono uguali fra loro.
-\end_layout
-
 \begin_layout Section
 La stima di 
 \begin_inset Formula $\sigma^{2}$
@@ -14925,8 +15097,9 @@ La stima di
 Nei paragrafi precedenti è stata analizzata la proprietà di correttezza
  della media campionaria sotto diverse tipologie di campionamento: con e
  senza reinserimento, sistematico e stratificato.
- Oltre alla correttezza ci siamo interessati anche alla sua varianza, ovvero
- alla precisione con la quale il valore atteso della popolazione è approssimato.
+ Oltre alla proprietà di correttezza dei vari stimatori ci siamo interessati
+ anche alla loro varianza, ovvero alla precisione con la quale il valore
+ atteso della popolazione è approssimato.
  Nelle diverse formule (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -14995,7 +15168,7 @@ V(\overline{X}_{n})=\frac{N-n}{N-1}\frac{\sigma^{2}}{n}\text{.}\]
 \begin_inset Formula $($
 \end_inset
 
- o 
+o 
 \begin_inset Formula $\sigma_{h}^{2})$
 \end_inset
 
@@ -15030,11 +15203,19 @@ Quando
 
 \begin_deeper
 \begin_layout Standard
-In questo caso la varianza 
-\begin_inset Formula $V(\overline{X}_{n})$
+Quando la varianza 
+\begin_inset Formula $\sigma^{2}$
 \end_inset
 
- del nostro stimatore non è calcolabile.
+ 
+\begin_inset Formula $(\sigma_{h}^{2})$
+\end_inset
+
+ non è conosciuta la varianza degli stimatori del valore atteso 
+\begin_inset Formula $\mu$
+\end_inset
+
+ studiati in precedenza non è calcolabile.
  Affinché le suddette formule siano utilizzabili, occorrerà stimare 
 \begin_inset Formula $\sigma^{2}$
 \end_inset
@@ -15181,21 +15362,25 @@ L'intervallo di confidenza per
 
 \begin_layout Standard
 Quando si presenta il risultato di una stima si è soliti fornire tale risultato
- sotto forma di un valore
-\begin_inset space \space{}
-\end_inset
-
-(stima puntuale) più o meno una certa quantità.
- Ad esempio, se organizzate il ballo dell'università potreste stimare il
- numero di partecipanti a 
+ sotto forma di un valore (stima puntuale) più o meno una certa quantità.
+ Ad esempio, se foste interessati ad organizzare il ballo dell'università
+ potreste stimare il numero di partecipanti a 
 \begin_inset Formula $1^{\prime}000\pm100$
 \end_inset
 
  persone, intendendo in tal modo che il numero di persone sarà compreso
  con 
 \emph on
-molta probabilità
+
+\begin_inset Quotes eld
+\end_inset
+
+
 \emph default
+molta probabilità
+\begin_inset Quotes erd
+\end_inset
+
  fra le 
 \begin_inset Formula $900$
 \end_inset
@@ -15228,11 +15413,7 @@ molta probabilità
 \end_layout
 
 \begin_layout Subsection
-La legge (debole)
-\begin_inset space \space{}
-\end_inset
-
-dei grandi numeri
+La legge (debole) dei grandi numeri
 \end_layout
 
 \begin_layout Standard
@@ -15242,6 +15423,9 @@ La legge dei grandi numeri è utile al fine di comprendere il comportamento
 asintotico
 \emph default
  di medie di variabili aleatorie.
+ Studiare il comportamento asintotico di uno stimatore significa descrivere
+ il suo comportamento quando la numerosità del campione diventa molto grande
+ tendendo all'infinito.
  Supponiamo infatti di avere a disposizione una successione infinita 
 \begin_inset Formula $X_{1},X_{2},X_{3},...$
 \end_inset
@@ -15276,7 +15460,13 @@ di varianza
 
 \begin_layout Standard
 \noindent
-Per mezzo di questa successione infinita costruiamo una seconda successione,
+In questo paragrafo non imponiamo la condizione che le variabili aleatorie
+ 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ abbiano la stessa distribuzione.
+ Per mezzo di questa successione infinita costruiamo una seconda successione,
  la successione delle medie dei primi 
 \begin_inset Formula $n$
 \end_inset
@@ -15400,7 +15590,9 @@ end{esempio}
 
 \begin_layout Standard
 \noindent
-Poiché la somma pesata di 
+Questa ulteriore ipotesi non è necessaria per la conclusione a cui arriveremo,
+ ma ci permette di eseguire il grafico della situazione.
+ Infatti, poiché la somma pesata di 
 \begin_inset Formula $V.A.$
 \end_inset
 
@@ -15412,7 +15604,7 @@ Poiché la somma pesata di
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- per 
+, ad esempio per 
 \begin_inset Formula $n=1,2$
 \end_inset
 
@@ -15433,6 +15625,53 @@ Poiché la somma pesata di
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/convergenzaDensityMedia.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Funzione di densità di 
+\begin_inset Formula $\overline{X}_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $\overline{X}_{2}$
+\end_inset
+
+ (blu) e 
+\begin_inset Formula $\overline{X}_{16}$
+\end_inset
+
+(rossa) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 Al crescere di 
 \begin_inset Formula $n$
@@ -15448,7 +15687,9 @@ Al crescere di
 \end_inset
 
 ).
- Il prossimo teorema formalizza quanto detto finora.
+ Il prossimo teorema formalizza quanto visibile nella figura precedente
+ al caso non Normale.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -15547,6 +15788,42 @@ reference "WLLN"
 \end_inset
 
  all'infinito.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/convergenzaInProbabilita1.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Legge dei grandi numeri
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -15654,8 +15931,8 @@ P(X\leq c)=P(Y\leq c)\text{ \ \ }\forall c\in\mathbb{R}\text{.}\label{uguaglianz
 \begin_inset Formula $V.A.$
 \end_inset
 
- che descrivono il risultato del primo e, rispettivamente, del secondo lancio.
- Ora, entrambe le 
+ che descrivono il risultato del primo e, rispettivamente, del secondo lancio:
+ entrambe le 
 \begin_inset Formula $V.A.$
 \end_inset
 
@@ -15694,8 +15971,19 @@ begin{definizione}
 
 \end_inset
 
- Convergenza in distribuzione.
- Diremo che la successione 
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "convergenza in distribuzione"
+
+\end_inset
+
+Convergenza in distribuzione.
+ Diremo che una 
+\emph on
+qualsiasi
+\emph default
+ successione 
 \begin_inset Formula $X_{1},X_{2},\allowbreak X_{3},...$
 \end_inset
 
@@ -15757,8 +16045,20 @@ Il Teorema del Limite Centrale (TLC) è di estrema importanza in probabilità
 
  converge verso il suo valore atteso.
  Il valore limite non è più una variabile aleatoria ma un numero ben preciso.
- L'idea del teorema del limite centrale è quella di evitare, tramite un'opportun
-a trasformazione, che la successione di 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'idea del teorema del limite centrale è quella di evitare, tramite un'opportuna
+ trasformazione, che la successione di 
 \begin_inset Formula $V.A.$
 \end_inset
 
@@ -15766,7 +16066,11 @@ a trasformazione, che la successione di
 \begin_inset Formula $\overline{X}_{1},\overline{X}_{2},\overline{X}_{3},...$
 \end_inset
 
- converga verso un numero.
+ converga verso un numero (in questo caso il valore atteso 
+\begin_inset Formula $\mu$
+\end_inset
+
+).
  In altre parole, si desidera mantenere l'aleatorietà del limite della successio
 ne e, se possibile, ottenere come valore limite una 
 \begin_inset Formula $V.A.$
@@ -15807,7 +16111,7 @@ sottrarre a
 \begin_inset Formula $\mu$
 \end_inset
 
- 
+ ;
 \end_layout
 
 \begin_layout Enumerate
@@ -15815,12 +16119,12 @@ dividere per la sua deviazione standard
 \begin_inset Formula $\sqrt{\frac{\sigma^{2}}{n}}$
 \end_inset
 
- 
+ ,
 \end_layout
 
 \begin_layout Standard
 \noindent
-in maniera da ottere la successione 
+così da ottere una nuova successione 
 \begin_inset Formula $Y_{1},Y_{2},Y_{3},...$
 \end_inset
 
@@ -15956,6 +16260,11 @@ reference "esempio somme di normali"
 \end_inset
 
 .
+ Cosa si potrà affermare sulla distribuzione di 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ in questo caso? Il TLC è la soluzione a questa domanda.
 \end_layout
 
 \begin_layout Standard
@@ -16018,7 +16327,7 @@ name "esercizio centralizzazione"
 
 Dimostrate dapprima che 
 \begin_inset Formula \[
-\overline{X}_{n}-\mu=\frac{1}{n}\sum\limits _{i=1}^{n}\left(X_{i}-\mu\right)\ \]
+\overline{X}_{n}-\mu=\frac{1}{n}\sum\limits _{i=1}^{n}\left(X_{i}-\mu\right)\]
 
 \end_inset
 
@@ -16178,10 +16487,6 @@ begin{remark}
 
 \end_inset
 
- 
-\begin_inset VSpace bigskip
-\end_inset
-
  Dal Teorema del Limite Centrale e la relazione (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16265,7 +16570,7 @@ P(Z\leq c)\]
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- soddisfa il teorema del limite centrale avremo che per 
+ soddisfa il TLC avremo che per 
 \begin_inset Formula $n$
 \end_inset
 
@@ -16348,12 +16653,17 @@ P(|Z|<1.96)=P(-1.96<Z<1.96).\]
 
 \end_inset
 
- Detto a parole stiamo semplicemente calcolando la probabilità che la realizzazi
-one di 
+ Detto a parole stiamo semplicemente calcolando la probabilità che la re\SpecialChar \nobreakdash-
+a\SpecialChar \nobreakdash-
+liz\SpecialChar \nobreakdash-
+za\SpecialChar \nobreakdash-
+zi
+o\SpecialChar \nobreakdash-
+ne di 
 \begin_inset Formula $Z$
 \end_inset
 
- sarà compresa nell'intervallo 
+ sia compresa nell'intervallo 
 \begin_inset Formula $[-1.96,1.96]$
 \end_inset
 
@@ -16472,8 +16782,8 @@ reference "intervallo interpretazione 1"
 
 \end_inset
 
-)? Per dare un significato a questa espressione i due estremi dell'espressione
- 
+)? Per dare un significato a questa espressione osserviamo i due estremi
+ dell'espressione 
 \begin_inset Formula \[
 \overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}<\mu<\overline{X}_{n}+1.96\sqrt{V(\overline{X}_{n})}\]
 
@@ -16531,7 +16841,39 @@ reference "intervallo interpretazione 1b"
 
 \end_inset
 
-) ovvero
+) utilizzanzo la notazione insiemistica 
+\begin_inset Quotes eld
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\in$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+
+\begin_inset Quotes erd
+\end_inset
+
+ ovvero
 \begin_inset Formula \begin{equation}
 P(\mu\in\left[\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}\ ,\overline{X}_{n}+1.96\sqrt{V(\overline{X}_{n})}\right])=0.95.\label{intervallo interpretazione 2b}\end{equation}
 
@@ -16572,12 +16914,23 @@ reference "intervallo aleatorio"
 \begin_inset Formula $\left[\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}\ ,\overline{X}_{n}+1.96\sqrt{V(\overline{X}_{n})}\right]$
 \end_inset
 
- conterrà il valore 
+ conterrà 
 \begin_inset Formula $\mu$
 \end_inset
 
 .
- Notate la sottile differenza fra la (
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Osserviamo la sottile differenza fra la (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "intervallo interpretazione 1b"
@@ -16599,15 +16952,7 @@ reference "intervallo interpretazione 1b"
 
 \end_inset
 
-) l'intervallo è deterministico ma sconosciuto
-\begin_inset space \space{}
-\end_inset
-
-ed il punto (
-\begin_inset Formula $\overline{X}_{n}$
-\end_inset
-
-) è aleatorio ed osservabile.
+) l'intervallo è deterministico ma sconosciuto e quindi inutilizzabile.
  Nella (
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -16615,11 +16960,11 @@ reference "intervallo interpretazione 2b"
 
 \end_inset
 
-) per contro l'intervallo è aleatorio ed osservabile mentre il punto (
+) per contro l'intervallo è osservabile ma aleatorio ed il punto 
 \begin_inset Formula $\mu$
 \end_inset
 
-) è deterministico ma sconosciuto.
+ è deterministico ma sconosciuto.
  È importante sottolineare l'equivalenza delle due espressioni: è possibile
  passare dall'una all'altra tramite semplici operazioni algebriche.
  È tuttavia la seconda espressione in termini dell'intervallo aleatorio
@@ -16661,41 +17006,65 @@ reference "intervallo interpretazione 2b"
 \begin_inset Formula $\mu$
 \end_inset
 
- fosse conosciuto, potremmo andare a verificare se l'intervallo così calcolato
- lo contiene oppure no.
+ fosse conosciuto, potremmo verificare se l'intervallo così calcolato lo
+ contiene oppure no.
  Tuttavia questa verifica è impossibile.
  Quello che sappiamo è che nel 
 \begin_inset Formula $95\%$
 \end_inset
 
- dei casi questa procedura determina un intervallo che contiene 
+ dei casi questa procedura genera un intervallo contenente 
 \begin_inset Formula $\mu$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
+\begin_layout Subsection
+\noindent
+L'ampiezza dell'intervallo di confidenza
 \end_layout
 
 \begin_layout Standard
 \noindent
-In entrambi i casi l'ampiezza dell'intervallo è data da 
+Vogliamo studiare l'ampiezza dell'intervallo di confidenza e ci chiediamo
+ quali siano i fattori che la determinano.
+ Osservando la formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "intervallo aleatorio"
+
+\end_inset
+
+) di intervallo aleatorio notiamo che l'ampiezza dell'intervallo è data
+ dal termine 
 \begin_inset Formula $1.96\sqrt{V(\overline{X}_{n})}$
 \end_inset
 
- 
-\begin_inset Formula $=$
+ , ovvero dalla combinazione dei due termini 1.96 e 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\sqrt{V(\overline{X}_{n})}$
 \end_inset
 
- 
-\begin_inset Formula $1.96~\sigma/\sqrt{n}$
-\end_inset
 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
 .
  Come già sappiamo la varianza di 
 \begin_inset Formula $\overline{X}_{n}$
@@ -16705,13 +17074,13 @@ In entrambi i casi l'ampiezza dell'intervallo è data da
 \begin_inset Formula $n$
 \end_inset
 
- del campione, dalla varianza della popolazione (o degli stratti) e dalla
- tecnica di campionamento utilizzata.
+ del campione, dalla varianza della popolazione e dalla tecnica di campionamento
+ utilizzata.
  La costante 
 \begin_inset Formula $1.96$
 \end_inset
 
- dipende invece dal livello di probabilità che era stato scelto all'inizio
+ dipende invece dalla livello di probabilità che era stato scelto all'inizio
  di questo paragrafo e che ammonta al 
 \begin_inset Formula $95\%.$
 \end_inset
@@ -16733,18 +17102,20 @@ reference "equazione livello confidenza"
 
 ))
 \begin_inset Formula \[
-P(|Z|<c)=0.95.\]
+P(|Z|<c)=0.95\]
 
+\end_inset
+
+e corrisponde al 0.975-quantile della distribuzione Normale.
+\begin_inset VSpace smallskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
- La probabilità 
+\noindent
+La probabilità 
 \begin_inset Formula $\alpha=0.95$
 \end_inset
 
@@ -16766,7 +17137,7 @@ reference "realizzazione intervallo aleatorio"
 \end_inset
 
 .
- È il ricercatore che solitamente sceglie il livello di confidenza.
+ È il ricercatore a determinare il livello di confidenza.
  
 \begin_inset Formula $\alpha=90\%$
 \end_inset
@@ -16780,26 +17151,30 @@ reference "realizzazione intervallo aleatorio"
 \end_inset
 
  sono i valori comunemente utilizzati.
- Per dato 
+ Fissato dunque il livello 
 \begin_inset Formula $\alpha$
 \end_inset
 
- occorre poi risolvere l'equazione 
+ desiderato, occorre risolvere l'equazione 
 \begin_inset Formula \[
 P(|Z|<c)=\alpha\]
 
 \end_inset
 
- trovando il valore di 
+in funzione di 
 \begin_inset Formula $c$
 \end_inset
 
- che la soddisfa.
+.
  Le soluzioni per i tre livelli 
 \begin_inset Formula $\alpha$
 \end_inset
 
- di significatività dati in precedenza sono nell'ordine 
+ di significatività indicati in precedenza corrispondono agli 
+\begin_inset Formula $(1-\frac{\alpha}{2})$
+\end_inset
+
+)-quantili della distribuzione Normale e sono nell'ordine uguali a 
 \begin_inset Formula $1.64$
 \end_inset
 
@@ -16812,7 +17187,7 @@ P(|Z|<c)=\alpha\]
 \end_inset
 
 .
- Essi andranno utilizzati al posto dell'
+ Essi rimpiazzerano il valore della costante 
 \begin_inset Formula $1.96$
 \end_inset
 
@@ -16824,8 +17199,7 @@ reference "realizzazione intervallo aleatorio"
 \end_inset
 
 ).
- Da ultimo facciamo semplicemente notare quanto segue.
- Il valore che la costante 
+ Riassumendo: il valore che la costante 
 \begin_inset Formula $c$
 \end_inset
 
@@ -16834,7 +17208,7 @@ reference "realizzazione intervallo aleatorio"
 \end_inset
 
  di confidenza corrisponde all'
-\begin_inset Formula $\frac{1+\alpha}{2}$
+\begin_inset Formula $(1-\frac{\alpha}{2})$
 \end_inset
 
 -quantile della distribuzione Normale.
@@ -16851,6 +17225,43 @@ reference "realizzazione intervallo aleatorio"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+Descrivete come varia l'ampiezza dell'intervallo di confidenza al variare
+ del livello di significatività 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\lang italian
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter

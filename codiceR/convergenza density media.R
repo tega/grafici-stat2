@@ -6,13 +6,16 @@
 
 x <- seq(-3,5,length.out = 100)
 
+pdf(file="grafici/convergenzaDensityMedia.pdf")
 y <- dnorm(x,mean=1,sd=2/4)
-plot(x,y,xlab=expression(mu==1),type="l",lty=4,ylab=expression(y))
-abline(v=1,col="red")
+plot(x,y,xlab=expression(mu==1),type="l",col="red",ylab=expression(y))
+# abline(v=1,col="red")
+abline(v=1)
 
 y <- dnorm(x,mean=1,sd=sqrt(2))
 
-lines(x,y,type="l",lty=2)
+# lines(x,y,type="l",lty=2)
+lines(x,y,type="l",col="blue")
 
 y <- dnorm(x,mean=1,sd=2)
 lines(x,y,type="l")
@@ -27,3 +30,5 @@ text(3.5, 0.7,
 text(2, 0.6, expression(phantom(0) %<-%~ ~sigma^2==0.5),cex = 1)
 text(2.8, 0.21, expression(phantom(0) %<-%~ ~sigma^2==sqrt(2)),cex = 1)
 text(-2.1, 0.1, expression(sigma^2==4 %->% phantom(0)),cex = 1)
+
+dev.off()
