@@ -12333,9 +12333,9 @@ Possiamo riassumere il tutto nella seguente tabella
 \begin{tabular}{ccccccccc}
   &   &  Indiv. \ensuremath{1} &   &  Indiv. \ensuremath{2} &   &   &   &  Indiv. \ensuremath{N}\\
 \ensuremath{X_{1}} &  \ensuremath{=} &  \ensuremath{a_{1}U_{11}} &  \ensuremath{+} &  \ensuremath{a_{2}U_{12}} &  \ensuremath{+} &  \ensuremath{\ldots} &  \ensuremath{+} &  \ensuremath{a_{N}U_{1N}}\\
-\ensuremath{X_{2}} &  \ensuremath{=} &  \ensuremath{a_{1}U_{21}} &  \ensuremath{+} &  \ensuremath{a_{2}U_{22}} &  \ensuremath{+} &   &  \ensuremath{+} &  \ensuremath{a_{N}U_{2N}}\\
-\ensuremath{\vdots} &   &   &   &   &   &   &   &  \ensuremath{\vdots}\\
-\ensuremath{X_{n}} &  \ensuremath{=} &  \ensuremath{a_{1}U_{n1}} &  \ensuremath{+} &  \ensuremath{a_{2}U_{n2}} &  \ensuremath{+} &   &  \ensuremath{+} &  \ensuremath{a_{N}U_{nN}}\\
+\ensuremath{X_{2}} &  \ensuremath{=} &  \ensuremath{a_{1}U_{21}} &  \ensuremath{+} &  \ensuremath{a_{2}U_{22}} &  \ensuremath{+} &  \ensuremath{\ldots} &  \ensuremath{+} &  \ensuremath{a_{N}U_{2N}}\\
+\ensuremath{\vdots} &   &  \ensuremath{\vdots} &   &  \ensuremath{\vdots} &   &   &   &  \ensuremath{\vdots}\\
+\ensuremath{X_{n}} &  \ensuremath{=} &  \ensuremath{a_{1}U_{n1}} &  \ensuremath{+} &  \ensuremath{a_{2}U_{n2}} &  \ensuremath{+} &  \ensuremath{\ldots} &  \ensuremath{+} &  \ensuremath{a_{N}U_{nN}}\\
 \hline \ensuremath{\sum_{i=1}^{n}X_{i}} &  \ensuremath{=} &  \ensuremath{a_{1}\underset{T_{1}}{\underbrace{\sum_{i=1}^{n}U_{i1}}}} &  \ensuremath{+} &  \ensuremath{a_{2}\underset{T_{2}}{\underbrace{\sum_{i=1}^{n}U_{i2}}}} &  \ensuremath{+} &  \ensuremath{\ldots} &  \ensuremath{+} &  \ensuremath{a_{N}\underset{T_{N}}{\underbrace{\sum_{i=1}^{n}U_{iN}}}}\end{tabular}\]
 
 \end_inset
@@ -12747,7 +12747,10 @@ E(\overline{X}_{n}) & = & E\left(\frac{1}{n}\sum_{j=1}^{N}a_{j}T_{j}\right)=\fra
 \begin_inset space \space{}
 \end_inset
 
-identico a quello ottenuto nel caso di campionamento con reinserimento.
+identico a quello ottenuto nel caso di campionamento con reinse\SpecialChar \-
+ri\SpecialChar \-
+men\SpecialChar \-
+to.
  Sarà dunque interessante confrontare le varianze della media campionaria
  nei due casi per vedere quale delle due tecniche di campionamento fornisce
  i risultati migliori in termini di precisione.
@@ -12989,7 +12992,7 @@ poiché in totale ci sono
 
  la quantità
 \begin_inset Formula \[
-g_{j}=\sum_{i=1}^{n}a_{ji}\]
+g_{j}:=\sum_{i=1}^{n}a_{ji}\]
 
 \end_inset
 
@@ -14680,23 +14683,19 @@ begin{esempio}
 
 \end_inset
 
-
 Caso estremo di stratificazione.
  Supponiamo che
 \end_layout
 
 \begin_layout Itemize
-
 la popolazione conti 100 individui;
 \end_layout
 
 \begin_layout Itemize
-
 i possibili valori dell'attributo in esame siano solo 4;
 \end_layout
 
 \begin_layout Itemize
-
 i 4 valori siano sconosciuti;
 \end_layout
 
@@ -14705,7 +14704,6 @@ si sappia quali e quanti siano gli individui col medesimo attributo.
 \end_layout
 
 \begin_layout Standard
-
 Si potrebbe dunque stratificare la popolazione in quattro strati perfettamente
  omogenei al loro interno.
  La varianza delle sottopopolazioni è nulla! Sarebbe sufficiente campionare
@@ -14714,9 +14712,7 @@ Si potrebbe dunque stratificare la popolazione in quattro strati perfettamente
 \end_inset
 
  individui - un individuo da ogni strato - per riuscire in questo caso estremo
- a stimare con precisione assoluta il valore atteso della popolazione
-\lang italian
-!
+ a stimare con precisione assoluta il valore atteso della popolazione!
 \begin_inset ERT
 status open
 
@@ -15107,21 +15103,21 @@ reference "varianza media con reimmissione"
 
 \end_inset
 
-) (
+), (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "varianza media senza reimmissione"
 
 \end_inset
 
-) (
+), (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "varianza stratif camp senza reins"
 
 \end_inset
 
-) (
+) e (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "varianza stratificato"
@@ -15136,7 +15132,7 @@ reference "varianza stratificato"
 \begin_inset Formula $($
 \end_inset
 
-o 
+
 \begin_inset Formula $\sigma_{h}^{2})$
 \end_inset
 
@@ -15146,13 +15142,13 @@ o
 
 -esimo strato).
  Ad esempio, per un campione casuale semplice estratto senza reimmissione
- la varianza è pari a
+ la varianza della media campionaria è pari a
 \begin_inset Formula \[
 V(\overline{X}_{n})=\frac{N-n}{N-1}\frac{\sigma^{2}}{n}\text{.}\]
 
 \end_inset
 
- In generale 
+ 
 \begin_inset Formula $N$
 \end_inset
 
@@ -15168,11 +15164,11 @@ V(\overline{X}_{n})=\frac{N-n}{N-1}\frac{\sigma^{2}}{n}\text{.}\]
 \begin_inset Formula $($
 \end_inset
 
-o 
+
 \begin_inset Formula $\sigma_{h}^{2})$
 \end_inset
 
- può o non può esserlo.
+ può o non può essere conosciuta.
  
 \end_layout
 
@@ -15216,11 +15212,15 @@ Quando la varianza
 \end_inset
 
  studiati in precedenza non è calcolabile.
- Affinché le suddette formule siano utilizzabili, occorrerà stimare 
+ Affinché le suddette formule siano utilizzabili, occorre stimare 
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
-.
+ (
+\begin_inset Formula $\sigma_{h}^{2}$
+\end_inset
+
+).
  Ai fini di questo corso - a meno che non venga specificato diversamente
  - utilizzeremo sempre 
 \begin_inset Formula $S^{2}$
@@ -15301,16 +15301,31 @@ S_{h}^{2}=\frac{1}{n_{h}-1}\sum_{i=1}^{n_{h}}\left(X_{h,i}-\overline{X}_{h}\righ
 
 \begin_layout Standard
 \noindent
-È importante fare una chiara distinzione tra la vera varianza di 
-\begin_inset Formula $\overline{X}_{n}$
-\end_inset
-
-, notata appunto 
 \begin_inset Formula $V(\overline{X}_{n})$
 \end_inset
 
-, e la varianza stimata.
- Per questo motivo quando 
+ rappresenta la vera varianza della 
+\emph on
+media campionaria
+\emph default
+ 
+\begin_inset Formula $\overline{X}_{n}$
+\end_inset
+
+, mentre 
+\begin_inset Formula $S^{2}$
+\end_inset
+
+ è unicamento lo stimatore della varianza 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ di un singolo 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ Inoltre, quando 
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
@@ -15528,11 +15543,11 @@ V(\overline{X}_{n}) & = & \frac{\sigma^{2}}{n}\ .\end{eqnarray*}
 
 \end_inset
 
- Ma questo significa che con 
+ Ma questo significa che quando 
 \begin_inset Formula $n$
 \end_inset
 
- grande le realizzazioni di 
+ è grande le realizzazioni di 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
@@ -16098,7 +16113,7 @@ la cui distribuzione sia nota
 \end_inset
 
  .
- In pratica dovremo eseguire i due passi necessari alla standardizzazione
+ In pratica dovremo eseguire i due passi necessari alla standardizzazione,
  ovvero 
 \end_layout
 
@@ -16173,8 +16188,8 @@ reference "esempio sequenza normale"
 \end_inset
 
 .
- Ancora una volta, grazie alla proprietà della Normale, dopo la standardizzazion
-e le variabili aleatorie 
+ Ancora una volta, grazie alla proprietà della distribuzione Normale, dopo
+ la standardizzazione le variabili aleatorie 
 \begin_inset Formula $Y_{n}$
 \end_inset
 
@@ -16370,10 +16385,6 @@ In pratica
 
  standardizzata, puo' essere interpretato come la somma debitamente pesata
  delle 
-\begin_inset Formula $n$
-\end_inset
-
- 
 \begin_inset Formula $V.A.$
 \end_inset
 
@@ -16411,7 +16422,7 @@ In pratica
 \end_inset
 
 .
- La standardizzazione richiede che il peso applicato a 
+ La standardizzazione richiede che il peso applicato alla somma 
 \begin_inset Formula $\sum\limits _{i=1}^{n}\varepsilon_{i}$
 \end_inset
 
@@ -17240,14 +17251,11 @@ begin{esercizio}
 
 \end_inset
 
-
 Descrivete come varia l'ampiezza dell'intervallo di confidenza al variare
  del livello di significatività 
 \begin_inset Formula $\alpha$
 \end_inset
 
-
-\lang italian
 .
 \begin_inset ERT
 status open
