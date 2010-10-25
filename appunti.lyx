@@ -16664,12 +16664,12 @@ P(|Z|<1.96)=P(-1.96<Z<1.96).\]
 
 \end_inset
 
- Detto a parole stiamo semplicemente calcolando la probabilità che la re\SpecialChar \nobreakdash-
-a\SpecialChar \nobreakdash-
-liz\SpecialChar \nobreakdash-
-za\SpecialChar \nobreakdash-
+ Detto a parole stiamo semplicemente calcolando la probabilità che la re\SpecialChar \-
+a\SpecialChar \-
+liz\SpecialChar \-
+za\SpecialChar \-
 zi
-o\SpecialChar \nobreakdash-
+o\SpecialChar \-
 ne di 
 \begin_inset Formula $Z$
 \end_inset
