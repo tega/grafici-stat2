@@ -3,11 +3,11 @@
 # Author: ortellic
 ###############################################################################
 
-
+pdf(file="grafici/confrontoDueDensitaNormali.pdf")
 x <- seq(-4,5,length.out = 100)
 
 y <- dnorm(x,mean=1.5,sd=1)
-pdf(file="grafici/confrontoDueDensitaNormali.pdf")
+
 plot(x,y,xlab="x",type="l",lty=1,
 		las=1,ylab=expression(f(x)),
 #		main="Funzione di densita' della distribuzione Normale",

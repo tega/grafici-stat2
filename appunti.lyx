@@ -17283,8 +17283,8 @@ Nel capitolo introduttivo è stato detto che lo scopo dell'induzione statistica
  limitato di osservazioni (campione).
  È stato inoltre osservato come la validità di tali conclusioni non sia
  assoluta, ma soggetta a continua verifica.
- Con l'arrivo di nuove informazioni sarà necessario confermare alla luce
- della nuova evidenza empirica quanto inferito precedentemente.
+ Con l'arrivo di ulteriori informazioni sarà necessario confermare alla
+ luce della nuova evidenza empirica quanto inferito precedentemente.
  L'inferenza statistica si occupa quindi di due importanti problemi: la
  stima e la verifica d'ipotesi.
  In questo capitolo ci occuperemo del problema di stima ed in particolare
@@ -17337,16 +17337,16 @@ reference "modello parametrico"
 
 ) 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{\theta}(x),\ \theta\in\Theta\right\} \]
+\mathcal{P}=\left\{ f(x;\theta),\ \theta\in\Theta\right\} \]
 
 \end_inset
 
  dove 
-\begin_inset Formula $f_{\theta}(x)$
+\begin_inset Formula $f(x;\theta)$
 \end_inset
 
- rappresenta la funzione di densità (caso continuo) o di probabilità (caso
- discreto) di 
+ come al solito rappresenta la funzione di densità (caso continuo) o di
+ probabilità (caso discreto) di 
 \begin_inset Formula $X$
 \end_inset
 
@@ -17355,7 +17355,7 @@ reference "modello parametrico"
 \begin_inset Formula $\theta$
 \end_inset
 
-, la forma della densità
+, a densità
 \begin_inset Foot
 status collapsed
 
@@ -17378,7 +17378,7 @@ Si parlerà semplicemente di densità intendendo qualora
 \end_inset
 
  
-\begin_inset Formula $f_{\theta}$
+\begin_inset Formula $f(x;\theta)$
 \end_inset
 
  è dunque nota.
@@ -17390,12 +17390,8 @@ il modello parametrico è correttamente specificato se esiste un
 \begin_inset Formula $\theta\in\Theta$
 \end_inset
 
-, notato 
-\begin_inset Formula $\theta_{0}$
-\end_inset
-
-, tale per cui 
-\begin_inset Formula $f_{\theta_{0}}(x)$
+ tale per cui 
+\begin_inset Formula $f(x;\theta)$
 \end_inset
 
  corrisponde alla 
@@ -17410,15 +17406,15 @@ vera funzione
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula $\theta_{0}$
+\begin_inset Formula $\theta$
 \end_inset
 
- è identificato, se per qualsiasi altro 
-\begin_inset Formula $\theta\in\Theta$
+ è identificato, se per qualsiasi altro valore 
+\begin_inset Formula $\theta'\in\Theta$
 \end_inset
 
  vale che 
-\begin_inset Formula $f_{\theta_{0}}\neq f_{\theta}$
+\begin_inset Formula $f(x;\theta)\neq f(x;\theta')$
 \end_inset
 
 .
@@ -17427,25 +17423,8 @@ vera funzione
 
 \begin_layout Standard
 \noindent
-Il valore 
-\begin_inset Formula $\theta_{0}$
-\end_inset
-
- indica semplicemente quel particolare valore di 
+Se il giusto valore del parametro 
 \begin_inset Formula $\theta$
-\end_inset
-
- per cui 
-\begin_inset Formula $f_{\theta_{0}}$
-\end_inset
-
- coincide con la vera densità di 
-\begin_inset Formula $X$
-\end_inset
-
-.
- Se il parametro 
-\begin_inset Formula $\theta_{0}$
 \end_inset
 
  fosse conosciuto, la funzione di densità (e quindi la distribuzione di
@@ -17464,24 +17443,48 @@ Il valore
 \end_inset
 
 , stimare il valore 
-\begin_inset Formula $\theta_{0}$
+\begin_inset Formula $\theta$
 \end_inset
 
 .
- Abbiamo a questo punto due possibilità:
+ Avremo a questo punto due possibilità:
 \begin_inset space \space{}
 \end_inset
 
 eseguire una stima puntuale di 
-\begin_inset Formula $\theta_{0}$
+\begin_inset Formula $\theta$
 \end_inset
 
  oppure costruire un intervallo di confidenza per 
-\begin_inset Formula $\theta_{0}$
+\begin_inset Formula $\theta$
 \end_inset
 
 .
- Ad esempio, nel caso della stima del valore medio 
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "caso della media"
+
+\end_inset
+
+Nel caso della stima del valore medio 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -17503,26 +17506,84 @@ eseguire una stima puntuale di
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
-, che notiamo con 
+, notata 
 \begin_inset Formula $\overline{x}_{n}$
 \end_inset
 
 , è dunque una stima puntuale di 
-\begin_inset Formula $\mu_{0}$
+\begin_inset Formula $\mu$
 \end_inset
 
 .
- In generale indicheremo con 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{remark}
+\end_layout
+
+\end_inset
+
+In generale indicheremo con 
 \begin_inset Formula $T(X_{1},X_{2},...,X_{n})$
 \end_inset
 
  la statistica utilizzata quale stimatore puntuale di 
-\begin_inset Formula $\theta_{0}$
+\begin_inset Formula $\theta$
 \end_inset
 
 .
- La seconda possibilità per stimare 
-\begin_inset Formula $\theta_{0}$
+ Nell'esempio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "caso della media"
+
+\end_inset
+
+ abbiamo dunque 
+\begin_inset Formula $T(X_{1},X_{2},...,X_{n})=\overline{X}_{n}$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{remark}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La seconda possibilità per stimare 
+\begin_inset Formula $\theta$
 \end_inset
 
  è quella di costruire un intervallo di confidenza.
@@ -17556,7 +17617,20 @@ eseguire una stima puntuale di
 \end_inset
 
 .
- Nel paragrafo 
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+Nel paragrafo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "intervallo confidenza"
@@ -17577,11 +17651,29 @@ reference "intervallo confidenza"
 
  erano date da
 \begin_inset Formula \[
-I_{1}=\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}\text{ e }I_{2}=\overline{X}_{n}+1.96\sqrt{V(\overline{X}_{n})}.\]
+I_{1}=\overline{X}_{n}-1.96\sqrt{\sigma^{2}/n}\text{ e }I_{2}=\overline{X}_{n}+1.96\sqrt{\sigma^{2}/n}.\]
 
 \end_inset
 
- Questo secondo approccio per stimare il parametro sconosciuto è chiamato
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Questo secondo approccio per stimare il parametro sconosciuto è chiamato
  stima per intervalli.
  In questo capitolo ci soffermeremo sulla stima puntuale.
  Per tutto il presente capitolo, salvo indicato diversamente, assumeremo
@@ -17597,7 +17689,7 @@ I_{1}=\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}\text{ e }I_{2}=\overline{X
 \end_inset
 
 , cioè esiste un 
-\begin_inset Formula $\theta_{0}\in\Theta$
+\begin_inset Formula $\theta\in\Theta$
 \end_inset
 
  tale per cui
@@ -17605,7 +17697,7 @@ I_{1}=\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}\text{ e }I_{2}=\overline{X
 \end_inset
 
 
-\begin_inset Formula $f_{\theta_{0}}(x)$
+\begin_inset Formula $f(x;\theta)$
 \end_inset
 
  è la densità di 
@@ -17616,14 +17708,14 @@ I_{1}=\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}\text{ e }I_{2}=\overline{X
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\theta_{0}$
+\begin_inset Formula $\theta$
 \end_inset
 
  è identificato; 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\theta_{0}$
+\begin_inset Formula $\theta$
 \end_inset
 
  è sconosciuto; 
@@ -17651,12 +17743,7 @@ Le variabili aleatorie
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- saranno quindi indipendenti ed identicamente distribuite con funzione di
- densità 
-\begin_inset Formula $f_{\theta_{0}}$
-\end_inset
-
-.
+ saranno quindi indipendenti ed identicamente distribuite.
  Il nostro obiettivo consiste nel trovare delle statistiche (funzioni di
  
 \begin_inset Formula $X_{1},...,X_{n}$
@@ -17667,7 +17754,7 @@ Le variabili aleatorie
 \end_inset
 
 ) da usare quali stimatori del parametro sconosciuto 
-\begin_inset Formula $\theta_{0}$
+\begin_inset Formula $\theta$
 \end_inset
 
 .
@@ -17678,7 +17765,14 @@ Il metodo dei momenti
 \end_layout
 
 \begin_layout Standard
-Iniziamo questo paragrafo con alcune definizioni.
+In questa sezione del capitolo studieremo un metodo di stima chiamato 
+\emph on
+metodo dei momenti
+\emph default
+.
+ Questo suo nome trae origine dal fatto che l'idea chiave su cui esso è
+ costruito consiste nel concetto di momento di una variabile aleatoria.
+ Prima di affrontare questa classe di stimatori diamo alcune definizioni.
 \end_layout
 
 \begin_layout Standard
@@ -17715,7 +17809,7 @@ Momento
 \end_inset
 
  con funzione di densità 
-\begin_inset Formula $f_{\theta}$
+\begin_inset Formula $f$
 \end_inset
 
 .
@@ -17800,7 +17894,7 @@ V(X)=E(X^{2})-\mu^{2}\text{.}\]
 \end_inset
 
 .
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -17878,10 +17972,16 @@ end{remark}
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\noindent
+\begin_inset VSpace smallskip
 \end_inset
 
- L'
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'
 \begin_inset Formula $r$
 \end_inset
 
@@ -17909,7 +18009,7 @@ g:\mathbb{R}\rightarrow\mathbb{R}\text{, }x\mapsto y=x^{r}\text{.}\]
 
  può essere calcolato come
 \begin_inset Formula \begin{equation}
-E(Y)=E\left(X^{r}\right)=\int_{-\infty}^{\infty}x^{r}f_{\theta}(x)dx\text{.}\label{momento r}\end{equation}
+E(Y)=E\left(X^{r}\right)=\int_{-\infty}^{\infty}x^{r}f(x;\theta)dx\text{.}\label{momento r}\end{equation}
 
 \end_inset
 
@@ -17928,10 +18028,12 @@ reference "esempio momenti distrib poisson"
 \end_inset
 
 ), il valore di 
-\begin_inset Formula $M_{r}=\int_{-\infty}^{\infty}x^{r}f_{\theta}(x)dx$
+\begin_inset Formula \[
+M_{r}=\int_{-\infty}^{\infty}x^{r}f(x;\theta)dx\]
+
 \end_inset
 
- dipenderà dal particolare valore del parametro sconosciuto 
+dipenderà dal particolare valore del parametro sconosciuto 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -18032,12 +18134,18 @@ E\left(Z^{4}\right) & = & \int_{-\infty}^{\infty}z^{4}\frac{1}{\sqrt{2\pi}}\exp\
 
 \end_inset
 
- cioè
+ e quindi
 \begin_inset Formula \[
 M_{4}=E\left(X^{4}\right)=3\sigma^{4}=3\left(\sigma^{2}\right)^{2}.\]
 
 \end_inset
 
+Come potete vedere, in questo esempio il quarto momento dipende dal valore
+ del parametro sconosciuto, in questo caso la varianza di 
+\begin_inset Formula $X$
+\end_inset
+
+.
  
 \begin_inset ERT
 status collapsed
@@ -18118,10 +18226,16 @@ end{definizione}
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\noindent
+\begin_inset VSpace smallskip
 \end_inset
 
- Il primo momento centrato di 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il primo momento centrato di 
 \begin_inset Formula $X$
 \end_inset
 
@@ -18169,7 +18283,8 @@ begin{remark}
 
 \end_inset
 
- (Curiosità.) Esiste la seguente relazione tra i momenti 
+ (Curiosità).
+ Esiste la seguente relazione tra i momenti 
 \begin_inset Formula $M_{r}$
 \end_inset
 
@@ -18188,7 +18303,14 @@ M_{r}^{c}=\sum_{i=0}^{r}\left(-1\right)^{i}\ C_{r}^{i}\ \mu^{i}\ M_{r-i}\]
 \end_inset
 
  è il coefficiente binomiale.
- 
+ La dimostrazione della precedente uguaglianza segue direttamente dal fatto
+ che 
+\begin_inset Formula \[
+(a+b)^{n}=\sum_{i=0}^{n}C_{r}^{i}\ a^{i}\ b^{n-i}.\]
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -18243,7 +18365,7 @@ Sia
 
  è data da 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{\theta}(x)=\frac{\theta^{x}e^{-\theta}}{x!},\ x\in\left\{ 0,1,...\right\} ,\ \theta\in\mathbb{R}^{+}\right\} \text{.}\]
+\mathcal{P}=\left\{ f(x;\theta)=\frac{\theta^{x}e^{-\theta}}{x!},\ x\in\left\{ 0,1,...\right\} ,\ \theta\in\mathbb{R}^{+}\right\} \text{.}\]
 
 \end_inset
 
@@ -18285,7 +18407,7 @@ M_{3}=\sum_{x=0}^{\infty}x^{3}\frac{\theta^{x}e^{-\theta}}{x!}=\theta+3\theta^{2
 
 \end_inset
 
- Come potete constatare sia 
+ Come potete ancora una volta constatare sia 
 \begin_inset Formula $M_{1}$
 \end_inset
 
@@ -18297,8 +18419,62 @@ M_{3}=\sum_{x=0}^{\infty}x^{3}\frac{\theta^{x}e^{-\theta}}{x!}=\theta+3\theta^{2
 \begin_inset Formula $\theta$
 \end_inset
 
-.
+ (confronta Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Primo-e-secondo poisson"
+
+\end_inset
+
+).
  
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/momento1E2Poisson.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Primo-e-secondo poisson"
+
+\end_inset
+
+Primo e secondo momento della distribuzione di Poisson in funzione del parametro
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -18383,12 +18559,12 @@ begin{definizione}
 \end_inset
 
 -esimo, notato 
-\begin_inset Formula $\widehat{M}_{r,n}$
+\begin_inset Formula $M_{r,n}$
 \end_inset
 
 , è definito come
 \begin_inset Formula \[
-\widehat{M}_{r,n}=\frac{1}{n}\sum_{i=1}^{n}X_{i}^{r}\text{.}\]
+M_{r,n}=\frac{1}{n}\sum_{i=1}^{n}X_{i}^{r}\text{.}\]
 
 \end_inset
 
@@ -18428,7 +18604,7 @@ reference "momento r-esimo centrato"
 
 -esimo centrato è definito come
 \begin_inset Formula \[
-\widehat{M}_{r,n}^{c}=\frac{1}{n}\sum_{i=1}^{n}\left(X_{i}-\overline{X}_{n}\right)^{r}\text{.}\]
+M_{r,n}^{c}=\frac{1}{n}\sum_{i=1}^{n}\left(X_{i}-\overline{X}_{n}\right)^{r}\text{.}\]
 
 \end_inset
 
@@ -18438,7 +18614,7 @@ reference "momento r-esimo centrato"
 \begin_layout Standard
 \noindent
 Il secondo momento campionario centrato 
-\begin_inset Formula $\widehat{M}_{2,n}^{c}=\frac{1}{n}\sum_{i=1}^{n}\left(X_{i}-\overline{X}_{n}\right)^{2}$
+\begin_inset Formula $M_{2,n}^{c}=\frac{1}{n}\sum_{i=1}^{n}\left(X_{i}-\overline{X}_{n}\right)^{2}$
 \end_inset
 
  è l'equivalente 
@@ -18459,12 +18635,12 @@ empirico
 \end_inset
 
  della varianza è derivabile da 
-\begin_inset Formula $\widehat{M}_{2,n}^{c}$
+\begin_inset Formula $M_{2,n}^{c}$
 \end_inset
 
  tramite la semplice formula 
 \begin_inset Formula \[
-S^{2}=\frac{n}{n-1}\widehat{M}_{2,n}^{c}\text{.}\]
+S^{2}=\frac{n}{n-1}M_{2,n}^{c}\text{.}\]
 
 \end_inset
 
@@ -18497,11 +18673,11 @@ begin{remark}
 \end_inset
 
  Sia 
-\begin_inset Formula $\widehat{M}_{r,n}$
+\begin_inset Formula $M_{r,n}$
 \end_inset
 
  che 
-\begin_inset Formula $\widehat{M}_{r,n}^{c}$
+\begin_inset Formula $M_{r,n}^{c}$
 \end_inset
 
  sono delle statistiche (delle funzioni di 
@@ -18511,11 +18687,12 @@ begin{remark}
  che possono essere calcolate in quanto non dipendono da nessun parametro
  sconosciuto) e quindi sono esse stesse delle variabili aleatorie.
  In generale non è possibile ricavare analiticamente la distribuzione di
- queste statistiche tuttavia per alcuni valori di 
+ queste statistiche.
+ Tuttavia, per alcuni valori di 
 \begin_inset Formula $r$
 \end_inset
 
- è possibile calcolarne il valore atteso e/o la varianza.
+, è possibile calcolarne il valore atteso e/o la varianza.
  
 \begin_inset ERT
 status collapsed
@@ -18604,7 +18781,7 @@ Sia
 
  si avrà che
 \begin_inset Formula \begin{equation}
-\lim_{n\rightarrow\infty}P(|\widehat{M}_{r,n}-M_{r}|>\varepsilon)=0\text{.}\label{convergenza probabilita campione}\end{equation}
+\lim_{n\rightarrow\infty}P(|M_{r,n}-M_{r}|>\varepsilon)=0\text{.}\label{convergenza probabilita campione}\end{equation}
 
 \end_inset
 
@@ -18635,7 +18812,7 @@ Per fisso
 \end_inset
 
  piccolo a piacere la probabilità 
-\begin_inset Formula $P(|\widehat{M}_{r,n}-M_{r}|\leq\varepsilon)$
+\begin_inset Formula $P(|M_{r,n}-M_{r}|\leq\varepsilon)$
 \end_inset
 
  corrisponde alla probabilità che il valore
@@ -18653,7 +18830,7 @@ Il valore che noi calcoleremo una volta osservate
 \end_inset
 
  realizzato di 
-\begin_inset Formula $\widehat{M}_{r,n}$
+\begin_inset Formula $M_{r,n}$
 \end_inset
 
  cada in un intervallo di centro 
@@ -18715,7 +18892,7 @@ La distribuzione della variabile aleatoria
  è sconosciuta.
  Tuttavia sappiamo che essa appartenere alla famiglia di distribuzioni
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{\theta}(x),\ \theta\in\Theta\right\} \text{.}\]
+\mathcal{P}=\left\{ f(x;\theta),\ \theta\in\Theta\right\} \text{.}\]
 
 \end_inset
 
@@ -18723,15 +18900,19 @@ La distribuzione della variabile aleatoria
 \begin_inset Formula $\theta\in\Theta$
 \end_inset
 
-, notato 
+, che indichiamo con 
 \begin_inset Formula $\theta_{0}$
 \end_inset
 
 , tale per cui 
-\begin_inset Formula $f_{\theta_{0}}(x)$
+\begin_inset Formula $f(x;\theta_{0})$
 \end_inset
 
- è la funzione di densità di 
+ corrisponde alla funzione di densità 
+\begin_inset Formula $f$
+\end_inset
+
+ di 
 \begin_inset Formula $X$
 \end_inset
 
@@ -18778,7 +18959,7 @@ Osservando un
 \end_inset
 
  di densità 
-\begin_inset Formula $f_{\theta_{0}}$
+\begin_inset Formula $f$
 \end_inset
 
  possiamo calcolare l'
@@ -18789,11 +18970,11 @@ Osservando un
 pio\SpecialChar \-
 na\SpecialChar \-
 rio 
-\begin_inset Formula $\widehat{M}_{r,n}$
+\begin_inset Formula $M_{r,n}$
 \end_inset
 
  (
-\begin_inset Formula $\widehat{M}_{r,n}^{c}$
+\begin_inset Formula $M_{r,n}^{c}$
 \end_inset
 
 ).
@@ -18802,7 +18983,7 @@ rio
 \end_inset
 
  di 
-\begin_inset Formula $\widehat{M}_{r,n}$
+\begin_inset Formula $M_{r,n}$
 \end_inset
 
  è uguale al corrispettivo momento della popolazione 
@@ -18810,13 +18991,21 @@ rio
 \end_inset
 
 .
- Avremo dunque
-\begin_inset space \space{}
+ Avremo dunque che per 
+\begin_inset Formula $n$
 \end_inset
 
+ 
+\begin_inset Quotes eld
+\end_inset
 
+sufficientemente
+\begin_inset Quotes erd
+\end_inset
+
+ grande 
 \begin_inset Formula \begin{equation}
-\widehat{M}_{r,n}\simeq M_{r}(\theta_{0})\text{.}\label{approx momento}\end{equation}
+M_{r,n}\simeq M_{r}(\theta_{0})\text{.}\label{approx momento}\end{equation}
 
 \end_inset
 
@@ -18864,7 +19053,7 @@ M_{3}(\theta)=\theta+3\theta^{2}+\theta^{3}\text{.}\]
 
  sufficientemente grande avremo 
 \begin_inset Formula \[
-\widehat{M}_{3,n}\simeq M_{3}(\theta_{0})=\theta_{0}+3\theta_{0}^{2}+\theta_{0}^{3}\]
+M_{3,n}\simeq M_{3}(\theta_{0})=\theta_{0}+3\theta_{0}^{2}+\theta_{0}^{3}.\]
 
 \end_inset
 
@@ -18894,7 +19083,7 @@ reference "approx momento"
 \end_inset
 
 ) è il punto di partenza dal quale costruire lo stimatore.
- Il lato sinistro della (
+ Infatti, il lato sinistro della (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "approx momento"
@@ -18915,11 +19104,7 @@ reference "approx momento"
 \begin_inset Quotes eld
 \end_inset
 
-l'equazione”
-\begin_inset space \space{}
-\end_inset
-
-(
+l'equazione” (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "approx momento"
@@ -18946,8 +19131,12 @@ reference "esempio M3 poisson"
 
 \end_inset
 
- supponiamo che il valore realizzato di 
-\begin_inset Formula $\widehat{M}_{3,n}$
+ supponiamo che la realizzazione di 
+\begin_inset Formula $M_{3,n}$
+\end_inset
+
+, notata 
+\begin_inset Formula $m_{3,n}$
 \end_inset
 
  sia uguale 
@@ -18955,9 +19144,9 @@ reference "esempio M3 poisson"
 \end_inset
 
 .
- Vale dunque 
+ Scriveremo 
 \begin_inset Formula \begin{equation}
-\widehat{M}_{3,n}=1\simeq M_{3}(\theta_{0})=\theta_{0}+3\theta_{0}^{2}+\theta_{0}^{3}.\label{nuova equazione secondo momento 0}\end{equation}
+m_{3,n}=1\simeq M_{3}(\theta_{0})=\theta_{0}+3\theta_{0}^{2}+\theta_{0}^{3}.\label{nuova equazione secondo momento 0}\end{equation}
 
 \end_inset
 
@@ -18969,14 +19158,38 @@ reference "esempio M3 poisson"
 \begin_inset Formula $\sqrt{2}-1,-\sqrt{2}-1,-1$
 \end_inset
 
- di cui solo la prima è ammissibile in quanto nel caso della distribuzione
- di Poisson 
-\begin_inset Formula $\theta\in\left(0,\infty\right)$
+ di cui solo la prima è ammissibile in quanto, nel caso in esame della distribuz
+ione di Poisson, il valore del parametro 
+\begin_inset Formula $\theta$
 \end_inset
 
+ deve essere compreso nell'intervallo 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\left(0,\infty\right)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
 .
- Poiché la soluzione è solo un'approssimazione del vero valore scriveremo
- 
+ Poiché la soluzione è stata ricavata da un'approssimazione (stima) del
+ momento teorico, scriveremo 
 \begin_inset Formula \[
 \widehat{\theta}=\sqrt{2}-1\]
 
@@ -18987,6 +19200,13 @@ reference "esempio M3 poisson"
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -19006,9 +19226,9 @@ reference "esempio M3 poisson"
 \end_inset
 
  anziché utilizzare il terzo momento utilizzassimo il secondo momento, otterremm
-o la seguente situazione
+o la seguente relazione
 \begin_inset Formula \begin{equation}
-\widehat{M}_{2,n}\simeq M_{2}(\theta_{0})=\theta_{0}+\theta_{0}^{2}.\label{nuova equazione secondo momento}\end{equation}
+M_{2,n}\simeq M_{2}(\theta_{0})=\theta_{0}+\theta_{0}^{2}.\label{nuova equazione secondo momento}\end{equation}
 
 \end_inset
 
@@ -19016,22 +19236,22 @@ o la seguente situazione
 \begin_inset Formula $n$
 \end_inset
 
--campione utilizzato in precedenza per calcolare 
-\begin_inset Formula $\widehat{M}_{3,n}$
+-campione utilizzato in precedenza per il calcolo di 
+\begin_inset Formula $M_{3,n}$
 \end_inset
 
- potremmo calcolare 
-\begin_inset Formula $\widehat{M}_{2,n}$
+ potremmo ora calcolare 
+\begin_inset Formula $M_{2,n}$
 \end_inset
 
- ed utilizzare tale valore per risolvere la (
+, utilizzare tale valore per risolvere la (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "nuova equazione secondo momento"
 
 \end_inset
 
-) ottenendo così una nuova stima 
+) ed ottenere in questo modo la nuova stima 
 \begin_inset Formula $\widehat{\theta}$
 \end_inset
 
@@ -19039,29 +19259,37 @@ reference "nuova equazione secondo momento"
 \begin_inset Formula $\theta_{0}$
 \end_inset
 
- che molto verosimilmente sarà diversa dalla precedente.
- Prendendo ad esempio 
-\begin_inset Formula $\widehat{M}_{2,n}=0.39$
+.
+ Tale stima verosimilmente sarà diversa dalla precedente in quanto i due
+ stimatori utilizzano l'informazione dell'
+\begin_inset Formula $n-$
 \end_inset
 
- avremmo quale unica soluzione ammissibile 
+campione in maniera diversa.
+ Per fare un esempio, se trovassimo che 
+\begin_inset Formula $m_{2,n}=0.39$
+\end_inset
+
+, avremmo quale unica soluzione ammissibile 
 \begin_inset Formula $\widehat{\theta}=0.3$
 \end_inset
 
- che è diversa dalla soluzione precedente.
- In questo caso 
-\begin_inset Formula $\widehat{\theta}$
+ (diversa quindi dalla soluzione precedente).
+ In questo caso diremo che 
+\begin_inset Formula $\widehat{\theta}=0.3$
 \end_inset
 
- sarebbe lo stimatore dei momenti di 
+ è la stima di 
 \begin_inset Formula $\theta_{0}$
 \end_inset
 
- basato sul secondo momento.
+ basata sul secondo momento.
 \end_layout
 
 \begin_layout Standard
-Risolvere le equazioni (
+\noindent
+È possibile dare un'interpretazione grafica della situazione? Sì, poiché
+ risolvere le equazioni (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "nuova equazione secondo momento 0"
@@ -19075,12 +19303,42 @@ reference "nuova equazione secondo momento"
 
 \end_inset
 
-) corrisponde, in pratica, a trovare l'inversa della funzione dei momenti
+) rispetto a 
+\begin_inset Formula $\theta_{0}$
+\end_inset
+
+ corrisponde, in pratica, a calcolare la preimmagine della funzione dei
+ momenti
 \begin_inset Formula \[
-M_{r}(\cdot):\Theta\rightarrow\mathbb{R}\ ,\ \theta\mapsto M_{r}(\theta)\ .\]
+M_{r}(\cdot):\Theta\rightarrow\mathbb{R}\ ,\ \theta\mapsto M_{r}(\theta)\ \]
 
 \end_inset
 
+nel punto 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $M_{r,n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+.
  Infatti, applicando la funzione inversa 
 \begin_inset Formula $M_{r}^{-1}$
 \end_inset
@@ -19094,12 +19352,17 @@ reference "approx momento"
 
 ) otteniamo
 \begin_inset Formula \begin{equation}
-M_{r}^{-1}(\widehat{M}_{r,n})\simeq M_{r}^{-1}\left(M_{r}(\theta_{0})\right)=\theta_{0}\text{.}\end{equation}
+\widehat{\theta}=M_{r}^{-1}(M_{r,n})\simeq M_{r}^{-1}\left(M_{r}(\theta_{0})\right)=\theta_{0}\text{.}\end{equation}
 
 \end_inset
 
- La quantità 
-\begin_inset Formula $M_{r}^{-1}(\widehat{M}_{r,n})$
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La quantità 
+\begin_inset Formula $M_{r}^{-1}(M_{r,n})$
 \end_inset
 
  è calcolabile a condizione che la funzione inversa 
@@ -19107,8 +19370,8 @@ M_{r}^{-1}(\widehat{M}_{r,n})\simeq M_{r}^{-1}\left(M_{r}(\theta_{0})\right)=\th
 \end_inset
 
  esista (l'equazione abbia un'unica soluzione).
- La quantità 
-\begin_inset Formula $M_{r}^{-1}(\widehat{M}_{r,n})$
+ 
+\begin_inset Formula $M_{r}^{-1}(M_{r,n})$
 \end_inset
 
  rappresenta un'approssimazione (stima) del vero parametro 
@@ -19125,7 +19388,15 @@ M_{r}^{-1}(\widehat{M}_{r,n})\simeq M_{r}^{-1}\left(M_{r}(\theta_{0})\right)=\th
 \end_inset
 
  nell'indicare il valore stimato.
- Riassumendo, quando la funzione inversa 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Riassumendo, quando la funzione inversa 
 \begin_inset Formula $M_{r}^{-1}$
 \end_inset
 
@@ -19136,7 +19407,7 @@ M_{r}^{-1}(\widehat{M}_{r,n})\simeq M_{r}^{-1}\left(M_{r}(\theta_{0})\right)=\th
 
  è uguale a 
 \begin_inset Formula \begin{equation}
-\widehat{\theta}=M_{r}^{-1}(\widehat{M}_{r,n})\text{,}\label{approx momento inverso}\end{equation}
+\widehat{\theta}=M_{r}^{-1}(M_{r,n})\text{,}\label{approx momento inverso}\end{equation}
 
 \end_inset
 
@@ -19150,21 +19421,68 @@ M_{r}^{-1}(\widehat{M}_{r,n})\simeq M_{r}^{-1}\left(M_{r}(\theta_{0})\right)=\th
 
  dell'equazione
 \begin_inset Formula \[
-\widehat{M}_{r,n}=M_{r}(\theta)\]
+M_{r,n}=M_{r}(\theta)\]
 
 \end_inset
 
- come visto ad esempio nel caso della distribuzione di Poisson e 
+ come visto nei due esempi sulla distribuzione di Poisson con 
 \begin_inset Formula $r=2,3$
 \end_inset
 
 .
- Graficamente abbiamo la seguente interpretazione:
+ La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Terzo-momento-della"
+
+\end_inset
+
+ mostra graficamente quanto appena descritto.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
 \align center
-Grafico 
+\begin_inset Graphics
+	filename codiceR/grafici/momento3Poisson.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Terzo-momento-della"
+
+\end_inset
+
+Terzo momento della distribuzione di Poisson in funzione di 
+\begin_inset Formula $\theta$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -19210,7 +19528,7 @@ Supponiamo che
 
  è uguale 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{\theta}(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}\right),\ x\in\mathbb{R\ },\ \theta=(\mu,\sigma^{2})\in\mathbb{R}\times\mathbb{R}^{+}\right\} \]
+\mathcal{P}=\left\{ f(x;\theta)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}\right),\ x\in\mathbb{R\ },\ \theta=(\mu,\sigma^{2})\in\mathbb{R}\times\mathbb{R}^{+}\right\} \]
 
 \end_inset
 
@@ -19260,21 +19578,21 @@ M_{2}=\sigma^{2}+\mu^{2}.\]
  
 \begin_inset Formula \begin{equation}
 \left\{ \begin{array}{l}
-\widehat{M}_{1,n}\simeq M_{1}\left(\mu,\sigma^{2}\right)=\mu\\
-\widehat{M}_{2,n}\simeq M_{2}\left(\mu,\sigma^{2}\right)=\sigma^{2}+\mu^{2}\end{array}\right.\label{esempio momenti normale 1}\end{equation}
+M_{1,n}\simeq M_{1}\left(\mu,\sigma^{2}\right)=\mu\\
+M_{2,n}\simeq M_{2}\left(\mu,\sigma^{2}\right)=\sigma^{2}+\mu^{2}\end{array}\right.\label{esempio momenti normale 1}\end{equation}
 
 \end_inset
 
  Il primo momento campionario 
-\begin_inset Formula $\widehat{M}_{1,n}$
+\begin_inset Formula $M_{1,n}$
 \end_inset
 
- corrisponde a 
+ corrisponde alla media campionaria 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
  mentre il secondo momento campionario 
-\begin_inset Formula $\widehat{M}_{2,n}$
+\begin_inset Formula $M_{2,n}$
 \end_inset
 
  è uguale 
