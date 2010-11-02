@@ -12791,7 +12791,7 @@ V(\overline{X}_{n}) & = & V(\frac{1}{n}\sum_{j=1}^{N}a_{j}T_{j})=\frac{1}{n^{2}}
  
 \begin_inset Formula \begin{eqnarray}
 V(\overline{X}_{n}) & = & \frac{1}{n^{2}}\left(\frac{n(N-n)}{N^{2}}\sum_{j=1}^{N}a_{j}^{2}-\frac{n(N-n)}{N^{2}(N-1)}\underset{j\neq s}{\sum_{j=1}^{N}\sum_{s=1}^{N}}a_{j}a_{s}\right)\notag\\
- & = & \frac{1}{n^{2}}\frac{n(N-n)}{N^{2}(N-1)}\left((N-1)\sum_{ij=1}^{N}a_{j}^{2}-\underset{j\neq s}{\sum_{j=1}^{N}\sum_{s=1}^{N}}a_{j}a_{s}\right)\notag\end{eqnarray}
+ & = & \frac{1}{n^{2}}\frac{n(N-n)}{N^{2}(N-1)}\left((N-1)\sum_{j=1}^{N}a_{j}^{2}-\underset{j\neq s}{\sum_{j=1}^{N}\sum_{s=1}^{N}}a_{j}a_{s}\right)\notag\end{eqnarray}
 
 \end_inset
 
