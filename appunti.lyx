@@ -16629,7 +16629,7 @@ reference "uguaglianza in distr2"
 
 )) che
 \begin_inset Formula \[
-P\left(\frac{\overline{X}_{n}-\mu}{\sqrt{V(\overline{X}_{n})}}<c\right)=P\left(\frac{\overline{X}_{n}-\mu}{\sqrt{\frac{\sigma^{2}}{n}}}<c\right)\underset{TLC}{\simeq}P\left(Z<c\right)\ \ \ \forall c\in\mathbb{R}\text{.}\]
+P\left(\frac{\overline{X}_{n}-\mu}{\sqrt{V(\overline{X}_{n})}}\leq c\right)=P\left(\frac{\overline{X}_{n}-\mu}{\sqrt{\frac{\sigma^{2}}{n}}}\leq c\right)\underset{TLC}{\simeq}P\left(Z\leq c\right)\ \ \ \forall c\in\mathbb{R}\text{.}\]
 
 \end_inset
 
@@ -16660,7 +16660,7 @@ Iniziamo la costruzione dell'intervallo di confidenza ragionando sulla variabile
 .
  Siamo interessati a calcolare la probabilità 
 \begin_inset Formula \[
-P(|Z|<1.96)=P(-1.96<Z<1.96).\]
+P(|Z|\leq1.96)=P(-1.96\leq Z\leq1.96).\]
 
 \end_inset
 
@@ -16685,7 +16685,7 @@ ne di
 
  è una variabile aleatoria Normale standard è immediato verificare che 
 \begin_inset Formula \begin{equation}
-P(|Z|<1.96)=0.95\ \text{.}\label{equazione livello confidenza}\end{equation}
+P(|Z|\leq1.96)=0.95\ \text{.}\label{equazione livello confidenza}\end{equation}
 
 \end_inset
 
@@ -16709,13 +16709,13 @@ Ricordiamo che l'uguaglianza è vera solo al limite.
 
  vale che 
 \begin_inset Formula \[
-P(|Z|<1.96)=P(|\frac{\overline{X}_{n}-\mu}{\sqrt{V(\overline{X}_{n})}}|<1.96)\]
+P(|Z|\leq1.96)=P(|\frac{\overline{X}_{n}-\mu}{\sqrt{V(\overline{X}_{n})}}|\leq1.96)\]
 
 \end_inset
 
  da cui ricaviamo
 \begin_inset Formula \begin{equation}
-P(\mu-1.96\sqrt{V(\overline{X}_{n})}<\overline{X}_{n}<\mu+1.96\sqrt{V(\overline{X}_{n})})=0.95.\label{intervallo interpretazione 1}\end{equation}
+P(\mu-1.96\sqrt{V(\overline{X}_{n})}\leq\overline{X}_{n}\leq\mu+1.96\sqrt{V(\overline{X}_{n})})=0.95.\label{intervallo interpretazione 1}\end{equation}
 
 \end_inset
 
@@ -16774,7 +16774,7 @@ reference "intervallo interpretazione 1"
 
 ) nel seguente modo
 \begin_inset Formula \begin{equation}
-P(\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}<\mu<\overline{X}_{n}+1.96\sqrt{V(\overline{X}_{n})})=0.95.\label{intervallo interpretazione 2}\end{equation}
+P(\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}\leq\mu\leq\overline{X}_{n}+1.96\sqrt{V(\overline{X}_{n})})=0.95.\label{intervallo interpretazione 2}\end{equation}
 
 \end_inset
 
@@ -16796,7 +16796,7 @@ reference "intervallo interpretazione 1"
 )? Per dare un significato a questa espressione osserviamo i due estremi
  dell'espressione 
 \begin_inset Formula \[
-\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}<\mu<\overline{X}_{n}+1.96\sqrt{V(\overline{X}_{n})}\]
+\overline{X}_{n}-1.96\sqrt{V(\overline{X}_{n})}\leq\mu\leq\overline{X}_{n}+1.96\sqrt{V(\overline{X}_{n})}\]
 
 \end_inset
 
@@ -17113,7 +17113,7 @@ reference "equazione livello confidenza"
 
 ))
 \begin_inset Formula \[
-P(|Z|<c)=0.95\]
+P(|Z|\leq c)=0.95\]
 
 \end_inset
 
@@ -17168,7 +17168,7 @@ reference "realizzazione intervallo aleatorio"
 
  desiderato, occorre risolvere l'equazione 
 \begin_inset Formula \[
-P(|Z|<c)=\alpha\]
+P(|Z|\leq c)=\alpha\]
 
 \end_inset
 
@@ -17355,7 +17355,7 @@ reference "modello parametrico"
 \begin_inset Formula $\theta$
 \end_inset
 
-, a densità
+, la densità
 \begin_inset Foot
 status collapsed
 
