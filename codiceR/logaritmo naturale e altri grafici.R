@@ -4,15 +4,15 @@
 ###############################################################################
 
 
-# pdf(file="standardNormalDensityWith095Quantile.pdf",width=12,height=10)
+pdf(file="grafici/logNaturale.pdf")
 x = seq(0.1,6,length.out=100)
 plot(x,log(x),type="l",ylab="ln(x)",las=1)
 abline(h=0)
 
-# dev.off()
+dev.off()
 
 
-# pdf(file="standardNormalDensityWith095Quantile.pdf",width=12,height=10)
+pdf(file="grafici/logTrasformazione.pdf")
 g <- function(x) {
 	0.546875 * x^4 - 4.5625 *x^3 + 10.4375 * x^2 - 4.5 * x + 5
 }
@@ -35,5 +35,4 @@ text(x2,g(x2)-0.60,"Minimo",cex=0.7)
 text(5.2,12,expression(g(x)))
 text(5.5,2,expression(ln(g(x))))
 
-
-# dev.off()
+dev.off()

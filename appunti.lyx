@@ -18003,7 +18003,7 @@ g:\mathbb{R}\rightarrow\mathbb{R}\text{, }x\mapsto y=x^{r}\text{.}\]
 
 \end_inset
 
- Dal corso di Statistica I sappiamo che il valore atteso di 
+Dal corso di Statistica I sappiamo che il valore atteso di 
 \begin_inset Formula $Y$
 \end_inset
 
@@ -18013,7 +18013,7 @@ E(Y)=E\left(X^{r}\right)=\int_{-\infty}^{\infty}x^{r}f(x;\theta)dx\text{.}\label
 
 \end_inset
 
- Come intuibile dalla (
+Come intuibile dalla (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "momento r"
@@ -18460,7 +18460,7 @@ Primo e secondo momento della distribuzione di Poisson in funzione del parametro
 \begin_inset Formula $\theta$
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -19472,7 +19472,7 @@ Terzo momento della distribuzione di Poisson in funzione di
 \begin_inset Formula $\theta$
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -19583,7 +19583,7 @@ M_{2,n}\simeq M_{2}\left(\mu,\sigma^{2}\right)=\sigma^{2}+\mu^{2}\end{array}\rig
 
 \end_inset
 
- Il primo momento campionario 
+Il primo momento campionario 
 \begin_inset Formula $M_{1,n}$
 \end_inset
 
@@ -19610,7 +19610,7 @@ M_{2,n}\simeq M_{2}\left(\mu,\sigma^{2}\right)=\sigma^{2}+\mu^{2}\end{array}\rig
 
 \end_inset
 
- Risolvendo rispetto a 
+ Risolvendo rispetto ai due parametri sconosciuti 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -19661,9 +19661,9 @@ E\left(\widehat{\sigma}^{2}\right) & = & E\left(\frac{1}{n}\sum_{i=1}^{n}\left(X
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
- è uguale a
+ è uguale per definizione a
 \begin_inset Formula \[
-B(\widehat{\sigma}^{2})=E\left(\widehat{\sigma}^{2}\right)-\sigma^{2}=-\frac{1}{n}\sigma^{2}\text{.}\]
+B(\widehat{\sigma}^{2}):=E\left(\widehat{\sigma}^{2}\right)-\sigma^{2}=-\frac{1}{n}\sigma^{2}\text{.}\]
 
 \end_inset
 
@@ -19724,14 +19724,14 @@ Il metodo di massima verosimiglianza
 \begin_layout Standard
 L'idea alla base del metodo di stima di massima verosimiglianza è molto
  semplice ed intuitiva.
- Il seguente esempio (preso da A.
+ Il seguente esempio preso da A.
  Mood, F.
  Graybill e D.
- Boes, Introduzione alla statistica,
+ Boes (Introduzione alla statistica,
 \begin_inset space \space{}
 \end_inset
 
-McGraw-Hill, ISBN 88-386-0661-7) è illuminante.
+McGraw-Hill, ISBN 88-386-0661-7) ne illustra l'idea.
 \end_layout
 
 \begin_layout Standard
@@ -19750,11 +19750,7 @@ Supponiamo che un'urna contenga un certo numero di palle nere e un certo
 \end_inset
 
 , ma che non si sappia se le palle più numerose siano le nere o le bianche.
- In altre parole, la probabilità di estrarre una palla nera è
-\begin_inset space \space{}
-\end_inset
-
-
+ In altre parole, la probabilità di estrarre una palla nera è 
 \begin_inset Formula $1/4$
 \end_inset
 
@@ -19774,7 +19770,7 @@ Supponiamo che un'urna contenga un certo numero di palle nere e un certo
 , la variabile aleatoria che denota il numero di palle nere presenti nel
  campione, è data dalla distribuzione binomiale
 \begin_inset Formula \[
-f_{p}(x)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,\]
+f(x;p)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,\]
 
 \end_inset
 
@@ -19820,12 +19816,12 @@ f_{p}(x)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,\]
 \begin_inset Formula \[
 \begin{tabular}{c|c|c|c|c}
 \hline  Esito: \ensuremath{x} &  \ensuremath{0} &  \ensuremath{1} &  \ensuremath{2} &  \ensuremath{3}\\
-\hline \ensuremath{f_{\frac{3}{4}}(x)} &  \ensuremath{\frac{1}{64}} &  \ensuremath{\frac{9}{64}} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{27}{64}}\\
-\hline \ensuremath{f_{\frac{1}{4}}(x)} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{9}{64}} &  \ensuremath{\frac{1}{64}}\\\hline \end{tabular}\]
+\hline \ensuremath{f(x;\frac{3}{4})} &  \ensuremath{\frac{1}{64}} &  \ensuremath{\frac{9}{64}} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{27}{64}}\\
+\hline \ensuremath{f(x;\frac{1}{4})} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{9}{64}} &  \ensuremath{\frac{1}{64}}\\\hline \end{tabular}\]
 
 \end_inset
 
- In questo esempio, se trovassimo 
+In questo esempio, se trovassimo 
 \begin_inset Formula $x=0$
 \end_inset
 
@@ -19849,12 +19845,12 @@ f_{p}(x)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,\]
 \begin_inset Formula $1/64$
 \end_inset
 
-, cioè perché un campione con 
+, o con altre parole, perché un campione con 
 \begin_inset Formula $x=0$
 \end_inset
 
- è estratto più probabilmente (nel senso di avere una maggiore probabilità)
- da una popolazione con 
+ è estratto più probabilmente (nel senso di avere una maggiore probabilità
+ di essere osservato) da una popolazione con 
 \begin_inset Formula $p=1/4$
 \end_inset
 
@@ -19863,7 +19859,19 @@ f_{p}(x)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,\]
 \end_inset
 
 .
- E in generale dovremmo stimare 
+ Prendendo questo criterio di 
+\begin_inset Quotes eld
+\end_inset
+
+massima probabilità
+\begin_inset Quotes erd
+\end_inset
+
+ nella scelta di 
+\begin_inset Formula $p$
+\end_inset
+
+, in generale dovremo stimare 
 \begin_inset Formula $p=0.25$
 \end_inset
 
@@ -19891,20 +19899,16 @@ f_{p}(x)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,\]
  Lo stimatore può quindi essere definito come
 \begin_inset Formula \[
 \widehat{p}=\widehat{p}(x)=\left\{ \begin{array}{cc}
-0.25 & \text{per }x=0,1\\
-0.75 & \text{per }x=2,3\end{array}\right..\]
+0.25 & \text{quando osserviamo che }x=0,1\\
+0.75 & \text{quando osserviamo che }x=2,3\end{array}\right..\]
 
 \end_inset
 
- Lo stimatore 
+Lo stimatore 
 \begin_inset Quotes eld
 \end_inset
 
-decide”
-\begin_inset space \space{}
-\end_inset
-
-così il valore di 
+decide” così il valore di 
 \begin_inset Formula $p$
 \end_inset
 
@@ -19918,24 +19922,16 @@ così il valore di
 
 , in modo tale che 
 \begin_inset Formula \[
-f_{\widehat{p}}(x)>f_{p^{\prime}}(x),\]
+f(x;\widehat{p})>f(x;p)\:\forall\, p\neq\widehat{p}.\]
 
 \end_inset
 
- dove 
-\begin_inset Formula $p^{\prime}$
-\end_inset
 
- è il valore alternativo di 
-\begin_inset Formula $p$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
 \noindent
-Più in generale, se fossero possibili più valori alternativi di 
+Più in generale, se fossero possibili altri valori alternativi di 
 \begin_inset Formula $p$
 \end_inset
 
@@ -19955,7 +19951,7 @@ Più in generale, se fossero possibili più valori alternativi di
 
  nell'espressione
 \begin_inset Formula \begin{equation}
-f_{p}(6)=C_{25,6}\ p^{6}(1-p)^{19}\ \ \ \ \ \text{per }0\leq p\leq1\text{.}\label{stima max likel iniziale}\end{equation}
+f(6;p)=C_{25,6}\ p^{6}(1-p)^{19}\ \ \ \ \ \text{per }0\leq p\leq1\text{.}\label{stima max likel iniziale}\end{equation}
 
 \end_inset
 
@@ -19964,15 +19960,63 @@ f_{p}(6)=C_{25,6}\ p^{6}(1-p)^{19}\ \ \ \ \ \text{per }0\leq p\leq1\text{.}\labe
 
 \begin_layout Standard
 \noindent
-Si può trovare la posizione del massimo ponendo la derivata della funzione
- (
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/funzioneVerosimiglianzaDiP.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Funzione-di-verosimiglianza"
+
+\end_inset
+
+Funzione di verosimiglianza con 
+\begin_inset Formula $x=6$
+\end_inset
+
+ e 
+\begin_inset Formula $n=25$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Possiamo calcolare agevolmente la posizione del massimo della funzione (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stima max likel iniziale"
 
 \end_inset
 
-) rispetto a 
+) ponendo la sua derivata rispetto a 
 \begin_inset Formula $p$
 \end_inset
 
@@ -19980,19 +20024,20 @@ reference "stima max likel iniziale"
 \begin_inset Formula $0$
 \end_inset
 
- e risolvendo rispetto a 
-\begin_inset Formula $p$
-\end_inset
-
- l'equazione risultante.
+ e risolvendo l'equazione risultante.
  È immediato verificare che 
 \begin_inset Formula \[
-\frac{\partial}{\partial p}f_{p}(6)=C_{25,6}\ p^{5}(1-p)^{18}\left[6(1-p)-19p\right].\]
+\frac{\partial}{\partial p}f(6;p)=C_{25,6}\ p^{5}(1-p)^{18}\left[6(1-p)-19p\right].\]
 
 \end_inset
 
- Ponendo 
-\begin_inset Formula $\frac{\partial}{\partial p}f_{p}(6)=0$
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Ponendo 
+\begin_inset Formula $\frac{\partial}{\partial p}f(6;p)=0$
 \end_inset
 
  e risolvendo rispetto a 
@@ -20012,11 +20057,11 @@ reference "stima max likel iniziale"
 .
  Questa stima ha la proprietà che 
 \begin_inset Formula \[
-f_{\widehat{p}}(6)>f_{p^{\prime}}(6)\]
+f(6;\widehat{p})>f(6;p)\:\forall\, p\neq\widehat{p}\]
 
 \end_inset
 
- per qualsiasi altro valore di 
+ (per qualsiasi altro valore di 
 \begin_inset Formula $p$
 \end_inset
 
@@ -20024,7 +20069,7 @@ f_{\widehat{p}}(6)>f_{p^{\prime}}(6)\]
 \begin_inset Formula $\left[0,1\right]$
 \end_inset
 
-.
+).
 \end_layout
 
 \begin_layout Standard
@@ -20036,7 +20081,47 @@ f_{\widehat{p}}(6)>f_{p^{\prime}}(6)\]
 
 \begin_layout Standard
 \noindent
-La definizione di stimatore di massima verosimiglianza necessita dapprima
+L'esempio precedente (vedi Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Funzione-di-verosimiglianza"
+
+\end_inset
+
+) mostra quindi che il valore stimato del parametro sconosciuto massimizza
+ per dato valore osservato di 
+\begin_inset Formula $x$
+\end_inset
+
+ la funzione di proba\SpecialChar \-
+bi\SpecialChar \-
+li\SpecialChar \-
+tà 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $f(x;p)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+.
+ La definizione di stimatore di massima verosimiglianza necessita dapprima
  la definizione di funzione di verosimiglianza.
 \begin_inset VSpace bigskip
 \end_inset
@@ -20401,7 +20486,7 @@ Come già detto nei capitoli precedenti in questo corso tratteremo esclusivament
 \end_inset
 
  avente funzione di densità 
-\begin_inset Formula $f_{\theta}$
+\begin_inset Formula $f(x;\theta)$
 \end_inset
 
 .
@@ -20431,7 +20516,12 @@ L(\theta)=f(x_{1};\theta)\ f(x_{2};\theta)...f(x_{n};\theta).\]
 
 \end_inset
 
- Se la funzione di verosimiglianza 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Se la funzione di verosimiglianza 
 \begin_inset Formula $L(\theta)$
 \end_inset
 
@@ -20454,13 +20544,58 @@ Ricordiamo che il logaritmo naturale
 \begin_inset Formula $\ln()$
 \end_inset
 
- è una funzione monotona crescente 
-\begin_inset space \space{}
+ è una funzione monotona crescente (cf.
+ il suo grafico, Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Grafico-del-logaritmo"
+
 \end_inset
 
-(cf.
- il suo grafico).
- Questo significa che gli estremi della funzione di verosimiglianza 
+).
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/logNaturale.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Grafico-del-logaritmo"
+
+\end_inset
+
+Grafico del logaritmo naturale.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Questo significa che gli estremi della funzione di verosimiglianza 
 \begin_inset Formula $L(\theta)$
 \end_inset
 
@@ -20469,7 +20604,53 @@ Ricordiamo che il logaritmo naturale
 \end_inset
 
 -verosimiglianza sono gli stessi.
- Pertanto è indifferente ai fini della massimizzazione della funzione di
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/logTrasformazione.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Generica-funzione-g"
+
+\end_inset
+
+Generica funzione 
+\begin_inset Formula $g$
+\end_inset
+
+ e suo logaritmo.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Pertanto è indifferente ai fini della massimizzazione della funzione di
  verosimiglianza massimizzare la stessa 
 \begin_inset Formula $L(\theta)$
 \end_inset
@@ -20478,7 +20659,14 @@ Ricordiamo che il logaritmo naturale
 \begin_inset Formula $\ln L(\theta)$
 \end_inset
 
-.
+ (si veda ad esempio la Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Generica-funzione-g"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -20490,23 +20678,28 @@ Ricordiamo che il logaritmo naturale
 
 \begin_layout Standard
 \noindent
-Se il numero di parametri sconosciuti anziché uno è 
+Quando il numero di parametri sconosciuti è 
 \begin_inset Formula $k$
 \end_inset
 
 , la funzione di vero\SpecialChar \-
 si\SpecialChar \-
-miglianza dipenderà da 
+miglianza dipende da 
 \begin_inset Formula $\theta_{1},\theta_{2},...\theta_{k}$
 \end_inset
 
  e scriveremo
 \begin_inset Formula \[
-L(\theta_{1},\theta_{2},...\theta_{k})=\prod_{i=1}^{n}f_{\theta_{1},\theta_{2},...,\theta_{k}}(x_{i})\text{.}\]
+L(\theta_{1},\theta_{2},...,\theta_{k})=\prod_{i=1}^{n}f(x_{i};\theta_{1},\theta_{2},...,\theta_{k})\text{.}\]
 
 \end_inset
 
- La funzione di verosimiglianza dovrà essere massimizzata rispetto ai 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La funzione di verosimiglianza dovrà essere massimizzata rispetto ai 
 \begin_inset Formula $k$
 \end_inset
 
@@ -20522,7 +20715,7 @@ L(\theta_{1},\theta_{2},...\theta_{k})=\prod_{i=1}^{n}f_{\theta_{1},\theta_{2},.
 
 \end_inset
 
- Qualora invece decidessimo di massimizzare il logaritmo di 
+ Qualora invece decidessimo di massimizzare il logaritmo naturale di 
 \begin_inset Formula $L(\theta_{1},\theta_{2},...,\theta_{k})$
 \end_inset
 
@@ -20608,13 +20801,13 @@ X=\left\{ \begin{array}{cl}
 
  è data da
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{p}(x),\ p\in\left[0,1\right]\right\} \text{,}\]
+\mathcal{P}=\left\{ f(x;p),\ p\in\left[0,1\right]\right\} \text{,}\]
 
 \end_inset
 
  con 
 \begin_inset Formula \[
-f_{p}(x)=\left\{ \begin{array}{cl}
+f(x;p)=\left\{ \begin{array}{cl}
 p & \text{se }x=1,\\
 q & \text{se }x=0,\\
 0 & \text{altrimenti.}\end{array}\right.\]
@@ -20649,9 +20842,9 @@ q & \text{se }x=0,\\
 \begin_inset Formula $1$
 \end_inset
 
-, possiamo anche scrivere che 
+, varrà la seguente uguaglianza 
 \begin_inset Formula \begin{equation}
-f_{p}(x_{1})=p^{x_{1}}q^{1-x_{1}}.\label{densita bernoulli}\end{equation}
+f(x_{1};p)=p^{x_{1}}q^{1-x_{1}}.\label{densita bernoulli}\end{equation}
 
 \end_inset
 
@@ -20660,7 +20853,7 @@ f_{p}(x_{1})=p^{x_{1}}q^{1-x_{1}}.\label{densita bernoulli}\end{equation}
 \end_inset
 
 , 
-\begin_inset Formula $f_{p}(1)=p^{1}q^{1-1}=p$
+\begin_inset Formula $f(1;p)=p^{1}q^{1-1}=p$
 \end_inset
 
  mentre se 
@@ -20668,7 +20861,7 @@ f_{p}(x_{1})=p^{x_{1}}q^{1-x_{1}}.\label{densita bernoulli}\end{equation}
 \end_inset
 
 , 
-\begin_inset Formula $f_{p}(0)=p^{0}q^{1-0}=q$
+\begin_inset Formula $f(0;p)=p^{0}q^{1-0}=q$
 \end_inset
 
 .
@@ -20693,7 +20886,7 @@ reference "densita bernoulli"
 
 ) otteniamo 
 \begin_inset Formula \begin{eqnarray*}
-L(p) & = & \prod_{i=1}^{n}f_{p}(x_{i})=\prod_{i=1}^{n}p^{x_{i}}q^{1-x_{i}}\\
+L(p) & = & \prod_{i=1}^{n}f(x_{i};p)=\prod_{i=1}^{n}p^{x_{i}}q^{1-x_{i}}\\
  & = & p^{\sum x_{i}}q^{n-\sum x_{i}}\text{.}\end{eqnarray*}
 
 \end_inset
