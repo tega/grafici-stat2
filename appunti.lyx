@@ -20055,21 +20055,59 @@ Ponendo
 \end_inset
 
 .
- Questa stima ha la proprietà che 
+ Per costruzione dunque essa soddisfa la condizione 
 \begin_inset Formula \[
-f(6;\widehat{p})>f(6;p)\:\forall\, p\neq\widehat{p}\]
+f(6;\widehat{p})>f(6;p)\]
 
 \end_inset
 
- (per qualsiasi altro valore di 
-\begin_inset Formula $p$
+ per qualsiasi altro valore 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $p\neq\widehat{p}$
 \end_inset
 
- nell'intervallo 
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ nell'intervallo
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+L'intervallo 
 \begin_inset Formula $\left[0,1\right]$
 \end_inset
 
-).
+corrisponde all'insieme 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -20088,12 +20126,12 @@ reference "fig:Funzione-di-verosimiglianza"
 
 \end_inset
 
-) mostra quindi che il valore stimato del parametro sconosciuto massimizza
+) mostra quindi che il valore stimato del parametro sconosciuto massimizza,
  per dato valore osservato di 
 \begin_inset Formula $x$
 \end_inset
 
- la funzione di proba\SpecialChar \-
+, la funzione di proba\SpecialChar \-
 bi\SpecialChar \-
 li\SpecialChar \-
 tà 
@@ -20168,7 +20206,7 @@ Funzione di verosimiglianza.
 
  
 \emph on
-considerate come funzione di 
+considerata come funzione di 
 \emph default
 
 \begin_inset Formula $\theta$
@@ -20193,7 +20231,7 @@ considerate come funzione di
 
 , la funzione di verosimiglianza è semplicemente il prodotto delle densità
  
-\begin_inset Formula $f(x_{1};\theta)\ f(x_{2};\theta)...f(x_{n};\theta).$
+\begin_inset Formula $f(x_{1};\theta)\ f(x_{2};\theta)\ ...\ f(x_{n};\theta).$
 \end_inset
 
 
@@ -20233,12 +20271,8 @@ begin{remark}
 \begin_inset Formula $\theta$
 \end_inset
 
-, utilizziamo per tale funzione la notazione 
+, utilizzeremo la notazione 
 \begin_inset Formula $L(\theta;x_{1},...,x_{n})$
-\end_inset
-
- oppure 
-\begin_inset Formula $L(\cdot;x_{1},...,x_{n})$
 \end_inset
 
 .
@@ -20271,11 +20305,7 @@ La funzione di verosimiglianza
 \begin_inset Quotes eld
 \end_inset
 
-verosimiglianza”
-\begin_inset space \space{}
-\end_inset
-
-che le variabili aleatorie 
+verosimiglianza” che le variabili aleatorie 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
@@ -20292,7 +20322,7 @@ verosimiglianza
 \begin_inset Formula $x_{1},...,x_{n}$
 \end_inset
 
-; per variabili aleatorie discrete corrisponde a una probabilità.
+; per variabili aleatorie discrete essa corrisponde a una probabilità.
  Osservati 
 \begin_inset Formula $x_{1},...,x_{n}$
 \end_inset
@@ -20310,56 +20340,109 @@ verosimiglianza
 \begin_inset Formula $\widehat{\theta}$
 \end_inset
 
- e scriveremo 
+.
+ Vale dunque che 
 \begin_inset Formula \begin{equation}
-\widehat{\theta}=\underset{\theta\in\Theta}{\arg\max}L(\theta;x_{1},...,x_{n})\end{equation}
+\widehat{\theta}=\underset{\theta\in\Theta}{\arg\max}L(\theta;x_{1},...,x_{n})\:.\end{equation}
 
 \end_inset
 
- per sottolineare che 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 \begin_inset Formula $\widehat{\theta}$
 \end_inset
 
- è la soluzione di un problema di massimizzazione.
- Il valore di 
+ è soluzione di un problema di massimizzazione! Il va\SpecialChar \-
+lo\SpecialChar \-
+re di 
 \begin_inset Formula $\widehat{\theta}$
 \end_inset
 
- dipenderà ovviamente dai valori osservati 
+ dipende ovviamente dai valori osservati 
 \begin_inset Formula $x_{1},...,x_{n}$
 \end_inset
 
- (dalle realizzazioni delle 
-\begin_inset Formula $V.A.$
-\end_inset
-
- 
-\begin_inset Formula $X_{1},...,X_{n}$
-\end_inset
-
-).
- 
-\begin_inset Formula $\widehat{\theta}$
-\end_inset
-
- è dunque una funzione di 
+.
+ Differenti valori di 
 \begin_inset Formula $x_{1},...,x_{n}$
 \end_inset
 
-: potremo allora scrivere 
+ daranno generalmente luogo a stime diverse.
+ Esplicitiamo questa dipendenza scrivendo 
 \begin_inset Formula $\widehat{\theta}=T_{mv}(x_{1},...,x_{n})$
 \end_inset
 
 .
- La statistica 
-\begin_inset Formula $T_{mv}(X_{1},...,X_{n})$
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $T_{mv}(x_{1},...,x_{n})$
 \end_inset
 
- sarà chiamata stimatore di massima verosimiglianza di 
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ è dunque la funzione che associa alla realizzazione 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ di 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+ il valore stimato del parametro 
 \begin_inset Formula $\theta$
 \end_inset
 
 .
+ La funzione 
+\begin_inset Formula $T_{mv}$
+\end_inset
+
+ non dipende da alcun parametro sconosciuto e per questo motivo 
+\begin_inset Formula $T_{mv}(X_{1},...,X_{n})$
+\end_inset
+
+ definisce una statistica che prende il nome di stimatore di massima verosimigli
+anza.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -20382,7 +20465,7 @@ begin{definizione}
  Stimatore di massima verosimiglianza.
  Sia 
 \begin_inset Formula \begin{equation}
-L(\theta)=L(\theta;x_{1},...,x_{n})\end{equation}
+L(\theta):=L(\theta;x_{1},...,x_{n})\end{equation}
 
 \end_inset
 
@@ -20396,10 +20479,10 @@ L(\theta)=L(\theta;x_{1},...,x_{n})\end{equation}
 \end_inset
 
  [dove 
-\begin_inset Formula $\widehat{\theta}=T_{mv}(x_{1},...,x_{n})\ $
+\begin_inset Formula $\widehat{\theta}=T_{mv}(x_{1},...,x_{n})$
 \end_inset
 
-è una funzione delle osservazioni 
+ è una funzione delle osservazioni 
 \begin_inset Formula $x_{1},...,x_{n}$
 \end_inset
 
@@ -20512,7 +20595,7 @@ reference "definizione funzione di verosimiglianza"
 
  la funzione di verosimiglianza si riduce al seguente prodotto di densità
 \begin_inset Formula \[
-L(\theta)=f(x_{1};\theta)\ f(x_{2};\theta)...f(x_{n};\theta).\]
+L(\theta)=f(x_{1};\theta)\ f(x_{2};\theta)\ ...\ f(x_{n};\theta).\]
 
 \end_inset
 
@@ -20603,7 +20686,11 @@ Questo significa che gli estremi della funzione di verosimiglianza
 \begin_inset Formula $\log$
 \end_inset
 
--verosimiglianza sono gli stessi.
+-verosimiglianza, definita come 
+\begin_inset Formula $ln(L(\theta))$
+\end_inset
+
+, sono gli stessi.
  
 \begin_inset Float figure
 wide false
@@ -20659,7 +20746,9 @@ Pertanto è indifferente ai fini della massimizzazione della funzione di
 \begin_inset Formula $\ln L(\theta)$
 \end_inset
 
- (si veda ad esempio la Figura 
+.
+ I punti di massimo e minimo delle due funzioni sono identici (si veda a
+ tal riguardo la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Generica-funzione-g"
@@ -20704,18 +20793,23 @@ La funzione di verosimiglianza dovrà essere massimizzata rispetto ai
 \end_inset
 
  parametri.
- Come nel caso di un singolo parametro sconosciuto, il massimo della funzione
- di verosimiglianza sarà soluzione del sistema di equazioni
+ Come per la stima di un singolo parametro, il massimo della funzione di
+ verosimiglianza sarà soluzione del sistema di equazioni
 \begin_inset Formula \[
 \left\{ \begin{array}{c}
 \frac{\partial}{\partial\theta_{1}}L(\theta_{1},\theta_{2},...,\theta_{k})=0\\
 \frac{\partial}{\partial\theta_{2}}L(\theta_{1},\theta_{2},...,\theta_{k})=0\\
 \vdots\\
-\frac{\partial}{\partial\theta_{k}}L(\theta_{1},\theta_{2},...,\theta_{k})=0.\end{array}\right.\]
+\frac{\partial}{\partial\theta_{k}}L(\theta_{1},\theta_{2},...,\theta_{k})=0\end{array}\right.\]
 
 \end_inset
 
- Qualora invece decidessimo di massimizzare il logaritmo naturale di 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Qualora invece decidessimo di massimizzare il logaritmo naturale di 
 \begin_inset Formula $L(\theta_{1},\theta_{2},...,\theta_{k})$
 \end_inset
 
@@ -20725,12 +20819,12 @@ La funzione di verosimiglianza dovrà essere massimizzata rispetto ai
 \frac{\partial}{\partial\theta_{1}}\ln L(\theta_{1},\theta_{2},...,\theta_{k})=0\\
 \frac{\partial}{\partial\theta_{2}}\ln L(\theta_{1},\theta_{2},...,\theta_{k})=0\\
 \vdots\\
-\frac{\partial}{\partial\theta_{k}}\ln L(\theta_{1},\theta_{2},...,\theta_{k})=0.\end{array}\right.\]
+\frac{\partial}{\partial\theta_{k}}\ln L(\theta_{1},\theta_{2},...,\theta_{k})=0\end{array}\right.\]
 
 \end_inset
 
  In entrambi i casi indicheremo con 
-\begin_inset Formula $\widehat{\theta}_{i}=T_{mv,i}(X_{1},...,X_{n})$
+\begin_inset Formula $\widehat{\theta}_{i}=T_{mv,i}(x_{1},...,x_{n})$
 \end_inset
 
 , 
@@ -21029,6 +21123,13 @@ begin{esempio}
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Max Likelihood Normale"
+
+\end_inset
+
  Due parametri sconosciuti.
  Supponiamo di estrarre un campione casuale semplice di numerosità 
 \begin_inset Formula $n=4$
@@ -21070,7 +21171,7 @@ begin{esempio}
 .
  La famiglia parametrica è uguale a 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{\theta}(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}\right),\ \theta=(\mu,\sigma^{2})\in\mathbb{R}\times\mathbb{R}^{+}\right\} .\]
+\mathcal{P}=\left\{ f(x;\theta)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}\right),\ \theta=(\mu,\sigma^{2})\in\mathbb{R}\times\mathbb{R}^{+}\right\} .\]
 
 \end_inset
 
@@ -21084,7 +21185,7 @@ begin{esempio}
 
  densità
 \begin_inset Formula \begin{eqnarray*}
-L(\mu,\sigma^{2}) & = & \prod_{i=1}^{4}f_{\mu,\sigma^{2}}(x_{i})\\
+L(\mu,\sigma^{2}) & = & \prod_{i=1}^{4}f(x_{i};\mu,\sigma^{2})\\
  & = & \left(\frac{1}{2\pi\sigma^{2}}\right)^{4/2}\exp\left(-\frac{1}{2\sigma^{2}}\left[\left(3-\mu\right)^{2}+\left(-3-\mu\right)^{2}+\left(5-\mu\right)^{2}+\left(-2-\mu\right)^{2}\right]\right)\end{eqnarray*}
 
 \end_inset
@@ -21130,6 +21231,106 @@ end{esempio}
 \end_inset
 
 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/maxLik3D.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Max Likelihood Normale"
+
+\end_inset
+
+Funzione di verosimiglianza 
+\begin_inset Formula $L(\mu,\sigma^{2})$
+\end_inset
+
+ dell'Esempio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Max Likelihood Normale"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+Calcolate lo stimatore di massima verosimiglianza dei parametri 
+\begin_inset Formula $\mu$
+\end_inset
+
+ e 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+
+ utilizzando i dati dell'Esempio 
+\lang italian
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Max Likelihood Normale"
+
+\end_inset
+
+
+.
+\lang italian
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -21137,21 +21338,23 @@ Proprietà degli stimatori puntuali
 \end_layout
 
 \begin_layout Standard
-Nei paragrafi precedenti abbiamo derivato il metodo dei momenti ed il metodo
- di massima verosimiglianza quali metodi possibili per ricavare degli stimatori
- puntuali.
+Nei paragrafi precedenti abbiamo derivato due stimatori puntuali utilizzando
+ il metodo dei momenti ed il metodo di massima verosimiglianza.
  Ovviamente non sono questi gli unici metodi di stima.
  Lo stimatore dei minimi quadrati la cui presentazione è rimandata al corso
  di Introduzione all'Econometria potrebbe essere un ulteriore esempio.
  Vista l'abbondanza di stimatori la domanda che vogliamo affrontare in questo
  paragrafo è la seguente: 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
-Dati due stimatori esiste un modo per decidere quale dei due è il migliore?”.
- Per decidere questo definiremo alcune proprietà che uno stimatore può possedere
+Dati due stimatori esiste un modo per decidere quale dei due sia il migliore?”.
+ Per decidere questo è necessario chiarire in che senso uno stimatore può
+ essere migliore di un altro.
+ A tal fine definiremo alcune proprietà che uno stimatore può possedere
  oppure no.
- Esse ci aiuteranno a decidere se uno stimatore è migliore di un altro.
+ Esse ci aiuteranno a decidere se e in che misura uno stimatore è migliore
+ di un altro.
 \end_layout
 
 \begin_layout Standard
@@ -21163,7 +21366,8 @@ Dati due stimatori esiste un modo per decidere quale dei due è il migliore?”.
 
 \begin_layout Standard
 \noindent
-Nel paragrafo 
+Guardando a quanto discusso nei precedenti capitoli, notiamo che nel paragrafo
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "modello parametrico"
@@ -21287,8 +21491,8 @@ lo dimostra.
  Nel me\SpecialChar \-
 de\SpecialChar \-
 si\SpecialChar \-
-mo esempio abbiamo studiato il comportamento asintotico (per
- 
+mo esempio abbiamo studiato il comportamento asintotico (cioè
+ quando 
 \begin_inset Formula $n\rightarrow\infty$
 \end_inset
 
@@ -21390,7 +21594,7 @@ e.
 
 \end_inset
 
- I primi quattro stimatori sono tutti stimatori corretti di 
+I primi quattro stimatori sono tutti stimatori corretti di 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -21408,8 +21612,7 @@ V\left(\widehat{\mu}_{1}\right)=\frac{1}{2},~V\left(\widehat{\mu}_{2}\right)=\fr
 
 \end_inset
 
- Fra i primi quattro stimatori corretti quello con la varianza minore è
- 
+Fra i primi quattro stimatori corretti quello con la varianza minore è 
 \begin_inset Formula $\widehat{\mu}_{2}$
 \end_inset
 
@@ -21424,7 +21627,39 @@ V\left(\widehat{\mu}_{1}\right)=\frac{1}{2},~V\left(\widehat{\mu}_{2}\right)=\fr
 \end_inset
 
 .
- Se decidessimo di restringere la ricerca dello stimatore migliore all'interno
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/densityEstimatorBiasedUnBiased.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Confronto fra due stimatori
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Se decidessimo di restringere la ricerca dello stimatore migliore all'interno
  della classe di stimatori corretti, ovviamente 
 \begin_inset Formula $\widehat{\mu}_{2}$
 \end_inset
@@ -21675,10 +21910,6 @@ EQM_{\widehat{\mu}_{5}}=V(\widehat{\mu}_{5})+\left(-\frac{2}{3}\mu\right)^{2}=\f
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Avremo quindi che lo stimatore 
 \begin_inset Formula $\widehat{\mu}_{5}$
 \end_inset
@@ -21692,7 +21923,64 @@ Avremo quindi che lo stimatore
 \end_inset
 
  compresi nell'intervallo 
-\begin_inset Formula $\left(-\sqrt{2/3},\sqrt{2/3}\right).$
+\begin_inset Formula $\left(-\sqrt{\frac{2}{3}},\sqrt{\frac{2}{3}}\right)$
+\end_inset
+
+ (confronta Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Confronto-EQM-"
+
+\end_inset
+
+).
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/confrontoBias.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Confronto-EQM-"
+
+\end_inset
+
+Confronto EQM 
+\begin_inset Formula $\hat{\mu}_{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $\hat{\mu}_{5}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -21797,11 +22085,11 @@ begin{definizione}
 \begin_inset Formula $\theta$
 \end_inset
 
- se per qualsiasi 
+ se, per qualsiasi 
 \begin_inset Formula $\epsilon>0$
 \end_inset
 
- 
+, 
 \begin_inset Formula $T$
 \end_inset
 
