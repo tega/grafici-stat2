@@ -20009,7 +20009,12 @@ Funzione di verosimiglianza con
 
 \end_inset
 
-Possiamo calcolare agevolmente la posizione del massimo della funzione (
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Possiamo calcolare agevolmente il punto di massimo della funzione (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "stima max likel iniziale"
@@ -20061,7 +20066,7 @@ f(6;\widehat{p})>f(6;p)\]
 
 \end_inset
 
- per qualsiasi altro valore 
+per qualsiasi altro valore 
 \family roman
 \series medium
 \shape up
@@ -20160,7 +20165,12 @@ tà
 \lang italian
 .
  La definizione di stimatore di massima verosimiglianza necessita dapprima
- la definizione di funzione di verosimiglianza.
+ la definizione di funzione di ve\SpecialChar \-
+ro\SpecialChar \-
+si\SpecialChar \-
+mi\SpecialChar \-
+glian\SpecialChar \-
+za.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -20469,7 +20479,7 @@ L(\theta):=L(\theta;x_{1},...,x_{n})\end{equation}
 
 \end_inset
 
- la funzione di verosimiglianza delle variabili casuali 
+la funzione di verosimiglianza delle variabili casuali 
 \begin_inset Formula $X_{1},X_{2},...,X_{n}$
 \end_inset
 
@@ -21266,7 +21276,7 @@ reference "Max Likelihood Normale"
 
 \end_inset
 
-
+.
 \end_layout
 
 \end_inset
@@ -21304,20 +21314,14 @@ Calcolate lo stimatore di massima verosimiglianza dei parametri
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
-
  utilizzando i dati dell'Esempio 
-\lang italian
-
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Max Likelihood Normale"
 
 \end_inset
 
-
 .
-\lang italian
-
 \begin_inset ERT
 status open
 
@@ -21923,7 +21927,7 @@ Avremo quindi che lo stimatore
 \end_inset
 
  compresi nell'intervallo 
-\begin_inset Formula $\left(-\sqrt{\frac{2}{3}},\sqrt{\frac{2}{3}}\right)$
+\begin_inset Formula $(-\sqrt{2/3},\sqrt{2/3})$
 \end_inset
 
  (confronta Figura 
@@ -22051,7 +22055,7 @@ La consistenza dello stimatore
 \begin_inset Formula $\theta$
 \end_inset
 
- è definita nel seguente modo
+ è definita come segue.
 \end_layout
 
 \begin_layout Standard
@@ -22180,6 +22184,54 @@ ne della stima, misurata
  cre\SpecialChar \-
 scen\SpecialChar \-
 te al vero valore.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/convergenzaInProbabilita2.pdf
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Convergenza in probabilità di 
+\begin_inset Formula $\hat{\theta}_{n}=T(X_{1},\ldots,X_{n})$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La Figura mostra cosa succede in termini della funzione di densità dello
+ stimatore (caso continuo).
+ Al crescere della numerosità del campione la prob\SpecialChar \-
+abi\SpecialChar \-
+li\SpecialChar \-
+tà (la funzione di
+ densità quindi) tende a concentrarsi attorno al vero valore 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
  Potremmo chiederci quale sia la relazione tra la consistenza di uno stimatore
  e la sua varianza.
  Prima di affrontare questa discussione presentiamo un'ulteriore definizione.
@@ -22255,7 +22307,7 @@ EQM_{T}=V(T)+\left(B\left(\theta\right)\right)^{2}\ ,\]
 
 \end_inset
 
- lo stimatore 
+lo stimatore 
 \begin_inset Formula $T$
 \end_inset
 
@@ -22352,11 +22404,11 @@ Il precedente teorema è particolarmente utile in quanto permette di trovare
 \end_inset
 
 .
- Infatti, se sia la distorsione che la varianza di 
+ Infatti, quando la distorsione e la varianza di 
 \begin_inset Formula $T$
 \end_inset
 
- tendono a 
+ tendono entrambi a 
 \begin_inset Formula $0$
 \end_inset
 
@@ -22557,7 +22609,7 @@ Distribuzione asintotica dello stimatore di massima verosimiglianza.
 \end_inset
 
  di densità 
-\begin_inset Formula $f_{\theta}(x)$
+\begin_inset Formula $f(x;\theta)$
 \end_inset
 
 .
@@ -22583,16 +22635,14 @@ Lo stimatore di massima verosimiglianza è consistente per il parametro
 \begin_inset Formula $\theta$
 \end_inset
 
-:
-\begin_inset space \space{}
-\end_inset
-
-
-\begin_inset Formula $\widehat{\theta}_{n}\overset{P}{\underset{n\rightarrow\infty}{\rightarrow}}\theta$
-\end_inset
-
 .
- 
+ Vale dunque
+\begin_inset Formula \[
+\widehat{\theta}_{n}\overset{P}{\underset{n\rightarrow\infty}{\rightarrow}}\theta.\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -22606,7 +22656,7 @@ Lo stimatore di massima verosimiglianza è consistente per il parametro
 \end_inset
 
  dove 
-\begin_inset Formula $I(\theta):=E\left[\left(\frac{\partial\ln f_{\theta}(X)}{\partial\theta}\right)^{2}\right]$
+\begin_inset Formula $I(\theta):=E\left[\left(\frac{\partial\ln f(X;\theta)}{\partial\theta}\right)^{2}\right]$
 \end_inset
 
  è chiamata l'informazione di Fisher.
@@ -22620,7 +22670,7 @@ Alternativamente
 
  può essere calcolata nel seguente modo
 \begin_inset Formula \[
-I(\theta)=-E\left(\frac{\partial^{2}\ln f_{\theta}(X)}{\partial\theta^{2}}\right).\]
+I(\theta)=-E\left(\frac{\partial^{2}\ln f(X;\theta)}{\partial\theta^{2}}\right).\]
 
 \end_inset
 
@@ -22661,7 +22711,7 @@ begin{remark}
 \end_inset
 
  la funzione 
-\begin_inset Formula $\ln f_{\theta}(x)$
+\begin_inset Formula $\ln f(x;\theta)$
 \end_inset
 
  è derivata rispetto a 
@@ -22674,7 +22724,7 @@ begin{remark}
 
  è considerata costante!).
  La stessa cosa vale per la derivata seconda 
-\begin_inset Formula $\partial^{2}\ln f_{\theta}(x)/\partial\theta^{2}$
+\begin_inset Formula $\partial^{2}\ln f(x;\theta)/\partial\theta^{2}$
 \end_inset
 
 .
@@ -22697,13 +22747,26 @@ end{remark}
 \begin_layout Standard
 \noindent
 Quest'ultimo teorema è particolarmente importante in quanto stabilisce che
- lo stimatore di massima verosimiglianza è uno stimatore consistente di
- 
+ lo stimatore di massima verosimiglianza è 
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+uno stimatore consistente di 
 \begin_inset Formula $\theta$
 \end_inset
 
- e asintoticamente Normale.
- Infatti, come nel caso della media campionaria 
+;
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+distribuito asintoticamente secondo la legge Normale.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dunque, come nel caso della media campionaria 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
@@ -22711,23 +22774,27 @@ Quest'ultimo teorema è particolarmente importante in quanto stabilisce che
 \begin_inset Formula $\sqrt{n}\left(\widehat{\theta}_{n}-\theta\right)$
 \end_inset
 
- è anch'essa Normale con una varianza che dipende da un'espressione conosciuta
- col nome di 
+ è anch'essa Normale.
+ La varianza della distribuzione asintotica di 
+\begin_inset Formula $\sqrt{n}\left(\widehat{\theta}_{n}-\theta\right)$
+\end_inset
+
+ dipende da un'espressione conosciuta col nome di 
 \emph on
 informazione di Fisher
 \emph default
- (ed uguale al valore atteso del quadrato di 
-\begin_inset Formula $\frac{\partial\ln f_{\theta}(X)}{\partial\theta}$
+: il valore atteso del quadrato di 
+\begin_inset Formula $\frac{\partial\ln f(x;\theta)}{\partial\theta}$
 \end_inset
 
-).
- Per finire l'informazione di Fisher, notata 
+.
+ Infine osserviamo che l'informazione di Fisher, notata 
 \begin_inset Formula $I(\theta)$
 \end_inset
 
 , è altresì calcolabile per mezzo del valore atteso della seconda derivata
  di 
-\begin_inset Formula $\ln f_{\theta}$
+\begin_inset Formula $\ln f(x;\theta)$
 \end_inset
 
 .
@@ -22765,7 +22832,7 @@ begin{esempio}
 
  poiché conosciuto è ora da considerarsi alla stregua di un numero) 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{\mu}(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}\right),\ \mu\in\mathbb{R}\right\} .\]
+\mathcal{P}=\left\{ f(x;\mu)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}\right),\ \mu\in\mathbb{R}\right\} .\]
 
 \end_inset
 
@@ -22779,12 +22846,12 @@ begin{esempio}
 
  densità
 \begin_inset Formula \begin{eqnarray*}
-L(\mu) & = & \prod_{i=1}^{n}f_{\mu}(x_{i})\\
+L(\mu) & = & \prod_{i=1}^{n}f(x_{i};\mu)\\
  & = & \left(\frac{1}{2\pi\sigma^{2}}\right)^{n/2}\exp\left(-\frac{1}{2\sigma^{2}}\sum\limits _{i=1}^{n}\left(x_{i}-\mu\right)^{2}\right).\end{eqnarray*}
 
 \end_inset
 
- Lo stimatore di massima verosimiglianza di 
+Lo stimatore di massima verosimiglianza di 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -22820,9 +22887,9 @@ reference "distr asintotic ml"
 
 \end_inset
 
- è corretto, dovranno valere le seguenti uguaglianze:
+ è corretto, devono valere le seguenti uguaglianze:
 \begin_inset Formula \begin{equation}
-\sigma^{2}=E\left[\left(\frac{\partial\ln f_{\mu}(X)}{\partial\mu}\right)^{2}\right]^{-1}=-\left[E\left(\frac{\partial^{2}\ln f_{\mu}(X)}{\partial\mu^{2}}\right)\right]^{-1}.\label{verifica uguaglianza fisher}\end{equation}
+\sigma^{2}=E\left[\left(\frac{\partial\ln f(X;\mu)}{\partial\mu}\right)^{2}\right]^{-1}=-\left[E\left(\frac{\partial^{2}\ln f(X;\mu)}{\partial\mu^{2}}\right)\right]^{-1}.\label{verifica uguaglianza fisher}\end{equation}
 
 \end_inset
 
@@ -22862,11 +22929,11 @@ reference "verifica uguaglianza fisher"
 
 \end_inset
 
-) nel caso in cui la 
+) nel caso in cui 
 \begin_inset Formula $X$
 \end_inset
 
- è distribuita secondo la legge di Normale 
+ è distribuita secondo la legge Normale 
 \begin_inset Formula $N(\mu,\sigma^{2})$
 \end_inset
 
@@ -22876,11 +22943,11 @@ reference "verifica uguaglianza fisher"
 
 \begin_layout Enumerate
 Calcolate la derivata 
-\begin_inset Formula $\frac{\partial\ln f_{\mu}}{\partial\mu}$
+\begin_inset Formula $\frac{\partial\ln f(x;\mu)}{\partial\mu}$
 \end_inset
 
 , il suo quadrato ed infine il valore atteso del suo quadrato, notato 
-\begin_inset Formula $E\left[\left(\frac{\partial\ln f_{\mu}(X)}{\partial\mu}\right)^{2}\right]$
+\begin_inset Formula $E\left[\left(\frac{\partial\ln f(X;\mu)}{\partial\mu}\right)^{2}\right]$
 \end_inset
 
 .
@@ -22889,11 +22956,21 @@ Calcolate la derivata
 
 \begin_layout Enumerate
 Calcolate la derivata seconda 
-\begin_inset Formula $\partial^{2}\ln f_{\theta}(x)/\partial\theta^{2}$
+\begin_inset Formula $\partial^{2}\ln f(x;\mu)/\partial\mu^{2}$
 \end_inset
 
  ed in seguito il suo valore atteso.
- 
+\end_layout
+
+\begin_layout Enumerate
+Confrontate i risultati ottenuti con la formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "verifica uguaglianza fisher"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -22931,7 +23008,7 @@ qualsiasi
 
 .
  In altre parole, per quanto preciso possa essere lo stimatore in questione
- la sua varianza non sarà mai al di sotto di tale limite.
+ la sua varianza non sarà mai inferiore a tale limite.
 \end_layout
 
 \begin_layout Standard
@@ -22968,7 +23045,7 @@ Disuguaglianza di Cramèr-Rao.
 \end_inset
 
  di densità 
-\begin_inset Formula $f_{\theta}(x)$
+\begin_inset Formula $f(x;\theta)$
 \end_inset
 
  e 
@@ -23136,7 +23213,7 @@ soliti guardare alla varianza della distribuzione asintotica di
 \begin_inset Formula $\theta$
 \end_inset
 
-, il teorema 
+, il Teorema 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "distr asintotic ml"
@@ -23222,7 +23299,7 @@ begin{theorem}
 \end_inset
 
  di densità 
-\begin_inset Formula $f_{\theta}(x)$
+\begin_inset Formula $f(x;\theta)$
 \end_inset
 
  e 
@@ -23359,8 +23436,12 @@ end{definizione}
 \begin_layout Standard
 \noindent
 L'ipotesi statistica soggetta ad esame è chiamata ipotesi nulla ed è generalment
-e notata con 
-\begin_inset Formula $``H_{0}:$
+e notata col termine 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $H_{0}:$
 \end_inset
 
 ”
@@ -23399,7 +23480,7 @@ name "esempio produttore penne p1"
 
 Un produttore di penne a sfera ha acquistato una macchina per la produzione
  delle sfere da inserire nella punta della penna.
- Una volta messa a punto, la macchina dovrebbe produrre penne dal diametro
+ Una volta messa a punto, la macchina dovrebbe produrre punte dal diametro
  di 
 \begin_inset Formula $0.6$
 \end_inset
@@ -23423,7 +23504,7 @@ Un produttore di penne a sfera ha acquistato una macchina per la produzione
 .
  La famiglia parametrica di densità è dunque data da 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f(x\mid\mu)=\frac{1}{\sqrt{2\pi}0.005}\exp\left(-\frac{1}{2\cdot0.005^{2}}\left(x-\mu\right)^{2}\right),\ \mu\in\mathbb{R}^{+}\right\} .\]
+\mathcal{P}=\left\{ f(x;\mu)=\frac{1}{\sqrt{2\pi}0.005}\exp\left(-\frac{1}{2\cdot0.005^{2}}\left(x-\mu\right)^{2}\right),\ \mu\in\mathbb{R}^{+}\right\} .\]
 
 \end_inset
 
@@ -23468,7 +23549,11 @@ H_{0}:\text{la macchina è tarata correttamente.}\]
 ipotesi alternativa
 \emph default
 , verrà indicata con 
-\begin_inset Formula $``H_{A}:$
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Formula $H_{A}:$
 \end_inset
 
 ”.
@@ -23541,7 +23626,7 @@ Un caseificio ha il forte sospetto che un suo fornitore diluisca il latte
 \noindent
 La famiglia parametrica di densità è ancora Normale 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f(x\mid\mu)=\frac{1}{\sqrt{2\pi}0.008}\exp\left(-\frac{1}{2\cdot0.008^{2}}\left(x-\mu\right)^{2}\right),\ \mu\in\mathbb{R}\right\} .\]
+\mathcal{P}=\left\{ f(x;\mu)=\frac{1}{\sqrt{2\pi}0.008}\exp\left(-\frac{1}{2\cdot0.008^{2}}\left(x-\mu\right)^{2}\right),\ \mu\in\mathbb{R}\right\} .\]
 
 \end_inset
 
@@ -23623,7 +23708,7 @@ H_{0}:\mu=-0.545\text{.}\]
 \begin_inset Formula $H_{0}$
 \end_inset
 
- è che il fornitore effettivamente diluisca con acqua il latte venduto.
+ è che il fornitore effettivamente diluisca il latte.
  In tal caso il valore atteso della temperatura di gelo sarà superiore a
  
 \begin_inset Formula $-0.545$
@@ -23656,7 +23741,7 @@ H_{A}:\mu>-0.545\text{.}\]
 \begin_inset Formula $X$
 \end_inset
 
- e di 
+ ed indirettamente quindi anche di 
 \begin_inset Formula $\left(X_{1},X_{2},...,X_{5}\right)$
 \end_inset
 
@@ -23746,7 +23831,7 @@ Test per un'ipotesi statistica
 
 \begin_layout Standard
 Eseguire un test di un'ipotesi statistica significa costruire una regola
- di decisione basata sulle osservazioni disponibili che ci permette di concluder
+ di decisione basata sulle osservazioni disponibili che ci permetta di concluder
 e se l'ipotesi sotto esame debba essere rifiutata o meno.
  Vista la natura aleatoria di quanto osservato, tale conclusione varierà
  a seconda del campione osservato.
@@ -23822,19 +23907,22 @@ Il problema è come determinare tale regola.
 \end_inset
 
 .
- La decisione dipenderà dai valori che osserveremo: se quanto osservato
- sarà 
-\begin_inset Formula $``$
+ La decisione dipenderà dai valori 
+\begin_inset Formula $\left(x_{1},x_{2},...,x_{n}\right)$
 \end_inset
 
-in sintonia”
-\begin_inset space \space{}
+ che osserveremo: se quanto osservato sarà 
+\begin_inset Quotes eld
 \end_inset
 
-con l'ipotesi non la rifiuteremo.
+in sintonia” con l'ipotesi non la rifiuteremo.
  Le osservazioni ci daranno dunque evidenza pro o contro l'ipotesi.
- Tale evidenza sarà generalmente definita in termini di probabilità.
- Illustriamo quanto appena detto continuando gli esempi precedenti.
+ Tale evidenza sarà ge\SpecialChar \-
+ne\SpecialChar \-
+ral\SpecialChar \-
+men\SpecialChar \-
+te definita in termini di probabilità.
+ Illustriamo quanto appena detto sviluppando i due esempi precedenti.
 \end_layout
 
 \begin_layout Standard
@@ -23911,38 +23999,58 @@ o una statistica
 \begin_inset Formula $\overline{X}$
 \end_inset
 
- è 
+ è dunque 
 \begin_inset Formula $N(-0.545,\frac{0.008^{2}}{5})$
 \end_inset
 
-.A questo punto è possibile calcolare la probabilità di osservare un valore
+.
+ A questo punto è possibile calcolare la probabilità di osservare un valore
  di 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
  uguale o superiore a quello calcolato dal caseificio:
 \begin_inset Formula \begin{eqnarray*}
-P_{H_{0}}(\overline{X}>-0.536) & = & P_{H_{0}}(\overline{X}+0.545>0.009)\\
- & = & P_{H_{0}}(\frac{\sqrt{5}\left(\overline{X}+0.545\right)}{0.008}>2.515)\\
+P_{H_{0}}(\overline{X}\geqq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geqq0.009)\\
+ & = & P_{H_{0}}(\frac{\sqrt{5}\left(\overline{X}+0.545\right)}{0.008}\geqq2.515)\\
  & = & 0.59\%.\end{eqnarray*}
 
 \end_inset
 
- La probabilità è dunque 
+La probabilità è dunque 
 \begin_inset Formula $0.59\%$
 \end_inset
 
 .
  Quindi se il latte fosse 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
-puro”
-\begin_inset space \space{}
+puro” registreremmo una media 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\overline{x}$
 \end_inset
 
-osserveremmo in media una temperatura simile o superiore meno di una volta
- su cento.
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ uguale o superiore a quanto osservato meno di una volta su cento.
  Questo è un evento raro visto che la sua probabilità è bassa.
  Una pro\SpecialChar \-
 ba\SpecialChar \-
@@ -23972,7 +24080,7 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -24004,8 +24112,11 @@ probabilità
 \begin_inset Formula $H_{0}$
 \end_inset
 
- di osservare un valore della statistica almeno estremo quanto il valore
- osservato è detta 
+ di osservare un valore della statistica 
+\begin_inset Formula $S$
+\end_inset
+
+ almeno estremo quanto il valore osservato è detta 
 \begin_inset Formula $p$
 \end_inset
 
@@ -24027,7 +24138,7 @@ end{definizione}
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -24056,14 +24167,11 @@ Il
 \end_inset
 
  dipenderà dalla 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
-quantità”
-\begin_inset space \space{}
-\end_inset
-
-di evidenza sotto la quale non siamo più disposti a mantenere 
+quantità” di evidenza sotto la quale non siamo più disposti a mantenere
+ 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -24204,12 +24312,15 @@ reference "esempio produttore penne p1"
 \begin_inset Formula $S$
 \end_inset
 
- la media campionaria 
+ la media cam\SpecialChar \-
+pio\SpecialChar \-
+na\SpecialChar \-
+ria 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
 .
- Supponiamo che il valore medio realizzato sia di 
+ Supponiamo che il valore medio realizzato sia 
 \begin_inset Formula $\overline{x}=0.5985$
 \end_inset
 
@@ -24226,7 +24337,8 @@ reference "esempio produttore penne p1"
 \begin_inset Formula $N(0.6,0.001^{2})$
 \end_inset
 
-.A differenza dell'Esempio 
+.
+ A differenza dell'Esempio 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "esempio caseificio p1"
@@ -24276,12 +24388,12 @@ reference "esempio caseificio p1"
 
 -value è dunque uguale a
 \begin_inset Formula \begin{eqnarray*}
-P_{H_{0}}(\overline{X}<0.5985,\overline{X}>0.6015) & = & P_{H_{0}}(|\overline{X}-0.6|>0.0015)\\
- & = & P_{H_{0}}(\frac{|\overline{X}-0.6|}{0.001}>1.5)=13.4\%.\end{eqnarray*}
+P_{H_{0}}(\overline{X}\leqq0.5985,\:\overline{X}\geqslant0.6015) & = & P_{H_{0}}(|\overline{X}-0.6|\geqq0.0015)\\
+ & = & P_{H_{0}}(\frac{|\overline{X}-0.6|}{0.001}\geqq1.5)=13.4\%.\end{eqnarray*}
 
 \end_inset
 
- Decisamente questo non rappresenta un evento raro.
+Decisamente questo non rappresenta un evento raro.
  Fissato un livello di significatività pari al 
 \begin_inset Formula $5\%$
 \end_inset
@@ -24310,8 +24422,9 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-Ricapitolando quanto visto fino ad ora abbiamo i seguenti elementi costitutivi
- di un test d'ipotesi 
+\noindent
+Ricapitolando quanto visto nei due esempi precedenti abbiamo i seguenti
+ elementi costitutivi di un test d'ipotesi:
 \end_layout
 
 \begin_layout Enumerate
@@ -24327,28 +24440,37 @@ L'ipotesi nulla,
 \end_inset
 
 .
- È un'affermazione grazie alla quale è possibile ricavare la distribuzione
- di una o più variabili aleatorie.
+ È un'affermazione grazie alla quale è possibile ottenere la distribuzione
+ della variabile aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ nonché la distribuzione campionaria 
+\begin_inset Formula $f(x_{1},\ldots,x_{n};\theta)$
+\end_inset
+
+.
  Spesso l'ipotesi nulla è qualcosa del tipo 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
 ...
- nessun problema ...”
-\begin_inset space \space{}
+ è uguale a ...
+\begin_inset Quotes erd
 \end_inset
 
-oppure 
-\begin_inset Formula $``$
+ oppure 
+\begin_inset Quotes eld
 \end_inset
 
 ...
- nessun effetto ...”
-\begin_inset space \space{}
+ nessun problema ...” oppure 
+\begin_inset Quotes eld
 \end_inset
 
-oppure 
-\begin_inset Formula $``$
+...
+ nessun effetto ...” oppure 
+\begin_inset Quotes eld
 \end_inset
 
 ...
@@ -24362,11 +24484,11 @@ L'ipotesi alternativa,
 \end_inset
 
 , è da intendersi come una 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
 direzione contro l'ipotesi nulla
-\begin_inset Formula $``$
+\begin_inset Quotes erd
 \end_inset
 
 .
@@ -24381,19 +24503,16 @@ direzione contro l'ipotesi nulla
 
  rispetto a quello proposto dall'ipotesi nulla.
  Nel secondo esempio il test è unilaterale destro in quanto l'alternativa
- si trova alla destra (
-\begin_inset Formula $\mu>\mu_{0}=-0.545$
-\end_inset
-
-) del valore suggerito da 
+ si trova alla destra del valore suggerito da 
 \begin_inset Formula $H_{0}$
 \end_inset
 
-.
-\begin_inset space \space{}
+ (
+\begin_inset Formula $\mu>\mu_{0}=-0.545$
 \end_inset
 
-Riassumendo:
+) .
+ Riassumendo:
 \end_layout
 
 \begin_deeper
@@ -24402,11 +24521,7 @@ Riassumendo:
 \emph on
 Test unilaterale
 \emph default
-:
-\begin_inset space \space{}
-\end_inset
-
-l'alternativa è specificata in una sola direzione.
+: l'alternativa è specificata in una sola direzione.
  
 \end_layout
 
@@ -24447,11 +24562,8 @@ Statistica del test.
 \begin_inset Formula $\alpha=5\%$
 \end_inset
 
-)
-\begin_inset Formula $\ $
-\end_inset
-
-che corrisponde al livello di significatività desiderato.
+).
+ Esso corrisponde al livello di significatività desiderato.
  È la soglia o quantità di evidenza (in termini di probabilità) minima richiesta
 , sotto la quale si rigetta l'ipotesi nulla in quanto giudicata poco credibile.
  
@@ -24475,7 +24587,31 @@ La decisione se rifiutare o meno il test.
 \begin_inset Formula $p$
 \end_inset
 
--value è inferiore al livello di significatività predefinito 
+-value è inferiore al livello di significatività 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+, 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -24559,11 +24695,7 @@ L'ipotesi nulla
 \begin_inset Formula $X$
 \end_inset
 
-, è identica a quella definita dal Laboratorio cantonale (
-\begin_inset Formula $``$
-\end_inset
-
-non c'è nessuna differenza”), ovvero 
+, è identica a quella definita dal Laboratorio cantonale, ovvero 
 \begin_inset Formula $X\sim N(-0.545,0.008^{2})$
 \end_inset
 
@@ -24593,7 +24725,7 @@ Abbiamo deciso di utilizzare la media campionaria
 \begin_inset Formula $\overline{X}$
 \end_inset
 
- quale statistica per costruire il test.
+ quale statistica per la costruzione del test.
  Sotto l'ipotesi nulla la nostra statistica è distribuita 
 \begin_inset Formula $N(-0.545,\frac{0.008^{2}}{5})$
 \end_inset
@@ -24627,16 +24759,16 @@ Fino a questo punto la costruzione del test è identica alla formulazione
 \end_inset
 
  quantile 
-\begin_inset Formula $k$
+\begin_inset Formula $q_{1-\alpha}$
 \end_inset
 
  della distribuzione della media campionaria 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
- (vedi disegno).
+ (vedi disegno ???).
  
-\begin_inset Formula $k$
+\begin_inset Formula $q_{1-\alpha}$
 \end_inset
 
  sarà in seguito utilizzato per definire quando rigettare 
@@ -24649,27 +24781,26 @@ Fino a questo punto la costruzione del test è identica alla formulazione
 \end_inset
 
 , il valore 
-\begin_inset Formula $k$
+\begin_inset Formula $q_{1-\alpha}$
 \end_inset
 
- soddisfa la seguente uguaglianza
+ soddisfa la seguente uguaglianza (Statistica I):
 \begin_inset Formula \begin{equation}
-P_{H_{0}}(\overline{X}>k)=0.05\text{.}\label{k alpha media}\end{equation}
+P_{H_{0}}(\overline{X}\leqq q_{1-5\%})=0.95.\label{k alpha media}\end{equation}
 
 \end_inset
 
-
+Il quantile può essere ricavato utilizzando le tavole della distribuzione
+ Normale.
+ Infatti abbiamo che
 \end_layout
 
 \begin_layout Standard
-Il quantile può essere ricavato utilizzando le tavole della distribuzione
- Normale.
- Infatti
+\noindent
 \begin_inset Formula \begin{eqnarray*}
-P_{H_{0}}(\overline{X}+0.545>k+0.545) & = & 0.05\\
-P_{H_{0}}\left(\frac{\overline{X}+0.545}{0.008/\sqrt{5}}>\frac{k+0.545}{0.008/\sqrt{5}}\right) & = & 0.05\\
-P\left(Z>\frac{k+0.545}{0.008/\sqrt{5}}\right) & = & 0.05\\
-P\left(Z\leq\frac{k+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\end{eqnarray*}
+P_{H_{0}}(\overline{X}+0.545\leqq q_{0.95}+0.545) & = & 0.95\\
+P_{H_{0}}\left(\frac{\overline{X}+0.545}{0.008/\sqrt{5}}\leqq\frac{q_{0.95}+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\\
+P\left(Z>\frac{q_{0.95}+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\end{eqnarray*}
 
 \end_inset
 
@@ -24686,7 +24817,56 @@ P\left(Z\leq\frac{k+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\end{eqnarray*}
 \begin_inset Formula $P\left(Z\leq1.645\right)=0.95$
 \end_inset
 
- da cui si ricava che
+.
+ Uguagliando 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $1.645$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\frac{q_{0.95}+0.545}{0.008/\sqrt{5}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ si ricava che
 \begin_inset Foot
 status collapsed
 
@@ -24720,11 +24900,11 @@ q_{\alpha}=\mu+z_{\alpha}\sigma\]
 
  
 \begin_inset Formula \[
-k=-0.545+1.645\cdot0.008/\sqrt{5}=-0.539.\]
+q_{0.95}=-0.545+1.645\cdot0.008/\sqrt{5}=-0.539.\]
 
 \end_inset
 
- Per costruzione, la probabilità di osservare un valore di 
+Per costruzione, la probabilità di osservare un valore di 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
@@ -24777,16 +24957,12 @@ status collapsed
 \end_inset
 
  in generale) cadrà 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
-lontano”
-\begin_inset space \space{}
-\end_inset
-
-e in direzione dell'ipotesi alternativa, ovvero se 
+lontano” e in direzione dell'ipotesi alternativa, ovvero se 
 \begin_inset Formula \begin{equation}
-\overline{x}>k=-0.539\label{disequazione test destro}\end{equation}
+\overline{x}\geqq q_{0.95}=-0.539\label{disequazione test destro}\end{equation}
 
 \end_inset
 
@@ -24808,14 +24984,10 @@ begin{remark}
 \end_inset
 
  Il 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
-quanto lontano”
-\begin_inset space \space{}
-\end_inset
-
-deve cadere il valore della nostra statistica affinché 
+quanto lontano” deve cadere il valore della nostra statistica affinché 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -24833,7 +25005,7 @@ deve cadere il valore della nostra statistica affinché
 \end_inset
 
 ) e tanto più estrema sarà la soglia 
-\begin_inset Formula $k$
+\begin_inset Formula $q_{1-\alpha}$
 \end_inset
 
 .
@@ -24863,7 +25035,7 @@ reference "disequazione test destro"
 \end_inset
 
 ).
- Essa definisce implicitamente una così detta 
+ Essa definisce implicitamente la così detta 
 \emph on
 regione critica
 \emph default
@@ -24888,25 +25060,103 @@ begin{definizione}
 \begin_inset Formula $R$
 \end_inset
 
- delle possibili realizzazioni 
-\begin_inset Formula $(x_{1},...,x_{5})$
+ delle realizzazioni 
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
  di 
-\begin_inset Formula $(X_{1},...,X_{5})$
+\begin_inset Formula $(X_{1},...,X_{n})$
 \end_inset
 
  per cui 
-\begin_inset Formula $\overline{x}>k=-0.539$
+\begin_inset Formula $S\geqq q_{0.95}$
 \end_inset
 
  (e quindi tali per cui il test è rifiutato) è chiamato la regione critica
  del test o semplicemente regione critica
 \begin_inset Formula \[
-R=\left\{ (x_{1},...,x_{5})\mid\overline{x}>k=-0.539\right\} .\]
+R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geqq q_{0.95}\right\} .\]
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+\begin_inset Formula $R$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ è un evento del nostro esperimento statistico ed è definito come la preimmagine
+ dell'evento 
+\begin_inset Formula $E=[q_{0.95},\infty)$
+\end_inset
+
+ rispetto alla statistica 
+\begin_inset Formula $S$
+\end_inset
+
+ utilizzata e 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $q_{0.95}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ corrisponde allo 
+\begin_inset Formula $0.95$
+\end_inset
+
+ quantile della distribuzione di 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Nel nostro esempio abbiamo che 
+\begin_inset Formula $S=\overline{X}$
+\end_inset
+
+ e 
+\begin_inset Formula $q_{0.95}=-0.539$
+\end_inset
+
+.
  
 \begin_inset ERT
 status collapsed
@@ -24942,7 +25192,7 @@ ni
 \end_inset
 
  e non rispetto all'intervallo 
-\begin_inset Formula $(-0.539,\infty)$
+\begin_inset Formula $[-0.539,\infty)$
 \end_inset
 
 .
