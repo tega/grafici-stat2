@@ -15422,6 +15422,15 @@ molta probabilità
 \end_inset
 
 .
+ La varianza della popolazione o della variabile aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ di cui si desidera stimare il valore atteso 
+\begin_inset Formula $\mu$
+\end_inset
+
+ è, se non indicato diversamente, da considerarsi conosciuta.
  Prima di affrontare tale discussione è necessario presentare due importanti
  argomenti della teoria asintotica: la legge dei grandi numeri ed il teorema
  del limite centrale.
@@ -17008,6 +17017,46 @@ reference "intervallo interpretazione 2b"
 \end_inset
 
 , ed in seguito la realizzazione dell'intervallo aleatorio ovvero l'intervallo
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Sappiamo che quando le osservazioni sono i.i.d.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $V(\overline{X}_{n})=\frac{\sigma2}{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ .
+ Ricordiamo che in questo paragrafo la varianza 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ è da considerarsi come nota.
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula \begin{equation}
 \left[\overline{x}_{n}-1.96\frac{\sigma}{\sqrt{n}}\ ,\ \overline{x}_{n}+1.96\frac{\sigma}{\sqrt{n}}\right].\label{realizzazione intervallo aleatorio}\end{equation}
 
@@ -17182,10 +17231,10 @@ in funzione di
 \end_inset
 
  di significatività indicati in precedenza corrispondono agli 
-\begin_inset Formula $(1-\frac{\alpha}{2})$
+\begin_inset Formula $(\frac{1+\alpha}{2})$
 \end_inset
 
-)-quantili della distribuzione Normale e sono nell'ordine uguali a 
+-quantili della distribuzione Normale e sono nell'ordine uguali a 
 \begin_inset Formula $1.64$
 \end_inset
 
@@ -17219,7 +17268,7 @@ reference "realizzazione intervallo aleatorio"
 \end_inset
 
  di confidenza corrisponde all'
-\begin_inset Formula $(1-\frac{\alpha}{2})$
+\begin_inset Formula $(\frac{1+\alpha}{2})$
 \end_inset
 
 -quantile della distribuzione Normale.
@@ -17649,7 +17698,31 @@ reference "intervallo confidenza"
 \begin_inset Formula $95\%$
 \end_inset
 
- erano date da
+ erano date da (ricordiamo che che la varianza 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ era considerata nota)
 \begin_inset Formula \[
 I_{1}=\overline{X}_{n}-1.96\sqrt{\sigma^{2}/n}\text{ e }I_{2}=\overline{X}_{n}+1.96\sqrt{\sigma^{2}/n}.\]
 
@@ -19578,8 +19651,8 @@ M_{2}=\sigma^{2}+\mu^{2}.\]
  
 \begin_inset Formula \begin{equation}
 \left\{ \begin{array}{l}
-M_{1,n}\simeq M_{1}\left(\mu,\sigma^{2}\right)=\mu\\
-M_{2,n}\simeq M_{2}\left(\mu,\sigma^{2}\right)=\sigma^{2}+\mu^{2}\end{array}\right.\label{esempio momenti normale 1}\end{equation}
+M_{1,n}\simeq M_{1}\left(\mu_{0},\sigma_{0}^{2}\right)=\mu_{0}\\
+M_{2,n}\simeq M_{2}\left(\mu_{0},\sigma_{0}^{2}\right)=\sigma_{0}^{2}+\mu_{0}^{2}\end{array}\right.\label{esempio momenti normale 1}\end{equation}
 
 \end_inset
 
@@ -21307,11 +21380,11 @@ begin{esercizio}
 \end_inset
 
 Calcolate lo stimatore di massima verosimiglianza dei parametri 
-\begin_inset Formula $\mu$
+\begin_inset Formula $\mu_{0}$
 \end_inset
 
  e 
-\begin_inset Formula $\sigma^{2}$
+\begin_inset Formula $\sigma_{0}^{2}$
 \end_inset
 
  utilizzando i dati dell'Esempio 
@@ -21426,7 +21499,7 @@ begin{definizione}
 \begin_inset Formula $B(T)$
 \end_inset
 
-, è difinita come 
+, è definita come 
 \begin_inset Formula \[
 B(T):=E\left(T(X_{1},...,X_{n})\right)-\theta\text{.}\]
 
@@ -21487,11 +21560,7 @@ reference "Stimatore momenti N_mu_sigma"
 
 \end_inset
 
-
-\begin_inset space \space{}
-\end_inset
-
-lo dimostra.
+ lo dimostra.
  Nel me\SpecialChar \-
 de\SpecialChar \-
 si\SpecialChar \-
@@ -21671,15 +21740,11 @@ Se decidessimo di restringere la ricerca dello stimatore migliore all'interno
  sarebbe quello da preferire in quanto è il più preciso in termini di varianza.
  Tuttavia se estendessimo la ricerca anche a stimatori non necessariamente
  corretti, dovremmo trovare un criterio che ci permetta di misurare il 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
-trade-off”
-\begin_inset space \space{}
-\end_inset
-
-tra la perdita in precisione causata dalla distorsione ed il guadagno in
- precisione dovuto ad una varianza inferiore.
+trade-off” tra la perdita in precisione causata dalla distorsione ed il
+ guadagno in precisione dovuto ad una varianza inferiore.
  Tale criterio ci è dato dal cosiddetto 
 \emph on
 Errore Quadratico Medio (Mean Squared Error)
@@ -21754,14 +21819,11 @@ end{definizione}
 \begin_layout Standard
 \noindent
 Il termine 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
-errore quadratico medio”
-\begin_inset space \space{}
-\end_inset
-
-può essere giustificato se si pensa alla differenza 
+errore quadratico medio” può essere giustificato se si pensa alla differenza
+ 
 \begin_inset Formula $T-\theta$
 \end_inset
 
@@ -21898,7 +21960,7 @@ Tornando ai due stimatori
 \begin_inset Formula $\widehat{\mu}_{1}$
 \end_inset
 
- è uno stimatore corretto avremo che 
+ è uno stimatore corretto vale che 
 \begin_inset Formula \[
 EQM_{\widehat{\mu}_{2}}=V(\widehat{\mu}_{2})=\frac{1}{3}.\]
 
@@ -21918,7 +21980,31 @@ Avremo quindi che lo stimatore
 \begin_inset Formula $\widehat{\mu}_{5}$
 \end_inset
 
- è superiore allo stimatore 
+, pur essendo uno stimatore distorto di 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+, è superiore allo stimatore 
 \begin_inset Formula $\widehat{\mu}_{2}$
 \end_inset
 
@@ -22202,6 +22288,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Convergenza-in-probabilità"
+
+\end_inset
+
 Convergenza in probabilità di 
 \begin_inset Formula $\hat{\theta}_{n}=T(X_{1},\ldots,X_{n})$
 \end_inset
@@ -22221,10 +22313,18 @@ Convergenza in probabilità di
 
 \begin_layout Standard
 \noindent
-La Figura mostra cosa succede in termini della funzione di densità dello
- stimatore (caso continuo).
- Al crescere della numerosità del campione la prob\SpecialChar \-
-abi\SpecialChar \-
+La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Convergenza-in-probabilità"
+
+\end_inset
+
+ mostra cosa succede in termini della funzione di densità dello stimatore
+ (caso continuo).
+ Al crescere della numerosità del campione la pro\SpecialChar \-
+ba\SpecialChar \-
+bi\SpecialChar \-
 li\SpecialChar \-
 tà (la funzione di
  densità quindi) tende a concentrarsi attorno al vero valore 
@@ -22232,9 +22332,22 @@ tà (la funzione di
 \end_inset
 
 .
- Potremmo chiederci quale sia la relazione tra la consistenza di uno stimatore
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Potremmo chiederci quale sia la relazione tra la consistenza di uno stimatore
  e la sua varianza.
- Prima di affrontare questa discussione presentiamo un'ulteriore definizione.
+ Per introdurre e prima di affrontare questa discussione presentiamo un'ulterior
+e definizione.
 \end_layout
 
 \begin_layout Standard
@@ -22311,8 +22424,11 @@ lo stimatore
 \begin_inset Formula $T$
 \end_inset
 
- sarà convergente in media quadratica se e solo se sia la varianza che la
- sua distorsione tendono a 
+ sarà convergente in media quadratica 
+\emph on
+se e solo se
+\emph default
+ sia la varianza che la sua distorsione tendono a 
 \begin_inset Formula $0$
 \end_inset
 
@@ -22623,7 +22739,7 @@ Distribuzione asintotica dello stimatore di massima verosimiglianza.
 
  con 
 \begin_inset Formula \[
-\sum\limits _{i=1}^{n}\frac{\partial\ln f_{\theta}(x_{i})}{\partial\theta}\mid_{\theta=\widehat{\theta}_{n}}=0.\]
+\sum\limits _{i=1}^{n}\frac{\partial\ln f(x_{i};\theta)}{\partial\theta}\mid_{\theta=\widehat{\theta}_{n}}=0.\]
 
 \end_inset
 
