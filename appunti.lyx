@@ -22116,7 +22116,7 @@ In questo paragrafo consideriamo due importanti caratteristiche di uno stimatore
 \begin_inset Formula $M_{r,n}$
 \end_inset
 
- ai rispettivi momenti 
+ ai rispettivi momenti teorici 
 \begin_inset Formula $\mu_{r}$
 \end_inset
 
@@ -22320,14 +22320,25 @@ reference "fig:Convergenza-in-probabilità"
 
 \end_inset
 
- mostra cosa succede in termini della funzione di densità dello stimatore
- (caso continuo).
- Al crescere della numerosità del campione la pro\SpecialChar \-
+ mostra, dato uno stimatore 
+\begin_inset Formula $\hat{\theta}_{n}$
+\end_inset
+
+ di 
+\begin_inset Formula $\theta$
+\end_inset
+
+ avente funzione di densità continua, quello che accade al crescere della
+ numerosità del campione.
+ Con 
+\begin_inset Formula $n\rightarrow\infty$
+\end_inset
+
+ la pro\SpecialChar \-
 ba\SpecialChar \-
 bi\SpecialChar \-
 li\SpecialChar \-
-tà (la funzione di
- densità quindi) tende a concentrarsi attorno al vero valore 
+tà tende a concentrarsi sempre più attorno al vero valore 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -22346,8 +22357,8 @@ tà (la funzione di
 \noindent
 Potremmo chiederci quale sia la relazione tra la consistenza di uno stimatore
  e la sua varianza.
- Per introdurre e prima di affrontare questa discussione presentiamo un'ulterior
-e definizione.
+ Per introdurre e prima di affrontare questa discussione presentiamo la
+ presente definizione.
 \end_layout
 
 \begin_layout Standard
@@ -22601,14 +22612,12 @@ Y_{n}=\frac{\sqrt{n}\left(\overline{X}_{n}-\mu\right)}{\sigma}\text{.}\]
 \end_inset
 
  Una proprietà della convergenza in distribuzione è quella che se 
-\begin_inset Formula $Y_{n}$
+\begin_inset Formula \[
+Y_{n}\underset{n\rightarrow\infty}{\sim}Z\]
+
 \end_inset
 
- converge a 
-\begin_inset Formula $Z$
-\end_inset
-
- e noi moltiplichiamo 
+e noi moltiplichiamo 
 \begin_inset Formula $Y_{n}$
 \end_inset
 
@@ -22616,22 +22625,19 @@ Y_{n}=\frac{\sqrt{n}\left(\overline{X}_{n}-\mu\right)}{\sigma}\text{.}\]
 \begin_inset Formula $c$
 \end_inset
 
-, allora 
-\begin_inset Formula $cY_{n}$
+, allora vale che 
+\begin_inset Formula \[
+cY_{n}\underset{n\rightarrow\infty}{\sim}cZ.\]
+
 \end_inset
 
- convergerà in distribuzione a 
-\begin_inset Formula $cZ$
-\end_inset
-
-.
- Questa proprietà ci permette di studiare il comportamento asintotico della
+Questa proprietà ci permette di studiare il comportamento asintotico della
  quantità 
 \begin_inset Formula $\sqrt{n}\left(\overline{X}_{n}-\mu\right)$
 \end_inset
 
 .
- Infatti 
+ Infatti, per quanto appena detto avremo che 
 \begin_inset Formula \[
 \sqrt{n}\left(\overline{X}_{n}-\mu\right)=\sigma\frac{\sqrt{n}\left(\overline{X}_{n}-\mu\right)}{\sigma}=\sigma Y_{n}\underset{n\rightarrow\infty}{\sim}\sigma Z\text{.}\]
 
@@ -22900,7 +22906,7 @@ Dunque, come nel caso della media campionaria
 informazione di Fisher
 \emph default
 : il valore atteso del quadrato di 
-\begin_inset Formula $\frac{\partial\ln f(x;\theta)}{\partial\theta}$
+\begin_inset Formula $\frac{\partial\ln f(X;\theta)}{\partial\theta}$
 \end_inset
 
 .
@@ -22910,7 +22916,7 @@ informazione di Fisher
 
 , è altresì calcolabile per mezzo del valore atteso della seconda derivata
  di 
-\begin_inset Formula $\ln f(x;\theta)$
+\begin_inset Formula $\ln f(X;\theta)$
 \end_inset
 
 .
@@ -23306,21 +23312,32 @@ soliti guardare alla varianza della distribuzione asintotica di
 
 \end_inset
 
- che nella maggior parte dei casi che incontrerete in econometria sarà 
-\begin_inset Formula $N(0,\upsilon^{2})$
-\end_inset
+ che nella maggior parte dei casi che incontrerete in econometria
+\begin_inset Foot
+status open
 
-.
- Il termine 
+\begin_layout Plain Layout
+\noindent
+Il termine 
 \begin_inset Formula $\upsilon^{2}$
 \end_inset
 
- corrisponde alla varianza della distribuzione asintotica di 
+ corrisponde quindi alla varianza della distribuzione asintotica di 
 \begin_inset Formula \[
 \sqrt{n}\left(T(X_{1},...,X_{n})-\theta\right)\text{.}\]
 
 \end_inset
 
+
+\end_layout
+
+\end_inset
+
+ sarà 
+\begin_inset Formula $N(0,\upsilon^{2})$
+\end_inset
+
+.
  Quando 
 \begin_inset Formula $T(X_{1},...,X_{n})$
 \end_inset
@@ -23336,23 +23353,24 @@ reference "distr asintotic ml"
 
 \end_inset
 
- ci dice che 
+ afferma che 
 \begin_inset Formula $\upsilon^{2}$
 \end_inset
 
- è uguale a 
+ è 
 \begin_inset Formula $\frac{1}{I(\theta)}$
 \end_inset
 
- che per l'osservazione 
+.
+ Grazie all'osservazione 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "osservazione cramer rao"
 
 \end_inset
 
- corrisponde al limite inferiore.
- Lo stimatore di massima verosimiglianza raggiunge quindi 
+ possiamo quindi concludere che lo stimatore di massima verosimiglianza
+ raggiunge 
 \emph on
 asintoticamente
 \emph default
@@ -23497,17 +23515,42 @@ che della popolazione in termini del suo comportamento e/o attributi.
  a un farmaco o trattamento tradizionale.
  Anche in micro- e macroeconomia ci sono numerosi esempi dove la verifica
  d'ipotesi può essere utilizzata per appurare empiricamente la correttezza
- di una teoria economica o l'efficacia di una determinata politica economica.
- In primo luogo sarà ne\SpecialChar \-
-ces\SpecialChar \-
-sa\SpecialChar \-
-rio definire la famiglia parametrica 
+ di una teoria economica, l'efficacia di una determinata politica economica
+ o, come trattato nell'Esempio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "esempio pino1"
+
+\end_inset
+
+, verificare l'efficacia di una campagna pubblicitaria.
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La costruzione di un test statistico richiede la definizione della famiglia
+ parametrica 
 \begin_inset Formula $\mathcal{F}$
 \end_inset
 
  di densità che si intende utilizzare.
  In seguito si dovrà definire l'ipotesi che si desidera verificare in termini
- della distribuzione di probabilità della popolazione in esame.
+ della
+\emph on
+ 
+\emph default
+distribuzione della popolazione obiettivo o della distribuzione di probabilità
+ della variabile aleatoria in esame.
+ Diamo ora la definizione formale di 
+\emph on
+ipotesi statistica
+\emph default
+.
+ I successivi esempi ne chiariranno il significato.
 \end_layout
 
 \begin_layout Standard
@@ -23560,11 +23603,7 @@ e notata col termine
 \begin_inset Formula $H_{0}:$
 \end_inset
 
-”
-\begin_inset space \space{}
-\end_inset
-
-seguito dalla descrizione dell'ipotesi.
+” seguito dalla descrizione dell'ipotesi.
 \end_layout
 
 \begin_layout Standard
@@ -23613,8 +23652,14 @@ Un produttore di penne a sfera ha acquistato una macchina per la produzione
 \begin_inset Formula $\sigma=0.005$
 \end_inset
 
- millimetri: 
-\begin_inset Formula $X\sim N(0.6,(0.005)^{2})$
+ millimetri.
+ Sia dunque 
+\begin_inset Formula $X$
+\end_inset
+
+ la variabile aleatoria che denota la misurazione del diametro di una sfera
+ prodotta: 
+\begin_inset Formula $X\sim N(\mu,(0.005)^{2})$
 \end_inset
 
 .
@@ -23624,7 +23669,70 @@ Un produttore di penne a sfera ha acquistato una macchina per la produzione
 
 \end_inset
 
- Sotto l'ipotesi che la macchina abbia la giusta messa a punto, 
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/densityPenneSfereH0.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:DensityPenneH0"
+
+\end_inset
+
+Densità della V.A.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ sotto 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ dell'Esempio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "esempio produttore penne p1"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sotto l'ipotesi che la macchina abbia la giusta messa a punto, 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -23654,9 +23762,16 @@ no la varianza della distribuzione.
 \begin_inset Formula $X$
 \end_inset
 
- la utilizzeremo quale ipotesi nulla: 
+ la utilizzeremo quale ipotesi nulla (vedi Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:DensityPenneH0"
+
+\end_inset
+
+): 
 \begin_inset Formula \[
-H_{0}:\text{la macchina è tarata correttamente.}\]
+H_{0}:\text{ la macchina è tarata correttamente.}\]
 
 \end_inset
 
@@ -23675,7 +23790,7 @@ ipotesi alternativa
 ”.
  In questo primo esempio essa può essere espressa matematicamente come
 \begin_inset Formula \[
-H_{A}:\mu\neq0.6\text{.}\]
+H_{A}:\;\mu\neq0.6\text{.}\]
 
 \end_inset
 
@@ -23717,9 +23832,13 @@ name "esempio caseificio p1"
 
 Un caseificio ha il forte sospetto che un suo fornitore diluisca il latte
  con acqua.
- Da numerosi test eseguiti in passato dal Laboratorio cantonale si sa che
- la temperatura di gelo di un campione di latte è una variabile aleatoria
- Normale di valore atteso 
+ Dalle numerose misurazioni eseguite in passato dal Laboratorio cantonale
+ si sa che la temperatura di gelo di un campione di latte è una variabile
+ aleatoria 
+\begin_inset Formula $X$
+\end_inset
+
+ distribuita secondo la legge Normale di valore atteso 
 \begin_inset Formula $-0.545$
 \end_inset
 
@@ -23736,33 +23855,34 @@ Un caseificio ha il forte sospetto che un suo fornitore diluisca il latte
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
-\noindent
-La famiglia parametrica di densità è ancora Normale 
+ La famiglia parametrica di densità è ancora Normale 
 \begin_inset Formula \[
 \mathcal{P}=\left\{ f(x;\mu)=\frac{1}{\sqrt{2\pi}0.008}\exp\left(-\frac{1}{2\cdot0.008^{2}}\left(x-\mu\right)^{2}\right),\ \mu\in\mathbb{R}\right\} .\]
 
 \end_inset
 
- Supponiamo che il latte non sia annacquato: in tal caso il valore di 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Supponiamo che il latte non sia annacquato: in tal caso il valore di 
 \begin_inset Formula $\mu$
 \end_inset
 
- sarebbe quello calcolato dal Laboratorio cantonale e la distribuzione di
- 
+ sarebbe conosciuto ed uguale a quello calcolato dal Laboratorio cantonale.
+ Sia la distribuzione di 
 \begin_inset Formula $X$
 \end_inset
 
- e di un campione 
-\begin_inset Formula $\left(X_{1},X_{2},...,X_{n}\right)$
+ che la distribuzione campionaria 
+\begin_inset Formula $f(x_{1},...,x_{n})$
 \end_inset
 
- sarebbe conosciuta.
+ sarebbero conosciuti.
  Per contro, qualora il latte venisse diluito con acqua, la sua temperatura
  di gelo sarebbe superiore a quella del latte 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
 puro”.
@@ -23792,14 +23912,14 @@ Si assume ragionevolmente che l'annacquamento del latte non modifichi
 
  non sarebbe comunque calcolabile.
  Inoltre la legge afferma che 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
 chiunque è presunto innocente fino a quando la sua colpevolezza non sia
  dimostrata dinanzi alla Corte”.
  Quindi la nostra ipotesi nulla sarà la seguente
 \begin_inset Formula \[
-H_{0}:\text{Il latte non è annacquato (}\Leftrightarrow\text{il fornitore è onesto)}\]
+H_{0}:\text{ Il latte non è annacquato (}\Leftrightarrow\text{il fornitore è onesto)}\]
 
 \end_inset
 
@@ -23810,11 +23930,16 @@ H_{0}:\text{Il latte non è annacquato (}\Leftrightarrow\text{il fornitore è on
 
  semplicemente come
 \begin_inset Formula \[
-H_{0}:\mu=-0.545\text{.}\]
+H_{0}:\;\mu=-0.545\text{.}\]
 
 \end_inset
 
- Non rifiutare 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Non rifiutare 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -23841,10 +23966,66 @@ ipotesi alternativa
 
  sarà dunque espressa come
 \begin_inset Formula \[
-H_{A}:\mu>-0.545\text{.}\]
+H_{A}:\;\mu>-0.545\text{.}\]
 
 \end_inset
 
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/densityLatteH0.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Distribuzione media latte H0"
+
+\end_inset
+
+Funzione di densità di 
+\begin_inset Formula $\bar{X}_{5}$
+\end_inset
+
+ sotto 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il caseificio decide di analizzare cinque campioni di latte, notati 
+\begin_inset Formula $\left(X_{1},...,X_{5}\right)$
+\end_inset
+
+, provenienti dal fornitore indagato.
  Il grosso vantaggio di aver scelto quale ipotesi nulla 
 \begin_inset Formula $\mu=-0.545$
 \end_inset
@@ -23857,11 +24038,22 @@ H_{A}:\mu>-0.545\text{.}\]
 \begin_inset Formula $X$
 \end_inset
 
- ed indirettamente quindi anche di 
-\begin_inset Formula $\left(X_{1},X_{2},...,X_{5}\right)$
+ (e quindi indirettamente anche di 
+\begin_inset Formula $\left(X_{1},...,X_{5}\right)$
 \end_inset
 
-.
+ nonché 
+\begin_inset Formula $\bar{X}_{5}$
+\end_inset
+
+, vedi Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Distribuzione media latte H0"
+
+\end_inset
+
+).
  
 \begin_inset ERT
 status collapsed
@@ -23887,9 +24079,9 @@ end{esempio}
 
 \begin_layout Standard
 \noindent
-Abbiamo definito l'ipotesi nulla e l'ipotesi alternativa sulla base delle
- informazioni in nostro possesso ed alle varie assunzioni riguardo alla
- famiglia parametrica 
+Nei due ultimi esempi abbiamo definito l'ipotesi nulla e l'ipotesi alternativa
+ utilizzando le informazioni in nostro possesso parallelamente alle varie
+ assunzioni riguardo la famiglia parametrica 
 \begin_inset Formula $\mathcal{P}$
 \end_inset
 
@@ -23917,7 +24109,7 @@ composta
 .
  Ad esempio l'ipotesi alternativa 
 \begin_inset Formula \[
-H_{A}:\mu>-0.545\]
+H_{A}:\;\mu>-0.545\]
 
 \end_inset
 
@@ -24010,21 +24202,17 @@ end{definizione}
 \begin_layout Standard
 \noindent
 Il problema è come determinare tale regola.
- In pratica l'informazione disponibile sarà contenuta in un 
+ In pratica l'informazione disponibile è contenuta in un 
 \begin_inset Formula $n$
 \end_inset
 
--campione 
-\begin_inset Formula $\left(X_{1},X_{2},...,X_{n}\right)$
-\end_inset
-
- di osservazioni di 
+-campione di osservazioni di 
 \begin_inset Formula $X$
 \end_inset
 
 .
  La decisione dipenderà dai valori 
-\begin_inset Formula $\left(x_{1},x_{2},...,x_{n}\right)$
+\begin_inset Formula $(x_{1},...,x_{n})\in\Omega^{n}$
 \end_inset
 
  che osserveremo: se quanto osservato sarà 
@@ -24032,12 +24220,12 @@ Il problema è come determinare tale regola.
 \end_inset
 
 in sintonia” con l'ipotesi non la rifiuteremo.
- Le osservazioni ci daranno dunque evidenza pro o contro l'ipotesi.
+ Le osservazioni forniranno evidenza pro o contro l'ipotesi.
  Tale evidenza sarà ge\SpecialChar \-
 ne\SpecialChar \-
 ral\SpecialChar \-
 men\SpecialChar \-
-te definita in termini di probabilità.
+te misurata in termini di probabilità.
  Illustriamo quanto appena detto sviluppando i due esempi precedenti.
 \end_layout
 
@@ -24082,21 +24270,34 @@ reference "esempio caseificio p1"
 
 .
  Tuttavia questa domanda ha poco senso: la distribuzione di 
-\begin_inset Formula $\left(X_{1},...,X_{5}\right)$
+\begin_inset Formula $(X_{1},...,X_{5})$
 \end_inset
 
- è una distribuzione continua per cui tale probabilità è 
+ è una distribuzione continua e noi sappiamo che tale probabilità è 
 \begin_inset Formula $0$
 \end_inset
 
 .
- Per contro, anziché lavorare direttamente con i valori del campione, utilizziam
-o una statistica 
+ Per contro, anziché lavorare direttamente con i valori del campione per
+ valutare l'attendibilità dell'ipotesi nulla, utilizziamo una statistica
+ 
 \begin_inset Formula $S$
 \end_inset
 
-.
- In particolare, calcoliamo la media delle cinque osservazioni, 
+, la media campionaria 
+\begin_inset Formula $\overline{X}$
+\end_inset
+
+ ad esempio.
+ Qual è il vantaggio di un simile approccio? Il vantaggio consiste nel fatto
+ che lavorare con una statistica riduce la complessità del problema.
+ Infatti, per decidere se rifiutare o non rifiutare 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ è sufficiente guardare ad un unico valore anziché all'intero campione.
+ Nel nostro caso ad esempio, calcoliamo la media delle cinque osservazioni,
+ 
 \begin_inset Formula $\overline{x}=-0.536$
 \end_inset
 
@@ -24120,12 +24321,31 @@ o una statistica
 \end_inset
 
 .
- A questo punto è possibile calcolare la probabilità di osservare un valore
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+A questo punto è possibile calcolare la probabilità di osservare un valore
  di 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
- uguale o superiore a quello calcolato dal caseificio:
+ uguale o superiore a quello calcolato dal caseificio (vedi Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:latte P-valore"
+
+\end_inset
+
+):
 \begin_inset Formula \begin{eqnarray*}
 P_{H_{0}}(\overline{X}\geqq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geqq0.009)\\
  & = & P_{H_{0}}(\frac{\sqrt{5}\left(\overline{X}+0.545\right)}{0.008}\geqq2.515)\\
@@ -24133,6 +24353,60 @@ P_{H_{0}}(\overline{X}\geqq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geqq0.009)
 
 \end_inset
 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/densityLatteH0Pvalore.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:latte P-valore"
+
+\end_inset
+
+Calcolo del 
+\begin_inset Formula $p$
+\end_inset
+
+-value (test unilaterale destro).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 La probabilità è dunque 
 \begin_inset Formula $0.59\%$
 \end_inset
@@ -24167,7 +24441,8 @@ puro” registreremmo una media
 \color inherit
 \lang italian
  uguale o superiore a quanto osservato meno di una volta su cento.
- Questo è un evento raro visto che la sua probabilità è bassa.
+ Ci troviamo di fronte ad un evento raro in quanto la sua probabilità è
+ bassa.
  Una pro\SpecialChar \-
 ba\SpecialChar \-
 bi\SpecialChar \-
@@ -24266,19 +24541,79 @@ Il
 \begin_inset Formula $p$
 \end_inset
 
--value è dunque un indice di evidenza empirica a favore dell'ipotesi nulla
- 
+-value è dunque la probabilità di un particolare evento e costituisce un
+ indice di evidenza empirica a favore dell'ipotesi nulla 
 \begin_inset Formula $H_{0}$
 \end_inset
 
 .
+ Il particolare evento a cui siamo interessati è costituito dall'osservazione
+ di un valore della statistica 
+\begin_inset Formula $S$
+\end_inset
+
+ uguale o più estremo di quello effettivamente osservato.
+ Qual è l'interpretazione del termine 
+\begin_inset Quotes eld
+\end_inset
+
+più estremo
+\begin_inset Quotes erd
+\end_inset
+
+? Con 
+\begin_inset Quotes eld
+\end_inset
+
+più estremo
+\begin_inset Quotes erd
+\end_inset
+
+ si intende 
+\begin_inset Quotes eld
+\end_inset
+
+più lontano
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+più distante
+\begin_inset Quotes erd
+\end_inset
+
+ - rispetto al valore atteso 
+\begin_inset Formula $\mu$
+\end_inset
+
+ sotto l'ipotesi nulla - in direzione dell'ipotesi alternativa.
  Il test statistico parlerà tanto più a favore dell'ipotesi nulla tanto
  più elevato sarà il 
 \begin_inset Formula $p$
 \end_inset
 
 -value.
- La decisione finale di rifiutare o meno 
+ 
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Calcolato il 
+\begin_inset Formula $p$
+\end_inset
+
+-value, quando decideremo se rifiutare o non rifiutare 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+? La decisione finale di rifiutare o meno 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -24286,7 +24621,7 @@ Il
 \begin_inset Quotes eld
 \end_inset
 
-quantità” di evidenza sotto la quale non siamo più disposti a mantenere
+quantità” minima di evidenza sotto la quale non siamo più disposti a mantenere
  
 \begin_inset Formula $H_{0}$
 \end_inset
@@ -24436,7 +24771,7 @@ ria
 \end_inset
 
 .
- Supponiamo che il valore medio realizzato sia 
+ Supponiamo che il valore medio osservato sia 
 \begin_inset Formula $\overline{x}=0.5985$
 \end_inset
 
@@ -24462,7 +24797,11 @@ reference "esempio caseificio p1"
 \end_inset
 
 , in questo caso l'ipotesi alternativa non ha una direzione ben precisa.
- Il vero valore di 
+ 
+\begin_inset Formula $H_{A}$
+\end_inset
+
+ afferma che il valore di 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -24487,18 +24826,94 @@ reference "esempio caseificio p1"
 \begin_inset Formula $0.5985$
 \end_inset
 
- (più estremo sulla sinistra della distribuzione) e superiore a 
+ (più estremo sulla si\SpecialChar \-
+ni\SpecialChar \-
+stra della distribuzione) o superiore a 
 \begin_inset Formula $0.6015$
 \end_inset
 
  (più estremo sulla destra della distribuzione).
- Tale valore è stato calcolato nel seguente modo
-\begin_inset Formula \[
-0.6+(0.6-0.5985)=0.6015.\]
+ L'estremo destro 
+\begin_inset Formula $0.6015$
+\end_inset
+
+ è stato calcolato in maniera tale da mantenere la distanza 
+\begin_inset Formula $d=\mid\bar{x}-\mu\mid$
+\end_inset
+
+ tra valore atteso e media campionaria anche alla destra di 
+\begin_inset Formula $\mu$
+\end_inset
+
+ (vedi Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:calcolo p-value sfere"
 
 \end_inset
 
- Il 
+):
+\begin_inset Formula \[
+0.6\:+\mid0.5985-0.6\mid=0.6015.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/densityPenneSfereH0Pvalore.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:calcolo p-value sfere"
+
+\end_inset
+
+Calcolo del 
+\begin_inset Formula $p$
+\end_inset
+
+-value (test bilaterale).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il 
 \begin_inset Formula $p$
 \end_inset
 
@@ -24519,7 +24934,7 @@ Decisamente questo non rappresenta un evento raro.
 \end_inset
 
 -value risulta essere più grande.
- Per tale motivo non possiamo rifiutare l'ipotesi nulla.
+ Per tale motivo non rifiutiamo l'ipotesi nulla.
  La macchina è da considerarsi perfettamente funzionante.
  
 \begin_inset ERT
@@ -24562,7 +24977,7 @@ L'ipotesi nulla,
 \end_inset
 
  nonché la distribuzione campionaria 
-\begin_inset Formula $f(x_{1},\ldots,x_{n};\theta)$
+\begin_inset Formula $f(x_{1},\ldots,x_{n})$
 \end_inset
 
 .
@@ -24693,7 +25108,7 @@ Il
 -value, calcolato tenendo conto dell'ipotesi alternativa (unilaterale o
  bilaterale).
  Esso corrisponde alla probabilità di osservare qualcosa di simile o di
- più estremo (come indicato dall'ipotesi alternativa).
+ più estremo (nella direzione suggerita dall'ipotesi alternativa).
  
 \end_layout
 
@@ -24796,7 +25211,7 @@ Abbiamo la seguente situazione:
 
 \begin_layout Enumerate
 Vogliamo testare l'ipotesi riguardante la composizione del latte acquistato
- da un certo fornitore sospettato di aggiungere acqua al suo latte.
+ da un certo fornitore sospettato di aggiungere acqua al latte.
  
 \end_layout
 
@@ -24870,7 +25285,11 @@ Fino a questo punto la costruzione del test è identica alla formulazione
 \begin_inset Formula $p$
 \end_inset
 
--value, calcoliamo l' 
+-value, calcoliamo la soglia critica 
+\begin_inset Formula $k_{\alpha}$
+\end_inset
+
+ che per un test unilaterale destro corrisponde all' 
 \begin_inset Formula $1-\alpha$
 \end_inset
 
@@ -24883,8 +25302,8 @@ Fino a questo punto la costruzione del test è identica alla formulazione
 \end_inset
 
  (vedi disegno ???).
- 
-\begin_inset Formula $q_{1-\alpha}$
+ La costante 
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  sarà in seguito utilizzato per definire quando rigettare 
@@ -24896,13 +25315,13 @@ Fino a questo punto la costruzione del test è identica alla formulazione
 \begin_inset Formula $\alpha=5\%$
 \end_inset
 
-, il valore 
-\begin_inset Formula $q_{1-\alpha}$
+ ed il test è unilaterale destro, la soglia 
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
- soddisfa la seguente uguaglianza (Statistica I):
+ soddisfa la seguente uguaglianza :
 \begin_inset Formula \begin{equation}
-P_{H_{0}}(\overline{X}\leqq q_{1-5\%})=0.95.\label{k alpha media}\end{equation}
+P_{H_{0}}(\overline{X}\geqq k_{\alpha})=0.05.\label{k alpha media}\end{equation}
 
 \end_inset
 
