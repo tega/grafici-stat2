@@ -19,8 +19,11 @@ testUnilateraleDestro <- function() {
 
   text(-0.548,-0.537,expression(paste("Non rifiuto ", H[0])))
   text(-0.546,0.-0.530,expression(paste("Rifiuto ", H[0])))
+  text(-0.5475,0.-0.545,expression(Omega^2),cex=1.5)
 }
+pdf(file="grafici/regioneCriticaTestUnilDestro.pdf")
 testUnilateraleDestro()
+dev.off()
 print("");
 
 testBilaterale <- function() {
@@ -58,9 +61,13 @@ testBilaterale <- function() {
 	text(0.62,0.64,label="R")
 	text(x=0.57,y=0.57,labels=expression(paste("Rifiuto ", H[0])))
 	text(0.57,0.58,label="R")
+	text(0.555,0.645,expression(Omega^2),cex=1.5)
 }
 
+pdf(file="grafici/regioneCriticaTestBilaterale.pdf")
 testBilaterale()
+dev.off()
+
 
 regioneCritica3 <- function() {
   x1 = -0.565

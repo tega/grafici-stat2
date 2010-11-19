@@ -115,8 +115,11 @@ Axis(at=seq(0.596,0.604,by=0.001),side=1)
 Axis(side=2,las=1)
 
 abline(v=0.6,lty=3)
-lines(x=c(0.6015,0.6015),y=c(0,350))
-lines(x=c(0.5985,0.5985),y=c(0,350))
+lines(x=c(0.6015,0.6015),y=c(0,f(0.6015)),lty=3)
+lines(x=c(0.5985,0.5985),y=c(0,f(0.5985)),lty=3)
+lines(x=c(0.6015,0.6015),y=c(f(0.6015),350))
+lines(x=c(0.5985,0.5985),y=c(f(0.5985),350))
+
 
 text(0.6005,400,expression(f[bar(X)[25]]),cex=1.5)
 text(0.5985,365,expression(bar(x)[25]==0.5985),cex=1)

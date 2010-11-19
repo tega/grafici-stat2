@@ -25210,8 +25210,11 @@ Abbiamo la seguente situazione:
 \end_layout
 
 \begin_layout Enumerate
-Vogliamo testare l'ipotesi riguardante la composizione del latte acquistato
- da un certo fornitore sospettato di aggiungere acqua al latte.
+Vogliamo testare l'ipotesi riguardante la composizione del latte ac\SpecialChar \-
+qui\SpecialChar \-
+sta\SpecialChar \-
+to
+ da un certo fornitore sospettato di annacquare il latte.
  
 \end_layout
 
@@ -25289,7 +25292,32 @@ Fino a questo punto la costruzione del test è identica alla formulazione
 \begin_inset Formula $k_{\alpha}$
 \end_inset
 
- che per un test unilaterale destro corrisponde all' 
+, definita dalla seguente equazione
+\begin_inset Formula \[
+P_{H_{0}}(\overline{X}\geq k_{\alpha})=\alpha.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La probabilità di osservare un valore della media campionaria almeno tanto
+ estremo (in direzione dell'ipotesi alternativa) quanto 
+\begin_inset Formula $k_{\alpha}$
+\end_inset
+
+ è uguale al livello di significatività 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ In pratica, per un test unilaterale destro 
+\begin_inset Formula $k_{\alpha}$
+\end_inset
+
+ corrisponde all' 
 \begin_inset Formula $1-\alpha$
 \end_inset
 
@@ -25301,41 +25329,123 @@ Fino a questo punto la costruzione del test è identica alla formulazione
 \begin_inset Formula $\overline{X}$
 \end_inset
 
- (vedi disegno ???).
+ (vedi disegno 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Valore-critico test unilaterale destro"
+
+\end_inset
+
+).
  La costante 
 \begin_inset Formula $k_{\alpha}$
 \end_inset
 
- sarà in seguito utilizzato per definire quando rigettare 
+ sarà in seguito utilizzata per sapere se rigettare o meno 
 \begin_inset Formula $H_{0}$
 \end_inset
 
 .
- Poiché abbiamo scelto 
+ Riassumendo, poiché abbiamo scelto 
 \begin_inset Formula $\alpha=5\%$
 \end_inset
 
  ed il test è unilaterale destro, la soglia 
-\begin_inset Formula $k_{\alpha}$
+\begin_inset Formula $k_{5\%}$
 \end_inset
 
  soddisfa la seguente uguaglianza :
 \begin_inset Formula \begin{equation}
-P_{H_{0}}(\overline{X}\geqq k_{\alpha})=0.05.\label{k alpha media}\end{equation}
+P_{H_{0}}(\overline{X}\geq k_{5\%})=0.05.\label{k alpha media}\end{equation}
 
 \end_inset
 
-Il quantile può essere ricavato utilizzando le tavole della distribuzione
- Normale.
- Infatti abbiamo che
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/k005TestUnilateraleDestro.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Valore-critico test unilaterale destro"
+
+\end_inset
+
+Valore critico di un test unilaterale destro.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il valore di 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $k_{5\%}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ può essere ricavato utilizzando le tavole della distribuzione Normale standard.
+ Infatti 
 \end_layout
 
 \begin_layout Standard
 \noindent
 \begin_inset Formula \begin{eqnarray*}
-P_{H_{0}}(\overline{X}+0.545\leqq q_{0.95}+0.545) & = & 0.95\\
-P_{H_{0}}\left(\frac{\overline{X}+0.545}{0.008/\sqrt{5}}\leqq\frac{q_{0.95}+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\\
-P\left(Z>\frac{q_{0.95}+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\end{eqnarray*}
+P_{H_{0}}(\overline{X}+0.545\geq k_{5\%}+0.545) & = & 0.05\\
+P_{H_{0}}\left(\frac{\overline{X}+0.545}{0.008/\sqrt{5}}\geq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.05\\
+P\left(Z\geq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.05\\
+P\left(Z\leq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\\
+P\left(Z\leq q_{0.95}\right) & = & 0.95\end{eqnarray*}
 
 \end_inset
 
@@ -25388,7 +25498,7 @@ P\left(Z>\frac{q_{0.95}+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\end{eqnarray*}
 \color none
 \lang english
 
-\begin_inset Formula $\frac{q_{0.95}+0.545}{0.008/\sqrt{5}}$
+\begin_inset Formula $\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}$
 \end_inset
 
 
@@ -25435,7 +25545,7 @@ q_{\alpha}=\mu+z_{\alpha}\sigma\]
 
  
 \begin_inset Formula \[
-q_{0.95}=-0.545+1.645\cdot0.008/\sqrt{5}=-0.539.\]
+k_{5\%}=-0.545+1.645\cdot0.008/\sqrt{5}=-0.539.\]
 
 \end_inset
 
@@ -25458,7 +25568,8 @@ Per costruzione, la probabilità di osservare un valore di
 
 -value, l'osservazione di valori estremi in direzione dell'ipotesi alternativa
  è da considerarsi come evidenza sfavorevole all'ipotesi nulla.
- Per questo motivo utilizzeremo la seguente regola di decisione: 
+ Per questo motivo utilizzeremo la seguente regola di decisione per un test
+ unilaterale destro: 
 \end_layout
 
 \begin_layout Enumerate
@@ -25497,7 +25608,7 @@ status collapsed
 
 lontano” e in direzione dell'ipotesi alternativa, ovvero se 
 \begin_inset Formula \begin{equation}
-\overline{x}\geqq q_{0.95}=-0.539\label{disequazione test destro}\end{equation}
+\overline{x}\geqq k_{5\%}=-0.539\label{disequazione test destro}\end{equation}
 
 \end_inset
 
@@ -25540,7 +25651,7 @@ quanto lontano” deve cadere il valore della nostra statistica affinché
 \end_inset
 
 ) e tanto più estrema sarà la soglia 
-\begin_inset Formula $q_{1-\alpha}$
+\begin_inset Formula $k_{5\%}$
 \end_inset
 
 .
@@ -25592,7 +25703,7 @@ begin{definizione}
 
  Regione critica (test unilaterale destro).
  L'insieme 
-\begin_inset Formula $R$
+\begin_inset Formula $R\subset\Omega^{n}$
 \end_inset
 
  delle realizzazioni 
@@ -25604,13 +25715,13 @@ begin{definizione}
 \end_inset
 
  per cui 
-\begin_inset Formula $S\geqq q_{0.95}$
+\begin_inset Formula $S\geqq k_{\alpha}$
 \end_inset
 
  (e quindi tali per cui il test è rifiutato) è chiamato la regione critica
  del test o semplicemente regione critica
 \begin_inset Formula \[
-R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geqq q_{0.95}\right\} .\]
+R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geqq k_{\alpha}\right\} .\]
 
 \end_inset
 
@@ -25618,6 +25729,7 @@ R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geqq q_{0.95}
 \end_layout
 
 \begin_layout Standard
+\noindent
 
 \family roman
 \series medium
@@ -25641,54 +25753,39 @@ R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geqq q_{0.95}
 \noun default
 \color inherit
 \lang italian
- è un evento del nostro esperimento statistico ed è definito come la preimmagine
- dell'evento 
-\begin_inset Formula $E=[q_{0.95},\infty)$
-\end_inset
-
- rispetto alla statistica 
+ è un evento del nostro esperimento statistico.
+ Per un test unilaterale destro esso corrisponde alla preimmagine rispetto
+ alla statistica 
 \begin_inset Formula $S$
 \end_inset
 
- utilizzata e 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\noun off
-\color none
-\lang english
-
-\begin_inset Formula $q_{0.95}$
+ dell'evento 
+\begin_inset Formula $E'=[k_{\alpha},\infty)$
 \end_inset
 
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\noun default
-\color inherit
-\lang italian
- corrisponde allo 
-\begin_inset Formula $0.95$
+ dove 
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
- quantile della distribuzione di 
+ corrisponde all'
+\begin_inset Formula $(1-\alpha$
+\end_inset
+
+)-quantile della distribuzione di 
 \begin_inset Formula $S$
 \end_inset
 
 .
- Nel nostro esempio abbiamo che 
+ Nel nostro esempio abbiamo 
+\begin_inset Formula $\alpha=5\%$
+\end_inset
+
+, 
 \begin_inset Formula $S=\overline{X}$
 \end_inset
 
  e 
-\begin_inset Formula $q_{0.95}=-0.539$
+\begin_inset Formula $k_{5\%}=-0.539$
 \end_inset
 
 .
@@ -25717,13 +25814,12 @@ end{definizione}
 
 \begin_layout Standard
 \noindent
-Notiamo che la regione critica è definita in termini delle possibili realizzazio
-ni 
+La regione critica è definita in termini delle possibili realizzazioni 
 \begin_inset Formula $\left(x_{1},...,x_{5}\right)$
 \end_inset
 
  del campione 
-\begin_inset Formula $(X_{1},...,X_{n})$
+\begin_inset Formula $(X_{1},...,X_{5})$
 \end_inset
 
  e non rispetto all'intervallo 
@@ -25731,7 +25827,8 @@ ni
 \end_inset
 
 .
- Talvolta è possibile ottenere una rappresentazione grafica di 
+ In situazioni molto semplici è possibile ottenere una rappresentazione
+ grafica dell'insieme 
 \begin_inset Formula $R$
 \end_inset
 
@@ -25745,6 +25842,38 @@ ni
 \end_inset
 
  dà la seguente regione critica
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/regioneCriticaTestUnilDestro.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Esempio di regione critica (test unilaterale destro).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -25759,11 +25888,8 @@ reference "esempio produttore penne p1"
 
 \end_inset
 
-
-\begin_inset space \space{}
-\end_inset
-
-concernente il produttore di penne a sfera ci troviamo nella seguente situazione.
+ concernente il produttore di penne a sfera ci troviamo nella seguente situazion
+e.
  
 \end_layout
 
@@ -25783,9 +25909,9 @@ L'ipotesi nulla
 \end_inset
 
 .
- Matematicamente l'ipotesi nulla può essere espressa semplicemente da 
+ Matematicamente l'ipotesi nulla è espressa da 
 \begin_inset Formula \[
-H_{0}:\mu=0.6\text{.}\]
+H_{0}:\:\mu=0.6\text{.}\]
 
 \end_inset
 
@@ -25800,7 +25926,7 @@ L'ipotesi alternativa è che la macchina non sia a punto e che di conseguenza
 
 
 \begin_inset Formula \[
-H_{A}:\mu\neq0.6\text{.}\]
+H_{A}:\:\mu\neq0.6\text{.}\]
 
 \end_inset
 
@@ -25817,7 +25943,7 @@ Abbiamo deciso di utilizzare la media campionaria
 \begin_inset Formula $25$
 \end_inset
 
- osservazioni è distribuita 
+ osservazioni è distribuita secondo la legge Normale 
 \begin_inset Formula $N(0.6,(0.001)^{2})$
 \end_inset
 
@@ -25860,31 +25986,43 @@ Per quanto riguarda i punti 1-5 non vi è alcuna differenza con la specificazion
 \noindent
 Tendenzialmente rigetteremo l'ipotesi nulla se osserveremo dei valori della
  statistica estremi in direzione dell'ipotesi alternativa.
- Essendo questo un test bilaterale, dobbiamo considerare valori estremi
- della statistica in ambo le direzioni.
+ Essendo questo un test bilaterale (il valore atteso del diametro delle
+ sfere potrebbero essere troppo grande o troppo piccolo rispetto all'ipotesi
+ nulla), dobbiamo considerare valori estremi della statistica in ambo le
+ direzioni.
  Ciò è possibile assegnando metà del livello di significatività al lato
  sinistro della distribuzione e l'altra metà al lato destro.
- Dovremo quindi calcolare due quantili della distribuzione di 
+ Dovremo quindi calcolare i due quantili della distribuzione della statistica
+ 
+\begin_inset Formula $S$
+\end_inset
+
+, 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
-: il primo (lato sinistro) è
-\begin_inset space \space{}
-\end_inset
-
-il 
+ in questo caso.
+ Il primo (lato sinistro) è il 
 \begin_inset Formula $2.5\%$
 \end_inset
 
--quantile ed il secondo (lato destro) è il 
+-quantile (in generale sarà l'
+\begin_inset Formula $\frac{\alpha}{2}$
+\end_inset
+
+-quantile) ed il secondo (lato destro) è il 
 \begin_inset Formula $97.5\%-$
 \end_inset
 
-quantile
+quantile (
+\begin_inset Formula $(1-\frac{\alpha}{2})$
+\end_inset
+
+-quantile)
 \begin_inset Formula \begin{equation}
 \left\{ \begin{array}{l}
-P_{H_{0}}(\overline{X}<k_{1})=2.5\%\\
-P_{H_{0}}(\overline{X}>k_{2})=2.5\%\end{array}\right.\end{equation}
+P_{H_{0}}(\overline{X}\leq k_{s,5\%})=2.5\%\\
+P_{H_{0}}(\overline{X}\geq k_{d,5\%})=2.5\%\end{array}\right.\end{equation}
 
 \end_inset
 
@@ -25894,41 +26032,37 @@ P_{H_{0}}(\overline{X}>k_{2})=2.5\%\end{array}\right.\end{equation}
 \begin_layout Standard
 \begin_inset Formula \[
 \left\{ \begin{array}{l}
-P_{H_{0}}\left(\overline{X}-0.6<k_{1}-0.6\right)=2.5\%\\
-P_{H_{0}}\left(\overline{X}-0.6>k_{2}-0.6\right)=2.5\%\end{array}\right.\]
+P_{H_{0}}\left(\overline{X}-0.6\leq k_{s,5\%}-0.6\right)=2.5\%\\
+P_{H_{0}}\left(\overline{X}-0.6\geq k_{d,5\%}-0.6\right)=2.5\%\end{array}\right.\]
 
 \end_inset
 
  
 \begin_inset Formula \[
 \left\{ \begin{array}{l}
-P_{H_{0}}(\frac{\overline{X}-0.6}{0.001}<\frac{k_{1}-0.6}{0.001})=2.5\%\\
-P_{H_{0}}(\frac{\overline{X}-0.6}{0.001}>\frac{k_{2}-0.6}{0.001})=2.5\%\end{array}\right.\]
+P_{H_{0}}(\frac{\overline{X}-0.6}{0.001}\leq\frac{k_{s,5\%}-0.6}{0.001})=2.5\%\\
+P_{H_{0}}(\frac{\overline{X}-0.6}{0.001}\geq\frac{k_{d,5\%}-0.6}{0.001})=2.5\%\end{array}\right.\]
 
 \end_inset
 
  Ancora una volta sotto l'ipotesi nulla la quantità 
-\begin_inset Formula $\frac{\overline{X}-0.6}{0.001}=Z$
+\begin_inset Formula $Z=\frac{\overline{X}-0.6}{0.001}$
 \end_inset
 
- è distribuita 
-\begin_inset Formula $N(0,1)$
-\end_inset
-
-.
+ è distribuita Normale standard.
  Definendo 
-\begin_inset Formula $z_{0.025}=\frac{k_{1}-0.6}{0.001}$
+\begin_inset Formula $z_{0.025}=\frac{k_{s,5\%}-0.6}{0.001}$
 \end_inset
 
  e 
-\begin_inset Formula $z_{0.975}=\frac{k_{2}-0.6}{0.001}$
+\begin_inset Formula $z_{0.975}=\frac{k_{d,5\%}-0.6}{0.001}$
 \end_inset
 
  il sistema si può riscrivere come 
 \begin_inset Formula \[
 \left\{ \begin{array}{l}
-P(Z<z_{0.025})=2.5\%\\
-P(Z>z_{0.975})=2.5\%\end{array}\right.\Leftrightarrow P(|\frac{\overline{X}-0.6}{0.001}|>z_{0.975})=0.05\]
+P(Z\leq z_{0.025})=2.5\%\\
+P(Z\geq z_{0.975})=2.5\%\end{array}\right.\Leftrightarrow P(|\frac{\overline{X}-0.6}{0.001}|\geq z_{0.975})=0.05\]
 
 \end_inset
 
@@ -25943,11 +26077,11 @@ P(Z>z_{0.975})=2.5\%\end{array}\right.\Leftrightarrow P(|\frac{\overline{X}-0.6}
 
 .
  Infine, si ottiene 
-\begin_inset Formula $k_{1}=0.598$
+\begin_inset Formula $k_{s,5\%}=0.598$
 \end_inset
 
  e 
-\begin_inset Formula $k_{2}=0.6019.$
+\begin_inset Formula $k_{d,5\%}=0.6019.$
 \end_inset
 
  Siamo ora pronti a definire la regola per il rifiuto dell'ipotesi nulla.
@@ -25981,16 +26115,12 @@ status collapsed
 \end_inset
 
  cadrà 
-\begin_inset Formula $``$
+\begin_inset Quotes eld
 \end_inset
 
-lontano”
-\begin_inset space \space{}
-\end_inset
-
-e in direzione dell'ipotesi alternativa, ovvero se 
+lontano” in direzione dell'ipotesi alternativa, ovvero se 
 \begin_inset Formula \begin{equation}
-\overline{x}<k_{1}=0.598\text{ oppure }\overline{x}>k_{2}=0.6019\label{disequazione test bilaterale}\end{equation}
+\overline{x}\leq k_{s,5\%}=0.598\text{ oppure }\overline{x}\geq k_{d,5\%}=0.6019\label{disequazione test bilaterale}\end{equation}
 
 \end_inset
 
@@ -26016,17 +26146,6 @@ Ciò corrisponde al caso in cui
 \end_inset
 
  sarà mantenuta.
- La regola di decisione può essere espressa anche nella sua forma standar\SpecialChar \-
-diz\SpecialChar \-
-za\SpecialChar \-
-ta
-: se 
-\begin_inset Formula \[
-|\frac{\overline{x}-0.6}{0.001}|>z_{0.975}=1.96\]
-
-\end_inset
-
- rifiuteremo l'ipotesi nulla.
  
 \end_layout
 
@@ -26070,37 +26189,95 @@ begin{definizione}
 \end_inset
 
  delle possibili realizzazioni 
-\begin_inset Formula $(x_{1},...,x_{25})$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
  di 
-\begin_inset Formula $(X_{1},...,X_{25})$
+\begin_inset Formula $(X_{1},...,X_{n})$
 \end_inset
 
  per cui 
-\begin_inset Formula $\overline{x}<k_{1}=0.598$
+\begin_inset Formula $S(x_{1},...,x_{n})\leq k_{s,\alpha}$
 \end_inset
 
  oppure 
-\begin_inset Formula $\overline{x}>k_{2}=0.6019$
+\begin_inset Formula $S(x_{1},...,x_{n})\geq k_{d,\alpha}$
 \end_inset
 
  (e quindi tali per cui il test è rifiutato) è chiamato regione critica
  del test
 \begin_inset Formula \[
-R=\left\{ (x_{1},...,x_{25})\mid\overline{x}<k_{1}=0.598\text{ oppure }\overline{x}>k_{2}=0.6019\right\} .\]
+R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{ oppure }S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} .\]
 
 \end_inset
 
- 
+La regione critica 
+\begin_inset Formula $R$
+\end_inset
+
+ è dunque l'evento (sottoinsieme) di 
+\begin_inset Formula $\Omega^{n}$
+\end_inset
+
+ definito dalla preimmagine rispetto alla statistica 
+\begin_inset Formula $S$
+\end_inset
+
+ dell'evento 
+\begin_inset Formula $E'=(-\infty,k_{s,\alpha}]\cup[k_{d,\alpha},\infty)$
+\end_inset
+
+
+.
+\lang italian
+
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
 end{definizione}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/regioneCriticaTestBilaterale.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Esempio di regione critica (test bilaterale).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
@@ -26122,12 +26299,21 @@ begin{remark}
 \end_inset
 
  La costruzione di un test d'ipotesi statistica consiste quindi nel scegliere,
- oltre che l'ipotesi nulla e quella alternativa, una regione critica.
- 
+ oltre che l'ipotesi nulla e quella alternativa, una regione critica 
 \begin_inset Formula $R$
 \end_inset
 
- è un sottoinsieme delle possibili realizzazioni campionarie.
+.
+ La regione critica 
+\begin_inset Formula $R$
+\end_inset
+
+ è un sottoinsieme delle possibili realizzazioni campionarie del nostro
+ esperimento statisico: 
+\begin_inset Formula $R\subset\Omega^{n}$
+\end_inset
+
+.
  Se i valori 
 \begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
@@ -26137,7 +26323,7 @@ begin{remark}
 
 \begin_layout Itemize
 test unilaterale destro: 
-\begin_inset Formula $\overline{x}>k$
+\begin_inset Formula $\overline{x}\geq k_{\alpha}$
 \end_inset
 
 , 
@@ -26145,7 +26331,7 @@ test unilaterale destro:
 
 \begin_layout Itemize
 test unilaterale sinistro: 
-\begin_inset Formula $\overline{x}<k$
+\begin_inset Formula $\overline{x}\leq k_{\alpha}$
 \end_inset
 
 , 
@@ -26153,27 +26339,14 @@ test unilaterale sinistro:
 
 \begin_layout Itemize
 test bilaterale: 
-\begin_inset Formula $\overline{x}<k_{1}$
+\begin_inset Formula $\overline{x}\leq k_{s,\alpha}$
 \end_inset
 
  oppure 
-\begin_inset Formula $\overline{x}>k_{2}$
+\begin_inset Formula $\overline{x}\geq k_{d,\alpha}$
 \end_inset
 
 , rifiuteremo l'ipotesi nulla.
- 
-\end_layout
-
-\begin_layout Itemize
-test bilaterale (forma standardizzata): 
-\begin_inset Formula $|\frac{\overline{x}-\mu_{0}}{\sigma}|>z_{1-\alpha/2}$
-\end_inset
-
-, rifiutiamo 
-\begin_inset Formula $H_{0}$
-\end_inset
-
-.
  
 \end_layout
 
