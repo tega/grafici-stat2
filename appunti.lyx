@@ -21258,7 +21258,7 @@ name "Max Likelihood Normale"
 
 \end_inset
 
- In questo esempio la funzione di massima verosimiglianza 
+ In questo esempio la funzione di verosimiglianza 
 \begin_inset Formula $L(\mu,\sigma^{2})$
 \end_inset
 
@@ -26227,10 +26227,7 @@ La regione critica
 \begin_inset Formula $E'=(-\infty,k_{s,\alpha}]\cup[k_{d,\alpha},\infty)$
 \end_inset
 
-
 .
-\lang italian
-
 \begin_inset ERT
 status open
 
@@ -26268,7 +26265,11 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Esempio di regione critica (test bilaterale).
+Esempio di regione critica (
+\begin_inset Formula $n=2$
+\end_inset
+
+ e test bilaterale).
 \end_layout
 
 \end_inset
@@ -26420,8 +26421,12 @@ Dunque nei due casi visti
 \end_inset
 
 .
- Cosa succederebbe se, anziché la media, utilizzassimo un'altra statistica?
- Vogliamo considerare questa possibilità per l'Esempio 
+ Cosa succederebbe se, anziché la media 
+\begin_inset Formula $\overline{X}$
+\end_inset
+
+, utilizzassimo un'altra statistica? Vogliamo considerare questa possibilità
+ per l'Esempio 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "esempio caseificio p1"
@@ -26466,10 +26471,30 @@ La media dei cinque valori è uguale a
 \end_inset
 
 .
- La distribuzione di 
-\begin_inset Formula $S$
+ La distribuzione della statistica 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $X_{\min}$
 \end_inset
 
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
  dipende dalla distribuzione congiunta di 
 \begin_inset Formula $(X_{1},...,X_{5})$
 \end_inset
@@ -26479,11 +26504,31 @@ La media dei cinque valori è uguale a
 \begin_inset Formula $p$
 \end_inset
 
--value o con la regione critica) dovremo ricavare la funzione di ripartizione
+-value o con la regione critica) dobbiamo conoscere la funzione di ripartizione
  di 
-\begin_inset Formula $S$
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $X_{\min}$
 \end_inset
 
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
 .
 \end_layout
 
@@ -26494,8 +26539,8 @@ name "distribuzione del minimo"
 
 \end_inset
 
-Distribuzione del 
-\begin_inset Formula $\min(X_{1},...,X_{5})$
+Distribuzione di 
+\begin_inset Formula $S=\min(X_{1},...,X_{5})$
 \end_inset
 
 
@@ -26576,7 +26621,12 @@ F_{S}(s)=1-P(\min(X_{1},...,X_{5})>s)\text{.}\label{distribuzione minimo step1}\
 
 \end_inset
 
- Il motivo per cui si percorre questa strada è semplice: prendiamo ad esempio
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il motivo per cui si percorre questa strada è semplice: prendiamo ad esempio
  
 \begin_inset Formula $s=2.$
 \end_inset
@@ -26613,7 +26663,7 @@ F_{S}(s)=1-P(\min(X_{1},...,X_{5})>s)\text{.}\label{distribuzione minimo step1}\
 
  
 \begin_inset Formula \[
-P(\min(X_{1},...,X_{5})>s)=P(X_{1}>s,...,X_{5}>s)\text{.}\]
+P(\min(X_{1},...,X_{5})>s)=P(X_{1}>s,X_{2}>s,...,X_{5}>s)\text{.}\]
 
 \end_inset
 
@@ -26687,7 +26737,12 @@ F_{S}(s) & = & 1-\left[1-P(X\leq s)\right]^{5}\notag\\
 
 \end_inset
 
- La formula (
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La formula (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "formula finale minimo"
@@ -26696,14 +26751,10 @@ reference "formula finale minimo"
 
 ) è la formula finale che mette in relazione la funzione di ripartizione
  di 
-\begin_inset Formula $S$
+\begin_inset Formula $S=\min(X_{1},...,X_{5})$
 \end_inset
 
- (il minimo fra 
-\begin_inset Formula $(X_{1},...,X_{5})$
-\end_inset
-
-) con la funzione di ripartizione di 
+ con la funzione di ripartizione di 
 \begin_inset Formula $X$
 \end_inset
 
@@ -26763,7 +26814,7 @@ L'ipotesi nulla
 
  è che il fornitore sia onesto 
 \begin_inset Formula \[
-H_{0}:\mu=-0.545\text{.}\]
+H_{0}:\:\mu=-0.545\text{.}\]
 
 \end_inset
 
@@ -26773,7 +26824,7 @@ H_{0}:\mu=-0.545\text{.}\]
 \begin_layout Enumerate
 L'ipotesi alternativa è che il fornitore abbia aggiunto acqua
 \begin_inset Formula \[
-H_{A}:\mu>-0.545\text{.}\]
+H_{A}:\:\mu>-0.545\text{.}\]
 
 \end_inset
 
