@@ -23832,7 +23832,10 @@ name "esempio caseificio p1"
 
 Un caseificio ha il forte sospetto che un suo fornitore diluisca il latte
  con acqua.
- Dalle numerose misurazioni eseguite in passato dal Laboratorio cantonale
+ Dalle numerose misurazioni eseguite in passato dal La\SpecialChar \-
+bo\SpecialChar \-
+ra\SpecialChar \-
+torio cantonale
  si sa che la temperatura di gelo di un campione di latte è una variabile
  aleatoria 
 \begin_inset Formula $X$
@@ -24091,7 +24094,11 @@ Nei due ultimi esempi abbiamo definito l'ipotesi nulla e l'ipotesi alternativa
 \begin_inset Formula $X$
 \end_inset
 
- è completamente specificata.
+ è completamente spe\SpecialChar \-
+ci\SpecialChar \-
+fi\SpecialChar \-
+ca\SpecialChar \-
+ta.
  In generale diremo che un'ipotesi statistica (nulla o alternativa che sia)
  è 
 \emph on
@@ -24107,7 +24114,7 @@ se specifica completamente la distribuzione di
 composta
 \emph default
 .
- Ad esempio l'ipotesi alternativa 
+ Ad esempio, l'ipotesi alternativa 
 \begin_inset Formula \[
 H_{A}:\;\mu>-0.545\]
 
@@ -24589,7 +24596,11 @@ più distante
 \begin_inset Formula $\mu$
 \end_inset
 
- sotto l'ipotesi nulla - in direzione dell'ipotesi alternativa.
+ sotto 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ - in direzione dell'ipotesi alternativa.
  Il test statistico parlerà tanto più a favore dell'ipotesi nulla tanto
  più elevato sarà il 
 \begin_inset Formula $p$
@@ -24959,7 +24970,7 @@ Ricapitolando quanto visto nei due esempi precedenti abbiamo i seguenti
 \end_layout
 
 \begin_layout Enumerate
-L'ipotesi, definita come un'asserzione su un determinato fenomeno.
+L'ipotesi, definita come un'affermazione su un determinato fenomeno.
  Nei nostri due esempi le ipotesi sotto esame concernono il funzionamento
  di una macchina per la produzione di sfere e la composizione del latte.
  
@@ -25651,7 +25662,7 @@ quanto lontano” deve cadere il valore della nostra statistica affinché
 \end_inset
 
 ) e tanto più estrema sarà la soglia 
-\begin_inset Formula $k_{5\%}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
 .
@@ -25828,7 +25839,7 @@ La regione critica è definita in termini delle possibili realizzazioni
 
 .
  In situazioni molto semplici è possibile ottenere una rappresentazione
- grafica dell'insieme 
+ grafica dell'evento 
 \begin_inset Formula $R$
 \end_inset
 
@@ -25987,12 +25998,12 @@ Per quanto riguarda i punti 1-5 non vi è alcuna differenza con la specificazion
 Tendenzialmente rigetteremo l'ipotesi nulla se osserveremo dei valori della
  statistica estremi in direzione dell'ipotesi alternativa.
  Essendo questo un test bilaterale (il valore atteso del diametro delle
- sfere potrebbero essere troppo grande o troppo piccolo rispetto all'ipotesi
- nulla), dobbiamo considerare valori estremi della statistica in ambo le
+ sfere potrebbe essere maggiore o minore rispetto al valore indicato nell'ipotes
+i nulla), dobbiamo considerare valori estremi della statistica in ambo le
  direzioni.
  Ciò è possibile assegnando metà del livello di significatività al lato
  sinistro della distribuzione e l'altra metà al lato destro.
- Dovremo quindi calcolare i due quantili della distribuzione della statistica
+ Dovremo quindi calcolare due quantili della distribuzione della statistica
  
 \begin_inset Formula $S$
 \end_inset
@@ -26018,7 +26029,7 @@ quantile (
 \begin_inset Formula $(1-\frac{\alpha}{2})$
 \end_inset
 
--quantile)
+-quantile):
 \begin_inset Formula \begin{equation}
 \left\{ \begin{array}{l}
 P_{H_{0}}(\overline{X}\leq k_{s,5\%})=2.5\%\\
@@ -26145,8 +26156,60 @@ Ciò corrisponde al caso in cui
 \begin_inset Formula $H_{0}$
 \end_inset
 
- sarà mantenuta.
+ sarà mantenuta (vedi Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Valori-critici-test bilaterale"
+
+\end_inset
+
+).
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/k005TestBilaterale.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Valori-critici-test bilaterale"
+
+\end_inset
+
+Valori critici di un test bilaterale.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -26347,13 +26410,14 @@ test bilaterale:
 \begin_inset Formula $\overline{x}\geq k_{d,\alpha}$
 \end_inset
 
-, rifiuteremo l'ipotesi nulla.
- 
+, 
 \end_layout
 
 \begin_layout Standard
-Per costruzione la regione critica dovrà soddisfare il vincolo concernente
- il livello di significatività prescelto, ovvero 
+rifiuteremo l'ipotesi nulla.
+ Facciamo infine notare che, per costruzione, la regione critica soddisfa
+ il vincolo concernente il livello di significatività prescelto, ovvero
+ 
 \begin_inset Formula \begin{equation}
 P_{H_{0}}(R)=\alpha\text{.}\end{equation}
 
@@ -26434,7 +26498,7 @@ reference "esempio caseificio p1"
 \end_inset
 
  e la statistica 
-\begin_inset Formula $S=X_{\min}=\min(X_{1},...,X_{5})$
+\begin_inset Formula $S=\min(X_{1},...,X_{5})$
 \end_inset
 
 .
@@ -26463,11 +26527,11 @@ La media dei cinque valori è uguale a
 \end_inset
 
  Il valore di 
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $S$
 \end_inset
 
  per questa realizzazione del campione è dunque 
-\begin_inset Formula $x_{\min}=-0.542$
+\begin_inset Formula $s=-0.542$
 \end_inset
 
 .
@@ -26482,7 +26546,7 @@ La media dei cinque valori è uguale a
 \color none
 \lang english
 
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $S$
 \end_inset
 
 
@@ -26506,29 +26570,9 @@ La media dei cinque valori è uguale a
 
 -value o con la regione critica) dobbiamo conoscere la funzione di ripartizione
  di 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\noun off
-\color none
-\lang english
-
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $S$
 \end_inset
 
-
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\bar default
-\noun default
-\color inherit
-\lang italian
 .
 \end_layout
 
@@ -26758,10 +26802,11 @@ reference "formula finale minimo"
 \begin_inset Formula $X$
 \end_inset
 
-, la popolazione dalla quale sono campionate le 
-\begin_inset Formula $X_{i}.$
+, la popolazione dalla quale sono campionate le variabili aleatorie 
+\begin_inset Formula $X_{i}$
 \end_inset
 
+ del nostro esperimento statistico.
  Da questa formula è immediato derivare la funzione di densità di 
 \begin_inset Formula $S$
 \end_inset
@@ -26785,6 +26830,54 @@ reference "esempio caseificio p1"
 \end_inset
 
 .
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/confrontoFxMinFxMedio.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Confronto delle densità delle statistiche 
+\begin_inset Formula $S=\min(X_{1},...,X_{5})$
+\end_inset
+
+ e 
+\begin_inset Formula $\overline{X}_{5}$
+\end_inset
+
+ sotto 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection

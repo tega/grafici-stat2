@@ -3,7 +3,7 @@
 # Author: ortellic
 ###############################################################################
 
-pdf(file="confrontoFxMinFxMedio.pdf")
+pdf(file="grafici/confrontoFxMinFxMedio.pdf")
 fx <- function(x) {
 	dnorm(x,mean=-0.545,sd=0.008/sqrt(5))
 }
@@ -29,7 +29,7 @@ lines(x,yMin)
 Axis(at=seq(-0.575,-0.535,by=0.005),side=1)
 Axis(side=2,las=1)
 text(-0.542,105,expression(f[bar(X)[5]]),cex=1.5)
-text(-0.56,60,expression(f[X[min]]),cex=1.5)
+text(-0.56,60,expression(f[S]),cex=1.5)
 
 
 dev.off()
