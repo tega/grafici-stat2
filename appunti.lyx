@@ -25995,8 +25995,9 @@ Per quanto riguarda i punti 1-5 non vi è alcuna differenza con la specificazion
 
 \begin_layout Standard
 \noindent
-Tendenzialmente rigetteremo l'ipotesi nulla se osserveremo dei valori della
- statistica estremi in direzione dell'ipotesi alternativa.
+Ma cos'è la regione critica? Diciamo che tendenzialmente rigetteremo l'ipotesi
+ nulla se osserveremo dei valori della statistica estremi in direzione dell'ipot
+esi alternativa.
  Essendo questo un test bilaterale (il valore atteso del diametro delle
  sfere potrebbe essere maggiore o minore rispetto al valore indicato nell'ipotes
 i nulla), dobbiamo considerare valori estremi della statistica in ambo le
@@ -26195,15 +26196,19 @@ name "fig:Valori-critici-test bilaterale"
 
 \end_inset
 
-Valori critici di un test bilaterale.
+Test bilaterale e valori critici con 
+\begin_inset Formula $S=\bar{X}$
+\end_inset
+
+ e 
+\begin_inset Formula $n=25$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -26270,10 +26275,21 @@ begin{definizione}
  (e quindi tali per cui il test è rifiutato) è chiamato regione critica
  del test
 \begin_inset Formula \[
-R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{ oppure }S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} .\]
+R:=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{ oppure }S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} \]
 
 \end_inset
 
+o equivalentemente
+\begin_inset Formula \[
+R:=S^{-1}(E')\text{ con }E'=(-\infty,k_{s,\alpha}]\cup[k_{d,\alpha},\infty).\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 La regione critica 
 \begin_inset Formula $R$
 \end_inset
@@ -26290,7 +26306,47 @@ La regione critica
 \begin_inset Formula $E'=(-\infty,k_{s,\alpha}]\cup[k_{d,\alpha},\infty)$
 \end_inset
 
-.
+ dove le costanti sono scelte in modo tale che (vedi Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:regione critica bilaterale"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Test-bilaterale-con regione critica"
+
+\end_inset
+
+) 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula \[
+P_{H_{0}}(S\in(-\infty,k_{s,\alpha}])=P_{H_{0}}(S\in[k_{d,\alpha},\infty))=\frac{\alpha}{2}.\]
+
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+
 \begin_inset ERT
 status open
 
@@ -26328,12 +26384,49 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Esempio di regione critica (
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:regione critica bilaterale"
+
+\end_inset
+
+Regione critica di un test bilaterale con 
+\begin_inset Formula $S=\bar{X}$
+\end_inset
+
+ (
 \begin_inset Formula $n=2$
 \end_inset
 
- e test bilaterale).
+).
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align left
+\begin_inset space \hspace{}
+\length -1.3cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename codiceR/grafici/testBilaterale.pdf
 
 \end_inset
 
@@ -26341,6 +26434,28 @@ Esempio di regione critica (
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Test-bilaterale-con regione critica"
+
+\end_inset
+
+Test bilaterale con 
+\begin_inset Formula $S=\bar{X}$
+\end_inset
+
+ e regione critica (
+\begin_inset Formula $n=2$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -26415,11 +26530,66 @@ test bilaterale:
 
 \begin_layout Standard
 rifiuteremo l'ipotesi nulla.
- Facciamo infine notare che, per costruzione, la regione critica soddisfa
- il vincolo concernente il livello di significatività prescelto, ovvero
+ Per costruzione la regione critica 
+\begin_inset Formula $R$
+\end_inset
+
+ soddisfa il vincolo concernente il livello di significatività prescelto.
+ Nel caso di un test bilaterale la scelta di 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $k_{s,\alpha}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ e 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $k_{d,\alpha}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ è tale per cui dato 
+\begin_inset Formula $E'=(-\infty,k_{s,\alpha}]\cup[k_{d,\alpha},\infty)$
+\end_inset
+
  
 \begin_inset Formula \begin{equation}
-P_{H_{0}}(R)=\alpha\text{.}\end{equation}
+P_{H_{0}}(S\in E')=P_{H_{0}}(S^{-1}(E'))=P_{H_{0}}(R)=\alpha\text{.}\end{equation}
 
 \end_inset
 
@@ -26526,11 +26696,11 @@ La media dei cinque valori è uguale a
 
 \end_inset
 
- Il valore di 
+ La realizzazione di 
 \begin_inset Formula $S$
 \end_inset
 
- per questa realizzazione del campione è dunque 
+ con questo campione è dunque 
 \begin_inset Formula $s=-0.542$
 \end_inset
 
@@ -26602,7 +26772,33 @@ reference "esempio caseificio p1"
 
 \end_inset
 
- calcoliamo
+ cal
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+co
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+liamo
 \begin_inset Foot
 status collapsed
 
@@ -26774,10 +26970,10 @@ reference "Fss parziale"
 
 \end_inset
 
-) è semplificabile in 
+) è semplificabile: 
 \begin_inset Formula \begin{eqnarray}
 F_{S}(s) & = & 1-\left[1-P(X\leq s)\right]^{5}\notag\\
- & = & 1-\left[1-F_{X}(s)\right]^{5}\label{formula finale minimo}\end{eqnarray}
+ & = & 1-\left[1-F_{X}(s)\right]^{5}.\label{formula finale minimo}\end{eqnarray}
 
 \end_inset
 
@@ -26851,7 +27047,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Confronto delle densità delle statistiche 
+Densità di 
 \begin_inset Formula $S=\min(X_{1},...,X_{5})$
 \end_inset
 
