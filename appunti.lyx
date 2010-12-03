@@ -27570,11 +27570,7 @@ Per quanto riguarda invece gli errori abbiamo due tipi di errori che indichiamo
 
  è chiamato livello di significatività o
 \emph on
-
-\begin_inset space \space{}
-\end_inset
-
-errore di prima specie
+ errore di prima specie
 \emph default
  e corrisponde alla probabilità di rifiutare 
 \begin_inset Formula $H_{0}$
@@ -27732,12 +27728,9 @@ Possiamo dunque chiederci come si decide di ”Rifiutare
 \begin_inset Formula $H_{0}$
 \end_inset
 
-”
-\begin_inset space \space{}
-\end_inset
-
-sulla base dei dati disponibili? Nei paragrafi precedenti abbiamo definito
- dei test d'ipotesi basati su una statistica 
+” sulla base dei dati disponibili.
+ Nei paragrafi precedenti abbiamo definito dei test d'ipotesi basati su
+ una statistica 
 \begin_inset Formula $S$
 \end_inset
 
@@ -27764,7 +27757,7 @@ S(x_{1},...,x_{n})>k\]
 \begin_inset Formula $H_{0}$
 \end_inset
 
- altrimenti non la rifiutiamo (test unilaterale destro).
+ altrimenti non la rifiutiamo (nel caso di un test unilaterale destro).
  Il valore di 
 \begin_inset Formula $k$
 \end_inset
@@ -27787,19 +27780,19 @@ S(x_{1},...,x_{n})>k\]
 \begin_inset Formula $k$
 \end_inset
 
- il valore 
-\begin_inset Formula $1-\alpha$
+, 
+\begin_inset Formula $k_{d}$
 \end_inset
 
- (test unilaterale destro), 
+ e 
+\begin_inset Formula $k_{s}$
+\end_inset
+
+ il valore 
 \begin_inset Formula $\alpha$
 \end_inset
 
- (test unilaterale sinistro), 
-\begin_inset Formula $1-\frac{\alpha}{2}$
-\end_inset
-
- (test bilaterale).
+.
 \end_layout
 
 \begin_layout Standard
@@ -27824,26 +27817,26 @@ reference "esempio caseificio p1"
 
  del caseificio (test unilaterale destro basato sulla media campionaria)
 \begin_inset Formula \begin{eqnarray*}
-\alpha & = & P_{H_{0}}(\text{rifiutare }H_{0})=P_{H_{0}}(\overline{X}>k_{1-\alpha})\\
- & = & P_{H_{0}}\left(\frac{\overline{X}+0.545}{0.008/\sqrt{5}}>\frac{k_{1-\alpha}+0.545}{0.008/\sqrt{5}}\right)\\
- & = & P\left(\underset{\sim N(0,1)}{Z}>\frac{k_{1-\alpha}+0.545}{0.008/\sqrt{5}}\right)\end{eqnarray*}
+\alpha & = & P_{H_{0}}(\text{rifiutare }H_{0})=P_{H_{0}}(\overline{X}\geq k_{\alpha})\\
+ & = & P_{H_{0}}\left(\frac{\overline{X}+0.545}{0.008/\sqrt{5}}\geq\frac{k_{\alpha}+0.545}{0.008/\sqrt{5}}\right)\\
+ & = & P\left(\underset{\sim N(0,1)}{Z}\geq\frac{k_{\alpha}+0.545}{0.008/\sqrt{5}}\right)\end{eqnarray*}
 
 \end_inset
 
  Utilizzando la solida proprietà 
-\begin_inset Formula $P\left(Z>a\right)=1-P(Z\leq a)$
+\begin_inset Formula $P\left(Z\geq a\right)=1-P(Z<a)=1-P(Z\leq a)$
 \end_inset
 
 
 \begin_inset Formula \[
-P\left(Z\leq\frac{k_{1-\alpha}+0.545}{0.008/\sqrt{5}}\right)=1-\alpha\]
+P\left(Z\leq\frac{k_{\alpha}+0.545}{0.008/\sqrt{5}}\right)=1-\alpha\]
 
 \end_inset
 
  da cui 
 \begin_inset Formula \begin{eqnarray*}
-\frac{k_{1-\alpha}+0.545}{0.008/\sqrt{5}} & = & z_{1-\alpha}\\
-k_{1-\alpha} & = & -0.545+z_{1-\alpha}0.008/\sqrt{5}\end{eqnarray*}
+\frac{k_{\alpha}+0.545}{0.008/\sqrt{5}} & = & z_{1-\alpha}\\
+k_{\alpha} & = & -0.545+z_{1-\alpha}0.008/\sqrt{5}\end{eqnarray*}
 
 \end_inset
 
@@ -27918,19 +27911,11 @@ n.s.
 \end_layout
 
 \begin_layout Itemize
-** :
-\begin_inset space \space{}
-\end_inset
-
-se il risultato è significativo all'1%, 
+** : se il risultato è significativo all'1%, 
 \end_layout
 
 \begin_layout Itemize
-*** :
-\begin_inset space \space{}
-\end_inset
-
-se il risultato è significativo allo 0.1%.
+*** : se il risultato è significativo allo 0.1%.
  
 \end_layout
 
@@ -27963,7 +27948,7 @@ Relazione tra errore di prima e di seconda specie
 
 \begin_layout Standard
 Ci chiediamo quale sia la relazione fra errore di prima e di seconda specie.
- Per fare questo analizziamo il seguente esempio.
+ Per fare ciò analizziamo il seguente esempio.
 \end_layout
 
 \begin_layout Standard
@@ -27988,7 +27973,7 @@ begin{esempio}
 \end_inset
 
  e che l'ipotesi nulla sia 
-\begin_inset Formula $H_{0}:\mu=0$
+\begin_inset Formula $H_{0}:\:\mu=0$
 \end_inset
 
  mentre l'ipotesi alternativa
@@ -28007,7 +27992,7 @@ ne di
 \end_inset
 
  
-\begin_inset Formula $H_{A}:\mu=2$
+\begin_inset Formula $H_{A}:\:\mu=1.5$
 \end_inset
 
 .
@@ -28029,8 +28014,56 @@ ne di
 \begin_inset Formula $X$
 \end_inset
 
- sotto le due ipotesi è riportato qui sotto.
- Poiché l'ipotesi alternativa è situata alla destra di 
+ sotto le due ipotesi è riportato nella Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Distribuzione-Normale-sotto"
+
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/dueDensitaNormali.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Distribuzione-Normale-sotto"
+
+\end_inset
+
+Distribuzione Normale sotto l'ipotesi nulla e alternativa.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Poiché l'ipotesi alternativa è situata alla destra di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -28041,13 +28074,13 @@ ne di
  della regione critica al livello di significatività desiderato è definita
  da
 \begin_inset Formula \[
-P_{H_{0}}(X>k)=0.05\Rightarrow k_{95\%}=z_{95\%}=1.645.\]
+P_{H_{0}}(X\geq k)=0.05\Rightarrow k_{5\%}=z_{95\%}=1.645.\]
 
 \end_inset
 
  La regione critica
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 In questo esempio ad uso didattico la statistica 
@@ -28064,23 +28097,24 @@ In questo esempio ad uso didattico la statistica
 \end_inset
 
 .
- Tuttavia è questo un caso che capita rarissimamente nelle applicazioni.
+ Tuttavia è questo un caso più unico che raro che mai si verifica nelle
+ applicazioni reali.
 \end_layout
 
 \end_inset
 
  è 
 \begin_inset Formula \[
-R=\left\{ x\in(1.645,\infty)\right\} .\]
+R=\left\{ x\in[1.645,\infty)\right\} .\]
 
 \end_inset
 
  Graficamente la probabilità 
-\begin_inset Formula $P_{H_{0}}(X>k)$
+\begin_inset Formula $P_{H_{0}}(X\geq k)$
 \end_inset
 
  è rappresentata dalla superficie tratteggiata della figura precedente.
- Una volta determinata la regione critica, il test di 
+ Determinata la regione critica, il test di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -28156,12 +28190,12 @@ Se
 
 \begin_layout Standard
 \noindent
-Una volta determinata la regione critica 
+Fissata la regione critica 
 \begin_inset Formula $R$
 \end_inset
 
  sulla base dell'ipotesi nulla ed il livello di significatività desiderato
- (errore di prima specie) possiamo chiederci cosa sarebbe la probabilità
+ (errore di prima specie), possiamo chiederci cosa sarebbe la probabilità
  di rifiutare l'ipotesi nulla (o di non rifiutarla) se la vera distribuzione
  di 
 \begin_inset Formula $X$
@@ -28197,23 +28231,24 @@ begin{remark}
 \end_inset
 
  cadrà nell'intervallo 
-\begin_inset Formula $(1.645,\infty)$
+\begin_inset Formula $[1.645,\infty)$
 \end_inset
 
  mentre non la rifiuteremo se 
-\begin_inset Formula $x\in(-\infty,1.645]$
+\begin_inset Formula $x\in(-\infty,1.645)$
 \end_inset
 
 .
- Ciò che vogliamo fare ora è calcolare la probabilità dell'evento 
-\begin_inset Formula $X\in(1.645,\infty)$
+ Ciò che desideriamo fare a questo punto è calcolare la probabilità dell'evento
+ 
+\begin_inset Formula $X\in[1.645,\infty)$
 \end_inset
 
  dato che la distribuzione di 
 \begin_inset Formula $X$
 \end_inset
 
- è ora data dall'ipotesi alternativa 
+ è ora determinata dall'ipotesi alternativa 
 \begin_inset Formula $H_{A}$
 \end_inset
 
@@ -28241,12 +28276,12 @@ La probabilità di rigettare
 \end_inset
 
  è definita dalla probabilità dell'evento 
-\begin_inset Formula $X>1.645$
+\begin_inset Formula $X\geq1.645$
 \end_inset
 
  e la sua probabilità è semplicemente
 \begin_inset Formula \begin{equation}
-P\left(X>1.645\right).\label{Prob generica}\end{equation}
+P\left(X\geq1.645\right).\label{Prob generica}\end{equation}
 
 \end_inset
 
@@ -28276,7 +28311,7 @@ reference "Prob generica"
 
 ) che quindi diventa
 \begin_inset Formula \[
-P_{H_{A}}\left(X>1.645\right)\]
+P_{H_{A}}\left(X\geq1.645\right)\]
 
 \end_inset
 
@@ -28298,7 +28333,7 @@ ione, tenendo presente che sotto l'ipotesi alternativa
 
 \begin_layout Standard
 \begin_inset Formula \[
-P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}>1.645-2\right)=P\left(Z>-0.355\right)=P(Z\leq0.355)=63.87\%.\]
+P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}\geq1.645-2\right)=P\left(Z\geq-0.355\right)=P(Z\leq0.355)=63.87\%.\]
 
 \end_inset
 
@@ -28311,18 +28346,22 @@ zio\SpecialChar \-
 na\SpecialChar \-
 ta\SpecialChar \-
 men\SpecialChar \-
-te al fatto che essa sia falsa.
+te al fatto che essa sia falsa e che sia vera 
+\begin_inset Formula $H_{A}$
+\end_inset
+
+.
  Questa probabilità è stata indicata con la lettera 
 \begin_inset Formula $\beta$
 \end_inset
 
- e corrisponde all'azione corretta nel caso che 
+ e corrisponde alla probabilità dell'azione corretta nel caso che 
 \begin_inset Formula $H_{A}$
 \end_inset
 
  sia vera.
  Graficamente essa corrisponde alla superficie alla destra di 
-\begin_inset Formula $k$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  rispetto alla funzione di densità tratteggiata (funzione di densità di
