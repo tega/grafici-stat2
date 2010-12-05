@@ -27736,9 +27736,9 @@ Possiamo dunque chiederci come si decide di ”Rifiutare
 
  ed una regione critica 
 \begin_inset Formula \begin{eqnarray*}
-R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})>k\right\} \text{ (test unilaterale destro),}\\
-R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})<k\right\} \text{ (test unilaterale sinistro),}\\
-R & = & \left\{ (x_{1},...,x_{n})\mid|S(x_{1},...,x_{n})|>k\right\} \text{ (test bilaterale).}\end{eqnarray*}
+R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\geq k_{\alpha}\right\} \text{ (test unilaterale destro),}\\
+R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{\alpha}\right\} \text{ (test unilaterale sinistro),}\\
+R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{{\ oppure\ }}S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} \text{ (test bilaterale).}\end{eqnarray*}
 
 \end_inset
 
@@ -27746,20 +27746,20 @@ R & = & \left\{ (x_{1},...,x_{n})\mid|S(x_{1},...,x_{n})|>k\right\} \text{ (test
 \begin_inset Formula $H_{0}$
 \end_inset
 
- dipende dal fatto che i valori osservati del campione appartengano o meno
- alla regione critica, ovvero se 
+ dipende dal fatto che il campione osservato appartenga o meno alla regione
+ critica, ovvero se (test unilaterale destro) 
 \begin_inset Formula \[
-S(x_{1},...,x_{n})>k\]
+S(x_{1},...,x_{n})\geq k_{\alpha}\]
 
 \end_inset
 
- rifiutiamo 
+ rifiuteremo 
 \begin_inset Formula $H_{0}$
 \end_inset
 
- altrimenti non la rifiutiamo (nel caso di un test unilaterale destro).
- Il valore di 
-\begin_inset Formula $k$
+ altrimenti non la rifiuteremo.
+ Il valore 
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  che definisce la soglia fra rifiuto e non rifiuto di 
@@ -27768,7 +27768,7 @@ S(x_{1},...,x_{n})>k\]
 
  è stato fissato in modo tale che la probabilità di osservare valori più
  estremi di 
-\begin_inset Formula $k$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  sia uguale al livello di significatività 
@@ -27776,7 +27776,7 @@ S(x_{1},...,x_{n})>k\]
 \end_inset
 
  prescelto.
- Per tale motivo si è soliti aggiungere al piede di 
+ Proprio per tale motivo si è soliti aggiungere al piede di 
 \begin_inset Formula $k$
 \end_inset
 
@@ -27788,7 +27788,7 @@ S(x_{1},...,x_{n})>k\]
 \begin_inset Formula $k_{s}$
 \end_inset
 
- il valore 
+ la probabilità 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -27992,7 +27992,7 @@ ne di
 \end_inset
 
  
-\begin_inset Formula $H_{A}:\:\mu=1.5$
+\begin_inset Formula $H_{A}:\:\mu=2$
 \end_inset
 
 .
@@ -28063,18 +28063,18 @@ Distribuzione Normale sotto l'ipotesi nulla e alternativa.
 
 \end_inset
 
-Poiché l'ipotesi alternativa è situata alla destra di 
+Poiché in questo caso l'ipotesi alternativa è situata alla destra di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
 , la soglia 
-\begin_inset Formula $k$
+\begin_inset Formula $k_{5\%}$
 \end_inset
 
- della regione critica al livello di significatività desiderato è definita
- da
+ della regione critica (ad un livello di significatività del 5% quindi)
+ è definita da
 \begin_inset Formula \[
-P_{H_{0}}(X\geq k)=0.05\Rightarrow k_{5\%}=z_{95\%}=1.645.\]
+P_{H_{0}}(X\geq k_{5\%})=0.05\Rightarrow k_{5\%}=z_{95\%}=1.645.\]
 
 \end_inset
 
@@ -28093,7 +28093,7 @@ In questo esempio ad uso didattico la statistica
 \end_inset
 
  coincide quindi con l'intervallo 
-\begin_inset Formula $(k,\infty)$
+\begin_inset Formula $[k_{5\%},\infty)$
 \end_inset
 
 .
@@ -28110,10 +28110,21 @@ R=\left\{ x\in[1.645,\infty)\right\} .\]
 \end_inset
 
  Graficamente la probabilità 
-\begin_inset Formula $P_{H_{0}}(X\geq k)$
+\begin_inset Formula $P_{H_{0}}(X\geq k_{5\%})$
 \end_inset
 
- è rappresentata dalla superficie tratteggiata della figura precedente.
+ è rappresentata dalla superficie 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ della Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:errore prima e sconda specie"
+
+\end_inset
+
+.
  Determinata la regione critica, il test di 
 \begin_inset Formula $H_{0}$
 \end_inset
@@ -28156,11 +28167,11 @@ Se
 \begin_inset Formula $H_{0}.$
 \end_inset
 
- (Se 
+ (Condizionatamente alla correttezza di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
- è vera, questo accadrà, per costruzione, con una probabilità pari ad 
+ ciò accadrà, per costruzione, con una probabilità 
 \begin_inset Formula $\alpha=5\%$
 \end_inset
 
@@ -28176,16 +28187,56 @@ Se
 \begin_inset Formula $H_{0}.$
 \end_inset
 
- (Se 
+ (Condizionatamente alla correttezza di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
- è vera, questo accadrà, per costruzione, con una probabilità uguale ad
- 
+ questo accadrà, per costruzione, con una probabilità uguale ad 
 \begin_inset Formula $1-\alpha=95\%$
 \end_inset
 
 .) 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/errorePrimaESecondaSpecie.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:errore prima e sconda specie"
+
+\end_inset
+
+Errore di prima e seconda specie.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -28442,8 +28493,8 @@ e portarlo al
 \begin_inset Formula $1-\beta$
 \end_inset
 
-? Calcoliamo innanzi tutto il nuovo valore critico di 
-\begin_inset Formula $k$
+? Calcoliamo innanzi tutto il nuovo valore critico 
+\begin_inset Formula $k_{2.5\%}$
 \end_inset
 
 , ovvero
@@ -28451,22 +28502,23 @@ e portarlo al
 
 \begin_layout Standard
 \begin_inset Formula \[
-P_{H_{0}}(X>k)=0.025\Rightarrow k_{97.5\%}=z_{97.5\%}=1.96.\]
+P_{H_{0}}(X\geq k)=0.025\Rightarrow k_{2.5\%}=z_{97.5\%}=1.96.\]
 
 \end_inset
 
- Abbiamo ridotto l'errore di prima specie ed il valore di 
-\begin_inset Formula $k$
+ Abbiamo ridotto 
+\begin_inset Formula $\alpha$
 \end_inset
 
- si è spostato sulla destra rispetto al valore precedente.
+, l'errore di prima specie ed il valore della soglia critica si è spostato
+ sulla destra.
  Cosa implica questo per 
 \begin_inset Formula $\beta$
 \end_inset
 
 ? Sappiamo che 
 \begin_inset Formula \[
-\beta=P_{H_{A}}\left(\text{Rifiuto }H_{0}\right)=P_{H_{A}}\left(X>1.96\right).\]
+\beta=P_{H_{A}}\left(\text{Rifiuto }H_{0}\right)=P_{H_{A}}\left(X\geq1.96\right).\]
 
 \end_inset
 
@@ -28481,7 +28533,7 @@ P_{H_{0}}(X>k)=0.025\Rightarrow k_{97.5\%}=z_{97.5\%}=1.96.\]
 
 :
 \begin_inset Formula \begin{eqnarray*}
-\beta & = & P_{H_{A}}\left(X>1.96\right)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}>-0.04\right)\\
+\beta & = & P_{H_{A}}\left(X\geq1.96\right)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}\geq-0.04\right)\\
  & = & P\left(Z\leq0.04\right)=51.6\%\end{eqnarray*}
 
 \end_inset
@@ -28491,28 +28543,11 @@ P_{H_{0}}(X>k)=0.025\Rightarrow k_{97.5\%}=z_{97.5\%}=1.96.\]
 
 \begin_layout Standard
 \noindent
-Guardando il disegno notiamo che la superficie a destra di 
-\begin_inset Formula $k$
+Guardando il disegno notiamo che la superficie a sinistra di 
+\begin_inset Formula $k_{2.5\%}$
 \end_inset
 
- delimitata dalla densità tratteggiata è diminuita rispetto al valore precedente.
- Si è quindi ridotta la probabilità 
-\begin_inset Formula $\beta$
-\end_inset
-
- di rifiutare 
-\begin_inset Formula $H_{0}$
-\end_inset
-
- quando questa andrebbe giustamente rifiutata: ora 
-\begin_inset Formula $\beta=51.6\%$
-\end_inset
-
- mentre prima era 
-\begin_inset Formula $63.87\%$
-\end_inset
-
-.
+ delimitata dalla densità tratteggiata è aumentata rispetto al valore precedente.
  L'errore di seconda specie 
 \begin_inset Formula $1-\beta$
 \end_inset
@@ -28540,14 +28575,20 @@ Guardando il disegno notiamo che la superficie a destra di
 Da questo esempio deduciamo che esiste un relazione inversa fra errore di
  prima specie ed errore di seconda specie nel senso che qualora si decida
  di diminuire la probabilità d'errore di prima specie si dovrà pagare un
- costo in termini della probabilità d'errore di seconda specie e viceversa.
+ costo in termini di una maggiore probabilità d'errore di seconda specie
+ e viceversa.
  Possiamo semplicemente scrivere quanto detto a parole con
 \begin_inset Formula \[
 \alpha\downarrow\Rightarrow1-\beta\uparrow.\]
 
 \end_inset
 
- Per tale motivo non è possibile scendere a zero con entrambe le probabilità.
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Per tale motivo non è possibile scendere a zero con entrambe le probabilità.
  Si è pertanto soliti fissare il livello di significatività 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -28645,12 +28686,12 @@ begin{definizione}
 
  quando essa è falsa
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Per un test unilaterale sinistro la potenza è definita da 
 \begin_inset Formula \[
-\beta=P_{H_{A}}(S<k_{\alpha})\]
+\beta=P_{H_{A}}(S\leq k_{\alpha})\]
 
 \end_inset
 
@@ -28659,7 +28700,7 @@ Per un test unilaterale sinistro la potenza è definita da
 
 \begin_layout Plain Layout
 \begin_inset Formula \[
-\beta=P_{H_{A}}(|S|>k_{1-\frac{\alpha}{2}}).\]
+\beta=P_{H_{A}}(S\leq k_{s,\alpha}\text{\  oppure\  }S\geq k_{d,\alpha}).\]
 
 \end_inset
 
@@ -28670,7 +28711,7 @@ Per un test unilaterale sinistro la potenza è definita da
 
 
 \begin_inset Formula \[
-\beta=P_{H_{A}}(S>k_{1-\alpha}).\]
+\beta=P_{H_{A}}(S\geq k_{\alpha}).\]
 
 \end_inset
 
@@ -28716,7 +28757,7 @@ reference "esempio caseificio p1"
 \end_inset
 
  del campione ed il secondo basato sul minimo 
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $min(X_{1},\ldots,X_{n})$
 \end_inset
 
  del campione.
@@ -28725,31 +28766,31 @@ reference "esempio caseificio p1"
 \end_inset
 
  i due test avevano condotto alla medesima conclusione.
- Nel primo caso (uso di 
-\begin_inset Formula $\overline{X}$
+ Nel primo caso con 
+\begin_inset Formula $S=\overline{X}$
 \end_inset
 
-) il valore critico 
-\begin_inset Formula $k_{0.95}=-0.539$
+ il valore critico 
+\begin_inset Formula $k_{5\%}=-0.539$
 \end_inset
 
 , infatti 
 \begin_inset Formula \[
-P_{H_{0}}(\overline{X}>-0.539)=5\%.\]
+P_{H_{0}}(\overline{X}\geq-0.539)=5\%.\]
 
 \end_inset
 
- Nel secondo caso (uso di 
-\begin_inset Formula $X_{\min}$
+ Con 
+\begin_inset Formula $S=min(X_{1},\ldots,X_{n})$
 \end_inset
 
-) il valore critico 
-\begin_inset Formula $k_{0.95}=-0.546$
+ il valore critico è 
+\begin_inset Formula $k_{5\%}=-0.546$
 \end_inset
 
- 
+ poiché 
 \begin_inset Formula \[
-P_{H_{0}}(X_{\min}>-0.546)=5\%.\]
+P_{H_{0}}(S\geq-0.546)=5\%.\]
 
 \end_inset
 
@@ -28759,18 +28800,18 @@ P_{H_{0}}(X_{\min}>-0.546)=5\%.\]
 
  per entrambi i test, che per definizione sappiamo essere
 \begin_inset Formula \[
-\beta=P_{H_{A}}(\overline{X}>-0.539)\]
+\beta=P_{H_{A}}(\overline{X}\geq-0.539)\]
 
 \end_inset
 
  e rispettivamente
 \begin_inset Formula \[
-\beta=P_{H_{A}}(X_{\min}>-0.546).\]
+\beta=P_{H_{A}}(S\geq-0.546).\]
 
 \end_inset
 
  Tuttavia l'ipotesi alternativa 
-\begin_inset Formula $H_{A}:\mu>-0.545$
+\begin_inset Formula $H_{A}:\:\mu>-0.545$
 \end_inset
 
  non identifica con precisione la distribuzione, essa si limita a dire che
@@ -28792,7 +28833,7 @@ P_{H_{0}}(X_{\min}>-0.546)=5\%.\]
 \begin_inset Formula $\mu=-0.54$
 \end_inset
 
-, ed in seguito per un valore di 
+ ed in seguito per un valore di 
 \begin_inset Formula $\mu>-0.545$
 \end_inset
 
@@ -28825,18 +28866,24 @@ Potenza quando
 \begin_inset Formula $\bullet$
 \end_inset
 
- Caso particolare, ipotesi alternativa 
+ Caso particolare
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'ipotesi alternativa è 
 \begin_inset Formula $X\sim N(-0.54,0.008^{2})$
 \end_inset
 
- 
-\begin_inset Formula $\Rightarrow\overline{X}\sim N(-0.54,0.008^{2}/5)$
+ da cui segue grazie alla proprietà della distribuzione Normale che 
+\begin_inset Formula $\overline{X}\sim N(-0.54,0.008^{2}/5)$
 \end_inset
 
-
+.
+ Calcolando abbiamo
 \begin_inset Formula \begin{eqnarray*}
-\beta & = & P_{H_{A}}(\overline{X}>-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-(-0.54)}{0.008/\sqrt{5}}}}>\frac{-0.539-(-0.54)}{0.008/\sqrt{5}}\right)\\
- & = & P\left(Z>0.2795\right)=1-P\left(Z\leq0.2795\right)=0.39\end{eqnarray*}
+\beta & = & P_{H_{A}}(\overline{X}\geq-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-(-0.54)}{0.008/\sqrt{5}}}}\geq\frac{-0.539-(-0.54)}{0.008/\sqrt{5}}\right)\\
+ & = & P\left(Z\geq0.2795\right)=1-P\left(Z\leq0.2795\right)=0.39\end{eqnarray*}
 
 \end_inset
 
@@ -28875,7 +28922,7 @@ Il calcolo è esattamente uguale al precedente, basta sostituire
 
 
 \begin_inset Formula \[
-P_{H_{A}}(\overline{X}>-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu}{0.008/\sqrt{5}}}}>\frac{-0.539-\mu}{0.008/\sqrt{5}}\right)=P\left(Z>\frac{-0.539-\mu}{0.008/\sqrt{5}}\right).\]
+P_{H_{A}}(\overline{X}\geq-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu}{0.008/\sqrt{5}}}}\geq\frac{-0.539-\mu}{0.008/\sqrt{5}}\right)=P\left(Z\geq\frac{-0.539-\mu}{0.008/\sqrt{5}}\right).\]
 
 \end_inset
 
@@ -28901,7 +28948,7 @@ P_{H_{A}}(\overline{X}>-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrac
 
 \begin_layout Subsubsection
 Potenza quando 
-\begin_inset Formula $S=X_{\min}$
+\begin_inset Formula $S=min(X_{1},\ldots,X_{n})$
 \end_inset
 
 
@@ -28912,16 +28959,17 @@ Potenza quando
 \begin_inset Formula $\bullet$
 \end_inset
 
- Caso particolare, ipotesi alternativa 
-\begin_inset Formula $X\sim N(-0.54,0.008^{2})$
-\end_inset
-
-
+ Caso particolare
 \end_layout
 
 \begin_layout Standard
 \noindent
-Nel paragrafo 
+L'ipotesi alternativa è che 
+\begin_inset Formula $X\sim N(-0.54,0.008^{2})$
+\end_inset
+
+.
+ Nel paragrafo 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "formulazione test xmin"
@@ -28929,7 +28977,7 @@ reference "formulazione test xmin"
 \end_inset
 
 , punto 4, abbiamo derivato la distribuzione di 
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $S$
 \end_inset
 
  sotto l'ipotesi nulla.
@@ -28937,9 +28985,9 @@ reference "formulazione test xmin"
 \begin_inset Formula $S$
 \end_inset
 
- sotto l'ipotesi alternativa sarà del tutto simile, e cioè 
+ sotto l'ipotesi alternativa sarà identica, cioè 
 \begin_inset Formula \[
-\beta=P_{H_{A}}(S>-0.546)=1-F_{S}(-0.546)=\left[1-F_{X}(-0.546)\right]^{5}\]
+\beta=P_{H_{A}}(S\geq-0.546)=1-F_{S}(-0.546)=\left[1-F_{X}(-0.546)\right]^{5}\]
 
 \end_inset
 
@@ -28974,7 +29022,7 @@ reference "formulazione test xmin"
 
  è dunque
 \begin_inset Formula \[
-\beta=\left[1-F_{X}(-0.546)\right]^{5}=0.277\]
+\beta=\left[1-F_{X}(-0.546)\right]^{5}=0.277.\]
 
 \end_inset
 
@@ -28984,12 +29032,9 @@ reference "formulazione test xmin"
 \end_inset
 
  del campione.
- Ciò significa che
-\begin_inset space \space{}
-\end_inset
-
-quando l'ipotesi nulla è falsa, il test basato sulla statistica 
-\begin_inset Formula $S=X_{\min}$
+ Ciò significa che quando l'ipotesi nulla è falsa, il test basato sulla
+ statistica 
+\begin_inset Formula $S=min(X_{1},\ldots,X_{n})$
 \end_inset
 
  la rigetterà con una probabilità di solo il 
@@ -29010,7 +29055,7 @@ quando l'ipotesi nulla è falsa, il test basato sulla statistica
 \end_inset
 
  è dunque da preferirsi rispetto al test sul minimo 
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $min(X_{1},\ldots,X_{n})$
 \end_inset
 
  poiché 
@@ -29022,7 +29067,7 @@ più potente
 \end_inset
 
  contro l'ipotesi alternativa 
-\begin_inset Formula $H_{A}:\mu=-0.54$
+\begin_inset Formula $H_{A}:\:\mu=-0.54$
 \end_inset
 
 .
@@ -29030,25 +29075,12 @@ più potente
 \begin_inset Formula $\mu=-0.54$
 \end_inset
 
- o la superiorità del test sulla media è ”uniforme”
-\begin_inset space \space{}
-\end_inset
-
-per qualsiasi 
+ o la superiorità del test sulla media è uniforme per qualsiasi 
 \begin_inset Formula $\mu>-0.545$
 \end_inset
 
 .
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagebreak
-\end_layout
-
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -29059,13 +29091,18 @@ pagebreak
 \begin_inset Formula $\bullet$
 \end_inset
 
- Caso generale, ipotesi alternativa 
+ Caso generale
+\end_layout
+
+\begin_layout Standard
+\noindent
+L'ipotesi alternativa è 
 \begin_inset Formula $X\sim N(\mu,0.008^{2})$
 \end_inset
 
 .
  In questo caso come con la media calcoleremo 
-\begin_inset Formula $\beta=P_{H_{A}}(S>-0.546)$
+\begin_inset Formula $\beta=P_{H_{A}}(S\geq-0.546)$
 \end_inset
 
  per un qualsiasi valore di 
@@ -29081,14 +29118,15 @@ pagebreak
 \begin_inset Formula $\mu$
 \end_inset
 
- dà il seguente risultatoSovrapponendo nel medesimo grafico le curve di
- potenza dei due test notiamo che effettivamente il test sulla media è da
- preferire al test sul minimo per qualsiasi ipotesi alternativa semplice
+ dà il seguente risultato???Sovrapponendo nel medesimo grafico le curve
+ di potenza dei due test notiamo che effettivamente il test sulla media
+ è da preferire al test sul minimo per qualsiasi ipotesi alternativa semplice
  
-\begin_inset Formula $H_{A}:\mu=\widetilde{\mu}>-0.545$
+\begin_inset Formula $H_{A}:\:\mu=\widetilde{\mu}>-0.545$
 \end_inset
 
-.Vogliamo ora metterci nei panni del fornitore di latte e ragionare rispetto
+.
+ Vogliamo ora metterci nei panni del fornitore di latte e ragionare rispetto
  alla scelta del test ottimale.
  Supponiamo dapprima che egli sia innocente, cioè che 
 \begin_inset Formula $H_{0}$
@@ -29101,16 +29139,12 @@ pagebreak
 \end_inset
 
  o sul minimo 
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $min(X_{1},\ldots,X_{n})$
 \end_inset
 
 .
  Questo perché, in entrambi i casi, la probabilità di essere ingiustamente
- condannato (errore di prima specie)
-\begin_inset space \space{}
-\end_inset
-
-è uguale 
+ condannato (errore di prima specie) è uguale a 
 \begin_inset Formula $5\%$
 \end_inset
 
@@ -29132,9 +29166,29 @@ pagebreak
 \end_inset
 
  mentre per il test basato su 
-\begin_inset Formula $X_{\min}$
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $min(X_{1},\ldots,X_{n})$
 \end_inset
 
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
  la probabilità sarebbe solo del 
 \begin_inset Formula $27.7\%$
 \end_inset
@@ -29142,8 +29196,8 @@ pagebreak
 .
  È chiaro quindi che il fornitore preferirà il test meno potente poiché
  meno efficace nello scoprire la verità.
- Il tribunale per contro, deciderà di utilizzare il test più potente a disposizi
-one che in questo caso è il test basato su 
+ Il tribunale per contro deciderà di utilizzare il test più potente a disposizio
+ne che in questo caso è il test basato sulla media campionaria 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
@@ -29164,7 +29218,7 @@ In generale potremmo chiederci se, dati
 
 \begin_layout Itemize
 un'ipotesi nulla 
-\begin_inset Formula $H_{0}:\mu=\mu_{0}$
+\begin_inset Formula $H_{0}:\:\mu=\mu_{0}$
 \end_inset
 
 , 
@@ -29172,7 +29226,7 @@ un'ipotesi nulla
 
 \begin_layout Itemize
 un'ipotesi alternativa 
-\begin_inset Formula $H_{A}:\mu=\mu_{A}$
+\begin_inset Formula $H_{A}:\:\mu=\mu_{A}$
 \end_inset
 
 , 
@@ -29225,7 +29279,7 @@ Una popolazione
 
  sia contenuta nella famiglia parametrica 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{\theta}(x),\ \theta\in\Theta\right\} .\]
+\mathcal{P}=\left\{ f(x;\theta),\ \theta\in\Theta\right\} .\]
 
 \end_inset
 
@@ -29248,7 +29302,7 @@ Un'ipotesi nulla
 
  nel seguente modo
 \begin_inset Formula \[
-H_{0}:\theta=\theta_{0}\]
+H_{0}:\:\theta=\theta_{0}\]
 
 \end_inset
 
@@ -29267,7 +29321,7 @@ H_{0}:\theta=\theta_{0}\]
 \begin_layout Enumerate
 Un'ipotesi alternativa semplice 
 \begin_inset Formula \[
-H_{A}:\theta=\theta_{A}\]
+H_{A}:\:\theta=\theta_{A}\]
 
 \end_inset
 
@@ -29313,7 +29367,7 @@ Se i valori osservati danno un valore della statistica
 \end_inset
 
  superiore alla soglia 
-\begin_inset Formula $k_{1-\alpha}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  si rifiuta l'ipotesi nulla.
@@ -29322,7 +29376,7 @@ Se i valori osservati danno un valore della statistica
 \end_inset
 
  e 
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $min(X_{1},\ldots,X_{n})$
 \end_inset
 
 .
@@ -29332,12 +29386,12 @@ Se i valori osservati danno un valore della statistica
 
 
 \begin_inset Formula \begin{equation}
-R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})>k_{1-\alpha}\right\} \end{equation}
+R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\geq k_{\alpha}\right\} \end{equation}
 
 \end_inset
 
  dove la soglia 
-\begin_inset Formula $k_{1-\alpha}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  è stata scelta in maniera tale che la regione critica 
@@ -29376,7 +29430,7 @@ reference "soglia k_alpha"
 
 
 \begin_inset Formula \begin{equation}
-P_{H_{0}}(R)=P_{H_{0}}(S>k_{1-\alpha})=\alpha\text{.}\label{soglia k_alpha}\end{equation}
+P_{H_{0}}(R)=P_{H_{0}}(S\geq k_{\alpha})=\alpha\text{.}\label{soglia k_alpha}\end{equation}
 
 \end_inset
 
@@ -29384,13 +29438,13 @@ P_{H_{0}}(R)=P_{H_{0}}(S>k_{1-\alpha})=\alpha\text{.}\label{soglia k_alpha}\end{
 \begin_inset Formula $S^{\ast}$
 \end_inset
 
- (e la soglia 
+ e la soglia 
 \begin_inset Formula $k_{\alpha}^{\ast}$
 \end_inset
 
- corrispondente) tale per cui 
+ ad essa associata tale per cui 
 \begin_inset Formula \begin{equation}
-P_{H_{A}}(R^{\ast})=P_{H_{A}}(S^{\ast}>k_{\alpha}^{\ast})=P(\text{rifiuto }H_{0}\text{ }|\ H_{0}\text{ è falsa})=\beta\end{equation}
+P_{H_{A}}(R^{\ast})=P_{H_{A}}(S^{\ast}\geq k_{\alpha}^{\ast})=P(\text{rifiuto }H_{0}\text{ }|\ H_{0}\text{ è falsa})=\beta\end{equation}
 
 \end_inset
 
@@ -29503,7 +29557,7 @@ reference "table:esempio2_neyman_pearson"
 \begin_inset Formula $R^{\ast}$
 \end_inset
 
- della raccolto ottimale, che corrisponde a 
+ del raccolto ottimale, che corrisponde a 
 \begin_inset Formula \[
 R^{\ast}=\left\{ g_{32},g_{24},g_{1},g_{21},g_{36},g_{16},g_{27}\right\} .\]
 
@@ -88827,7 +88881,7 @@ P_{r}(R^{\ast})-P_{r}(R)=\sum\limits _{g\in A}p_{r}(g)-\sum\limits _{g\in C}p_{r
 \end_inset
 
 , per ogni 
-\begin_inset Formula $x\in R^{\ast}$
+\begin_inset Formula $g\in R^{\ast}$
 \end_inset
 
  (e quindi anche per ogni 
@@ -89039,12 +89093,12 @@ S^{\ast}(g)=\frac{p_{r}(g)}{p_{s}(g)}\]
  utilizzata per la costruzione della regione critica (riempire il sacco)
  
 \begin_inset Formula \[
-R^{\ast}=\left\{ g\ |\ S^{\ast}(g)>k_{1-\alpha}^{\ast}\right\} \]
+R^{\ast}=\left\{ g\ |\ S^{\ast}(g)>k_{\alpha}^{\ast}\right\} \]
 
 \end_inset
 
  con 
-\begin_inset Formula $k_{1-\alpha}^{\ast}$
+\begin_inset Formula $k_{\alpha}^{\ast}$
 \end_inset
 
  scelto in maniera tale che 
@@ -89059,7 +89113,7 @@ P_{s}(R)=\alpha=5\text{ kg.}\]
 
  diventa semplicemente il rapporto 
 \begin_inset Formula \[
-S^{\ast}(x_{1},...,x_{n})=\frac{f_{\theta_{A}}(x_{1},...,x_{n})}{f_{\theta_{0}}(x_{1},...,x_{n})}\]
+S^{\ast}(x_{1},...,x_{n})=\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n};\theta_{0})}\]
 
 \end_inset
 
@@ -89071,7 +89125,7 @@ S^{\ast}(x_{1},...,x_{n})=\frac{f_{\theta_{A}}(x_{1},...,x_{n})}{f_{\theta_{0}}(
 
  corrispondente è dunque 
 \begin_inset Formula \begin{equation}
-R^{\ast}=\left\{ (x_{1},...,x_{n})\ |\ S^{\ast}(x_{1},...,x_{n})=\frac{f_{\theta_{A}}(x_{1},...,x_{n})}{f_{\theta_{0}}(x_{1},...,x_{n})}>k_{1-\alpha}^{\ast}\right\} .\label{criterio neyman pearson}\end{equation}
+R^{\ast}=\left\{ (x_{1},...,x_{n})\ |\ S^{\ast}(x_{1},...,x_{n})=\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n};\theta_{0})}>k_{1-\alpha}^{\ast}\right\} .\label{criterio neyman pearson}\end{equation}
 
 \end_inset
 
@@ -89091,18 +89145,18 @@ o la maggiore evidenza a favore dell'ipotesi alternativa (contro l'ipotesi
  nulla).
  La regione critica ottimale sarà dunque composta dalle realizzazioni con
  un alto rapporto 
-\begin_inset Formula $\frac{f_{\theta_{A}}(x_{1},...,x_{n})}{f_{\theta_{0}}(x_{1},...,x_{n})}$
+\begin_inset Formula $\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n};\theta_{0})}$
 \end_inset
 
 .
  La soglia 
-\begin_inset Formula $k_{1-\alpha}^{\ast}$
+\begin_inset Formula $k_{\alpha}^{\ast}$
 \end_inset
 
  è determinata dalla condizione che l'errore di prima specie sia uguale
  al livello desiderato
 \begin_inset Formula \[
-P_{H_{0}}(R^{\ast})=P_{H_{0}}(S^{\ast}>k_{1-\alpha}^{\ast})=\alpha.\]
+P_{H_{0}}(R^{\ast})=P_{H_{0}}(S^{\ast}>k_{\alpha}^{\ast})=\alpha.\]
 
 \end_inset
 

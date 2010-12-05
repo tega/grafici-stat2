@@ -55,8 +55,8 @@ text(0.6005,400,expression(f[bar(X)[25]]),cex=1.5)
 text(0.60196,10,expression(paste(2.5, symbol("%"))),cex=0.8,pos=4)
 text(0.59814,10,expression(paste(2.5, symbol("%"))),cex=0.8,pos=2)
 
-text(0.59808,-7,expression(paste(k[s,5,symbol("%"),])),cex=1)
-text(0.60192,-7,expression(paste(k[d,5,symbol("%"),])),cex=1)
+text(0.59808,-7,expression(k[paste(s,",",5,symbol("%"))]),cex=1)
+text(0.60192,-7,expression(k[paste(d,",",5,symbol("%"))]),cex=1)
 
 dev.off()
 
