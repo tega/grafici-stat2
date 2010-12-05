@@ -41,6 +41,7 @@ Yd <- c(0,dnorm(seq(q95,3.5,length.out=30)),0)
 polygon(Xd,Yd,col="yellow",border = NA)
 
 text(0.2, 0.025, expression(1-beta),pos=4,cex = 1.2)
+
 text(2, 0.025, expression(alpha),cex = 1)
 text(1.65, -0.007, expression(k[paste(5,symbol("%"))]),cex = 1)
 dev.off()
