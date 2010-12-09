@@ -26919,7 +26919,7 @@ Il motivo per cui si percorre questa strada è semplice: prendiamo ad esempio
 
  
 \begin_inset Formula \[
-P(\min(X_{1},...,X_{5})\geq s)=P(X_{1}\geq s,X_{2}\geq s,...,X_{5}\geq s)\text{.}\]
+P(\min(X_{1},...,X_{5})>s)=P(X_{1}>s,X_{2}>s,...,X_{5}>s)\text{.}\]
 
 \end_inset
 
@@ -26929,21 +26929,17 @@ P(\min(X_{1},...,X_{5})\geq s)=P(X_{1}\geq s,X_{2}\geq s,...,X_{5}\geq s)\text{.
 
  
 \begin_inset Formula \[
-P(X_{1}\geq s,...,X_{5}\geq s)=\prod_{i=1}^{5}P(X_{i}\geq s).\]
+P(X_{1}>s,...,X_{5}>s)=\prod_{i=1}^{5}P(X_{i}>s).\]
 
 \end_inset
 
  Infine, poiché 
-\begin_inset Formula $P(X_{i}\geq s)=1-P(X_{i}\leq s)$
+\begin_inset Formula $P(X_{i}>s)=1-P(X_{i}\leq s)$
 \end_inset
 
- (la distribuzione di 
-\begin_inset Formula $X_{i}$
-\end_inset
-
- è continua), otteniamo la seguente identità 
+, otteniamo la seguente identità 
 \begin_inset Formula \[
-P(\min(X_{1},...,X_{5})\geq s)=P(X_{1}\geq s,...,X_{5}\geq s)=\prod_{i=1}^{5}\left(1-P(X_{i}\leq s)\right)\]
+P(\min(X_{1},...,X_{5})>s)=P(X_{1}>s,...,X_{5}>s)=\prod_{i=1}^{5}\left(1-P(X_{i}\leq s)\right)\]
 
 \end_inset
 
@@ -27084,10 +27080,6 @@ Densità di
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -27465,7 +27457,47 @@ Il valore realizzato
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/regioneCriticaTestMinimo.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Regione critica con 
+\begin_inset Formula $S=min(X_{1},\ldots,X_{n})$
+\end_inset
+
+ e 
+\begin_inset Formula $n=2$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -27487,19 +27519,7 @@ tà del
  Per il fornitore dunque, potrebbe essere indifferente l'uso dell'uno o
  dell'altro al fine di valutare la sua onestà.
  Riprenderemo questo discorso all'interno del prossimo paragrafo.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-pagebreak
-\end_layout
-
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -27534,11 +27554,11 @@ non rifiutare
 
 \begin_layout Standard
 \noindent
-Per quanto riguarda invece gli errori abbiamo due tipi di errori che indichiamo
- con un asterisco
+Per quanto riguarda invece gli errori abbiamo due tipi di errori evidenziati
+ in tabella con un asterisco:
 \begin_inset Formula \[
 \begin{tabular}{l|c|c|}
- \cline{2-3}  &  \ensuremath{H_{0}}vera  &  \ensuremath{H_{0}}falsa \\
+ \cline{2-3}  &  \ensuremath{H_{0}}\: vera  &  \ensuremath{H_{0}}\: falsa \\
 \hline \multicolumn{1}{|l|}{Rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
 \multicolumn{1}{c}{\ensuremath{\alpha}}\end{tabular}  &  \begin{tabular}{l}
@@ -27650,7 +27670,7 @@ reference "esempio caseificio p1"
 
  del caseificio abbiamo quale ipotesi nulla 
 \begin_inset Formula \[
-H_{0}:\text{”innocente”}\]
+H_{0}:\text{”Il fornitore è innocente”.}\]
 
 \end_inset
 
@@ -27704,7 +27724,7 @@ Idealmente non vorremmo mai rifiutare
 \begin_inset Formula $H_{0}$
 \end_inset
 
- quando questa è vera (cioè vorremmo un 
+ quando questa è vera (vorremmo un 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -27723,6 +27743,13 @@ Idealmente non vorremmo mai rifiutare
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \noindent
 Possiamo dunque chiederci come si decide di ”Rifiutare 
 \begin_inset Formula $H_{0}$
@@ -27735,39 +27762,143 @@ Possiamo dunque chiederci come si decide di ”Rifiutare
 \end_inset
 
  ed una regione critica 
-\begin_inset Formula \begin{eqnarray*}
-R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\geq k_{\alpha}\right\} \text{ (test unilaterale destro),}\\
-R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{\alpha}\right\} \text{ (test unilaterale sinistro),}\\
-R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{{\ oppure\ }}S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} \text{ (test bilaterale).}\end{eqnarray*}
+\begin_inset Formula $R$
+\end_inset
+
+, quest'ultima definita in un test unilaterale tramite una soglia critica
+ 
+\begin_inset Formula $k_{\alpha}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+test unilaterale destro
+\begin_inset Formula \[
+R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\geq k_{\alpha}\right\} \text{,}\]
 
 \end_inset
 
- Il criterio per rifiutare 
+
+\end_layout
+
+\begin_layout Itemize
+\noindent
+test unilaterale sinistro 
+\begin_inset Formula \[
+R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{\alpha}\right\} ,\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+o una soglia critica inferiore 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $k_{s,\alpha}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ ed una superiore 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $k_{d,\alpha}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+test bilaterale
+\begin_inset Formula \begin{eqnarray*}
+R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{{\ oppure\ }}S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} .\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La decisione se rifiutare 
 \begin_inset Formula $H_{0}$
 \end_inset
 
  dipende dal fatto che il campione osservato appartenga o meno alla regione
- critica, ovvero se (test unilaterale destro) 
+ critica.
+ Se (test unilaterale destro) 
 \begin_inset Formula \[
 S(x_{1},...,x_{n})\geq k_{\alpha}\]
 
 \end_inset
 
- rifiuteremo 
+rifiuteremo 
 \begin_inset Formula $H_{0}$
 \end_inset
 
  altrimenti non la rifiuteremo.
- Il valore 
+ La costante 
 \begin_inset Formula $k_{\alpha}$
 \end_inset
 
- che definisce la soglia fra rifiuto e non rifiuto di 
+, che definisce la soglia fra rifiuto e non rifiuto di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
- è stato fissato in modo tale che la probabilità di osservare valori più
- estremi di 
+, è fissata 
+\emph on
+per costruzione
+\emph default
+ in modo tale che la probabilità 
+\emph on
+sotto l'ipotesi nulla
+\emph default
+ 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ di osservare valori più estremi di 
 \begin_inset Formula $k_{\alpha}$
 \end_inset
 
@@ -27775,8 +27906,13 @@ S(x_{1},...,x_{n})\geq k_{\alpha}\]
 \begin_inset Formula $\alpha$
 \end_inset
 
- prescelto.
- Proprio per tale motivo si è soliti aggiungere al piede di 
+ prescelto
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\noindent
+Proprio per tale motivo si è soliti aggiungere al piede di 
 \begin_inset Formula $k$
 \end_inset
 
@@ -27789,6 +27925,20 @@ S(x_{1},...,x_{n})\geq k_{\alpha}\]
 \end_inset
 
  la probabilità 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ L'errore di primo tipo è dunque 
+\emph on
+per costruzione
+\emph default
+ uguale ad 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -27903,19 +28053,35 @@ di significatività è del 5%.
 
 \begin_layout Itemize
 n.s.
- : se il risultato non è significativo al 5%, 
+ : se il risultato non è significativo al 5% (
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ non rifiutata), 
 \end_layout
 
 \begin_layout Itemize
-* : se il risultato è significativo al 5%, 
+* : se il risultato è significativo al 5% (
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ rifiutata), 
 \end_layout
 
 \begin_layout Itemize
-** : se il risultato è significativo all'1%, 
+** : se il risultato è significativo all'1% (
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ rifiutata), 
 \end_layout
 
 \begin_layout Itemize
-*** : se il risultato è significativo allo 0.1%.
+*** : se il risultato è significativo allo 0.1% (
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ rifiutata).
  
 \end_layout
 
@@ -27935,20 +28101,20 @@ end{remark}
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Relazione tra errore di prima e di seconda specie
 \end_layout
 
 \begin_layout Standard
-Ci chiediamo quale sia la relazione fra errore di prima e di seconda specie.
- Per fare ciò analizziamo il seguente esempio.
+Al fine di comprendere la relazione fra l'errore di prima specie 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ e quello di seconda specie 
+\begin_inset Formula $1-\beta$
+\end_inset
+
+ analizziamo il seguente esempio.
 \end_layout
 
 \begin_layout Standard
@@ -28054,10 +28220,6 @@ Distribuzione Normale sotto l'ipotesi nulla e alternativa.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -28167,7 +28329,7 @@ Se
 \begin_inset Formula $H_{0}.$
 \end_inset
 
- (Condizionatamente alla correttezza di 
+ Condizionatamente alla correttezza di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -28175,7 +28337,8 @@ Se
 \begin_inset Formula $\alpha=5\%$
 \end_inset
 
-.) 
+.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -28187,7 +28350,33 @@ Se
 \begin_inset Formula $H_{0}.$
 \end_inset
 
- (Condizionatamente alla correttezza di 
+ Condizio
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+na
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+tamente alla correttezza di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -28195,7 +28384,8 @@ Se
 \begin_inset Formula $1-\alpha=95\%$
 \end_inset
 
-.) 
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -28226,7 +28416,11 @@ name "fig:errore prima e sconda specie"
 
 \end_inset
 
-Errore di prima e seconda specie.
+Errore di prima e seconda specie, 
+\begin_inset Formula $\alpha=5\%$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -28245,10 +28439,9 @@ Fissata la regione critica
 \begin_inset Formula $R$
 \end_inset
 
- sulla base dell'ipotesi nulla ed il livello di significatività desiderato
- (errore di prima specie), possiamo chiederci cosa sarebbe la probabilità
- di rifiutare l'ipotesi nulla (o di non rifiutarla) se la vera distribuzione
- di 
+ sulla base del livello di significatività desiderato (errore di prima specie),
+ possiamo chiederci quanto sarebbe la probabilità di rifiutare l'ipotesi
+ nulla (o di non rifiutarla) se la vera distribuzione di 
 \begin_inset Formula $X$
 \end_inset
 
@@ -28326,7 +28519,7 @@ La probabilità di rigettare
 \begin_inset Formula $H_{0}$
 \end_inset
 
- è definita dalla probabilità dell'evento 
+ è quindi definita dalla probabilità dell'evento 
 \begin_inset Formula $X\geq1.645$
 \end_inset
 
@@ -28379,7 +28572,7 @@ ione, tenendo presente che sotto l'ipotesi alternativa
 \begin_inset Formula $2$
 \end_inset
 
- (mentre la varianza in questo caso è ancora 1).
+ e la varianza 1.
 \end_layout
 
 \begin_layout Standard
@@ -28388,7 +28581,12 @@ P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}\geq1.645-2\right)=P\lef
 
 \end_inset
 
- Abbiamo in questo modo calcolato la probabilità di rifiutare 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Abbiamo così calcolato la probabilità di rifiutare 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -28397,7 +28595,7 @@ zio\SpecialChar \-
 na\SpecialChar \-
 ta\SpecialChar \-
 men\SpecialChar \-
-te al fatto che essa sia falsa e che sia vera 
+te al fatto che essa sia falsa e che sia invece vera 
 \begin_inset Formula $H_{A}$
 \end_inset
 
@@ -28411,26 +28609,47 @@ te al fatto che essa sia falsa e che sia vera
 \end_inset
 
  sia vera.
- Graficamente essa corrisponde alla superficie alla destra di 
-\begin_inset Formula $k_{\alpha}$
+ In Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:errore prima e sconda specie"
+
 \end_inset
 
- rispetto alla funzione di densità tratteggiata (funzione di densità di
- 
+ essa corrisponde alla superficie rispetto alla funzione di densità 
+\emph on
+tratteggiata
+\emph default
+
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+\noindent
+La densità tratteggiata corrisponde alla funzione di densità di 
 \begin_inset Formula $X$
 \end_inset
 
- rispetto a 
+ quando 
 \begin_inset Formula $H_{A}$
 \end_inset
 
-).
+ è vera.
+\end_layout
+
+\end_inset
+
+ alla destra di 
+\begin_inset Formula $k_{\alpha}$
+\end_inset
+
+.
  In teoria noi vorremmo che questa probabilità fosse uguale 
 \begin_inset Formula $1$
 \end_inset
 
 , ma come è evidente dal disegno questo è impossibile per 
-\begin_inset Formula $\alpha>0$
+\begin_inset Formula $\alpha<1$
 \end_inset
 
 .
@@ -28476,11 +28695,7 @@ pio ad un errore di prima specie del
 \begin_layout Standard
 \noindent
 Potremmo decidere a questo punto di diminuire l'errore di prima specie (il
- livello di significatività)
-\begin_inset space \space{}
-\end_inset
-
-e portarlo al 
+ livello di significatività) e portarlo al 
 \begin_inset Formula $2.5\%$
 \end_inset
 
@@ -28502,7 +28717,7 @@ e portarlo al
 
 \begin_layout Standard
 \begin_inset Formula \[
-P_{H_{0}}(X\geq k)=0.025\Rightarrow k_{2.5\%}=z_{97.5\%}=1.96.\]
+P_{H_{0}}(X\geq k_{0.025})=0.025\Rightarrow k_{2.5\%}=z_{97.5\%}=1.96.\]
 
 \end_inset
 
@@ -28543,11 +28758,26 @@ P_{H_{0}}(X\geq k)=0.025\Rightarrow k_{2.5\%}=z_{97.5\%}=1.96.\]
 
 \begin_layout Standard
 \noindent
-Guardando il disegno notiamo che la superficie a sinistra di 
+Confrontando la nuova Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Errore-di-prima-e-seconda2"
+
+\end_inset
+
+ alla Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:errore prima e sconda specie"
+
+\end_inset
+
+ notiamo che la superficie a sinistra di 
 \begin_inset Formula $k_{2.5\%}$
 \end_inset
 
  delimitata dalla densità tratteggiata è aumentata rispetto al valore precedente.
+ L'incremento è dato dalla superficie verde.
  L'errore di seconda specie 
 \begin_inset Formula $1-\beta$
 \end_inset
@@ -28561,6 +28791,52 @@ Guardando il disegno notiamo che la superficie a sinistra di
 \end_inset
 
 .
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/errorePrimaESecondaSpecie2.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Errore-di-prima-e-seconda2"
+
+\end_inset
+
+Errore di prima e seconda specie, 
+\begin_inset Formula $\alpha=2.5\%$
+\end_inset
+
+ .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -28700,7 +28976,7 @@ Per un test unilaterale sinistro la potenza è definita da
 
 \begin_layout Plain Layout
 \begin_inset Formula \[
-\beta=P_{H_{A}}(S\leq k_{s,\alpha}\text{\  oppure\  }S\geq k_{d,\alpha}).\]
+\beta=P_{H_{A}}(S\leq k_{s,\alpha}\text{\ oppure\ }S\geq k_{d,\alpha}).\]
 
 \end_inset
 
@@ -28798,7 +29074,8 @@ P_{H_{0}}(S\geq-0.546)=5\%.\]
 \begin_inset Formula $\beta$
 \end_inset
 
- per entrambi i test, che per definizione sappiamo essere
+ per entrambi i test.
+ Per definizione la potenza del test è
 \begin_inset Formula \[
 \beta=P_{H_{A}}(\overline{X}\geq-0.539)\]
 
@@ -28810,7 +29087,12 @@ P_{H_{0}}(S\geq-0.546)=5\%.\]
 
 \end_inset
 
- Tuttavia l'ipotesi alternativa 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Tuttavia l'ipotesi alternativa 
 \begin_inset Formula $H_{A}:\:\mu>-0.545$
 \end_inset
 
@@ -28935,15 +29217,75 @@ P_{H_{A}}(\overline{X}\geq-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underb
 \end_inset
 
 .
- È dunque possibile rappresentare graficamente 
+ In Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Potenza-del-test"
+
+\end_inset
+
+ è possibile osservare 
 \begin_inset Formula $\beta$
 \end_inset
 
- come funzione del valore del parametro 
+ quale funzione del valore del parametro 
 \begin_inset Formula $\mu$
 \end_inset
 
 .
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/potenzaXMin.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Potenza-del-test"
+
+\end_inset
+
+Potenza del test dell'Esempio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "esempio caseificio p1"
+
+\end_inset
+
+ con 
+\begin_inset Formula $S=\overline{X}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -28987,11 +29329,16 @@ reference "formulazione test xmin"
 
  sotto l'ipotesi alternativa sarà identica, cioè 
 \begin_inset Formula \[
-\beta=P_{H_{A}}(S\geq-0.546)=1-F_{S}(-0.546)=\left[1-F_{X}(-0.546)\right]^{5}\]
+\beta=P_{H_{A}}(S\geq-0.546)=1-F_{S}(-0.546)=\left[1-F_{X}(-0.546)\right]^{5},\]
 
 \end_inset
 
- ma con 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+ma con 
 \begin_inset Formula $F_{X}(s)$
 \end_inset
 
@@ -29001,18 +29348,6 @@ reference "formulazione test xmin"
 
  sotto 
 \begin_inset Formula $H_{A}$
-\end_inset
-
-, ovvero la funzione di ripartizione di una 
-\begin_inset Formula $V.A.$
-\end_inset
-
- Normale di valore atteso 
-\begin_inset Formula $-0.54$
-\end_inset
-
- e varianza 
-\begin_inset Formula $0.008^{2}$
 \end_inset
 
 .
@@ -29026,7 +29361,12 @@ reference "formulazione test xmin"
 
 \end_inset
 
- Osserviamo che il valore calcolato è inferiore a quello ottenuto utilizzando
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Osserviamo che il valore calcolato è inferiore a quello ottenuto utilizzando
  la media 
 \begin_inset Formula $\overline{X}$
 \end_inset
@@ -29054,7 +29394,7 @@ reference "formulazione test xmin"
 \begin_inset Formula $\overline{X}$
 \end_inset
 
- è dunque da preferirsi rispetto al test sul minimo 
+ è dunque da preferirsi rispetto al test sul 
 \begin_inset Formula $min(X_{1},\ldots,X_{n})$
 \end_inset
 
@@ -29110,7 +29450,14 @@ L'ipotesi alternativa è
 \end_inset
 
 .
- Il grafico della potenza 
+ In Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Potenza-del-test2"
+
+\end_inset
+
+ rappresentiamo graficamente la potenza 
 \begin_inset Formula $\beta$
 \end_inset
 
@@ -29118,15 +29465,68 @@ L'ipotesi alternativa è
 \begin_inset Formula $\mu$
 \end_inset
 
- dà il seguente risultato???Sovrapponendo nel medesimo grafico le curve
- di potenza dei due test notiamo che effettivamente il test sulla media
- è da preferire al test sul minimo per qualsiasi ipotesi alternativa semplice
- 
+.
+ Sovrapponendo nel medesimo grafico le curve di potenza dei due test notiamo
+ che effettivamente il test sulla media è da preferire al test sul minimo
+ per qualsiasi ipotesi alternativa semplice 
 \begin_inset Formula $H_{A}:\:\mu=\widetilde{\mu}>-0.545$
 \end_inset
 
 .
- Vogliamo ora metterci nei panni del fornitore di latte e ragionare rispetto
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/potenzaMediaEpotenzaXMin.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Potenza-del-test2"
+
+\end_inset
+
+Potenza del test dell'Esempio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "esempio caseificio p1"
+
+\end_inset
+
+ con 
+\begin_inset Formula $S=min$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+Vogliamo ora metterci nei panni del fornitore di latte e ragionare rispetto
  alla scelta del test ottimale.
  Supponiamo dapprima che egli sia innocente, cioè che 
 \begin_inset Formula $H_{0}$
@@ -29428,7 +29828,7 @@ reference "soglia k_alpha"
 
 \end_inset
 
-
+ il vincolo
 \begin_inset Formula \begin{equation}
 P_{H_{0}}(R)=P_{H_{0}}(S\geq k_{\alpha})=\alpha\text{.}\label{soglia k_alpha}\end{equation}
 
@@ -29442,7 +29842,31 @@ P_{H_{0}}(R)=P_{H_{0}}(S\geq k_{\alpha})=\alpha\text{.}\label{soglia k_alpha}\en
 \begin_inset Formula $k_{\alpha}^{\ast}$
 \end_inset
 
- ad essa associata tale per cui 
+ ad essa associata tale per cui
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+\begin_inset Formula \[
+P_{H_{0}}(S^{\ast}\geq k_{\alpha}^{\ast})=\alpha\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+e
 \begin_inset Formula \begin{equation}
 P_{H_{A}}(R^{\ast})=P_{H_{A}}(S^{\ast}\geq k_{\alpha}^{\ast})=P(\text{rifiuto }H_{0}\text{ }|\ H_{0}\text{ è falsa})=\beta\end{equation}
 
@@ -29520,6 +29944,14 @@ State passeggiando tranquillamente nel bosco quando notate l'entrata di
 \end_inset
 
 .
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -29568,11 +30000,11 @@ R^{\ast}=\left\{ g_{32},g_{24},g_{1},g_{21},g_{36},g_{16},g_{27}\right\} .\]
 \end_inset
 
  prevede di prendere solo gli oggetti aventi un rapporto prezzo/peso superiore
- ad una soglia 
+ o uguale ad una soglia 
 \begin_inset Formula $k_{\alpha}^{\ast}$
 \end_inset
 
-, che nel nostro caso è uguale a 7'481.30.
+, che nel nostro caso è uguale a 8'888.90.
  Tale soglia è stata scelta in maniera che il peso complessivo della regione
  critica sia uguale ad 
 \begin_inset Formula $\alpha$
@@ -29593,7 +30025,7 @@ R^{\ast}=\left\{ g_{32},g_{24},g_{1},g_{21},g_{36},g_{16},g_{27}\right\} .\]
 
  denota il peso totale)
 \begin_inset Formula \[
-P_{s}(R^{\ast})=P_{s}(g\ |\ S^{\ast}(g)>k_{\alpha}^{\ast})=5\ \text{kg.}\]
+P_{s}(R^{\ast})=P_{s}(g\ |\ S^{\ast}(g)\geq k_{\alpha}^{\ast})=5\ \text{kg.}\]
 
 \end_inset
 
@@ -29627,18 +30059,14 @@ begin{theorem}
 \end_inset
 
  La strategia di selezione 
-\begin_inset Formula $S^{\ast}=\frac{p_{r}(g)}{p_{s}(g)}>k_{\alpha}^{\ast}$
+\begin_inset Formula $S^{\ast}=\frac{p_{r}(g)}{p_{s}(g)}\geq k_{\alpha}^{\ast}$
 \end_inset
 
  massimizza il valore (prezzo totale) del raccolto 
 \begin_inset Formula $R$
 \end_inset
 
-
-\begin_inset space \space{}
-\end_inset
-
-rispetto a tutte le possibili strategie 
+ rispetto a tutte le possibili strategie 
 \begin_inset Formula $S$
 \end_inset
 
@@ -88877,7 +89305,7 @@ P_{r}(R^{\ast})-P_{r}(R)=\sum\limits _{g\in A}p_{r}(g)-\sum\limits _{g\in C}p_{r
 \end_inset
 
  se e solo se 
-\begin_inset Formula $\frac{p_{r}(g)}{p_{s}(g)}>k_{\alpha}^{\ast}$
+\begin_inset Formula $\frac{p_{r}(g)}{p_{s}(g)}\geq k_{\alpha}^{\ast}$
 \end_inset
 
 , per ogni 
@@ -88889,13 +89317,13 @@ P_{r}(R^{\ast})-P_{r}(R)=\sum\limits _{g\in A}p_{r}(g)-\sum\limits _{g\in C}p_{r
 \end_inset
 
 ) sarà vero che 
-\begin_inset Formula $p_{r}(g)>p_{s}(g)k_{\alpha}^{\ast}$
+\begin_inset Formula $p_{r}(g)\geq k_{\alpha}^{\ast}p_{s}(g)$
 \end_inset
 
 .
  Di conseguenza varrà la seguente disuguaglianza 
 \begin_inset Formula \[
-P_{r}(R^{\ast})-P_{r}(R)>k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{r}(g).\]
+P_{r}(R^{\ast})-P_{r}(R)\geq k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{r}(g).\]
 
 \end_inset
 
@@ -88921,17 +89349,14 @@ P_{r}(R^{\ast})-P_{r}(R)>k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\lim
 
  e di conseguenza
 \begin_inset Formula \begin{eqnarray*}
-P_{r}(R^{\ast})-P_{r}(R) & > & k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{r}(g)\\
+P_{r}(R^{\ast})-P_{r}(R) & \geq & k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{r}(g)\\
  & \geq & k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-k_{\alpha}^{\ast}\sum\limits _{g\in C}p_{s}(g)\\
  & = & k_{\alpha}^{\ast}\left(\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{s}(g)\right)\end{eqnarray*}
 
 \end_inset
 
- Infine, notiamo che la quantità fra parentesi è uguale 0:
-\begin_inset space \space{}
-\end_inset
-
-
+ Infine, notiamo che la quantità fra parentesi è uguale 0.
+ Infatti
 \begin_inset Formula \begin{eqnarray*}
 \sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{s}(g) & = & \sum\limits _{g\in A}p_{s}(g)+\sum\limits _{g\in B}p_{s}(g)-\sum\limits _{g\in B}p_{s}(g)-\sum\limits _{g\in C}p_{s}(g)\\
  & = & \sum\limits _{g\in R^{\ast}}p_{s}(g)-\sum\limits _{g\in R}p_{s}(g)\\
@@ -88941,7 +89366,7 @@ P_{r}(R^{\ast})-P_{r}(R) & > & k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\s
 
  Abbiamo dunque dimostrato che 
 \begin_inset Formula \[
-P_{r}(R^{\ast})>P_{r}(R).\]
+P_{r}(R^{\ast})\geq P_{r}(R).\]
 
 \end_inset
 
@@ -89093,7 +89518,7 @@ S^{\ast}(g)=\frac{p_{r}(g)}{p_{s}(g)}\]
  utilizzata per la costruzione della regione critica (riempire il sacco)
  
 \begin_inset Formula \[
-R^{\ast}=\left\{ g\ |\ S^{\ast}(g)>k_{\alpha}^{\ast}\right\} \]
+R^{\ast}=\left\{ g\ |\ S^{\ast}(g)\geq k_{\alpha}^{\ast}\right\} \]
 
 \end_inset
 
@@ -89125,7 +89550,7 @@ S^{\ast}(x_{1},...,x_{n})=\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n}
 
  corrispondente è dunque 
 \begin_inset Formula \begin{equation}
-R^{\ast}=\left\{ (x_{1},...,x_{n})\ |\ S^{\ast}(x_{1},...,x_{n})=\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n};\theta_{0})}>k_{1-\alpha}^{\ast}\right\} .\label{criterio neyman pearson}\end{equation}
+R^{\ast}=\left\{ (x_{1},...,x_{n})\ |\ S^{\ast}(x_{1},...,x_{n})=\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n};\theta_{0})}\geq k_{\alpha}^{\ast}\right\} .\label{criterio neyman pearson}\end{equation}
 
 \end_inset
 
@@ -89154,9 +89579,9 @@ o la maggiore evidenza a favore dell'ipotesi alternativa (contro l'ipotesi
 \end_inset
 
  è determinata dalla condizione che l'errore di prima specie sia uguale
- al livello desiderato
+ al livello di significatività desiderato
 \begin_inset Formula \[
-P_{H_{0}}(R^{\ast})=P_{H_{0}}(S^{\ast}>k_{\alpha}^{\ast})=\alpha.\]
+P_{H_{0}}(R^{\ast})=P_{H_{0}}(S^{\ast}\geq k_{\alpha}^{\ast})=\alpha.\]
 
 \end_inset
 
@@ -89177,979 +89602,6 @@ P_{H_{0}}(R^{\ast})=P_{H_{0}}(S^{\ast}>k_{\alpha}^{\ast})=\alpha.\]
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%TCIMACRO{%
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-TeXButton{TeX tabella 1}{
-\backslash
-begin{table}[tbp]
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-vspace{-1.2cm}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-caption{Elenco gioielli} 
-\backslash
-vspace{0.2cm} 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-label{table:esempio1_neyman_pearson} 
-\backslash
-centering
-\backslash
-begin{tabular}{|c|r|r|r|}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-textbf{Gioiello} & 
-\backslash
-textbf{Peso (grammi)} & 
-\backslash
-textbf{Prezzo in Fr.} & 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-textbf{Prezzo/Peso} 
-\backslash
-
-\backslash
- 
-\backslash
-hline
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{1}$ & 671 & 8'000 & 11'923 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{2}$ & 1'717 & 1'000 & 582 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{3}$ & 1'034 & 7'000 & 6'770 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{4}$ & 1'756 & 7'000 & 3'986 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{5}$ & 1'199 & 2'000 & 1'668 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{6}$ & 886 & 1'000 & 1'129 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{7}$ & 1'166 & 1'000 & 858 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{8}$ & 1'040 & 2'000 & 1'923 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{9}$ & 932 & 5'000 & 5'365 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{10}$ & 1'380 & 7'000 & 5'072 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{11}$ & 1'769 & 10'000 & 5'653 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{12}$ & 1'686 & 2'000 & 1'186 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{13}$ & 902 & 6'000 & 6'652 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{14}$ & 1'257 & 3'000 & 2'387 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{15}$ & 1'768 & 3'000 & 1'697 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{16}$ & 528 & 5'000 & 9'470 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{17}$ & 1'676 & 6'000 & 3'580 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{18}$ & 1'523 & 10'000 & 6'566 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{19}$ & 1'666 & 9'000 & 5'402 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{20}$ & 1'456 & 3'000 & 2'060 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{21}$ & 871 & 10'000 & 11'481 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{22}$ & 988 & 4'000 & 4'049 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{23}$ & 1'190 & 6'000 & 5'042 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{24}$ & 540 & 7'000 & 12'963 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{25}$ & 831 & 5'000 & 6'017 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{26}$ & 802 & 6'000 & 7'481 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{27}$ & 900 & 8'000 & 8'889 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{28}$ & 1'679 & 6'000 & 3'574 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{29}$ & 1'166 & 6'000 & 5'146 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{30}$ & 1'980 & 5'000 & 2'525 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{31}$ & 850 & 2'000 & 2'353 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{32}$ & 676 & 10'000 & 14'793 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{33}$ & 1'399 & 3'000 & 2'144 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{34}$ & 1'883 & 3'000 & 1'593 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{35}$ & 2'535 & 7'000 & 2'761 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{36}$ & 814 & 9'000 & 11'057 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{37}$ & 853 & 2'000 & 2'345 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{38}$ & 1'488 & 2'000 & 1'344 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{39}$ & 1'430 & 2'000 & 1'399 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{40}$ & 1'113 & 1'000 & 898 
-\backslash
-
-\backslash
- 
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%Totale & 50'000 & 202'000 &  
-\backslash
-
-\backslash
- 
-\backslash
-hline
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-end{tabular}
-\backslash
-end{table}}}%
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%BeginExpansion
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Float table
 wide false
 sideways false
@@ -91949,995 +91401,6 @@ Totale
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%EndExpansion
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%TCIMACRO{%
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-TeXButton{TeX tabella2}{
-\backslash
-begin{table}[tbp] 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-vspace{-1.2cm} 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-caption{Elenco gioielli ordinati secondo $P_{r}/P_{s}$} 
-\backslash
-vspace{0.2cm} 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-label{table:esempio2_neyman_pearson}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-centering
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-begin{tabular}{|c|r|r|r|}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-textbf{Gioiello} & 
-\backslash
-textbf{Prezzo/Peso} & 
-\backslash
-textbf{Peso Cumulato} & 
-\backslash
-textbf{Prezzo Cumulato} 
-\backslash
-
-\backslash
- 
-\backslash
-hline
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{32}$ & 14'792.9 & 676 & 10'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{24}$ & 12'963.0 & 1'216 & 17'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{1}$ & 11'922.5 & 1'887 & 25'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{21}$ & 11'481.1 & 2'758 & 35'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{36}$ & 11'056.5 & 3'572 & 44'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{16}$ & 9'469.7 & 4'100 & 49'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{27}$ & 
-\backslash
-textbf{8'888.9} & 
-\backslash
-textbf{5'000} & 
-\backslash
-textbf{57'000} 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{26}$ & 7'481.3 & 5'802 & 63'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{3}$ & 6'769.8 & 6'836 & 70'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{13}$ & 6'651.9 & 7'738 & 76'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{18}$ & 6'566.0 & 9'261 & 86'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{25}$ & 6'016.8 & 10'092 & 91'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{11}$ & 5'652.9 & 11'861 & 101'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{19}$ & 5'402.2 & 13'527 & 110'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{9}$ & 5'364.8 & 14'459 & 115'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{29}$ & 5'145.8 & 15'625 & 121'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{10}$ & 5'072.5 & 17'005 & 128'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{23}$ & 5'042.0 & 18'195 & 134'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{22}$ & 4'048.6 & 19'183 & 138'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{4}$ & 3'986.3 & 20'939 & 145'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{17}$ & 3'580.0 & 22'615 & 151'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{28}$ & 3'573.6 & 24'294 & 157'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{35}$ & 2'761.3 & 26'829 & 164'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{30}$ & 2'525.3 & 28'809 & 169'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{14}$ & 2'386.6 & 30'066 & 172'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{31}$ & 2'352.9 & 30'916 & 174'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{37}$ & 2'344.7 & 31'769 & 176'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{33}$ & 2'144.4 & 33'168 & 179'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{20}$ & 2'060.4 & 34'624 & 182'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{8}$ & 1'923.1 & 35'664 & 184'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{15}$ & 1'696.8 & 37'432 & 187'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{5}$ & 1'668.1 & 38'631 & 189'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{34}$ & 1'593.2 & 40'514 & 192'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{39}$ & 1'398.6 & 41'944 & 194'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{38}$ & 1'344.1 & 43'432 & 196'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{12}$ & 1'186.2 & 45'118 & 198'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{6}$ & 1'128.7 & 46'004 & 199'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{40}$ & 898.5 & 47'117 & 200'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{7}$ & 857.6 & 48'283 & 201'000 
-\backslash
-
-\backslash
- 
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%$g_{2}$ & 582.4 & 50'000 & 202'000 
-\backslash
-
-\backslash
- 
-\backslash
-hline
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%
-\backslash
-end{tabular}
-\backslash
-end{table}}}%
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%BeginExpansion
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
 \begin_inset Float table
 wide false
 sideways false
@@ -94714,24 +93177,6 @@ Prezzo Cumulato
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-%EndExpansion
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset Newpage newpage
 \end_inset
 
@@ -94764,33 +93209,34 @@ Vogliamo applicare il lemma di Neyman e Pearson alla seguente, classica
 
  è dunque data da 
 \begin_inset Formula \[
-\mathcal{P}=\left\{ f_{\mu}(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}),\ \mu\in\mathbb{R}\right\} \text{.}\]
+\mathcal{P}=\left\{ f(x;\mu)=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}),\ \mu\in\mathbb{R}\right\} \text{.}\]
 
 \end_inset
 
  Supponiamo di voler testare l'ipotesi nulla 
 \begin_inset Formula \[
-H_{0}:\mu=\mu_{0}\]
+H_{0}:\:\mu=\mu_{0}\]
 
 \end_inset
 
  contro l'ipotesi alternativa 
 \begin_inset Formula \[
-H_{A}:\mu=\mu_{1}\]
+H_{A}:\:\mu=\mu_{1},\]
 
 \end_inset
 
- dove 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+dove 
 \begin_inset Formula $\mu_{1}>\mu_{0}$
 \end_inset
 
 .
- Qual è sotto queste condizioni il test più potente?
-\begin_inset space \space{}
-\end_inset
-
-Per rispondere a questa domanda applichiamo i risultati del lemma di Neyman
- e Pearson.
+ Qual è sotto queste condizioni il test più potente? Per rispondere a questa
+ domanda applichiamo i risultati del lemma di Neyman e Pearson.
  La funzione di densità congiunta di 
 \begin_inset Formula $(X_{1},...,X_{n})$
 \end_inset
@@ -94801,13 +93247,13 @@ Per rispondere a questa domanda applichiamo i risultati del lemma di Neyman
 
 
 \begin_inset Formula \[
-f_{\mu}(x_{i})=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\left(x_{i}-\mu\right)^{2})\]
+f(x_{i};\mu)=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\left(x_{i}-\mu\right)^{2})\]
 
 \end_inset
 
  e
 \begin_inset Formula \begin{eqnarray*}
-f_{\mu}(x_{1},...,x_{n}) & = & \left(\frac{1}{\sqrt{2\pi}\sigma}\right)^{n}\exp(-\frac{1}{2\sigma^{2}}\left[\left(x_{1}-\mu\right)^{2}+...+\left(x_{n}-\mu\right)^{2}\right])\\
+f(x_{1},...,x_{n};\mu) & = & \left(\frac{1}{\sqrt{2\pi}\sigma}\right)^{n}\exp(-\frac{1}{2\sigma^{2}}\left[\left(x_{1}-\mu\right)^{2}+...+\left(x_{n}-\mu\right)^{2}\right])\\
  & = & \left(\frac{1}{\sqrt{2\pi}\sigma}\right)^{n}\exp(-\frac{1}{2\sigma^{2}}\sum\limits _{i=1}^{n}\left(x_{i}-\mu\right)^{2}).\end{eqnarray*}
 
 \end_inset
@@ -94832,13 +93278,13 @@ S(x_{1},...,x_{n}) & = & \frac{f_{H_{A}}(x_{1},...,x_{n})}{f_{H_{0}}(x_{1},...,x
 
 
 \begin_inset Formula \[
-R=\left\{ (x_{1},...,x_{n})\ |\ S(x_{1},...,x_{n})>k_{\alpha}\right\} .\]
+R=\left\{ (x_{1},...,x_{n})\ |\ S(x_{1},...,x_{n})\geq k_{\alpha}\right\} .\]
 
 \end_inset
 
  Otteniamo quindi 
 \begin_inset Formula \begin{equation}
-R=\left\{ (x_{1},...,x_{n})\ |\ \exp\left(-\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]\right)>k_{\alpha}\right\} ,\label{a1}\end{equation}
+R=\left\{ (x_{1},...,x_{n})\ |\ \exp\left(-\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]\right)\geq k_{\alpha}\right\} ,\label{a1}\end{equation}
 
 \end_inset
 
@@ -94871,15 +93317,20 @@ reference "a1"
 
 ) come
 \begin_inset Formula \begin{eqnarray*}
-R & = & \left\{ (x_{1},...,x_{n})\ |\ -\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]>\ln(k_{\alpha})\right\} \\
- & = & \left\{ (x_{1},...,x_{n})\ |\ \left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]<-2\sigma^{2}\ln(k_{\alpha})\right\} \\
- & = & \left\{ (x_{1},...,x_{n})\ |\ -2n\left(\mu_{1}-\mu_{0}\right)\overline{x}<-2\sigma^{2}\ln(k_{\alpha})-n(\mu_{1}^{2}-\mu_{0}^{2})\right\} \\
- & = & \left\{ (x_{1},...,x_{n})\ |\ \overline{x}>\left[2\sigma^{2}\ln(k_{\alpha})+n(\mu_{1}^{2}-\mu_{0}^{2})\right]/2n\left(\mu_{1}-\mu_{0}\right)\right\} \\
- & = & \left\{ (x_{1},...,x_{n})\ |\ \overline{x}>\widetilde{k}_{\alpha}\right\} .\end{eqnarray*}
+R & = & \left\{ (x_{1},...,x_{n})\ |\ -\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]\geq\ln(k_{\alpha})\right\} \\
+ & = & \left\{ (x_{1},...,x_{n})\ |\ \left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]\leq-2\sigma^{2}\ln(k_{\alpha})\right\} \\
+ & = & \left\{ (x_{1},...,x_{n})\ |\ -2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\leq-2\sigma^{2}\ln(k_{\alpha})-n(\mu_{1}^{2}-\mu_{0}^{2})\right\} \\
+ & = & \left\{ (x_{1},...,x_{n})\ |\ \overline{x}\geq\left[2\sigma^{2}\ln(k_{\alpha})+n(\mu_{1}^{2}-\mu_{0}^{2})\right]/2n\left(\mu_{1}-\mu_{0}\right)\right\} \\
+ & = & \left\{ (x_{1},...,x_{n})\ |\ \overline{x}\geq\widetilde{k}_{\alpha}\right\} .\end{eqnarray*}
 
 \end_inset
 
- Abbiamo sorprendentemente ottenuto il test basato sulla media campionaria
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Abbiamo sorprendentemente ottenuto il test basato sulla media campionaria
  incontrato ripetutamente in questo capitolo.
  La soglia 
 \begin_inset Formula $\widetilde{k}_{\alpha}$
@@ -94936,11 +93387,11 @@ reference "esempio caseificio p1"
 \end_inset
 
  che il test basato su 
-\begin_inset Formula $\overline{X}$
+\begin_inset Formula $S=\overline{X}$
 \end_inset
 
  risultava essere più potente rispetto al test basato su 
-\begin_inset Formula $X_{\min}$
+\begin_inset Formula $S=min(X_{1},\ldots,X_{n})$
 \end_inset
 
 .
@@ -95003,30 +93454,30 @@ o per analizzare la dipendenza di
 
  conosciuto e 
 \begin_inset Formula \[
-H_{0}:\mu=\mu_{0}\]
+H_{0}:\ \mu=\mu_{0}\]
 
 \end_inset
 
  mentre l'ipotesi alternativa 
 \begin_inset Formula \[
-H_{A}:\mu=\mu_{1},\ \ \ \ \mu_{1}>\mu_{0}.\]
+H_{A}:\ \mu=\mu_{1},\ \ \ \ \mu_{1}>\mu_{0}.\]
 
 \end_inset
 
  Prendendo il test basato sulla media abbiamo per il caso unilaterale destro
  che 
 \begin_inset Formula \[
-R=\left\{ (x_{1},...,x_{n})\ |\ \overline{x}>k_{1-\alpha}\right\} \]
+R=\left\{ (x_{1},...,x_{n})\ |\ \overline{x}\geq k_{\alpha}\right\} \]
 
 \end_inset
 
  con la soglia critica 
-\begin_inset Formula $k_{1-\alpha}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  determinata tramite la solita equazione 
 \begin_inset Formula \[
-P_{H_{0}}(\overline{X}>k_{1-\alpha})=\alpha.\]
+P_{H_{0}}(\overline{X}\geq k_{\alpha})=\alpha.\]
 
 \end_inset
 
@@ -95034,19 +93485,19 @@ P_{H_{0}}(\overline{X}>k_{1-\alpha})=\alpha.\]
 \begin_inset Formula $\overline{X}\sim N(\mu_{0},\frac{\sigma^{2}}{n})$
 \end_inset
 
- applichiamo la standardizzazione seguente
+, applichiamo la standardizzazione seguente
 \begin_inset Formula \[
-P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}}>\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=\alpha\]
+P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}}\geq\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=\alpha\]
 
 \end_inset
 
  Utilizzando la relazione 
-\begin_inset Formula $P\left(Z>\frac{\sqrt{n}\left(k_{1-\alpha}-\mu_{0}\right)}{\sigma}\right)=1-P\left(Z\leq\frac{\sqrt{n}\left(k_{1-\alpha}-\mu_{0}\right)}{\sigma}\right)$
+\begin_inset Formula $P\left(Z\geq\frac{\sqrt{n}\left(k_{\alpha}-\mu_{0}\right)}{\sigma}\right)=1-P\left(Z\leq\frac{\sqrt{n}\left(k_{\alpha}-\mu_{0}\right)}{\sigma}\right)$
 \end_inset
 
  otteniamo
 \begin_inset Formula \begin{equation}
-P\left(Z\leq\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=1-\alpha\text{.}\label{uguaglianza quantile standard}\end{equation}
+P\left(Z\leq\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=1-\alpha\text{.}\label{uguaglianza quantile standard}\end{equation}
 
 \end_inset
 
@@ -95061,7 +93512,7 @@ P\left(Z\leq z_{1-\alpha}\right)=1-\alpha,\]
 \end_inset
 
  ricaviamo il valore della soglia critica 
-\begin_inset Formula $k_{1-\alpha}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  uguagliando l'espressione nella (
@@ -95077,13 +93528,13 @@ reference "uguaglianza quantile standard"
 
  
 \begin_inset Formula \begin{eqnarray}
-\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}} & = & z_{1-\alpha}\notag\\
-k_{1-\alpha} & = & \mu_{0}+z_{1-\alpha}\frac{\sigma}{\sqrt{n}}\text{.}\label{valore critico test sulla media normale}\end{eqnarray}
+\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}} & = & z_{1-\alpha}\notag\\
+k_{\alpha} & = & \mu_{0}+z_{1-\alpha}\frac{\sigma}{\sqrt{n}}\text{.}\label{valore critico test sulla media normale}\end{eqnarray}
 
 \end_inset
 
  La soglia critica 
-\begin_inset Formula $k_{1-\alpha}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  dipende dunque 
@@ -95121,7 +93572,7 @@ dalla numerosità del campione (quantità d'informazione disponibile).
 \begin_layout Standard
 \noindent
 Una volta che 
-\begin_inset Formula $k_{1-\alpha}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  è stato fissato 
@@ -95129,12 +93580,9 @@ Una volta che
 esso rimane costante
 \emph default
 .
-\begin_inset space \space{}
-\end_inset
-
-Il calcolo della potenza del test presuppone il calcolo della probabilità
+ Il calcolo della potenza del test presuppone il calcolo della probabilità
  
-\begin_inset Formula $P(\overline{X}>k_{1-\alpha}\ |\ H_{A}$
+\begin_inset Formula $P(\overline{X}\geq k_{\alpha}\ |\ H_{A}$
 \end_inset
 
  è vera
@@ -95143,15 +93591,15 @@ Il calcolo della potenza del test presuppone il calcolo della probabilità
 
 , cioè
 \begin_inset Formula \begin{eqnarray*}
-\beta & = & P_{H_{A}}(\overline{X}>k_{1-\alpha})\\
- & = & P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{1}}{\sigma/\sqrt{n}}}}>\frac{k_{1-\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\\
- & = & P\left(Z>\frac{k_{1-\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\\
- & = & 1-P\left(Z\leq\frac{k_{1-\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\end{eqnarray*}
+\beta & = & P_{H_{A}}(\overline{X}\geq k_{\alpha})\\
+ & = & P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{1}}{\sigma/\sqrt{n}}}}\geq\frac{k_{\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\\
+ & = & P\left(Z\geq\frac{k_{\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\\
+ & = & 1-P\left(Z\leq\frac{k_{\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\end{eqnarray*}
 
 \end_inset
 
  Sostituendo l'espressione ricavata in precedenza per 
-\begin_inset Formula $k_{1-\alpha}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
  otteniamo la formula finale 
@@ -95375,7 +93823,8 @@ Con l'aumentare del numero
 
 \begin_layout Standard
 \noindent
-Questi calcoli di potenza vengono eseguiti prima di fare una stima.
+Questi calcoli di potenza vengono eseguiti prima di eseguire una stima per
+ identificare la numerosità del campione.
  Ad esempio, supponiamo che per dato errore di prima specie 
 \begin_inset Formula $\alpha=5\%$
 \end_inset
@@ -95458,45 +93907,47 @@ Il test sulla media fino ad ora considerato si basa sull'ipotesi di normalità
 
 .
  Vogliamo ora rinunciare all'ipotesi di normalità ed assumere unicamente
- che 
-\begin_inset Formula $X\sim F$
+ che la popolazione sia distribuita secondo una certa distribuzione 
+\begin_inset Formula $F$
 \end_inset
 
  (non necessariamente Normale quindi) con 
 \begin_inset Formula $E(X)=\mu$
 \end_inset
 
-
-\begin_inset space \space{}
-\end_inset
-
-e 
+ e 
 \begin_inset Formula $V(X)=\sigma^{2}$
 \end_inset
 
 .
- Per contro manteniamo l'ipotesi di 
+ Scriveremo semplicemente 
+\begin_inset Formula $X\sim F(\mu,\sigma^{2}).$
+\end_inset
+
+ Per contro manteniamo l'ipotesi di indipendenza e stessa distribuzione
+ (detta ipotesi 
 \begin_inset Formula $i.i.d.$
 \end_inset
 
- (indipendenza e medesima distribuzione)
-\begin_inset space \space{}
-\end_inset
-
-delle osservazioni 
+) delle osservazioni 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
 .
  Come andrà effettuato ora il test sulla media? Supponiamo di voler testare
- 
+ l'ipotesi nulla 
 \begin_inset Formula \begin{eqnarray*}
-H_{0} & : & \mu=\mu_{0}\\
-H_{A} & : & \mu>\mu_{0}\end{eqnarray*}
+H_{0} & : & \:\mu=\mu_{0}\end{eqnarray*}
 
 \end_inset
 
- dato un livello di significatività 
+contro l'ipotesi alternativa 
+\begin_inset Formula \[
+H_{A}:\:\mu>\mu_{0}\]
+
+\end_inset
+
+ad un livello di significatività 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -95514,15 +93965,44 @@ H_{A} & : & \mu>\mu_{0}\end{eqnarray*}
 \begin_inset Formula $\overline{X}$
 \end_inset
 
- non è più conosciuta.
+ non è conosciuta.
  Questo pone un problema per la determinazione della regione critica ed
  in particolare della soglia 
-\begin_inset Formula $k_{1-\alpha}$
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
-:
+
+\begin_inset Formula \begin{eqnarray*}
+P_{H_{0}}(\overline{X} & \geq & k_{0.05})=0.05.\end{eqnarray*}
+
+\end_inset
+
+Tuttavia proviamo ugualmente a standardizzare: 
 \begin_inset Formula \[
-P_{H_{0}}(\overline{X}>k_{0.95})=0.05.\]
+P_{H_{0}}(\overline{X}-\mu_{0}\geq k_{0.05}-\mu_{0})=0.05\]
+
+\end_inset
+
+e dividendo per 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\sigma/\sqrt{n}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+P_{H_{0}}(\frac{\overline{X}_{n}-\mu_{0}}{\sigma/\sqrt{n}}\geq\frac{k_{0.05}-\mu_{0}}{\sigma/\sqrt{n}})=0.05.\]
 
 \end_inset
 
@@ -95538,11 +94018,35 @@ P_{H_{0}}(\overline{X}>k_{0.95})=0.05.\]
 
 \begin_layout Standard
 \noindent
-Fortunatamente, per 
+Pur non conoscendo l'esatta distribuzione di 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\frac{\overline{X}_{n}-\mu_{0}}{\sigma/\sqrt{n}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ sappiamo che, per 
 \begin_inset Formula $n$
 \end_inset
 
- sufficientemente grandi, il teorema del limite centrale viene in nostro
+ sufficientemente grande, il teorema del limite centrale viene in nostro
  soccorso permettendoci di calcolare il valore di 
 \begin_inset Formula $k_{0.05}$
 \end_inset
@@ -95560,15 +94064,15 @@ Fortunatamente, per
 \end_inset
 
 .
- Infatti sappiamo che per un campione 
+ Infatti, dato un campione 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- di
-\begin_inset Formula $\ n$
+ di 
+\begin_inset Formula $n$
 \end_inset
 
- osservazioni indipendenti di 
+ osservazioni indipendenti ed identicamente distribuite 
 \begin_inset Formula $X\sim(\mu,\sigma^{2})$
 \end_inset
 
@@ -95580,20 +94084,71 @@ Fortunatamente, per
 
  Ma questo significa che, sotto l'ipotesi nulla
 \begin_inset Formula \[
-P_{H_{0}}\left(\underset{\text{circa }Z}{\underbrace{\frac{\overline{X}_{n}-\mu_{0}}{\sigma/\sqrt{n}}}}>\frac{k_{0.95}-\mu_{0}}{\sigma/\sqrt{n}}\right)\underset{\text{circa}}{=}P\left(Z>\frac{k_{0.95}-\mu_{0}}{\sigma/\sqrt{n}}\right)=0.05.\]
+P_{H_{0}}\left(\underset{\text{circa }Z}{\underbrace{\frac{\overline{X}_{n}-\mu_{0}}{\sigma/\sqrt{n}}}}\geq\frac{k_{0.05}-\mu_{0}}{\sigma/\sqrt{n}}\right)\underset{\text{circa}}{=}P\left(Z\geq\frac{k_{0.05}-\mu_{0}}{\sigma/\sqrt{n}}\right)=0.05.\]
 
 \end_inset
 
- In pratica quindi, il teorema del limite centrale, per 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Uguagliando 
+\begin_inset Formula $z_{0.95}$
+\end_inset
+
+ a 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\frac{k_{0.05}-\mu_{0}}{\sigma/\sqrt{n}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ è infine possibile ottenere il valore della soglia critica 
+\begin_inset Formula $k_{0.05}.$
+\end_inset
+
+ Riassumendo, grazie al Teorema del limite centrale abbiamo che quando
+\end_layout
+
+\begin_layout Itemize
+la varianza della popolazione è nota;
+\end_layout
+
+\begin_layout Itemize
+le osservazioni sono indipendenti ed identicamente distribuite;
+\end_layout
+
+\begin_layout Itemize
+\noindent
+il numero 
 \begin_inset Formula $n$
 \end_inset
 
- sufficientemente grandi, ci permette di eseguire il test sulla media come
- se la popolazione 
-\begin_inset Formula $X$
-\end_inset
+ di osservazioni è sufficientemente grande;
+\end_layout
 
- sia Normale.
+\begin_layout Standard
+\noindent
+il test sulla media è identico al caso in cui la popolazione è distribuita
+ secondo la legge Normale.
 \end_layout
 
 \begin_layout Section
@@ -95624,8 +94179,8 @@ Vogliamo riprendere nuovamente il test sulla media riportandoci al caso
  di immediato interesse.
  Le nostre ipotesi sono sempre
 \begin_inset Formula \begin{eqnarray*}
-H_{0} & : & \mu=\mu_{0},\\
-H_{A} & : & \mu>\mu_{0}.\end{eqnarray*}
+H_{0} & :\: & \mu=\mu_{0},\\
+H_{A} & :\: & \mu>\mu_{0}.\end{eqnarray*}
 
 \end_inset
 
@@ -95649,17 +94204,26 @@ H_{A} & : & \mu>\mu_{0}.\end{eqnarray*}
 \end_inset
 
  fosse conosciuto potremmo effettuare il test abituale andando a calcolare
- per un dato livello di significatività il valore critico 
-\begin_inset Formula $k_{1-\alpha}$
+ per dato livello di significatività 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ il valore critico 
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
 :
 \begin_inset Formula \begin{equation}
-P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}}>\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=\alpha.\label{rapporto t1}\end{equation}
+P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}}\geq\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=\alpha.\label{rapporto t1}\end{equation}
 
 \end_inset
 
- Potremmo pensare di fare la stessa cosa sostituendo a 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Potremmo pensare di fare la stessa cosa sostituendo a 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -95672,8 +94236,8 @@ P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\
 \begin_inset Formula $\frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}$
 \end_inset
 
- consiste nel rapporto di due variabili casuali che riscriviamo come segue
- 
+ consiste nel rapporto di due variabili casuali che possiamo riscrivere
+ come segue 
 \begin_inset Formula \[
 \frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}=\frac{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}{\widehat{\sigma}/\sigma}\]
 
@@ -95726,7 +94290,7 @@ reference "rapporto t1"
 
 ) e considerando quanto detto otteniamo 
 \begin_inset Formula \begin{equation}
-P_{H_{0}}\left(\underset{\sim\ ?}{\underbrace{\frac{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}{\widehat{\sigma}/\sigma}}}>\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right)=\alpha.\label{rapporto t2}\end{equation}
+P_{H_{0}}\left(\underset{\sim\ ?}{\underbrace{\frac{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}{\widehat{\sigma}/\sigma}}}\geq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right)=\alpha.\label{rapporto t2}\end{equation}
 
 \end_inset
 
@@ -95744,8 +94308,8 @@ Derivazione della distribuzione del rapporto
 
 \begin_layout Standard
 \noindent
-Vedremo che la distribuzione del denominatore dipende direttamente dalla
- distribuzione 
+Vedremo che la distribuzione del denominatore è data dalla distribuzione
+ 
 \begin_inset Formula $\chi_{m}^{2}$
 \end_inset
 
@@ -95773,23 +94337,26 @@ La distribuzione Chi-2, notata
 \begin_inset Formula $m$
 \end_inset
 
- variabili aleatorie normali standard indipendenti.
- 
-\begin_inset Formula $Z_{1},Z_{2},...,Z_{m}$
+ variabili aleatorie normali standard indipendenti 
+\begin_inset Formula $Z_{1}$
 \end_inset
 
- 
-\begin_inset Formula $i.i.d.$
+, 
+\begin_inset Formula $Z_{2}$
 \end_inset
 
- 
-\begin_inset Formula $N(0,1)$
+, 
+\begin_inset Formula $\ldots$
+\end_inset
+
+, 
+\begin_inset Formula $Z_{m}\sim N(0,1)$
 \end_inset
 
 .
  
 \begin_inset Formula \[
-V=\sum\limits _{n=1}^{m}Z_{n}^{2}\sim\chi_{m}^{2}.\]
+X=\sum\limits _{n=1}^{m}Z_{n}^{2}\sim\chi_{m}^{2}.\]
 
 \end_inset
 
@@ -95799,7 +94366,7 @@ V=\sum\limits _{n=1}^{m}Z_{n}^{2}\sim\chi_{m}^{2}.\]
 \begin_layout Itemize
 Funzione di densità:
 \begin_inset Formula \[
-f(v,m)=\frac{1}{2^{\frac{m}{2}}\Gamma(\frac{m}{2})}\exp(-\frac{v}{2})v^{\frac{m}{2}-1}\]
+f(x,m)=\frac{1}{2^{\frac{m}{2}}\Gamma(\frac{m}{2})}\exp(-\frac{x}{2})x^{\frac{m}{2}-1}\]
 
 \end_inset
 
@@ -95815,7 +94382,7 @@ f(v,m)=\frac{1}{2^{\frac{m}{2}}\Gamma(\frac{m}{2})}\exp(-\frac{v}{2})v^{\frac{m}
 \begin_layout Itemize
 Calcolo:
 \begin_inset Formula \[
-P(V\leq x)=\int\limits _{0}^{x}f(v,m)dv\]
+P(X\leq x)=\int\limits _{0}^{x}f(y,m)dy\]
 
 \end_inset
 
@@ -95830,6 +94397,53 @@ P(V\leq x)=\int\limits _{0}^{x}f(v,m)dv\]
 
 .
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/densitaChi2.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Funzione di densità della distribuzione 
+\begin_inset Formula $\chi_{m}^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $m=2,5.$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -95855,13 +94469,13 @@ begin{definizione}
 \end_inset
 
  e 
-\begin_inset Formula $V\sim\chi_{m}^{2}$
+\begin_inset Formula $X\sim\chi_{m}^{2}$
 \end_inset
 
  due variabili aleatorie indipendenti.
  Il raporto 
 \begin_inset Formula \[
-\frac{Z}{\sqrt{\frac{V}{m}}}\sim t_{m}\]
+\frac{Z}{\sqrt{\frac{X}{m}}}\sim t_{m}\]
 
 \end_inset
 
@@ -95869,7 +94483,11 @@ begin{definizione}
 \begin_inset Formula $m$
 \end_inset
 
- gradi di libertà.
+ gradi di libertà, abbreviato 
+\begin_inset Formula $m$
+\end_inset
+
+ g.l..
  
 \begin_inset ERT
 status collapsed
@@ -95888,16 +94506,17 @@ end{definizione}
 
 \begin_layout Standard
 \noindent
-La distribuzione-t è simile alla Normale, simmetrica rispetto allo zero,
- ma possiede delle code più pesanti (tendono meno velocemente a zero rispetto
- alla distribuzione Normale).
+La distribuzione di Student è simile alla distribuzione Normale standard.
+ Essa è simmetrica rispetto allo zero, ma possiede delle code più pesanti
+ (tendono meno velocemente a zero rispetto alla distribuzione Normale).
  Come per la distribuzione Normale standard esistono delle tavole per il
  calcolo dell' 
 \begin_inset Formula $\alpha-$
 \end_inset
 
 quantile.
- A differenza della distribuzione Normale, per la distribuzione 
+ A differenza della distribuzione Normale standard, per la distribuzione
+ 
 \begin_inset Formula $t$
 \end_inset
 
@@ -95910,6 +94529,45 @@ quantile.
 \end_inset
 
  desiderati.
+ Una caratteristica della distribuzione di Student consiste nel fatto che
+ all'aumentare dei gradi di libertà essa si avvicina sempre più alla distribuzio
+ne Normale standard.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/densitaStudent.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Confronto la densità Normale standard e la Student.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -95994,11 +94652,7 @@ W & = & \frac{1}{\sigma^{2}}\sum\limits _{i=1}^{n}(X_{i}-\mu)^{2}\\
 \begin_inset Formula $n-1$
 \end_inset
 
- gradi di libertà nella ”scelta”
-\begin_inset space \space{}
-\end_inset
-
-di 
+ gradi di libertà nella ”scelta” di 
 \begin_inset Formula $X_{1}-\overline{X}$
 \end_inset
 
@@ -96046,8 +94700,8 @@ La struttura del test di Student è dunque identica a quella del test sulla
  andrà poi modificato come segue.
  Sotto l'ipotesi nulla 
 \begin_inset Formula \begin{eqnarray*}
-P_{H_{0}}\left(\underset{\sim t_{n-1}}{\underbrace{\frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}}}>\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
-P\left(t_{n-1}>\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\end{eqnarray*}
+P_{H_{0}}\left(\underset{\sim t_{n-1}}{\underbrace{\frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}}}\geq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
+P\left(t_{n-1}\geq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\end{eqnarray*}
 
 \end_inset
 
@@ -96057,12 +94711,17 @@ identico
 \emph default
  a quello con la Normale:
 \begin_inset Formula \begin{eqnarray*}
-1-P\left(t_{n-1}\leq\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
-P\left(t_{n-1}\leq\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & 1-\alpha.\end{eqnarray*}
+1-P\left(t_{n-1}\leq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
+P\left(t_{n-1}\leq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & 1-\alpha.\end{eqnarray*}
 
 \end_inset
 
- È dunque necessario derivare l' 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+È dunque necessario derivare l' 
 \begin_inset Formula $1-\alpha$
 \end_inset
 
@@ -96080,7 +94739,7 @@ P\left(t_{n-1}\leq\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) 
 \end_inset
 
  a 
-\begin_inset Formula $\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}}$
+\begin_inset Formula $\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}$
 \end_inset
 
  si ottiene il valore di 
@@ -96093,7 +94752,12 @@ k_{\alpha}=\mu_{0}+t_{1-\alpha,n-1}\widehat{\sigma}/\sqrt{n}.\label{valore criti
 
 \end_inset
 
- Confrontanto la (
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Confrontanto la (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "valore critico test sulla media t"
@@ -96111,11 +94775,21 @@ reference "valore critico test sulla media normale"
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
- è conosciuta notiamo che la vera deviazione standard 
+ è conosciuta notiamo che 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+la vera deviazione standard 
 \begin_inset Formula $\sigma$
 \end_inset
 
- è stata sostituita con la deviazione standard stimata e l' 
+ è stata sostituita con la deviazione standard stimata e 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+l' 
 \begin_inset Formula $1-\alpha$
 \end_inset
 
@@ -96149,7 +94823,33 @@ Il test che tratteremo in questo paragrafo riguarda il confronto fra due
 \begin_inset Formula $X_{1},...,X_{m}$
 \end_inset
 
- mentre quelle della seconda con 
+ mentre quelle della se
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+con
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+da con 
 \begin_inset Formula $Y_{1},...,Y_{n}$
 \end_inset
 
@@ -96163,12 +94863,25 @@ Il test che tratteremo in questo paragrafo riguarda il confronto fra due
 \end_inset
 
  indicano la numerosità del primo e rispettivamente del secondo campione.
- In medicina, psicologia, economia e nelle scienze sociali in genere capita
- sovente di dover determinare l'efficacia di un nuovo medicamento, la validità
- di un nuovo metodo d'insegnamento, l'effetto di una campagna pubblicitaria,
- ecc.
+ In medicina, psicologia, economia e nelle scienze sociali capita sovente
+ di dover determinare l'efficacia di un nuovo medicamento, la validità di
+ un nuovo metodo d'insegnamento, l'effetto di una campagna pubblicitaria
+ e via dicendo.
  Per questo motivo si è soliti raccogliere dati su due popolazioni fra loro
- ben distinte, notate appunto 
+ ben distinte
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Può capitare che la popolazione sia la stessa, ma i campionamenti siano
+ effettuati ad istanti temporali diversi.
+ In tal caso si desidera verificare se il valore atteso della distribuzione
+ della popolazione sotto esame ha subito un cambiamento.
+\end_layout
+
+\end_inset
+
+, notate appunto 
 \begin_inset Formula $X$
 \end_inset
 
@@ -96327,12 +95040,38 @@ prima della campagna pubb.
 Il parametro d'interesse in questo caso è il valore atteso delle due popolazioni.
  Infatti, se le due popolazioni hanno valore atteso diverso significa che
  l'azione da noi intrapresa ha avuto l'effetto sperato.
- Generalmente si è soliti utilizzare l'ipotesi nulla: le due popolazioni
- possiedono lo stesso valore atteso.
+ Generalmente si è soliti scegliere quale ipotesi nulla l'ipotesi che le
+ due popolazioni possiedono lo stesso valore atteso.
  La speranza è dunque quella di rifiutare l'ipotesi nulla.
  Studieremo ora come effettuare il test quando le due popolazioni possiedono
- la stessa varianza (parleremo in tal caso di omoschedasticità) e quando
- invece possiedono varianza diversa (caso questo di eteroschedasticità).
+ la stessa va
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+rian
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+-
+\end_layout
+
+\end_inset
+
+za (parleremo in tal caso di omoschedasticità) e quando invece possiedono
+ varianza diversa (caso questo di eteroschedasticità).
 \end_layout
 
 \begin_layout Subsubsection
@@ -96387,12 +95126,13 @@ La varianza della popolazione
 \begin_inset Formula $Y$
 \end_inset
 
-: 
-\begin_inset Formula $\sigma_{x}^{2}=\sigma_{y}^{2}=\sigma^{2}$
+:
+\begin_inset Formula \[
+\sigma_{x}^{2}=\sigma_{y}^{2}=\sigma^{2}.\]
+
 \end_inset
 
-.
- 
+Inoltre 
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
@@ -96472,7 +95212,12 @@ V(\overline{X}-\overline{Y}) & = & V(\overline{X})+V(\overline{Y})-2cov(\overlin
 
 \end_inset
 
- Sotto l'ipotesi nulla la differenza 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sotto l'ipotesi nulla la differenza 
 \begin_inset Formula $\overline{X}-\overline{Y}$
 \end_inset
 
@@ -96500,10 +95245,8 @@ V(\overline{X}-\overline{Y}) & = & V(\overline{X})+V(\overline{Y})-2cov(\overlin
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $H_{0}:\mu_{x}=\mu_{y}$
-\end_inset
-
-
+\noindent
+La statistica 
 \end_layout
 
 \begin_layout Standard
@@ -96513,9 +95256,17 @@ V(\overline{X}-\overline{Y}) & = & V(\overline{X})+V(\overline{Y})-2cov(\overlin
 \end_inset
 
  sotto l'ipotesi nulla 
+\begin_inset Formula $H_{0}:\:\mu_{x}=\mu_{y}$
+\end_inset
+
+ è distribuita secondo la distribuzione di Student 
 \begin_inset Formula \[
 \tau\sim t_{m+n-2}\]
 
+\end_inset
+
+ con 
+\begin_inset Formula $m+n-2$
 \end_inset
 
  gradi di libertà.
@@ -96543,12 +95294,18 @@ Le ipotesi riguardanti la normalità delle due popolazioni
 \end_inset
 
 .
- L'ipotesi nulla rimane immutata, cioè 
-\begin_inset Formula $H_{0}:\mu_{x}=\mu_{y}$
+ L'ipotesi nulla rimane invariata, cioè 
+\begin_inset Formula \[
+H_{0}:\mu_{x}=\mu_{y}.\]
+
 \end_inset
 
-.
- In questo caso avremo 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In questo caso avremo 
 \begin_inset Formula \begin{eqnarray*}
 V(\overline{X}) & = & \frac{\sigma_{x}^{2}}{m}\\
 V(\overline{Y}) & = & \frac{\sigma_{y}^{2}}{n}\end{eqnarray*}
@@ -96557,7 +95314,7 @@ V(\overline{Y}) & = & \frac{\sigma_{y}^{2}}{n}\end{eqnarray*}
 
  
 \begin_inset Formula \[
-cov(\overline{X},\overline{Y})=0\]
+cov(\overline{X},\overline{Y})=0.\]
 
 \end_inset
 
@@ -96613,11 +95370,12 @@ begin{remark}
 
 \end_inset
 
- In caso di eteroschedasticità la distribuzione della statistica 
+ Riassumendo, in caso di eteroschedasticità e varianze sconosciute la distribuzi
+one della statistica 
 \begin_inset Formula $\tau$
 \end_inset
 
- non è conosciuta ma è approssimabile tramite una distribuzione 
+ non è nota ma è approssimabile tramite una distribuzione 
 \begin_inset Formula $t$
 \end_inset
 
@@ -96672,17 +95430,22 @@ Test per la dispersione su singolo campione
  entrambi sconosciuti.
  Supponiamo inoltre di voler testare l'ipotesi nulla 
 \begin_inset Formula \[
-H_{0}:\sigma=\sigma_{0}\]
+H_{0}:\:\sigma=\sigma_{0}\]
 
 \end_inset
 
- contro l'ipotesi alternativa
+contro l'ipotesi alternativa
 \begin_inset Formula \[
-H_{A}:\sigma>\sigma_{0}.\]
+H_{A}:\:\sigma>\sigma_{0}.\]
 
 \end_inset
 
- In questo caso 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+In questo caso 
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -96713,35 +95476,18 @@ S(X_{1},...,X_{n})=\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}},\]
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
- stimata col ”solito”
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-stimatore 
+ stimata col ”solito” stimatore 
 \begin_inset Formula \[
 \widehat{\sigma}^{2}=\frac{1}{n-1}\sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}.\]
 
 \end_inset
 
- Quindi un rapporto 
+Un quantità osservata 
 \begin_inset Formula $\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}>1$
 \end_inset
 
- sarà evidenza negativa contro l'ipotesi nulla (tanto più estremo sarà questo
- rapporto e tanto maggiore sarà l'evidenza contro 
+ sarà evidenza negativa contro l'ipotesi nulla (tanto più estremo verso
+ destra sarà questo rapporto e tanto maggiore sarà l'evidenza contro 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -96756,10 +95502,6 @@ stimatore
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Costruzione della regione critica (zona di rifiuto di 
 \begin_inset Formula $H_{0}$
 \end_inset
@@ -96770,25 +95512,102 @@ Costruzione della regione critica (zona di rifiuto di
 
 :
 \begin_inset Formula \[
-R=\left\{ \left(x_{1},...,x_{n}\right)\ |\ (n-1)S>k_{1-\alpha}\right\} \]
+R=\left\{ \left(x_{1},...,x_{n}\right)\ |\ (n-1)S\geq k_{\alpha}\right\} \]
 
 \end_inset
 
  con 
 \begin_inset Formula \[
-P_{H_{0}}\left(\underset{\chi_{n-1}^{2}}{\underbrace{(n-1)S\ }}>\ k_{1-\alpha}\right)=\alpha\text{ cioè }k_{1-\alpha}=\chi_{n-1,1-\alpha}^{2}\]
+P_{H_{0}}\left(\underset{\chi_{n-1}^{2}}{\underbrace{(n-1)S\ }}\geq\ k_{\alpha}\right)=\alpha,\]
 
 \end_inset
 
- Quindi se 
-\begin_inset Formula $\left(n-1\right)\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}>k_{1-\alpha}$
+ il che equivale a dire che 
+\begin_inset Formula $k_{\alpha}$
 \end_inset
 
- rifiuto 
+corrisponde all'
+\begin_inset Formula $1-\alpha$
+\end_inset
+
+ quantile della distribuzione Chi-2 con 
+\begin_inset Formula $n-1$
+\end_inset
+
+ gradi di libertà: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $k_{\alpha}=\chi_{n-1,1-\alpha}^{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+.
+ Per concludere, se 
+\begin_inset Formula $\left(n-1\right)\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}\geq k_{\alpha}$
+\end_inset
+
+ rifiuto l'ipotesi nulla 
 \begin_inset Formula $H_{0}$
 \end_inset
 
- altrimenti non rifiuto.
+ altrimenti non la rifiuto.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/Test_densitaChi2.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Test per la dispersione su singolo campione (
+\begin_inset Formula $n=6,\alpha=5\%$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -96879,13 +95698,13 @@ Per ogni
 \noindent
 Desideriamo testare l'ipotesi nulla:
 \begin_inset Formula \[
-H_{0}:\sigma_{x}=\sigma_{y}\]
+H_{0}:\:\sigma_{x}=\sigma_{y}\]
 
 \end_inset
 
  contro l'ipotesi alternativa 
 \begin_inset Formula \[
-H_{A}:\sigma_{x}>\sigma_{y}.\]
+H_{A}:\:\sigma_{x}>\sigma_{y}.\]
 
 \end_inset
 
@@ -97003,7 +95822,63 @@ end{definizione}
 \end_layout
 
 \begin_layout Standard
-Costruzione della regione critica (zona di rifiuto di 
+\noindent
+Ragionando sulla struttura della statistica 
+\begin_inset Formula $S$
+\end_inset
+
+ (
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\widehat{\sigma}_{x}^{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ a numeratore e 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\widehat{\sigma}_{y}^{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+ a denominatore) deduciamo che l'osservazione di un valore elevato costituisce
+ evidenza a favore dell'ipotesi alternativa e contro l'ipotesi nulla.
+ Si tratta ancora una volta di un test unilaterale destro.
+ La costruzione della regione critica (zona di rifiuto di 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -97011,19 +95886,43 @@ Costruzione della regione critica (zona di rifiuto di
 \begin_inset Formula $\alpha$
 \end_inset
 
-:
+ è la seguente:
 \begin_inset Formula \[
-R=\left\{ \left(x_{1},...,x_{n},y_{1},...,y_{n}\right)\ |\ \frac{\widehat{\sigma}_{x}^{2}}{\widehat{\sigma}_{y}^{2}}>k_{1-\alpha}\right\} \]
+R=\left\{ \left(x_{1},...,x_{n},y_{1},...,y_{n}\right)\ |\ \frac{\widehat{\sigma}_{x}^{2}}{\widehat{\sigma}_{y}^{2}}\geq k_{\alpha}\right\} \]
 
 \end_inset
 
  con 
 \begin_inset Formula \[
-P_{H_{0}}\left(\underset{F_{m-1,n-1}}{\underbrace{\frac{\widehat{\sigma}_{x}^{2}}{\widehat{\sigma}_{y}^{2}}\ }}>\ k_{1-\alpha}\right)=\alpha\text{ cioè }k_{\alpha}=F_{m-1,n-1;1-\alpha}.\]
+P_{H_{0}}\left(\underset{F_{m-1,n-1}}{\underbrace{\frac{\widehat{\sigma}_{x}^{2}}{\widehat{\sigma}_{y}^{2}}\ }}\geq\ k_{\alpha}\right)=\alpha\text{ cioè }k_{\alpha}=F_{m-1,n-1;1-\alpha}.\]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula $k_{\alpha}$
+\end_inset
+
+è dunque l'
+\begin_inset Formula $1-\alpha$
+\end_inset
+
+ quantile della distribuzione 
+\begin_inset Formula $F$
+\end_inset
+
+ con 
+\begin_inset Formula $m-1$
+\end_inset
+
+ e 
+\begin_inset Formula $n-1$
+\end_inset
+
+ gradi di libertà.
 \end_layout
 
 \begin_layout Subsection
@@ -97031,14 +95930,12 @@ Test di conformità
 \end_layout
 
 \begin_layout Standard
-Il test di conformità (”goodness-of-fit”
-\begin_inset space \space{}
-\end_inset
-
-test) non è un test su un'ipotesi parametrica.
- Ciò che si desidera verificare è se la distribuzione dei dati è uguale
- ad una distribuzione data (ad esempio Normale, di Pareto, esponenziale,
- ecc.) che indicheremo con 
+Il test di conformità (”goodness-of-fit” test) non è un test su un'ipotesi
+ parametrica.
+ Infatti, con il test di conformità si desidera verificare se la distribuzione
+ della popolazione dalla quale è estratto il campione corrisponde ad una
+ distribuzione data (ad esempio Normale, di Pareto, esponenziale, ecc.) che
+ indicheremo qui con 
 \begin_inset Formula $F$
 \end_inset
 
@@ -97098,7 +95995,7 @@ F(x)=1-\left(\frac{x}{x_{0}}\right)^{-k}.\]
 \end_inset
 
  Al fine di costruire il test dovremo, partendo dalle osservazioni, costruire
- delle classi di reddito, che noteremo con 
+ degli intervalli (o classi) di reddito, che noteremo con 
 \begin_inset Formula $c_{1},c_{2},...,c_{K}$
 \end_inset
 
@@ -97127,7 +96024,12 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\hspace{1em}*{-2.2cm}\begin{tabular}{|c|c|c|c|c|c|}
+\begin_inset space \hspace{}
+\length -2.1cm
+\end_inset
+
+
+\begin_inset Formula $\begin{tabular}{|c|c|c|c|c|c|}
 \hline  {\small Classe}  &  \ensuremath{\begin{array}{c}
 \text{{\small Intervallo}}\\
 \text{{\small Mia Fr.}}\end{array}} &  {\small\# osservazioni}  &  \ensuremath{\begin{array}{c}
@@ -97161,20 +96063,29 @@ Le probabilità
  sono le probabilità teoriche di osservare una realizzazione nell'intervallo
  corrispondente, ovvero 
 \begin_inset Formula \[
-p_{k}=P_{H_{0}}(l_{k-1}\leq X<l_{k}).\]
+p_{k}=P_{H_{0}}(l_{k}\leq X<l_{k+1}).\]
 
 \end_inset
 
- Su 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Su 
 \begin_inset Formula $n$
 \end_inset
 
  estrazioni indipendenti il numero atteso di osservazioni nell'intervallo
  
-\begin_inset Formula $\left[l_{k-1},l_{k}\right)$
+\begin_inset Formula $\left[l_{k},l_{k+1}\right)$
 \end_inset
 
- sarà semplicemente 
+, notato 
+\begin_inset Formula $E_{k}$
+\end_inset
+
+, sarà semplicemente 
 \begin_inset Formula $n\ p_{k}$
 \end_inset
 
@@ -97182,19 +96093,26 @@ p_{k}=P_{H_{0}}(l_{k-1}\leq X<l_{k}).\]
  Il test consiste nel confrontare le frequenze assolute empiriche con quelle
  teoriche.
  Se le differenze sono ”grandi”, avremo evidenza contro l'ipotesi nulla.
- Occorre pertanto sapere la distribuzione della somma dei quadrati delle
- differenze ”standardizzate”, 
-\begin_inset Formula $\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}$
+ Per misurare tali discrepanze si calcolano gli scarti al quadrato tra le
+ frequenze assolute empiriche e quelle teoriche, debitamente 
+\begin_inset Quotes eld
+\end_inset
+
+standardizzate
+\begin_inset Quotes erd
 \end_inset
 
 .
- Sotto l'ipotesi nulla 
-\begin_inset Formula $H_{0}$
+ Al fine di eseguire correttamente il test occorre ancora una volta conoscere
+ la distribuzione della statistica 
+\begin_inset Formula $S=\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}$
 \end_inset
 
- la quantità 
+.
+ Fortunatamente è possibile dimostrare che sotto l'ipotesi nulla la quantità
+ 
 \begin_inset Formula \[
-\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}=\chi_{K-1.}^{2}\]
+\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}\sim\chi_{K-1.}^{2}\]
 
 \end_inset
 
@@ -97343,13 +96261,13 @@ status collapsed
 
 \begin_layout Standard
 Scelto il valore critico 
-\begin_inset Formula $k_{1-\alpha}=\chi_{11,1-\alpha}^{2}$
+\begin_inset Formula $k_{\alpha}=\chi_{11,1-\alpha}^{2}$
 \end_inset
 
  al livello di significatività desiderato, rigetteremo l'ipotesi nulla se
  
 \begin_inset Formula \[
-\sum_{k=1}^{12}\frac{\left({\small O}_{k}-\frac{{\small n}}{12}\right)^{2}}{\frac{{\small n}}{12}}>k_{1-\alpha}\]
+\sum_{k=1}^{12}\frac{\left({\small O}_{k}-\frac{{\small n}}{12}\right)^{2}}{\frac{{\small n}}{12}}\geq k_{\alpha}\]
 
 \end_inset
 
@@ -97372,6 +96290,10 @@ end{esempio}
 
 \begin_layout Subsection
 Test d'indipendenza
+\end_layout
+
+\begin_layout Standard
+Questo test verrà presentato alla lavagna.
 \end_layout
 
 \end_body

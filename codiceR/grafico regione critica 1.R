@@ -88,11 +88,17 @@ regioneCritica3 <- function() {
 		  panel.first=polygon(xPol,yPol,col="lightcyan",border = NA))
 
   
-
+  text(-0.5575,-0.53,expression(Omega^2),cex=1.5)
   
-  text(-0.55,-0.55,expression(paste("Non rifiuto ", H[0])))
-  text(-0.54,0.-0.535,expression(paste("Rifiuto ", H[0])))
+  text(-0.55,-0.55,expression(paste("Non rifiuto ", H[0])),cex=1.2)
+  text(-0.54,0.-0.535,expression(paste("Rifiuto ", H[0])),cex=1.2)
 }
-
 regioneCritica3()
+
+
+pdf(file="grafici/regioneCriticaTestMinimo.pdf")
+regioneCritica3()
+dev.off()
+
+
 print("");
