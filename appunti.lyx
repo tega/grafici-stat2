@@ -27558,7 +27558,7 @@ Per quanto riguarda invece gli errori abbiamo due tipi di errori evidenziati
  in tabella con un asterisco:
 \begin_inset Formula \[
 \begin{tabular}{l|c|c|}
- \cline{2-3}  &  \ensuremath{H_{0}}\: vera  &  \ensuremath{H_{0}}\: falsa \\
+ \cline{2-3}  &  \ensuremath{H_{0}}\:\ vera  &  \ensuremath{H_{0}}\:\ falsa \\
 \hline \multicolumn{1}{|l|}{Rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
 \multicolumn{1}{c}{\ensuremath{\alpha}}\end{tabular}  &  \begin{tabular}{l}
@@ -93501,7 +93501,11 @@ P\left(Z\leq\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=1-\alpha\text{.}\l
 
 \end_inset
 
- Poiché 
+ Poiché l'
+\begin_inset Formula $1-\alpha$
+\end_inset
+
+ quantile 
 \begin_inset Formula $z_{1-\alpha}$
 \end_inset
 
