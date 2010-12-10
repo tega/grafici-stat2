@@ -22117,7 +22117,7 @@ In questo paragrafo consideriamo due importanti caratteristiche di uno stimatore
 \end_inset
 
  ai rispettivi momenti teorici 
-\begin_inset Formula $\mu_{r}$
+\begin_inset Formula $M_{r}$
 \end_inset
 
 , il secondo quando abbiamo considerato la distribuzione limite della media
@@ -24349,8 +24349,8 @@ reference "fig:latte P-valore"
 
 ):
 \begin_inset Formula \begin{eqnarray*}
-P_{H_{0}}(\overline{X}\geqq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geqq0.009)\\
- & = & P_{H_{0}}(\frac{\sqrt{5}\left(\overline{X}+0.545\right)}{0.008}\geqq2.515)\\
+P_{H_{0}}(\overline{X}\geq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geq0.009)\\
+ & = & P_{H_{0}}(\frac{\sqrt{5}\left(\overline{X}+0.545\right)}{0.008}\geq2.515)\\
  & = & 0.59\%.\end{eqnarray*}
 
 \end_inset
@@ -24395,10 +24395,6 @@ Calcolo del
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -24908,10 +24904,6 @@ Calcolo del
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
@@ -24925,8 +24917,8 @@ Il
 
 -value è dunque uguale a
 \begin_inset Formula \begin{eqnarray*}
-P_{H_{0}}(\overline{X}\leqq0.5985,\:\overline{X}\geqslant0.6015) & = & P_{H_{0}}(|\overline{X}-0.6|\geqq0.0015)\\
- & = & P_{H_{0}}(\frac{|\overline{X}-0.6|}{0.001}\geqq1.5)=13.4\%.\end{eqnarray*}
+P_{H_{0}}(\overline{X}\leq0.5985,\:\overline{X}\geqslant0.6015) & = & P_{H_{0}}(|\overline{X}-0.6|\geq0.0015)\\
+ & = & P_{H_{0}}(\frac{|\overline{X}-0.6|}{0.001}\geq1.5)=13.4\%.\end{eqnarray*}
 
 \end_inset
 
@@ -25451,7 +25443,7 @@ P_{H_{0}}(\overline{X}+0.545\geq k_{5\%}+0.545) & = & 0.05\\
 P_{H_{0}}\left(\frac{\overline{X}+0.545}{0.008/\sqrt{5}}\geq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.05\\
 P\left(Z\geq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.05\\
 P\left(Z\leq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\\
-P\left(Z\leq q_{0.95}\right) & = & 0.95\end{eqnarray*}
+P\left(Z\leq z_{0.95}\right) & = & 0.95\end{eqnarray*}
 
 \end_inset
 
@@ -25519,7 +25511,7 @@ P\left(Z\leq q_{0.95}\right) & = & 0.95\end{eqnarray*}
 \lang italian
  si ricava che
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Ricordiamo che data una variabile aleatoria 
@@ -25614,7 +25606,7 @@ status collapsed
 
 lontano” e in direzione dell'ipotesi alternativa, ovvero se 
 \begin_inset Formula \begin{equation}
-\overline{x}\geqq k_{5\%}=-0.539\label{disequazione test destro}\end{equation}
+\overline{x}\geq k_{5\%}=-0.539\label{disequazione test destro}\end{equation}
 
 \end_inset
 
@@ -25721,13 +25713,13 @@ begin{definizione}
 \end_inset
 
  per cui 
-\begin_inset Formula $S\geqq k_{\alpha}$
+\begin_inset Formula $S\geq k_{\alpha}$
 \end_inset
 
  (e quindi tali per cui il test è rifiutato) è chiamato la regione critica
  del test o semplicemente regione critica
 \begin_inset Formula \[
-R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geqq k_{\alpha}\right\} .\]
+R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geq k_{\alpha}\right\} .\]
 
 \end_inset
 
@@ -94557,7 +94549,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Confronto la densità Normale standard e la Student.
+Confronto tra la densità Normale standard e la Student.
 \end_layout
 
 \end_inset
