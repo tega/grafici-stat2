@@ -93931,9 +93931,9 @@ Il test sulla media fino ad ora considerato si basa sull'ipotesi di normalità
 
 .
  Come andrà effettuato ora il test sulla media? Supponiamo di voler testare
- l'ipotesi nulla 
-\begin_inset Formula \begin{eqnarray*}
-H_{0} & : & \:\mu=\mu_{0}\end{eqnarray*}
+ l'ipotesi nulla
+\begin_inset Formula \[
+H_{0}:\:\mu=\mu_{0}\]
 
 \end_inset
 
