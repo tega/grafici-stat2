@@ -1,0 +1,4861 @@
+
+\documentclass[a4paper]{report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amssymb}
+\usepackage[dvips]{graphicx}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Wednesday, February 17, 2010 14:36:14}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\newcounter{ese}
+\newcounter{def}
+\theoremstyle{remark} 
+\newtheorem{esempio}[ese]{Esempio}
+\newtheorem{definizione}[def]{Definizione}
+\newtheorem{remark}{Osservazione}
+\newcounter{theor}
+\newtheorem{theorem}[theor]{Teorema}
+
+\begin{document}
+
+\title{Metodi Quantitativi\\
+Appunti del corso}
+\author{}
+\date{Semestre Estivo\\
+2010}
+\maketitle
+\tableofcontents
+
+\part{\protect\bigskip Complementi al modello classico di regressione}
+
+\chapter{La regressione scomposta}
+
+\section{Il problema}
+
+Nel quadro della regressione classica%
+\begin{equation*}
+y=X\beta +\varepsilon
+\end{equation*}%
+con $n$ osservazioni e $K$ variabili esplicative scomponiamo le variabili
+esplicative ed i loro coefficienti in 2 gruppi:
+
+\begin{itemize}
+\item la matrice delle variabili esplicative%
+\begin{equation*}
+X=\left[ 
+\begin{tabular}{l|l}
+$\underset{\left( n\times K_{1}\right) }{X_{1}}$ & $\underset{\left( n\times
+K_{2}\right) }{X_{2}}$%
+\end{tabular}%
+\right]
+\end{equation*}
+
+\item il vettore dei coefficienti%
+\begin{equation*}
+\beta =\left[ 
+\begin{array}{c}
+\beta _{1} \\ 
+\beta _{2}%
+\end{array}%
+\right] 
+\begin{array}{c}
+\left( K_{1}\times 1\right) \\ 
+\left( K_{2}\times 1\right)%
+\end{array}%
+\end{equation*}
+\end{itemize}
+
+\noindent Naturalmente, lo stimatore di $\beta $ \`{e} lo stimatore abituale
+dei m.q.%
+\begin{equation*}
+\widehat{\beta }=\left( X^{\prime }X\right) ^{-1}X^{\prime }y.
+\end{equation*}%
+Supponiamo di essere interessati a $\beta _{2}$ (vettore $K_{2}\times 1)$.
+Evidentemente $\widehat{\beta }_{2}$ \`{e} la seconda parte del vettore $%
+\widehat{\beta }$. Come esprimerlo analiticamente?
+
+\section{Lo stimatore}
+
+Sappiamo che $\widehat{\beta }$ \`{e} la soluzione del sistema%
+\begin{equation*}
+X^{\prime }X\ \widehat{\beta }=X^{\prime }y.
+\end{equation*}%
+In forma scomposta possiamo riscrivere il precedente sistema come%
+\begin{eqnarray*}
+\left[ 
+\begin{array}{c}
+X_{1}^{\prime } \\ 
+X_{2}^{\prime }%
+\end{array}%
+\right] \left[ 
+\begin{array}{cc}
+X_{1} & X_{2}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+\widehat{\beta }_{1} \\ 
+\widehat{\beta }_{2}%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{c}
+X_{1}^{\prime } \\ 
+X_{2}^{\prime }%
+\end{array}%
+\right] y \\
+\left[ 
+\begin{array}{cc}
+X_{1}^{\prime }X_{1} & X_{1}^{\prime }X_{2} \\ 
+X_{2}^{\prime }X_{1} & X_{2}^{\prime }X_{2}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+\widehat{\beta }_{1} \\ 
+\widehat{\beta }_{2}%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{c}
+X_{1}^{\prime }y \\ 
+X_{2}^{\prime }y%
+\end{array}%
+\right]
+\end{eqnarray*}%
+\begin{eqnarray}
+X_{1}^{\prime }X_{1}\widehat{\beta }_{1}+X_{1}^{\prime }X_{2}\widehat{\beta }%
+_{2} &=&X_{1}^{\prime }y  \label{sistema 1} \\
+X_{2}^{\prime }X_{1}\widehat{\beta }_{1}+X_{2}^{\prime }X_{2}\widehat{\beta }%
+_{2} &=&X_{2}^{\prime }y  \label{sistema 2}
+\end{eqnarray}%
+Poich\'{e} per ipotesi $rg(X)=K\Leftrightarrow $ le $K$ colonne di $X$ sono
+linearmente indipendenti, anche le $K_{1}$ colonne di $X_{1}$ devono essere
+necessariamente linearmenti indipendenti. Ci\`{o} significa che la matrice
+quadrata%
+\begin{equation*}
+\underset{\left( K_{1}\times K_{1}\right) }{X_{1}^{\prime }X_{1}}
+\end{equation*}%
+\`{e} non singolare (invertibile). Dalla (\ref{sistema 1}) risolvendo per $%
+\widehat{\beta }_{1}$ otteniamo:%
+\begin{equation}
+\widehat{\beta }_{1}=\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime
+}\left( y-X_{2}\widehat{\beta }_{2}\right)  \label{sistema 3}
+\end{equation}%
+Inserendo la (\ref{sistema 3}) nella (\ref{sistema 2}):%
+\begin{equation*}
+X_{2}^{\prime }X_{1}\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime
+}\left( y-X_{2}\widehat{\beta }_{2}\right) +X_{2}^{\prime }X_{2}\widehat{%
+\beta }_{2}=X_{2}^{\prime }y
+\end{equation*}%
+\begin{eqnarray}
+\left( X_{2}^{\prime }X_{2}-X_{2}^{\prime }X_{1}\left( X_{1}^{\prime
+}X_{1}\right) ^{-1}X_{1}^{\prime }X_{2}\right) \widehat{\beta }_{2}
+&=&X_{2}^{\prime }y-X_{2}^{\prime }X_{1}\left( X_{1}^{\prime }X_{1}\right)
+^{-1}X_{1}^{\prime }y  \notag \\
+X_{2}^{\prime }\left( I-X_{1}\left( X_{1}^{\prime }X_{1}\right)
+^{-1}X_{1}^{\prime }\right) X_{2}\widehat{\beta }_{2} &=&X_{2}^{\prime
+}\left( I-X_{1}\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime
+}\right) y  \notag \\
+X_{2}^{\prime }\ M_{1}\ X_{2}\widehat{\beta }_{2} &=&X_{2}^{\prime }\ M_{1}\
+y.  \label{sistema 3bis}
+\end{eqnarray}%
+Osservazioni sulla matrice $M_{1}$
+
+\begin{itemize}
+\item $M_{1}$ \`{e} della stessa forma e propriet\`{a} che la matrice%
+\begin{equation*}
+M=I-X\left( X^{\prime }X\right) ^{-1}X^{\prime }
+\end{equation*}
+
+\item soltanto che essa \`{e} formata a partire da $X_{1}$ e non da $X$.
+Come per $M$ si dimostra facilmente che%
+\begin{equation*}
+\begin{tabular}{l}
+$\bullet \ M_{1}^{\prime }=M_{1}$ e $M_{1}M_{1}=M_{1}\text{ (\`{e}
+simmetrica e idempotente)}$ \\ 
+$\bullet \ rg(M_{1})=tr(M_{1})=n-K_{1}$ \\ 
+$\bullet \ M_{1}X_{1}=0$%
+\end{tabular}%
+\end{equation*}
+\end{itemize}
+
+\noindent Quando la matrice $X$ \`{e} di rango $K$, la matrice%
+\begin{equation*}
+\underset{\left( K_{2}\times K_{2}\right) }{X_{2}^{\prime }M_{1}X_{2}}
+\end{equation*}%
+\`{e} non singolare\footnote{%
+Dimostrazione:\ Supponiamo che $rg(X_{2}^{\prime }M_{1}X_{2})<K_{2}$. Questo
+significa che il nucleo di $X_{2}^{\prime }M_{1}X_{2}$ non \`{e} vuoto e cio%
+\`{e} che esiste un vettore $z\in \mathbb{R}^{K_{2}}$ diverso dal vettore
+nullo tale per cui 
+\begin{equation*}
+X_{2}^{\prime }M_{1}X_{2}z=0.
+\end{equation*}%
+Premoltiplicando la seguente uguaglianza per $y^{\ast \prime }$ otteniamo
+una, utilizzando la propriet\`{a} di idempotenza di $M_{1}$, la seguente
+forma quadratica%
+\begin{eqnarray*}
+\underset{\widetilde{z}^{\prime }}{\underbrace{z^{\prime }X_{2}^{\prime
+}M_{1}}}\underset{\widetilde{z}}{\ \underbrace{M_{1}X_{2}z}} &=&0 \\
+\widetilde{z}^{\prime }\widetilde{z} &=&0
+\end{eqnarray*}%
+Ma $\widetilde{z}^{\prime }\widetilde{z}=0\Leftrightarrow \widetilde{z}=0$,
+da cui deduciamo che $M_{1}X_{2}z=0$, ovvero%
+\begin{eqnarray*}
+X_{2}z-X_{1}\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime }X_{2}z
+&=&0 \\
+\left[ 
+\begin{array}{cc}
+X_{1} & X_{2}%
+\end{array}%
+\right] \underset{y^{\ast }\neq 0}{\underbrace{\left[ 
+\begin{array}{c}
+-\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime }X_{2}z \\ 
+z%
+\end{array}%
+\right] }} &=&0 \\
+X\ y^{\ast } &=&0
+\end{eqnarray*}%
+$y^{\ast }\in \mathbb{R}^{K}$ \`{e} diverso dal vettore nullo poich\'{e} $%
+z\neq 0$. Tuttavia $X\ y^{\ast }=0$ \`{e} in contraddizione con l'ipotesi
+che $Rg(X)=K$.
+\par
+{}} (lo deve essere necessariamente altrimenti il sistema non ammetterebbe
+una soluzione unica e ci\`{o} sarebbe in contraddizione con $\widehat{\beta }%
+=\left( X^{\prime }X\right) ^{-1}X^{\prime }y$).
+
+\noindent Quindi, tornando all'equazione (\ref{sistema 3bis}) abbiamo%
+\begin{eqnarray}
+X_{2}^{\prime }M_{1}X_{2}\widehat{\beta }_{2} &=&X_{2}^{\prime }M_{1}y. 
+\notag \\
+\widehat{\beta }_{2} &=&\left( X_{2}^{\prime }M_{1}X_{2}\right)
+^{-1}X_{2}^{\prime }M_{1}y  \label{sistema 4}
+\end{eqnarray}%
+Inoltre:%
+\begin{eqnarray*}
+V(\widehat{\beta }_{2}) &=&\left( X_{2}^{\prime }M_{1}X_{2}\right)
+^{-1}X_{2}^{\prime }M_{1}\underset{\sigma ^{2}I}{\underbrace{V(y)}}%
+M_{1}X_{2}\left( X_{2}^{\prime }M_{1}X_{2}\right) ^{-1} \\
+&=&\sigma ^{2}\left( X_{2}^{\prime }M_{1}X_{2}\right) ^{-1}
+\end{eqnarray*}%
+Si tratta quest'ultimo del blocco in posizione $(2,2)$ della matrice $\left(
+X^{\prime }X\right) ^{-1}$. Abbiamo di fatto "solo" riscritto $V(\widehat{%
+\beta }_{2})$ in funzione di $X_{2}$ e $M_{1}$%
+\begin{equation*}
+V(\widehat{\beta })=\sigma ^{2}\left( X^{\prime }X\right) ^{-1}=\left[ 
+\begin{array}{cc}
+V(\widehat{\beta }_{1}) & \ldots \\ 
+\ldots & V(\widehat{\beta }_{2})%
+\end{array}%
+\right] .
+\end{equation*}%
+Punto sulla situazione:
+
+\begin{itemize}
+\item \`{E} possibile riscrivere il modello di regressione%
+\begin{equation*}
+y=X\beta +\varepsilon
+\end{equation*}
+
+a blocchi rispetto alle variabili esplicative di nostro interesse:%
+\begin{equation*}
+y=X_{1}\beta _{1}+X_{2}\beta _{2}+\varepsilon
+\end{equation*}
+
+\item \`{E} possibile esprimere il coefficiente $\widehat{\beta }_{2}$ dei
+m.q.o. utilizzando $X_{2}$ e la matrice $M_{1}$ come%
+\begin{equation*}
+\widehat{\beta }_{2}=\left( X_{2}^{\prime }M_{1}X_{2}\right)
+^{-1}X_{2}^{\prime }M_{1}y
+\end{equation*}
+\end{itemize}
+
+\noindent Osservazione: abbiamo solo esplicitato (riscritto) $\widehat{\beta 
+}_{2}$ in altro modo!
+
+\section{Il modello ridotto}
+
+Lo stimatore dei m.q. dei coefficienti di nostro interesse, $\widehat{\beta }%
+_{2}$, pu\`{o} essere ottenuto direttamente utilizzando i m.q. su un modello
+ridotto (o trasformato). Come?
+
+\begin{enumerate}
+\item Si modifica\ (trasforma) il modello di partenza%
+\begin{equation*}
+y=X_{1}\beta _{1}+X_{2}\beta _{2}+\varepsilon
+\end{equation*}
+
+premoltiplicando per $M_{1}$%
+\begin{eqnarray}
+M_{1}y &=&\underset{=0}{\underbrace{M_{1}X_{1}}}\beta _{1}+M_{1}X_{2}\beta
+_{2}+M_{1}\varepsilon  \notag \\
+\underset{\left( n\times n\right) \left( n\times 1\right) }{M_{1}y} &=&%
+\underset{\left( n\times n\right) \left( n\times K_{2}\right) }{M_{1}X_{2}}%
+\beta _{2}+M_{1}\varepsilon  \notag \\
+\widetilde{y} &=&\widetilde{X}_{2}\beta _{2}+\widetilde{\varepsilon }
+\label{sistema 5}
+\end{eqnarray}
+
+\item Si applicano i minimi quadrati sul modello trasformato%
+\begin{eqnarray*}
+\widehat{\beta }_{2} &=&\left( \widetilde{X}_{2}^{\prime }\widetilde{X}%
+_{2}\right) ^{-1}\widetilde{X}_{2}^{\prime }\widetilde{y} \\
+&=&\left( X_{2}^{\prime }M_{1}M_{1}X_{2}\right) ^{-1}X_{2}^{\prime
+}M_{1}M_{1}y \\
+&=&\left( X_{2}^{\prime }M_{1}X_{2}\right) ^{-1}X_{2}^{\prime }M_{1}y
+\end{eqnarray*}%
+ottenendo cos\`{\i} esattamente la formula (\ref{sistema 4}) precedente per $%
+\widehat{\beta }_{2}$.
+\end{enumerate}
+
+\noindent Analizziamo i residui stimati di questa regressione:%
+\begin{equation*}
+\widehat{\widetilde{\varepsilon }}=\widetilde{y}-\widetilde{X}_{2}\widehat{%
+\beta }_{2}.
+\end{equation*}%
+Questi residui sono identici ai residui%
+\begin{equation*}
+\widehat{\varepsilon }=y-X\widehat{\beta }
+\end{equation*}%
+della regressione del modello di partenza $y=X\beta +\varepsilon $. Infatti,%
+\begin{eqnarray*}
+\widehat{\varepsilon } &=&y-X\widehat{\beta }=y-X_{1}\widehat{\beta }%
+_{1}-X_{2}\widehat{\beta }_{2} \\
+&=&y-X_{1}\underset{=\widehat{\beta }_{1}\text{, cf. formula (\ref{sistema 3}%
+)}}{\underbrace{\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime
+}\left( y-X_{2}\widehat{\beta }_{2}\right) }}-X_{2}\widehat{\beta }_{2} \\
+&=&\left( I-X_{1}\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime
+}\right) \left( y-X_{2}\widehat{\beta }_{2}\right) \\
+&=&M_{1}\left( y-X_{2}\widehat{\beta }_{2}\right) =\widetilde{y}-\widetilde{X%
+}_{2}\widehat{\beta }_{2}=\widehat{\widetilde{\varepsilon }}
+\end{eqnarray*}%
+Dall'uguaglianza degli errori stimati deduciamo che $\widetilde{SS}=\widehat{%
+\widetilde{\varepsilon }}^{\prime }\widehat{\widetilde{\varepsilon }}$ e $SS=%
+\widehat{\varepsilon }^{\prime }\widehat{\varepsilon }$ sono pure identici.
+
+\bigskip
+
+\noindent Attenzione, consiglio pratico: se si stima direttamente il modello
+trasformato (\ref{sistema 5}) al computer, utilizzando quindi $\widetilde{y}$
+quale variabile dipendente e $\widetilde{X}_{2}$ quale matrice delle
+variabili esplicative, occorre modificare la matrice stimata di
+varianza-covarianza di $\widehat{\beta }_{2}$ in quanto il programma non pu%
+\`{o} sapere che $K_{1}$ gradi di libert\`{a} sono stati persi a causa della
+trasformazione $M_{1}$ (che \`{e} di rango $n-K_{1}$). Il programma calcoler%
+\`{a} 
+\begin{equation*}
+\widetilde{SS}=\widehat{\widetilde{\varepsilon }}^{\prime }\widehat{%
+\widetilde{\varepsilon }}
+\end{equation*}%
+che come notato corrisponde al giusto $SS$,%
+\begin{equation*}
+\widehat{\beta }_{2}=\left( X_{2}^{\prime }M_{1}X_{2}\right)
+^{-1}X_{2}^{\prime }M_{1}y
+\end{equation*}%
+che corrisponde al giusto $\widehat{\beta }_{2}$. Ma per la stima di $\sigma
+^{2}$ il programma dar\`{a}%
+\begin{equation*}
+\widehat{\sigma }_{falso}^{2}=\frac{\widetilde{SS}}{n-K_{2}}
+\end{equation*}%
+mentre il vero (giusto) stimatore \`{e}:%
+\begin{equation*}
+\widehat{\sigma }_{vero}^{2}=\frac{SS}{n-K}=\frac{\widetilde{SS}}{%
+n-K_{1}-K_{2}}.
+\end{equation*}%
+Ne segue che occorre aggiustare l'output del programma in maniera tale da
+correggere i gradi di libert\`{a}%
+\begin{equation*}
+\widehat{\sigma }^{2}=\widehat{\sigma }_{vero}^{2}=\frac{\widetilde{SS}}{%
+n-K_{1}-K_{2}}=\frac{n-K_{2}}{n-K}\widehat{\sigma }_{falso}^{2}.
+\end{equation*}%
+In maniera analoga,%
+\begin{equation*}
+\widehat{V}_{falso}(\widehat{\beta }_{2})=\widehat{\sigma }%
+_{falso}^{2}\left( X_{2}^{\prime }M_{1}X_{2}\right) ^{-1}
+\end{equation*}%
+andr\`{a} corretto con%
+\begin{eqnarray*}
+\widehat{V}(\widehat{\beta }_{2}) &=&\widehat{\sigma }_{vero}^{2}\left(
+X_{2}^{\prime }M_{1}X_{2}\right) ^{-1} \\
+&=&\frac{n-K_{2}}{n-K}\widehat{\sigma }_{falso}^{2}\left( X_{2}^{\prime
+}M_{1}X_{2}\right) ^{-1} \\
+&=&\frac{n-K_{2}}{n-K}\widehat{V}_{falso}(\widehat{\beta }_{2})
+\end{eqnarray*}
+
+\noindent Regola: i risultati per $\widetilde{SS}$ e $\widehat{\beta }_{2}$
+del modello trasformato sono Ok, quelli per $\widehat{\sigma }^{2}$ e $%
+\widehat{V}(\widehat{\beta }_{2})$ vanno corretti!
+
+\section{Interpretazione della trasformazione}
+
+\begin{equation*}
+\widetilde{y}=M_{1}y=y-\underset{\widehat{\beta }_{1}\text{ della
+regressione }y=X_{1}\beta _{1}\ +\ \text{errore}}{X_{1}\underbrace{\left(
+X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime }y}}
+\end{equation*}%
+Ora $\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime }y$ \`{e} lo
+stimatore dei minimi quadrati del modello parziale (incompleto) $%
+y=X_{1}\beta _{1}+$ errore.
+
+\begin{itemize}
+\item Si ha dunque che $\widetilde{y}$ \`{e} l'errore stimato del modello
+parziale, o in altre parole, $y$ "epurato" dall'influenza parziale di $X_{1}$%
+:%
+\begin{equation*}
+y-\text{ "la parte di }y\text{ che \`{e} spiegabile da }X_{1}\text{".}
+\end{equation*}
+
+\item La stessa interpretazione vale per ogni colonna di $X_{2}$:%
+\begin{equation*}
+M_{1}X_{2}=\left[ 
+\begin{tabular}{l|l|l|l}
+$M_{1}\left( X_{2}\right) _{\cdot ,1}$ & $M_{1}\left( X_{2}\right) _{\cdot
+,2}$ & $\ldots $ & $M_{1}\left( X_{2}\right) _{\cdot ,K_{2}}$%
+\end{tabular}%
+\right]
+\end{equation*}%
+Ad ogni variabile esplicativa in $X_{2}$ (ad ogni sua colonna) tolgo la
+parte "spiegata" da $X_{1}$. $\Rightarrow $ nel modello trasformato, la
+variabile endogena $\widetilde{y}$ e i regressori $\widetilde{X}_{2}$ sono
+ottenuti depurando le variabili originali $y$ e $X_{2}$ dalla parte spiegata
+da $X_{1}$.
+\end{itemize}
+
+\noindent Domanda: Quando lo stimatore di $\beta _{1}$ sul modello parziale
+(incompleto) ci d\`{a} il giusto stimatore $\widehat{\beta }_{1}$?
+
+\bigskip
+
+\noindent Risposta:
+
+\begin{enumerate}
+\item[a)] Abbiamo precedentemente osservato che il giusto stimatore pu\`{o}
+essere scritto (cf. (\ref{sistema 3}))%
+\begin{eqnarray*}
+\widehat{\beta }_{1} &=&\left( X_{1}^{\prime }X_{1}\right)
+^{-1}X_{1}^{\prime }\left( y-X_{2}\widehat{\beta }_{2}\right) \\
+&=&\underset{\text{Stimatore di }\widehat{\beta }_{1}\text{\ sul modello
+parziale}}{\underbrace{\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime
+}y}}-\ \ \ \underset{\text{Fattore d'aggiustamento}}{\underbrace{\left(
+X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime }X_{2}\widehat{\beta }_{2}}}
+\end{eqnarray*}
+
+\item[b)] Quando le colonne di $X_{1}$ sono ortogonali a quelle di $X_{2}$
+(e quindi $X_{1}^{\prime }X_{2}=0$) i due stimatori sono identici. Infatti 
+\begin{eqnarray*}
+\widehat{\beta } &=&\left( X^{\prime }X\right) ^{-1}X^{\prime }y=\underset{%
+\text{Matrice blocco diag. se }X_{1}^{\prime }X_{2}=0}{\underbrace{\left[ 
+\begin{array}{cc}
+X_{1}^{\prime }X_{1} & X_{1}^{\prime }X_{2} \\ 
+X_{2}^{\prime }X_{1} & X_{2}^{\prime }X_{2}%
+\end{array}%
+\right] ^{-1}}}\left[ 
+\begin{array}{c}
+X_{1}^{\prime }y \\ 
+X_{2}^{\prime }y%
+\end{array}%
+\right] \\
+&=&\left[ 
+\begin{array}{c}
+\left( X_{1}^{\prime }X_{1}\right) ^{-1}X_{1}^{\prime }y \\ 
+\left( X_{2}^{\prime }X_{2}\right) ^{-1}X_{2}^{\prime }y%
+\end{array}%
+\right] \leftarrow \text{ stimatori del modello parziale.}
+\end{eqnarray*}
+\end{enumerate}
+
+\begin{esempio}
+Modello con costante
+
+\begin{equation*}
+y=X_{1}\widehat{\beta }_{1}+X_{2}\widehat{\beta }_{2}+\varepsilon
+\end{equation*}%
+dove $K_{1}=1$ e $X_{1}=S$, il vettore somma d'ordine $n$.%
+\begin{equation*}
+\widetilde{y}=\widetilde{X}_{2}\widehat{\beta }_{2}+\widetilde{\varepsilon }
+\end{equation*}%
+con 
+\begin{eqnarray*}
+\widetilde{y} &=&M_{1}y \\
+M_{1} &=&I-S(S^{\prime }S)^{-1}S^{\prime }=I-\frac{1}{n}SS^{\prime } \\
+M_{1}y &=&y-\frac{1}{n}SS^{\prime }y=y-S\overline{y}=\left[ 
+\begin{array}{c}
+y_{1} \\ 
+y_{2} \\ 
+\vdots \\ 
+y_{n}%
+\end{array}%
+\right] -\left[ 
+\begin{array}{c}
+\overline{y} \\ 
+\overline{y} \\ 
+\vdots \\ 
+\overline{y}%
+\end{array}%
+\right] =\left[ 
+\begin{array}{c}
+y_{1}-\overline{y} \\ 
+y_{2}-\overline{y} \\ 
+\vdots \\ 
+y_{n}-\overline{y}%
+\end{array}%
+\right] .
+\end{eqnarray*}%
+Si tratta semplicemente del vettore degli scarti alla media. Il modello di
+partenza%
+\begin{equation*}
+y_{i}=\beta _{1}+\beta _{2}x_{2i}+\ldots +\beta _{K}x_{Ki}+\varepsilon _{i}
+\end{equation*}%
+pu\`{o} essere stimato sul modello trasformato%
+\begin{equation*}
+y_{i}-\overline{y}=\beta _{2}\left( x_{2i}-\overline{x}_{2}\right) +\beta
+_{3}\left( x_{3i}-\overline{x}_{3}\right) +\ldots +\beta _{K}\left( x_{Ki}-%
+\overline{x}_{K}\right) +\widetilde{\varepsilon }_{i}\ .
+\end{equation*}%
+Inoltre%
+\begin{eqnarray*}
+\underset{(1\times 1)}{\widehat{\beta }_{1}} &=&\left( X_{1}^{\prime
+}X_{1}\right) ^{-1}X_{1}^{\prime }\left( y-X_{2}\underset{(K-1)\times 1}{%
+\widehat{\beta }_{2}}\right) \\
+&=&\frac{1}{n}S^{\prime }(y-X_{2}\widehat{\beta }_{2}) \\
+&=&\overline{y}-\overline{x}^{\prime }\widehat{\beta }_{2}
+\end{eqnarray*}%
+dove $\overline{x}$ rappresenta il vettore $(K-1)\times 1$ delle medie delle
+variabili esplicative.
+\end{esempio}
+
+\noindent Nota bene: la regressione scomposta \`{e} utilizzata in vari
+ambiti dell'econometria e della statistica. Chi seguir\`{a} un corso di
+analisi di serie storiche vedr\`{a} che la regressione scomposta \`{e} utile
+per spiegare il concetto di \textquotedblright funzione di autocorrelazione
+parziale\textquotedblright\ utilizzato per l'identificazione dell'ordine $%
+(q,p)$ di un processo autoregressivo a media mobile ($ARMA$-process).
+
+\part{La regressione generalizzata}
+
+\chapter{Il modello generale}
+
+\section{Introduzione}
+
+\subsection{Breve ritorno sulla regressione classica}
+
+Durante il corso \textquotedblleft Introduzione
+all'Econometria\textquotedblright\ abbiamo introdotto e studiato le propriet%
+\`{a} del modello di regressione lineare. Per un singolo individuo (o
+istante temporale) $i$, la formulazione del modello lineare in forma
+vettoriale \`{e} data da 
+\begin{equation}
+\underset{(1\times 1)}{y_{i}}=\underset{(1\times K)}{x_{i}^{\prime }}%
+\underset{(K\times 1)}{\beta }+\underset{(1\times 1)}{\epsilon _{i}}
+\end{equation}%
+mentre per l'insieme degli $n$ individui (periodi) abbiamo 
+\begin{equation}
+\underset{(n\times 1)}{y}=\underset{(n\times K)}{X}\underset{(K\times 1)}{%
+\beta }+\underset{(n\times 1)}{\epsilon }
+\end{equation}%
+Riprendiamo brevemente le ipotesi della regressione classica
+
+\begin{enumerate}
+\item sulle variabili esplicative: non stocastiche
+
+\item sugli errori:
+
+\begin{itemize}
+\item di valore atteso nullo
+
+\item omoschedastici
+
+\item non correlati (o indipendenti)
+\end{itemize}
+
+\item relazione d'indipendenza tra variabili esplicative ed errori.
+\end{enumerate}
+
+\noindent Sotto queste ipotesi, abbiamo dimostrato che i $m.q.$ forniscono
+degli stimatori efficienti (BLUE). Tuttavia, in molte applicazioni (sia in
+economia che in finanza) le ipotesi classiche non possono essere mantenute.
+In tal caso occorre porsi la domanda, se i minimi quadrati siano ancora
+efficienti e, qualora non fosse il caso, adottare nuovi metodi di stima.
+Questo \`{e} appunto il problema che affronteremo nella prima parte del
+semestre, analizzando in particolare due situazioni:
+
+\begin{enumerate}
+\item In primo luogo abbandoneremo l'ipotesi di omoschedasticit\`{a} ed
+indipendenza degli errori in favore di una struttura di varianza-covarianza
+pi\`{u} generale $\Rightarrow $ regressione generalizzata (prima parte).
+
+\item In secondo luogo, ammetteremo che le variabili esplicative siano
+stocastiche, cio\`{e} esse stesse delle variabili aleatorie. Sappiamo gi\`{a}
+che quando le variabili esplicative sono aleatorie ma indipendenti dagli
+errori, i risultati della regressione classica restano validi. Invece,
+quando queste sono correlate con gli errori tutto crolla ed \`{e} necessario
+utilizzare metodi diversi $\Rightarrow $ regressione stocastica (seconda
+parte).
+\end{enumerate}
+
+\subsection{Modelli econometrici che non soddisfano le ipotesi classiche}
+
+Quando e perch\'{e} abbandonare l'ipotesi d'omoschedasticit\`{a} e
+d'indipendenza degli errori?
+
+\begin{enumerate}
+\item con i dati trasversali ($n$ individui allo stesso momento) si
+osservano frequentemente dei fenomeni di \emph{eteroschedasticit\`{a}}.
+
+\item Con i dati temporali o pi\`{u} propriamente detto con le serie
+storiche si osserva che l'errore a un dato istante (al momento $t$) dipende
+dagli errori passati (in $t-1$, $t-2$, $\dots $): si parla di errori
+autocorrelati.
+\end{enumerate}
+
+\section{Il modello e le ipotesi}
+
+Ci interessiamo al modello di regressione 
+\begin{equation}
+y=X\beta + \epsilon
+\end{equation}
+con $K$ variabili esplicative ed $n$ osservazioni, munito delle seguenti
+ipotesi:
+
+\begin{enumerate}
+\item[H1)] Sulle variabili esplicative
+
+\begin{enumerate}
+\item[H1a)] $X$ non stocastico.
+
+\item[H1b)] $rg(X)=K$.
+\end{enumerate}
+
+\item[H2)] Sugli errori
+
+\begin{enumerate}
+\item[H2a)] $E(\epsilon)=0$.
+
+\item[H2b)] $V(\epsilon )=\sigma ^{2}V$, dove $V$ \`{e} una matrice
+qualsiasi definita positiva.
+\end{enumerate}
+
+\item[H3)] $X, \ \epsilon$ mutualmente indipendenti.
+\end{enumerate}
+
+Rispetto alla regressione classica la sola differenza \`e: 
+\begin{equation}
+\begin{array}{rcll}
+V(\epsilon) & = & \sigma^2I & \text{ regressione classica} \\ 
+V(\epsilon) & = & \sigma^2V & \text{ regressione generalizzata}%
+\end{array}%
+\end{equation}
+
+\begin{esempio}
+\label{esempio_mqg_puri} (Eteroschedasticit\`{a} pura)
+
+Studiamo una funzione di risparmio del tipo: 
+\begin{equation}
+S_{i}=a+bR_{i}+\epsilon _{i},\ \ \ i=1,\dots ,n
+\end{equation}%
+dove
+
+\begin{enumerate}
+\item[-] $S_i$ \`e il risparmio della famiglia $i$.
+
+\item[-] $R_i$ \`e il reddito della famiglia.
+\end{enumerate}
+
+\noindent Tipicamente il grafico degli $n$ punti $(S_i,R_i)$ \`e del tipo:
+
+\begin{equation*}
+\text{grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\noindent La varianza dell'errore non \`e costante: \`e una funzione
+crescente del reddito. Si pu\`o quindi scrivere: 
+\begin{equation*}
+V(\epsilon_i)=f(R_i)>0 \text{ e } f^{\prime }(R_i) > 0.
+\end{equation*}
+Una specificazione naturale potrebbe quindi essere 
+\begin{equation*}
+V(\epsilon_i)=\sigma^2R_i^2,
+\end{equation*}
+dove $\sigma^2$ \`e un parametro di proporzionalit\`a sconosciuto. Con un
+campione di $n$ famiglie ed ammettendo $Cov(\epsilon_i, \epsilon_j)=0$ per $%
+i \neq j$ avremmo 
+\begin{equation}
+\underset{(n \times n)}{V(\epsilon)}=\sigma^2\underset{V}{\underbrace{ \left[
+\begin{array}{cccc}
+R_1^2 & 0 & \dots & 0 \\ 
+0 & R_2^2 & \ddots & 0 \\ 
+\vdots & \ddots & \ddots & 0 \\ 
+0 & \dots & 0 & R_n^2%
+\end{array}
+\right] }}
+\end{equation}
+Da notare che in questo caso la matrice $V$ \`e nota in quanto le variabili $%
+R_i$ sono osservate.
+\end{esempio}
+
+\section{Quando $V$ \`{e} conosciuta: i minimi quadrati generalizzati puri}
+
+Quando la matrice $V$ \`e conosciuta (come nel precedente esempio) il metodo
+di stima prende il nome di minimi quadrati generalizzati puri, o brevemente $%
+m.q.g.$ puri. L'idea fondamentale \`e molto semplice. La presentiamo
+prendendo spunto dall'Esempio \ref{esempio_mqg_puri}.
+
+\begin{enumerate}
+\item L'idea
+
+Sappiamo risolvere questo problema quando la matrice $V=I$. Se fosse
+possibile, tramite una trasformazione appropriata, ricondurci a tale caso,
+il nostro problema sarebbe quindi risolto! Sul modello trasformato infatti,
+potremmo applicare i $m.q.$ ordinari. Nell'esempio \ref{esempio_mqg_puri},
+la varianza per l'individuo $i$ \`{e} uguale a $V(\epsilon _{i})=\sigma
+^{2}R_{i}^{2}$ e lo $s.q.m.\ \sqrt{V(\epsilon _{i})}=\sigma R_{i}$.
+Dividiamo ogni osservazione per il suo $s.q.m.$ (a meno di $\sigma $): 
+\begin{eqnarray*}
+S_{i} &=&a+bR_{i}+\epsilon _{i} \\
+\underset{\text{(tasso di risparmio)}}{\frac{S_{i}}{R_{i}}} &=&a\frac{1}{%
+R_{i}}+b+\frac{\epsilon _{i}}{R_{i}}
+\end{eqnarray*}%
+Questa \`{e} una regressione semplice dove:
+
+\begin{itemize}
+\item $S_{i}/R_{i}$ \`{e} la variabile dipendente, spiegata
+
+\item $1/R_{i}$ \`{e} la variabile esplicativa
+
+\item $b$ \`{e} la costante (che corrisponde alla propensione marginale al
+risparmio)
+
+\item $a$ \`{e} il coefficiente della variabile esplicativa
+\end{itemize}
+
+e gli errori hanno le propriet\`{a} seguenti:
+
+\begin{itemize}
+\item $\tilde{\epsilon}_{i}=\epsilon _{i}/R_{i}$
+
+\item $E(\tilde{\epsilon}_{i})=1/R_{i}E(\epsilon _{i})=$
+
+\item $V(\tilde{\epsilon}_{i})=1/R_{i}^{2}V(\epsilon _{i})=\hspace*{1cm}%
+\forall \ i$ costante! $\Rightarrow $ omoschedasticit\`{a}
+
+\item $Cov(\tilde{\epsilon}_{i},\tilde{\epsilon}_{j})=1/(R_{i}R_{j})Cov(%
+\epsilon _{i},\epsilon _{j})=\hspace*{1cm}i\neq j$
+\end{itemize}
+
+Dunque il modello cos\`{\i} trasformato soddisfa appieno le ipotesi della
+regressione classica $\Rightarrow $ applico su di esso lo stimatore dei $%
+m.q.o.$!
+
+\item L'esempio formalizzato
+
+Vogliamo ora riscrivere quanto fatto nel punto precedente in forma
+matriciale per poi coglierne la struttura. Chiamiamo dunque 
+\begin{equation*}
+\begin{array}{cccc}
+y=\underset{(n\times 1)}{\left[ 
+\begin{array}{c}
+S_{1} \\ 
+\vdots \\ 
+S_{n}%
+\end{array}%
+\right] } & X=\underset{(n\times 2)}{\left[ 
+\begin{array}{cc}
+1 & R_{1} \\ 
+\vdots & \vdots \\ 
+1 & R_{n}%
+\end{array}%
+\right] } & \beta =\underset{(2\times 1)}{\left[ 
+\begin{array}{c}
+a \\ 
+b%
+\end{array}%
+\right] } & \epsilon =\underset{(n\times 1)}{\left[ 
+\begin{array}{c}
+\epsilon _{1} \\ 
+\vdots \\ 
+\epsilon _{n}%
+\end{array}%
+\right] }%
+\end{array}%
+\end{equation*}
+
+\begin{equation*}
+\Rightarrow y=X\beta +\epsilon
+\end{equation*}%
+Inoltre sappiamo che $E(\epsilon )=0$ e $V(\epsilon )=\sigma ^{2}\left[ 
+\begin{array}{ccc}
+R_{1}^{2} &  & 0 \\ 
+& \ddots &  \\ 
+0 &  & R_{n}^{2}%
+\end{array}%
+\right] =\sigma ^{2}V$.
+
+Che trasformazione abbiamo utilizzato in precedenza al fine di applicare il
+metodo dei $m.q.$ ordinari? Ogni componente del vettore $y$ \`{e} stata
+divisa per il reddito corrispondente (o moltiplicata per $\dfrac{1}{R_{i}}$%
+). Come possiamo esprimere questa operazione utilizzando il calcolo
+matriciale? Basta \textit{premoltiplicare} il vettore $y$ per la matrice
+diagonale, notata $P$, avente $\dfrac{1}{R_{i}}$ in posizione $(i,i)$: 
+\begin{equation*}
+\underset{(n\times 1)}{\tilde{y}}\ ,\ \underset{(n\times n)}{P}=\left[ 
+\begin{array}{lll}
+\dfrac{1}{R_{1}} &  & 0 \\ 
+& \ddots &  \\ 
+0 &  & \dfrac{1}{R_{n}}%
+\end{array}%
+\right] \Rightarrow \tilde{y}=Py.
+\end{equation*}%
+Lo stesso per la parte destra dell'equazione. Il modello trasformato \`{e}
+dunque: 
+\begin{equation*}
+\underset{(n\times n)}{P}\underset{(n\times 1)}{y}=\underset{(n\times n)}{P}%
+\underset{(n\times 2)}{X\beta }+\underset{(n\times n)}{P}\underset{(n\times
+1)}{\epsilon }
+\end{equation*}%
+La $i-$esima riga: 
+\begin{equation*}
+\dfrac{S_{i}}{R_{i}}=\left( \dfrac{1}{R_{i}},\dfrac{R_{i}}{R_{i}}\right)
+\beta +\dfrac{\epsilon _{i}}{R_{i}}
+\end{equation*}%
+Il modello trasformato con la matrice non-singolare $P$ \`{e}: 
+\begin{equation*}
+\tilde{y}=\tilde{X}\beta +\tilde{\epsilon}
+\end{equation*}%
+dove dalle propriet\`{a} di $\epsilon $ ricaviamo che
+
+\begin{itemize}
+\item $E(\tilde{\epsilon})=E(P\epsilon )=0$,
+
+\item $V(\tilde{\epsilon})=V(P\epsilon )=PV(\epsilon )P^{\prime }=$ 
+\begin{eqnarray*}
+&=&\sigma ^{2}\left[ 
+\begin{array}{lll}
+\dfrac{1}{R_{1}} &  & 0 \\ 
+& \ddots &  \\ 
+0 &  & \dfrac{1}{R_{n}}%
+\end{array}%
+\right] \left[ 
+\begin{array}{lll}
+R_{1}^{2} &  & 0 \\ 
+& \ddots &  \\ 
+0 &  & R_{n}^{2}%
+\end{array}%
+\right] \left[ 
+\begin{array}{lll}
+\dfrac{1}{R_{1}} &  & 0 \\ 
+& \ddots &  \\ 
+0 &  & \dfrac{1}{R_{n}}%
+\end{array}%
+\right] \\
+&=&\sigma ^{2}I_{n},
+\end{eqnarray*}
+\end{itemize}
+
+che sono le propriet\`{a} della regressione classica.
+\end{enumerate}
+
+\subsection{Gli stimatori e le loro proriet\`{a}}
+
+\begin{enumerate}
+\item Gli stimatori dei $m.q.g.$ come stimatori dei $m.q.o.$ sul modello
+trasformato
+
+Il modello iniziale \`{e} il seguente 
+\begin{equation*}
+\underset{(n\times 1)}{y}=\underset{(n\times K)}{X}\underset{(K\times 1)}{%
+\beta }+\underset{(n\times 1)}{\epsilon },
+\end{equation*}%
+con le ipotesi $H1-H3$. In particolare abbiamo
+
+\begin{itemize}
+\item $E(\epsilon )=0$,
+
+\item $V(\epsilon )=E(\epsilon \epsilon^{\prime })=\underset{\text{def. pos.}%
+}{\sigma ^{2}V}$.
+\end{itemize}
+
+Sappiamo che per ogni matrice def. positiva $V$ esiste una matrice
+non-singolare $P$ tale che 
+\begin{equation*}
+PVP^{\prime }=I.
+\end{equation*}%
+Trasformiamo dunque il modello \textit{premoltiplicando} per $P$ 
+\begin{eqnarray}
+\underset{\tilde{y}}{\underbrace{Py}} &=&\underset{\tilde{X}}{\underbrace{PX}%
+}\ \beta +\underset{\tilde{\epsilon}}{\underbrace{P\epsilon }}  \notag \\
+\tilde{y} &=&\tilde{X}\beta +\tilde{\epsilon}  \label{modello trasformato}
+\end{eqnarray}
+Il modello trasformato (\ref{modello trasformato}) ha un vettore d'errori $%
+\tilde{\epsilon}$ tale per cui
+
+\begin{itemize}
+\item $E(\tilde{\epsilon})=0$
+
+\item $V(\tilde{\epsilon})=\sigma ^{2}I$.
+\end{itemize}
+
+Questo modello trasformato soddisfa tutte le ipotesi della regressione
+classica. Applichiamo dunque su di esso i $m.q.o.$! Sul modello trasformato
+i risultati della stima saranno pertanto quelli della regressione classica e
+cio\`{e}:
+
+\begin{itemize}
+\item lo stimatore di beta, chiamiamolo $\beta ^{\ast }$: 
+\begin{equation*}
+\beta ^{\ast }=(\tilde{X}^{\prime }\tilde{X})^{-1}\tilde{X}^{\prime }\tilde{y%
+}
+\end{equation*}
+
+\item la sua vera varianza 
+\begin{equation*}
+V(\beta ^{\ast })=\sigma ^{2}(\tilde{X}^{\prime }\tilde{X})^{-1}
+\end{equation*}
+
+\item il vettore d'errori stimati sul modello trasformato: 
+\begin{equation*}
+\hat{\tilde{\epsilon}}=\tilde{y}-\tilde{X}\beta ^{\ast }
+\end{equation*}
+
+\item la somma dei quadrati degli errori (del modello trasformato!) 
+\begin{equation*}
+\tilde{SS}={\hat{\tilde{\epsilon}}}^{\prime }\hat{\tilde{\epsilon}}=\tilde{y}%
+^{\prime }\tilde{y}-{\beta ^{\ast \prime }}\tilde{X}^{\prime }\tilde{y}=%
+\tilde{y}^{\prime }\tilde{M}\tilde{y}
+\end{equation*}%
+dove 
+\begin{equation*}
+\tilde{M}=I-\tilde{X}(\tilde{X}^{\prime }\tilde{X})^{-1}\tilde{X}^{\prime }.
+\end{equation*}
+
+\item la stima corretta di $\sigma ^{2}$ 
+\begin{equation*}
+\hat{\sigma}^{2}=\dfrac{\tilde{SS}}{n-K}
+\end{equation*}
+
+\item la stima della matrice di varianza-covarianza di $\beta ^{\ast }$ 
+\begin{equation*}
+\hat{V}(\beta ^{\ast })=\hat{\sigma}^{2}(\tilde{X}^{\prime }\tilde{X})^{-1}
+\end{equation*}
+\end{itemize}
+
+\item Lo stimatore dei $m.q.g.$
+
+Lo stimatore $\beta ^{\ast }$ pu\`{o} essere riscritto in termini di $X,\ y$
+e della matrice $P$ nel seguente modo: 
+\begin{eqnarray*}
+\beta ^{\ast } &=&(\tilde{X}^{\prime }\tilde{X})^{-1}\tilde{X}^{\prime }%
+\tilde{y} \\
+&=&(X^{\prime }P^{\prime }PX)^{-1}X^{\prime }P^{\prime }Py
+\end{eqnarray*}%
+Ora, sapendo che $PVP^{\prime }=I$ otteniamo successivamente 
+\begin{eqnarray*}
+VP^{\prime } &=&P^{-1} \\
+P^{\prime } &=&V^{-1}P^{-1} \\
+P^{\prime }P &=&V^{-1}
+\end{eqnarray*}%
+Dunque per lo stimatore $\beta ^{\ast }$ otteniamo, in termini delle
+variabili di partenza:
+
+\begin{itemize}
+\item lo stimatore 
+\begin{equation}
+\beta ^{\ast }=(X^{\prime }V^{-1}X)^{-1}X^{\prime }V^{-1}y
+\label{formula mqg}
+\end{equation}
+
+\item La vera varianza di $\beta ^{\ast }$%
+\begin{equation*}
+V(\beta ^{\ast })=\sigma ^{2}(X^{\prime }V^{-1}X)^{-1}
+\end{equation*}
+
+\item Il vettore d'errori stimati sul modello di partenza 
+\begin{equation*}
+\hat{\epsilon}=y-X\beta ^{\ast }
+\end{equation*}
+
+La relazione con gli errori stimati sul modello trasformato \`{e} la
+seguente: 
+\begin{equation*}
+\hat{\tilde{\epsilon}}=\tilde{y}-\tilde{X}\beta ^{\ast }=Py-PX\beta ^{\ast
+}=P(y-X\beta ^{\ast })=P\hat{\epsilon}
+\end{equation*}
+
+\item sul modello trasformato avevamo: 
+\begin{equation*}
+\tilde{SS}={\hat{\tilde{\epsilon}}}^{\prime }\hat{\tilde{\epsilon}}=\hat{%
+\epsilon}^{\prime }P^{\prime }P\hat{\epsilon}=\hat{\epsilon}^{\prime }V^{-1}%
+\hat{\epsilon}
+\end{equation*}
+\end{itemize}
+
+Lo stimatore $\beta ^{\ast }$ definito dalla formula (\ref{formula mqg}) 
+\`{e} chiamato stimatore dei minimi quadrati generalizzati ($m.q.g.$). Esso 
+\`{e} cos\`{\i} chiamato perch\'{e} ottenuto minimizzando la somma dei
+quadrati generalizzati 
+\begin{equation}
+\underset{\beta }{min}\ \underset{:=SSG}{\underbrace{(y-X\beta )^{\prime
+}V^{-1}(y-X\beta )}}
+\end{equation}%
+la cui soluzione \`{e} appunto il nostro $\beta ^{\ast }$. Infatti%
+\begin{eqnarray*}
+SSG &=&(y-X\beta )^{\prime }V^{-1}(y-X\beta ) \\
+&=&y^{\prime }V^{-1}y-y^{\prime }V^{-1}X\beta -\beta ^{\prime }X^{\prime
+}V^{-1}y+\beta ^{\prime }X^{\prime }V^{-1}X\beta \\
+&=&y^{\prime }V^{-1}y-\underset{\text{forma lineare}}{\underbrace{2y^{\prime
+}V^{-1}X\beta }}+\underset{\text{forma quadratica}}{\underbrace{\beta
+^{\prime }X^{\prime }V^{-1}X\beta }} \\
+\frac{\partial SSG}{\partial \beta } &=&-2X^{\prime }V^{-1}y+2X^{\prime
+}V^{-1}X\beta \overset{!}{=}0 \\
+&&\text{da cui risolvendo rispetto a }\beta \\
+\beta ^{\ast } &=&(X^{\prime }V^{-1}X)^{-1}X^{\prime }V^{-1}y
+\end{eqnarray*}%
+Noi lo abbiamo ricavato utilizzando un'argomentazione diversa. \`{E} utile
+esprimere la quantit\`{a} $\tilde{SS}$ in termini delle variabili di
+partenza $y$, $X$: 
+\begin{eqnarray*}
+\tilde{SS} &=&SSG=y^{\prime }V^{-1}y-{\beta ^{\ast \prime }}(X^{\prime
+}V^{-1}y) \\
+&& \\
+\tilde{M} &=&I-\tilde{X}(\tilde{X}^{\prime }\tilde{X})^{-1}\tilde{X}^{\prime
+} \\
+&=&I-PX(X^{\prime }V^{-1}X)^{-1}X^{\prime }P^{\prime } \\
+&& \\
+\tilde{SS} &=&\tilde{y}^{\prime }\tilde{M}\tilde{y}=y^{\prime }P^{\prime }%
+\tilde{M}Py \\
+&=&y^{\prime }P^{\prime }Py-y^{\prime }P^{\prime }PX(X^{\prime
+}V^{-1}X)^{-1}X^{\prime }P^{\prime }Py \\
+&=&y^{\prime }V^{-1}y-y^{\prime }V^{-1}X(X^{\prime }V^{-1}X)^{-1}X^{\prime
+}V^{-1}y
+\end{eqnarray*}
+
+\begin{table}[h]
+\caption{Specchietto riassuntivo}
+\label{tab:Spe}\vspace{0.5cm} 
+\begin{tabular}{|c|c|}
+\hline
+&  \\ 
+$m.q.o.$ su $\tilde{y}=\tilde{X}\beta +\tilde{\epsilon}$ & $m.q.g.$ su $%
+y=X\beta +\varepsilon$ \\ \hline
+&  \\ 
+$%
+\begin{array}{rcl}
+\beta ^{\ast } & = & (\tilde{X}^{\prime }\tilde{X})^{-1}\tilde{X}^{\prime }%
+\tilde{y} \\ 
+&  &  \\ 
+V(\beta ^{\ast }) & = & \sigma ^{2}(\tilde{X}^{\prime }\tilde{X})^{-1} \\ 
+&  &  \\ 
+\tilde{SS} & = & {\hat{\tilde{\epsilon}}}^{\prime }\hat{\tilde{\epsilon}}=%
+\tilde{y}^{\prime }\widetilde{M}\tilde{y} \\ 
+& = & \tilde{y}^{\prime }(I-\tilde{X}(\tilde{X}^{\prime }\tilde{X})^{-1}%
+\tilde{X}^{\prime })\tilde{y} \\ 
+&  &  \\ 
+\hat{\sigma}^{2} & = & \tilde{SS}/(n-K) \\ 
+&  &  \\ 
+\widehat{V}(\beta ^{\ast }) & = & \widehat{\sigma }^{2}(\tilde{X}^{\prime }%
+\tilde{X})^{-1}%
+\end{array}%
+$ & $%
+\begin{array}{rcl}
+\beta ^{\ast } & = & (X^{\prime }V^{-1}X)^{-1}X^{\prime }V^{-1}y \\ 
+&  &  \\ 
+V(\beta ^{\ast }) & = & \sigma ^{2}(X^{\prime }V^{-1}X)^{-1} \\ 
+&  &  \\ 
+SSG & = & \hat{\epsilon}^{\prime }V^{-1}\hat{\epsilon} \\ 
+= & \multicolumn{2}{l}{y^{\prime }(V^{-1}-V^{-1}X(X^{\prime
+}V^{-1}X)^{-1}X^{\prime }V^{-1})y} \\ 
+&  &  \\ 
+\hat{\sigma}^{2} & = & SSG/(n-K) \\ 
+&  &  \\ 
+\widehat{V}(\beta ^{\ast }) & = & \widehat{\sigma }^{2}(X^{\prime
+}V^{-1}X)^{-1}%
+\end{array}%
+$ \\ \hline
+\end{tabular}%
+\end{table}
+
+\item Propriet\`{a} di $\beta ^{\ast }$
+
+\begin{itemize}
+\item $\beta ^{\ast }$ \`{e} corretto! Infatti: 
+\begin{equation*}
+\beta ^{\ast }=\underset{A}{\underbrace{(X^{\prime }V^{-1}X)^{-1}X^{\prime
+}V^{-1}}}\ y=Ay
+\end{equation*}%
+e poich\'{e} $E(y)=X\beta $, $V(y)=\sigma ^{2}V$, otteniamo $E(\beta ^{\ast
+})=AE(y)=\underset{I}{\underbrace{AX}}\ \beta =\beta .$\newline
+$V(\beta ^{\ast })=AV(y)A^{\prime }=\sigma ^{2}AVA^{\prime }=\sigma
+^{2}(X^{\prime }V^{-1}X)^{-1}$.
+
+\item \`{E} efficiente (BLUE)!
+
+Dimostrazione: Condideriamo un qualsiasi altro stimatore lineare $\beta
+^{\#}=A^{\#}y$ e mostriamo che per $\beta ^{\#}$ corretto 
+\begin{equation*}
+V(\beta ^{\#})>V(\beta ^{\ast })
+\end{equation*}%
+Ora: 
+\begin{eqnarray*}
+E(\beta ^{\#}) &=&A^{\#}E(y)=A^{\#}X\beta \\
+V(\beta ^{\#}) &=&\sigma ^{2}A^{\#}V{A^{\#\prime }}
+\end{eqnarray*}%
+La condizione di correttezza di $\beta ^{\#}$ impone che $A^{\#}X=I$.
+Poniamo inoltre $A^{\#}=A+C$. Otteniamo: 
+\begin{eqnarray*}
+V(\beta ^{\#}) &=&\sigma ^{2}(A+C)V(A^{\prime }+C^{\prime }) \\
+&=&\sigma ^{2}\underset{V(\beta ^{\ast })}{\underbrace{AVA^{\prime }}}+%
+\underset{\text{nulli quando }\beta ^{\#}\text{ \`{e} corretto}}{\underbrace{%
+\sigma ^{2}AVC^{\prime }+\sigma ^{2}CVA^{\prime }}}+\underset{\text{def. non
+neg.}}{\underbrace{\sigma ^{2}CVC^{\prime }}} \\
+&&\text{poich\'{e}} \\
+A^{\#}X &=&I\Rightarrow \underset{I}{\underbrace{AX}}+CX=I\Rightarrow CX=0 \\
+AVC^{\prime } &=&(X^{\prime }V^{-1}X)^{-1}X^{\prime }V^{-1}VC^{\prime
+}=(X^{\prime }V^{-1}X)^{-1}\underset{=0}{\underbrace{X^{\prime }C^{\prime }}}%
+=0
+\end{eqnarray*}
+\end{itemize}
+
+\item Stima corretta di $\sigma ^{2}$\newline
+Definiamo $\hat{\sigma}^{2}$ come lo stimatore di $\sigma ^{2}$ del modello
+trasformato, quindi 
+\begin{equation*}
+\hat{\sigma}^{2}=\dfrac{SSG}{n-K}\text{ dove }SSG=\tilde{SS}
+\end{equation*}%
+\begin{eqnarray*}
+SSG &=&y^{\prime }\underset{Q}{\underbrace{\left[ V^{-1}-V^{-1}X(X^{\prime
+}V^{-1}X)^{-1}X^{\prime }V^{-1}\right] }}y \\
+&=&y^{\prime }Qy \\
+E(SSG) &=&?
+\end{eqnarray*}%
+Sappiamo che $QX=0$, da cui segue $Qy=Q(X\beta +\epsilon )=Q\epsilon $.%
+\newline
+Quindi 
+\begin{eqnarray*}
+SSG &=&y^{\prime }Qy=\epsilon ^{\prime }Q\epsilon \text{ \`{e} una }FQ\text{
+in }\epsilon \sim N(0,\sigma ^{2}V) \\
+&& \\
+E(SSG) &=&E(\epsilon ^{\prime }Q\epsilon )=trQV(\epsilon )=\sigma ^{2}trQV \\
+&=&\sigma ^{2}tr(I_{n}-V^{-1}X(X^{\prime }V^{-1}X)^{-1}X^{\prime }) \\
+&=&\sigma ^{2}tr(I_{n})-\sigma ^{2}tr(I_{K})=\sigma ^{2}(n-K)
+\end{eqnarray*}%
+Definendo $\hat{\sigma}^{2}=\dfrac{SSG}{n-K}$ otteniamo uno stimatore
+corretto di $\sigma ^{2}$:%
+\begin{equation*}
+E(\hat{\sigma}^{2})=\sigma ^{2}.
+\end{equation*}%
+Di conseguenza:%
+\begin{equation*}
+\hat{V}(\beta ^{\ast })=\hat{\sigma}^{2}(\tilde{X}^{\prime }\tilde{X})^{-1}=%
+\hat{\sigma}^{2}(X^{\prime }V^{-1}X)^{-1}
+\end{equation*}%
+\`{e} uno stimatore corretto della $V(\beta ^{\ast })$.
+\end{enumerate}
+
+\subsection{L'induzione statistica}
+
+Sotto l'ipotesi di normalit\`{a} degli errori, tutte le procedure di test
+sul modello trasformato sono rigorosamente identiche a quelle della
+regressione classica. Le statistiche $t$ per un'ipotesi semplice o $F$ per
+un'ipotesi congiunta date in termini delle variabili trasformate si possono
+sempre esprimere in termini delle variabili di partenza. In particolare,
+dato $\epsilon \sim N(0,\sigma ^{2}V)$ segue:
+
+\begin{itemize}
+\item $\beta ^{\ast }\sim N(\beta ,\sigma ^{2}(X^{\prime }V^{-1}X)^{-1})$.
+
+\item $\dfrac{SSG}{\sigma ^{2}}\sim \chi _{n-K}^{2}$.
+
+\item $\beta ^{\ast }$ e $SSG$ sono indipendenti.
+\end{itemize}
+
+\noindent Se chiamassimo $\tilde{x}^{ij}$ l'elemento in posizione $(i,j)$
+della matrice inversa $(X^{\prime }V^{-1}X)^{-1}$ allora 
+\begin{equation}
+\dfrac{\beta _{k}^{\ast }-\beta _{k}}{\sqrt{\hat{\sigma}^{2}\tilde{x}^{kk}}}%
+\sim t_{n-K}
+\end{equation}
+
+\subsection{La previsione}
+
+Il problema:
+
+\begin{itemize}
+\item \`{E} dato un campione $y=X\beta +\epsilon $ di $n$ osservazioni.
+
+\item Per un individuo $s$ al di fuori del campione vogliamo prevedere $%
+y_{s} $ (il suo comportamento) date le sue caratteristiche contenute in $%
+x_{s}^{\prime }$.
+\end{itemize}
+
+\noindent Il miglior previsore lineare di $y_{s}$ \`{e} tra tutti i
+previsori lineari e corretti\footnote{%
+Ricordiamo che un previsore $y_{s}^{p}$ di $y_{s}$ \`{e} corretto se $%
+E(y_{s}^{p})=E(y_{s})$ o equivalentemente se l'errore di previsione $%
+\varepsilon _{s}^{p}=y_{s}-y_{s}^{p}$ \`{e} nullo in valore atteso.} quello
+la cui varianza dell'errore di previsione \`{e} minima. Si ottiene:
+
+\begin{enumerate}
+\item Nella regressione classica $\beta $ \`{e} stimato per mezzo dei $%
+m.q.o. $ e%
+\begin{equation*}
+y_{s}^{p}=x_{s}^{\prime }\hat{\beta}
+\end{equation*}
+
+\item Nella regressione generalizzata, $\beta $ \`{e} stimato per mezzo dei $%
+m.q.g.$ Quando l'errore dell'individuo $s$ non \`{e} correlato con gli
+errori del campione,%
+\begin{equation*}
+y_{s}^{p}=x_{s}^{\prime }\beta ^{\ast }
+\end{equation*}
+
+\item Salvo nel caso di eteroschedasticit\`{a} pura, nella regressione
+generalizzata l'errore dell'individuo $s$ sar\`{a} correlato con gli errori
+del campione. Chiamiamo $\underset{(1\times n)}{\sigma ^{2}R^{\prime }}%
+=Cov(\epsilon _{s},\epsilon )$. Il miglior previsore lineare \`{e} dato da%
+\begin{equation*}
+y_{s}^{p}=x_{s}^{\prime }\beta ^{\ast }+Cov(\epsilon _{s},\epsilon
+)V(\epsilon )^{-1}\hat{\epsilon}
+\end{equation*}
+\end{enumerate}
+
+\section{Le conseguenze dell'applicazione dei $m.q.o.$}
+
+Vogliamo analizzare le conseguenze dell'applicazione dei minimi quadrati
+ordinari ad un modello con errori correlati. Poich\'{e} per ipotesi $rg(X)=K$
+i $m.q.o.$ sono calcolabili:
+
+\begin{equation*}
+\hat{\beta}=(X^{\prime }X)^{-1}X^{\prime }y.
+\end{equation*}
+
+Che propriet\`{a} hanno?
+
+\subsection{Correttezza e perdita d'efficienza}
+
+\begin{itemize}
+\item $\hat{\beta}$ \`{e} corretto.
+
+\item $\hat{\beta}$ non \`{e} efficiente: $V(\hat{\beta})\geq V(\hat{\beta}%
+^{\ast })$
+\end{itemize}
+
+\subsection{Stima convergente della varianza dello stimatore dei $m.q.o.$}
+
+La vera matrice delle varianze covarianze di $\hat{\beta}$ non \`{e} quella
+data dalla regressione classica $\sigma ^{2}(X^{\prime }X)^{-1}$ bens\`{\i} 
+\begin{equation}
+V(\hat{\beta})=V((X^{\prime }X)^{-1}X^{\prime }y)=\sigma ^{2}(X^{\prime
+}X)^{-1}X^{\prime }VX(X^{\prime }X)^{-1}
+\end{equation}%
+Stimando la varianza di $\hat{\beta}$ con $V(\hat{\beta})=\hat{\sigma}%
+^{2}(X^{\prime }X)^{-1}$ non si ottiene una stima corretta per 2 motivi:
+
+\begin{enumerate}
+\item $\hat{\sigma}^{2}=\dfrac{SS}{n-K}$ non \`{e} uno stimatore corretto di 
+$\sigma ^{2}$.
+
+\item $(X^{\prime }X)^{-1}$ dovrebbe essere rimpiazzato con $(X^{\prime
+}X)^{-1}X^{\prime }VX(X^{\prime }X)^{-1}$.
+\end{enumerate}
+
+\noindent $\Rightarrow $ Conseguenza: Utilizzare $\hat{\sigma}^{2}(X^{\prime
+}X)^{-1}$ quale stimatore della varianza di $\hat{\beta}$ quando $V(\epsilon
+)\neq \sigma ^{2}I$ \`{e} sbagliato: i test sono falsi!
+
+\begin{remark}
+Nel caso della \emph{regressione eteroschedastica}, cio\`{e} nella
+situazione in cui 
+\begin{equation*}
+V(\epsilon _{i})=\sigma _{i}^{2}\text{ e }Cov(\epsilon _{i},\epsilon
+_{j})=0,\ i\neq j
+\end{equation*}%
+da cui 
+\begin{equation*}
+V(\epsilon )=\left[ 
+\begin{array}{ccc}
+\sigma _{1}^{2} &  & 0 \\ 
+& \ddots &  \\ 
+0 &  & \sigma _{n}^{2}%
+\end{array}%
+\right] =V\ \text{matrice diagonale,}
+\end{equation*}%
+\`{e} tuttavia possibile ottenere dei test approssimativamente esatti
+utilizzando quale stima della matrice delle varianze covarianze 
+\begin{eqnarray*}
+\hat{V}(\hat{\beta}) &=&(X^{\prime }X)^{-1}X^{\prime }\hat{V}X(X^{\prime
+}X)^{-1}, \\
+\text{ con }\hat{V} &=&\left[ 
+\begin{array}{ccc}
+\hat{\epsilon}_{1}^{2} &  & 0 \\ 
+& \ddots &  \\ 
+0 &  & \hat{\epsilon}_{n}^{2}%
+\end{array}%
+\right] .
+\end{eqnarray*}%
+Quest'ultima formula permette (nel caso della regressione eteroschedastica)
+di eseguire test asintoticamente corretti.
+\end{remark}
+
+\subsection{Equivalenza fra $m.q.o.$ e $m.q.g.$}
+
+Esistono casi in cui $\hat{\beta}=\beta ^{\ast }$ (per qualsiasi vettore $y$)
+
+\begin{itemize}
+\item Caso triviale $V=I$.
+
+\item Caso generale: Si pu\`{o} dimostrare che $\hat{\beta}=\beta ^{\ast }$
+se e solo se esiste una matrice non singolare $A$ tale che 
+\begin{equation}
+\underset{(n\times n)}{V}\underset{(n\times K)}{X}=\underset{(n\times K)}{X}%
+\underset{(K\times K)}{A}
+\end{equation}
+\end{itemize}
+
+\section{Quando $V$ dipende da parametri sconosciuti}
+
+Quando $V$ \`e completamente arbitraria, il problema non ha soluzioni.
+Infatti $V$, matrice d'ordine $n$, possiede $n(n+1)/2$ elementi.
+L'economista \`e interessato a strutture di varianze covarianze che
+dipendono da un numero fisso di parametri sconosciuti. Chiamiamo con $m$ il
+numero di parametri sconosciuti contenuti nel vettore $\underset{(m \times 1)%
+}{\theta}$. Ipotizziamo quindi che conoscendo $\theta$ si possa costruire $V$
+per ogni $n$. Designamo quindi la matrice delle varianze covarianze di $%
+\epsilon$ con $V(\epsilon)=\sigma^2 V(\theta)$.
+
+\begin{esempio}
+Struttura di equicorrelazione
+
+\begin{itemize}
+\item $E(\epsilon_i) = 0 \ \forall i$.
+
+\item $V(\epsilon_i) = \sigma^2 \ \forall i$.
+
+\item $Cov(\epsilon_i,\epsilon_j)=\theta \sigma^2, \ i \ne j, \ 0 \le \theta
+< 1$
+
+\item Con un campione di $n$ osservazioni, abbiamo dunque 
+\begin{equation}
+\underset{(n\times n)}{V(\epsilon )}=\sigma ^{2}\underset{V(\theta )}{%
+\underbrace{\left[ 
+\begin{array}{cccc}
+1 & \theta & \dots & \theta \\ 
+\theta & 1 & \ddots & \vdots \\ 
+\vdots & \ddots & \ddots & \theta \\ 
+\theta & \dots & \theta & 1%
+\end{array}%
+\right] }}
+\end{equation}
+\end{itemize}
+\end{esempio}
+
+Strategia per la stima:
+
+\begin{enumerate}
+\item Prima possibilit\`{a}
+
+Siccome sappiamo risolvere il problema di stima quando $\theta $ \`{e}
+conosciuto, l'idea naturale \`{e} quella di stimare $\theta $ in una prima
+tappa per poi applicare lo stimatore dei $m.q.g.$. Questo procedimento \`{e}
+chiamato \textit{minimi quadrati generalizzati a due tappe} (oppure $m.q.g.$
+realizzabili).
+
+\item Seconda possibiilt\`{a}
+
+Quale alternativa ai $m.q.g.$ a due tappe si potrebbe immaginare di stimare 
+\textit{simultaneamente} tutti i parametri sconosciuti del modello che sono 
+\begin{equation*}
+\underset{(K\times 1)}{\beta },\ \underset{(1\times 1)}{\sigma ^{2}},\ 
+\underset{(m\times 1)}{\theta }
+\end{equation*}%
+utilizzando il metodo di massima verosimiglianza ($MLE$ = Maximum Likelihood
+Estimation).
+\end{enumerate}
+
+\subsection{I $m.q.g.$ a due tappe}
+
+\emph{Prima tappa}: Si cerca uno stimatore convergente di $\theta $. Non c'%
+\`{e} una ricetta universale: in numerosi casi la stima del modello con i
+minimi quadrati ordinari permette di stimare $\theta $ come funzione degli
+errori stimati. \newline
+\newline
+\noindent \emph{Seconda tappa}: Si utilizzano i minimi quadrati
+generalizzati con $V(\hat{\theta})$ al posto di $V(\theta )$. \newline
+\newline
+\noindent Propriet\`{a}: Asintoticamente (con $n\rightarrow \infty $) lo
+stimatore a due tappe possiede la medesima efficienza dello stimatore dei $%
+m.q.g.$ puri (cio\'{e} come se conoscessimo il vero $\theta $).
+
+\subsection{Massimo di Verosimiglianza}
+
+Assumendo la normalit\`{a} degli errori $\epsilon \sim N(0,\sigma
+^{2}V(\theta ))$ otteniamo grazie alla propriet\`{a} della legge normale che 
+$y\sim N(X\beta ,\sigma ^{2}V(\theta ))$. La verosimiglianza, per un
+campione di $n$ osservazioni dipende dai parametri sconosciuti $\beta
+,\sigma ^{2},\theta $ e si scrive 
+\begin{equation*}
+L(y\mid \beta ,\sigma ^{2},\theta )=(2\pi \sigma ^{2})^{-n/2}det\left[
+V(\theta )\right] ^{-1/2}\exp {(-\frac{1}{2}(y-X\beta )}^{\prime }{\frac{1}{%
+\sigma ^{2}}V(\theta )^{-1}(y-X\beta ))}
+\end{equation*}%
+Gli stimatori di massima verosimiglianza sono soluzioni del programma 
+\begin{equation*}
+\underset{\{\beta ,\sigma ^{2},\theta \}}{\max }L(y\mid \beta ,\sigma
+^{2},\theta )
+\end{equation*}%
+dal quale si ricavano le condizioni di primo ordine 
+\begin{equation*}
+\left\{ 
+\begin{array}{ccc}
+\dfrac{\partial L}{\partial \sigma ^{2}} & = & 0 \\ 
+\dfrac{\partial L}{\partial \beta } & = & 0 \\ 
+\dfrac{\partial L}{\partial \theta } & = & 0%
+\end{array}%
+\right.
+\end{equation*}%
+Questo sistema non possiede una soluzione analitica e quindi \`{e}
+necessario utilizzare un algoritmo numerico di risoluzione. Un'importante
+propriet\`{a} dello stimatore di massima verosimiglianza consiste nella sua
+efficienza asintotica.
+
+\chapter{L'autocorrelazione\label{capitolo autocorrelazione}}
+
+Questo capitolo \`{e} presentato nell'ambito delle serie storiche (o
+cronologiche). L'autocorrelazione \`{e} un fenomeno proprio delle serie
+storiche. Essa esprime l'idea che l'errore a un dato istante dipende in
+parte dagli errori passati. Ci sono svariati modelli per descrivere errori
+autocorrelati. In questo capitolo tratteremo un modello molto diffuso in
+econometria, il modello autoregressivo di primo ordine: l'errore al tempo $t$
+dipende dall'errore al tempo $t-1$.
+
+\section{Il modello markoviano di primo ordine}
+
+Il modello markoviano di primo ordine \`{e} anche detto modello \emph{%
+autoregressivo} di primo ordine, abbreviato $AR(1)$. Vediamo ora le ipotesi
+di questo modello.
+
+\subsection{Ipotesi e propriet\`{a}}
+
+La regressione abituale 
+\begin{equation*}
+\left\{ 
+\begin{array}{c}
+y_{t}=x_{t}^{\prime }\beta +\epsilon _{t}\ \ \ \ t=1,\dots ,n \\ 
+\epsilon _{t}=\underset{\text{parte regressiva}}{\underbrace{\rho \epsilon
+_{t-1}}}+\underset{\text{parte residua}}{\underbrace{u_{t}}} \\ 
+| \rho | <1\text{ e }u_{t}\sim iid(0,\sigma ^{2})%
+\end{array}%
+\right.
+\end{equation*}%
+dove $u_{t}$ rappresenta un residuo aleatorio anch'esso non osservabile, $%
+iid(0,\sigma ^{2})$. Vale dunque%
+\begin{eqnarray*}
+E(u_{t}) &=&0\ \forall t \\
+E(u_{t}^{2}) &=&\sigma ^{2}\ \forall t \\
+Cov(u_{t},u_{s}) &=&0\ \forall t\neq s
+\end{eqnarray*}
+
+\noindent \emph{Interpretazione ed osservazioni}
+
+\begin{enumerate}
+\item Il termine "modello markoviano" non \`{e} riferito all'equazione%
+\begin{equation*}
+y_{t}=x_{t}^{\prime }\beta +\epsilon _{t}
+\end{equation*}%
+ma bens\`{\i} alla struttura autoregressiva del suo termine d'errore 
+\begin{equation*}
+\epsilon _{t}=\rho \epsilon _{t-1}+u_{t}\text{.}
+\end{equation*}%
+Nella seconda parte del corso, quando tratteremo i modelli dinamici,
+studieremo le propriet\`{a} dello stimatore dei minimi quadrati sul modello
+a variabile endogena ritardata 
+\begin{equation*}
+y_{t}=\alpha _{1}y_{t-1}+\varepsilon _{t}
+\end{equation*}%
+con $\varepsilon _{t}\sim iid(0,\sigma ^{2})$. Come potete vedere, questo
+non \`{e} altro che il modello markoviano di ordine 1 appena definito
+applicato alla variabile endogena $y$.
+
+\item Il processo $\epsilon _{t}=\rho \epsilon _{t-1}+u_{t}$ \`{e} senza
+memoria, nel senso che tutta l'informazione disponibile in $t-1$ al fine di
+spiegare $\epsilon _{t}$ \`{e} riassunta in $\epsilon _{t-1}$. In altre
+parole, tutta la storia antecendente a $\epsilon _{t-1}$ non serve a nulla
+per spiegare $\epsilon _{t}$: quello che capita nel periodo $t$ dipende
+unicamente\footnote{%
+Salvo il termine $u_{t}$ che per altro \`{e} indipendente sia da $\epsilon
+_{t-1}$ che da $\epsilon _{t-2}$, $\epsilon _{t-2}$, \ldots\ .} dallo stato
+attuale di $\epsilon _{t-1}$ non dalla storia antecedente $\epsilon _{t-2}$, 
+$\epsilon _{t-3}$, \ldots .
+
+\begin{equation*}
+\text{grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\item Per $\rho $ positivo (caso tipico in economia) il processo $\left\{
+\epsilon _{t}\right\} _{t\in \mathbb{Z}}$ presenta una persistenza di valori
+dello stesso segno: $P(\epsilon _{t}>0\mid \epsilon _{t-1}>0)>0.5$.
+
+\item Sostituzione per ricorrenza
+
+Sostituendo recursivamente otteniamo la rappresenzatione di $\epsilon _{t}$
+in funzione degli errori $u_{t}$: 
+\begin{eqnarray}
+\epsilon _{t} &=&u_{t}+\underset{\underset{\epsilon _{t-1}=u_{t-1}+\rho
+\epsilon _{t-2}}{\Uparrow }}{\rho \epsilon _{t-1}}  \notag \\
+&=&u_{t}+\rho u_{t-1}+\underset{\underset{\epsilon _{t-2}=u_{t-2}+\rho
+\epsilon _{t-3}}{\Uparrow }}{\rho ^{2}\epsilon _{t-2}}  \notag \\
+&\vdots &  \notag \\
+&=&\sum_{j=0}^{\infty }\rho ^{j}u_{t-j}\ .  \label{rappresentazione ma}
+\end{eqnarray}%
+$\epsilon _{t}$ \`{e} una somma ponderata di variabili non correlate di
+media 0 e varianza $\sigma ^{2}$. Dalla rappresentazione (\ref%
+{rappresentazione ma}) ricaviamo che
+
+\begin{itemize}
+\item Propriet\`{a} 1: $E(\epsilon _{t})=0$
+
+\item Propriet\`{a} 2: $V(\epsilon _{t})=\sigma ^{2}\sum_{j=0}^{\infty
+}(\rho ^{2})^{j}=\dfrac{1}{1-\rho ^{2}}\sigma ^{2}$.
+
+\item Propriet\`{a} 3: La covarianza fra $\epsilon _{t}$ e $\epsilon _{t-1}$ 
+\begin{eqnarray*}
+Cov(\epsilon _{t},\epsilon _{t-1}) &=&E(\epsilon _{t}\epsilon _{t-1}) \\
+&=&E([u_{t}+\rho u_{t-1}+\rho u_{t-2}+\dots ][u_{t-1}+\rho u_{t-2}+\dots ])
+\\
+&=&\rho E(u_{t-1}^{2})+\rho ^{3}E(u_{t-2}^{2})+\rho ^{5}E(u_{t-3}^{2})+\dots
+\\
+&=&\sigma ^{2}\rho \ (1+\rho ^{2}+\rho ^{4}+\dots ) \\
+&=&\dfrac{\rho }{1-\rho ^{2}}\sigma ^{2}.
+\end{eqnarray*}
+\end{itemize}
+
+Facilmente si ottiene che $Cov(\epsilon _{t},\epsilon _{t-k})=\dfrac{\rho
+^{k}}{1-\rho ^{2}}\sigma ^{2}$. Notiamo che la covarianza non dipende da $t$
+ma solo dalla distanza $k$ tra i due errori.
+\end{enumerate}
+
+\begin{remark}
+Un processo che soddisfa le propriet\`{a} 1-3 \`{e} chiamato debolmente
+stazionario.
+\end{remark}
+
+\begin{esempio}
+Per un campione di $n$ osservazioni costruiamo la matrice delle varianze
+covarianze di $\epsilon $. Per $n=3$ 
+\begin{equation*}
+\underset{(3\times 3)}{V(\epsilon )}=\sigma ^{2}\dfrac{1}{1-\rho ^{2}}\left[ 
+\begin{array}{ccc}
+1 & \rho & \rho ^{2} \\ 
+\rho & 1 & \rho \\ 
+\rho ^{2} & \rho & 1%
+\end{array}%
+\right]
+\end{equation*}%
+In generale 
+\begin{equation*}
+V(\epsilon )=\sigma ^{2}\underset{\text{\`{e} la matrice }V(\theta )\text{
+che qui \`{e} }V(\rho )\text{ e che dipende da un solo parametro }\rho .}{%
+\underbrace{\dfrac{1}{1-\rho ^{2}}\left[ 
+\begin{array}{ccccc}
+1 & \rho & \rho ^{2} & \dots & \rho ^{n-1} \\ 
+\rho & 1 & \rho & \ddots & \vdots \\ 
+\rho ^{2} & \rho & 1 & \ddots & \rho ^{2} \\ 
+\vdots & \ddots & \ddots & \ddots & \rho \\ 
+\rho ^{n-1} & \dots & \rho ^{2} & \rho & 1%
+\end{array}%
+\right] }}
+\end{equation*}%
+Sappiamo tutto sulla matrice $V(\rho )$:%
+\begin{eqnarray*}
+\mid V(\rho )\mid &=&\dfrac{1}{1-\rho ^{2}} \\
+V(\rho )^{-1} &=&\left[ 
+\begin{array}{ccccc}
+1 & -\rho & 0 & \dots & 0 \\ 
+-\rho & 1+\rho ^{2} & -\rho & \ddots & \vdots \\ 
+0 & -\rho & \ddots & \ddots & 0 \\ 
+\vdots & \ddots & \ddots & 1+\rho ^{2} & -\rho \\ 
+0 & \dots & 0 & -\rho & 1%
+\end{array}%
+\right]
+\end{eqnarray*}
+matrice tridiagonale.
+\end{esempio}
+
+Cerchiamo ora la matrice $P(\rho )$ che trasforma il modello di regressione
+generalizzata in un modello di regressione classica e cio\`{e} 
+\begin{equation*}
+P(\rho )V(\rho )P(\rho )^{\prime }=I
+\end{equation*}%
+Se io considerassi la trasformazione $\tilde{\epsilon}_{t}=\epsilon
+_{t}-\rho \epsilon _{t-1}$ otterrei $u_{t}$. Il modello di partenza \`{e}
+come sappiamo 
+\begin{eqnarray*}
+y_{t} &=&\beta _{0}+\beta _{1}x_{t}+\epsilon _{t} \\
+\underset{\tilde{y}_{t}}{\underbrace{y_{t}-\rho y_{t-1}}} &=&\underset{\text{%
+costante}}{\underbrace{\beta _{0}(1-\rho )}}+\beta _{1}\underset{\tilde{x}%
+_{t}}{\underbrace{(x_{t}-\rho x_{t-1})}}+u_{t} \\
+\tilde{y}_{t} &=&\tilde{\beta}_{0}+\beta _{1}\tilde{x}_{t}+u_{t}
+\end{eqnarray*}%
+Quest'ultima equazione rappresenta il modello trasformato i cui parametri
+possono essere stimati per mezzo dei $m.q.o$.
+
+Problema: per l'osservazione $t=1$ non abbiamo l'osservazione precedente. Si
+perde cos\`{\i} un'osservazione (grado di libert\`{a}). La soluzione esatta
+consiste nel trasformare la prima osservazione nel seguente modo: 
+\begin{equation*}
+\sqrt{1-\rho ^{2}}y_{1}=\beta _{0}\sqrt{1-\rho ^{2}}+\beta _{1}\sqrt{1-\rho
+^{2}}x_{1}+\text{errore}
+\end{equation*}%
+Come sar\`{a} quindi la matrice $P(\rho )$ con un campione di $n=5$
+osservazioni? Riempite lo spazio a disposizione
+
+\begin{equation*}
+P(\rho )=\left[ 
+\begin{array}{ccccc}
+&  &  &  &  \\ 
+&  &  &  &  \\ 
+&  &  &  &  \\ 
+&  &  &  &  \\ 
+&  &  &  & 
+\end{array}%
+\right]
+\end{equation*}
+
+\subsection{Test di autocorrelazione}
+
+In un problema di regressione con osservazioni temporali come possiamo
+verificare la presenza di errori autocorrelati? Sappiamo che quando $\rho =0$
+non c'\`{e} autocorrelazione. Questo parametro $\rho $ \`{e} una
+caratteristica degli errori $\epsilon _{t}$ che tuttavia non sono
+osservabili. La prima tappa dunque \`{e} quella di stimare questi errori
+applicando i $m.q.o.$ sul modello, avendo cura di sempre includere la
+costante. Dopodich\'{e} deriviamo una stima degli $\epsilon _{i}$: 
+\begin{equation*}
+\hat{\epsilon}_{t}=y_{t}-x_{t}^{\prime }\hat{\beta}
+\end{equation*}%
+Il test d'ipotesi $H_{0}:\rho =0$ si basa sull'esame di questi residui.
+
+\begin{enumerate}
+\item Test informale
+
+Si fa il grafico degli errori. Se, come nel seguente esempio \newpage
+
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+si osserva una persistenza di errori dello stesso segno, allora c'\`{e}
+evidenza di autocorrelazione.
+
+\item Test formale: Durbin-Watson
+
+\begin{enumerate}
+\item Si calcola la quantit\`{a}%
+\begin{equation*}
+d=\frac{\sum\limits_{t=2}^{n}\left( \widehat{\epsilon }_{t}-\widehat{%
+\epsilon }_{t-1}\right) ^{2}}{\sum\limits_{t=1}^{n}\widehat{\epsilon }%
+_{t}^{2}}.
+\end{equation*}%
+Per $n$ sufficientemente grande $d\underset{\text{circa}}{\thicksim }%
+2(1-\rho )$.
+
+Interpretazione di $d$:%
+\begin{equation*}
+d=\frac{\sum\limits_{t=2}^{n}\widehat{\epsilon }_{t}^{2}+\sum%
+\limits_{t=2}^{n}\widehat{\epsilon }_{t-1}^{2}-2\sum\limits_{t=2}^{n}%
+\widehat{\epsilon }_{t}\widehat{\epsilon }_{t-1}}{\sum\limits_{t=1}^{n}%
+\widehat{\epsilon }_{t}^{2}}\simeq 2-2\frac{\frac{1}{n}\sum\limits_{t=2}^{n}%
+\widehat{\epsilon }_{t}\widehat{\epsilon }_{t-1}}{\frac{1}{n}%
+\sum\limits_{t=1}^{n}\widehat{\epsilon }_{t}^{2}}
+\end{equation*}%
+Il \emph{denumeratore} \`{e} la varianza empirica di $\epsilon _{t}$ e tende
+verso la vera varianza che, come calcolato precedentemente, \`{e} uguale a $%
+\sigma ^{2}/\left( 1-\rho ^{2}\right) $.
+
+Il \emph{numeratore} \`{e} una somma di prodotti incrociati, \`{e} la
+covarianza empirica fra l'errore $\epsilon _{t}$ e l'errore ritardato di un
+periodo, $\epsilon _{t-1}$. Questa covarianza empirica converge verso la
+vera covarianza $Cov(\epsilon _{t},\epsilon _{t-1})=\dfrac{\rho }{1-\rho ^{2}%
+}\sigma ^{2}$.
+
+Ecco spiegato perch\'{e} al crescere di $n$ la statistica $d$ converge verso 
+$2(1-\rho )$. Avremo quindi per $n$ sufficientemente grande 
+\begin{equation}
+d\underset{\text{circa}}{\simeq }2(1-\rho ).  \label{d_circa}
+\end{equation}
+
+Abbiamo allora la seguente situazione:
+
+\begin{itemize}
+\item Esiste una forte autocorrelazione positiva quando $\rho \simeq 1$ che
+per la (\ref{d_circa}) \`{e} equivalente a $d\simeq 0$.
+
+\item Se gli $\epsilon _{t}$ sono indipendenti segue $\rho =0$. Per la (\ref%
+{d_circa}) l'indipendenza implica $d\simeq 2.$
+
+\item Esiste una forte autocorrelazione negativa quando $\rho \simeq -1$ che
+per la (\ref{d_circa}) \`{e} equivalente a $d\simeq 4$.
+\end{itemize}
+\end{enumerate}
+
+Per testare l'autocorrelazione positiva (che \`{e} il caso tipicamente
+incontrato in economia) eseguir\`{o} il test dell'ipotesi nulla $H_{0}:\rho
+=0$ $\Leftrightarrow d=2$ contro l'ipotesi alternativa $H_{0}:\rho
+>0\Leftrightarrow d<2$. Si tratta quindi di un test unilaterale sinistro.
+
+\begin{itemize}
+\item Quindi, quando $d\thicksim 2$ $\Rightarrow $ assenza di
+autocorrelazione.
+\end{itemize}
+
+\begin{equation*}
+\text{grafico}
+\end{equation*}%
+\vspace*{5cm}
+
+Idealmente vorremmo trovare la soglia $d^{\ast }$ tale che se $d<d^{\ast
+}\Rightarrow $ autocorrelazione, mentre se $d>d^{\ast }\Rightarrow $ no.
+Sfortunatamente la vera distribuzione della statistica $d$ \`{e}
+sconosciuta. Essa dipende dai valori presenti nella matrice $X$ o, in altre
+parole, dal campione osservato. Gli autori Durbin-Watson hanno potuto
+trovare due limiti che delimitano il livello critico $d^{\ast }$, notati
+rispettivamente $d_{L}$ e $d_{U}$. Vale la seguente regola di decisione:
+
+$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+\begin{array}{l}
+\text{se }d<d_{L}\text{ sar\`{a} sicuramente }d<d^{\ast }\Rightarrow \text{%
+autocorrelazione} \\ 
+\text{se }d>d_{U}\text{ sar\`{a} sicuramente }d>d^{\ast }\Rightarrow \text{%
+assenza di autocorr.} \\ 
+\text{se }d_{L}<d<d_{U}\Rightarrow \text{non possiamo concludere nulla}%
+\end{array}%
+$
+
+Questi limiti $d_{L}$ e $d_{U}$ dipendono da:
+
+\begin{itemize}
+\item Livello di significativit\`{a}
+
+\item $n$: il numero d'osservazioni
+
+\item $K^{\prime }$: il numero di variabili esplicative senza la costante
+(quindi $K^{\prime }=K-1$).
+\end{itemize}
+\end{enumerate}
+
+\begin{esempio}
+Abbiamo stimato una regressione semplice con $n=30,\ K^{\prime }=1$. Se $d$
+fosse uguale a $1.30$, all'$1$\% di significativit\`{a} non potrei rifiutare
+l'ipotesi nulla $H_{0}:\rho =0$. Se invece avessimo $K^{\prime }=2$, con un $%
+d=1.30$ non si potrebbe concludere.
+\end{esempio}
+
+\begin{remark}
+Attenzione:\ il test non \`{e} applicabile quando nel modello appare una
+variabile endogena ritardata. Ad esempio:%
+\begin{equation*}
+c_{t}=a+bR_{t}+cC_{t-1}+\varepsilon _{t}
+\end{equation*}
+\end{remark}
+
+Se desiderate testare l'autocorrelazione negativa si prende $4-d$ e si
+procede come per l'autocorrelazione positiva.
+
+\subsection{\label{autocorr i metodi di stima}I metodi di stima}
+
+Abbiamo stimato il modello con i $m.q.o.$ ed il test $DW$ ci indica
+autocorrelazione. Cosa fare? Il $DW$ \`{e} un allarme che indica la presenza
+di una sistematicit\`{a} nel fenomeno studiato che il modello non ha saputo
+incorporare. Non \`{e} necessariamente frutto dell'autocorrelazione ma
+potrebbe essere causato da una cattiva specificazione del modello, ad esempio
+
+\begin{enumerate}
+\item 
+\begin{itemize}
+\item sono state trascurate delle variabili esplicative
+
+\item la forma funzionale che lega le variabili esplicative alla variabile
+dipendente (quadratica anzich\'{e} lineare)
+
+\item forma dinamica invece che statica:
+
+vero modello (DGP)\ 
+\begin{equation*}
+C_{t}=a+bR_{t}+cC_{t-1}+\varepsilon _{t},
+\end{equation*}%
+modello stimato%
+\begin{equation*}
+C_{t}=a+bR_{t}+\varepsilon _{t}\Leftarrow \text{ autocorrelazione}
+\end{equation*}
+\end{itemize}
+
+\item Dopo aver considerato tutte le osservazioni [1], se l'autocorrelazione
+persiste allora utilizziamo i $m.q.g.$
+
+\begin{enumerate}
+\item[2.1] $m.q.g.$ a due tappe
+
+\begin{enumerate}
+\item Prima tappa: stimiamo utilizzando i $m.q.o.$ e ricaviamo $\widehat{%
+\varepsilon }_{t}$. In seguito costruiamo la regressione ausiliaria%
+\begin{equation}
+\widehat{\varepsilon }_{t}=\rho \widehat{\varepsilon }_{t-1}+u_{t}
+\label{regressione_ausiliaria}
+\end{equation}%
+ed utilizzando nuovamente i $m.q.o.$ sul modello (\ref%
+{regressione_ausiliaria}) otteniamo%
+\begin{equation*}
+\widehat{\rho }=\frac{\sum \widehat{\varepsilon }_{t}\widehat{\varepsilon }%
+_{t-1}}{\sum \widehat{\varepsilon }_{t}^{2}}\underset{n\rightarrow \infty }{%
+\longrightarrow }\rho .
+\end{equation*}
+
+\item Seconda tappa: $m.q.g.$ calcolabili
+
+\begin{itemize}
+\item Sia con la formula 
+\begin{equation*}
+\beta ^{\ast }=(X^{\prime }V(\widehat{\rho })^{-1}X)^{-1}X^{\prime }V(%
+\widehat{\rho })^{-1}y
+\end{equation*}
+
+\item oppure con i $m.q.o.$ sul modello trasformato con $P(\widehat{\rho })$.
+\end{itemize}
+\end{enumerate}
+
+\item[2.2] Quale alternativa al 2.1 eseguire una stima di massima
+verosimiglianza.
+\end{enumerate}
+\end{enumerate}
+
+\subsection{La previsione}
+
+Abbiamo delle osservazioni $t=1,\ldots ,n$ e desideriamo prevedere $y$ per
+il periodo successivo conoscendo $x_{n+1}$. Il vero $y_{n+1}$ \`{e} dato dal
+medesimo modello:%
+\begin{equation*}
+y_{n+1}=x_{n+1}^{\prime }\beta +\varepsilon _{n+1}
+\end{equation*}%
+con 
+\begin{equation*}
+\varepsilon _{n+1}=\rho \varepsilon _{n}+u_{n+1}.
+\end{equation*}%
+Sappiamo che il previsore lineare ottimale \`{e} dato da:%
+\begin{equation*}
+y_{n+1}^{p}=x_{n+1}^{\prime }\beta ^{\ast }+R^{\prime }V^{-1}\widehat{%
+\varepsilon }
+\end{equation*}%
+dove 
+\begin{equation*}
+\widehat{\varepsilon }=y-X\beta ^{\ast }.
+\end{equation*}%
+Nel nostro caso:%
+\begin{equation*}
+V^{-1}=\left[ 
+\begin{array}{ccccc}
+1 & -\rho & 0 & \dots & 0 \\ 
+-\rho & 1+\rho ^{2} & -\rho & \ddots & \vdots \\ 
+0 & -\rho & \ddots & \ddots & 0 \\ 
+\vdots & \ddots & \ddots & 1+\rho ^{2} & -\rho \\ 
+0 & \dots & 0 & -\rho & 1%
+\end{array}%
+\right]
+\end{equation*}%
+e dobbiamo calcolare 
+\begin{eqnarray*}
+cov(\varepsilon _{n+1},\varepsilon ) &=&E(\varepsilon _{n+1}\varepsilon
+^{\prime }) \\
+&=&E(\varepsilon _{n+1}\varepsilon _{1},\dots ,\varepsilon _{n+1}\varepsilon
+_{n}) \\
+&=&\frac{\sigma ^{2}}{1-\rho ^{2}}\left[ \rho ^{n},\rho ^{n-1},\dots ,\rho %
+\right]
+\end{eqnarray*}%
+Un semplice calcolo mostra che 
+\begin{equation*}
+\underset{(1\times n)}{R^{\prime }}\underset{(n\times n)}{V^{-1}}=\underset{%
+(1\times n)}{[0,0,\dots ,\rho ]}
+\end{equation*}%
+e quindi $R^{\prime }V^{-1}\widehat{\varepsilon }=\rho \widehat{\varepsilon }%
+_{n}$ da cui segue la formula%
+\begin{equation*}
+y_{n+1}^{p}=x_{n+1}^{\prime }\beta ^{\ast }+\rho \widehat{\varepsilon }_{n}
+\end{equation*}%
+Poich\'{e} $\rho $ \`{e} sconosciuto lo sostituiamo con la stima $\widehat{%
+\rho }$ ottenendo in questo modo la formula finale%
+\begin{equation*}
+y_{n+1}^{p}=x_{n+1}^{\prime }\beta ^{\ast }+\widehat{\rho }\widehat{%
+\varepsilon }_{n}
+\end{equation*}
+
+\section{Altre forme di autocorrelazione}
+
+Il modello statistico considerato in questo capitolo si chiama
+autoregressivo di primo ordine:\ $AR(1)$%
+\begin{equation*}
+\epsilon _{t}=\rho \epsilon _{t-1}+u_{t},\ \ \ \ u_{t}\sim iid(0,\sigma ^{2})
+\end{equation*}%
+\`{E} possibile generalizzare i modelli autoregressivi ad ordini superiori.
+In tal caso si parla di $AR(p)$, dove il numero intero $p$ indica appunto
+l'ordine\ del modello autoregressivo%
+\begin{equation*}
+\epsilon _{t}=\rho _{1}\epsilon _{t-1}+\rho _{2}\epsilon _{t-2}+\ldots +\rho
+_{p}\epsilon _{t-p}+u_{t}
+\end{equation*}%
+I modelli a media mobile (Moving Average) definiscono un'altra classe di
+modelli molto utilizzati nell'analisi delle serie storiche. Un modello a
+media mobile di ordine 1 $MA(1)$ \`{e} definito da%
+\begin{equation*}
+\epsilon _{t}=u_{t}+cu_{t-1}\ .
+\end{equation*}%
+Anche in questo caso \`{e} immediata la sua generalizzazione a ordini
+superiori: 
+\begin{equation*}
+MA(q):\epsilon _{t}=u_{t}+c_{1}u_{t-1}+c_{2}u_{t-2}+\ldots +c_{q}u_{t-q}\ .
+\end{equation*}%
+Infine un processo stocastico generale frequentemente incontrato in economia
+e statistica \`{e} l'$ARMA(p,q):$%
+\begin{equation*}
+\epsilon _{t}=\underset{\text{parte autoregressiva}}{\underbrace{\rho
+_{1}\epsilon _{t-1}+\rho _{2}\epsilon _{t-2}+\ldots +\rho _{p}\epsilon _{t-p}%
+}}+\underset{\text{parte media mobile}}{\underbrace{%
+u_{t}+c_{1}u_{t-1}+c_{2}u_{t-2}+\ldots +c_{q}u_{t-q}}}
+\end{equation*}
+
+\part{La regressione stocastica}
+
+\chapter{Elementi di analisi asintotica}
+
+Nel contesto di una stima del modello econometrico, con l'analisi asintotica
+si intende lo studio delle propriet\`{a} del campione quando la sua numerosit%
+\`{a} cresce infinitamente. Perch\'{e} un tale studio?
+
+\begin{enumerate}
+\item Un motivo teorico.
+
+Quando la numerosit\`{a} del campione aumenta, l'informazione disponibile
+diventa sempre pi\`{u} importante. Col crescere dell'informazione la
+precisione dello stimatore dovrebbe aumentare. Al limite per $n=\infty $
+l'informazione \`{e} totale e la precisione dello stimatore dovrebbe essere
+assoluta. Il metodo di stima proposto dovrebbe quindi condurre
+asintoticamente al vero valore del parametro sconosciuto con assoluta
+certezza (con probabilit\`{a} 1). Questo \`{e} il problema della convergenza
+dello stimatore verso il vero valore del parametro.
+
+\item Un motivo pratico
+
+Fin qui ci siamo occupati quasi esclusivamente di stimatori lineari. Per
+questi \`{e} possibile calcolare il valore atteso che ci permette di
+verificare la loro correttezza. \`{E} pure possibile calcolare la varianza
+dello stimatore lineare. Essa ci indica la precisione con la quale stimiamo
+il parametro e ci permette di condurre dei test.
+
+Al di l\`{a} della regressione classica saremo confrontati con stimatori non
+lineari. Per questi \`{e} praticamente impossibile calcolare il valore
+atteso (e quindi parlare di correttezza) e a fortiori calcolare la varianza
+ed eseguire i test.
+
+L'analisi asintotica d\`{a} una risposta a questo tipo di problemi. I
+risultati saranno da interpretare come un'approssimazione molto buona per
+grandi campioni.
+\end{enumerate}
+
+\section{La convergenza in probabilit\`{a}}
+
+Prima di dare la definizione formale di convergenza in probabilit\`{a}
+consideriamo il seguente esempio.
+
+\begin{esempio}
+\label{esempio media}Estraiamo un campione aleatorio da una popolazione di
+variabili aleatorie ($\mu $, $\sigma ^{2}$), $\mu $ sconosciuto. Per stimare 
+$\mu $ prendiamo la media del campione. Quando nel campione c'\`{e} una sola
+osservazione%
+\begin{equation*}
+\overline{X}_{1}=X_{1},
+\end{equation*}%
+due osservazioni 
+\begin{equation*}
+\overline{X}_{2}=\frac{X_{1}+X_{2}}{2}
+\end{equation*}%
+e cos\`{\i} via $\cdots $ 
+\begin{equation*}
+\overline{X}_{n}=\frac{X_{1}+X_{2}+\cdots +X_{n}}{n}\ .
+\end{equation*}%
+Le quantit\`{a} $\overline{X}_{1},\overline{X}_{2},\cdots $ formano una
+successione che noteremo ${\overline{X}_{n}}$. Qual \`{e} il limite di
+questa sucessione quando $n\rightarrow \infty $? La legge dei grandi numeri
+ci assicura che questo limite \`{e} proprio $\mu $. Possiamo dunque
+concludere che la successione ${\overline{X}_{n}}$ converge verso $\mu $. 
+\`{E} questo un primo esempio di convergenza in probabilit\`{a}.
+\end{esempio}
+
+\subsection{{Definizione e propriet\`{a}}}
+
+Uno stimatore \`{e} detto convergente se la probabilit\`{a} che ci si
+discosti anche solo minimamente dal suo vero valore tende a $0$ con $%
+n\rightarrow \infty $. Sia $\theta $ il vero parametro, $\hat{\theta}_{n}$
+uno stimatore di $\theta $ basato sul campione di numerosit\`{a} $n$.
+Formalmente:
+
+\begin{definizione}
+$\hat{\theta}_{n}$ \`{e} uno stimatore convergente di $\theta $ se, $\forall
+\varepsilon >0$ 
+\begin{equation*}
+\underset{n\rightarrow \infty }{\lim }Prob\left\{ \left\vert \hat{\theta}%
+_{n}-\theta \right\vert >\varepsilon \right\} \rightarrow 0
+\end{equation*}
+\end{definizione}
+
+\begin{center}
+Grafico\vspace{5cm}
+\end{center}
+
+Al limite dobbiamo arrivare ad una situazione per cui tutta la massa di
+probabilit\`{a} \`{e} concentrata in un solo punto, il vero valore $\theta $%
+. Per indicare che il vero valore converge verso $\theta $, scriveremo $%
+p\lim \ \hat{\theta}_{n}=\theta $. In certi casi \`{e} possibile valutare
+esplicitamente questo limite in probabilit\`{a}, come ad esempio nel caso
+della media del campione se la popolazione \`{e} normale. In altri casi
+invece \`{e} necessario ricorrere ad alcune propriet\`{a} che il limite in
+probabilit\`{a} $p\lim $ possiede e che enunciamo adesso.
+
+\noindent Consideriamo le due successioni $\widehat{\theta }_{n}$ e $%
+\widehat{\beta }_{n}$ con 
+\begin{equation*}
+p\lim \widehat{\theta }_{n}=\theta <\infty \hspace{0.5cm}\text{ e }\hspace{%
+0.5cm}p\lim \widehat{\beta }_{n}=\beta <\infty .
+\end{equation*}%
+Il limite in probabilit\`{a} possiede\ le seguenti 4 propriet\`{a}:
+
+\begin{enumerate}
+\item[$P1$] $p\lim \left( \widehat{\theta }_{n}\pm \widehat{\beta }%
+_{n}\right) =p\lim \widehat{\theta }_{n}\pm p\lim \widehat{\beta }%
+_{n}=\theta \pm \beta $
+
+\item[$P2$] $p\lim \left( \widehat{\theta }_{n}\ast \widehat{\beta }%
+_{n}\right) =p\lim \widehat{\theta }_{n}\ast p\lim \widehat{\beta }%
+_{n}=\theta \ast \beta $
+
+\item[$P3$] $\beta \neq 0,$%
+\begin{equation*}
+p\lim \left( \frac{\widehat{\theta }_{n}}{\widehat{\beta }_{n}}\right) =%
+\frac{p\lim \widehat{\theta }_{n}}{p\lim \widehat{\beta }_{n}}=\frac{\theta 
+}{\beta }
+\end{equation*}
+
+\item[$P4$] Invarianza. Se $g\left( \cdot \right) $ \`{e} una funzione
+continua:%
+\begin{equation*}
+p\lim g\left( \widehat{\theta }_{n}\right) =g\left( p\lim \widehat{\theta }%
+_{n}\right) =g\left( \theta \right)
+\end{equation*}
+\end{enumerate}
+
+\subsection{La convergenza in media quadratica}
+
+Sia $\widehat{\theta }_{n}$ uno stimatore di $\theta $. Se per ogni $n$ \`{e}
+possibile
+
+\begin{itemize}
+\item Calcolare il valore atteso $E(\widehat{\theta }_{n})$ e quindi anche
+il termine di distorsione o \emph{Bias}\ definito come%
+\begin{equation*}
+B(\widehat{\theta }_{n}):=E(\widehat{\theta }_{n})-\theta =E(\widehat{\theta 
+}_{n}-\theta )
+\end{equation*}
+
+\item Calcolare $V(\widehat{\theta }_{n})=E\left( \widehat{\theta }_{n}-E(%
+\widehat{\theta }_{n})\right) ^{2}$
+\end{itemize}
+
+\noindent \`{e} chiaro allora che per la convergenza in probabilit\`{a} \`{e}
+sufficiente che
+
+\begin{enumerate}
+\item Il Bias tenda a zero con $n\rightarrow \infty :$%
+\begin{equation}
+\lim_{n\rightarrow \infty }B(\widehat{\theta }_{n})=0  \label{bias_n}
+\end{equation}
+
+\item La varianza di $\widehat{\theta }_{n}$ tenda anch'essa a 0:%
+\begin{equation}
+\lim_{n\rightarrow \infty }V(\widehat{\theta }_{n})=0  \label{var_n}
+\end{equation}
+\end{enumerate}
+
+\noindent Questo criterio \`{e} chiamato \emph{convergenza in media
+quadratica}. Come andremo a dimostrare le condizioni (\ref{bias_n}) e (\ref%
+{var_n}) sono equivalenti a%
+\begin{equation}
+\lim_{n\rightarrow \infty }E(\widehat{\theta }_{n}-\theta )^{2}=0
+\end{equation}%
+Dimostriamo che $\lim_{n\rightarrow \infty }E(\widehat{\theta }_{n}-\theta
+)^{2}=0$ $\Leftrightarrow $ $B(\widehat{\theta }_{n})\rightarrow 0$ e $V(%
+\widehat{\theta }_{n})\rightarrow 0$. Abbiamo: 
+\begin{eqnarray*}
+E\left( \widehat{\theta }_{n}-\theta \right) ^{2} &=&E\left[ \left( \widehat{%
+\theta }_{n}-E(\widehat{\theta }_{n})\right) +\left( E(\widehat{\theta }%
+_{n})-\theta \right) \right] ^{2}= \\
+&=&E\left( \widehat{\theta }_{n}-E(\widehat{\theta }_{n})\right) ^{2}+B(%
+\widehat{\theta }_{n})^{2}+2B(\widehat{\theta }_{n})E\left( \widehat{\theta }%
+_{n}-E(\widehat{\theta }_{n})\right) = \\
+&=&E\left( \widehat{\theta }_{n}-E(\widehat{\theta }_{n})\right) ^{2}+B(%
+\widehat{\theta }_{n})^{2}= \\
+&=&V\left( \widehat{\theta }_{n}\right) +B(\widehat{\theta }_{n})^{2}
+\end{eqnarray*}%
+Nell'Esempio \ref{esempio media} anche senza la normalit\`{a} di $X$ 
+\begin{equation*}
+\left\{ 
+\begin{array}{l}
+E(\overline{X}_{n})=\mu \Rightarrow B(\overline{X}_{n})=0 \\ 
+V(\overline{X}_{n})=\frac{\sigma ^{2}}{n}\rightarrow 0\text{ quando }%
+n\rightarrow \infty%
+\end{array}%
+\right.
+\end{equation*}
+
+\subsection{Convergenza dei momenti del campione}
+
+Consideriamo una popolazione caratterizzata dalla variabile aleatoria $X$.
+
+\begin{itemize}
+\item Il primo momento della popolazione \`{e}: $E(X)=\mu $
+
+\item Il secondo momento \`{e}: $E(X^{2})=\mu _{2}$
+
+\item Il secondo momento centrato: $E(X-\mu )^{2}=V(X)=\sigma ^{2}$
+\end{itemize}
+
+\noindent Prendiamo un campione aleatorio di numerosit\`{a} $n$: $%
+X_{1},\ldots ,X_{n}$. I momenti del campione sono:
+
+\begin{itemize}
+\item Primo momento: $\overline{X}=\frac{1}{n}\sum x_{i}$.
+
+\item Secondo momento: $\frac{1}{n}\sum x_{i}^{2}$.
+
+\item Secondo momento centrato: $\frac{1}{n}\sum (x_{i}-\overline{X})^{2}$
+\end{itemize}
+
+\noindent \emph{Propriet\`{a} fondamentale}: I momenti del campione
+convergono in pobabilit\`{a} verso i momenti corrispondenti della
+popolazione. In particolare%
+\begin{eqnarray*}
+p\lim \frac{1}{n}\sum X_{i} &=&E\left( X\right) =\mu \\
+p\lim \frac{1}{n}\sum X_{i}^{2} &=&E\left( X^{2}\right) =\mu _{2} \\
+p\lim \frac{1}{n}\sum \left( X_{i}-\overline{X}\right) ^{2} &=&V\left(
+X\right) =\sigma ^{2}
+\end{eqnarray*}%
+Se la popolazione \`{e} caratterizzata da due variabili aleatorie $X$ e $Z$,
+oltre ai momenti individuali ci sono i momenti incrociati.
+
+\noindent Popolazione:
+
+\begin{itemize}
+\item Il seconodo momento incrociato: $E(XZ)$
+
+\item Il secondo momento centrato incrociato: 
+\begin{equation*}
+E(X-\mu _{x})(Z-\mu _{Z})=Cov(X,Z)
+\end{equation*}%
+dove $\mu _{X}=E(X)$ e $\mu _{Z}=E(Z)$
+\end{itemize}
+
+\noindent Campione: $X_{1},\ldots ,X_{n}$ e $Z_{1},\ldots ,Z_{n}$
+
+\begin{itemize}
+\item Secondo momento incrociato: $\frac{1}{n}\sum X_{i}Z_{i}$
+
+\item Centrato: $\frac{1}{n}\sum (X_{i}-\overline{X})(Z_{i}-\overline{Z})$
+\end{itemize}
+
+\noindent Anche in questo caso vale la propriet\`{a} fondamentale,%
+\begin{eqnarray*}
+p\lim \frac{1}{n}\sum X_{i}Z_{i} &=&E\left( XZ\right) \\
+p\lim \frac{1}{n}\sum \left( X_{i}-\overline{X}\right) \left( Z_{i}-%
+\overline{Z}\right) &=&Cov\left( X,Z\right)
+\end{eqnarray*}
+
+\begin{esempio}
+La popolazione \`{e} composta da $X$, $Z$ indipendenti. Calcolare: 
+\begin{equation*}
+p\lim \underset{\text{Covarianza empirica}}{\underbrace{\frac{1}{n}\sum
+\left( X_{i}-\overline{X}\right) \left( Z_{i}-\overline{Z}\right) }}=0=%
+\underset{\text{vera covarianza}}{\underbrace{Cov\left( X,Z\right) }}
+\end{equation*}
+\end{esempio}
+
+\section{La convergenza in distribuzione}
+
+\subsection{Un esempio}
+
+Ritornando alle medie del campione abbiamo "dimostrato" che, 
+\begin{eqnarray*}
+\overline{X}_{n} &\rightarrow &\mu \\
+\left( \overline{X}_{n}-\mu \right) &\rightarrow &0
+\end{eqnarray*}%
+Ci\`{o} significa che la distribuzione limite di $\overline{X}_{n}-\mu $ 
+\`{e} degenerata (tutta la massa di probabilit\`{a} \`{e} centrata su 0). Se
+ammettiamo la normalit\`{a} della popolazione 
+\begin{eqnarray*}
+\left( \overline{X}_{n}-\mu \right) &\sim &N(0,\frac{\sigma ^{2}}{n}) \\
+\sqrt{n}\left( \overline{X}_{n}-\mu \right) &\sim &N\left( 0,\sigma
+^{2}\right)
+\end{eqnarray*}%
+Notiamo che la distribuzione di $\sqrt{n}\left( \overline{X}_{n}-\mu \right) 
+$ \`{e} sempre la stessa al variare di $n$. Anche al limite sar\`{a} sempre
+una distribuzione normale, $N\left( 0,\sigma ^{2}\right) $. In questo caso
+la distribuzione di $\left( \overline{X}_{n}-\mu \right) $ \`{e} degenerata,
+ma quella di $\left( \overline{X}_{n}-\mu \right) $ dilatata per $\sqrt{n}$ 
+\`{e} una normale di varianza $\sigma ^{2}$ e valore atteso $0$.
+
+\noindent Se la popolazione non \`{e} normale, il teorema del limite
+centrale ci assicura che la distribuzione limite di $\sqrt{n}\left( 
+\overline{X}_{n}-\mu \right) $ \`{e} normale $\left( 0,\sigma ^{2}\right) $.
+Scriveremo: 
+\begin{equation*}
+\sqrt{n}\left( \overline{X}_{n}-\mu \right) \overset{D}{\sim }N\left(
+0,\sigma ^{2}\right)
+\end{equation*}
+
+\subsection{Teoremi del limite centrale}
+
+Prendendo $X_{i}-\mu $ dall'esempio precedente, chiamiamo $\varepsilon
+_{i}=X_{i}-\mu $, con $E(\varepsilon _{i})=0$ e $V(\varepsilon _{i})=\sigma
+^{2}$. Dato il carattere aleatorio del campione si ha che: 
+\begin{equation*}
+\varepsilon _{i}\sim i.i.d.(0,\sigma ^{2})
+\end{equation*}%
+D'altra parte 
+\begin{eqnarray*}
+\sqrt{n}\left( \overline{X}_{n}-\mu \right) &=&\sqrt{n}\left( \frac{1}{n}%
+\sum X_{i}-\mu \right) =\sqrt{n}\left( \frac{1}{n}\sum \left( X_{i}-\mu
+\right) \right) \\
+&=&\sqrt{n}\left( \frac{1}{n}\sum \varepsilon _{i}\right) =\frac{1}{\sqrt{n}}%
+\sum \varepsilon _{i}
+\end{eqnarray*}
+
+\begin{theorem}
+Limite centrale semplice. Condizione:%
+\begin{equation*}
+\varepsilon _{i}\sim i.i.d.(0,\sigma ^{2}).
+\end{equation*}
+
+Ne segue che 
+\begin{equation*}
+\frac{1}{\sqrt{n}}\sum \varepsilon _{i}\overset{D}{\sim }N\left( 0,\sigma
+^{2}\right) .
+\end{equation*}
+\end{theorem}
+
+\noindent Consideriamo ora i vettori 
+\begin{equation*}
+\underset{(K\times 1)}{v_{i}}\underset{(1\times 1)}{\varepsilon _{i}}
+\end{equation*}%
+dove i $v_{i}$ sono composti da numeri (non aleatori). Abbiamo quindi: 
+\begin{eqnarray*}
+E[v_{i}\varepsilon _{i}] &=&v_{i}E[\varepsilon _{i}]=v_{i}\ 0=0 \\
+V[v_{i}\varepsilon _{i}] &=&v_{i}V[\varepsilon _{i}]v_{i}^{\prime }=\sigma
+^{2}\underset{(K\times K)}{v_{i}v_{i}^{\prime }}
+\end{eqnarray*}
+
+\begin{theorem}
+Limite centrale generalizzato. Condizioni:
+\end{theorem}
+
+\begin{enumerate}
+\item $\varepsilon _{i}\sim i.i.d.(0,\sigma ^{2})$
+
+\item $v_{i}$ sono dei vettori non stocastici $(K\times 1)$ tali che
+\end{enumerate}
+
+\begin{equation*}
+\lim_{n\rightarrow \infty }\frac{1}{n}\sum\limits_{i=1}^{n}V(v_{i}%
+\varepsilon _{i})=\lim_{n\rightarrow \infty }\frac{1}{n}\sum%
+\limits_{i=1}^{n}\sigma ^{2}v_{i}v_{i}^{\prime }=Q,\text{matrice d.p.}
+\end{equation*}
+
+Ne segue che%
+\begin{equation*}
+\Longrightarrow \frac{1}{\sqrt{n}}\sum\limits_{i=1}^{n}v_{i}\varepsilon _{i}%
+\overset{D}{\sim }N(0,Q)
+\end{equation*}
+
+\begin{theorem}
+Prodotto. Dati:
+\end{theorem}
+
+\begin{enumerate}
+\item Una successione di vettori aleatori $\left\{ Y_{n}\right\} $ d'ordine $%
+K$ che tende in distribuzione verso la variabile $Y\sim N(0,Q)$, dove $Q$ 
+\`{e} una matrice definita positiva, $Y_{n}\overset{D}{\sim }Y$ ed $Y\sim
+N(0,Q)$.
+
+\item Una successione di matrici $\left\{ A_{n}\right\} $ d'ordine $(m\times
+K)$ di elementi aleatori o meno, tale che $plimA_{n}=A$, $A$ matrice non
+stocastica di rango $m$.
+\end{enumerate}
+
+Ne segue che la successione dei prodotti $\left\{ A_{n}Y_{n}\right\} $ tende
+in distribuzione verso
+
+la variabile aleatoria $AY\sim N(0,AQA^{\prime })$, e cio\`{e} 
+\begin{equation*}
+A_{n}Y_{n}\overset{D}{\sim }N(0,AQA^{\prime })
+\end{equation*}
+
+\subsection{Consiglio pratico}
+
+In pratica, per uno stimatore $\hat{\theta}_{n}$ del parametro $\theta $, si
+deve verificare dapprima la convergenza: 
+\begin{equation*}
+p\lim \hat{\theta}_{n}=\theta
+\end{equation*}%
+o equivalentemente 
+\begin{equation*}
+p\lim (\hat{\theta}_{n}-\theta )=0
+\end{equation*}%
+Poi si eseguono le seguenti tappe:
+
+\begin{itemize}
+\item[{[1]}] La distribuzione asintotica di $\hat{\theta}_{n}$ \`{e} la
+distribuzione limite della successione $\left\{ \sqrt{n}(\hat{\theta}%
+_{n}-\theta )\right\} $ che in moltissimi casi sar\`{a} normale. Per
+trovarla si applicano i teoremi 1, 2 e 3.
+
+\item[{[2]}] La varianza asintotica dello stimatore $\hat{\theta}_{n}$, che
+noteremo $VarAs(\hat{\theta}_{n})$ \`{e} la varianza della distribuzione
+asintotica divisa per $n$.
+
+\begin{remark}
+Lo stimatore $\hat{\theta}_{n}$ \`{e} asintoticamente efficiente se \`{e}
+convergente e asintoticamente normale a varianza asintotica minima nella
+classe di tutti gli stimatori convergenti e asintoticamente normali (BAN).
+Lo stimatore di massima verosimiglianza \`{e} asintoticamente efficiente.
+\end{remark}
+\end{itemize}
+
+\section{Analisi asintotica della regressione classica}
+
+\begin{enumerate}
+\item {Il modello} 
+\begin{eqnarray*}
+y_{i} &=&x_{i}^{\prime }\beta +\varepsilon _{i} \\
+y &=&X\beta +\varepsilon
+\end{eqnarray*}
+
+\item {Le ipotesi}
+
+H1: Sulle variabili esplicative
+
+\begin{enumerate}
+\item Non stocastiche
+
+\item $rg(X)=K$
+
+\item Nuovo: comportamento asintotico 
+\begin{equation*}
+\lim_{n\rightarrow \infty }\frac{1}{n}\underset{(K\times K)}{X^{\prime }X}%
+=Q,\ \ d.p.
+\end{equation*}
+\end{enumerate}
+
+H2: Sugli errori
+
+\begin{enumerate}
+\item $E[\varepsilon ]=0$
+
+\item $V[\varepsilon ]=\sigma ^{2}I$
+
+\item Nuovo: $\varepsilon _{i}\sim i.i.d.(0,\sigma ^{2})$
+\end{enumerate}
+
+H3: $X,\varepsilon $ mutuamente indipendenti.
+
+\item {Lo stimatore dei }${m.q.o.}$%
+\begin{eqnarray*}
+\hat{\beta} &=&(X^{\prime }X^{\prime })^{-1}X^{\prime }Y \\
+E[\hat{\beta}] &=&\beta \\
+V[\hat{\beta}] &=&\sigma ^{2}(X^{\prime }X)^{-1}
+\end{eqnarray*}
+
+\item {La convergenza quadratica}
+
+\begin{itemize}
+\item La distorsione: $B(\hat{\beta})=0$
+
+\item La varianza: $V(\hat{\beta})=\sigma ^{2}(X^{\prime }X)^{-1}=\frac{%
+\sigma ^{2}}{n}(\frac{X^{\prime }X}{n})^{-1}$
+
+Segue che :%
+\begin{equation*}
+\lim \frac{\sigma ^{2}}{n}\ \lim (\frac{X^{\prime }X}{n})^{-1}=\lim \frac{%
+\sigma ^{2}}{n}Q^{-1}=0
+\end{equation*}
+\end{itemize}
+
+\item {Prova diretta della convergenza di $\hat{\beta}$} 
+\begin{eqnarray*}
+\widehat{\beta } &=&\left( X^{\prime }X\right) ^{-1}X^{\prime }Y \\
+&=&\beta +\left( X^{\prime }X\right) ^{-1}X^{\prime }\varepsilon \\
+p\lim \widehat{\beta } &=&p\lim \beta +p\lim \left( X^{\prime }X\right)
+^{-1}X^{\prime }\varepsilon \\
+&=&\beta +p\lim \left( \frac{X^{\prime }X}{n}\right) ^{-1}p\lim \left( \frac{%
+X^{\prime }\varepsilon }{n}\right) \\
+&=&\beta +Q^{-1}p\lim \left( \frac{X^{\prime }\varepsilon }{n}\right)
+\end{eqnarray*}%
+Ora:%
+\begin{equation*}
+\frac{1}{n}\underset{(K\times 1)}{X^{\prime }\varepsilon }=\left[ 
+\begin{array}{c}
+\frac{1}{n}\sum X_{i1}\varepsilon _{i} \\ 
+\frac{1}{n}\sum X_{i2}\varepsilon _{i} \\ 
+\vdots \\ 
+\frac{1}{n}\sum X_{iK}\varepsilon _{i}%
+\end{array}%
+\right]
+\end{equation*}%
+ogni termine \`{e} una somma di prodotti incrociati divisi per $n$. Siccome
+un termine del prodotto \`{e} nullo in valore atteso, questa somma
+rappresenta la covarianza empirica nel campione tra una variabile
+esplicativa ($k-esima$) e gli errori. Questa tende verso la vera covarianza
+che \`{e} $0$ poich\'{e} le variabili esplicative sono indipendenti dagli
+errori.
+
+Segue che: 
+\begin{eqnarray*}
+p\lim \frac{1}{n}X^{\prime }\varepsilon &=&0 \\
+p\lim \hat{\beta} &=&\beta ,\text{ convergente}
+\end{eqnarray*}
+
+\item {Normalit\`{a} asintotica}
+
+Si cerca la distribuzione limite di $\sqrt{n}(\hat{\beta}-\beta )$. Ora: 
+\begin{equation*}
+\hat{\beta}-\beta =(X^{\prime }X)^{-1}X^{\prime }\varepsilon \\
+=(\frac{1}{n}X^{\prime }X)^{-1}\frac{1}{n}X^{\prime }\varepsilon
+\end{equation*}%
+Ne consegue che, 
+\begin{equation*}
+\sqrt{n}(\hat{\beta}-\beta )=(\frac{1}{n}X^{\prime }X)^{-1}\frac{1}{\sqrt{n}}%
+X^{\prime }\varepsilon .
+\end{equation*}%
+Si tratta di un prodotto di due termini.
+
+\begin{itemize}
+\item Il primo termine, $(\frac{1}{n}X^{\prime }X)^{-1}$, tende verso la
+matrice di costanti, $Q^{-1}$.
+
+\item Il secondo termine pu\`{o} scriversi:%
+\begin{equation*}
+\frac{1}{\sqrt{n}}X^{\prime }\varepsilon =\frac{1}{\sqrt{n}}\left[ 
+\begin{array}{cccc}
+x_{1} & x_{2} & \cdots & x_{n}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+\varepsilon _{1} \\ 
+\varepsilon _{2} \\ 
+\vdots \\ 
+\varepsilon _{n}%
+\end{array}%
+\right] =\frac{1}{\sqrt{n}}\sum\limits_{i=1}^{n}x_{i}\varepsilon _{i}
+\end{equation*}
+\end{itemize}
+
+Quest'espressione \`{e} proprio quella del teorema 2: verifichiamo le due
+condizioni.
+
+\begin{enumerate}
+\item $\varepsilon _{i}\sim i.i.d.(0,\sigma ^{2})$
+
+\item $x_{i}$ non stocastici, tali che 
+\begin{eqnarray*}
+\lim \frac{1}{n}\sum V(x_{i}\varepsilon _{i}) &=&\lim \frac{1}{n}\sum
+x_{i}\sigma ^{2}x_{i}^{\prime }= \\
+&=&\sigma ^{2}\lim \frac{1}{n}\sum x_{i}x_{i}^{\prime }= \\
+&=&\sigma ^{2}\lim \frac{1}{n}X^{\prime }X=\sigma ^{2}Q,d.p.
+\end{eqnarray*}
+\end{enumerate}
+
+Per il teorema 2: $\frac{1}{\sqrt{n}}X^{\prime }\varepsilon \overset{D}{\sim 
+}N(0,\sigma ^{2}Q)$, e per il teorema del prodotto: 
+\begin{equation*}
+\sqrt{n}(\hat{\beta}-\beta )\overset{D}{\sim }N(0,\sigma ^{2}Q^{-1}).
+\end{equation*}%
+Perch\'{e} questa varianza? Siccome $\sqrt{n}(\hat{\beta}-\beta )\overset{D}{%
+\sim }Q^{-1}\cdot N(0,\sigma ^{2}Q)$, $Var=Q^{-1}(\sigma
+^{2}Q)(Q^{-1})^{\prime }=\sigma ^{2}Q^{-1}$.
+
+La \emph{varianza asintotica} come definita in precedenza \`{e} la varianza
+della distribuzione asintotica divisa per $n$:%
+\begin{equation*}
+VarAs(\hat{\beta})=\frac{\sigma ^{2}}{n}Q^{-1}
+\end{equation*}
+\end{enumerate}
+
+\chapter{Il modello di regressione stocastica}
+
+\section{Il modello e le ipotesi}
+
+\subsection{Il modello}
+
+Sin qui abbiamo ammesso che le variabili esplicative sono non stocastiche,
+dei numeri. Quest'ipotesi \`{e} valida nelle scienze sperimentali dove colui
+che conduce l'analisi pu\`{o} scegliere debitamente le variabili
+esplicative. In economia questa ipotesi non \`{e} sempre soddisfatta. Quando
+le variabili esplicative sono (almeno in parte) aleatorie i metodi di stima
+e le loro propriet\`{a} dipendono non soltanto dalla distribuzione degli
+errori, ma dalla \emph{distribuzione congiunta} delle variabili esplicative
+e degli errori. In particolare, tali le propriet\`{a} dipenderanno
+dall'indipendenza o meno tra le variabili esplicative e l'errore.
+
+\noindent In certi casi l'indipendenza tra variabili esplicative ed errori 
+\`{e} una conseguenza logica del modello studiato.
+
+\begin{esempio}
+Il modello keynesiano semplice
+
+Funzione di consumo: $C_{t}=a+bR_{t}+\varepsilon _{t}$
+
+La definizione del reddito: $R_{t}=C_{t}+I_{t}$
+
+$R_{t}$ \`{e} la variabile esplicativa. Tuttavia $R_{t}$ e $\varepsilon _{t}$
+non possono essere indipendenti in quanto, dalla definizione di reddito, $%
+R_{t}$ contiene $C_{t}$ il quale contiene $\varepsilon _{t}$.
+\end{esempio}
+
+\subsection{Le ipotesi}
+
+Partiamo come al solito dal modello di regressione%
+\begin{eqnarray*}
+y_{i} &=&x_{i}^{\prime }\beta +\varepsilon _{i}\text{ \ \ }i=1,...,n \\
+&&\text{oppure} \\
+y &=&X\beta +\varepsilon
+\end{eqnarray*}
+
+\bigskip \noindent H1: Sulle variabili esplicative
+
+\begin{enumerate}
+\item Stocastiche (almeno in parte)
+
+\item $rg(X)=K$, con probabilit\`{a} 1
+
+\item $p\lim \frac{1}{n}X^{\prime }X=Q_{X}$, definita positiva
+\end{enumerate}
+
+\bigskip \noindent H2: Sugli errori
+
+\begin{enumerate}
+\item[ ] $\varepsilon \sim i.i.d.(0,\sigma ^{2})$
+\end{enumerate}
+
+\bigskip \noindent H3: Sulla relazione tra $X$ e $\varepsilon $. Due casi:
+
+\begin{enumerate}
+\item Indipendenza: $p\lim \frac{1}{n}X^{\prime }\varepsilon =0$
+
+\item Dipendenza: $p\lim \frac{1}{n}X^{\prime }\varepsilon =C\neq 0$
+\end{enumerate}
+
+\section{Quando i regressori e gli errori sono indipendenti}
+
+Tutto funziona come nella regressione classica.
+
+\section{Quando sono correlati}
+
+\subsection{{La non convergenza dei }${m.q.o.}$}
+
+\`{E} immediato verificare che i ${m.q.o.}$ non sono convergenti quando le
+variabili esplicative sono correlate con gli errori:%
+\begin{eqnarray*}
+\widehat{\beta } &=&\beta +(X^{\prime }X)^{-1}X^{\prime }\varepsilon \\
+&=&\beta +(\frac{1}{n}X^{\prime }X)^{-1}\frac{1}{n}X^{\prime }\varepsilon \\
+p\lim \widehat{\beta } &=&\beta +Q^{-1}C\neq 0.
+\end{eqnarray*}%
+In tal caso come bisogna procedere?\ Prima di proporre un nuovo stimatore
+consideriamo {una reinterpretazione dello stimatore dei minimi quadrati. }%
+Premoltiplichiamo il modello 
+\begin{equation*}
+y=X\beta +\varepsilon
+\end{equation*}%
+per la matrice $X^{\prime }$ e dividiamo per $n$%
+\begin{equation}
+\frac{1}{n}X^{\prime }y=\frac{1}{n}X^{\prime }X\beta +\frac{1}{n}X^{\prime
+}\varepsilon  \label{esempio_iv_mqo}
+\end{equation}%
+Quando $X$ e $\varepsilon $ sono indipendenti $\frac{1}{n}X^{\prime
+}\varepsilon \rightarrow 0$ e lo si pu\`{o} tralasciare. Risolvendo (\ref%
+{esempio_iv_mqo}) rispetto a $\beta $ otteniamo cos\`{\i} lo stimatore dei
+minimi quadrati ordinari: 
+\begin{equation*}
+\hat{\beta}=(X^{\prime }X)^{-1}X^{\prime }y.
+\end{equation*}%
+Quando, invece, $X$ ed $\varepsilon $ sono correlati, il termine $\frac{1}{n}%
+X^{\prime }\varepsilon $ non tende a zero, ed \`{e} questa la ragione della
+non convergenza al vero valore. Viene per\`{o} l'idea di premoltiplicare il
+modello non per $X^{\prime }$, ma per una matrice $Z^{\prime }$ (dello
+stesso ordine $K\times n$ che $X^{\prime }$) non correlata con $\varepsilon $%
+, 
+\begin{equation*}
+\frac{1}{n}Z^{\prime }y=\frac{1}{n}Z^{\prime }X\beta +\frac{1}{n}Z^{\prime
+}\varepsilon
+\end{equation*}%
+Se allora la matrice $Z^{\prime }X$ \`{e} non singolare (ci\`{o} che si deve
+ammettere), risolvendo per $\beta $ si ottiene, 
+\begin{equation}
+\hat{\beta}_{vs}=(Z^{\prime }X)^{-1}Z^{\prime }y  \label{stimatore vs kxk}
+\end{equation}%
+Per concludere, la matrice $Z$ \`{e} chiamata matrice di strumenti e lo
+stimatore definito dalla (\ref{stimatore vs kxk}) \`{e} chiamato stimatore
+delle variabili strumentali. \`{E} questo il caso in cui il numero di
+strumenti (il numero di colonne della matrice $Z$) \`{e} uguale al numero di
+variabili esplicative e cio\'{e} $K$.
+
+\begin{esempio}
+Ritornando all'esempio per la funzione di consumo%
+\begin{equation*}
+y=\left[ 
+\begin{array}{c}
+C_{1} \\ 
+\vdots \\ 
+C_{n}%
+\end{array}%
+\right] ;\hspace{0.5cm}X=\left[ 
+\begin{array}{cc}
+1 & R_{1} \\ 
+\vdots & \vdots \\ 
+1 & R_{n}%
+\end{array}%
+\right] ,\hspace{0.5cm}p\lim \frac{1}{n}\sum R_{i}\varepsilon _{i}\neq 0
+\end{equation*}%
+I $m.q.o.$ non sono convergenti! Devo trovare due strumenti:
+\end{esempio}
+
+\begin{itemize}
+\item Il termine costante non \`{e} stocastico: \`{e} il suo proprio
+strumento.
+
+\item Dobbiamo trovare invece uno strumento per $R_{t}$. Ammettiamo che
+l'investimento sia esogeno, dunque $I_{t}$ indipendente da $\varepsilon _{t}$%
+. $R_{t}$ \`{e} sicuramente correlato con $I_{t}$, dato che $%
+R_{t}=C_{t}+I_{t}$. Dunque la matrice $Z$ dei due strumenti \`{e} data da: 
+\begin{equation*}
+Z=\left[ 
+\begin{array}{cc}
+1 & I_{1} \\ 
+\vdots & \vdots \\ 
+1 & I_{n}%
+\end{array}%
+\right]
+\end{equation*}
+\end{itemize}
+
+\noindent Sciogliamo l'espressione 
+\begin{equation*}
+\hat{\beta}_{vs}=(Z^{\prime }X)^{-1}Z^{\prime }y\Longleftrightarrow
+(Z^{\prime }X){\beta }=Z^{\prime }y
+\end{equation*}%
+Introduciamo i valori nell'espressione: 
+\begin{eqnarray*}
+\left[ 
+\begin{array}{ccc}
+1 & \cdots & 1 \\ 
+I_{1} & \cdots & I_{n}%
+\end{array}%
+\right] \left[ 
+\begin{array}{cc}
+1 & R_{1} \\ 
+\vdots & \vdots \\ 
+1 & R_{n}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+a \\ 
+b%
+\end{array}%
+\right] &=&\left[ 
+\begin{array}{ccc}
+1 & \cdots & 1 \\ 
+I_{1} & \cdots & I_{n}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+C_{1} \\ 
+\vdots \\ 
+C_{n}%
+\end{array}%
+\right] \\
+\left[ 
+\begin{array}{cc}
+n & \sum R_{t} \\ 
+\sum I_{t} & \sum R_{t}I_{t}%
+\end{array}%
+\right] \left[ 
+\begin{array}{c}
+a \\ 
+b%
+\end{array}%
+\right] &=&%
+\begin{array}{c}
+\sum C_{t} \\ 
+\sum I_{t}C_{t}%
+\end{array}%
+\end{eqnarray*}%
+\begin{equation*}
+\left\{ 
+\begin{array}{c}
+na+b\sum R_{t}=\sum C_{t} \\ 
+a\sum I_{t}+b\sum R_{t}I_{t}=\sum I_{t}C_{t}%
+\end{array}%
+\right.
+\end{equation*}%
+Risolviamo il sistema e troviamo lo stimatore di $a$. 
+\begin{eqnarray*}
+\widehat{a}_{vs} &=&\frac{1}{n}\sum C_{t}-\widehat{b}_{vs}\frac{1}{n}\sum
+R_{t} \\
+\widehat{a}_{vs} &=&\overline{C}-\widehat{b}_{vs}\overline{R}
+\end{eqnarray*}%
+Troviamo ora lo stimatore per $b$.%
+\begin{eqnarray*}
+\sum I_{t}(\overline{C}-\widehat{b}_{vs}\overline{R})+\sum I_{t}R_{t}%
+\widehat{b}_{vs} &=&\sum C_{t}I_{t} \\
+\underset{m_{IR}}{\underbrace{\left[ \sum I_{t}R_{t}-\overline{R}\sum I_{t}%
+\right] }}\widehat{b}_{vs} &=&\underset{m_{IC}}{\underbrace{\sum C_{t}I_{t}-%
+\overline{C}\sum I_{t}}}
+\end{eqnarray*}%
+\begin{equation*}
+\widehat{b}_{vs}=\frac{m_{IC}}{m_{IR}}\neq \widehat{b}=\frac{m_{CR}}{m_{RR}}
+\end{equation*}
+
+\subsection{Il metodo delle variabili strumentali}
+
+Abbiamo discusso precedentemente il caso particolare dove il numero di
+strumenti utilizzati (il numero di colonne della matrice $Z$)\ era uguale a $%
+K$, ovvero uguale al numero di variabili esplicative. {Consideriamo ora la
+procedura generale nella quale il numero di strumenti pu\`{o} essere
+superiore a }$K$.
+
+\subsubsection{Gli strumenti}
+
+Si ammette l'esistenza di una matrice $Z$ d'ordine $n\times m$ di strumenti
+tali che
+
+\begin{enumerate}
+\item Gli strumenti non sono correlati con gli errori: 
+\begin{equation*}
+p\lim \frac{1}{n}\underset{(m\times 1)}{{Z^{\prime }\varepsilon }}=\underset{%
+(m\times 1)}{0}
+\end{equation*}
+
+\item Gli strumenti sono correlati con le variabili esplicative: 
+\begin{equation*}
+p\lim \frac{1}{n}\underset{(m\times K)}{{Z^{\prime }X}}=\underset{(m\times K)%
+}{Q_{ZX}}
+\end{equation*}%
+dove $Q_{ZX}$ \`{e} di rango $K$. Ovviamente deve essere $m\geq K$. Questa
+condizione essenziale \`{e} detta condizione d'identificazione.
+
+\item Gli strumenti posseggono dei momenti finiti di ordine 2. 
+\begin{equation*}
+p\lim \frac{1}{n}\sum {Z^{\prime }Z}=Q_{Z},\hspace{0.5cm}d.p.
+\end{equation*}
+\end{enumerate}
+
+\noindent Nell'esempio:
+
+\begin{enumerate}
+\item La costante \`{e} indipendente da $\varepsilon _{t}$, e $I_{t}$ \`{e}
+indipendente da $\varepsilon _{t}$.
+
+\item 
+\begin{equation*}
+\frac{1}{n}\sum {Z^{\prime }X}=\left[ 
+\begin{array}{cc}
+1 & \overline{R} \\ 
+\overline{I} & \frac{1}{n}\sum R_{t}I_{t}%
+\end{array}%
+\right] ,\text{ di rango 2}\Longleftrightarrow m_{IR}\neq 0
+\end{equation*}
+
+\item 
+\begin{equation*}
+\frac{1}{n}Z^{\prime }Z=\left[ 
+\begin{array}{cc}
+1 & \overline{I} \\ 
+\overline{I} & \frac{1}{n}\sum I_{t}^{2}%
+\end{array}%
+\right] ,\text{ di rango 2 }(d.p.)\Longleftrightarrow m_{ZZ}\neq 0
+\end{equation*}
+\end{enumerate}
+
+\subsubsection{La procedura}
+
+Si premoltiplica il modello $y=X\beta +\varepsilon $ per $\underset{(m\times
+n)}{Z^{\prime }}$: 
+\begin{eqnarray*}
+Z^{\prime }y &=&Z^{\prime }X\beta +Z^{\prime }\varepsilon \\
+\underset{(m\times 1)}{\tilde{y}} &=&\underset{(m\times K)}{\tilde{X}}\beta +%
+\underset{(m\times 1)}{\tilde{\varepsilon}}
+\end{eqnarray*}%
+Questo ha tutti gli aspetti di un modello di regressione con $m$
+osservazioni e $K$ variabili esplicative $m\geq K$. In questa regressione
+gli errori $\tilde{\varepsilon}$ non hanno le propriet\`{a} dei $m.q.o.$.
+Infatti 
+\begin{eqnarray*}
+\tilde{\varepsilon} &=&Z^{\prime }\varepsilon \\
+E\left[ \widetilde{\varepsilon }\mid Z\right] &=&0 \\
+V\left[ \widetilde{\varepsilon }\mid Z\right] &=&Z^{\prime }V(\varepsilon
+)Z=\sigma ^{2}Z^{\prime }Z
+\end{eqnarray*}%
+Questa varianza \`{e} conosciuta. Siamo dunque in una situazione in cui i $%
+m.q.g.$ puri sono applicabili. L'applicazione dei $m.q.g.$ puri ci d\`{a}: 
+\begin{eqnarray*}
+\widehat{\beta }_{vs} &=&\left[ \widetilde{X}^{\prime }V^{-1}\widetilde{X}%
+\right] ^{-1}\widetilde{X}^{\prime }V^{-1}\widetilde{y} \\
+&=&\left( X^{\prime }Z(Z^{\prime }Z)^{-1}Z^{\prime }X\right) ^{-1}X^{\prime
+}Z(Z^{\prime }Z)^{-1}Z^{\prime }y \\
+&=&(X^{\prime }P_{Z}X)^{-1}X^{\prime }P_{Z}y.
+\end{eqnarray*}%
+Quando $m=K$, $X^{\prime }Z$ \`{e} quadrata e invertibile per ipotesi:%
+\begin{eqnarray*}
+\widehat{\beta }_{vs} &=&(Z^{\prime }X)^{-1}Z^{\prime }Z(X^{\prime
+}Z)^{-1}X^{\prime }Z(Z^{\prime }Z)^{-1}Z^{\prime }y \\
+&=&(Z^{\prime }X)^{-1}Z^{\prime }y
+\end{eqnarray*}
+
+\subsection{La scelta degli strumenti}
+
+Dal punto di vista teorico: gli strumenti devono essere
+
+\begin{itemize}
+\item non correlati con gli errori e
+
+\item il pi\`{u} correlati possibile con le variabili esplicative.\vspace{%
+0.5cm}
+\end{itemize}
+
+\noindent Dal punto di vista pratico:
+
+\begin{itemize}
+\item Le variabili esplicative non stocastiche (come la costante, il trend,
+le dummy) come pure quelle non correlate con gli errori, sono i loro propri
+strumenti.
+
+\item Nei modelli macroeconomici, le variabili \emph{esogene del sistema}
+(nel nostro caso l'investimento) costituiscono gli strumenti naturali.
+
+\item In certi casi in economia si pu\`{o} ammettere che il valore ritardato
+delle variabili esplicative non sia correlato con l'errore presente. In tal
+caso il valore ritardato \`{e} uno strumento valido.
+
+\item L'ordine con cui gli strumenti sono posizionati nelle colonne di $Z$
+non ha alcuna conseguenza.
+\end{itemize}
+
+\subsubsection{{Le propriet\`{a} di $\hat{\protect\beta}_{vs}$}}
+
+Scriviamo, sostituendo $y$ con $X\beta +\varepsilon $, il nostro stimatore 
+\begin{eqnarray*}
+\widehat{\beta }_{vs} &=&\left( X^{\prime }Z(Z^{\prime }Z)^{-1}Z^{\prime
+}X\right) ^{-1}X^{\prime }Z(Z^{\prime }Z)^{-1}Z^{\prime }(X\beta
++\varepsilon ) \\
+&=&\beta +\left( X^{\prime }Z(Z^{\prime }Z)^{-1}Z^{\prime }X\right)
+^{-1}X^{\prime }Z(Z^{\prime }Z)^{-1}Z^{\prime }\varepsilon
+\end{eqnarray*}%
+Non essendo lineare in $\varepsilon $ e $X$ non si pu\`{o} calcolare n\'{e}
+il valore atteso n\'{e} la varianza.
+
+\begin{itemize}
+\item La convergenza in probabilit\`{a} 
+\begin{eqnarray*}
+\widehat{\beta }_{vs} &=&\beta +\left[ \frac{1}{n}X^{\prime }Z(\frac{1}{n}%
+Z^{\prime }Z)^{-1}\frac{1}{n}Z^{\prime }X\right] ^{-1}\frac{1}{n}X^{\prime
+}Z(\frac{1}{n}Z^{\prime }Z)^{-1}\frac{1}{n}Z^{\prime }\varepsilon \\
+&=&\beta +A_{n}\frac{1}{n}Z^{\prime }\varepsilon
+\end{eqnarray*}
+
+Ora:
+
+\begin{itemize}
+\item $p\lim \frac{1}{n}Z^{\prime }\varepsilon =p\lim \frac{1}{n}%
+\sum_{i=1}^{n}z_{i}\varepsilon _{i}=\ldots \ldots \ldots =0$
+
+\item $p\lim A_{n}=\left[ Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]
+^{-1}Q_{XZ}Q_{Z}^{-1}=A$, finito
+\end{itemize}
+
+Ne segue che: 
+\begin{equation*}
+p\lim \hat{\beta}=\beta
+\end{equation*}
+
+\item La normalit\`{a} asintotica 
+\begin{equation*}
+\sqrt{n}(\widehat{\beta }-\beta )=\underset{p\lim A_{n}=A}{\underbrace{A_{n}}%
+}\underset{N(0,\sigma ^{2}Q_{Z})}{\underbrace{\frac{1}{\sqrt{n}}Z^{\prime
+}\varepsilon }}
+\end{equation*}%
+Per il teorema 3: 
+\begin{equation*}
+\sqrt{n}(\widehat{\beta }-\beta )\overset{D}{\sim }N(0,\sigma
+^{2}AQ_{Z}A^{\prime })
+\end{equation*}%
+Ora%
+\begin{eqnarray*}
+AQ_{Z}A^{\prime } &=&\left[ Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]
+^{-1}Q_{XZ}Q_{Z}^{-1}(Q_{Z})Q_{Z}^{-1}\ldots \\
+&=&\left[ Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right] ^{-1}
+\end{eqnarray*}
+
+\item {La varianza asintotica} 
+\begin{equation*}
+VarAs(\hat{\beta}_{vs})=\frac{\sigma ^{2}}{n}\left[ Q_{XZ}Q_{Z}^{-1}Q_{ZX}%
+\right] ^{-1}
+\end{equation*}%
+Sar\`{a} stimata in maniera convergente con: 
+\begin{equation*}
+\widehat{VarAs}(\hat{\beta}_{vs})=\hat{\sigma}^{2}\left[
+Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right] ^{-1}
+\end{equation*}%
+dove: 
+\begin{eqnarray*}
+\hat{\sigma}^{2} &=&\frac{1}{n}\hat{\varepsilon}^{\prime }\hat{\varepsilon}
+\\
+\hat{\varepsilon} &=&y-X\hat{\beta}_{vs}
+\end{eqnarray*}
+\end{itemize}
+
+\part{Modelli dinamici}
+
+\chapter{Variabili endogene ritardate}
+
+I modelli di regressione considerati fino a questo momento sono di \emph{%
+natura statica}, nel senso che sia la variabile dipendente che le variabili
+esplicative (di cui essa ne \`{e} funzione) sono osservate al medesimo
+istante temporale. Per contro, un modello \emph{dinamico} implica una
+relazione non contemporanea fra la variabile dipendente ed una o pi\`{u}
+variabili esplicative. Un semplice esempio potrebbe essere il seguente:%
+\begin{equation}
+y_{t}=bx_{t-3}+\varepsilon _{t}.  \label{esempio modello dinamico semplice}
+\end{equation}%
+In questo caso l'effetto di una variazione in $x$ \`{e} trasmesso ad $y$
+solo dopo tre periodi. Un modello economico \`{e} detto dinamico se \`{e}
+capace di evolvere nel tempo di sua propria iniziativa. Una semplice
+definizione di modello dinamico \`{e} la seguente:
+
+\begin{definizione}
+Un modello economico \`{e} detto dinamico se nell'equazione che lo definisce
+intervengono variabili datate a momenti diversi nel tempo.
+\end{definizione}
+
+Sebbene il modello (\ref{esempio modello dinamico semplice}) sia per
+definizione dinamico, esso non ne cattura pienamente lo spirito in quanto
+l'effetto che $x$ esercita su $y$ \`{e} realizzato in un'unica tappa (e per
+questo motivo non \`{e} di grande interesse). Nel Capitolo \ref{Capitolo
+ritardi distribuiti} vedremo modelli pi\`{u} ricchi dal punto di vista
+dinamico in cui la variabile dipendente \`{e} influenzata da due o pi\`{u}
+ritardi della stessa variabile esplicativa. Ad esempio il modello precedente
+potrebbe essere esteso nel seguente modo%
+\begin{equation*}
+y_{t}=b_{1}x_{t-1}+b_{2}x_{t-2}+b_{3}x_{t-3}+\varepsilon _{t}.
+\end{equation*}
+
+Un caso particolare e molto interessante di modello dinamico \`{e} quello in
+cui nell'insieme delle variabili esplicative sono presenti uno o pi\`{u}
+ritardi della variabile dipendente $y$. Si parla in questo caso di modelli
+dinamici a variabili endogene ritardate. In economia capita sovente di
+imbattersi in modelli a variabili endogene ritardate ed \`{e} quindi giusto
+analizzare quali sono le problematiche che questa classe di modelli pone dal
+punto di vista della stima e dei test.
+
+\section{Esempi economici}
+
+\subsection{La formazioni d'abitudini}
+
+Prendiamo una funzione di consumo. Per Keynes il consumo \`{e} una funzione
+del reddito: $C=f(R)$%
+\begin{equation}
+C_{t}=a+bR_{t}+\varepsilon _{t}  \label{consumo reddito lungo termine}
+\end{equation}%
+con $\varepsilon _{t}\sim iid(0,\sigma ^{2})$ ed il coefficiente $b$ a
+rappresentare la propensione marginale al consumo: $0<b<1$. \`{E} questa una
+relazione statitica fra consumo e reddito. Il consumo dipende dal reddito in
+modo istantaneo. L'equazione (\ref{consumo reddito lungo termine})
+rappresenta piuttosto una relazione d'equilibrio di lungo termine. Questa
+relazione statica non \`{e} sufficiente per rappresentare il comportamento
+dei consumatori nel corto periodo. Supponiamo infatti, che il reddito
+diminuisca. Il consumo tender\`{a} anch'esso a diminuire, ma non
+immediatamente a causa della formazione di abitudini: si \`{e} abituati ad
+un certo tenore di vita e anche se il reddito cambia le abitudini al consumo
+non reagiscono altrettanto velocemente. Le formazioni di abitudini sono
+rappresentate dal consumo passato.%
+\begin{equation*}
+C_{t}=a+cR_{t}+dC_{t-1}+\varepsilon _{t}\ .
+\end{equation*}%
+$C_{t-1}$ rappresenta la variabile endogena ritardata. Essa \`{e} aleatoria
+e quindi siamo in presenza di un modello di regressione stocastica!\ Come
+interpretiamo i parametri? Per rispondere a questa domanda poniamoci in $t=0$
+e supponiamo che da lungo tempo $(t<0)$ il sistema si trovi in equilibrio
+con reddito e consumo costanti. Ci\`{o} significa che prima di $t=0,$ $%
+\Delta R_{t}=0$ e $\Delta C_{t}=0$. Scriviamo il nostro modello in termini
+di variazioni, trascurando momentaneamente il termine d'errore:%
+\begin{equation*}
+\Delta C_{t}=c\Delta R_{t}+d\Delta C_{t-1}\ .
+\end{equation*}%
+Supponiamo che al tempo $t=0$ il reddito aumenti di una unit\`{a} (una volta
+per sempre), cio\`{e}%
+\begin{eqnarray*}
+\Delta R_{t} &=&0\ \text{per}\ t<0 \\
+\Delta R_{t} &=&1\ \text{per}\ t=0 \\
+\Delta R_{t} &=&0\ \text{per}\ t>0
+\end{eqnarray*}%
+Studiamo la variazione indotta sul consumo al tempo $t=0$ e nei momenti
+successivi.%
+\begin{equation*}
+t=0:\ \ \ \Delta C_{0}=c\underset{1}{\underbrace{\Delta R_{0}}}+d\underset{0}%
+{\underbrace{\Delta C_{-1}}}=c
+\end{equation*}%
+$c$ \`{e} la propensione marginale al consumo di corto periodo, l'effetto
+immediato. 
+\begin{eqnarray*}
+t &=&1:\ \ \ \Delta C_{1}=c\underset{0}{\underbrace{\Delta R_{1}}}+d\underset%
+{c}{\underbrace{\Delta C_{0}}}=dc \\
+t &=&2:\ \ \ \Delta C_{2}=c\underset{0}{\underbrace{\Delta R_{2}}}+d\underset%
+{dc}{\underbrace{\Delta C_{1}}}=d^{2}c \\
+&&\vdots \\
+t &=&n:\ \ \ \Delta C_{n}=c\underset{0}{\underbrace{\Delta R_{n}}}+d\underset%
+{d^{n-1}c}{\underbrace{\Delta C_{n-1}}}=d^{n}c
+\end{eqnarray*}%
+L'effetto cumulato dopo $n$ periodi:%
+\begin{eqnarray*}
+\Delta C_{TOT(n)} &=&\Delta C_{0}+\Delta C_{1}+\ldots +\Delta C_{n} \\
+&=&c\left( 1+d+d^{2}+\ldots +d^{n}\right)
+\end{eqnarray*}%
+Quando $n\rightarrow \infty $, l'effetto totale $\Delta C_{TOT}$ \`{e}
+finito quando $\mid d\mid <1$. In tal caso si ha: $\Delta C_{TOT}=\frac{c}{%
+1-d}=b$ che chiameremo la propensione marginale di lungo periodo. Possiamo
+dedurla anche direttamente dall'equazione di partenza. Infatti supponiamo
+che tutte le variabili del modello siano in valore uguale al loro livello
+d'equilibrio di lungo termine:%
+\begin{eqnarray*}
+R_{t} &=&R^{\ast }\ \forall t \\
+C_{t} &=&C^{\ast }\ \forall t
+\end{eqnarray*}%
+da cui%
+\begin{equation*}
+C^{\ast }=a+cR^{\ast }+dC^{\ast }\Rightarrow (1-d)C^{\ast }=a+cR^{\ast }
+\end{equation*}%
+e per finire%
+\begin{eqnarray*}
+C^{\ast } &=&\frac{a}{1-d}+\frac{c}{1-d}R^{\ast } \\
+&=&a^{\ast }+c^{\ast }R^{\ast }
+\end{eqnarray*}%
+Nell'equazione $C_{t}=a+cR_{t}+dC_{t-1}+\varepsilon _{t}$
+
+\begin{itemize}
+\item $C_{t}$ \`{e} la variabile spiegata, detta anche endogena,
+
+\item $R_{t}$ \`{e} una variabile esplicativa esogena,
+
+\item $C_{t-1}$ \`{e} pure una variabile esplicativa: si tratta di una
+variabile endogena ritardata.
+\end{itemize}
+
+\noindent In contrasto, la formulazione 
+\begin{equation*}
+C_{t}=a+b_{1}R_{t}+b_{2}R_{t-1}+\varepsilon _{t}
+\end{equation*}%
+\`{e} pure un modello dinamico ma senza variabile endogena ritardata. La
+variabile ritardata \`{e} la variabile esogena%
+\begin{equation*}
+\Delta C_{t}=b_{1}\Delta R_{t}+b_{2}\Delta R_{t-1}
+\end{equation*}%
+\begin{eqnarray*}
+\Delta R_{0}=1\Rightarrow \Delta C_{0} &=&b_{1}\underset{1}{\underbrace{%
+\Delta R_{0}}}+b_{2}\underset{0}{\underbrace{\Delta R_{-1}}}=b_{1} \\
+\Delta C_{1} &=&b_{1}\underset{0}{\underbrace{\Delta R_{1}}}+b_{2}\underset{1%
+}{\underbrace{\Delta R_{0}}}=b_{2} \\
+\Delta C_{2} &=&b_{1}\underset{0}{\underbrace{\Delta R_{2}}}+b_{2}\underset{0%
+}{\underbrace{\Delta R_{1}}}=0
+\end{eqnarray*}%
+da cui deduciamo%
+\begin{equation*}
+\Delta C_{TOT}=\Delta C_{0}+\Delta C_{1}=b_{1}+b_{2}
+\end{equation*}%
+\pagebreak
+
+\subsection{Il modello d'aggiustamento parziale}
+
+In una data industria il livello desiderato degli stock, notato $S_{t}^{\ast
+}$, \`{e} dato da 
+\begin{equation}
+S_{t}^{\ast }=a+bV_{t}+\varepsilon _{t}  \label{livello stock}
+\end{equation}%
+Gli imprenditori hanno un comportamento d'aggiustamento parziale: colmano
+soltanto una parte della differenza tra il livello attuale e quello
+desiderato:%
+\begin{equation}
+\underset{%
+\begin{array}{c}
+\text{{\tiny variazione}} \\ 
+\text{{\tiny (o investimento)}} \\ 
+\text{{\tiny negli stock}}%
+\end{array}%
+}{\underbrace{S_{t}-S_{t-1}}}=\lambda \underset{%
+\begin{array}{c}
+\text{{\tiny distanza che ci}} \\ 
+\text{{\tiny separa dall'obiettivo}}%
+\end{array}%
+}{\underbrace{\left( S_{t}^{\ast }-S_{t-1}\right) }}\text{ \ dove }0<\lambda
+<1  \label{aggiustamento livello stock}
+\end{equation}%
+$S^{\ast }$ non \`{e} osservabile. Le sole variabili osservabili sono $S_{t}$
+e $V_{t}$ con i loro valori passati. In questo tipo di problemi bisogna fare
+3 cose:
+
+\begin{enumerate}
+\item Derivare un'equazione stimabile, cio\`{e} un'equazione nella quale
+intervengono esclusivamente variabili effettivamente osservate.
+
+\item Studiare l'identificazione dei parametri del modello di partenza
+(detto modello strutturale) a partire dai coefficienti stimati
+nell'equazione stimabile.
+
+\item Studiare le propriet\`{a} statistiche dell'equazione stimabile e
+proporre un metodo di stima appropriato.
+\end{enumerate}
+
+\noindent Consideriamo questi tre punti in dettaglio.
+
+\begin{enumerate}
+\item L'equazione stimata
+
+Dalla (\ref{aggiustamento livello stock}):%
+\begin{eqnarray*}
+\lambda S_{t}^{\ast } &=&S_{t}-(1-\lambda )S_{t-1} \\
+\lambda a+\lambda bV_{t}+\lambda \varepsilon _{t} &=&S_{t}-(1-\lambda
+)S_{t-1} \\
+S_{t} &=&\lambda a+\lambda bV_{t}+(1-\lambda )S_{t-1}+\lambda \varepsilon
+_{t} \\
+S_{t} &=&\beta _{1}+\beta _{2}V_{t}+\beta _{3}S_{t-1}+u_{t}
+\end{eqnarray*}
+
+\item L'identificazione dei parametri strutturali
+
+Conoscendo $\beta _{1},\ \beta _{2}$ e $\beta _{3}$ (dopo averli stimati) 
+\`{e} possibile ottenere in maniera \emph{unica} i parametri strutturali:\ $%
+a $, $b$ e $\lambda $.%
+\begin{equation*}
+\begin{array}{ccccccc}
+\beta _{3} & = & (1-\lambda ) & \Rightarrow & \lambda & = & 1-\beta _{3} \\ 
+\beta _{2} & = & \lambda b & \Rightarrow & b & = & \frac{\beta _{2}}{1-\beta
+_{3}} \\ 
+\beta _{1} & = & \lambda a & \Rightarrow & a & = & \frac{\beta _{1}}{1-\beta
+_{3}}%
+\end{array}%
+\end{equation*}
+
+\item Le propriet\`{a} statistiche dell'equazione stimabile
+
+\begin{enumerate}
+\item L'equazione stimabile \`{e} un'equazione con \emph{variabile endogena
+ritardata}.
+
+\item Propriet\`{a} degli errori:\ $u_{t}=\lambda \varepsilon _{t}$.
+
+Se $\varepsilon _{t}\sim iid(0,\sigma ^{2})\Rightarrow u_{t}\sim
+iid(0,\lambda ^{2}\sigma ^{2})$.
+\end{enumerate}
+\end{enumerate}
+
+\noindent Si tratta quindi di un modello a variabile endogena ritardata ed
+errori indipendenti: i $m.q.o.$ sono convergenti (e asintoticamente
+efficienti).
+
+\subsection{Modello ad aspettative adattive (adaptive expectation)}
+
+In una certa industria il volume delle scorte, $S_{t}$, \`{e} legato al
+volume previsto delle vendite, $V_{t+1}^{\ast }$, secondo la relazione%
+\begin{eqnarray}
+S_{t} &=&a+bV_{t+1}^{\ast }+\varepsilon _{t}
+\label{scorte aspettative adattive} \\
+\varepsilon _{t} &\sim &iid(0,\sigma ^{2})  \notag
+\end{eqnarray}%
+Le imprese aggiornano le loro previsioni in funzione degli errori di
+previsione passati%
+\begin{equation}
+\underset{\text{aggiornamento previsione}}{\underbrace{V_{t+1}^{\ast
+}-V_{t}^{\ast }}}=\gamma \underset{\text{errore passato}}{\underbrace{%
+(V_{t}-V_{t}^{\ast })}}\ \ \ \ \ \mid \gamma \mid <1
+\label{aggiornamento previsione}
+\end{equation}
+
+\begin{enumerate}
+\item L'equazione stimata
+
+Dalla (\ref{aggiornamento previsione})%
+\begin{equation*}
+V_{t+1}^{\ast }-(1-\gamma )V_{t}^{\ast }=\gamma V_{t}
+\end{equation*}
+
+Dalla (\ref{scorte aspettative adattive})%
+\begin{equation*}
+\left\{ 
+\begin{array}{cc}
+S_{t}=a+bV_{t+1}^{\ast }+\varepsilon _{t} & \ \ \ (a) \\ 
+S_{t-1}=a+bV_{t}^{\ast }+\varepsilon _{t-1} & \ \ \ (b)%
+\end{array}%
+\right.
+\end{equation*}
+
+$(a)-(1-\gamma )(b)$:%
+\begin{eqnarray*}
+S_{t}-(1-\gamma )S_{t-1} &=&\gamma a+b(V_{t+1}^{\ast }-(1-\gamma
+)V_{t}^{\ast })+\varepsilon _{t}-(1-\gamma )\ \varepsilon _{t-1} \\
+&=&\gamma a+b\gamma V_{t}+\varepsilon _{t}-(1-\gamma )\ \varepsilon _{t-1} \\
+S_{t} &=&\gamma a+b\gamma V_{t}+(1-\gamma )S_{t-1}+\varepsilon
+_{t}-(1-\gamma )\ \varepsilon _{t-1} \\
+S_{t} &=&\beta _{1}+\beta _{2}S_{t-1}+\beta _{3}V_{t}+u_{t}
+\end{eqnarray*}%
+dove $u_{t}=\varepsilon _{t}-(1-\gamma )\ \varepsilon _{t-1}$.
+
+\item L'identificazione dei parametri strutturali
+
+\begin{equation*}
+\begin{array}{ccccccc}
+\beta _{3} & = & 1-\gamma & \Rightarrow & \gamma & = & 1-\beta _{3} \\ 
+\beta _{2} & = & b\gamma & \Rightarrow & b & = & \frac{\beta _{2}}{1-\beta
+_{3}} \\ 
+\beta _{1} & = & \gamma a & \Rightarrow & a & = & \frac{\beta _{1}}{1-\beta
+_{3}}%
+\end{array}%
+\end{equation*}
+
+\item Le propriet\`{a} statistiche dell'equazione stimabile
+
+L'equazione stimabile \`{e} un modello a variabile endogena ritardata con
+errori che non sono indipendenti. Infatti $u_{t}=\varepsilon _{t}-(1-\gamma
+)\ \varepsilon _{t-1}$: poich\'{e} $\varepsilon _{t}\sim iid(0,\sigma ^{2})$
+otteniamo%
+\begin{eqnarray*}
+E(u_{t}) &=& \\
+V(u_{t}) &=& \\
+Cov(u_{t},u_{t-1}) &=& \\
+&=& \\
+&& \\
+Cov(u_{t},u_{t-s}) &=&0\text{ \ \ \ \ \ \ }\forall s>1
+\end{eqnarray*}
+\end{enumerate}
+
+\noindent Mostreremo che in un modello a variabile endogena ritardata ed
+errori autocorrelati i $m.q.o.$ non sono convergenti. Sar\`{a} quindi
+necessario definire una nuova classe di stimatori.
+
+\section{La stima dei modelli a variabile endogena ritardata}
+
+La formulazione generale di questa classe di modelli \`{e} la seguente:%
+\begin{equation*}
+y_{t}=\underset{p\text{ ritardi della variabile endogena}}{\underbrace{%
+\alpha _{1}y_{t-1}+\alpha _{2}y_{t-2}+\ldots +\alpha _{p}y_{t-p}}}+\underset{%
+K\text{ variabili esogene}}{\underbrace{\beta _{1}x_{1t}+\ldots +\beta
+_{K}x_{Kt}}}+\varepsilon _{t}
+\end{equation*}%
+$\varepsilon _{t}$ \`{e} il solito errore non osservabile, $\varepsilon
+_{t}\sim (0,\sigma ^{2})$.
+
+\noindent I problemi di stima di un tale modello si possono esaminare
+studiando il modello semplice 
+\begin{equation*}
+y_{t}=\alpha _{1}y_{t-1}+\varepsilon _{t}
+\end{equation*}%
+che come abbiamo visto nella prima parte del corso \`{e} detto modello $%
+AR(1) $ (modello autoregressivo di ordine 1).\vspace{0.5cm}
+
+\noindent \emph{Prima costatazione}: la variabile endogena ritardata
+(variabile stocastica) \`{e} necessariamente correlata con gli \emph{errori
+passati}. Infatti%
+\begin{equation}
+y_{t}=\alpha _{1}y_{t-1}+\varepsilon _{t}  \label{ar1}
+\end{equation}%
+per il periodo precedente%
+\begin{eqnarray*}
+y_{t-1} &=&\alpha _{1}y_{t-2}+\varepsilon _{t-1} \\
+y_{t-2} &=&\alpha _{1}y_{t-3}+\varepsilon _{t-2} \\
+&&\vdots
+\end{eqnarray*}%
+Quindi la variabile $y_{t-1}$ della (\ref{ar1}) dipende da $y_{t-2}$ e da $%
+\varepsilon _{t-1}$. $y_{t-2}$ a sua volta dipende da $\varepsilon _{t-2}$ e
+cos\`{\i} via: $y_{t-1}$ \`{e} dunque correlato con $\varepsilon
+_{t-1},\varepsilon _{t-2},\ldots $.\vspace{0.5cm}
+
+\noindent \emph{Seconda costatazione}: siccome $y_{t-1}$ dipende da $%
+\varepsilon _{t-1},\varepsilon _{t-2},\ldots $ e quindi non direttamente da $%
+\varepsilon _{t}$, $y_{t-1}$ non \`{e} correlata con $\varepsilon _{t}$
+(nella (\ref{ar1})) quando gli errori $\varepsilon _{t}$ sono indipendenti
+(non correlati).
+
+\noindent Invece, quando gli errori $\varepsilon _{t}$ sono correlati, la
+situazone \`{e} la seguente%
+\begin{equation*}
+\left. 
+\begin{array}{ccc}
+\varepsilon _{t} & \text{dipende da} & \varepsilon _{t-1},\varepsilon
+_{t-2},\ldots \\ 
+y_{t-1} & \text{dipende da} & \varepsilon _{t-1},\varepsilon _{t-2},\ldots%
+\end{array}%
+\right\} \Rightarrow y_{t-1}\text{ e }\varepsilon _{t}\text{ nella (\ref{ar1}%
+) sono correlati!}
+\end{equation*}%
+\vspace{0.5cm}
+
+\noindent In conclusione: il modello a variabile endogena ritardata \`{e} un
+modello stocastico non correlato con gli errori quando quest'ultimi sono
+indipendenti (in tal caso i $m.q.o.$ sono ok) ed invece si tratta di un
+modello di regressione stocastica dipendente quando quest'ultimi sono
+correlati (i $m.q.o.$ non sono convergenti).
+
+\subsection{\label{ver ed errori indipendenti}Quando gli errori sono
+indipendenti}
+
+\begin{equation}
+y_{t}=\alpha y_{t-1}+\varepsilon _{t}\ \ \ \ \ \varepsilon _{t}\sim
+iid(0,\sigma ^{2}).  \label{ar1 bis}
+\end{equation}%
+$y_{t-1}$ e $\varepsilon _{t}$ sono non correlati: $Cov(y_{t-1},\varepsilon
+_{t})=E(y_{t-1}\varepsilon _{t})=0$\vspace{0.5cm}
+
+\noindent Lo stimatore dei $m.q.o.$ applicato al modello (\ref{ar1 bis}) 
+\`{e} semplicemente%
+\begin{equation*}
+\widehat{\alpha }=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}\text{.}
+\end{equation*}%
+$\widehat{\alpha }$ non \`{e} uno stimatore lineare. Non \`{e} possibile
+calcolare il suo valore atteso e la sua varianza. Le sole propriet\`{a}
+verificabili sono le propriet\`{a} asintotiche.
+
+\begin{enumerate}
+\item Convergenza
+
+\begin{equation*}
+\widehat{\alpha }=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}=\alpha +\frac{%
+\frac{1}{n}\sum \varepsilon _{t}y_{t-1}}{\frac{1}{n}\sum y_{t-1}^{2}}
+\end{equation*}%
+Il $p\lim $ del numeratore $\frac{1}{n}\sum \varepsilon _{t}y_{t-1}$
+corrisponde alla covarianza empirica nel campione tra $\varepsilon _{t}$ e $%
+y_{t-1}$: esso converge alla covarianza della popolazione $cov(\varepsilon
+_{t},y_{t-1})$.\vspace{0.5cm}
+
+Il denominatore $\frac{1}{n}\sum y_{t-1}^{2}$ corrisponde alla varianza
+empirica del campione. Il suo limite in probabilit\`{a} \`{e} $E(y_{t}^{2})=%
+\frac{\sigma ^{2}}{1-\alpha ^{2}}$ che corrisponde anche alla varianza di $%
+y_{t}$ (perch\'{e}?).
+
+\item Distribuzione asintotica
+
+\begin{equation*}
+\sqrt{n}\left( \widehat{\alpha }-\alpha \right) =\underset{p\lim \ldots =%
+\frac{\sigma ^{2}}{1-\alpha ^{2}}}{\underbrace{\left( \frac{1}{n}\sum
+y_{t-1}^{2}\right) ^{-1}}}\underset{\overset{D}{\longrightarrow }N\left(
+0,\sigma ^{4}/(1-\alpha ^{2})\right) }{\underbrace{\frac{1}{\sqrt{n}}\sum
+\varepsilon _{t}y_{t-1}}}\overset{D}{\longrightarrow }N\left( 0,1-\alpha
+^{2}\right)
+\end{equation*}%
+La varianza asintotica \`{e} dunque%
+\begin{equation*}
+VarAs\left( \widehat{\alpha }\right) =\frac{1-\alpha ^{2}}{n}
+\end{equation*}%
+che potrebbe essere stimato con 
+\begin{equation*}
+\widehat{VarAs}\left( \widehat{\alpha }\right) =\frac{1-\widehat{\alpha }^{2}%
+}{n}
+\end{equation*}
+
+Se a torto utilizzassimo la formula per la varianza di $\widehat{\alpha }$
+data dai $m.q.o.$:
+
+\begin{eqnarray*}
+Var(\widehat{\alpha }) &=&\frac{\widehat{\sigma }^{2}}{\tsum y_{t-1}^{2}},\
+\ \widehat{\sigma }^{2}=\frac{1}{n-1}\tsum \widehat{\varepsilon }_{t}^{2}=%
+\frac{1}{n-1}\tsum \left( y_{t}-\widehat{\alpha }y_{t-1}\right) ^{2} \\
+Var(\widehat{\alpha }) &\simeq &\frac{\frac{1}{n}\tsum \left( y_{t}^{2}-2%
+\widehat{\alpha }y_{t}y_{t-1}+\widehat{\alpha }^{2}y_{t-1}^{2}\right) }{%
+\tsum y_{t-1}^{2}} \\
+&=&\frac{1}{n}\frac{\tsum y_{t}^{2}-\widehat{\alpha }\tsum y_{t}y_{t-1}}{%
+\tsum y_{t-1}^{2}}\simeq \frac{1}{n}\left( 1-\widehat{\alpha }^{2}\right)
+\end{eqnarray*}
+\end{enumerate}
+
+In pratica dunque, quando gli errori sono indipendenti, si applicano tutte
+le formule dei $m.q.o.$, anche per le varianze. Il metodo dei $m.q.$ \`{e}
+la migliore cosa che si possa fare. Sotto l'ipotesi di normalit\`{a} lo
+stimatore dei minimi quadrati \`{e} essenzialmente uguale allo stimatore $ML$
+(Massima Verosimiglianza) e quindi asintoticamente efficiente.
+
+\subsection{Quando gli errori sono autocorrelati}
+
+Studiamo il comportamento dello stimatore dei $m.q.o.$ nel caso in cui gli
+errori siano autocorrelati, ed in particolare nel caso in cui l'errore $%
+\varepsilon _{t}$ segua un processo di tipo $AR(1)$.
+
+\begin{eqnarray}
+y_{t} &=&\alpha y_{t-1}+\varepsilon _{t}  \label{ar1_errore1} \\
+\varepsilon _{t} &=&\rho \varepsilon _{t-1}+u_{t}  \label{ar1_errore2}
+\end{eqnarray}%
+dove $\mid \rho \mid <1,\ u_{t}\sim iid(0,\sigma ^{2})$.
+
+\noindent Combinando la (\ref{ar1_errore1}) e (\ref{ar1_errore2}) 
+\begin{equation*}
+\left\{ 
+\begin{array}{rclr}
+y_{t} & = & \alpha y_{t-1}+\varepsilon _{t} & (a) \\ 
+y_{t-1} & = & \alpha y_{t-2}+\varepsilon _{t-1} & (b)%
+\end{array}%
+\right.
+\end{equation*}%
+$(a)-\rho (b)$:%
+\begin{eqnarray}
+y_{t}-\rho y_{t-1} &=&\alpha y_{t-1}-\alpha \rho y_{t-2}+\varepsilon
+_{t}-\rho \varepsilon _{t-1}  \notag \\
+y_{t} &=&\underset{\beta _{1}}{\underbrace{(\alpha +\rho )}}y_{t-1}\underset{%
+\beta _{2}}{+\underbrace{-\alpha \rho }}y_{t-2}+u_{t}
+\label{ar2_con_errore_indipendenti}
+\end{eqnarray}%
+Questo modello (\ref{ar2_con_errore_indipendenti}) \`{e} un modello con
+variabile endogena ritardata ed errori indipendenti. I $m.q.o.$
+sull'equazione (\ref{ar2_con_errore_indipendenti}) produrrebbero delle stime
+convegenti di $\beta _{1}$ e $\beta _{2}$. Sfortunatamente conoscendo i
+coefficienti $\beta _{1}$ e $\beta _{2}$ non si ottiene una soluzione unica
+di $\alpha $ e $\rho $: $\alpha $ e $\rho $ non sono identificabili! Ad
+esempio%
+\begin{equation*}
+\left. 
+\begin{array}{c}
+\beta _{1}=\alpha +\rho =\frac{3}{4} \\ 
+-\beta _{2}=\alpha \rho =\frac{1}{8}%
+\end{array}%
+\right\} \Rightarrow \text{due soluzioni }%
+\begin{array}{c}
+\alpha =0.5,\text{ }\rho =0.25 \\ 
+\alpha =0.25,\text{ }\rho =0.5%
+\end{array}%
+\end{equation*}%
+Se lo scopo \`{e} la previsione, il modello (\ref%
+{ar2_con_errore_indipendenti}) \`{e} la miglior cosa che possiate fare. Per
+la stima dei parametri $\alpha $ e $\rho $ il modello (\ref%
+{ar2_con_errore_indipendenti}) non \`{e} di alcun aiuto.
+
+\subsubsection{La stima di $\protect\alpha $ con i $m.q.o.$ nella (\protect
+\ref{ar1_errore1})}
+
+Partiamo dallo stimatore dei $m.q.o.$ di $\alpha $ 
+\begin{equation*}
+\widehat{\alpha }=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}
+\end{equation*}%
+e sostituiamo $y_{t}$ con l'espressione data dalla (\ref%
+{ar2_con_errore_indipendenti}), ottenendo in tal modo 
+\begin{eqnarray*}
+\widehat{\alpha } &=&\frac{\sum \left( (\alpha +\rho )y_{t-1}-\alpha \rho
+y_{t-2}+u_{t}\right) y_{t-1}}{\sum y_{t-1}^{2}} \\
+&=&\alpha +\rho -\alpha \rho \underset{\approx \widehat{\alpha }}{%
+\underbrace{\frac{\sum y_{t-2}y_{t-1}}{\sum y_{t-1}^{2}}}}+\frac{\frac{1}{n}%
+\sum u_{t}y_{t-1}}{\frac{1}{n}\sum y_{t-1}^{2}}
+\end{eqnarray*}%
+Poich\'{e} $E(y_{t})=0,$ $V(y_{t})=E(y_{t}^{2})$. Inoltre, sappiamo che%
+\begin{eqnarray*}
+p\lim \frac{1}{n}\sum u_{t}y_{t-1} &=&0 \\
+p\lim \frac{1}{n}\sum y_{t-1}^{2} &=&V(y_{t})
+\end{eqnarray*}%
+Quindi 
+\begin{eqnarray*}
+p\lim \ \widehat{\alpha } &=&\alpha +\rho -\alpha \rho \ p\lim \widehat{%
+\alpha }+\frac{p\lim \frac{1}{n}\sum u_{t}y_{t-1}}{p\lim \frac{1}{n}\sum
+y_{t-1}^{2}} \\
+&=&\alpha +\rho -\alpha \rho \ p\lim \widehat{\alpha }
+\end{eqnarray*}%
+da cui concludiamo che%
+\begin{equation*}
+p\lim \ \widehat{\alpha }=\frac{\alpha +\rho }{1+\alpha \rho }=\alpha \ \ +%
+\underset{\text{distorsione asintotica}}{\underbrace{\frac{\rho (1-\alpha
+^{2})}{1+\alpha \rho }}}\neq \alpha ,\text{ \ \ quando }\rho \neq 0.
+\end{equation*}%
+Osserviamo quindi che
+
+\begin{itemize}
+\item nel caso in cui $\rho \neq 0$, lo stimatore dei minimi quadrati sul
+modello (\ref{ar2_con_errore_indipendenti}) \`{e} distorto: la distorsione
+asintotica non scompare all'aumentare dell'informazione all'infinito.
+
+\item $\widehat{\alpha }$ \`{e} convergente solo quando $\rho =0$, cio\`{e}
+quando gli errori $\varepsilon _{t}$ sono indipendenti.
+
+\item Dato che $\rho $ e $\alpha $ sono positivi e compresi tra 0 e 1, la
+distorsione \`{e} positiva.
+\end{itemize}
+
+\noindent \emph{Conclusione}: Nel caso di variabili endogene ritardate ed
+errori autocorrelati i $m.q.o.$ non sono convergenti!
+
+\subsubsection{\label{come stimare alpha}Come stimare $\protect\alpha $}
+
+Notiamo che se il termine $\rho $ fosse conosciuto la (\ref{ar1_errore1})
+potrebbe scriversi 
+\begin{eqnarray}
+y_{t}-\rho y_{t-1} &=&\alpha (y_{t-1}-\rho y_{t-2})+u_{t}
+\label{ar1 modello trasformato} \\
+\widetilde{y}_{t} &=&\alpha \widetilde{y}_{t-1}+u_{t}
+\label{ar1 modello trasformato1}
+\end{eqnarray}%
+Il nuovo modello cos\`{\i} trasformato sarebbe un modello a variabile
+endogena ritardata con errori indipendenti e, come appena dimostrato nel
+paragrafo (\ref{ver ed errori indipendenti}), $\alpha $ sarebbe stimabile
+tramite i $m.q.o.$. Come possiamo stimare $\rho $? Ci troviamo in una
+situazione simile a quella incontrata nel paragrafo (\ref{autocorr i metodi
+di stima}) quando abbiamo utilizzato i $m.q.g.$ a due tappe stimando
+dapprima il parametro $\rho $ tramite la regressione ausiliaria (\ref%
+{regressione_ausiliaria}). Si potrebbe quindi pensare di fare la stessa cosa
+e cio\`{e}:
+
+\begin{enumerate}
+\item[{[1]}] Stimare con i $m.q.o.$ l'equazione (\ref{ar1_errore1})%
+\begin{equation*}
+y_{t}=\alpha y_{t-1}+\varepsilon _{t}.
+\end{equation*}
+
+\item[{[2]}] Prendere i residui stimati $\widehat{\varepsilon }$
+dell'equazione (\ref{ar1_errore1}) e stimare $\rho $ applicando i $m.q.o.$
+all'equazione 
+\begin{equation*}
+\widehat{\varepsilon }_{t}=\rho \widehat{\varepsilon }_{t-1}+u_{t}.
+\end{equation*}
+
+\item[{[3]}] Stimare $\alpha $ applicando i $m.q.o.$ al modello trasformato (%
+\ref{ar1 modello trasformato1}).
+\end{enumerate}
+
+\noindent Tuttavia abbiamo dimostrato che i $m.q.o.$ sul modello (\ref%
+{ar1_errore1}) (passo [1]) non sono convergenti. Questo implica una
+distorsione nella stima degli $\widehat{\varepsilon }_{t}$ e a sua volta
+anche nella stima di $\rho $ nel passo [2]:%
+\begin{equation*}
+\widehat{\rho }=\frac{\sum \widehat{\varepsilon }_{t}\widehat{\varepsilon }%
+_{t-1}}{\sum \widehat{\varepsilon }_{t}^{2}}.
+\end{equation*}%
+Come vedremo in seguito la soluzione sar\`{a} quella di modificare il passo
+[1], rimpiazzando i $m.q.o.$ con uno stimatore convergente quale ad esempio
+lo stimatore delle variabili strumentali.
+
+\subsection{Il test di autocorrelazione}
+
+Consideriamo il modello generale%
+\begin{eqnarray}
+y_{t} &=&\underset{K\text{ variabili esogene}}{x_{t}^{\prime }\beta }+%
+\underset{p\text{ ritardi nella variabile endogena}}{\alpha
+_{1}y_{t-1}+\ldots +\alpha _{p}y_{t-p}}+\varepsilon _{t}
+\label{k variabili esogene e p} \\
+\varepsilon _{t} &=&\rho \varepsilon _{t-1}+u_{t}\ \ \ u_{t}\sim
+iid(0,\sigma ^{2})  \notag
+\end{eqnarray}%
+\`{E} dunque un modello a variabile endogena ritardata. Desideriamo testare
+l'ipotesi nulla di assenza di autocorrelazione negli errori $\varepsilon
+_{t} $. Formalmente $H_{0}:\rho =0$.
+
+\begin{remark}
+In un modello a variabile endogena ritardata il test $DW$ non \`{e}
+appropriato poich\'{e} necessariamente distorto in favore dell'indipendenza.
+Non va assolutamente applicato.
+\end{remark}
+
+Al suo posto si utilizza un test proposto da Durbin e chiamato test "$h$".
+La procedura del test \`{e} la seguente.
+
+\begin{itemize}
+\item Si stima il modello sotto l'ipotesi nulla $\rho =0$, vale a dire con i 
+$m.q.o.,$ ottenendo $\widehat{\beta },\widehat{\alpha }_{1},...,\widehat{%
+\alpha }_{p}$, $\widehat{V}(\widehat{\alpha }_{1})$ e costruendo 
+\begin{equation*}
+\widehat{\varepsilon }_{t}=y-x_{t}^{\prime }\widehat{\beta }-\widehat{\alpha 
+}_{1}y_{t-1}-\ldots -\widehat{\alpha }_{p}y_{t-p}.
+\end{equation*}
+
+\item Si calcola la quantit\`{a}%
+\begin{equation*}
+h=\widehat{\rho }\sqrt{\frac{n}{1-n\widehat{V}(\widehat{\alpha }_{1})}}
+\end{equation*}%
+dove $\widehat{\rho }$ \`{e} uno stimatore convergente di $\rho $ sotto $%
+H_{0}$ quale ad esempio
+
+\begin{itemize}
+\item 
+\begin{equation*}
+\widehat{\rho }=\frac{\sum \widehat{\varepsilon }_{t}\widehat{\varepsilon }%
+_{t-1}}{\sum \widehat{\varepsilon }_{t-1}^{2}}
+\end{equation*}%
+ottenuto dalla regressione $\widehat{\varepsilon }_{t}=\rho \widehat{%
+\varepsilon }_{t-1}+errore,$
+
+\item oppure $\widehat{\rho }=1-\frac{1}{2}d$, dove $d$ \`{e} la quantit\`{a}
+del test $DW$.
+\end{itemize}
+\end{itemize}
+
+Si dimostra che asintoticamente $h\sim N(0,1)$ e quindi, al $5\%$ di
+significativit\`{a}:%
+\begin{eqnarray*}
+|h| &>&1.96\Rightarrow \text{ rifiuto }H_{0} \\
+|h| &<&1.96\Rightarrow \text{ accetto }H_{0}
+\end{eqnarray*}
+
+\subsection{Stima convergente ed asintoticamente efficiente}
+
+Riprendendo il modello (\ref{k variabili esogene e p}) consideriamo un
+modello con un solo ritardo e con $K$ variabili esplicative esogene%
+\begin{eqnarray}
+y_{t} &=&x_{t}^{\prime }\beta +\alpha y_{t-1}+\varepsilon _{t}
+\label{modello stima convergente1} \\
+\varepsilon _{t} &=&\rho \varepsilon _{t-1}+u_{t}\ \ \ u_{t}\sim
+iid(0,\sigma ^{2})  \label{modello stima convergente2}
+\end{eqnarray}%
+Discutiamo una stima convergente dei parametri dell'equazione (\ref{modello
+stima convergente1}) ottenuta con il metodo delle variabili strumentali.
+
+\begin{itemize}
+\item Poich\'{e} il numero di variabili esplicative \`{e} $K+1$ dobbiamo
+trovare almeno $K+1$ strumenti.
+
+\item Le $K$ variabili $x_{t}^{\prime }$ sono esogene e conseguentemente
+indipendenti dagli errori e quindi i loro stessi strumenti.
+
+\item Il compito si riconduce a trovare strumenti per $y_{t-1}$!
+\end{itemize}
+
+\noindent Ammettiamo che il modello contenga la costante ed almeno una
+variabile esogena. Quali strumenti per $y_{t-1}$ si possono prendere i
+valori ritardati in $t-1$ delle variabili esogene (escludendo la costante!),
+che indichiamo con $\widetilde{x}_{t}^{\prime }$. Abbiamo in totale $K+(K-1)$
+strumenti raccolti nella variabile $z_{t}^{\prime }:=[x_{t}^{\prime }\ 
+\widetilde{x}_{t}^{\prime }]$. Con questi strumenti otteniamo una stima
+convergente di $\beta ,\alpha $ ed inoltre anche di $\rho $ tramite la
+regressione ausiliaria%
+\begin{equation}
+\widehat{\rho }=\frac{\sum \widehat{\varepsilon }_{t}\widehat{\varepsilon }%
+_{t-1}}{\sum \widehat{\varepsilon }_{t-1}^{2}}  \label{stima di rho}
+\end{equation}%
+dell'equazione%
+\begin{equation*}
+\widehat{\varepsilon }_{t}=\rho \widehat{\varepsilon }_{t-1}+errore
+\end{equation*}%
+dove $\widehat{\varepsilon }_{t}=y_{t}-x_{t}^{\prime }\widehat{\beta }_{vs}-%
+\widehat{\alpha }_{vs}y_{t-1}$.
+
+\subsubsection{Stima efficiente}
+
+La tappa precedente non fornisce degli stimatori efficienti in quanto
+tralascia la struttura di varianza/covarianza degli errori.
+
+\noindent \emph{Idea}: avendo una stima convergente di $\rho $ si pu\`{o}
+pensare ad una stima coi $m.q.g.$, vale a dire ad una stima coi $m.q.o.$ del
+modello trasformato (confronta \ref{come stimare alpha})%
+\begin{equation}
+y_{t}-\rho y_{t-1}=(x_{t}^{\prime }-\rho x_{t-1}^{\prime })\beta +\alpha
+(y_{t-1}-\rho y_{t-2})+u_{t}
+\label{modello trasformato per efficienza asintotica}
+\end{equation}%
+rimpiazzando $\rho $ con $\widehat{\rho }$ dalla (\ref{stima di rho}).
+
+\noindent Nel suo insieme questa procedura \`{e} simile ai $m.q.g.$
+realizzabili (o a due tappe) descritta in precedenza ma con un'importante
+differenza: anzich\'{e} utilizzare i $m.q.o.$ nel primo passo abbiamo
+utilizzato il metodo delle variabili strumentali.
+
+\begin{remark}
+Quando nel modello ci sono delle variabili endogene ritardate i $m.q.g.$
+realizzabili \emph{non assicurano} l'efficienza asintotica. L'efficienza
+asintotica \`{e} ottenuta stimando sempre con i $m.q.o.$ il modello
+trasformato (\ref{modello trasformato per efficienza asintotica}) ma con
+l'aggiunta di una variabile esplicativa: $\widehat{\varepsilon }_{t-1}$. In
+altre parole il modello trasformato da utilizzare \`{e}%
+\begin{equation}
+y_{t}-\rho y_{t-1}=(x_{t}^{\prime }-\rho x_{t-1}^{\prime })\beta +\alpha
+(y_{t-1}-\rho y_{t-2})+d\widehat{\varepsilon }_{t-1}+u_{t}.
+\label{modello trasformato per efficienza asintotica1}
+\end{equation}%
+Il passaggio da (\ref{modello trasformato per efficienza asintotica}) a (\ref%
+{modello trasformato per efficienza asintotica1}) si interpreta nel modo
+seguente. Definiamo 
+\begin{equation*}
+\rho =\widehat{\rho }+\underset{d}{\underbrace{(\rho -\widehat{\rho })}}=%
+\widehat{\rho }+d.
+\end{equation*}%
+e sostituiamo nella (\ref{modello trasformato per efficienza asintotica})%
+\begin{eqnarray*}
+y_{t}-\left( \widehat{\rho }+d\right) y_{t-1} &=&\left[ x_{t}^{\prime
+}-\left( \widehat{\rho }+d\right) x_{t-1}^{\prime }\right] \beta +\left[
+y_{t-1}-\left( \widehat{\rho }+d\right) y_{t-2}\right] \alpha +u_{t} \\
+y_{t}-\widehat{\rho }y_{t-1} &=&(x_{t}^{\prime }-\widehat{\rho }%
+x_{t-1}^{\prime })\beta +\alpha (y_{t-1}-\widehat{\rho }y_{t-2})+d\underset{%
+\varepsilon _{t-1}}{\underbrace{\left( y_{t-1}-x_{t-1}^{\prime }\beta
+-\alpha y_{t-2}\right) }}+u_{t}.
+\end{eqnarray*}%
+dove $\varepsilon _{t-1}$ \`{e} sostituito da $\widehat{\varepsilon }%
+_{t-1}=y_{t-1}-x_{t-1}^{\prime }\widehat{\beta }_{vs}-\widehat{\alpha }%
+_{vs}y_{t-2}$.
+\end{remark}
+
+\noindent La stima con i $m.q.o.$ di questo modello garantisce una stima
+efficiente di $\beta $, $\alpha $ e $\rho :\widehat{\rho }_{effic.}=\widehat{%
+\rho }+\widehat{d}$ e di tutte le varianze covarianze asintotiche\footnote{%
+La varianza asintotica di $\widehat{\rho }_{effic.}$ \`{e} data solo dalla
+varianza di $\widehat{d}$. $\widehat{\rho }$ \`{e} da trascurare nel calcolo
+della varianza di $\widehat{\rho }_{effic.}$.}.
+
+\chapter{\label{Capitolo ritardi distribuiti}Modelli con ritardi distribuiti}
+
+\section{Specificazione e propriet\`{a}. Moltiplicatori d'impatto,
+moltiplicatori dinamici, ritardo medio}
+
+\subsection{Specificazione}
+
+\subsubsection{Idea di fondo}
+
+In un modello statico l'influenza esercitata da una variabile \`{e}
+istantanea e immediata. Si esaurisce completamente nel momento in cui
+appare: $x_{t}\longrightarrow y_{t}$. In economia questa maniera
+d'interpretare una relazione non \`{e} molto attrattiva. Molto spesso
+infatti l'influenza di una variabile sull'altra non si esaurisce in un solo
+periodo, ma si realizza progressivamente nel tempo. In un modello dinamico%
+\begin{equation*}
+\text{Grafico}
+\end{equation*}
+
+\vspace{5cm}\noindent Ci possono essere svariati motivi che giustificano una
+simile dinamica, fra cui possiamo citare
+
+\begin{itemize}
+\item Abitudini: i comportamenti abitudinari sono un altro motivo per cui 
+\`{e} necessario introdurre modelli dinamici in economia. I consumatori
+hanno certi standard e si adeguano progressivamente.
+
+\item Costi inerenti ad ogni cambiamento.
+
+\item Ritardi nell'esecuzione di svariati compiti.
+
+\item Rigidit\`{a} istituzionali.
+
+\item Presenza di scorte.
+
+\item Incertezza: spesso prima di reagire si attende per vedere se l'evento
+che ci sorprende \`{e} temporaneo o permanente.
+
+\item Tempo necessario per pianificare e realizzare un certo investimento:
+ogni decisione in economia richiede un certo tempo di reazione e di
+realizzazione. La reazione non \`{e} quasi mai immediata.
+\end{itemize}
+
+\subsubsection{Formulazione generale}
+
+\begin{equation*}
+y_{t}=a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots +\varepsilon _{t}
+\end{equation*}%
+Le due ipotesi della formulazione generale sono:
+
+\begin{enumerate}
+\item i $b_{i}$ sono tutti dello stesso segno
+
+\item $\sum_{i=1}^{\infty }b_{i}=b$ finito. \`{E} questa una \emph{%
+condizione di stabilit\`{a}}: c'\`{e} un equilibrio di lungo termine.
+\end{enumerate}
+
+\paragraph{Idea}
+
+\begin{itemize}
+\item Partire da una situazione iniziale di equilibrio (variabili costanti)
+
+\item darsi nel periodo successivo un incremento unitario di $x$ e studiarne
+gli effetti su $y$ (presenti e futuri).
+\end{itemize}
+
+\noindent All'inizio, in $t=0$, ci troviamo in una situazione di equilibrio.
+Tutti gli incrementi di $y$ e di $x$ sono nulli per tutti i periodi
+anteriori a $t=0$ incluso:%
+\begin{equation*}
+\Delta y_{t}=\Delta x_{t}=0\text{ \ \ }t=0,-1,...
+\end{equation*}%
+Nel periodo $t=1$ consideriamo un aumento unitario di $x$, vale a dire%
+\begin{equation*}
+\Delta x_{1}=1.
+\end{equation*}%
+In termine di incrementi, l'equazione del modello si scrive%
+\begin{equation*}
+\Delta y_{t}=b_{0}\Delta x_{t}+b_{1}\Delta x_{t-1}+b_{2}\Delta x_{t-2}+\ldots
+\end{equation*}%
+da cui segue che%
+\begin{eqnarray*}
+\Delta y_{0} &=&0 \\
+\Delta y_{1} &=&b_{0}\underset{=1}{\underbrace{\Delta x_{1}}}+b_{1}\underset{%
+=0}{\underbrace{\Delta x_{0}}}+b_{2}\underset{=0}{\underbrace{\Delta x_{-1}}}%
++\ldots =b_{0} \\
+\Delta y_{2} &=&b_{0}\underset{=0}{\underbrace{\Delta x_{2}}}+b_{1}\underset{%
+=1}{\underbrace{\Delta x_{1}}}+b_{2}\underset{=0}{\underbrace{\Delta x_{0}}}%
++...=b_{1} \\
+\Delta y_{3} &=&b_{0}\underset{=0}{\underbrace{\Delta x_{3}}}+b_{1}\underset{%
+=0}{\underbrace{\Delta x_{2}}}+b_{2}\underset{=1}{\underbrace{\Delta x_{1}}}%
++...=b_{2}
+\end{eqnarray*}%
+$b_{0}$ \`{e} l'effetto immediato.
+
+\noindent $b_{1}$ \`{e} l'effetto che si manifesta nel primo periodo
+successivo.
+
+\noindent $b_{2}$ \`{e} l'effetto che si manifesta nel secondo periodo
+successivo.\bigskip
+
+\noindent Dopo $s$ periodi, l'effetto cumulato \`{e} $\Delta y_{1}+\Delta
+y_{2}+\Delta y_{3}+...\Delta y_{s}=\sum_{i=0}^{s-1}b_{i}$ e al limite,
+l'effetto totale di lungo termine \`{e}%
+\begin{equation*}
+\Delta _{y_{tot}}=\sum_{i=0}^{\infty }b_{i}=b
+\end{equation*}%
+$b$ \`{e} quindi l'effetto di lungo termine o \emph{moltiplicatore dinamico}.
+
+\subsubsection{La relazione d'equilibrio di lungo termine}
+
+Per esprimere la relazione d'equilibrio di lungo termine, basta utilizzare
+nella relazione i valori d'equilibrio delle variabili:%
+\begin{eqnarray*}
+y_{t} &=&y^{\ast }\ \ \ \forall t\text{ in equilibrio di lungo termine} \\
+x_{t} &=&x^{\ast }\ \ \ \forall t\text{ in equilibrio di lungo termine}
+\end{eqnarray*}
+
+da cui ricaviamo%
+\begin{equation*}
+y^{\ast }=a+b_{0}x^{\ast }+b_{1}x^{\ast }+b_{2}x^{\ast }+\ldots =a+\underset{%
+b}{\underbrace{(b_{0}+b_{1}+...)}}x^{\ast }=a+bx^{\ast }
+\end{equation*}%
+e quindi vale pure%
+\begin{equation*}
+\frac{dy^{\ast }}{dx^{\ast }}=b.
+\end{equation*}%
+Definiamo per ogni $i$ la proporzione 
+\begin{equation*}
+p_{i}:=\frac{b_{i}}{b}
+\end{equation*}%
+Risulta che:
+
+\begin{enumerate}
+\item $p_{i}\geq 0$
+
+\item $\sum_{i=1}^{\infty }p_{i}=1$ \ \ I pesi $p_{i}$ sono le probabilit%
+\`{a} di una distribuzione discreta
+\end{enumerate}
+
+Questo ci permette di definire il profilo dei ritardi, cio\'{e} il grafico
+dei coefficienti "standardizzati".
+
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\noindent \`{E} possibile definire il ritardo medio%
+\begin{equation*}
+\overline{R}=\sum_{i=0}^{\infty }ip_{i}=\sum_{i=0}^{\infty }i\frac{b_{i}}{b}=%
+\frac{\sum_{i=0}^{\infty }ib_{i}}{\sum_{i=0}^{\infty }b_{i}}
+\end{equation*}
+
+\subsubsection{Problemi di stima}
+
+La formulazione generale del modello non \`{e} stimabile in quanto comporta
+un'infinit\`{a} di parametri $b_{i}$. \`{E} quindi necessario \emph{%
+approssimare} la dinamica fondamentale con un modello che faccia intervenire
+un numero fisso e piccolo di parametri da stimare. Due sono le
+approssimazioni proposte nella letteratura.
+
+\begin{enumerate}
+\item Limitare il numero di ritardi, ammettendo che al di l\`{a} di un certo
+ritardo i coefficienti siano nulli. Si parla in questo caso di \emph{%
+distribuzione finita dei ritardi}.
+
+\item Ammettere un'infinit\`{a} di ritardi i cui coefficienti sono generati
+da un meccanismo che dipende da un piccolo numero fisso di parametri
+(distribuzione infinita).
+\end{enumerate}
+
+\section{Distribuzione dei ritardi finita}
+
+\subsection{Il caso generale}
+
+Come detto ipotizziamo che a partire da un certo ritardo tutti i
+coefficienti siano uguali a zero. Formalmente ci\`{o} equivale a dire che%
+\begin{equation*}
+b_{i}=0\ \ \ \ \ \ \ \ i>r
+\end{equation*}%
+dove $r$ \`{e} un intero positivo che denota il ritardo massimo diverso da 0%
+\begin{equation*}
+y_{t}=a+b_{0}x_{t}+\underset{r\text{ - ritardi}}{\underbrace{%
+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots +b_{r}x_{t-r}}}+\varepsilon _{t}
+\end{equation*}%
+Ammettiamo che il campione comporti $n$ osservazioni (ad esempio
+osservazioni annuali dal 1961 al 2005 per un totale di $2005-1961+1=n=45$
+osservazioni. Il numero effettivo di osservazioni, chiamiamolo $n^{\ast }$,
+disponibile per stimare il modello con $r$ ritardi \`{e} $n-r$! Il numero di
+parametri da stimare \`{e}:%
+\begin{equation*}
+k=1+1+r=r+2
+\end{equation*}%
+ed i gradi di libert\`{a} saranno quindi pari a $g.l.=n-2r-2$. Il modello 
+\`{e} una regressione di tipo abituale che verr\`{a} stimata con i $m.q.o.$
+(oppure con i $m.q.g.$ se necessario). L'implementazione di questo modello
+comporta alcuni problemi e specificatamente
+
+\begin{itemize}
+\item La scelta arbitraria di $r$.
+
+\item La perdita di gradi di libert\`{a} (due per ogni ritardo
+supplementare) $\rightarrow $ ci\`{o} comporta una stima meno precisa.
+
+\item Il rischio di collinearit\`{a} che aumenta all'aumentare del numero di
+ritardi: $rg(X)$ non \`{e} pieno $\Rightarrow $ poca precisione nella stima
+individuale dei parametri.
+\end{itemize}
+
+Per risolvere questi problemi:
+
+\begin{itemize}
+\item Per il primo: darsi un criterio di selezione del numero di ritardi.
+
+\item Per gli altri due Almon propone un metodo che prende il suo nome (vedi
+punto \ref{ritardi almon}).
+\end{itemize}
+
+Un criterio utilizzato frequentemente per la selezione di $r$ \`{e} il
+criterio di informazione di Akaike%
+\begin{equation*}
+AIC:=n^{\ast }\ln \widehat{\sigma }^{2}+2K
+\end{equation*}%
+Si stima il modello per diversi valori di $r$ e dunque di $K$. Per esempio $%
+r=1,2,3,\ldots $ e si sceglie quello con l'$AIC$ minimo.
+
+\subsection{\label{ritardi almon}Distribuzione di Almon (una donna!)}
+
+Come in precedenza si ammette un numero $r$ fisso di ritardi. Un numero
+appropriato dipender\`{a} dai dati (annuali, trimestrali, \ldots ) dal
+numero di osservazioni e da quanto suggerito dalla teoria economica.
+Supponiamo che l'effetto sia positivo $(b>0)$. In certe applicazioni
+economiche si pu\`{o} ammettere che i coefficienti $b_{i}$ decrescano
+linearmente, seguendo il profilo
+
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\begin{eqnarray*}
+b_{0} &=&h_{0} \\
+b_{1} &=&h_{0}+h_{1} \\
+b_{2} &=&h_{0}+2h_{1} \\
+&&\vdots \\
+b_{r} &=&h_{0}+rh_{1}
+\end{eqnarray*}%
+Conoscendo i due valori di $h_{0}$ e $h_{1}$ possiamo generare tutti i
+coefficienti $b_{i}$!\ Introduciamo quindi questi $b_{i}$ nel modello di
+partenza:%
+\begin{eqnarray*}
+y_{t} &=&a+b_{0}x_{t}+b_{1}x_{t-1}+\ldots +b_{r}x_{t-r}+\varepsilon _{t} \\
+&=&a+h_{0}x_{t}+\left( h_{0}+h_{1}\right) x_{t-1}+\ldots +\left(
+h_{0}+rh_{1}\right) x_{t-r}+\varepsilon _{t} \\
+&=&a+h_{0}\underset{Z_{1t}}{\underbrace{\left( x_{t}+x_{t-1}+\ldots
++x_{t-r}\right) }}+h_{1}\underset{Z_{2t}}{\underbrace{\left(
+x_{t-1}+2x_{t-2}+\ldots +rx_{t-r}\right) }}+\varepsilon _{t}
+\end{eqnarray*}%
+La regressione da stimare \`{e} dunque%
+\begin{equation*}
+y_{t}=a+h_{0}Z_{1t}+h_{1}Z_{2t}+\varepsilon _{t}
+\end{equation*}%
+Se imponessimo ad Ilaria la restrizione (sicuramente non riuscirebbe a
+calcolarla ...)%
+\begin{eqnarray*}
+b_{r+1} &=&0 \\
+&\Updownarrow & \\
+h_{0}+(r+1)h_{1} &=&0 \\
+h_{1} &=&\frac{-h_{0}}{r+1}
+\end{eqnarray*}%
+otterremmo%
+\begin{eqnarray*}
+y_{t} &=&a+h_{0}Z_{1t}-\frac{h_{0}}{r+1}Z_{2t}+\varepsilon _{t} \\
+&=&a+h_{0}\underset{w_{t}}{\underbrace{\left( Z_{1t}-\frac{1}{r+1}%
+Z_{2t}\right) }}+\varepsilon _{t} \\
+&=&a+h_{0}w_{t}+\varepsilon _{t}
+\end{eqnarray*}
+
+\noindent Nel caso specifico abbiamo generato i coefficienti $b_{i}$ con un
+polinomio di primo grado:\ $b_{i}=h_{0}+h_{1}i$. Questo profilo \`{e} troppo
+restrittivo. Un profilo che all'inizio aumenta e poi diminuisce%
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\noindent pu\`{o} essere approssimato con un polinomio di secondo grado:%
+\begin{equation*}
+b_{i}=h_{0}+h_{1}i+h_{2}i^{2}
+\end{equation*}%
+mentre un profilo 
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\noindent con un polinomio di terzo grado 
+\begin{equation*}
+b_{i}=h_{0}+h_{1}i+h_{2}i^{2}+h_{3}i^{3}
+\end{equation*}
+
+\noindent In genere Almon propone di utilizzare un polinomio di grado $s<r$:%
+\begin{equation*}
+b_{i}=h_{0}+h_{1}i+\ldots +h_{s}i^{s}
+\end{equation*}
+
+\section{Distribuzione dei ritardi infinita}
+
+\subsection{Il modello}
+
+\begin{equation*}
+y_{t}=a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots +\varepsilon _{t}
+\end{equation*}%
+del quale analizziamo l'aspetto dinamico e non di stima (tralasciamo
+l'errore $\varepsilon _{t}$).
+
+\begin{esempio}
+\label{progressione geo}La progressione geometrica decrescente
+
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+\end{esempio}
+
+\begin{eqnarray*}
+b_{0} &=&b_{0} \\
+b_{1} &=&b_{0}c\ \ \ \ \ \ 0<c<1 \\
+b_{2} &=&b_{0}c^{2} \\
+&&\vdots \\
+b_{s} &=&b_{0}c^{s}
+\end{eqnarray*}
+
+\begin{itemize}
+\item Effetto immediato: $b_{0}$.
+
+\item Effetto di lungo periodo: $b=\sum b_{i}=b_{0}\left( 1+c+c^{2}+\ldots
+\right) =b_{0}\frac{1}{1-c}$.
+
+\item Ritardo medio: $\overline{R}=\frac{c}{1-c}$
+\end{itemize}
+
+Introduciamo $b_{i}=b_{0}c^{i}$ nel modello: 
+\begin{equation*}
+y_{t}=a+b_{0}x_{t}+b_{0}cx_{t-1}+b_{0}c^{2}x_{t-2}+\ldots
+\end{equation*}%
+dipende da soli 3 parametri: $a$, $b_{0}$, $c$.%
+\begin{eqnarray*}
+y_{t-1} &=&a+b_{0}x_{t-1}+b_{0}cx_{t-2}+b_{0}c^{2}x_{t-3}+\ldots \ \ \ \ \ \
+\ \ \mid \cdot c \\
+y_{t}-cy_{t-1} &=&a(1-c)+b_{0}c
+\end{eqnarray*}%
+da cui ricaviamo la trasformazione denominata \emph{trasformazione di Koyck}%
+\begin{equation*}
+y_{t}=a^{\ast }+b_{0}x_{t}+cy_{t-1}
+\end{equation*}%
+In quest'esempio la distribuzione infinita di ritardi in $x$ ha
+un'espressione equivalente in termini di due distribuzioni finite di ritardi:
+
+\begin{itemize}
+\item una in $y_{t}$ di grado 1 e
+
+\item l'altra in $x_{t}$ di grado 0.
+\end{itemize}
+
+\begin{esempio}
+Estensione dell'Esempio \ref{progressione geo}
+\end{esempio}
+
+\noindent \`{E} immaginabile che la progressione geometrica decrescente si
+manifesti non gi\`{a} all'inizio ma soltanto a partire da un certo ritardo. 
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\begin{eqnarray*}
+b_{0} &=&\text{libero} \\
+b_{1} &=&\text{libero} \\
+b_{2} &=&\text{libero} \\
+b_{3} &=&b_{2}c \\
+b_{4} &=&b_{2}c^{2} \\
+&&\vdots
+\end{eqnarray*}%
+In una situazione del genere, applicando la tecnica utilizzata
+precedentemente, si ottiene%
+\begin{eqnarray*}
+y_{t}
+&=&a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+b_{2}cx_{t-3}+b_{2}c^{2}x_{t-4}+%
+\ldots \\
+y_{t-1} &=&a+\ \ \ \ \ \ \
+b_{0}x_{t-1}+b_{1}x_{t-2}+b_{2}x_{t-3}+b_{2}cx_{t-4}+\ldots \ \ \ \ \mid
+\cdot c \\
+y_{t}-cy_{t-1} &=&a^{\ast
+}+b_{0}x_{t}+(b_{1}-cb_{0})x_{t-1}+(b_{2}-cb_{1})x_{t-2}+0+\ldots
+\end{eqnarray*}
+
+\noindent Ci\`{o} che \`{e} importante notare in quest'ultimo esempio \`{e}
+che la distribuzione infinita in $x$ ha un'espressione finita equivalente in
+termini di due distribuzioni finite, una in $y$ di grado 1 ed una in $x$ di
+grado 2.
+
+\subsection{Distribuzione razionale dei ritardi:\ idee introduttive}
+
+\noindent Nei due esempi precedenti la distribuzione dei ritardi infinita in 
+$x$ ha un'espressione equivalente in termini di due distribuzioni finite,
+una in $x$, l'altra in $y$. L'idea fondamentale di Jorgenson \`{e} che
+qualsiasi distribuzione infinita in $x$ pu\`{o} essere approssimata a
+piacere tramite due distribuzioni finite di ritardi, una in $x$, l'altra in $%
+y$.
+
+\subsection{L'operatore ritardo}
+
+\begin{definizione}
+L'operatore di ritardo, notato $L$, fa corrispondere a $x_{t}$ il valore
+precedente:%
+\begin{equation*}
+Lx_{t}=x_{t-1}
+\end{equation*}
+\end{definizione}
+
+\`{E} un operatore lineare, poich\'{e}
+
+\begin{enumerate}
+\item $L(x_{t}+z_{t})\underset{def}{=}x_{t-1}+z_{t-1}=Lx_{t}+Lz_{t}$
+
+\item $\lambda $ scalare, $L(\lambda x_{t})=\lambda x_{t-1}=\lambda L(x_{t})$
+\end{enumerate}
+
+\noindent Definiamo ora l'elevamento a potenza:%
+\begin{equation*}
+L^{2}x_{t}=L\left( Lx_{t}\right) =L\left( x_{t-1}\right) =x_{t-2}
+\end{equation*}
+
+Con questo operatore, il modello generale si scrive:%
+\begin{eqnarray*}
+y_{t} &=&a+b_{0}x_{t}+b_{1}Lx_{t}+b_{2}L^{2}x_{t}+... \\
+&=&a+\underset{B(L)_{\infty }}{\underbrace{\left(
+b_{0}+b_{1}L+b_{2}L^{2}+...\right) }}x_{t}
+\end{eqnarray*}%
+$B(L)_{\infty }$ rappresenta il polinomio di grado infinito in $L$. Si
+verifichi quanto segue:
+
+\begin{itemize}
+\item $B(0)=b_{0}$, l'effetto immediato.
+
+\item $B(1)=b_{0}+b_{1}+b_{2}+\ldots =b$, l'effetto di lungo periodo.
+
+\item $B^{\prime }(L)=b_{1}+2b_{2}L+3b_{3}L^{2}+\ldots $
+
+\item $B^{\prime }(1)=b_{1}+2b_{2}+3b_{3}+\ldots $%
+\begin{equation*}
+\Rightarrow \overline{R}=\frac{B^{\prime }(1)}{B(1)}
+\end{equation*}
+\end{itemize}
+
+\subsection{Il modello dinamico di Jorgenson (distribuzione razionale dei
+ritardi)}
+
+Riprendiamo il modello generale 
+\begin{eqnarray}
+y_{t} &=&a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots
+\label{equazione di partenza} \\
+&=&a+b_{0}x_{t}+b_{1}Lx_{t}+b_{2}L^{2}x_{t}+\ldots  \notag \\
+&=&a+\left( b_{0}+b_{1}L+b_{2}L^{2}+\ldots \right) x_{t}  \notag \\
+&=&a+B(L)_{\infty }x_{t}  \notag
+\end{eqnarray}%
+Nei due esempi trattati il polinomio infinito $B(L)_{\infty }$ aveva
+un'espressione esatta equivalente in termini di due distribuzioni finite di
+ritardi in $x$ e $y$. Jorgenson avvalendosi di un teorema fondamentale
+dell'algebra afferma che il polinomio infinito $B(L)_{\infty }$ pu\`{o}
+essere approssimato con precisione a piacere da un rapporto di due polinomi
+finiti.%
+\begin{equation*}
+B(L)_{\infty }\simeq \frac{\beta (L)_{s}}{\alpha (L)_{r}},\ \ \ \ s\text{ e }%
+r\text{ finiti}
+\end{equation*}%
+con%
+\begin{eqnarray*}
+\beta (L)_{s} &=&\beta _{0}+\beta _{1}L+\beta _{2}L^{2}+\ldots +\beta
+_{s}L^{s} \\
+\alpha (L)_{r} &=&1+\alpha _{1}L+\alpha _{2}L^{2}+\ldots +\alpha _{r}L^{r}
+\end{eqnarray*}%
+($\alpha _{0}=1$ \`{e} la cosiddetta normalizzazione).
+
+\noindent Introduciamo l'approssimazione nel modello:%
+\begin{eqnarray}
+y_{t} &=&a+\frac{\beta (L)_{s}}{\alpha (L)_{r}}x_{t}  \notag \\
+\alpha (L)_{r}y_{t} &=&\alpha (L)_{r}a+\beta (L)_{s}x_{t}
+\label{formulazone partenza} \\
+\left( 1+\alpha _{1}L+\ldots +\alpha _{r}L^{r}\right) y_{t} &=&a^{\ast
+}+\left( \beta _{0}+\beta _{1}L+\ldots +\beta _{s}L^{s}\right) x_{t}
+\label{forma canonica}
+\end{eqnarray}%
+L'equazione (\ref{forma canonica}) \`{e} anche chiamata \emph{la forma
+canonica} del modello. $a^{\ast }$ rappresenta l'espressione $\alpha
+(L)_{r}a $ ed \`{e} uguale ad $\alpha (1)_{r}a$ in quanto 
+\begin{eqnarray*}
+\alpha (L)_{r}a &=&\left( 1+\alpha _{1}L+\ldots +\alpha _{r}L^{r}\right) a\
+\ \ \ \ \ \ \text{con }La=a \\
+&=&\left( 1+\alpha _{1}+\ldots +\alpha _{r}\right) a \\
+&=&\alpha (1)_{r}a\ .
+\end{eqnarray*}%
+L'\emph{equazione stimabile} di questo modello:%
+\begin{eqnarray}
+y_{t} &=&a^{\ast }+\beta _{0}x_{t}+\beta _{1}x_{t-1}+\ldots +\beta
+_{s}x_{t-s}-\alpha _{1}y_{t-1}-\ldots -\alpha _{r}y_{t-r}+\varepsilon _{t} 
+\notag \\
+y_{t} &=&a^{\ast }+\beta _{0}x_{t}+\beta _{1}x_{t-1}+\ldots +\beta
+_{s}x_{t-s}+\alpha _{1}^{\ast }y_{t-1}+\ldots +\alpha _{r}^{\ast
+}y_{t-r}+\varepsilon _{t}  \label{equazione_stimabile_jorgenson}
+\end{eqnarray}%
+In pratica $s$ e $r$ non sono conosciuti, quindi si stima il modello per
+svariate coppie $\left( s,r\right) $, ad esempio la coppia $%
+(1,1);(1,2);\ldots $ Si sceglier\`{a} la coppia che d\`{a} migliori
+risultati in termini di significativit\`{a} dei coefficienti e di valori del
+criterio d'informazione di Akaike.
+
+\noindent Avendo stimato i polinomi $\alpha (L)\ $e $\beta (L)$ (tralasciamo
+i rispettivi indici $r$ ed $s$) si possono ottenere:
+
+\begin{enumerate}
+\item L'effetto immediato
+
+\item L'effetto dinamico di lungo periodo
+
+\item Il ritardo medio
+
+\item Il profilo dei ritardi (ovvero i coefficienti del polinomio $%
+B(L)_{\infty }$)
+\end{enumerate}
+
+\noindent Per le prime 3 domande utilizziamo la relazione%
+\begin{equation*}
+B(L)_{\infty }=\frac{\beta (L)}{\alpha (L)}
+\end{equation*}%
+per la quarta sfruttiamo la ricorrenza.
+
+\begin{enumerate}
+\item L'effetto immediato
+
+\begin{equation*}
+b_{0}=B(0)_{\infty }=\frac{\beta (0)}{\alpha (0)}=\frac{\beta _{0}}{1}=\beta
+_{0}
+\end{equation*}
+
+\item L'effetto di lungo periodo
+
+\begin{equation*}
+b=b_{0}+b_{1}+b_{2}+\ldots =B(1)_{\infty }=\frac{\beta (1)}{\alpha (1)}=%
+\frac{\beta _{0}+\beta _{1}+\ldots +\beta _{s}}{1+\alpha _{1}+\ldots +\alpha
+_{r}}=\frac{\beta _{0}+\beta _{1}+\ldots +\beta _{s}}{1-\alpha _{1}^{\ast
+}-\ldots -\alpha _{r}^{\ast }}
+\end{equation*}
+
+\item Il ritardo medio. Ricordiamo che%
+\begin{equation*}
+\overline{R}=\frac{B^{\prime }(1)}{B(1)}
+\end{equation*}%
+Ora, 
+\begin{eqnarray*}
+B^{\prime }(L) &=&\frac{\beta ^{\prime }(L)\alpha (L)-\beta (L)\alpha
+^{\prime }(L)}{\alpha (L)^{2}} \\
+&=&\frac{\beta ^{\prime }(L)}{\alpha (L)}-\frac{\beta (L)}{\alpha (L)^{2}}%
+\alpha ^{\prime }(L) \\
+&=&\frac{\beta (L)}{\alpha (L)}\left[ \frac{\beta ^{\prime }(L)}{\beta (L)}-%
+\frac{\alpha ^{\prime }(L)}{\alpha (L)}\right]
+\end{eqnarray*}%
+e quindi essendo 
+\begin{equation*}
+B^{\prime }(1)=\frac{\beta (1)}{\alpha (1)}\left[ \frac{\beta ^{\prime }(1)}{%
+\beta (1)}-\frac{\alpha ^{\prime }(1)}{\alpha (1)}\right]
+\end{equation*}%
+otteniamo che%
+\begin{equation*}
+\overline{R}=\frac{B^{\prime }(1)}{B(1)}=\frac{\beta ^{\prime }(1)}{\beta (1)%
+}-\frac{\alpha ^{\prime }(1)}{\alpha (1)}
+\end{equation*}
+\end{enumerate}
+
+\begin{esempio}
+Con dati trimestrali abbiamo stimato la seguente funzione di consumo:%
+\begin{equation*}
+C_{t}=160+0.30R_{t}+0.20R_{t-1}+0.14R_{t-2}+0.2C_{t-1}
+\end{equation*}
+\end{esempio}
+
+\begin{itemize}
+\item La forma canonica%
+\begin{eqnarray*}
+C_{t}-0.2C_{t-1} &=&160+0.30R_{t}+0.20R_{t-1}+0.14R_{t-2} \\
+\underset{\alpha (L)_{1}}{\underbrace{\left( 1-0.2L\right) }}C_{t} &=&160+%
+\underset{\beta (L)_{2}}{\underbrace{\left( 0.30+0.20L+0.14L^{2}\right) }}%
+R_{t}
+\end{eqnarray*}
+
+Calcoliamo:
+
+\begin{itemize}
+\item $\beta (1)=0.3+0.2+0.14=0.64$
+
+\item $\beta ^{\prime }(L)=0.2+0.28L$
+
+\item $\beta ^{\prime }(1)=0.48$
+
+\item $\alpha (0)=1$ (sempre!), $\alpha (1)=0.8$
+
+\item $\alpha ^{\prime }(L)=-0.2$
+
+\item $\alpha ^{\prime }(1)=-0.2$
+\end{itemize}
+
+\item L'effetto immediato: $b_{0}=\beta (0)=0.3$
+
+\item L'effetto dinamico di lungo periodo:
+
+\begin{equation*}
+b=B(1)_{\infty }=\frac{\beta (1)}{\alpha (1)}=\frac{0.48}{0.64}=0.8\text{
+(propensione marginale di L.P.)}
+\end{equation*}
+
+\item Il ritardo medio%
+\begin{eqnarray*}
+\overline{R} &=&\frac{B^{\prime }(1)}{B(1)}=\frac{\beta ^{\prime }(1)}{\beta
+(1)}-\frac{\alpha ^{\prime }(1)}{\alpha (1)} \\
+&=&\frac{0.48}{0.64}+\frac{0.2}{0.8}=1
+\end{eqnarray*}
+
+\item Il profilo dei ritardi
+
+Ammettiamo un punto di partenza d'equilibrio di lungo periodo con tutti gli
+incrementi passati uguali a 0 per ogni $t<0$.%
+\begin{equation*}
+\Delta C_{t}=\Delta R_{t}=0\ \ \forall t<0
+\end{equation*}%
+Scriviamo la nostra equazione in termini di incrementi:%
+\begin{equation*}
+\Delta C_{t}=0.3\Delta R_{t}+0.2\Delta R_{t-1}+0.14\Delta R_{t-2}+0.2\Delta
+C_{t-1}
+\end{equation*}%
+In $t=0$, consideriamo un aumento unitario del reddito%
+\begin{equation*}
+\Delta R_{0}=1
+\end{equation*}%
+e studiamo il suo influsso sul consumo presente e futuro%
+\begin{eqnarray*}
+\Delta C_{0} &=&0.3\underset{1}{\underbrace{\Delta R_{0}}}+0.2\underset{0}{%
+\underbrace{\Delta R_{-1}}}+0.14\underset{0}{\underbrace{\Delta R_{-2}}}+0.2%
+\underset{0}{\underbrace{\Delta C_{-1}}}=0.3=b_{0} \\
+\Delta C_{1} &=&0.3\underset{0}{\underbrace{\Delta R_{1}}}+0.2\underset{1}{%
+\underbrace{\Delta R_{0}}}+0.14\Delta R_{-1}+0.2\underset{0.3}{\underbrace{%
+\Delta C_{0}}}=0.26=b_{1} \\
+\Delta C_{2} &=&0.3\underset{0}{\underbrace{\Delta R_{2}}}+0.2\underset{0}{%
+\underbrace{\Delta R_{1}}}+0.14\underset{1}{\underbrace{\Delta R_{0}}}+0.2%
+\underset{0.26}{\underbrace{\Delta C_{1}}}=0.192=b_{2} \\
+\Delta C_{3} &=&0.2\underset{0.192}{\underbrace{\Delta C_{2}}}=0.0384=b_{3}
+\\
+\Delta C_{4} &=&0.2\underset{0.0384}{\underbrace{\Delta C_{3}}}=\ldots
+\end{eqnarray*}
+
+Verifichiamo:%
+\begin{eqnarray*}
+b &=&b_{0}+b_{1}+b_{2}+\ldots \\
+&=&0.3+0.26+0.192\left( 1+0.2+0.2^{2}+\ldots \right) \\
+&=&0.56+\frac{0.192}{1-0.2}=0.8
+\end{eqnarray*}
+\end{itemize}
+
+\begin{equation*}
+\text{grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\subsubsection{L'equazione d'equilibrio di lungo periodo}
+
+Poniamo 
+\begin{equation*}
+\left\{ 
+\begin{array}{c}
+y_{t}=y^{\ast } \\ 
+x_{t}=x^{\ast }%
+\end{array}%
+\right. \ \ \ \forall t
+\end{equation*}%
+Dalla formulazione di partenza (\ref{formulazone partenza})%
+\begin{eqnarray*}
+\alpha (L)y_{t} &=&a^{\ast }+\beta (L)x_{t} \\
+\alpha (L)y^{\ast } &=&a^{\ast }+\beta (L)x^{\ast } \\
+\alpha (1)y^{\ast } &=&a^{\ast }+\beta (1)x^{\ast }
+\end{eqnarray*}%
+da cui otteniamo la relazione di lungo periodo%
+\begin{eqnarray}
+y^{\ast } &=&\frac{a^{\ast }}{\alpha (1)}+\frac{\beta (1)}{\alpha (1)}%
+x^{\ast }  \notag \\
+y^{\ast } &=&a+bx^{\ast }  \label{equazione di lungo periodo}
+\end{eqnarray}%
+dove $b$ rappresenta l'effetto di lungo periodo. L'equazione (\ref{equazione
+di lungo periodo}) \`{e} derivabile direttamente dalla (\ref{equazione di
+partenza}), ovvero%
+\begin{eqnarray*}
+y_{t} &=&a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots \\
+y^{\ast } &=&a+b_{0}x^{\ast }+b_{1}x^{\ast }+b_{2}x^{\ast }+\ldots \\
+&=&a+(b_{0}+b_{1}+b_{2}+\ldots )x^{\ast } \\
+&=&a+bx^{\ast }
+\end{eqnarray*}%
+Nell'esempio:%
+\begin{eqnarray*}
+C^{\ast } &=&160+0.3R^{\ast }+0.2R^{\ast }+0.14R^{\ast }+0.2C^{\ast } \\
+C^{\ast } &=&\frac{160}{0.8}+\frac{0.64}{0.8}R^{\ast } \\
+C^{\ast } &=&200+0.8R^{\ast }
+\end{eqnarray*}%
+Se in $t-1$ ponessimo%
+\begin{equation}
+\varepsilon _{t-1}^{\ast }=C_{t-1}-200-0.8R_{t-1}
+\label{scarto dall equilibrio}
+\end{equation}%
+otterremmo il cosiddetto scarto dall'equilibrio di lungo termine (o errore)
+in $t-1$.
+
+\chapter{Serie macroeconomiche non stazionarie}
+
+\section{Stazionariet\`{a} e non stazionariet\`{a}}
+
+\subsection{Stazionariet\`{a}}
+
+Una serie storica \`{e} stazionaria se soddisfa tre principi:
+
+\begin{enumerate}
+\item Tende a ritornare alla media
+
+\item La varianza \`{e} costante (non dipende dal tempo)
+
+\item La covarianza fra due termini della serie \`{e} unicamente funzione
+della distanza che separa i due termini e tende verso 0 quando questa
+distanza aumenta.
+\end{enumerate}
+
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\begin{esempio}
+Rumore bianco (White Noise)
+\end{esempio}
+
+\begin{equation*}
+\varepsilon _{t}\sim iid(0,\sigma ^{2})
+\end{equation*}
+
+\begin{esempio}
+\label{esempioAR1}Il modello AR(1)
+\end{esempio}
+
+\begin{equation*}
+\left\{ 
+\begin{array}{c}
+\varepsilon _{t}=\rho \varepsilon _{t-1}+u_{t} \\ 
+u_{t}\sim iid(0,\sigma ^{2}) \\ 
+|\rho| <1%
+\end{array}%
+\right.
+\end{equation*}
+
+\begin{itemize}
+\item $E(\varepsilon _{t})=0.$
+
+\item $V(\varepsilon _{t})=\frac{\sigma ^{2}}{1-\rho ^{2}}$ indipendente da $%
+t$.
+
+\item $Cov(\varepsilon _{t},\varepsilon _{t-s})=\frac{\sigma ^{2}}{1-\rho
+^{2}}\rho ^{s}\underset{s\rightarrow \infty }{\longrightarrow }0.$
+\end{itemize}
+
+\begin{esempio}
+Il modello $ARMA(p,q)$
+\end{esempio}
+
+\subsection{Non stazionariet\`{a}}
+
+Una serie storica \`{e} non stazionaria se:
+
+\begin{enumerate}
+\item Si scosta indefinitivamente dalla media
+
+\item La varianza \`{e} proporzionale al tempo
+
+\item La correlazione fra due termini della serie tende verso uno quando la
+distanza tra i due termini aumenta.
+\end{enumerate}
+
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\begin{esempio}
+\label{es RW}Cammino casuale o aleatorio (random walk). Nell'Esempio \ref%
+{esempioAR1} poniamo $\rho =1$:
+\end{esempio}
+
+\begin{equation*}
+\varepsilon _{t}=\varepsilon _{t-1}+u_{t}\sim White\ Noise
+\end{equation*}%
+\begin{eqnarray*}
+\varepsilon _{0} &=&0 \\
+\varepsilon _{1} &=&0+u_{1} \\
+\varepsilon _{2} &=&\varepsilon _{1}+u_{2}=u_{1}+u_{2} \\
+\varepsilon _{3} &=&\varepsilon _{2}+u_{3}=u_{1}+u_{2}+u_{3} \\
+&&\vdots \\
+\varepsilon _{t} &=&u_{1}+u_{2}+u_{3}+\ldots +u_{t}
+\end{eqnarray*}%
+Possiamo allora calcolare valore atteso e varianza:%
+\begin{eqnarray*}
+E(\varepsilon _{t}) &=&0 \\
+V(\varepsilon _{t}) &=&t\sigma ^{2} \\
+Cor(\varepsilon _{t},\varepsilon _{t-s}) &=&\frac{Cov(\varepsilon
+_{t},\varepsilon _{t-s})}{\sqrt{V(\varepsilon _{t})V(\varepsilon _{t-s})}}=%
+\frac{(t-s)}{\sqrt{t(t-s)}} \\
+\lim_{t\rightarrow \infty }Cor(\varepsilon _{t},\varepsilon _{t-s}) &=&1
+\end{eqnarray*}
+
+\noindent Due autori sono arrivati alla conclusione che quasi tutte le
+variabili macroeconomiche sono non stazionarie (Nelson e Plosser). Si cerca
+quindi di rendere stazionarie le variabili prima di eseguire l'analisi
+econometrica.
+
+\noindent Una serie $\left\{ \varepsilon _{t}\right\} $ non stazionaria \`{e}
+detta integrata di ordine 1, e si scrive%
+\begin{equation*}
+\varepsilon _{t}\sim I(1)
+\end{equation*}%
+se la differenza prima 
+\begin{equation*}
+d_{t}:=\varepsilon _{t}-\varepsilon _{t-1}
+\end{equation*}%
+\`{e} stazionaria (cio\'{e} $I(0)$). Nel nostro esempio \`{e} evidente che
+un Random Walk \`{e} $I(1)$ in quanto 
+\begin{equation*}
+\varepsilon _{t}-\varepsilon _{t-1}=u_{t}\sim WN
+\end{equation*}%
+Per vedere se una serie \`{e} non stazionaria, stimo il modello AR(1): $%
+\varepsilon _{t}=\rho \varepsilon _{t-1}+u_{t}$. Dopo aver stimato $\rho $
+conduco il test d'ipotesi $H_{0}:\rho =1$ (test della radice unitaria). Se
+accetto l'ipotesi, allora la serie \`{e} non stazionaria. C'\`{e} per\`{o}
+un problema. Sotto l'ipotesi $H_{0}$ lo stimatore $\widehat{\rho }$ non ha
+le propriet\`{a} statistiche che conosciamo. Torniamo al modello $AR(1)$: 
+\begin{eqnarray*}
+\varepsilon _{t} &=&\rho \varepsilon _{t-1}+u_{t} \\
+\varepsilon _{t}-\rho \varepsilon _{t-1} &=&u_{t} \\
+(1-\rho L)\varepsilon _{t} &=&u_{t}
+\end{eqnarray*}%
+una radice unitaria sarebbe quando trovo $\rho =1$. In tal caso scriviamo
+anche $(1-L)=\Delta $.
+
+\subsection{Una riparametrizzazione del modello dinamico classico (Jorgenson)%
+}
+
+\begin{equation}
+y_{t}=\beta _{0}x_{t}+\beta _{1}x_{t-1}+\beta _{2}x_{t-2}+\alpha _{1}^{\ast
+}y_{t-1}+\alpha _{2}^{\ast }y_{t-2}+\varepsilon _{t}
+\label{modello Jorgenson}
+\end{equation}%
+5 parametri da stimare.
+
+\begin{itemize}
+\item Effetto immediato: $\beta _{0}$
+
+\item Effetto di lungo termine: $b=\frac{\beta _{0}+\beta _{1}+\beta _{2}}{%
+1-\alpha _{1}^{\ast }-\alpha _{2}^{\ast }}$
+
+\item Relazione di lungo termine: $y_{t}=bx_{t}$.
+
+Se in (\ref{modello Jorgenson}) adopero i valori stazionari:%
+\begin{equation*}
+\left\{ 
+\begin{array}{c}
+y_{t}=y^{\ast } \\ 
+x_{t}=x^{\ast }%
+\end{array}%
+\right. \ \ \forall t
+\end{equation*}%
+\begin{eqnarray*}
+y^{\ast } &=&\left( \beta _{0}+\beta _{1}+\beta _{2}\right) x^{\ast }+\left(
+\alpha _{1}^{\ast }+\alpha _{2}^{\ast }\right) y^{\ast } \\
+y^{\ast } &=&\frac{\beta _{0}+\beta _{1}+\beta _{2}}{1-\alpha _{1}^{\ast
+}-\alpha _{2}^{\ast }}x^{\ast } \\
+y^{\ast } &=&bx^{\ast }
+\end{eqnarray*}%
+da cui otteniamo lo scarto dall'equilibrio di lungo termine (errore): $%
+y_{t}-bx_{t}$.
+
+\item Prima di affrontare il caso particolare dato dall'equazione stimabile (%
+\ref{modello Jorgenson}) consideriamo il caso generale dato dalla (\ref%
+{equazione_stimabile_jorgenson}), ovvero
+
+\begin{equation*}
+y_{t}=a^{\ast }+\underset{p1}{\underbrace{\beta _{0}x_{t}+\beta
+_{1}x_{t-1}+\ldots +\beta _{s}x_{t-s}}}+\underset{p2}{\underbrace{\alpha
+_{1}^{\ast }y_{t-1}+\ldots +\alpha _{r}^{\ast }y_{t-r}}}+\varepsilon _{t}
+\end{equation*}%
+Consideriamo dapprima la riparametrizzazione della parte 1:%
+\begin{eqnarray*}
+p1 &=&\beta _{0}x_{t}+\left( \beta _{0}+\beta _{1}+\ldots +\beta _{s}-\beta
+_{0}-\beta _{2}-\ldots -\beta _{s}\right) x_{t-1}+ \\
+&&+\left( \beta _{2}+\beta _{3}+\ldots +\beta _{s}-\beta _{3}-\ldots -\beta
+_{s}\right) x_{t-2} \\
+&&+\left( \beta _{3}+\ldots +\beta _{s}-\beta _{4}-\ldots -\beta _{s}\right)
+x_{t-3} \\
+&&\vdots \\
+&&+\left( \beta _{s-1}+\beta _{s}-\beta _{s}\right) x_{t-(s-1)} \\
+&&+\beta _{s}x_{t-s} \\
+&=&\beta _{0}\Delta x_{t}+\left( \beta _{0}+\beta _{1}+\ldots +\beta
+_{s}\right) x_{t-1} \\
+&&-\left( \beta _{2}+\ldots +\beta _{s}\right) \Delta x_{t-1} \\
+&&-\left( \beta _{3}+\ldots +\beta _{s}\right) \Delta x_{t-2} \\
+&&\vdots \\
+&&-\left( \beta _{s-1}+\beta _{s}\right) \Delta x_{t-(s-2)} \\
+&&-\beta _{s}\Delta x_{t-(s-1)}
+\end{eqnarray*}%
+e ridefinendo i coefficienti delle nuove variabili esplicative otteniamo per
+questa prima parte%
+\begin{equation*}
+p1=\delta _{0}\Delta x_{t}+\gamma _{1}x_{t-1}+\delta _{1}\Delta
+x_{t-1}+\ldots +\delta _{s-1}\Delta x_{t-(s-1)}.
+\end{equation*}%
+La riparametrizzazione della parte 2 \`{e} quasi identica alla precedente.
+Abbiamo infatti%
+\begin{eqnarray*}
+p2 &=&\left( \alpha _{1}^{\ast }+\alpha _{2}^{\ast }+...+\alpha _{r}^{\ast
+}-\alpha _{2}^{\ast }-\ldots -\alpha _{r}^{\ast }\right) y_{t-1} \\
+&&+\left( \alpha _{2}^{\ast }+\alpha _{3}^{\ast }+...+\alpha _{r}^{\ast
+}-\alpha _{3}^{\ast }-\ldots -\alpha _{r}^{\ast }\right) y_{t-2} \\
+&&+\left( \alpha _{3}^{\ast }+\alpha _{4}^{\ast }+...+\alpha _{r}^{\ast
+}-\alpha _{4}^{\ast }-\ldots -\alpha _{r}^{\ast }\right) y_{t-3} \\
+&&\vdots \\
+&&+\left( \alpha _{r-1}^{\ast }+\alpha _{r}^{\ast }-\alpha _{r}^{\ast
+}\right) y_{t-(r-1)} \\
+&&+\alpha _{r}^{\ast }y_{t-r} \\
+&=&\left( \alpha _{1}^{\ast }+\alpha _{2}^{\ast }+...+\alpha _{r}^{\ast
+}\right) y_{t-1} \\
+&&-(\alpha _{2}^{\ast }+\ldots +\alpha _{r}^{\ast })\Delta y_{t-1} \\
+&&-(\alpha _{3}^{\ast }+\ldots +\alpha _{r}^{\ast })\Delta y_{t-2} \\
+&&\vdots \\
+&&-\left( \alpha _{r-1}^{\ast }+\alpha _{r}^{\ast }\right) \Delta y_{t-(r-2)}
+\\
+&&-\alpha _{r}^{\ast }\Delta y_{t-(r-1)}
+\end{eqnarray*}%
+Anche in questo caso ridefiniamo i coefficienti dei $\Delta y$%
+\begin{equation*}
+p2=\left( \alpha _{1}^{\ast }+\ldots +\alpha _{r}^{\ast }\right)
+y_{t-1}+q_{1}\Delta y_{t-1}+q_{2}\Delta y_{t-2}+\ldots +q_{r-1}\Delta
+y_{t-(r-1)}
+\end{equation*}%
+Ricapitolando obbiamo che 
+\begin{equation*}
+y_{t}=a^{\ast }+\gamma _{1}x_{t-1}+\left( \alpha _{1}^{\ast }+\ldots +\alpha
+_{r}^{\ast }\right) y_{t-1}+\sum_{i=0}^{s-1}\delta _{s}\Delta
+x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon _{t}\ 
+\end{equation*}%
+e sottraendo da entrambi i lati $y_{t-1}$ si ottiene la forma finale%
+\begin{eqnarray*}
+y_{t}-y_{t-1} &=&a^{\ast }+\gamma _{1}x_{t-1}+\underset{\gamma _{2}}{%
+\underbrace{\left( \alpha _{1}^{\ast }+\ldots +\alpha _{r}^{\ast }-1\right) }%
+}y_{t-1}+\sum_{i=0}^{s-1}\delta _{s}\Delta
+x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon _{t}\  \\
+\Delta y_{t} &=&a^{\ast }+\gamma _{1}x_{t-1}+\gamma
+_{2}y_{t-1}+\sum_{i=0}^{s-1}\delta _{s}\Delta
+x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon _{t}
+\end{eqnarray*}
+
+\item Dalla (\ref{modello Jorgenson}):%
+\begin{eqnarray*}
+y_{t} &=&\beta _{0}x_{t}+\left( \beta _{0}+\beta _{1}+\beta _{2}-\beta
+_{0}-\beta _{2}\right) x_{t-1}+\beta _{2}x_{t-2}+ \\
+&&\left( \alpha _{1}^{\ast }+\alpha _{2}^{\ast }-\alpha _{2}^{\ast }\right)
+y_{t-1}+\alpha _{2}^{\ast }y_{t-2}+\varepsilon _{t} \\
+y_{t} &=&\underset{\delta _{0}}{\underbrace{\beta _{0}}}\ \underset{\Delta
+x_{t}}{\underbrace{\left( x_{t}-x_{t-1}\right) }\ +}\underset{=\gamma _{1}}{%
+\underbrace{\left( \beta _{0}+\beta _{1}+\beta _{2}\right) }}x_{t-1}\underset%
+{\delta _{1}}{\underbrace{-\beta _{2}}}\ \underset{\Delta x_{t-1}}{%
+\underbrace{\left( x_{t-1}-x_{t-2}\right) }}+ \\
+&&\left( \alpha _{1}^{\ast }+\alpha _{2}^{\ast }\right) y_{t-1}\underset{%
+q_{1}}{\underbrace{-\alpha _{2}^{\ast }}}\underset{\Delta y_{t-1}}{%
+\underbrace{\left( y_{t-1}-y_{t-2}\right) }}+\varepsilon _{t}
+\end{eqnarray*}%
+\begin{eqnarray}
+\underset{\Delta y_{t}}{\underbrace{y_{t}-y_{t-1}}} &=&\gamma _{1}x_{t-1}+%
+\underset{\gamma _{2}}{\underbrace{\left( \alpha _{1}^{\ast }+\alpha
+_{2}^{\ast }-1\right) }}y_{t-1}+\delta _{0}\Delta x_{t}+\delta _{1}\Delta
+x_{t-1}+q_{1}\Delta y_{t-1}+\varepsilon _{t}  \label{modello ridefinito} \\
+\Delta y_{t} &=&\gamma _{1}x_{t-1}+\gamma _{2}y_{t-1}+\gamma _{3}\Delta
+x_{t}+\gamma _{4}\Delta x_{t-1}+\gamma _{5}\Delta y_{t-1}+\varepsilon _{t}
+\end{eqnarray}
+
+Quest'equazione comporta 5 parametri come la (\ref{modello Jorgenson})
+identificabili. Stimata con i $m.q.o.$ produce gli stessi risultati
+(trasformati) dei coefficienti e lo stesso $SS$.
+
+\begin{eqnarray*}
+y &=&X\beta +\varepsilon \\
+\beta &=&A\gamma +L
+\end{eqnarray*}%
+dove $A$ rappresenta una matrice nota non singolare ed $L$ un vettore noto.
+E' possibile risalire ad $A$ ed $L$ confrontando le due formulazioni (\ref%
+{modello Jorgenson}) e (\ref{modello ridefinito}) del modello. Infatti%
+\begin{eqnarray*}
+y &=&X\left( A\gamma +L\right) +\varepsilon \\
+y &=&\underset{W}{\underbrace{XA}}\gamma +\underset{\text{conosciuto}}{%
+\underbrace{XL}}+\varepsilon \\
+\left( y-XL\right) &=&W\gamma +\varepsilon
+\end{eqnarray*}%
+confrontando i termini dell'equazione (\ref{modello ridefinito}) con
+ques'ultima espressione \`{e} possibile evincere il contenuto della matrice $%
+A$ e del vettore $L$.%
+\begin{equation*}
+L=\left[ 
+\begin{array}{c}
+0 \\ 
+0 \\ 
+0 \\ 
+1 \\ 
+0%
+\end{array}%
+\right] ;A=\left[ 
+\begin{array}{ccccc}
+0 & 1 & 0 & 0 & 0 \\ 
+1 & -1 & 1 & 0 & 0 \\ 
+0 & 0 & -1 & 0 & 0 \\ 
+0 & 0 & 0 & 1 & 1 \\ 
+0 & 0 & 0 & 0 & -1%
+\end{array}%
+\right]
+\end{equation*}%
+Inoltre dall'equazione (\ref{modello ridefinito}) \`{e} possibile derivare
+direttamente il moltiplicatore di lungo termine come 
+\begin{equation*}
+b=\frac{\gamma _{1}}{-\gamma _{2}}=\frac{\beta _{0}+\beta _{1}+\beta _{2}}{%
+1-\alpha _{1}^{\ast }-\alpha _{2}^{\ast }}=\frac{\beta (1)}{\alpha (1)}
+\end{equation*}
+
+\noindent Riscriviamo ora la (\ref{modello ridefinito}) nel seguente modo:%
+\begin{eqnarray}
+\Delta y_{t} &=&\gamma _{2}\left( y_{t-1}+\frac{\gamma _{1}}{\gamma _{2}}%
+x_{t-1}\right) +\sum_{i=0}^{1}\delta _{i}\Delta
+x_{t-i}+\sum_{i=1}^{1}r_{i}\Delta y_{t-i}  \notag \\
+\Delta y_{t} &=&\gamma _{2}\left( y_{t-1}-bx_{t-1}\right)
++\sum_{i=0}^{1}\delta _{i}\Delta x_{t-i}+\sum_{i=1}^{1}r_{i}\Delta y_{t-i}
+\label{error correction formulation}
+\end{eqnarray}
+
+\item $\gamma _{2}$: coefficiente di correzione dell'errore.
+
+\item $y_{t-1}-bx_{t-1}$: scarto (errore) dall'equilibrio di lungo termine, $%
+\varepsilon _{t-1}$
+
+\item $\sum_{s=0}^{1}\delta _{s}\Delta x_{t-s}+\sum_{s=1}^{1}r_{s}\Delta
+y_{t-s}$: dinamica di corto periodo: tanti $\Delta x_{t-i}$ quanti i numeri
+di ritardi ($s$), tanti $\Delta y_{t-i}$ quanti i numeri di ritardi in $y$
+meno $1$ ($r-1$).
+\end{itemize}
+
+\noindent L'equazione (\ref{error correction formulation}) \`{e} chiamata
+modello a correzione d'errore: descrive come l'errore di equilibrio di lungo
+termine \`{e} corretto ed esprime la dinamica di corto periodo. Questa
+equazione \`{e} alla base dell'approccio delle serie storiche per il
+concetto di cointegrazione. L'equazione (\ref{error correction formulation})
+non \`{e} direttamente stimabile in quanto il parametro $b$ non \`{e}
+conosciuto.
+
+\noindent L'equazione (\ref{error correction formulation}) non \`{e}
+direttamente stimabile in quanto il parametro $b$ non \`{e} conosciuto.
+
+\subsection{Introduzione alla cointegrazione}
+
+Due serie non stazionarie possono ammettere una relazione stabile di lungo
+periodo, vale a dire che sebbene prese singolarmente le due serie tendano a
+divergere indefinitamente, lo scarto dell'una rispetto all'altra \`{e}
+qualcosa di stabile o pi\`{u} propriamente detto qualcosa di stazionario.%
+\begin{equation*}
+\text{Grafico}
+\end{equation*}%
+\vspace{5cm}
+
+\begin{definition}
+2 serie non stazionarie ed integrate d'ordine 1%
+\begin{eqnarray*}
+y_{t} &\sim &I(1) \\
+x_{t} &\sim &I(1)
+\end{eqnarray*}%
+si dicono cointegrate se esiste una relazione lineare tra le due%
+\begin{equation*}
+y_{t}-bx_{t}
+\end{equation*}%
+che \`{e} stazionaria%
+\begin{equation*}
+y_{t}-bx_{t}\sim I(0)
+\end{equation*}
+\end{definition}
+
+\subsubsection{La procedura di stima}
+
+La procedura di stima di serie storiche cointegrate comprende le seguenti
+tappe:
+
+\begin{enumerate}
+\item Verificare attraverso il test di radice unitaria che le due serie sono
+effettivamente $I(1)$.
+
+\item Stimare la relazione stazionaria di lungo termine%
+\begin{equation*}
+y_{t}=bx_{t}+\varepsilon _{t}
+\end{equation*}%
+e verificare che l'errore stimato $\widehat{\varepsilon }_{t}$ \`{e}
+stazionario (che non abbia radice unitaria). Come visto precedentemente $%
+\varepsilon _{t}$ rappresenta lo scarto dall'equilibrio di lungo periodo.
+Generalmente l'errore $\varepsilon _{t}$ non \`{e} $i.i.d.$ ma pu\`{o} avere
+una dinamica anche complessa. Ci\`{o} che \`{e} richiesto affinch\'{e} si
+possa parlare di cointegrazione \`{e} che $\varepsilon _{t}$ sia un processo
+stazionario: nel corto periodo $y_{t}$ e $bx_{t}$ possono divergere ma nel
+lungo periodo devono nuovamente riavvicinarsi. Da qui la necessit\`{a} di
+verificare (testare tramite test appropriati) la stazionariet\`{a}
+dell'errore stimato $\widehat{\varepsilon }_{t}$.
+
+\item Se l'ipotesi di stazionariet\`{a} del termine d'errore non \`{e}
+rigettata si introduce $\widehat{\varepsilon }_{t-1}$ nel modello a
+correzione d'errore (vedi equazione (\ref{error correction formulation})).
+In questo modello, tutte le variabili esplicative sono stazionarie:%
+\begin{eqnarray*}
+\Delta x_{t-s} &\sim &I(0) \\
+\Delta y_{t-r} &\sim &I(0) \\
+\widehat{\varepsilon }_{t-1} &\sim &I(0)
+\end{eqnarray*}%
+e quindi pu\`{o} essere stimato con i $m.q.o.$.
+\end{enumerate}
+
+\begin{remark}
+Questa procedura garantisce la convergenza in probabilit\`{a} degli
+stimatori. Per ottenere l'efficienza asintotica occorre utilizzare il metodo
+di massima verosimiglianza (metodo di Johanson).
+\end{remark}
+
+\end{document}

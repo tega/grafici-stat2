@@ -92,7 +92,7 @@ P(A)+P(A^{c})=1.\]
 \end{enumerate}
 Capitolo 5: Elementi di probabilità II
 \begin{enumerate}
-\item Intersezione di eventi.\ $A\cap B$: l'insieme degli esiti dell'esperimento
+\item Intersezione di eventi. $A\cap B$: l'insieme degli esiti dell'esperimento
 che appartengono sia all'evento $A$ che all'evento $B$. 
 \item Eventi indipendenti: $A$ e $B$ sono indipendenti se vale la seguente
 condizione\[
@@ -4465,7 +4465,7 @@ a $\theta$ mentre la seconda è la normalità asintotica della quantità
 $\sqrt{n}\left(T(X_{1},...,X_{n})-\theta\right)$. Entrambi i concetti
 sono già stati incontrati in precedenza: il primo ad esempio quando
 è stata trattata la convergenza dei momenti campionari $M_{r,n}$
-ai rispettivi momenti teorici $\mu_{r}$, il secondo quando abbiamo
+ai rispettivi momenti teorici $M_{r}$, il secondo quando abbiamo
 considerato la distribuzione limite della media standardizzata $\frac{(\overline{X}_{n}-\mu)}{\sqrt{\sigma^{2}/n}}$.
 
 
@@ -4935,8 +4935,8 @@ $N(-0.545,\frac{0.008^{2}}{5})$.
 \noindent A questo punto è possibile calcolare la probabilità di osservare
 un valore di $\overline{X}$ uguale o superiore a quello calcolato
 dal caseificio (vedi Figura \ref{fig:latte P-valore}):\begin{eqnarray*}
-P_{H_{0}}(\overline{X}\geqq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geqq0.009)\\
- & = & P_{H_{0}}(\frac{\sqrt{5}\left(\overline{X}+0.545\right)}{0.008}\geqq2.515)\\
+P_{H_{0}}(\overline{X}\geq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geq0.009)\\
+ & = & P_{H_{0}}(\frac{\sqrt{5}\left(\overline{X}+0.545\right)}{0.008}\geq2.515)\\
  & = & 0.59\%.\end{eqnarray*}
 
 
@@ -4948,8 +4948,6 @@ P_{H_{0}}(\overline{X}\geqq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geqq0.009)
 
 \caption{\label{fig:latte P-valore}Calcolo del $p$-value (test unilaterale
 destro).}
-
-
 
 \end{figure}
 
@@ -5037,14 +5035,12 @@ tra valore atteso e media campionaria anche alla destra di $\mu$
 
 \caption{\label{fig:calcolo p-value sfere}Calcolo del $p$-value (test bilaterale).}
 
-
-
 \end{figure}
 
 
 \noindent Il $p$-value è dunque uguale a\begin{eqnarray*}
-P_{H_{0}}(\overline{X}\leqq0.5985,\:\overline{X}\geqslant0.6015) & = & P_{H_{0}}(|\overline{X}-0.6|\geqq0.0015)\\
- & = & P_{H_{0}}(\frac{|\overline{X}-0.6|}{0.001}\geqq1.5)=13.4\%.\end{eqnarray*}
+P_{H_{0}}(\overline{X}\leq0.5985,\:\overline{X}\geqslant0.6015) & = & P_{H_{0}}(|\overline{X}-0.6|\geq0.0015)\\
+ & = & P_{H_{0}}(\frac{|\overline{X}-0.6|}{0.001}\geq1.5)=13.4\%.\end{eqnarray*}
 Decisamente questo non rappresenta un evento raro. Fissato un livello
 di significatività pari al $5\%$ il $p$-value risulta essere più
 grande. Per tale motivo non rifiutiamo l'ipotesi nulla. La macchina
@@ -5172,7 +5168,7 @@ P_{H_{0}}(\overline{X}+0.545\geq k_{5\%}+0.545) & = & 0.05\\
 P_{H_{0}}\left(\frac{\overline{X}+0.545}{0.008/\sqrt{5}}\geq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.05\\
 P\left(Z\geq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.05\\
 P\left(Z\leq\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}\right) & = & 0.95\\
-P\left(Z\leq q_{0.95}\right) & = & 0.95\end{eqnarray*}
+P\left(Z\leq z_{0.95}\right) & = & 0.95\end{eqnarray*}
  Sotto l'ipotesi nulla la quantità $Z=\frac{\overline{X}+0.545}{0.008/\sqrt{5}}$
 è distribuita $N(0,1)$. Dalle tavole sappiamo che $P\left(Z\leq1.645\right)=0.95$.
 Uguagliando \foreignlanguage{english}{$1.645$} a \foreignlanguage{english}{$\frac{k_{5\%}+0.545}{0.008/\sqrt{5}}$}
@@ -5194,7 +5190,7 @@ regola di decisione per un test unilaterale destro:
 \item [7 bis.] Se il valore calcolato della statistica $\overline{X}$
 ($S$ in generale) cadrà {}``lontano\textquotedblright{} e in direzione
 dell'ipotesi alternativa, ovvero se \begin{equation}
-\overline{x}\geqq k_{5\%}=-0.539\label{disequazione test destro}\end{equation}
+\overline{x}\geq k_{5\%}=-0.539\label{disequazione test destro}\end{equation}
  rifiuteremo l'ipotesi nulla, altrimenti non la rifiuteremo. 
 \end{enumerate}
 \begin{remark} Il {}``quanto lontano\textquotedblright{} deve cadere
@@ -5210,10 +5206,10 @@ così detta \emph{regione critica}.
 
 \begin{definizione} Regione critica (test unilaterale destro). L'insieme
 $R\subset\Omega^{n}$ delle realizzazioni $(x_{1},...,x_{n})$ di
-$(X_{1},...,X_{n})$ per cui $S\geqq k_{\alpha}$ (e quindi tali per
+$(X_{1},...,X_{n})$ per cui $S\geq k_{\alpha}$ (e quindi tali per
 cui il test è rifiutato) è chiamato la regione critica del test o
 semplicemente regione critica\[
-R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geqq k_{\alpha}\right\} .\]
+R=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},\ldots,x_{n})\geq k_{\alpha}\right\} .\]
 
 
 \selectlanguage{english}%
@@ -5451,12 +5447,12 @@ se tutte e $5$ le variabili aleatorie saranno maggiori di $2$. Quindi
 l'evento $\{\min(X_{1},...,X_{5})>2\}$ corrisponde (è identico) all'evento
 che tutte e $5$ le variabili aleatorie sono maggiori di $2$. Per
 tale motivo e per un valore qualsiasi $s$ \[
-P(\min(X_{1},...,X_{5})\geq s)=P(X_{1}\geq s,X_{2}\geq s,...,X_{5}\geq s)\text{.}\]
+P(\min(X_{1},...,X_{5})>s)=P(X_{1}>s,X_{2}>s,...,X_{5}>s)\text{.}\]
  Utilizzando l'indipendenza degli $X_{i}$ \[
-P(X_{1}\geq s,...,X_{5}\geq s)=\prod_{i=1}^{5}P(X_{i}\geq s).\]
- Infine, poiché $P(X_{i}\geq s)=1-P(X_{i}\leq s)$ (la distribuzione
-di $X_{i}$ è continua), otteniamo la seguente identità \[
-P(\min(X_{1},...,X_{5})\geq s)=P(X_{1}\geq s,...,X_{5}\geq s)=\prod_{i=1}^{5}\left(1-P(X_{i}\leq s)\right)\]
+P(X_{1}>s,...,X_{5}>s)=\prod_{i=1}^{5}P(X_{i}>s).\]
+ Infine, poiché $P(X_{i}>s)=1-P(X_{i}\leq s)$, otteniamo la seguente
+identità \[
+P(\min(X_{1},...,X_{5})>s)=P(X_{1}>s,...,X_{5}>s)=\prod_{i=1}^{5}\left(1-P(X_{i}\leq s)\right)\]
  che quando inserita nella (\ref{distribuzione minimo step1}) ci
 permette di ottenere la formula finale \begin{equation}
 F_{S}(s)=1-\prod_{i=1}^{5}\left[1-P(X_{i}\leq s)\right].\label{Fss parziale}\end{equation}
@@ -5485,8 +5481,6 @@ densità di $S$. Derivando entrambi i lati rispetto ad $s$ otteniamo\begin{equati
 
 \caption{Densità di $S=\min(X_{1},...,X_{5})$ e $\overline{X}_{5}$ sotto
 $H_{0}$.}
-
-
 
 \end{figure}
 
@@ -5568,7 +5562,17 @@ di $\overline{x}\geq-0.539$. Ovviamente le due regioni critiche sono
 diverse a conferma che i due test, sebbene costruiti ad uno stesso
 livello di significatività del $5\%$, sono diversi.
 
-\bigskip{}
+%
+\begin{figure}
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{codiceR/grafici/regioneCriticaTestMinimo}
+\par\end{centering}
+
+\caption{Regione critica con $S=min(X_{1},\ldots,X_{n})$ e $n=2$.}
+
+
+
+\end{figure}
 
 
 \noindent In questo esempio i due test, l'uno basato sulla media campionaria
@@ -5579,9 +5583,7 @@ i test rigetteranno l'ipotesi nulla con una probabilità del $5\%$
 quando questa è effettivamente vera. Da questo punto di vista essi
 sono equivalenti. Per il fornitore dunque, potrebbe essere indifferente
 l'uso dell'uno o dell'altro al fine di valutare la sua onestà. Riprenderemo
-questo discorso all'interno del prossimo paragrafo.
-
-\pagebreak
+questo discorso all'interno del prossimo paragrafo.\pagebreak{}
 
 
 \section{Errore di prima e seconda specie}
@@ -5595,9 +5597,9 @@ Per quanto riguarda le decisioni possiamo
 verifiche tramite altri test). 
 \end{itemize}
 \noindent Per quanto riguarda invece gli errori abbiamo due tipi di
-errori che indichiamo con un asterisco\[
+errori evidenziati in tabella con un asterisco:\[
 \begin{tabular}{l|c|c|}
- \cline{2-3}  &  \ensuremath{H_{0}}vera  &  \ensuremath{H_{0}}falsa \\
+ \cline{2-3}  &  \ensuremath{H_{0}}\:\ vera  &  \ensuremath{H_{0}}\:\ falsa \\
 \hline \multicolumn{1}{|l|}{Rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
 \multicolumn{1}{c}{\ensuremath{\alpha}}\end{tabular}  &  \begin{tabular}{l}
@@ -5625,7 +5627,7 @@ di non rifiutare $H_{0}$ quando questa è falsa.
 \end{itemize}
 \begin{remark} Nell'Esempio \ref{esempio caseificio p1} del caseificio
 abbiamo quale ipotesi nulla \[
-H_{0}:\text{\textquotedblright innocente\textquotedblright}\]
+H_{0}:\text{\textquotedblright Il fornitore è innocente\textquotedblright.}\]
  ed i seguenti due errori 
 \begin{itemize}
 \item Errore di $1^{a}$ specie: fornitore dichiarato colpevole quando in
@@ -5639,28 +5641,46 @@ realtà è colpevole.
 
 
 \noindent Idealmente non vorremmo mai rifiutare $H_{0}$ quando questa
-è vera (cioè vorremmo un $\alpha$ uguale a $0$) e rifiutarla sempre
-quando essa è falsa (un $\beta=1$). Questo però non è possibile.
-Occorre studiare come si possono controllare queste due probabilità
-per ridurre al minimo le possibilità d'errore.
+è vera (vorremmo un $\alpha$ uguale a $0$) e rifiutarla sempre quando
+essa è falsa (un $\beta=1$). Questo però non è possibile. Occorre
+studiare come si possono controllare queste due probabilità per ridurre
+al minimo le possibilità d'errore.
+
+\smallskip{}
+
 
 \noindent Possiamo dunque chiederci come si decide di \textquotedblright{}Rifiutare
 $H_{0}$\textquotedblright{} sulla base dei dati disponibili. Nei
 paragrafi precedenti abbiamo definito dei test d'ipotesi basati su
-una statistica $S$ ed una regione critica \begin{eqnarray*}
-R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})>k\right\} \text{ (test unilaterale destro),}\\
-R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})<k\right\} \text{ (test unilaterale sinistro),}\\
-R & = & \left\{ (x_{1},...,x_{n})\mid|S(x_{1},...,x_{n})|>k\right\} \text{ (test bilaterale).}\end{eqnarray*}
- Il criterio per rifiutare $H_{0}$ dipende dal fatto che i valori
-osservati del campione appartengano o meno alla regione critica, ovvero
-se \[
-S(x_{1},...,x_{n})>k\]
- rifiutiamo $H_{0}$ altrimenti non la rifiutiamo (nel caso di un
-test unilaterale destro). Il valore di $k$ che definisce la soglia
-fra rifiuto e non rifiuto di $H_{0}$ è stato fissato in modo tale
-che la probabilità di osservare valori più estremi di $k$ sia uguale
-al livello di significatività $\alpha$ prescelto. Per tale motivo
-si è soliti aggiungere al piede di $k$, $k_{d}$ e $k_{s}$ il valore
+una statistica $S$ ed una regione critica $R$, quest'ultima definita
+in un test unilaterale tramite una soglia critica $k_{\alpha}$ 
+\begin{itemize}
+\item \noindent test unilaterale destro\[
+R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\geq k_{\alpha}\right\} \text{,}\]
+
+\item \noindent test unilaterale sinistro \[
+R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{\alpha}\right\} ,\]
+
+\end{itemize}
+\noindent o una soglia critica inferiore \foreignlanguage{english}{$k_{s,\alpha}$}
+ed una superiore \foreignlanguage{english}{$k_{d,\alpha}$} 
+\begin{itemize}
+\item \noindent test bilaterale\begin{eqnarray*}
+R & = & \left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{{\ oppure\ }}S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} .\end{eqnarray*}
+
+\end{itemize}
+\noindent La decisione se rifiutare $H_{0}$ dipende dal fatto che
+il campione osservato appartenga o meno alla regione critica. Se (test
+unilaterale destro) \[
+S(x_{1},...,x_{n})\geq k_{\alpha}\]
+rifiuteremo $H_{0}$ altrimenti non la rifiuteremo. La costante $k_{\alpha}$,
+che definisce la soglia fra rifiuto e non rifiuto di $H_{0}$, è fissata
+\emph{per costruzione} in modo tale che la probabilità \emph{sotto
+l'ipotesi nulla} $H_{0}$ di osservare valori più estremi di $k_{\alpha}$
+sia uguale al livello di significatività $\alpha$ prescelto%
+\footnote{\noindent Proprio per tale motivo si è soliti aggiungere al piede
+di $k$, $k_{d}$ e $k_{s}$ la probabilità $\alpha$.%
+}. L'errore di primo tipo è dunque \emph{per costruzione} uguale ad
 $\alpha$.
 
 \begin{esempio} Tornando all'Esempio \ref{esempio caseificio p1}
@@ -5690,20 +5710,18 @@ z_{\alpha} & -1.645 & -1.96 & -2.33\end{array}\]
 \begin{remark} Come già accennato, il livello \textquotedblright{}tipico\textquotedblright{}\ di
 significatività è del 5\%. In medicina si indica con 
 \begin{itemize}
-\item n.s. : se il risultato non è significativo al 5\%, 
-\item {*} : se il risultato è significativo al 5\%, 
-\item {*}{*} : se il risultato è significativo all'1\%, 
-\item {*}{*}{*} : se il risultato è significativo allo 0.1\%. 
+\item n.s. : se il risultato non è significativo al 5\% ($H_{0}$ non rifiutata), 
+\item {*} : se il risultato è significativo al 5\% ($H_{0}$ rifiutata), 
+\item {*}{*} : se il risultato è significativo all'1\% ($H_{0}$ rifiutata), 
+\item {*}{*}{*} : se il risultato è significativo allo 0.1\% ($H_{0}$ rifiutata). 
 \end{itemize}
 \end{remark}
-
-\newpage{}
 
 
 \subsection{Relazione tra errore di prima e di seconda specie}
 
-Ci chiediamo quale sia la relazione fra errore di prima e di seconda
-specie. Per fare ciò analizziamo il seguente esempio.
+Al fine di comprendere la relazione fra l'errore di prima specie $\alpha$
+e quello di seconda specie $1-\beta$ analizziamo il seguente esempio.
 
 \begin{esempio} Supponiamo che la variabile aleatoria $X$ sia distribuita
 secondo la legge Normale $N(\mu,1)$ e che l'ipotesi nulla sia $H_{0}:\:\mu=0$
@@ -5713,111 +5731,138 @@ la distribuzione di $X$.%
 } $H_{A}:\:\mu=2$. Si osserva un'unica realizzazione di $X$, notata
 semplicemente $x$. L'errore di prima specie (livello di significatività)
 è fissato inizialmente ad $\alpha=5\%.$ Il grafico della funzione
-di densità di $X$ sotto le due ipotesi è riportato nella Figura.
+di densità di $X$ sotto le due ipotesi è riportato nella Figura \ref{fig:Distribuzione-Normale-sotto}.
 %
 \begin{figure}
 \begin{centering}
-\includegraphics[scale=0.4]{codiceR/grafici/standardNormalDensityWith095Quantile}
+\includegraphics[scale=0.4]{codiceR/grafici/dueDensitaNormali}
 \par\end{centering}
 
-\caption{Distribuzione Normale standard}
-
-
+\caption{\label{fig:Distribuzione-Normale-sotto}Distribuzione Normale sotto
+l'ipotesi nulla e alternativa.}
 
 \end{figure}
-Poiché l'ipotesi alternativa è situata alla destra di $H_{0}$, la
-soglia $k$ della regione critica al livello di significatività desiderato
-è definita da\[
-P_{H_{0}}(X\geq k)=0.05\Rightarrow k_{5\%}=z_{95\%}=1.645.\]
+Poiché in questo caso l'ipotesi alternativa è situata alla destra
+di $H_{0}$, la soglia $k_{5\%}$ della regione critica (ad un livello
+di significatività del 5\% quindi) è definita da\[
+P_{H_{0}}(X\geq k_{5\%})=0.05\Rightarrow k_{5\%}=z_{95\%}=1.645.\]
  La regione critica%
 \footnote{In questo esempio ad uso didattico la statistica $S$ utilizzata è
 semplicemente il valore osservato. La regione critica $R$ coincide
-quindi con l'intervallo $(k,\infty)$. Tuttavia è questo un caso più
-unico che raro che mai si verifica nelle applicazioni reali.%
+quindi con l'intervallo $[k_{5\%},\infty)$. Tuttavia è questo un
+caso più unico che raro che mai si verifica nelle applicazioni reali.%
 } è \[
-R=\left\{ x\in(1.645,\infty)\right\} .\]
- Graficamente la probabilità $P_{H_{0}}(X>k)$ è rappresentata dalla
-superficie tratteggiata della figura precedente. Una volta determinata
-la regione critica, il test di $H_{0}$ è dunque il seguente: \end{esempio} 
+R=\left\{ x\in[1.645,\infty)\right\} .\]
+ Graficamente la probabilità $P_{H_{0}}(X\geq k_{5\%})$ è rappresentata
+dalla superficie $\alpha$ della Figura \ref{fig:errore prima e sconda specie}.
+Determinata la regione critica, il test di $H_{0}$ è dunque il seguente:
+\end{esempio} 
 \begin{itemize}
 \item si osserva la realizzazione $x$ di $X$. 
-\item Se $x$ cade nella regione critica rifiutiamo $H_{0}.$ (Se $H_{0}$
-è vera, questo accadrà, per costruzione, con una probabilità pari
-ad $\alpha=5\%$.) 
+\item Se $x$ cade nella regione critica rifiutiamo $H_{0}.$ Condizionatamente
+alla correttezza di $H_{0}$ ciò accadrà, per costruzione, con una
+probabilità $\alpha=5\%$. 
 \item Se $x$ cade al di fuori della regione critica non rifiutiamo $H_{0}.$
-(Se $H_{0}$ è vera, questo accadrà, per costruzione, con una probabilità
-uguale ad $1-\alpha=95\%$.) 
+Condizio\-na\-tamente alla correttezza di $H_{0}$ questo accadrà,
+per costruzione, con una probabilità uguale ad $1-\alpha=95\%$. 
 \end{itemize}
-\noindent Una volta determinata la regione critica $R$ sulla base
-dell'ipotesi nulla ed il livello di significatività desiderato (errore
-di prima specie) possiamo chiederci cosa sarebbe la probabilità di
-rifiutare l'ipotesi nulla (o di non rifiutarla) se la vera distribuzione
-di $X$ fosse data da $H_{A}$.
+\noindent %
+\begin{figure}
+\begin{centering}
+\includegraphics[scale=0.4]{codiceR/grafici/errorePrimaESecondaSpecie}
+\par\end{centering}
+
+\caption{\label{fig:errore prima e sconda specie}Errore di prima e seconda
+specie, $\alpha=5\%$.}
+
+\end{figure}
+
+
+\noindent Fissata la regione critica $R$ sulla base del livello di
+significatività desiderato (errore di prima specie), possiamo chiederci
+quanto sarebbe la probabilità di rifiutare l'ipotesi nulla (o di non
+rifiutarla) se la vera distribuzione di $X$ fosse data da $H_{A}$.
 
 \begin{remark} È importante sottolineare che la regione critica non
 varia: noi rifiuteremo $H_{0}$ se l'osservazione di $x$ cadrà nell'intervallo
-$(1.645,\infty)$ mentre non la rifiuteremo se $x\in(-\infty,1.645]$.
-Ciò che vogliamo fare ora è calcolare la probabilità dell'evento $X\in(1.645,\infty)$
-dato che la distribuzione di $X$ è ora data dall'ipotesi alternativa
-$H_{A}$. \end{remark}
+$[1.645,\infty)$ mentre non la rifiuteremo se $x\in(-\infty,1.645)$.
+Ciò che desideriamo fare a questo punto è calcolare la probabilità
+dell'evento $X\in[1.645,\infty)$ dato che la distribuzione di $X$
+è ora determinata dall'ipotesi alternativa $H_{A}$. \end{remark}
 
-\noindent La probabilità di rigettare $H_{0}$ è definita dalla probabilità
-dell'evento $X>1.645$ e la sua probabilità è semplicemente\begin{equation}
-P\left(X>1.645\right).\label{Prob generica}\end{equation}
+\noindent La probabilità di rigettare $H_{0}$ è quindi definita dalla
+probabilità dell'evento $X\geq1.645$ e la sua probabilità è semplicemente\begin{equation}
+P\left(X\geq1.645\right).\label{Prob generica}\end{equation}
  Questa probabilità deve essere calcolata sotto l'ipotesi alternativa
 $H_{A}$, vale a dire sotto l'ipotesi che $X\sim N(2,1)$. Facciamo
 questo aggiungendo $H_{A}$ alla $P$ della (\ref{Prob generica})
 che quindi diventa\[
-P_{H_{A}}\left(X>1.645\right)\]
+P_{H_{A}}\left(X\geq1.645\right)\]
  Per calcolare questa probabilità utilizziamo la solita tecnica di
 standardizzazione, tenendo presente che sotto l'ipotesi alternativa
-$H_{A}$ il valore atteso di $X$ è uguale $2$ (mentre la varianza
-in questo caso è ancora 1).
+$H_{A}$ il valore atteso di $X$ è uguale $2$ e la varianza 1.
 
 \[
-P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}>1.645-2\right)=P\left(Z>-0.355\right)=P(Z\leq0.355)=63.87\%.\]
- Abbiamo in questo modo calcolato la probabilità di rifiutare $H_{0}$
-condi\-zio\-na\-ta\-men\-te al fatto che essa sia falsa. Questa
-probabilità è stata indicata con la lettera $\beta$ e corrisponde
-all'azione corretta nel caso che $H_{A}$ sia vera. Graficamente essa
-corrisponde alla superficie alla destra di $k$ rispetto alla funzione
-di densità tratteggiata (funzione di densità di $X$ rispetto a $H_{A}$).
-In teoria noi vorremmo che questa probabilità fosse uguale $1$, ma
-come è evidente dal disegno questo è impossibile per $\alpha>0$.
-Siamo dunque costretti ad accettare il fatto che con una probabilità
-pari a $1-\beta$ ($36.13\%$ in questo caso) noi non rifiuteremo
-$H_{0}$ quando questa andrebbe invece rifiutata. Come descritto precedentemente
-$1-\beta$ è l'errore di seconda specie. In questo semplice e\-sem\-pio
-ad un errore di prima specie del $5\%$ corrisponde un errore di seconda
-specie del $36.13\%$.
+P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}\geq1.645-2\right)=P\left(Z\geq-0.355\right)=P(Z\leq0.355)=63.87\%.\]
+
+
+\noindent Abbiamo così calcolato la probabilità di rifiutare $H_{0}$
+condi\-zio\-na\-ta\-men\-te al fatto che essa sia falsa e che
+sia invece vera $H_{A}$. Questa probabilità è stata indicata con
+la lettera $\beta$ e corrisponde alla probabilità dell'azione corretta
+nel caso che $H_{A}$ sia vera. In Figura \ref{fig:errore prima e sconda specie}
+essa corrisponde alla superficie rispetto alla funzione di densità
+\emph{tratteggiata}%
+\footnote{\noindent La densità tratteggiata corrisponde alla funzione di densità
+di $X$ quando $H_{A}$ è vera.%
+} alla destra di $k_{\alpha}$. In teoria noi vorremmo che questa probabilità
+fosse uguale $1$, ma come è evidente dal disegno questo è impossibile
+per $\alpha<1$. Siamo dunque costretti ad accettare il fatto che
+con una probabilità pari a $1-\beta$ ($36.13\%$ in questo caso)
+noi non rifiuteremo $H_{0}$ quando questa andrebbe invece rifiutata.
+Come descritto precedentemente $1-\beta$ è l'errore di seconda specie.
+In questo semplice e\-sem\-pio ad un errore di prima specie del
+$5\%$ corrisponde un errore di seconda specie del $36.13\%$.
 
 \bigskip{}
 
 
 \noindent Potremmo decidere a questo punto di diminuire l'errore di
-prima specie (il livello di significatività)\ e portarlo al $2.5\%$.
+prima specie (il livello di significatività) e portarlo al $2.5\%$.
 Cosa capiterà a $\beta$ ed indirettamente all'errore di seconda specie
-$1-\beta$? Calcoliamo innanzi tutto il nuovo valore critico di $k$,
+$1-\beta$? Calcoliamo innanzi tutto il nuovo valore critico $k_{2.5\%}$,
 ovvero
 
 \[
-P_{H_{0}}(X>k)=0.025\Rightarrow k_{97.5\%}=z_{97.5\%}=1.96.\]
- Abbiamo ridotto l'errore di prima specie ed il valore di $k$ si
-è spostato sulla destra rispetto al valore precedente. Cosa implica
-questo per $\beta$? Sappiamo che \[
-\beta=P_{H_{A}}\left(\text{Rifiuto }H_{0}\right)=P_{H_{A}}\left(X>1.96\right).\]
+P_{H_{0}}(X\geq k_{0.025})=0.025\Rightarrow k_{2.5\%}=z_{97.5\%}=1.96.\]
+ Abbiamo ridotto $\alpha$, l'errore di prima specie ed il valore
+della soglia critica si è spostato sulla destra. Cosa implica questo
+per $\beta$? Sappiamo che \[
+\beta=P_{H_{A}}\left(\text{Rifiuto }H_{0}\right)=P_{H_{A}}\left(X\geq1.96\right).\]
  Per calcolare $\beta$ usiamo la solita tecnica di standardizzazione
 tenendo presente che sotto l'ipotesi alternativa $X\sim N(2,1)$:\begin{eqnarray*}
-\beta & = & P_{H_{A}}\left(X>1.96\right)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}>-0.04\right)\\
+\beta & = & P_{H_{A}}\left(X\geq1.96\right)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{X-2}}\geq-0.04\right)\\
  & = & P\left(Z\leq0.04\right)=51.6\%\end{eqnarray*}
 
 
-\noindent Guardando il disegno notiamo che la superficie a destra
-di $k$ delimitata dalla densità tratteggiata è diminuita rispetto
-al valore precedente. Si è quindi ridotta la probabilità $\beta$
-di rifiutare $H_{0}$ quando questa andrebbe giustamente rifiutata:
-ora $\beta=51.6\%$ mentre prima era $63.87\%$. L'errore di seconda
-specie $1-\beta$ è dunque aumentato, passando dal $36.13\%$ al $48.4\%$.
+\noindent Confrontando la nuova Figura \ref{fig:Errore-di-prima-e-seconda2}
+alla Figura \ref{fig:errore prima e sconda specie} notiamo che la
+superficie a sinistra di $k_{2.5\%}$ delimitata dalla densità tratteggiata
+è aumentata rispetto al valore precedente. L'incremento è dato dalla
+superficie verde. L'errore di seconda specie $1-\beta$ è dunque aumentato,
+passando dal $36.13\%$ al $48.4\%$.%
+\begin{figure}
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{codiceR/grafici/errorePrimaESecondaSpecie2}
+\par\end{centering}
+
+\caption{\label{fig:Errore-di-prima-e-seconda2}Errore di prima e seconda specie,
+$\alpha=2.5\%$ .}
+
+
+
+\end{figure}
+
 
 \bigskip{}
 
@@ -5825,17 +5870,19 @@ specie $1-\beta$ è dunque aumentato, passando dal $36.13\%$ al $48.4\%$.
 \noindent Da questo esempio deduciamo che esiste un relazione inversa
 fra errore di prima specie ed errore di seconda specie nel senso che
 qualora si decida di diminuire la probabilità d'errore di prima specie
-si dovrà pagare un costo in termini della probabilità d'errore di
-seconda specie e viceversa. Possiamo semplicemente scrivere quanto
+si dovrà pagare un costo in termini di una maggiore probabilità d'errore
+di seconda specie e viceversa. Possiamo semplicemente scrivere quanto
 detto a parole con\[
 \alpha\downarrow\Rightarrow1-\beta\uparrow.\]
- Per tale motivo non è possibile scendere a zero con entrambe le probabilità.
-Si è pertanto soliti fissare il livello di significatività $\alpha$
-ad un livello appropriato. Come detto, in econometria si utilizza
-un $\alpha=5\%$. Il nostro sistema giuridico per contro assegna maggiore
-importanza all'errore di $1^{a}$ specie (dichiarare colpevole un
-innocente) e per tale motivo i valori di $\alpha$ saranno di molto
-inferiori (radar detection $\alpha=10^{-10}\%$).
+
+
+\noindent Per tale motivo non è possibile scendere a zero con entrambe
+le probabilità. Si è pertanto soliti fissare il livello di significatività
+$\alpha$ ad un livello appropriato. Come detto, in econometria si
+utilizza un $\alpha=5\%$. Il nostro sistema giuridico per contro
+assegna maggiore importanza all'errore di $1^{a}$ specie (dichiarare
+colpevole un innocente) e per tale motivo i valori di $\alpha$ saranno
+di molto inferiori (radar detection $\alpha=10^{-10}\%$).
 
 
 \subsection{Potenza di un test}
@@ -5851,46 +5898,51 @@ La probabilità $\beta$ è chiamata potenza del test.
 La potenza di un test, notata $\beta$, è definita come la probabilità
 di rifiutare $H_{0}$ quando essa è falsa%
 \footnote{Per un test unilaterale sinistro la potenza è definita da \[
-\beta=P_{H_{A}}(S<k_{\alpha})\]
+\beta=P_{H_{A}}(S\leq k_{\alpha})\]
  e per un test bilaterale
 
 \[
-\beta=P_{H_{A}}(|S|>k_{1-\frac{\alpha}{2}}).\]
+\beta=P_{H_{A}}(S\leq k_{s,\alpha}\text{\ oppure\ }S\geq k_{d,\alpha}).\]
  %
 }\[
-\beta=P_{H_{A}}(S>k_{1-\alpha}).\]
+\beta=P_{H_{A}}(S\geq k_{\alpha}).\]
  \end{definizione}
 
 \begin{esempio} Nell'Esempio \ref{esempio caseificio p1} del caseificio
 abbiamo costruito due possibili test d'ipotesi, il primo basato sulla
 media $\overline{X}$ del campione ed il secondo basato sul minimo
-$X_{\min}$ del campione. Per un livello di significatività del $5\%$
-i due test avevano condotto alla medesima conclusione. Nel primo caso
-(uso di $\overline{X}$) il valore critico $k_{0.95}=-0.539$, infatti
-\[
-P_{H_{0}}(\overline{X}>-0.539)=5\%.\]
- Nel secondo caso (uso di $X_{\min}$) il valore critico $k_{0.95}=-0.546$
-\[
-P_{H_{0}}(X_{\min}>-0.546)=5\%.\]
- Vogliamo ora calcolare la potenza $\beta$ per entrambi i test, che
-per definizione sappiamo essere\[
-\beta=P_{H_{A}}(\overline{X}>-0.539)\]
+$min(X_{1},\ldots,X_{n})$ del campione. Per un livello di significatività
+del $5\%$ i due test avevano condotto alla medesima conclusione.
+Nel primo caso con $S=\overline{X}$ il valore critico $k_{5\%}=-0.539$,
+infatti \[
+P_{H_{0}}(\overline{X}\geq-0.539)=5\%.\]
+ Con $S=min(X_{1},\ldots,X_{n})$ il valore critico è $k_{5\%}=-0.546$
+poiché \[
+P_{H_{0}}(S\geq-0.546)=5\%.\]
+ Vogliamo ora calcolare la potenza $\beta$ per entrambi i test. Per
+definizione la potenza del test è\[
+\beta=P_{H_{A}}(\overline{X}\geq-0.539)\]
  e rispettivamente\[
-\beta=P_{H_{A}}(X_{\min}>-0.546).\]
- Tuttavia l'ipotesi alternativa $H_{A}:\mu>-0.545$ non identifica
-con precisione la distribuzione, essa si limita a dire che il valore
-atteso della popolazione $X$ è superiore a $-0.545$. Per tale motivo
-eseguiamo dapprima il calcolo per un particolare valore di $\mu>-0.545$,
-diciamo $\mu=-0.54$, ed in seguito per un valore di $\mu>-0.545$
-qualsiasi. \end{esempio}
+\beta=P_{H_{A}}(S\geq-0.546).\]
+
+
+\noindent Tuttavia l'ipotesi alternativa $H_{A}:\:\mu>-0.545$ non
+identifica con precisione la distribuzione, essa si limita a dire
+che il valore atteso della popolazione $X$ è superiore a $-0.545$.
+Per tale motivo eseguiamo dapprima il calcolo per un particolare valore
+di $\mu>-0.545$, diciamo $\mu=-0.54$ ed in seguito per un valore
+di $\mu>-0.545$ qualsiasi. \end{esempio}
 
 
 \subsubsection{Potenza quando $S=\overline{X}$}
 
-$\bullet$ Caso particolare, ipotesi alternativa $X\sim N(-0.54,0.008^{2})$
-$\Rightarrow\overline{X}\sim N(-0.54,0.008^{2}/5)$\begin{eqnarray*}
-\beta & = & P_{H_{A}}(\overline{X}>-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-(-0.54)}{0.008/\sqrt{5}}}}>\frac{-0.539-(-0.54)}{0.008/\sqrt{5}}\right)\\
- & = & P\left(Z>0.2795\right)=1-P\left(Z\leq0.2795\right)=0.39\end{eqnarray*}
+$\bullet$ Caso particolare
+
+\noindent L'ipotesi alternativa è $X\sim N(-0.54,0.008^{2})$ da cui
+segue grazie alla proprietà della distribuzione Normale che $\overline{X}\sim N(-0.54,0.008^{2}/5)$.
+Calcolando abbiamo\begin{eqnarray*}
+\beta & = & P_{H_{A}}(\overline{X}\geq-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-(-0.54)}{0.008/\sqrt{5}}}}\geq\frac{-0.539-(-0.54)}{0.008/\sqrt{5}}\right)\\
+ & = & P\left(Z\geq0.2795\right)=1-P\left(Z\leq0.2795\right)=0.39\end{eqnarray*}
 
 
 \noindent $\bullet$ Caso generale, ipotesi alternativa $X\sim N(\mu,0.008^{2})$
@@ -5898,69 +5950,99 @@ $\Rightarrow\overline{X}\sim N(\mu,0.008^{2}/5)$ con $\mu>-0.545$
 
 \noindent Il calcolo è esattamente uguale al precedente, basta sostituire
 $-0.54$ con $\mu$\[
-P_{H_{A}}(\overline{X}>-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu}{0.008/\sqrt{5}}}}>\frac{-0.539-\mu}{0.008/\sqrt{5}}\right)=P\left(Z>\frac{-0.539-\mu}{0.008/\sqrt{5}}\right).\]
- Il valore assunto da $\beta$ dipende dal valore di $\mu$. È dunque
-possibile rappresentare graficamente $\beta$ come funzione del valore
-del parametro $\mu$.
+P_{H_{A}}(\overline{X}\geq-0.539)=P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu}{0.008/\sqrt{5}}}}\geq\frac{-0.539-\mu}{0.008/\sqrt{5}}\right)=P\left(Z\geq\frac{-0.539-\mu}{0.008/\sqrt{5}}\right).\]
+ Il valore assunto da $\beta$ dipende dal valore di $\mu$. In Figura
+\ref{fig:Potenza-del-test} è possibile osservare $\beta$ quale funzione
+del valore del parametro $\mu$.%
+\begin{figure}
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{codiceR/grafici/potenzaXMin}
+\par\end{centering}
+
+\caption{\label{fig:Potenza-del-test}Potenza del test dell'Esempio \ref{esempio caseificio p1}
+con $S=\overline{X}$.}
 
 
-\subsubsection{Potenza quando $S=X_{\min}$}
 
-\noindent $\bullet$ Caso particolare, ipotesi alternativa $X\sim N(-0.54,0.008^{2})$
+\end{figure}
 
-\noindent Nel paragrafo \ref{formulazione test xmin}, punto 4, abbiamo
-derivato la distribuzione di $X_{\min}$ sotto l'ipotesi nulla. La
-funzione di ripartizione di $S$ sotto l'ipotesi alternativa sarà
-del tutto simile, e cioè \[
-\beta=P_{H_{A}}(S>-0.546)=1-F_{S}(-0.546)=\left[1-F_{X}(-0.546)\right]^{5}\]
- ma con $F_{X}(s)$ che rappresenta ora la funzione di ripartizione
-di $X$ sotto $H_{A}$, ovvero la funzione di ripartizione di una
-$V.A.$ Normale di valore atteso $-0.54$ e varianza $0.008^{2}$.
-Il valore di $\beta$ è dunque\[
-\beta=\left[1-F_{X}(-0.546)\right]^{5}=0.277\]
- Osserviamo che il valore calcolato è inferiore a quello ottenuto
-utilizzando la media $\overline{X}$ del campione. Ciò significa che\ quando
-l'ipotesi nulla è falsa, il test basato sulla statistica $S=X_{\min}$
-la rigetterà con una probabilità di solo il $27.7\%$ mentre il test
-basato sulla statistica $S=\overline{X}$ la rigetterà con una probabilità
-ben superiore ed uguale al $39\%$. Il test sulla media $\overline{X}$
-è dunque da preferirsi rispetto al test sul minimo $X_{\min}$ poiché
-\emph{più potente} nel testare $H_{0}$ contro l'ipotesi alternativa
-$H_{A}:\mu=-0.54$. È interessante chiedersi se questo vale solo per
-$\mu=-0.54$ o la superiorità del test sulla media è \textquotedblright{}uniforme\textquotedblright{}\ per
-qualsiasi $\mu>-0.545$.\pagebreak
 
-\noindent $\bullet$ Caso generale, ipotesi alternativa $X\sim N(\mu,0.008^{2})$.
-In questo caso come con la media calcoleremo $\beta=P_{H_{A}}(S>-0.546)$
-per un qualsiasi valore di $\mu>-0.545$. Il grafico della potenza
-$\beta$ del test in funzione di $\mu$ dà il seguente risultatoSovrapponendo
-nel medesimo grafico le curve di potenza dei due test notiamo che
-effettivamente il test sulla media è da preferire al test sul minimo
-per qualsiasi ipotesi alternativa semplice $H_{A}:\mu=\widetilde{\mu}>-0.545$.Vogliamo
-ora metterci nei panni del fornitore di latte e ragionare rispetto
-alla scelta del test ottimale. Supponiamo dapprima che egli sia innocente,
-cioè che $H_{0}$ sia corretta. Per il fornitore è indifferente che
-la corte utilizzi il test basato sulla media campionaria $\overline{X}$
-o sul minimo $X_{\min}$. Questo perché, in entrambi i casi, la probabilità
-di essere ingiustamente condannato (errore di prima specie)\ è uguale
-$5\%$. Per contro, supponiamo che egli sappia di essere colpevole
-o, in altre parole, che $H_{A}$ sia vera. In tal caso egli non sarà
-più indifferente rispetto alla scelta del test. Infatti, qualora la
-corte utilizzasse il test sulla media, la probabilità $\beta$ di
-essere (giustamente) condannato sarebbe uguale al $39\%$ mentre per
-il test basato su $X_{\min}$ la probabilità sarebbe solo del $27.7\%$.
-È chiaro quindi che il fornitore preferirà il test meno potente poiché
-meno efficace nello scoprire la verità. Il tribunale per contro, deciderà
-di utilizzare il test più potente a disposizione che in questo caso
-è il test basato su $\overline{X}$.
+
+\subsubsection{Potenza quando $S=min(X_{1},\ldots,X_{n})$}
+
+\noindent $\bullet$ Caso particolare
+
+\noindent L'ipotesi alternativa è che $X\sim N(-0.54,0.008^{2})$.
+Nel paragrafo \ref{formulazione test xmin}, punto 4, abbiamo derivato
+la distribuzione di $S$ sotto l'ipotesi nulla. La funzione di ripartizione
+di $S$ sotto l'ipotesi alternativa sarà identica, cioè \[
+\beta=P_{H_{A}}(S\geq-0.546)=1-F_{S}(-0.546)=\left[1-F_{X}(-0.546)\right]^{5},\]
+
+
+\noindent ma con $F_{X}(s)$ che rappresenta ora la funzione di ripartizione
+di $X$ sotto $H_{A}$. Il valore di $\beta$ è dunque\[
+\beta=\left[1-F_{X}(-0.546)\right]^{5}=0.277.\]
+
+
+\noindent Osserviamo che il valore calcolato è inferiore a quello
+ottenuto utilizzando la media $\overline{X}$ del campione. Ciò significa
+che quando l'ipotesi nulla è falsa, il test basato sulla statistica
+$S=min(X_{1},\ldots,X_{n})$ la rigetterà con una probabilità di solo
+il $27.7\%$ mentre il test basato sulla statistica $S=\overline{X}$
+la rigetterà con una probabilità ben superiore ed uguale al $39\%$.
+Il test sulla media $\overline{X}$ è dunque da preferirsi rispetto
+al test sul $min(X_{1},\ldots,X_{n})$ poiché \emph{più potente} nel
+testare $H_{0}$ contro l'ipotesi alternativa $H_{A}:\:\mu=-0.54$.
+È interessante chiedersi se questo vale solo per $\mu=-0.54$ o la
+superiorità del test sulla media è uniforme per qualsiasi $\mu>-0.545$.\medskip{}
+
+
+\noindent $\bullet$ Caso generale
+
+\noindent L'ipotesi alternativa è $X\sim N(\mu,0.008^{2})$. In questo
+caso come con la media calcoleremo $\beta=P_{H_{A}}(S\geq-0.546)$
+per un qualsiasi valore di $\mu>-0.545$. In Figura \ref{fig:Potenza-del-test2}
+rappresentiamo graficamente la potenza $\beta$ del test in funzione
+di $\mu$. Sovrapponendo nel medesimo grafico le curve di potenza
+dei due test notiamo che effettivamente il test sulla media è da preferire
+al test sul minimo per qualsiasi ipotesi alternativa semplice $H_{A}:\:\mu=\widetilde{\mu}>-0.545$.
+%
+\begin{figure}
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{codiceR/grafici/potenzaMediaEpotenzaXMin}
+\par\end{centering}
+
+\caption{\label{fig:Potenza-del-test2}Potenza del test dell'Esempio \ref{esempio caseificio p1}
+con $S=min$.}
+
+
+
+\end{figure}
+Vogliamo ora metterci nei panni del fornitore di latte e ragionare
+rispetto alla scelta del test ottimale. Supponiamo dapprima che egli
+sia innocente, cioè che $H_{0}$ sia corretta. Per il fornitore è
+indifferente che la corte utilizzi il test basato sulla media campionaria
+$\overline{X}$ o sul minimo $min(X_{1},\ldots,X_{n})$. Questo perché,
+in entrambi i casi, la probabilità di essere ingiustamente condannato
+(errore di prima specie) è uguale a $5\%$. Per contro, supponiamo
+che egli sappia di essere colpevole o, in altre parole, che $H_{A}$
+sia vera. In tal caso egli non sarà più indifferente rispetto alla
+scelta del test. Infatti, qualora la corte utilizzasse il test sulla
+media, la probabilità $\beta$ di essere (giustamente) condannato
+sarebbe uguale al $39\%$ mentre per il test basato su \foreignlanguage{english}{$min(X_{1},\ldots,X_{n})$}
+la probabilità sarebbe solo del $27.7\%$. È chiaro quindi che il
+fornitore preferirà il test meno potente poiché meno efficace nello
+scoprire la verità. Il tribunale per contro deciderà di utilizzare
+il test più potente a disposizione che in questo caso è il test basato
+sulla media campionaria $\overline{X}$.
 
 \bigskip{}
 
 
 \noindent In generale potremmo chiederci se, dati 
 \begin{itemize}
-\item un'ipotesi nulla $H_{0}:\mu=\mu_{0}$, 
-\item un'ipotesi alternativa $H_{A}:\mu=\mu_{A}$, 
+\item un'ipotesi nulla $H_{0}:\:\mu=\mu_{0}$, 
+\item un'ipotesi alternativa $H_{A}:\:\mu=\mu_{A}$, 
 \item un livello prefissato $\alpha$ di significatività (errore di prima
 specie), 
 \end{itemize}
@@ -5981,16 +6063,16 @@ essenziali sono i seguenti.
 \item Una popolazione $X$ la cui distribuzione, caratterizzata tramite
 la sua funzione di densità, è sconosciuta. Si suppone che la densità
 di $X$ sia contenuta nella famiglia parametrica \[
-\mathcal{P}=\left\{ f_{\theta}(x),\ \theta\in\Theta\right\} .\]
+\mathcal{P}=\left\{ f(x;\theta),\ \theta\in\Theta\right\} .\]
 
 \item Un'ipotesi nulla $H_{0}$ riguardante la distribuzione di $X$. Tale
 ipotesi è espressa in termini del parametro sconosciuto $\theta$
 nel seguente modo\[
-H_{0}:\theta=\theta_{0}\]
+H_{0}:\:\theta=\theta_{0}\]
  dove $\theta_{0}$ rappresenta un particolare valore del parametro
 ($\theta_{0}$ è quindi un numero). 
 \item Un'ipotesi alternativa semplice \[
-H_{A}:\theta=\theta_{A}\]
+H_{A}:\:\theta=\theta_{A}\]
  dove $\theta_{A}$ è il valore che il parametro $\theta$ assume
 sotto l'ipotesi alternativa. 
 \item Il livello $\alpha$ di significatività desiderato (errore di prima
@@ -6000,20 +6082,28 @@ specie).
 ottimale. Ricordiamo che un qualsiasi test basato sulla statistica
 $S$ sarà caratterizzato da una regione critica $R$ definita tramite%
 \footnote{Se i valori osservati danno un valore della statistica $S$ superiore
-alla soglia $k_{1-\alpha}$ si rifiuta l'ipotesi nulla. Si veda gli
-esempi con $\overline{X}$ e $X_{\min}$.%
+alla soglia $k_{\alpha}$ si rifiuta l'ipotesi nulla. Si veda gli
+esempi con $\overline{X}$ e $min(X_{1},\ldots,X_{n})$.%
 }\begin{equation}
-R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})>k_{1-\alpha}\right\} \end{equation}
- dove la soglia $k_{1-\alpha}$ è stata scelta in maniera tale che
-la regione critica $R$ soddisfi%
+R=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\geq k_{\alpha}\right\} \end{equation}
+ dove la soglia $k_{\alpha}$ è stata scelta in maniera tale che la
+regione critica $R$ soddisfi%
 \footnote{Una volta scelta la statistica $S$, il valore della soglia $k_{\alpha}$
 è automaticamente fissato tramite l'equazione (\ref{soglia k_alpha}).
 In pratica quindi il problema si riduce alla scelta ottimale di $S$.%
-}\begin{equation}
-P_{H_{0}}(R)=P_{H_{0}}(S>k_{1-\alpha})=\alpha\text{.}\label{soglia k_alpha}\end{equation}
+} il vincolo\begin{equation}
+P_{H_{0}}(R)=P_{H_{0}}(S\geq k_{\alpha})=\alpha\text{.}\label{soglia k_alpha}\end{equation}
  Il problema risiede quindi nel trovare la statistica $S^{\ast}$
-(e la soglia $k_{\alpha}^{\ast}$ corrispondente) tale per cui \begin{equation}
-P_{H_{A}}(R^{\ast})=P_{H_{A}}(S^{\ast}>k_{\alpha}^{\ast})=P(\text{rifiuto }H_{0}\text{ }|\ H_{0}\text{ è falsa})=\beta\end{equation}
+e la soglia $k_{\alpha}^{\ast}$ ad essa associata tale per cui
+
+\selectlanguage{english}%
+\[
+P_{H_{0}}(S^{\ast}\geq k_{\alpha}^{\ast})=\alpha\]
+
+
+\selectlanguage{italian}%
+\noindent e\begin{equation}
+P_{H_{A}}(R^{\ast})=P_{H_{A}}(S^{\ast}\geq k_{\alpha}^{\ast})=P(\text{rifiuto }H_{0}\text{ }|\ H_{0}\text{ è falsa})=\beta\end{equation}
  sia massimo rispetto a qualsiasi altra statistica $S$.
 
 \begin{esempio} \label{esempio grotta}State passeggiando tranquillamente
@@ -6031,7 +6121,9 @@ quali gioielli mettere nello zaino. L'insieme dei gioielli e delle
 pietre preziose che verranno da voi scelti è notato $R$ (raccolto).
 Ogni gioiello/pietra $g$ ha un peso $p_{s}(g)$ ed un prezzo di mercato
 $p_{r}(g)$. Il vostro scopo è dunque quello di massimizzare il valore
-della raccolto, sotto il vincolo che il suo peso sia uguale ad $\alpha$.
+della raccolto, sotto il vincolo che il suo peso sia uguale ad $\alpha$.\smallskip{}
+\smallskip{}
+
 
 \noindent Supponiamo che i gioielli contenuti nel baule siano quelli
 della Tabella (\ref{table:esempio1_neyman_pearson}). Per massimizzare
@@ -6043,22 +6135,22 @@ per unità di peso.\vspace{0.5cm}
 
 \noindent La Tabella (\ref{table:esempio2_neyman_pearson}) contenente
 la lista dei gioielli ordinata rispetto al rapporto prezzo/peso permette
-di costruire l'insieme $R^{\ast}$ della raccolto ottimale, che corrisponde
+di costruire l'insieme $R^{\ast}$ del raccolto ottimale, che corrisponde
 a \[
 R^{\ast}=\left\{ g_{32},g_{24},g_{1},g_{21},g_{36},g_{16},g_{27}\right\} .\]
  Notiamo che la strategia di selezione ottimale $S^{\ast}(x)=\frac{p_{r}(g)}{p_{s}(g)}$
 prevede di prendere solo gli oggetti aventi un rapporto prezzo/peso
-superiore ad una soglia $k_{\alpha}^{\ast}$, che nel nostro caso
-è uguale a 7'481.30. Tale soglia è stata scelta in maniera che il
-peso complessivo della regione critica sia uguale ad $\alpha$ ovvero
-$5$ kg. Formalmente abbiamo determinato $k_{\alpha}^{\ast}$ tramite
-la seguente relazione ($P_{s}$ denota il peso totale)\[
-P_{s}(R^{\ast})=P_{s}(g\ |\ S^{\ast}(g)>k_{\alpha}^{\ast})=5\ \text{kg.}\]
+superiore o uguale ad una soglia $k_{\alpha}^{\ast}$, che nel nostro
+caso è uguale a 8'888.90. Tale soglia è stata scelta in maniera che
+il peso complessivo della regione critica sia uguale ad $\alpha$
+ovvero $5$ kg. Formalmente abbiamo determinato $k_{\alpha}^{\ast}$
+tramite la seguente relazione ($P_{s}$ denota il peso totale)\[
+P_{s}(R^{\ast})=P_{s}(g\ |\ S^{\ast}(g)\geq k_{\alpha}^{\ast})=5\ \text{kg.}\]
  \end{esempio}
 
-\begin{theorem} La strategia di selezione $S^{\ast}=\frac{p_{r}(g)}{p_{s}(g)}>k_{\alpha}^{\ast}$
-massimizza il valore (prezzo totale) del raccolto $R$\ rispetto
-a tutte le possibili strategie $S$ aventi una raccolto $R$ di peso
+\begin{theorem} La strategia di selezione $S^{\ast}=\frac{p_{r}(g)}{p_{s}(g)}\geq k_{\alpha}^{\ast}$
+massimizza il valore (prezzo totale) del raccolto $R$ rispetto a
+tutte le possibili strategie $S$ aventi una raccolto $R$ di peso
 $5$ kg. \end{theorem}
 
 \vspace{0.5cm}
@@ -6436,23 +6528,23 @@ P_{r}(R^{\ast})>P_{r}(R).\]
  A tal fine consideriamo la differenza \begin{equation}
 P_{r}(R^{\ast})-P_{r}(R)=\sum\limits _{g\in A}p_{r}(g)-\sum\limits _{g\in C}p_{r}(g).\end{equation}
  Poiché la strategia $S^{\ast}$ prevede di includere $g$ in $R^{\ast}$
-se e solo se $\frac{p_{r}(g)}{p_{s}(g)}>k_{\alpha}^{\ast}$, per ogni
-$x\in R^{\ast}$ (e quindi anche per ogni $g\in A\subset R^{\ast}$)
-sarà vero che $p_{r}(g)>p_{s}(g)k_{\alpha}^{\ast}$. Di conseguenza
+se e solo se $\frac{p_{r}(g)}{p_{s}(g)}\geq k_{\alpha}^{\ast}$, per
+ogni $g\in R^{\ast}$ (e quindi anche per ogni $g\in A\subset R^{\ast}$)
+sarà vero che $p_{r}(g)\geq k_{\alpha}^{\ast}p_{s}(g)$. Di conseguenza
 varrà la seguente disuguaglianza \[
-P_{r}(R^{\ast})-P_{r}(R)>k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{r}(g).\]
+P_{r}(R^{\ast})-P_{r}(R)\geq k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{r}(g).\]
  D'altra parte, visto che l'insieme $C$ è disgiunto da $R^{\ast}$,
 per qualsiasi $g\in C$ deve valere che $\frac{p_{r}(g)}{p_{s}(g)}\leq k_{\alpha}^{\ast}$,
 ovvero $p_{r}(g)\leq p_{s}(g)k_{\alpha}^{\ast}$ e di conseguenza\begin{eqnarray*}
-P_{r}(R^{\ast})-P_{r}(R) & > & k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{r}(g)\\
+P_{r}(R^{\ast})-P_{r}(R) & \geq & k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{r}(g)\\
  & \geq & k_{\alpha}^{\ast}\sum\limits _{g\in A}p_{s}(g)-k_{\alpha}^{\ast}\sum\limits _{g\in C}p_{s}(g)\\
  & = & k_{\alpha}^{\ast}\left(\sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{s}(g)\right)\end{eqnarray*}
- Infine, notiamo che la quantità fra parentesi è uguale 0:\ \begin{eqnarray*}
+ Infine, notiamo che la quantità fra parentesi è uguale 0. Infatti\begin{eqnarray*}
 \sum\limits _{g\in A}p_{s}(g)-\sum\limits _{g\in C}p_{s}(g) & = & \sum\limits _{g\in A}p_{s}(g)+\sum\limits _{g\in B}p_{s}(g)-\sum\limits _{g\in B}p_{s}(g)-\sum\limits _{g\in C}p_{s}(g)\\
  & = & \sum\limits _{g\in R^{\ast}}p_{s}(g)-\sum\limits _{g\in R}p_{s}(g)\\
  & = & P_{s}(R^{\ast})-P_{s}(R)=5-5=0\end{eqnarray*}
  Abbiamo dunque dimostrato che \[
-P_{r}(R^{\ast})>P_{r}(R).\]
+P_{r}(R^{\ast})\geq P_{r}(R).\]
 
 
 \noindent L'Esempio \ref{esempio grotta} può essere ripreso ed adattato
@@ -6485,17 +6577,17 @@ corrisponde alla strategia \[
 S^{\ast}(g)=\frac{p_{r}(g)}{p_{s}(g)}\]
  utilizzata per la costruzione della regione critica (riempire il
 sacco) \[
-R^{\ast}=\left\{ g\ |\ S^{\ast}(g)>k_{1-\alpha}^{\ast}\right\} \]
- con $k_{1-\alpha}^{\ast}$ scelto in maniera tale che \[
+R^{\ast}=\left\{ g\ |\ S^{\ast}(g)\geq k_{\alpha}^{\ast}\right\} \]
+ con $k_{\alpha}^{\ast}$ scelto in maniera tale che \[
 P_{s}(R)=\alpha=5\text{ kg.}\]
  Se adattato alla scelta del test ottimale la statistica ottimale
 $S^{\ast}$ diventa semplicemente il rapporto \[
-S^{\ast}(x_{1},...,x_{n})=\frac{f_{\theta_{A}}(x_{1},...,x_{n})}{f_{\theta_{0}}(x_{1},...,x_{n})}\]
+S^{\ast}(x_{1},...,x_{n})=\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n};\theta_{0})}\]
  delle due funzioni di densità del campione sotto l'ipotesi alternativa
 (numeratore) e sotto l'ipotesi nulla (denominatore). Il criterio per
 la costruzione della regione critica $R^{\ast}$ corrispondente è
 dunque \begin{equation}
-R^{\ast}=\left\{ (x_{1},...,x_{n})\ |\ S^{\ast}(x_{1},...,x_{n})=\frac{f_{\theta_{A}}(x_{1},...,x_{n})}{f_{\theta_{0}}(x_{1},...,x_{n})}>k_{1-\alpha}^{\ast}\right\} .\label{criterio neyman pearson}\end{equation}
+R^{\ast}=\left\{ (x_{1},...,x_{n})\ |\ S^{\ast}(x_{1},...,x_{n})=\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n};\theta_{0})}\geq k_{\alpha}^{\ast}\right\} .\label{criterio neyman pearson}\end{equation}
  L'interpretazione della relazione (\ref{criterio neyman pearson})
 è molto semplice ed intuitiva. Essa afferma che nella costruzione
 della regione critica (l'insieme delle osservazioni per le quali rigettare
@@ -6503,65 +6595,15 @@ l'ipotesi nulla) occorre tener conto del rapporto delle probabilità
 sotto le due ipotesi. La regione critica dovrà essere costituita da
 quelle osservazioni che forniscono la maggiore evidenza a favore dell'ipotesi
 alternativa (contro l'ipotesi nulla). La regione critica ottimale
-sarà dunque composta dalle realizzazioni con un alto rapporto $\frac{f_{\theta_{A}}(x_{1},...,x_{n})}{f_{\theta_{0}}(x_{1},...,x_{n})}$.
-La soglia $k_{1-\alpha}^{\ast}$ è determinata dalla condizione che
-l'errore di prima specie sia uguale al livello desiderato\[
-P_{H_{0}}(R^{\ast})=P_{H_{0}}(S^{\ast}>k_{1-\alpha}^{\ast})=\alpha.\]
+sarà dunque composta dalle realizzazioni con un alto rapporto $\frac{f(x_{1},...,x_{n};\theta_{A})}{f(x_{1},...,x_{n};\theta_{0})}$.
+La soglia $k_{\alpha}^{\ast}$ è determinata dalla condizione che
+l'errore di prima specie sia uguale al livello di significatività
+desiderato\[
+P_{H_{0}}(R^{\ast})=P_{H_{0}}(S^{\ast}\geq k_{\alpha}^{\ast})=\alpha.\]
  Così facendo, per un dato livello di errore di primo tipo $\alpha$,
 la potenza $\beta$ del test è massima e l'errore di secondo tipo
 $1-\beta$ minimo. 
 \end{itemize}
-%TCIMACRO{%
-%\TeXButton{TeX tabella 1}{\begin{table}[tbp]
-%\vspace{-1.2cm}
-%\caption{Elenco gioielli} \vspace{0.2cm} 
-%\label{table:esempio1_neyman_pearson} \centering\begin{tabular}{|c|r|r|r|}
-%\hline
-%\textbf{Gioiello} & \textbf{Peso (grammi)} & \textbf{Prezzo in Fr.} & 
-%\textbf{Prezzo/Peso} \\ \hline\hline
-%$g_{1}$ & 671 & 8'000 & 11'923 \\ 
-%$g_{2}$ & 1'717 & 1'000 & 582 \\ 
-%$g_{3}$ & 1'034 & 7'000 & 6'770 \\ 
-%$g_{4}$ & 1'756 & 7'000 & 3'986 \\ 
-%$g_{5}$ & 1'199 & 2'000 & 1'668 \\ 
-%$g_{6}$ & 886 & 1'000 & 1'129 \\ 
-%$g_{7}$ & 1'166 & 1'000 & 858 \\ 
-%$g_{8}$ & 1'040 & 2'000 & 1'923 \\ 
-%$g_{9}$ & 932 & 5'000 & 5'365 \\ 
-%$g_{10}$ & 1'380 & 7'000 & 5'072 \\ 
-%$g_{11}$ & 1'769 & 10'000 & 5'653 \\ 
-%$g_{12}$ & 1'686 & 2'000 & 1'186 \\ 
-%$g_{13}$ & 902 & 6'000 & 6'652 \\ 
-%$g_{14}$ & 1'257 & 3'000 & 2'387 \\ 
-%$g_{15}$ & 1'768 & 3'000 & 1'697 \\ 
-%$g_{16}$ & 528 & 5'000 & 9'470 \\ 
-%$g_{17}$ & 1'676 & 6'000 & 3'580 \\ 
-%$g_{18}$ & 1'523 & 10'000 & 6'566 \\ 
-%$g_{19}$ & 1'666 & 9'000 & 5'402 \\ 
-%$g_{20}$ & 1'456 & 3'000 & 2'060 \\ 
-%$g_{21}$ & 871 & 10'000 & 11'481 \\ 
-%$g_{22}$ & 988 & 4'000 & 4'049 \\ 
-%$g_{23}$ & 1'190 & 6'000 & 5'042 \\ 
-%$g_{24}$ & 540 & 7'000 & 12'963 \\ 
-%$g_{25}$ & 831 & 5'000 & 6'017 \\ 
-%$g_{26}$ & 802 & 6'000 & 7'481 \\ 
-%$g_{27}$ & 900 & 8'000 & 8'889 \\ 
-%$g_{28}$ & 1'679 & 6'000 & 3'574 \\ 
-%$g_{29}$ & 1'166 & 6'000 & 5'146 \\ 
-%$g_{30}$ & 1'980 & 5'000 & 2'525 \\ 
-%$g_{31}$ & 850 & 2'000 & 2'353 \\ 
-%$g_{32}$ & 676 & 10'000 & 14'793 \\ 
-%$g_{33}$ & 1'399 & 3'000 & 2'144 \\ 
-%$g_{34}$ & 1'883 & 3'000 & 1'593 \\ 
-%$g_{35}$ & 2'535 & 7'000 & 2'761 \\ 
-%$g_{36}$ & 814 & 9'000 & 11'057 \\ 
-%$g_{37}$ & 853 & 2'000 & 2'345 \\ 
-%$g_{38}$ & 1'488 & 2'000 & 1'344 \\ 
-%$g_{39}$ & 1'430 & 2'000 & 1'399 \\ 
-%$g_{40}$ & 1'113 & 1'000 & 898 \\ \hline
-%Totale & 50'000 & 202'000 &  \\ \hline\hline
-%\end{tabular}\end{table}}}%
-%BeginExpansion
 %
 \begin{table}
 \vspace{-1.2cm}
@@ -6621,60 +6663,6 @@ Totale  & 50'000  & 202'000  & \tabularnewline
 \end{table}
 
 
-%EndExpansion
-
-
-%TCIMACRO{%
-%\TeXButton{TeX tabella2}{\begin{table}[tbp] 
-%\vspace{-1.2cm} 
-%\caption{Elenco gioielli ordinati secondo $P_{r}/P_{s}$} \vspace{0.2cm} 
-%\label{table:esempio2_neyman_pearson}
-%\centering
-%\begin{tabular}{|c|r|r|r|}
-%\hline
-%\textbf{Gioiello} & \textbf{Prezzo/Peso} & \textbf{Peso Cumulato} & \textbf{Prezzo Cumulato} \\ \hline\hline
-%$g_{32}$ & 14'792.9 & 676 & 10'000 \\ 
-%$g_{24}$ & 12'963.0 & 1'216 & 17'000 \\ 
-%$g_{1}$ & 11'922.5 & 1'887 & 25'000 \\ 
-%$g_{21}$ & 11'481.1 & 2'758 & 35'000 \\ 
-%$g_{36}$ & 11'056.5 & 3'572 & 44'000 \\ 
-%$g_{16}$ & 9'469.7 & 4'100 & 49'000 \\ 
-%$g_{27}$ & \textbf{8'888.9} & \textbf{5'000} & \textbf{57'000} \\ 
-%$g_{26}$ & 7'481.3 & 5'802 & 63'000 \\ 
-%$g_{3}$ & 6'769.8 & 6'836 & 70'000 \\ 
-%$g_{13}$ & 6'651.9 & 7'738 & 76'000 \\ 
-%$g_{18}$ & 6'566.0 & 9'261 & 86'000 \\ 
-%$g_{25}$ & 6'016.8 & 10'092 & 91'000 \\ 
-%$g_{11}$ & 5'652.9 & 11'861 & 101'000 \\ 
-%$g_{19}$ & 5'402.2 & 13'527 & 110'000 \\ 
-%$g_{9}$ & 5'364.8 & 14'459 & 115'000 \\ 
-%$g_{29}$ & 5'145.8 & 15'625 & 121'000 \\ 
-%$g_{10}$ & 5'072.5 & 17'005 & 128'000 \\ 
-%$g_{23}$ & 5'042.0 & 18'195 & 134'000 \\ 
-%$g_{22}$ & 4'048.6 & 19'183 & 138'000 \\ 
-%$g_{4}$ & 3'986.3 & 20'939 & 145'000 \\ 
-%$g_{17}$ & 3'580.0 & 22'615 & 151'000 \\ 
-%$g_{28}$ & 3'573.6 & 24'294 & 157'000 \\ 
-%$g_{35}$ & 2'761.3 & 26'829 & 164'000 \\ 
-%$g_{30}$ & 2'525.3 & 28'809 & 169'000 \\ 
-%$g_{14}$ & 2'386.6 & 30'066 & 172'000 \\ 
-%$g_{31}$ & 2'352.9 & 30'916 & 174'000 \\ 
-%$g_{37}$ & 2'344.7 & 31'769 & 176'000 \\ 
-%$g_{33}$ & 2'144.4 & 33'168 & 179'000 \\ 
-%$g_{20}$ & 2'060.4 & 34'624 & 182'000 \\ 
-%$g_{8}$ & 1'923.1 & 35'664 & 184'000 \\ 
-%$g_{15}$ & 1'696.8 & 37'432 & 187'000 \\ 
-%$g_{5}$ & 1'668.1 & 38'631 & 189'000 \\ 
-%$g_{34}$ & 1'593.2 & 40'514 & 192'000 \\ 
-%$g_{39}$ & 1'398.6 & 41'944 & 194'000 \\ 
-%$g_{38}$ & 1'344.1 & 43'432 & 196'000 \\ 
-%$g_{12}$ & 1'186.2 & 45'118 & 198'000 \\ 
-%$g_{6}$ & 1'128.7 & 46'004 & 199'000 \\ 
-%$g_{40}$ & 898.5 & 47'117 & 200'000 \\ 
-%$g_{7}$ & 857.6 & 48'283 & 201'000 \\ 
-%$g_{2}$ & 582.4 & 50'000 & 202'000 \\ \hline
-%\end{tabular}\end{table}}}%
-%BeginExpansion
 %
 \begin{table}
 \vspace{-1.2cm}
@@ -6732,9 +6720,6 @@ $g_{2}$  & 582.4  & 50'000  & 202'000 \tabularnewline
 \end{table}
 
 
-%EndExpansion
-
-
 \newpage{}
 
 
@@ -6745,19 +6730,21 @@ situazione. Supponiamo di osservare un campione di numerosità $n$
 estratto da una popolazione $X\sim N(\mu,\sigma^{2})$ con $\sigma^{2}$
 conosciuto. La famiglia parametrica $\mathcal{P}$ è dunque data da
 \[
-\mathcal{P}=\left\{ f_{\mu}(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}),\ \mu\in\mathbb{R}\right\} \text{.}\]
+\mathcal{P}=\left\{ f(x;\mu)=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\left(x-\mu\right)^{2}),\ \mu\in\mathbb{R}\right\} \text{.}\]
  Supponiamo di voler testare l'ipotesi nulla \[
-H_{0}:\mu=\mu_{0}\]
+H_{0}:\:\mu=\mu_{0}\]
  contro l'ipotesi alternativa \[
-H_{A}:\mu=\mu_{1}\]
- dove $\mu_{1}>\mu_{0}$. Qual è sotto queste condizioni il test più
-potente?\ Per rispondere a questa domanda applichiamo i risultati
-del lemma di Neyman e Pearson. La funzione di densità congiunta di
-$(X_{1},...,X_{n})$ è semplicemente il prodotto delle densità di
-$X_{1},...,X_{n}$\[
-f_{\mu}(x_{i})=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\left(x_{i}-\mu\right)^{2})\]
+H_{A}:\:\mu=\mu_{1},\]
+
+
+\noindent dove $\mu_{1}>\mu_{0}$. Qual è sotto queste condizioni
+il test più potente? Per rispondere a questa domanda applichiamo i
+risultati del lemma di Neyman e Pearson. La funzione di densità congiunta
+di $(X_{1},...,X_{n})$ è semplicemente il prodotto delle densità
+di $X_{1},...,X_{n}$\[
+f(x_{i};\mu)=\frac{1}{\sqrt{2\pi}\sigma}\exp(-\frac{1}{2\sigma^{2}}\left(x_{i}-\mu\right)^{2})\]
  e\begin{eqnarray*}
-f_{\mu}(x_{1},...,x_{n}) & = & \left(\frac{1}{\sqrt{2\pi}\sigma}\right)^{n}\exp(-\frac{1}{2\sigma^{2}}\left[\left(x_{1}-\mu\right)^{2}+...+\left(x_{n}-\mu\right)^{2}\right])\\
+f(x_{1},...,x_{n};\mu) & = & \left(\frac{1}{\sqrt{2\pi}\sigma}\right)^{n}\exp(-\frac{1}{2\sigma^{2}}\left[\left(x_{1}-\mu\right)^{2}+...+\left(x_{n}-\mu\right)^{2}\right])\\
  & = & \left(\frac{1}{\sqrt{2\pi}\sigma}\right)^{n}\exp(-\frac{1}{2\sigma^{2}}\sum\limits _{i=1}^{n}\left(x_{i}-\mu\right)^{2}).\end{eqnarray*}
  La statistica ottimale $S$ definita dal rapporto fra le densità
 del campione sotto l'ipotesi alternativa e quella nulla è data da\begin{eqnarray*}
@@ -6766,24 +6753,27 @@ S(x_{1},...,x_{n}) & = & \frac{f_{H_{A}}(x_{1},...,x_{n})}{f_{H_{0}}(x_{1},...,x
  & = & \exp\left(-\frac{1}{2\sigma^{2}}\left[\sum\limits _{i=1}^{n}\left(x_{i}-\mu_{1}\right)^{2}-\sum\limits _{i=1}^{n}\left(x_{i}-\mu_{0}\right)^{2}\right]\right)\\
  & = & \exp\left(-\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2\underset{n\overline{x}}{\underbrace{\sum\limits _{i=1}^{n}x_{i}}}\mu_{1}+2\underset{n\overline{x}}{\underbrace{\sum\limits _{i=1}^{n}x_{i}}}\mu_{0}\right]\right)\end{eqnarray*}
  La regione critica sappiamo essere definita dalla seguente formula$.$\[
-R=\left\{ (x_{1},...,x_{n})\ |\ S(x_{1},...,x_{n})>k_{\alpha}\right\} .\]
+R=\left\{ (x_{1},...,x_{n})\ |\ S(x_{1},...,x_{n})\geq k_{\alpha}\right\} .\]
  Otteniamo quindi \begin{equation}
-R=\left\{ (x_{1},...,x_{n})\ |\ \exp\left(-\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]\right)>k_{\alpha}\right\} ,\label{a1}\end{equation}
+R=\left\{ (x_{1},...,x_{n})\ |\ \exp\left(-\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]\right)\geq k_{\alpha}\right\} ,\label{a1}\end{equation}
  con $k_{\alpha}$ da determinare tramite il vincolo $P_{H_{0}}(R)=\alpha.$
 Poiché $n$, $\mu_{0}$, $\mu_{1}$ sono conosciuti possiamo riscrivere
 la (\ref{a1}) come\begin{eqnarray*}
-R & = & \left\{ (x_{1},...,x_{n})\ |\ -\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]>\ln(k_{\alpha})\right\} \\
- & = & \left\{ (x_{1},...,x_{n})\ |\ \left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]<-2\sigma^{2}\ln(k_{\alpha})\right\} \\
- & = & \left\{ (x_{1},...,x_{n})\ |\ -2n\left(\mu_{1}-\mu_{0}\right)\overline{x}<-2\sigma^{2}\ln(k_{\alpha})-n(\mu_{1}^{2}-\mu_{0}^{2})\right\} \\
- & = & \left\{ (x_{1},...,x_{n})\ |\ \overline{x}>\left[2\sigma^{2}\ln(k_{\alpha})+n(\mu_{1}^{2}-\mu_{0}^{2})\right]/2n\left(\mu_{1}-\mu_{0}\right)\right\} \\
- & = & \left\{ (x_{1},...,x_{n})\ |\ \overline{x}>\widetilde{k}_{\alpha}\right\} .\end{eqnarray*}
- Abbiamo sorprendentemente ottenuto il test basato sulla media campionaria
-incontrato ripetutamente in questo capitolo. La soglia $\widetilde{k}_{\alpha}$
-deve essere semplicemente scelta in modo che $P_{H_{0}}(R)=\alpha$.
-Il passaggio da $k_{\alpha}$ a $\widetilde{k}_{\alpha}$ è stato
-causato dalle trasformazioni che abbiamo applicato alla (\ref{a1}).
-Tuttavia queste trasformazoni non modificano la regione critica $R$,
-modificano solo la formula utilizzata per rappresentarla.
+R & = & \left\{ (x_{1},...,x_{n})\ |\ -\frac{1}{2\sigma^{2}}\left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]\geq\ln(k_{\alpha})\right\} \\
+ & = & \left\{ (x_{1},...,x_{n})\ |\ \left[n(\mu_{1}^{2}-\mu_{0}^{2})-2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\right]\leq-2\sigma^{2}\ln(k_{\alpha})\right\} \\
+ & = & \left\{ (x_{1},...,x_{n})\ |\ -2n\left(\mu_{1}-\mu_{0}\right)\overline{x}\leq-2\sigma^{2}\ln(k_{\alpha})-n(\mu_{1}^{2}-\mu_{0}^{2})\right\} \\
+ & = & \left\{ (x_{1},...,x_{n})\ |\ \overline{x}\geq\left[2\sigma^{2}\ln(k_{\alpha})+n(\mu_{1}^{2}-\mu_{0}^{2})\right]/2n\left(\mu_{1}-\mu_{0}\right)\right\} \\
+ & = & \left\{ (x_{1},...,x_{n})\ |\ \overline{x}\geq\widetilde{k}_{\alpha}\right\} .\end{eqnarray*}
+
+
+\noindent Abbiamo sorprendentemente ottenuto il test basato sulla
+media campionaria incontrato ripetutamente in questo capitolo. La
+soglia $\widetilde{k}_{\alpha}$ deve essere semplicemente scelta
+in modo che $P_{H_{0}}(R)=\alpha$. Il passaggio da $k_{\alpha}$
+a $\widetilde{k}_{\alpha}$ è stato causato dalle trasformazioni che
+abbiamo applicato alla (\ref{a1}). Tuttavia queste trasformazoni
+non modificano la regione critica $R$, modificano solo la formula
+utilizzata per rappresentarla.
 
 \bigskip{}
 
@@ -6792,11 +6782,11 @@ modificano solo la formula utilizzata per rappresentarla.
 Quando la popolazione è distribuita secondo la legge Normale con $\sigma^{2}$
 conosciuto il test sulla media è il miglior test (il più potente).
 Non a caso avevamo visto nel lungo Esempio \ref{esempio caseificio p1}
-che il test basato su $\overline{X}$ risultava essere più potente
-rispetto al test basato su $X_{\min}$. Notiamo inoltre che il risultato
-è indipendente dal valore di $\mu_{1}$. Questo significa che sotto
-l'ipotesi di normalità il test basato sulla media è il più potente
-non solo rispetto all'ipotesi alternativa semplice $H_{A}:\mu=\mu_{1}$
+che il test basato su $S=\overline{X}$ risultava essere più potente
+rispetto al test basato su $S=min(X_{1},\ldots,X_{n})$. Notiamo inoltre
+che il risultato è indipendente dal valore di $\mu_{1}$. Questo significa
+che sotto l'ipotesi di normalità il test basato sulla media è il più
+potente non solo rispetto all'ipotesi alternativa semplice $H_{A}:\mu=\mu_{1}$
 ma anche rispetto all'ipotesi alternativa multipla $H_{A}:\mu>\mu_{0}$.\newpage{}
 
 
@@ -6806,44 +6796,45 @@ Il calcolo della potenza del test basato sulla media è particolarmente
 istruttivo per analizzare la dipendenza di $\beta$ da $\mu_{0}$,
 $\mu_{1}$, $n$ ed $\alpha$. Sia dunque $X\sim N(\mu,\sigma^{2})$
 con $\sigma^{2}$ conosciuto e \[
-H_{0}:\mu=\mu_{0}\]
+H_{0}:\ \mu=\mu_{0}\]
  mentre l'ipotesi alternativa \[
-H_{A}:\mu=\mu_{1},\ \ \ \ \mu_{1}>\mu_{0}.\]
+H_{A}:\ \mu=\mu_{1},\ \ \ \ \mu_{1}>\mu_{0}.\]
  Prendendo il test basato sulla media abbiamo per il caso unilaterale
 destro che \[
-R=\left\{ (x_{1},...,x_{n})\ |\ \overline{x}>k_{1-\alpha}\right\} \]
- con la soglia critica $k_{1-\alpha}$ determinata tramite la solita
+R=\left\{ (x_{1},...,x_{n})\ |\ \overline{x}\geq k_{\alpha}\right\} \]
+ con la soglia critica $k_{\alpha}$ determinata tramite la solita
 equazione \[
-P_{H_{0}}(\overline{X}>k_{1-\alpha})=\alpha.\]
- Poiché sotto l'ipotesi nulla $\overline{X}\sim N(\mu_{0},\frac{\sigma^{2}}{n})$
+P_{H_{0}}(\overline{X}\geq k_{\alpha})=\alpha.\]
+ Poiché sotto l'ipotesi nulla $\overline{X}\sim N(\mu_{0},\frac{\sigma^{2}}{n})$,
 applichiamo la standardizzazione seguente\[
-P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}}>\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=\alpha\]
- Utilizzando la relazione $P\left(Z>\frac{\sqrt{n}\left(k_{1-\alpha}-\mu_{0}\right)}{\sigma}\right)=1-P\left(Z\leq\frac{\sqrt{n}\left(k_{1-\alpha}-\mu_{0}\right)}{\sigma}\right)$
+P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}}\geq\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=\alpha\]
+ Utilizzando la relazione $P\left(Z\geq\frac{\sqrt{n}\left(k_{\alpha}-\mu_{0}\right)}{\sigma}\right)=1-P\left(Z\leq\frac{\sqrt{n}\left(k_{\alpha}-\mu_{0}\right)}{\sigma}\right)$
 otteniamo\begin{equation}
-P\left(Z\leq\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=1-\alpha\text{.}\label{uguaglianza quantile standard}\end{equation}
- Poiché $z_{1-\alpha}$ è soluzione della precedente equazione, cioé\[
+P\left(Z\leq\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=1-\alpha\text{.}\label{uguaglianza quantile standard}\end{equation}
+ Poiché l'$1-\alpha$ quantile $z_{1-\alpha}$ è soluzione della precedente
+equazione, cioé\[
 P\left(Z\leq z_{1-\alpha}\right)=1-\alpha,\]
- ricaviamo il valore della soglia critica $k_{1-\alpha}$ uguagliando
+ ricaviamo il valore della soglia critica $k_{\alpha}$ uguagliando
 l'espressione nella (\ref{uguaglianza quantile standard}) a $z_{1-\alpha}$
 \begin{eqnarray}
-\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}} & = & z_{1-\alpha}\notag\\
-k_{1-\alpha} & = & \mu_{0}+z_{1-\alpha}\frac{\sigma}{\sqrt{n}}\text{.}\label{valore critico test sulla media normale}\end{eqnarray}
- La soglia critica $k_{1-\alpha}$ dipende dunque 
+\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}} & = & z_{1-\alpha}\notag\\
+k_{\alpha} & = & \mu_{0}+z_{1-\alpha}\frac{\sigma}{\sqrt{n}}\text{.}\label{valore critico test sulla media normale}\end{eqnarray}
+ La soglia critica $k_{\alpha}$ dipende dunque 
 \begin{itemize}
 \item da $\mu_{0}$, il valore di $\mu$ sotto l'ipotesi nulla, 
 \item dal livelo di significatività $\alpha$ che determinina indirettamente
 $z_{1-\alpha}$, 
 \item dalla numerosità del campione (quantità d'informazione disponibile). 
 \end{itemize}
-\noindent Una volta che $k_{1-\alpha}$ è stato fissato \emph{esso
-rimane costante}.\ Il calcolo della potenza del test presuppone il
-calcolo della probabilità $P(\overline{X}>k_{1-\alpha}\ |\ H_{A}$
-è vera$)$, cioè\begin{eqnarray*}
-\beta & = & P_{H_{A}}(\overline{X}>k_{1-\alpha})\\
- & = & P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{1}}{\sigma/\sqrt{n}}}}>\frac{k_{1-\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\\
- & = & P\left(Z>\frac{k_{1-\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\\
- & = & 1-P\left(Z\leq\frac{k_{1-\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\end{eqnarray*}
- Sostituendo l'espressione ricavata in precedenza per $k_{1-\alpha}$
+\noindent Una volta che $k_{\alpha}$ è stato fissato \emph{esso rimane
+costante}. Il calcolo della potenza del test presuppone il calcolo
+della probabilità $P(\overline{X}\geq k_{\alpha}\ |\ H_{A}$ è vera$)$,
+cioè\begin{eqnarray*}
+\beta & = & P_{H_{A}}(\overline{X}\geq k_{\alpha})\\
+ & = & P_{H_{A}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{1}}{\sigma/\sqrt{n}}}}\geq\frac{k_{\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\\
+ & = & P\left(Z\geq\frac{k_{\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\\
+ & = & 1-P\left(Z\leq\frac{k_{\alpha}-\mu_{1}}{\sigma/\sqrt{n}}\right)\end{eqnarray*}
+ Sostituendo l'espressione ricavata in precedenza per $k_{\alpha}$
 otteniamo la formula finale \begin{eqnarray}
 \beta & = & 1-P\left(Z\leq z_{1-\alpha}-\left(\mu_{1}-\mu_{0}\right)\frac{\sqrt{n}}{\sigma}\right)\label{formula potenza media}\\
  & = & 1-\Phi\left(z_{1-\alpha}-\left(\mu_{1}-\mu_{0}\right)\frac{\sqrt{n}}{\sigma}\right)\notag\end{eqnarray}
@@ -6899,12 +6890,12 @@ due ipotesi.
 \bigskip{}
 
 
-\noindent Questi calcoli di potenza vengono eseguiti prima di fare
-una stima. Ad esempio, supponiamo che per dato errore di prima specie
-$\alpha=5\%$ e ipotesi alternativa $\mu_{1}$ si desideri avere un
-errore di seconda specie $1-\beta=20\%$. La relazione data dalla
-formula (\ref{formula potenza media}) ci permette di determinare
-la numerosità del campione necessario \begin{eqnarray*}
+\noindent Questi calcoli di potenza vengono eseguiti prima di eseguire
+una stima per identificare la numerosità del campione. Ad esempio,
+supponiamo che per dato errore di prima specie $\alpha=5\%$ e ipotesi
+alternativa $\mu_{1}$ si desideri avere un errore di seconda specie
+$1-\beta=20\%$. La relazione data dalla formula (\ref{formula potenza media})
+ci permette di determinare la numerosità del campione necessario \begin{eqnarray*}
 \beta & = & 1-\Phi\left(z_{1-\alpha}-\left(\mu_{1}-\mu_{0}\right)\frac{\sqrt{n}}{\sigma}\right)\\
 1-\beta & = & \Phi\left(z_{1-\alpha}-\left(\mu_{1}-\mu_{0}\right)\frac{\sqrt{n}}{\sigma}\right).\end{eqnarray*}
  Poiché $z_{1-\beta}$ soddisfa $1-\beta=\Phi\left(z_{1-\beta}\right)$
@@ -6924,37 +6915,56 @@ n=\left(\frac{-0.841-1.645}{0.1}\right)^{2}=618.\]
 
 Il test sulla media fino ad ora considerato si basa sull'ipotesi di
 normalità della popolazione $X$. Vogliamo ora rinunciare all'ipotesi
-di normalità ed assumere unicamente che $X\sim F$ (non necessariamente
-Normale quindi) con $E(X)=\mu$\ e $V(X)=\sigma^{2}$. Per contro
-manteniamo l'ipotesi di $i.i.d.$ (indipendenza e medesima distribuzione)\ delle
-osservazioni $X_{1},...,X_{n}$. Come andrà effettuato ora il test
-sulla media? Supponiamo di voler testare \begin{eqnarray*}
-H_{0} & : & \mu=\mu_{0}\\
-H_{A} & : & \mu>\mu_{0}\end{eqnarray*}
- dato un livello di significatività $\alpha$ del $5\%$. Sebbene
-grazie alle proprietà del valore atteso e della varianza possiamo
-affermare che $\overline{X}\sim(\mu,\frac{\sigma^{2}}{n})$, la distribuzione
-di $\overline{X}$ non è più conosciuta. Questo pone un problema per
-la determinazione della regione critica ed in particolare della soglia
-$k_{1-\alpha}$:\[
-P_{H_{0}}(\overline{X}>k_{0.95})=0.05.\]
+di normalità ed assumere unicamente che la popolazione sia distribuita
+secondo una certa distribuzione $F$ (non necessariamente Normale
+quindi) con $E(X)=\mu$ e $V(X)=\sigma^{2}$. Scriveremo semplicemente
+$X\sim F(\mu,\sigma^{2}).$ Per contro manteniamo l'ipotesi di indipendenza
+e stessa distribuzione (detta ipotesi $i.i.d.$) delle osservazioni
+$X_{1},...,X_{n}$. Come andrà effettuato ora il test sulla media?
+Supponiamo di voler testare l'ipotesi nulla\[
+H_{0}:\:\mu=\mu_{0}\]
+contro l'ipotesi alternativa \[
+H_{A}:\:\mu>\mu_{0}\]
+ad un livello di significatività $\alpha$ del $5\%$. Sebbene grazie
+alle proprietà del valore atteso e della varianza possiamo affermare
+che $\overline{X}\sim(\mu,\frac{\sigma^{2}}{n})$, la distribuzione
+di $\overline{X}$ non è conosciuta. Questo pone un problema per la
+determinazione della regione critica ed in particolare della soglia
+$k_{\alpha}$\begin{eqnarray*}
+P_{H_{0}}(\overline{X} & \geq & k_{0.05})=0.05.\end{eqnarray*}
+Tuttavia proviamo ugualmente a standardizzare: \[
+P_{H_{0}}(\overline{X}-\mu_{0}\geq k_{0.05}-\mu_{0})=0.05\]
+e dividendo per \foreignlanguage{english}{$\sigma/\sqrt{n}$}
+
+\[
+P_{H_{0}}(\frac{\overline{X}_{n}-\mu_{0}}{\sigma/\sqrt{n}}\geq\frac{k_{0.05}-\mu_{0}}{\sigma/\sqrt{n}})=0.05.\]
 
 
 \bigskip{}
 
 
-\noindent Fortunatamente, per $n$ sufficientemente grandi, il teorema
-del limite centrale viene in nostro soccorso permettendoci di calcolare
-il valore di $k_{0.05}$ come se $X$ fosse $N(\mu,\sigma^{2})$ e
-quindi come se $\overline{X}\sim N(\mu,\frac{\sigma^{2}}{n})$. Infatti
-sappiamo che per un campione $X_{1},...,X_{n}$ di$\ n$ osservazioni
-indipendenti di $X\sim(\mu,\sigma^{2})$ \[
+\noindent Pur non conoscendo l'esatta distribuzione di \foreignlanguage{english}{$\frac{\overline{X}_{n}-\mu_{0}}{\sigma/\sqrt{n}}$}
+sappiamo che, per $n$ sufficientemente grande, il teorema del limite
+centrale viene in nostro soccorso permettendoci di calcolare il valore
+di $k_{0.05}$ come se $X$ fosse $N(\mu,\sigma^{2})$ e quindi come
+se $\overline{X}\sim N(\mu,\frac{\sigma^{2}}{n})$. Infatti, dato
+un campione $X_{1},...,X_{n}$ di $n$ osservazioni indipendenti ed
+identicamente distribuite $X\sim(\mu,\sigma^{2})$ \[
 \frac{\overline{X}_{n}-\mu}{\sigma/\sqrt{n}}\underset{n\rightarrow\infty}{\sim}N(0,1).\]
  Ma questo significa che, sotto l'ipotesi nulla\[
-P_{H_{0}}\left(\underset{\text{circa }Z}{\underbrace{\frac{\overline{X}_{n}-\mu_{0}}{\sigma/\sqrt{n}}}}>\frac{k_{0.95}-\mu_{0}}{\sigma/\sqrt{n}}\right)\underset{\text{circa}}{=}P\left(Z>\frac{k_{0.95}-\mu_{0}}{\sigma/\sqrt{n}}\right)=0.05.\]
- In pratica quindi, il teorema del limite centrale, per $n$ sufficientemente
-grandi, ci permette di eseguire il test sulla media come se la popolazione
-$X$ sia Normale.
+P_{H_{0}}\left(\underset{\text{circa }Z}{\underbrace{\frac{\overline{X}_{n}-\mu_{0}}{\sigma/\sqrt{n}}}}\geq\frac{k_{0.05}-\mu_{0}}{\sigma/\sqrt{n}}\right)\underset{\text{circa}}{=}P\left(Z\geq\frac{k_{0.05}-\mu_{0}}{\sigma/\sqrt{n}}\right)=0.05.\]
+
+
+\noindent Uguagliando $z_{0.95}$ a \foreignlanguage{english}{$\frac{k_{0.05}-\mu_{0}}{\sigma/\sqrt{n}}$}
+è infine possibile ottenere il valore della soglia critica $k_{0.05}.$
+Riassumendo, grazie al Teorema del limite centrale abbiamo che quando
+\begin{itemize}
+\item la varianza della popolazione è nota;
+\item le osservazioni sono indipendenti ed identicamente distribuite;
+\item \noindent il numero $n$ di osservazioni è sufficientemente grande;
+\end{itemize}
+\noindent il test sulla media è identico al caso in cui la popolazione
+è distribuita secondo la legge Normale.
 
 
 \section{Test di Student (t-test)}
@@ -6965,18 +6975,21 @@ volta consideriamo la situazione in cui la varianza $\sigma^{2}$
 della popolazione è sconosciuta. In questo contesto $\sigma^{2}$
 è detto parametro di disturbo (nuisance parameter) in quanto non è
 il parametro di immediato interesse. Le nostre ipotesi sono sempre\begin{eqnarray*}
-H_{0} & : & \mu=\mu_{0},\\
-H_{A} & : & \mu>\mu_{0}.\end{eqnarray*}
+H_{0} & :\: & \mu=\mu_{0},\\
+H_{A} & :\: & \mu>\mu_{0}.\end{eqnarray*}
  Bisogna stimare $\mu$ e $\sigma^{2}$ simultaneamente\begin{eqnarray*}
 \widehat{\mu} & = & \overline{X}=\frac{1}{n}\sum_{i=1}^{n}X_{i}\text{ (buon stimatore di }\mu),\\
 \widehat{\sigma}^{2} & = & \frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}\text{ (buon stimatore di }\sigma^{2}\text{, }E(\widehat{\sigma}^{2})=\sigma^{2}).\end{eqnarray*}
  Sappiamo che se $\sigma^{2}$ fosse conosciuto potremmo effettuare
-il test abituale andando a calcolare per un dato livello di significatività
-il valore critico $k_{1-\alpha}$:\begin{equation}
-P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}}>\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=\alpha.\label{rapporto t1}\end{equation}
- Potremmo pensare di fare la stessa cosa sostituendo a $\sigma$ sconosciuto
-la stima $\widehat{\sigma}$. In tal caso però la quantità $\frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}$
-consiste nel rapporto di due variabili casuali che riscriviamo come
+il test abituale andando a calcolare per dato livello di significatività
+$\alpha$ il valore critico $k_{\alpha}$:\begin{equation}
+P_{H_{0}}\left(\underset{Z\sim N(0,1)}{\underbrace{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}}\geq\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}\right)=\alpha.\label{rapporto t1}\end{equation}
+
+
+\noindent Potremmo pensare di fare la stessa cosa sostituendo a $\sigma$
+sconosciuto la stima $\widehat{\sigma}$. In tal caso però la quantità
+$\frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}$ consiste
+nel rapporto di due variabili casuali che possiamo riscrivere come
 segue \[
 \frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}=\frac{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}{\widehat{\sigma}/\sigma}\]
 
@@ -6989,51 +7002,79 @@ $\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}\sim N(0,1)$.
 \end{itemize}
 \noindent Sostituendo $\widehat{\sigma}$ a $\sigma$ nella (\ref{rapporto t1})
 e considerando quanto detto otteniamo \begin{equation}
-P_{H_{0}}\left(\underset{\sim\ ?}{\underbrace{\frac{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}{\widehat{\sigma}/\sigma}}}>\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right)=\alpha.\label{rapporto t2}\end{equation}
+P_{H_{0}}\left(\underset{\sim\ ?}{\underbrace{\frac{\frac{\overline{X}-\mu_{0}}{\sigma/\sqrt{n}}}{\widehat{\sigma}/\sigma}}}\geq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right)=\alpha.\label{rapporto t2}\end{equation}
  La nostra statistica rappresenta quindi il rapporto tra 2 variabili
 casuali. La soluzione a questo problema è in due tappe: 
 \begin{enumerate}
 \item Derivazione della distribuzione del denominatore 
 \item Derivazione della distribuzione del rapporto 
 \end{enumerate}
-\noindent Vedremo che la distribuzione del denominatore dipende direttamente
-dalla distribuzione $\chi_{m}^{2}$ (Chi-2).
+\noindent Vedremo che la distribuzione del denominatore è data dalla
+distribuzione $\chi_{m}^{2}$ (Chi-2).
 
 
 \subsection{La distribuzione $\chi_{m}^{2}$}
 
 La distribuzione Chi-2, notata $\chi_{m}^{2}$, con $m$ gradi di
 libertà è definita come la somma del quadrato di $m$ variabili aleatorie
-normali standard indipendenti. $Z_{1},Z_{2},...,Z_{m}$ $i.i.d.$
-$N(0,1)$. \[
-V=\sum\limits _{n=1}^{m}Z_{n}^{2}\sim\chi_{m}^{2}.\]
+normali standard indipendenti $Z_{1}$, $Z_{2}$, $\ldots$, $Z_{m}\sim N(0,1)$.
+\[
+X=\sum\limits _{n=1}^{m}Z_{n}^{2}\sim\chi_{m}^{2}.\]
 
 \begin{itemize}
 \item Funzione di densità:\[
-f(v,m)=\frac{1}{2^{\frac{m}{2}}\Gamma(\frac{m}{2})}\exp(-\frac{v}{2})v^{\frac{m}{2}-1}\]
+f(x,m)=\frac{1}{2^{\frac{m}{2}}\Gamma(\frac{m}{2})}\exp(-\frac{x}{2})x^{\frac{m}{2}-1}\]
  dove\[
 \Gamma(y)=\int\limits _{0}^{\infty}\exp(-u)u^{y-1}du\]
 
 \item Calcolo:\[
-P(V\leq x)=\int\limits _{0}^{x}f(v,m)dv\]
+P(X\leq x)=\int\limits _{0}^{x}f(y,m)dy\]
  oppure in Excel o Openoffice tramite la funzione $CHIDIST(x,m)$.
 Attenzione: la funzione $CHIDIST(x,m)=P(V>x)$. 
 \end{itemize}
+%
+\begin{figure}
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{codiceR/grafici/densitaChi2}
+\par\end{centering}
+
+\caption{Funzione di densità della distribuzione $\chi_{m}^{2}$, $m=2,5.$}
+
+
+
+\end{figure}
+
+
 
 \subsection{La distribuzione di Student (o distribuzione-t)}
 
-\begin{definizione} Distribuzione-t. Siano $Z\sim N(0,1)$ e $V\sim\chi_{m}^{2}$
+\begin{definizione} Distribuzione-t. Siano $Z\sim N(0,1)$ e $X\sim\chi_{m}^{2}$
 due variabili aleatorie indipendenti. Il raporto \[
-\frac{Z}{\sqrt{\frac{V}{m}}}\sim t_{m}\]
- segue una distribuzione di student a $m$ gradi di libertà. \end{definizione}
+\frac{Z}{\sqrt{\frac{X}{m}}}\sim t_{m}\]
+ segue una distribuzione di student a $m$ gradi di libertà, abbreviato
+$m$ g.l.. \end{definizione}
 
-\noindent La distribuzione-t è simile alla Normale, simmetrica rispetto
-allo zero, ma possiede delle code più pesanti (tendono meno velocemente
-a zero rispetto alla distribuzione Normale). Come per la distribuzione
-Normale standard esistono delle tavole per il calcolo dell' $\alpha-$quantile.
-A differenza della distribuzione Normale, per la distribuzione $t$
-occorre specificare oltre alla probabilità $\alpha$ anche i gradi
-di libertà $m$ desiderati.
+\noindent La distribuzione di Student è simile alla distribuzione
+Normale standard. Essa è simmetrica rispetto allo zero, ma possiede
+delle code più pesanti (tendono meno velocemente a zero rispetto alla
+distribuzione Normale). Come per la distribuzione Normale standard
+esistono delle tavole per il calcolo dell' $\alpha-$quantile. A differenza
+della distribuzione Normale standard, per la distribuzione $t$ occorre
+specificare oltre alla probabilità $\alpha$ anche i gradi di libertà
+$m$ desiderati. Una caratteristica della distribuzione di Student
+consiste nel fatto che all'aumentare dei gradi di libertà essa si
+avvicina sempre più alla distribuzione Normale standard.%
+\begin{figure}
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{codiceR/grafici/densitaStudent}
+\par\end{centering}
+
+\caption{Confronto tra la densità Normale standard e la Student.}
+
+
+
+\end{figure}
+
 
 
 \subsection{Il $t$-test}
@@ -7054,8 +7095,8 @@ W & = & \frac{1}{\sigma^{2}}\sum\limits _{i=1}^{n}(X_{i}-\mu)^{2}\\
  è una $\chi_{n}^{2}$. Tuttavia $\mu$ è sconosciuto e va sostituito
 con $\overline{X}$. Poiché \[
 \sum\limits _{i=1}^{n}\left(X_{i}-\overline{X}\right)=0\]
- abbiamo in realtà solo $n-1$ gradi di libertà nella \textquotedblright{}scelta\textquotedblright{}\ di
-$X_{1}-\overline{X}$, $X_{2}-\overline{X}$, ..., $X_{n}-\overline{X}$:
+ abbiamo in realtà solo $n-1$ gradi di libertà nella \textquotedblright{}scelta\textquotedblright{}
+di $X_{1}-\overline{X}$, $X_{2}-\overline{X}$, ..., $X_{n}-\overline{X}$:
 l'ultima osservazione non può essere scelta come si vuole in quanto
 la somma deve essere $0$.%
 }.
@@ -7068,24 +7109,30 @@ del test sulla media con la sola differenza che la varianza sconosciuta
 va sostituita con lo stimatore $\widehat{\sigma}^{2}=\frac{1}{n-1}\sum_{i=1}^{n}(X_{i}-\overline{X})^{2}$.
 Il calcolo della soglia critica $k_{\alpha}$ andrà poi modificato
 come segue. Sotto l'ipotesi nulla \begin{eqnarray*}
-P_{H_{0}}\left(\underset{\sim t_{n-1}}{\underbrace{\frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}}}>\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
-P\left(t_{n-1}>\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\end{eqnarray*}
+P_{H_{0}}\left(\underset{\sim t_{n-1}}{\underbrace{\frac{\overline{X}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}}}\geq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
+P\left(t_{n-1}\geq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\end{eqnarray*}
  Il procedimento è \emph{identico} a quello con la Normale:\begin{eqnarray*}
-1-P\left(t_{n-1}\leq\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
-P\left(t_{n-1}\leq\frac{k_{1-\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & 1-\alpha.\end{eqnarray*}
- È dunque necessario derivare l' $1-\alpha$-quantile della distribuzione
-di Student a $n-1$ gradi di libertà che notiamo con $t_{1-\alpha,n-1}$.
-Infine, uguagliando $t_{1-\alpha,n-1}$ a $\frac{k_{1-\alpha}-\mu_{0}}{\sigma/\sqrt{n}}$
+1-P\left(t_{n-1}\leq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & \alpha\\
+P\left(t_{n-1}\leq\frac{k_{\alpha}-\mu_{0}}{\widehat{\sigma}/\sqrt{n}}\right) & = & 1-\alpha.\end{eqnarray*}
+
+
+\noindent È dunque necessario derivare l' $1-\alpha$-quantile della
+distribuzione di Student a $n-1$ gradi di libertà che notiamo con
+$t_{1-\alpha,n-1}$. Infine, uguagliando $t_{1-\alpha,n-1}$ a $\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}}$
 si ottiene il valore di $k_{\alpha}$:\begin{equation}
 k_{\alpha}=\mu_{0}+t_{1-\alpha,n-1}\widehat{\sigma}/\sqrt{n}.\label{valore critico test sulla media t}\end{equation}
- Confrontanto la (\ref{valore critico test sulla media t}) con la
-versione corrispondente (\ref{valore critico test sulla media normale})
-nel caso in cui la varianza $\sigma^{2}$ è conosciuta notiamo che
-la vera deviazione standard $\sigma$ è stata sostituita con la deviazione
-standard stimata e l' $1-\alpha$-quantile della distribuzione Normale
-è stato rimpiazzato dall'$1-\alpha$-quantile della distribuzione
-$t$ a $n-1$ gradi di libertà.
 
+
+\noindent Confrontanto la (\ref{valore critico test sulla media t})
+con la versione corrispondente (\ref{valore critico test sulla media normale})
+nel caso in cui la varianza $\sigma^{2}$ è conosciuta notiamo che 
+\begin{itemize}
+\item \noindent la vera deviazione standard $\sigma$ è stata sostituita
+con la deviazione standard stimata e 
+\item \noindent l' $1-\alpha$-quantile della distribuzione Normale è stato
+rimpiazzato dall'$1-\alpha$-quantile della distribuzione $t$ a $n-1$
+gradi di libertà.
+\end{itemize}
 
 \section{Altri test}
 
@@ -7095,14 +7142,18 @@ $t$ a $n-1$ gradi di libertà.
 Il test che tratteremo in questo paragrafo riguarda il confronto fra
 due gruppi di osservazioni campionate da due popolazioni distinte.
 Le osservazioni della prima popolazione sono indicate con $X_{1},...,X_{m}$
-mentre quelle della seconda con $Y_{1},...,Y_{n}$. Gli interi $m$
-ed $n$ indicano la numerosità del primo e rispettivamente del secondo
-campione. In medicina, psicologia, economia e nelle scienze sociali
-in genere capita sovente di dover determinare l'efficacia di un nuovo
+mentre quelle della se\-con\-da con $Y_{1},...,Y_{n}$. Gli interi
+$m$ ed $n$ indicano la numerosità del primo e rispettivamente del
+secondo campione. In medicina, psicologia, economia e nelle scienze
+sociali capita sovente di dover determinare l'efficacia di un nuovo
 medicamento, la validità di un nuovo metodo d'insegnamento, l'effetto
-di una campagna pubblicitaria, ecc. Per questo motivo si è soliti
-raccogliere dati su due popolazioni fra loro ben distinte, notate
-appunto $X$ e $Y$.\vspace{1cm}
+di una campagna pubblicitaria e via dicendo. Per questo motivo si
+è soliti raccogliere dati su due popolazioni fra loro ben distinte%
+\footnote{Può capitare che la popolazione sia la stessa, ma i campionamenti
+siano effettuati ad istanti temporali diversi. In tal caso si desidera
+verificare se il valore atteso della distribuzione della popolazione
+sotto esame ha subito un cambiamento.%
+}, notate appunto $X$ e $Y$.\vspace{1cm}
 
 
 \begin{center}
@@ -7121,12 +7172,12 @@ marketing  & dopo la campagna pubb.  & prima della campagna pubb.\tabularnewline
 \noindent Il parametro d'interesse in questo caso è il valore atteso
 delle due popolazioni. Infatti, se le due popolazioni hanno valore
 atteso diverso significa che l'azione da noi intrapresa ha avuto l'effetto
-sperato. Generalmente si è soliti utilizzare l'ipotesi nulla: le due
-popolazioni possiedono lo stesso valore atteso. La speranza è dunque
-quella di rifiutare l'ipotesi nulla. Studieremo ora come effettuare
-il test quando le due popolazioni possiedono la stessa varianza (parleremo
-in tal caso di omoschedasticità) e quando invece possiedono varianza
-diversa (caso questo di eteroschedasticità).
+sperato. Generalmente si è soliti scegliere quale ipotesi nulla l'ipotesi
+che le due popolazioni possiedono lo stesso valore atteso. La speranza
+è dunque quella di rifiutare l'ipotesi nulla. Studieremo ora come
+effettuare il test quando le due popolazioni possiedono la stessa
+va\-rian\-za (parleremo in tal caso di omoschedasticità) e quando
+invece possiedono varianza diversa (caso questo di eteroschedasticità).
 
 
 \subsubsection{Caso 1: homoschedasticità delle due popolazioni}
@@ -7140,8 +7191,9 @@ popolazione $X\sim N(\mu_{x},\sigma_{x}^{2})$
 \item Le osservazioni $Y_{1},...,Y_{n}$ formano un campione di osservazioni
 $i.i.d.$ (indipendenti ed identicamente distribuite) estratte dalla
 popolazione $Y\sim N(\mu_{y},\sigma_{y}^{2})$ 
-\item La varianza della popolazione $X$ è la stessa della popolazione $Y$:
-$\sigma_{x}^{2}=\sigma_{y}^{2}=\sigma^{2}$. $\sigma^{2}$ è sconosciuta. 
+\item La varianza della popolazione $X$ è la stessa della popolazione $Y$:\[
+\sigma_{x}^{2}=\sigma_{y}^{2}=\sigma^{2}.\]
+Inoltre $\sigma^{2}$ è sconosciuta. 
 \item Per ogni $X_{i}$ in $X_{1},...,X_{m}$ e $Y_{j}$ in $Y_{1},...,Y_{n}$
 vale che $X_{i}$ e $Y_{j}$ sono fra loro indipendenti. 
 \end{enumerate}
@@ -7160,7 +7212,9 @@ cov(\overline{X},\overline{Y}) & = & cov(\frac{1}{m}\sum\limits _{i=1}^{m}X_{i},
 \begin{eqnarray*}
 V(\overline{X}-\overline{Y}) & = & V(\overline{X})+V(\overline{Y})-2cov(\overline{X},\overline{Y})\\
  & = & \frac{\sigma^{2}}{m}+\frac{\sigma^{2}}{n}=\left(\frac{1}{m}+\frac{1}{n}\right)\sigma^{2}\ .\end{eqnarray*}
- Sotto l'ipotesi nulla la differenza $\overline{X}-\overline{Y}$
+
+
+\noindent Sotto l'ipotesi nulla la differenza $\overline{X}-\overline{Y}$
 sarà distribuita secondo la legge Normale, con valore atteso $0$
 e varianza $\left(\frac{1}{m}+\frac{1}{n}\right)\sigma^{2}$. Poiché
 $\sigma^{2}$ è sconosciuto andrà stimato. Lo stimatore da utilizzarsi
@@ -7168,13 +7222,14 @@ in questo caso è\[
 \widehat{\sigma}^{2}=\frac{1}{m+n-2}\left(\sum_{i=1}^{m}\left(x_{i}-\overline{x}\right)^{2}+\sum_{j=1}^{n}\left(y_{i}-\overline{y}\right)^{2}\right)\]
 
 
-$H_{0}:\mu_{x}=\mu_{y}$
+\noindent La statistica 
 
 \[
 \tau=\frac{\overline{X}-\overline{Y}}{\sqrt{\left(\frac{1}{m}+\frac{1}{n}\right)\widehat{\sigma}^{2}}}\]
- sotto l'ipotesi nulla \[
+ sotto l'ipotesi nulla $H_{0}:\:\mu_{x}=\mu_{y}$ è distribuita secondo
+la distribuzione di Student \[
 \tau\sim t_{m+n-2}\]
- gradi di libertà.
+ con $m+n-2$ gradi di libertà.
 
 
 \subsubsection{Caso 2: eteroschedasticità delle due popolazioni}
@@ -7184,12 +7239,15 @@ così come le ipotesi di indipendenza fra i rispettivi campioni rimangono
 invariate. Solo l'ipotesi numero tre riguardante l'uguaglianza delle
 varianze delle due popolazioni viene a cadere nel senso che non sarà
 necessariamente vero che $\sigma_{x}^{2}=\sigma_{y}^{2}$. L'ipotesi
-nulla rimane immutata, cioè $H_{0}:\mu_{x}=\mu_{y}$. In questo caso
-avremo \begin{eqnarray*}
+nulla rimane invariata, cioè \[
+H_{0}:\mu_{x}=\mu_{y}.\]
+
+
+\noindent In questo caso avremo \begin{eqnarray*}
 V(\overline{X}) & = & \frac{\sigma_{x}^{2}}{m}\\
 V(\overline{Y}) & = & \frac{\sigma_{y}^{2}}{n}\end{eqnarray*}
  \[
-cov(\overline{X},\overline{Y})=0\]
+cov(\overline{X},\overline{Y})=0.\]
  La varianza di $\overline{X}-\overline{Y}$ sarà dunque uguale a
 \begin{eqnarray*}
 V(\overline{X}-\overline{Y}) & = & V(\overline{X})+V(\overline{Y})-2cov(\overline{X},\overline{Y})\\
@@ -7204,10 +7262,10 @@ stimatore usuale, ovvero\begin{eqnarray*}
 \tau\text{ circa}\sim t_{k}\]
  dove $k=\min(m-1,n-1)$.
 
-\begin{remark} In caso di eteroschedasticità la distribuzione della
-statistica $\tau$ non è conosciuta ma è approssimabile tramite una
-distribuzione $t$ a $k=\min(m-1,n-1)$ gradi di libertà (problema
-di Behrens-Fisher). \end{remark}
+\begin{remark} Riassumendo, in caso di eteroschedasticità e varianze
+sconosciute la distribuzione della statistica $\tau$ non è nota ma
+è approssimabile tramite una distribuzione $t$ a $k=\min(m-1,n-1)$
+gradi di libertà (problema di Behrens-Fisher). \end{remark}
 
 
 \subsection{Test per la dispersione su singolo campione}
@@ -7218,33 +7276,46 @@ osservazioni indipendenti ed identicamente distribuite $X_{1},...,X_{n}$
 sia stato estratto dalla popolazione $X\sim N(\mu,\sigma^{2})$ con
 $\mu$ e $\sigma^{2}$ entrambi sconosciuti. Supponiamo inoltre di
 voler testare l'ipotesi nulla \[
-H_{0}:\sigma=\sigma_{0}\]
- contro l'ipotesi alternativa\[
-H_{A}:\sigma>\sigma_{0}.\]
- In questo caso $\sigma$ è il parametro d'interesse mentre $\mu$
-è il parametro di disturbo (nel $t$-test visto in precedenza era
-$\sigma$ ad essere il parametro di disturbo e $\mu$ quello d'interesse).
+H_{0}:\:\sigma=\sigma_{0}\]
+contro l'ipotesi alternativa\[
+H_{A}:\:\sigma>\sigma_{0}.\]
+
+
+\noindent In questo caso $\sigma$ è il parametro d'interesse mentre
+$\mu$ è il parametro di disturbo (nel $t$-test visto in precedenza
+era $\sigma$ ad essere il parametro di disturbo e $\mu$ quello d'interesse).
 Prendiamo quale statistica del test\[
 S(X_{1},...,X_{n})=\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}},\]
- con $\sigma^{2}$ stimata col \textquotedblright{}solito\textquotedblright{}\
+ con $\sigma^{2}$ stimata col \textquotedblright{}solito\textquotedblright{}
 stimatore \[
 \widehat{\sigma}^{2}=\frac{1}{n-1}\sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}.\]
- Quindi un rapporto $\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}>1$
-sarà evidenza negativa contro l'ipotesi nulla (tanto più estremo sarà
-questo rapporto e tanto maggiore sarà l'evidenza contro $H_{0}$)
-mentre se $\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}\approx1$ non
-si rifiuterà l'ipotesi nulla. Si può dimostrare che sotto l'ipotesi
+Un quantità osservata $\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}>1$
+sarà evidenza negativa contro l'ipotesi nulla (tanto più estremo verso
+destra sarà questo rapporto e tanto maggiore sarà l'evidenza contro
+$H_{0}$) mentre se $\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}\approx1$
+non si rifiuterà l'ipotesi nulla. Si può dimostrare che sotto l'ipotesi
 nulla \[
 (n-1)S(X_{1},...,X_{n})=\left(n-1\right)\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}=\sum_{i=1}^{n}\left(\frac{X_{i}-\overline{X}}{\sigma_{0}}\right)^{2}\underset{H_{0}}{\sim}\chi_{n-1}^{2}\]
-
-
 Costruzione della regione critica (zona di rifiuto di $H_{0}$) ad
 un livello di significatività $\alpha$:\[
-R=\left\{ \left(x_{1},...,x_{n}\right)\ |\ (n-1)S>k_{1-\alpha}\right\} \]
+R=\left\{ \left(x_{1},...,x_{n}\right)\ |\ (n-1)S\geq k_{\alpha}\right\} \]
  con \[
-P_{H_{0}}\left(\underset{\chi_{n-1}^{2}}{\underbrace{(n-1)S\ }}>\ k_{1-\alpha}\right)=\alpha\text{ cioè }k_{1-\alpha}=\chi_{n-1,1-\alpha}^{2}\]
- Quindi se $\left(n-1\right)\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}>k_{1-\alpha}$
-rifiuto $H_{0}$ altrimenti non rifiuto.
+P_{H_{0}}\left(\underset{\chi_{n-1}^{2}}{\underbrace{(n-1)S\ }}\geq\ k_{\alpha}\right)=\alpha,\]
+ il che equivale a dire che $k_{\alpha}$ corrisponde all'$1-\alpha$
+quantile della distribuzione Chi-2 con $n-1$ gradi di libertà: \foreignlanguage{english}{$k_{\alpha}=\chi_{n-1,1-\alpha}^{2}$}.
+Per concludere, se $\left(n-1\right)\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}}\geq k_{\alpha}$
+rifiuto l'ipotesi nulla $H_{0}$ altrimenti non la rifiuto.%
+\begin{figure}
+\noindent \begin{centering}
+\includegraphics[scale=0.4]{codiceR/grafici/Test_densitaChi2}
+\par\end{centering}
+
+\caption{Test per la dispersione su singolo campione ($n=6,\alpha=5\%$).}
+
+
+
+\end{figure}
+
 
 
 \subsection{Test per la dispersione su due campioni (F-Test)}
@@ -7263,9 +7334,9 @@ vale che $X_{i}$ e $Y_{j}$ sono fra loro indipendenti.
 \item $\mu_{x},\sigma_{x}^{2}$ e $\mu_{y},\sigma_{y}^{2}$ sono sconosciuti. 
 \end{enumerate}
 \noindent Desideriamo testare l'ipotesi nulla:\[
-H_{0}:\sigma_{x}=\sigma_{y}\]
+H_{0}:\:\sigma_{x}=\sigma_{y}\]
  contro l'ipotesi alternativa \[
-H_{A}:\sigma_{x}>\sigma_{y}.\]
+H_{A}:\:\sigma_{x}>\sigma_{y}.\]
  Stimiamo le varianze $\sigma_{x}^{2}$ e $\sigma_{y}^{2}$ delle
 due popolazioni con lo stimatore abituale:\begin{eqnarray*}
 \widehat{\sigma}_{x}^{2} & = & \frac{1}{m-1}\sum_{i=1}^{m}\left(X_{i}-\overline{X}\right)^{2}\\
@@ -7287,21 +7358,30 @@ standardizzate e tali che
 h=\frac{\frac{U}{l}}{\frac{V}{k}}\sim F_{l,k}\text{ {\small(rapporto di due }}\chi^{2}\text{{\small\ standardizzate).}}\]
  \end{definizione}
 
-Costruzione della regione critica (zona di rifiuto di $H_{0}$) ad
-un livello di significatività $\alpha$:\[
-R=\left\{ \left(x_{1},...,x_{n},y_{1},...,y_{n}\right)\ |\ \frac{\widehat{\sigma}_{x}^{2}}{\widehat{\sigma}_{y}^{2}}>k_{1-\alpha}\right\} \]
+\noindent Ragionando sulla struttura della statistica $S$ (\foreignlanguage{english}{$\widehat{\sigma}_{x}^{2}$}
+a numeratore e \foreignlanguage{english}{$\widehat{\sigma}_{y}^{2}$}
+a denominatore) deduciamo che l'osservazione di un valore elevato
+costituisce evidenza a favore dell'ipotesi alternativa e contro l'ipotesi
+nulla. Si tratta ancora una volta di un test unilaterale destro. La
+costruzione della regione critica (zona di rifiuto di $H_{0}$) ad
+un livello di significatività $\alpha$ è la seguente:\[
+R=\left\{ \left(x_{1},...,x_{n},y_{1},...,y_{n}\right)\ |\ \frac{\widehat{\sigma}_{x}^{2}}{\widehat{\sigma}_{y}^{2}}\geq k_{\alpha}\right\} \]
  con \[
-P_{H_{0}}\left(\underset{F_{m-1,n-1}}{\underbrace{\frac{\widehat{\sigma}_{x}^{2}}{\widehat{\sigma}_{y}^{2}}\ }}>\ k_{1-\alpha}\right)=\alpha\text{ cioè }k_{\alpha}=F_{m-1,n-1;1-\alpha}.\]
+P_{H_{0}}\left(\underset{F_{m-1,n-1}}{\underbrace{\frac{\widehat{\sigma}_{x}^{2}}{\widehat{\sigma}_{y}^{2}}\ }}\geq\ k_{\alpha}\right)=\alpha\text{ cioè }k_{\alpha}=F_{m-1,n-1;1-\alpha}.\]
 
+
+\noindent $k_{\alpha}$ è dunque l'$1-\alpha$ quantile della distribuzione
+$F$ con $m-1$ e $n-1$ gradi di libertà.
 
 
 \subsection{Test di conformità}
 
-Il test di conformità (\textquotedblright{}goodness-of-fit\textquotedblright{}\ test)
-non è un test su un'ipotesi parametrica. Ciò che si desidera verificare
-è se la distribuzione dei dati è uguale ad una distribuzione data
-(ad esempio Normale, di Pareto, esponenziale, ecc.) che indicheremo
-con $F$.
+Il test di conformità (\textquotedblright{}goodness-of-fit\textquotedblright{}
+test) non è un test su un'ipotesi parametrica. Infatti, con il test
+di conformità si desidera verificare se la distribuzione della popolazione
+dalla quale è estratto il campione corrisponde ad una distribuzione
+data (ad esempio Normale, di Pareto, esponenziale, ecc.) che indicheremo
+qui con $F$.
 
 \begin{esempio} Distribuzione dei redditi. Vogliamo vedere se la
 distribuzione dei dati $X_{1},...,X_{n}$ è compatibile con l'ipotesi
@@ -7312,13 +7392,13 @@ f(x)=k\frac{x_{0}^{k}}{x^{k+1}}\ \ \ \text{per }x\geq x_{0},\]
 di ripartizione di $X$ è data da\[
 F(x)=1-\left(\frac{x}{x_{0}}\right)^{-k}.\]
  Al fine di costruire il test dovremo, partendo dalle osservazioni,
-costruire delle classi di reddito, che noteremo con $c_{1},c_{2},...,c_{K}$.
-\end{esempio}
+costruire degli intervalli (o classi) di reddito, che noteremo con
+$c_{1},c_{2},...,c_{K}$. \end{esempio}
 
 \bigskip{}
 
 
-$\hspace{1em}*{-2.2cm}\begin{tabular}{|c|c|c|c|c|c|}
+\hspace{-2.1cm}$\begin{tabular}{|c|c|c|c|c|c|}
 \hline  {\small Classe}  &  \ensuremath{\begin{array}{c}
 \text{{\small Intervallo}}\\
 \text{{\small Mia Fr.}}\end{array}} &  {\small\# osservazioni}  &  \ensuremath{\begin{array}{c}
@@ -7338,16 +7418,21 @@ $\hspace{1em}*{-2.2cm}\begin{tabular}{|c|c|c|c|c|c|}
 \noindent Le probabilità $p_{k}$ sono le probabilità teoriche di
 osservare una realizzazione nell'intervallo corrispondente, ovvero
 \[
-p_{k}=P_{H_{0}}(l_{k-1}\leq X<l_{k}).\]
- Su $n$ estrazioni indipendenti il numero atteso di osservazioni
-nell'intervallo $\left[l_{k-1},l_{k}\right)$ sarà semplicemente $n\ p_{k}$.
-Il test consiste nel confrontare le frequenze assolute empiriche con
-quelle teoriche. Se le differenze sono \textquotedblright{}grandi\textquotedblright{},
-avremo evidenza contro l'ipotesi nulla. Occorre pertanto sapere la
-distribuzione della somma dei quadrati delle differenze \textquotedblright{}standardizzate\textquotedblright{},
-$\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}$.
-Sotto l'ipotesi nulla $H_{0}$ la quantità \[
-\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}=\chi_{K-1.}^{2}\]
+p_{k}=P_{H_{0}}(l_{k}\leq X<l_{k+1}).\]
+
+
+\noindent Su $n$ estrazioni indipendenti il numero atteso di osservazioni
+nell'intervallo $\left[l_{k},l_{k+1}\right)$, notato $E_{k}$, sarà
+semplicemente $n\ p_{k}$. Il test consiste nel confrontare le frequenze
+assolute empiriche con quelle teoriche. Se le differenze sono \textquotedblright{}grandi\textquotedblright{},
+avremo evidenza contro l'ipotesi nulla. Per misurare tali discrepanze
+si calcolano gli scarti al quadrato tra le frequenze assolute empiriche
+e quelle teoriche, debitamente {}``standardizzate''. Al fine di
+eseguire correttamente il test occorre ancora una volta conoscere
+la distribuzione della statistica $S=\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}$.
+Fortunatamente è possibile dimostrare che sotto l'ipotesi nulla la
+quantità \[
+\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}\sim\chi_{K-1.}^{2}\]
 
 
 \begin{remark} Affinché la statistica così costruita sia valida occorre
@@ -7364,12 +7449,13 @@ mese $k$\textquotedbl{}. La statistica \[
 \chi^{2}=\sum_{k=1}^{12}\frac{\left({\small O}_{k}-\frac{{\small n}}{12}\right)^{2}}{\frac{{\small n}}{12}}\]
  è distribuita secondo una $\chi_{11}^{2}$.
 
-Scelto il valore critico $k_{1-\alpha}=\chi_{11,1-\alpha}^{2}$ al
-livello di significatività desiderato, rigetteremo l'ipotesi nulla
-se \[
-\sum_{k=1}^{12}\frac{\left({\small O}_{k}-\frac{{\small n}}{12}\right)^{2}}{\frac{{\small n}}{12}}>k_{1-\alpha}\]
+Scelto il valore critico $k_{\alpha}=\chi_{11,1-\alpha}^{2}$ al livello
+di significatività desiderato, rigetteremo l'ipotesi nulla se \[
+\sum_{k=1}^{12}\frac{\left({\small O}_{k}-\frac{{\small n}}{12}\right)^{2}}{\frac{{\small n}}{12}}\geq k_{\alpha}\]
  e non la rigetteremo altrimenti. \end{esempio}
 
 
 \subsection{Test d'indipendenza}
+
+Questo test verrà presentato alla lavagna.
 \end{document}

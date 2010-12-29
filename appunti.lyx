@@ -189,10 +189,7 @@ Capitolo 5: Elementi di probabilità II
 
 \begin_layout Enumerate
 Intersezione di eventi.
-\begin_inset space \space{}
-\end_inset
-
-
+ 
 \begin_inset Formula $A\cap B$
 \end_inset
 
@@ -95522,7 +95519,7 @@ P_{H_{0}}\left(\underset{\chi_{n-1}^{2}}{\underbrace{(n-1)S\ }}\geq\ k_{\alpha}\
 \begin_inset Formula $k_{\alpha}$
 \end_inset
 
-corrisponde all'
+ corrisponde all'
 \begin_inset Formula $1-\alpha$
 \end_inset
 
@@ -95902,7 +95899,7 @@ P_{H_{0}}\left(\underset{F_{m-1,n-1}}{\underbrace{\frac{\widehat{\sigma}_{x}^{2}
 \begin_inset Formula $k_{\alpha}$
 \end_inset
 
-è dunque l'
+ è dunque l'
 \begin_inset Formula $1-\alpha$
 \end_inset
 

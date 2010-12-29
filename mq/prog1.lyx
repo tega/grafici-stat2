@@ -1,0 +1,835 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Wednesday, February 17, 2010 14:24:35}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+\topmargin-0.7cm\headheight0cm\headsep0cm\textheight26cm\parindent0cm
+\end_preamble
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\shape smallcaps
+\size small
+università della svizzera italiana
+\shape default
+\size default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\shape smallcaps
+\size small
+facoltà di scienze economiche
+\shape default
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\shape smallcaps
+\size small
+dr.
+ claudio ortelli
+\shape default
+\size default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\shape smallcaps
+\size small
+semestre estivo 2011
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.4cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+METODI QUANTITATIVI
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Parte comune ai profili economico e finanziario (le prime sette settimane
+ del semestre estivo)
+\end_layout
+
+\begin_layout Itemize
+Assistenti: Diego Ronchetti, Elisa Ossola 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 0.4cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+LA STIMA DEI MODELLI ECONOMETRICI
+\series default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[0pt]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(al di là della regressione classica)
+\series default
+\size default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Complementi alla regressione classica:}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ La regressione scomposta 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Parte prima: La regressione generalizzata}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Il modello generale
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Introduzione
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Breve ritorno sulla regressione classica
+\end_layout
+
+\begin_layout Itemize
+Modelli econometrici che non soddisfano le ipotesi classiche 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Il modello e le ipotesi
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Quando la matrice delle varianze-covarianze è conosciuta: i minimi quadrati
+ generalizzati
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gli stimatori e le loro proprietà
+\end_layout
+
+\begin_layout Itemize
+L'induzione statistica
+\end_layout
+
+\begin_layout Itemize
+La previsione 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Le conseguenze dell'applicazione dei minimi quadrati ordinari
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Correttezza e perdita di efficienza
+\end_layout
+
+\begin_layout Itemize
+Stima convergente della varianza dello stimatore dei minimi quadrati ordinari
+\end_layout
+
+\begin_layout Itemize
+Casi in cui i minimi quadrati ordinari ed i minimi quadrati generalizzati
+ sono equivalenti 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.5
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Quando la matrice delle varianze-covarianze dipende da parametri sconosciuti
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I minimi quadrati generalizzati a due tappe
+\end_layout
+
+\begin_layout Itemize
+Il massimo di verosimiglianza
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ L'autocorrelazione
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+3.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Il modello markoviano di primo ordine
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ipotesi e proprietà
+\end_layout
+
+\begin_layout Itemize
+Il test dell'autocorrelazione
+\end_layout
+
+\begin_layout Itemize
+I metodi di stima
+\end_layout
+
+\begin_layout Itemize
+La previsione 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+3.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Altre forme d'autocorrelazione 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Parte seconda: La regressione stocastica}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Elementi di analisi asintotica
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+4.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Convergenza in probabilità
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Definizione e proprietà
+\end_layout
+
+\begin_layout Itemize
+Convergenza in media quadratica
+\end_layout
+
+\begin_layout Itemize
+Convergenza dei momenti del campione 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+4.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Convergenza in distribuzione
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Un esempio
+\end_layout
+
+\begin_layout Itemize
+Teorema del limite centrale 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+4.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Analisi asintotica della regressione classica 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+5
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Il modello di regressione stocastica
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+5.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Il modello e le ipotesi
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+5.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Quando i regressori e gli errori sono indipendenti
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+5.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Quando sono correlati
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La non convergenza degli stimatori dei minimi quadrati
+\end_layout
+
+\begin_layout Itemize
+Il metodo delle variabili strumentali
+\end_layout
+
+\begin_layout Itemize
+La scelta degli strumenti 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace 1.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Testi di riferimento}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+BALTAGI, Badi H., Econometrics, Springer, 1998
+\end_layout
+
+\begin_layout Itemize
+GREENE, W.H., Econometric Analysis, 3.rd Ed., Prentice Hall, 1997
+\end_layout
+
+\begin_layout Itemize
+HAYASHI, F., Econometrics, Princeton University Press, 2000
+\end_layout
+
+\begin_layout Itemize
+MADDALA, G.S., Introduction to Econometrics, 2.nd Ed., Prentice Hall, 1992 
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,4433 @@
+%% LyX 1.6.5 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[a4paper,italian]{report}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{esint}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsthm}\usepackage{multicol}
+
+\setcounter{MaxMatrixCols}{10}%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Friday, April 30, 2010 11:18:48}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+\newcounter{ese}\newcounter{esr}\newcounter{def}\newcounter{prop}\newcounter{doman}\newcounter{ipot}\theoremstyle{remark}\newcounter{theor}\newcounter{theorem}\newtheorem{esempio}[ese]{Esempio}\newtheorem{esercizio}[esr]{Esercizio}\newtheorem{definizione}[def]{Definizione}\newtheorem{remark}{Osservazione}\newtheorem{theorem}[theor]{Teorema}\newtheorem{proprieta}[prop]{Propriet\`a}\newtheorem{domanda}[doman]{Domanda}\newtheorem{ipotesi}[ipot]{Ipotesi}
+
+
+
+\makeatother
+
+\usepackage{babel}
+
+\begin{document}
+
+\title{Metodi Quantitativi per la Finanza\\
+ Appunti del corso}
+
+
+\author{Dr. Claudio Ortelli}
+
+
+\date{Semestre Estivo\\
+ 2011}
+
+\maketitle
+\tableofcontents{}
+
+
+\chapter{Fonti e raccolta di dati finanziari}
+
+
+\section{Fornitori di dati finanziari}
+
+La raccolta e l'archiviazione di dati è un tema estremamente importante
+in finanza. Pensate semplicemente ad una banca che offre un servizio
+di gestione patrimoniale. Essa deve essere in grado di
+\begin{itemize}
+\item calcolare il valore (odierno e passato) dei portafogli in deposito,
+\item valutare il rischio associato alle singole posizioni assunte sui vari
+mercati finanziari (azionario, dei cambi, reddito fisso, derivati,
+ecc.) ed in aggregato. 
+\end{itemize}
+\noindent A tale scopo la banca (il discorso è tuttavia generalizzabile
+a qualsiasi operatore finanziario) deve conoscere la composizione
+attuale e passata di un portafoglio (le quantità)\ nonché i prezzi
+correnti e passati degli strumenti in esso contenuti. Con il costante
+aumento della potenza di calcolo disponibile e grazie
+\begin{itemize}
+\item all'avvento di internet
+\item al diffondersi di database relazionali 
+\end{itemize}
+\noindent la domanda e l'offerta di dati finanziari sono entrambe
+cresciute enormemente nel corso dell'ultimo decennio. Oltre ai banali
+esempi sopracitati esiste tutta una serie di attività legate al settore
+finanziario che fanno largo uso di dati. Fra queste, senza pretesa
+di esaustività, citiamo
+\begin{itemize}
+\item Calcolo della performance
+\item Scomposizione della performance
+\item Calcolo del rischio
+\item Ottimizzazione del portafoglio
+\item Analisi tecnica
+\item Analisi di bilancio
+\item Pricing di derivati
+\item Formazione di aspettative 
+\end{itemize}
+È quindi chiaro quanto sia importante saper reperire in maniera
+\begin{enumerate}
+\item affidabile: il flusso di dati non deve essere interrotto (applicazioni
+di borsa real time), la qualità deve essere impeccabile (i dati non
+possono contenere errori),
+\item efficace: i dati devono arrivare per tempo e poter essere elaborati
+facilmente,
+\item economica:\ i costi devono essere tali da non pregiudicare l'attività 
+\end{enumerate}
+\noindent tutte le informazioni desiderate. Esistono a tal scopo dei
+cosiddetti fornitori di dati (data providers), ovvero ditte specializzate
+nel fornire informazioni legate all'attività finanziaria o più in
+generale economica nazionale e mondiale. Fra le principali citiamo
+\begin{itemize}
+\item Reuters (www.reuters.com)
+\item Bloomberg (www.bloomberg.com)
+\item Datastream (www.thomsonreuters.com/business\_units/financial/)
+\item Telekurs\ (www.telekurs.com)
+\item Infotec (www.infotecnet.com)
+\item Fides (www.vwdgroup.ch/fides/markt.htm)
+\item Yahoo (http://finance.yahoo.com/)
+\item Swiss Exchange (http://www.swxeurope.com/index.html e www.six-swiss-exchange.com/index.html)
+\item Swissquote (www.swissquote.ch)
+\item Google (www.google.com/finance?hl=en\&tab=we)
+\item Altri ... 
+\end{itemize}
+\bigskip{}
+
+
+\noindent Qui all'Università della Svizzera italiana abbiamo a disposizione
+due importanti fonti dati:\ Datastream, che sarà oggetto di approfondimento
+nel corso di questo capitolo e l'applicazione Reuters 3000 Xtra (un
+grazie all'associazione Finance Floor USI ( www.people.lu.unisi.ch/financefloor/
+) senza la quale l'applicazione non sarebbe disponibile).
+
+\begin{remark} Per tutta la durata di questo corso il termine \emph{dati}
+sarà da considerarsi quale sinonimo di \emph{serie storiche} dei prezzi
+dei vari strumenti finanziari che analizzeremo (ci limiteremo a considerare
+azioni, tassi di cambio e alcuni indici). Tuttavia il concetto generale
+di dati in finanza è da interpretare in maniera assai più ampia. Citiamo
+ad esempio
+\begin{itemize}
+\item i bilanci pubblicati dalle aziende (essenziali per gli analisti al
+fine della loro valutazione)
+\item le serie macroeconomiche divulgate dai diversi uffici governativi
+(PIL, indice dei prezzi, massa monetaria, tasso di disoccupazione,
+..., importazioni, esportazioni, dati settoriali, ...)
+\item le news
+\item ... 
+\end{itemize}
+\end{remark}
+
+
+\section{Codici d'identificazione}
+
+Quando cerchiamo i dati di un qualsiasi prodotto o strumento finanziario
+(un'azione, un'obbligazione, un fondo, un indice, ecc.) è necessario
+conoscere il suo identificativo. Per identificativo intendiamo un
+sequenza alfanumerica che identifica l'emissione di ogni strumento
+finanziario in maniera univoca. Purtroppo non esiste uno standard
+unico: ogni borsa ed ogni data provider\ ha la propria metodologia
+di classificazione. Noi studieremo in dettaglio Datastream. Tuttavia
+è utile osservare quanto segue:
+\begin{enumerate}
+\item Esistono almeno due standard molto utilizzati a livello internazionale:
+
+\begin{itemize}
+\item ISIN
+
+
+ISIN\ =\ International Securites Identification Number. An ISO coding
+system that uniquely identifies a specific securities issue. The organization
+that allocates ISINs in any particular country is the National Numbering
+Agency (NNA).
+
+\item SEDOL
+
+
+SEDOL\ =\ Stock Exchange Daily Official List. The stock code used
+to identify all securities issued in the UK or Eire. It is the basis
+of the ISIN code for UK securities, and is composed of a 7-digit number
+allocated by the master file service of the London Stock Exchange. 
+
+\end{itemize}
+Conoscere uno di questi due identificativi è particolarmente utile
+poiché, soprattutto per quanto riguarda il codice ISIN, praticamente
+tutti i data provider lo riconoscono. La banca dati Datastream ad
+esempio, accetta entrambi questi codici.
+
+\item In Svizzera è ancora molto utilizzato il numero di valore (in tedesco:\ Valorennummer).
+Tuttavia il codice ISIN sembra lentamente ma inesorabilmente avere
+il sopravvento.
+\item Talvolta è necessario verificare attentamente che i dati raccolti
+corrispondano a quanto desiderato. Capita infatti che lo stesso prodotto
+finanziario venga trattato su più borse o in più valute. È quindi
+molto facile commettere errori nella scelta della serie da scaricare
+se non si presta la massima attenzione all'origine dei dati. In caso
+di dubbio e quando ciò è possibile andate a verificare e/o cercare
+direttamente nelle varie borse gli identificativi appropriati. All'indirizzo
+\[
+\emph{http://www.tdd.lt/slnews/Stock\_Exchanges/Stock.Exchanges.html}\]
+oppure\[
+\emph{http://en.wikipedia.org/wiki/List\_of\_stock\_exchanges}\]
+troverete i collegamenti alle principali piazze finanziarie, raggruppate
+per area geografica. Fra queste scegliamo quattro esempi:
+
+\begin{itemize}
+\item Mercato svizzero
+
+
+\emph{http://www.swx.com/index\_en.html} e poi
+
+Market data (http://www.swx.com/market\_en.html) ... Equities -> Quotes
+
+-> ABB LTD N {[}VN: ... ISIN: CH0012221716 ... Currency: ...{]}
+
+\item Mercato svedese
+
+
+\emph{http://omxgroup.com/nordicexchange/}
+
+Cercate ABB e controllate il codice ISIN e la moneta in cui è quotata
+l'azione. Come potrete notare la medesima azione (il codice ISIN è
+identico, cioè CH0012221716) è quotata in valuta diversa!
+
+\item Mercato inglese
+
+
+\emph{http://www.londonstockexchange.com}
+
+\item Mercato italiano
+
+
+\emph{http://www.borsaitalia.it/homepage/homepage.htm}
+
+-> Quotazioni -> Cerca Strumento -> Azioni -> Roma -> ISIN: IT0001008876
+
+\item Titoli azionari americani
+
+
+\emph{http://www.nyse.com/}
+
+-> SYMBOL LOOKUP (The Coca-Cola Company)
+
+Symbol: KO
+
+Website: http://www.coca-cola.com 
+
+\end{itemize}
+\item Datastream
+
+
+Il codice alfanumerico ISIN\ può essere d'aiuto nella ricerca dell'azione
+desiderata. Datastream infatti contiene questo codice nel suo \textquotedblright{}mnemonic\textquotedblright{}\ (è
+questo il nome del codice interno a Datastream che identifica univocamente
+ogni singola serie).
+
+Ad esempio la Roma ha quale codice alfanumerico ASR e Datastream ha
+quale mnemonic {}``I:ASR\textquotedblright{}. La Coca-Cola ha quale
+codice alfanumerico {}``KO\textquotedblright{}\ e Datastream ha
+quale mnemonic {}``U:KO\textquotedblright{}. La prima lettera denota
+quindi il paese (I=Italy, U=United States,C=Canada, ...), il carattere
+{}``:\textquotedblright{} serve quale delimitatore e poi segue il
+codice alfanumerico. È importante ricordarsi questa costruzione laddove
+non è stato possibile rintracciare il codice ISIN poiché Datastream
+permette una ricerca per \textquotedblright{}mnemonic\textquotedblright{}
+(è inoltre possibile utilizzare nella ricerca caratteri jolly quali
+{}``{*}\textquotedblright{}). 
+
+\end{enumerate}
+
+\section{Datastream, classi di strumenti finanziari e tipologie di dati}
+
+Al quarto piano dell'Istituto di Finanza è disponibile un pc con Datastream
+Advance. Il login deve essere effettuato col nome utente: {}``ospite\_datastream\textquotedblright{},
+mentre la password è: {}``datastream\textquotedblright{}. Per lanciare
+il programma andate come d'abitudine nel menu Start -> Programs ->
+Datastream Advance -> Advance 4.0. Per scaricare dati da Datastream
+è necessario procedere come segue%
+\footnote{Si guardi anche il tutorial presente in \[
+\text{{\small\ensuremath{\backslash\backslash}usi\ensuremath{\backslash}dfs\ensuremath{\backslash}Corsi\ensuremath{\backslash}Facoltà\ di\ Economia\ensuremath{\backslash}Econometria\ensuremath{\backslash}MetodiQuantitativiFinanza2010\ensuremath{\backslash}datastream}}\]
+o l'immagine della maschera principale del programma.%
+}:
+
+%
+\begin{figure}
+\includegraphics[width=8.055cm,height=6.6821cm]{datastream}
+\caption{}
+\end{figure}
+
+\begin{enumerate}
+\item Aprire Datastream Advance e selezionare il foglio \textquotedblright{}Request\textquotedblright{}\ (selezionare
+la prima etichetta in fondo alla pagina).
+\item Nel riquadro superiore destro selezionare l'etichetta con il simbolo
+simile ad una tabella (quarta etichetta). Il nome del campo è \emph{Data
+for a single series}. Selezionare \emph{Time Series Data}.
+\item Sempre nel medesimo riquadro premere il bottone \emph{Settings...
+}. Scegliere la frequenza desiderata: daily, weekly, ecc. .
+\item Nel riquadro inferiore destro selezionare il periodo per il quale
+si vogliono scaricare i dati.
+\item Selezionare la valuta. \emph{Local currency} significa che verrà utilizzata
+la valuta indicata nel campo \emph{Currency }della tabella che appare
+nella fase di ricerca. La fase di ricerca è attivata cliccando il
+bottone con la freccia rossa verso destra, presente nel riquadro inferiore
+sinistro.
+\item Nel riquadro inferiore sinistro selezionare l'etichetta \textquotedbl{}\textbf{Category}\textquotedbl{}
+indicante la categoria di prodotti desiderata:\ Equity, Index, Constituents,
+ecc. .
+\item Se conoscete il codice SEDOL\ o quello ISIN\ inseritelo direttamente
+nel campo \emph{Series} dopo aver attivato il Chekbox denominato \emph{Expert
+entry} ed andate direttamente al punto 9. Altrimenti utilizzate la
+ricerca per nome selezionando l'etichetta corrispondente del campo
+\textquotedbl{}Search by:\textquotedbl{} e scegliendo il tipo di ricerca
+($\emph{Starts}$ $\emph{with}$ o \emph{Contains}).
+\item Nel casa in cui non si conoscano né il codice ISIN, nè il codice SEDOL\ e
+neppure il \emph{mnemonic} Datastream Quale aiuto alla ricerca è possibile
+definire dei filtri. I criteri dipendono dalla categoria in cui si
+effettua la ricerca. Per esempio, i criteri disponibili per la categoria
+Equity sono diversi da quelli della categoria Economics. Per eseguire
+una ricerca cliccare il bottone con la freccia rossa verso destra,
+presente nel riquadro inferiore sinistro.
+\item Una volta che la serie desiderata è stata individuata, premere il
+bottone \emph{Run Now}. I risultati della ricerca sono visualizzati
+nel riquadro superiore sinistro. Se la ricerca è stata fruttuosa,
+potete esportare i dati in un foglio excel premendo il bottone con
+il simbolo di excel nella \textquotedblright{}Toolbar\textquotedblright{}\ proprio
+sotto i menu a cascata. %
+\begin{figure}
+includegraphics[width=9.63cm,height=7.4971cm]{datastricerca}
+\end{figure}
+
+\end{enumerate}
+\bigskip{}
+ Datastream associa a ciascuna classe di strumenti finanziari (azioni,
+indici azionari, bonds, ...)\ più di un tipo di serie storica scaricabile.
+I tipi di dati disponibili variano a seconda della classe di strumenti.
+Ad esempio, il tipo di default per la classe equity è il \textquotedblright{}Price
+(Adjusted)\textquotedblright{}. Cliccando alla sua destra il bottone
+con la scritta Dt (\emph{Data type}) si ottiene la lista dei tipi
+disponibili. Ad ogni tipo è associato un codice. Il \textquotedblright{}Price
+(Adjusted - Default)\textquotedblright{}\ ha codice uguale a P.
+
+%
+\begin{figure}
+\includegraphics[width=10.1945cm,height=8.3362cm]{datatypes}
+\caption{}
+\end{figure}
+
+
+\noindent 
+
+\bigskip{}
+ Discutiamo ora i seguenti tipi:
+\begin{enumerate}
+\item Adjustment Factor (accumulated, Mnemonic = AF)
+\item Adjustment Factor (not accumulated, Mnemonic = AX)
+\item Dividends per share (Mnemonic = DPS)
+\item Marketvalue (Mnemonic = MV)
+\item Price (unadjusted) (Mnemonic = UP)
+\item Ex-Dividend Date (Mnemonic = XDDE)
+\item Date - Dividend Payment (Mnemonic = PYD) 
+\end{enumerate}
+\noindent \bigskip{}
+ Come potrete constatare voi stessi, cambiando la classe di strumenti
+finanziari e selezionando nuovamente il bottone \emph{Data type} la
+lista di tipi di dato fra cui scegliere cambierà.
+
+\noindent \bigskip{}
+ Datastream prevede%
+\footnote{Si veda la Figura \ref{figura request table}.%
+} inoltre la possibilità di scaricare le serie storiche direttamente
+in un file Excel, senza dover passare dall'applicazione Datastream
+Advance. Due sono i principali vantaggi di un simile approccio. Da
+un lato è\ possibile scaricare simultaneamente più di una serie storica
+e di un tipo di dato. Secondariamente l'aggiornamento di serie già
+scaricate richiede pochi passi ed un eventuale ulteriore elaborazione
+può essere automatizzata utilizzando la grande flessibilità di VBA
+(Visual Basic for Applications). Un esempio verrà presentato in classe.
+L'Help di Datastream Advance alla voce \emph{Creating time series
+requests in Excel} è un buon punto di partenza.\vspace{0.3in}
+
+
+\noindent \begin{esercizio} Desideriamo analizzare lo Swiss Market
+Index (SMI).
+\begin{enumerate}
+\item Trovate su internet le azioni che attualmente sono incluse nello Swiss
+Market Index. Suggerimento: visitate \[
+http://www.six-swiss-exchange.com/indices/overview\_en.html\]
+
+\item Di quanti titoli è composto lo SMI? Quali sono?
+\item Qual è il criterio utilizzato per includere un titolo nell'indice?
+\item Qual è il peso di ciascun titolo all'interno dell'indice?
+\item Ogni quanto tempo vengono ricalcolati i pesi?
+\item Ogni quanto tempo viene aggiornata la lista dei titoli da includere
+nello SMI?
+\item Scaricate le serie storiche \emph{a frequenza giornaliera} dello SMI
+degli ultimi 3 anni di osservazioni.
+\item Scegliete 3 azioni attualmente rappresentate nell'indice e scaricate
+la serie storica \emph{a frequenza giornaliera} degli ultimi 3 anni
+di osservazioni.
+\item Eseguite il grafico di ogni serie separatamente. Eseguite poi un XY\
+Scatter plot dell'indice SMI\ con ciascuna delle 3 serie scaricate.
+Cosa osservate?
+\item Che differenza c'è con lo SMIC index?
+
+
+\hfill{}$\square$\vspace{0.35in}
+ 
+
+\end{enumerate}
+\end{esercizio}
+
+%
+\begin{figure}
+\includegraphics[width=5.3394in,height=1.8239in]{requestTable}
+\caption{}
+\end{figure}
+
+
+
+\chapter{B. Chapter 7: Portfolio Models - Introduction}
+
+
+\section{Notazione}
+
+In questo e nei prossimi capitoli faremo ampio uso del calcolo matriciale
+e delle nozioni di statistica multivariata apprese durante i corsi
+di Algebra Lineare e Introduzione all'Econometria. Prima di adoperare
+questi potenti strumenti presentiamo la notazione che verrà utilizzata.
+Purtroppo Benninga utilizza una notazione diversa da quella utilizzata
+nei corsi sopracitati. È questa una situazione alla quale dovrete
+abituarvi: in finanza ed in econometria non esiste nessuna convenzione
+per quanto riguarda la notazione. Ogni autore utilizzerà perciò i
+simboli a lui più congeniali. Per quanto riguarda questo corso indicheremo
+con
+\begin{itemize}
+\item $P_{t}:=$ Vettore aleatorio $N\times1$ dei prezzi al tempo $t$.
+\item $r_{t}:=$ Vettore aleatorio $N\times1$ dei rendimenti al tempo $t$
+(quando necessario verrà specificato il tipo - \% o logaritmico -
+di rendimento).
+\item $V_{t}:=$ La matrice $N\times N$ delle varianze e covarianze di
+$r_{t}$.
+\item $e_{t}:=$ Il vettore $N\times1$ dei rendimenti attesi, in altre
+parole \[
+e_{t}:=E[r_{t}].\]
+ 
+\end{itemize}
+Per indicare che il vettore aleatorio $r_{t}$ ha valore atteso $e_{t}$
+e matrice delle varianze e covarianze $V_{t}$ scriveremo semplicemente
+$r_{t}\sim(e_{t},V_{t})$. Quest'ultima espressione può essere semplificata
+ipotizzando che il valore atteso e la matrice delle varianze e covarianze
+dei rendimenti siano costanti nel tempo%
+\footnote{Abbiamo già utilizzato un'ipotesi simile nel modello di regressione
+classica \[
+y_{t}=x_{t}^{\prime}\beta+\epsilon_{t}\]
+dove il valore atteso e la varianza dell'errore $\epsilon_{t}$ (di
+dimensione $1\times1$) sono costanti ed uguali rispettivamente a
+$0$ e $\sigma^{2}$. Le ipotesi già applicate su $\epsilon_{t}$
+vengono ora applicate ed in un certo senso estese a $r_{t}$ (di dimensione
+$N\times1$). Infatti, l'ipotesi di stazionarietà dei primi due momenti
+è la stessa (si tratta di una semplice generalizzazione al caso multivariato).%
+}. Scriviamo allora semplicemente \begin{equation}
+r_{t}\sim(e,V)\ .\end{equation}
+
+
+\begin{esempio} \label{esempio1 benninga}Nell'esempio a pagina 131
+di Benninga troviamo $N=2$ titoli (azioni in questo caso) con i relativi
+prezzi. Gli $n=13$ periodi riportati sono $t=0,\ ...,12$. Generalmente
+si è soliti disporre le serie storiche in ordine cronologico partendo
+dall'osservazione più distante nel tempo. Come con la matrice $X$
+della regressione classica la $t-$esima riga conterrà i prezzi osservati
+di tutti gli $N$ titoli alla data $t$ mentre la prima (seconda ...)
+colonna conterrà tutte le osservazioni del primo (secondo ...) titolo.
+Nell'esempio di Benninga la prima colonna (colonna $A$) contiene
+l'indice temporale%
+\footnote{Notiamo che la frequenza con cui vengono osservati i prezzi è il mese.
+Per tale motivo in questo esempio l'unità di misura dell'indice temporale
+$t$ è il mese.%
+} $t$ ma questa colonna non fa parte della matrice $X$.
+
+\hfill{}$\square$
+
+5.4938cm - 5.7837cm Esempio con $N=2$ titoli, Benninga Chapter 07.xls
+'KHMFPJ00.wmf' \end{esempio}
+
+\noindent \medskip{}
+
+
+\noindent Riserveremo gli indici $i$ e $j$ per indicare l'$i-$
+esimo ed il $j-$ esimo titolo: $V_{ij}=Cov(r_{it},r_{jt})$. Avremo
+allora che $V_{ii}=Cov(r_{it},r_{it})=Var(r_{it})$ è la varianza
+del rendimento dell'$i-$ esimo titolo. Denotiamo inoltre con
+\begin{itemize}
+\item $q_{t}:=$ Il vettore deterministico $N\times1$ delle quantità (il
+numero) di titoli in portafoglio al tempo $t$. Quantità negative
+indicano vendite allo sco\-per\-to. Ad esempio $q_{it}=5$ indica
+che, al tempo $t$, il portafoglio contiene $5$ unità dell'$i-$
+esimo titolo. Qualora le quantità dovessero essere costanti (la struttura
+del portafoglio non viene modificata)\ eviteremo di utilizzare l'indice
+temporale e scriveremo semplicemente $q$.
+\item $P_{pt}:=$ Il valore ({}``prezzo\textquotedblright{}) del portafoglio
+al tempo $t$. Per definizione di $q_{t}$ avremo $P_{pt}=q_{t}^{\prime}P_{t}.$
+Come potete vedere si tratta del prodotto scalare tra il vettore dei
+prezzi e quello delle quantità.
+\item $w_{t}:=$ Il vettore $N\times1$ dei pesi del portafoglio. Ogni componente
+$w_{it}$ rappresenta la percentuale del valore totale del portafoglio
+investita nel titolo $i$ al tempo $t$. Formalmente abbiamo\[
+w_{it}=\frac{q_{it}P_{it}}{P_{pt}}~.\]
+Poiché sono permesse vendite allo scoperto (short selling), $w_{it}$
+può avere segno negativo. Tuttavia, ad ogni istante temporale $t$,
+la somma delle componenti di $w_{t}$ deve forzatamente essere uguale
+ad $1$. In altre parole deve valere $S^{\prime}w_{t}=1$, dove come
+al solito $S$ rappresenta il vettore somma a $N$ componenti.
+\item $r_{pt}:=$ Il rendimento del portafoglio al tempo $t$. 
+\end{itemize}
+
+\section{Rendimenti percentuali e logaritmici: defini\-zio\-ni e proprietà}
+
+Supponiamo, senza perdita di generalità, che l'unità di misura del
+tempo $t$ sia il giorno.
+
+\begin{definizione} \label{rendimento percentuale singolo periodo}Il
+rendimento percentuale giornaliero alla data $t$ dell'azione $i$
+è\begin{equation}
+r_{it}:=\frac{P_{it}-P_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}=\frac{P_{it}}{P_{i\left(t-1\right)}}-1~.\label{def rendimento percentuale}\end{equation}
+ \end{definizione}
+
+\begin{remark} Dalla Definizione \ref{rendimento percentuale singolo periodo}
+di rendimento percentuale otteniamo l'identità\begin{equation}
+1+r_{it}=\frac{P_{it}}{P_{i\left(t-1\right)}}~.\label{def identita rendimento percentuale}\end{equation}
+ \end{remark}
+
+\begin{definizione} \label{rendimento logaritmico singolo periodo}Il
+rendimento logaritmico giornaliero alla data $t$ dell'azione $i$
+è\begin{equation}
+r_{it}:=\ln\left(\frac{P_{it}}{P_{i\left(t-1\right)}}\right)~.\label{def rendimento logaritmico}\end{equation}
+ \end{definizione}
+
+\begin{remark} Se la data $t$ corrisponde alla {}``Ex-Dividend
+date\textquotedblright{}, allora il calcolo del rendimento percentuale
+e logaritmico vanno modificati come segue: \[
+r_{it}=\frac{P_{it}+d_{i\left(t-1\right)}-P_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}=\frac{P_{it}+d_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}-1~,\]
+rispettivamente\[
+r_{it}=\ln\left(\frac{P_{it}+d_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}\right)~.\]
+ \end{remark}
+
+\bigskip{}
+ Il motivo per cui viene aggiunto il dividendo è il seguente. Al momento
+dell'acquisto dell'azione in data $t-1$ l'acquirente mantiene il
+diritto a percepire il dividendo pur rivendendo l'azione il giorno
+$t$. Quindi a fronte di un costo iniziale di $P_{i\left(t-1\right)}$
+il ricavo totale è dato dal prezzo di vendita $P_{it}$ più il dividendo
+$d_{i\left(t-1\right)}$. Quando il rendimento è calcolato su un periodo
+superiore al giorno, ad esempio l'anno, $d_{i\left(t-1\right)}$ deve
+comprendere tutti i dividendi versati nel periodo (alcune azioni pagano
+dividendi a scadenza semestrale o addirittura trimestrale). Se il
+periodo è particolarmente lungo occorre tener conto del fatto che
+il dividendo è reinvestito. Questo comporta un aumento del numero
+di azioni che, a sua volta, va ad incidere sul calcolo del rendimento
+per il periodo successivo (si veda l'esempio numerico a pagina 147
+di Benninga).\bigskip{}
+
+
+\begin{esempio} Continuando con l'esempio precedente (vedi pag. 132
+di Benninga) possiamo calcolare i $12$ rendimenti logaritimici \emph{mensili}
+delle due azioni $A$ e $B$ utilizzando la funzione $LN$ (logaritmo
+naturale)\ di Excel. In questo esempio gli eventuali dividendi versati
+nel periodo non sono stati considerati. 11.1501cm - 5.7024cm Esempio
+calcolo rendimenti Figura esempio calcolo rendimenti 'KHMGBC01.wmf'
+Poiché l'osservazione per il calcolo del rendimento alla data $0$
+non è disponibile (sarebbero necessari i prezzi alla data $t=-1$)
+la matrice dei rendimenti osservati avrà una riga in meno rispetto
+alla matrice dei prezzi osservati (vedi Figura \ref{Figura esempio calcolo rendimenti}).
+
+\hfill{}$\square$ \end{esempio}
+
+
+\subsection{Aggregazione cross-section dei rendimenti}
+
+Consideriamo in questo paragrafo la proprietà {}``\emph{cross-section}\textquotedblright{}\ dei
+rendimenti di un portafoglio. La domanda a cui si desidera rispondere
+è la seguente: qual è la relazione tra il rendimento del portafoglio
+su un singolo periodo e i rendimenti dei singoli titoli in esso contenuto?
+La proprietà 1 dà una risposta a questa domanda.
+
+\begin{proprieta} \label{prop cross section rend perc}Il rendimento
+percentuale del portafoglio soddisfa la seguente relazione\begin{equation}
+r_{pt}=w_{t-1}^{\prime}r_{t}\ .\label{combinazione lineare rendimenti}\end{equation}
+ \end{proprieta}
+
+\medskip{}
+ Quando i rendimenti sono logaritmici la proprietà 1 non è più mantenuta.\medskip{}
+
+
+\noindent \begin{proprieta} \label{prop cross section rend log}La
+Proprietà \ref{prop cross section rend perc} non è soddisfatta dal
+rendimento logaritmico.\medskip{}
+ \end{proprieta}
+
+\medskip{}
+ Le due proprietà appena discusse riguardano l'aggregazione \emph{ad
+un medesimo istante temporale} di più titoli. Per tale motivo si parla
+della proprietà {}``\emph{cross-section}\textquotedblright{}\ dei
+rendimenti. È questo un aspetto statico rispetto al tempo ma dinamico
+(aggrego)\ rispetto alle componenti del portafoglio. Vogliamo ora
+analizzare la situazione opposta, ovvero cosa capita quando l'aggregazione
+è temporale e non rispetto ai titoli in portafoglio. Questo implica
+analizzare il rendimento di \emph{un singolo titolo} su un periodo
+di $n$ giorni in funzione degli $n$ rendimenti giornalieri.
+
+
+\subsection{Aggregazione temporale dei rendimenti}
+
+Consideriamo dapprima \emph{un unico titolo}. In particolare, calcoliamo
+il suo rendimento su un orizzonte di $n$ periodi utilizzando i rendimenti
+calcolati sui singoli periodi precedenti. Ad esempio, avendo a disposizione
+$n=12$ rendimenti mensili come è possibile calcolare il rendimento
+annuo?
+
+\begin{definizione} \label{def rendimento perc n periodi}Il rendimento
+percentuale dell'$i-$esimo titolo calcolato fra $t-n$ e $t$ (su
+$n$ giorni) è definito come\begin{equation}
+r_{i\left(t-n\right),t}:=\frac{P_{it}-P_{i\left(t-n\right)}}{P_{i\left(t-n\right)}}=\frac{P_{it}}{P_{i\left(t-n\right)}}-1\end{equation}
+ \end{definizione}
+
+\begin{proprieta} \label{prop aggreg temporale rend perc}Il rendimento
+percentuale su $n$ periodi soddisfa la seguente relazione \begin{equation}
+r_{i\left(t-n\right),t}=\prod_{k=1}^{n}\left(1+r_{i\left(t-k+1\right)}\right)-1.\label{prodotto rendimenti perc su singola azione}\end{equation}
+ \end{proprieta}
+
+\begin{remark} Al fine di snellire la notazione, il rendimento giornaliero
+o in generale il rendimento calcolato sul singolo periodo ($n=1$)$\ $ora
+notato $r_{i(t-1),t}$ verrà semplicemente scritto come $r_{it}$.
+\end{remark}
+
+\begin{definizione} \label{def rendimento log n periodi}Il rendimento
+logaritmico dell'$i-$esima azione calcolato fra $t-n$ e $t$ è definito
+come\begin{equation}
+r_{i\left(t-n\right),t}=\ln\left(\frac{P_{it}}{P_{i\left(t-n\right)}}\right)\end{equation}
+ \end{definizione}
+
+\begin{proprieta} \label{prop aggreg temporale rend log}Il rendimento
+logaritmico su $n$ periodi soddisfa la seguente relazione \begin{equation}
+r_{i\left(t-n\right),t}=\sum_{k=1}^{n}r_{i\left(t-k+1\right)}\ .\end{equation}
+ \end{proprieta}
+
+\medskip{}
+ Le Proprietà \ref{prop cross section rend perc}-\ref{prop aggreg temporale rend log}
+sono molto importanti per comprendere come viene calcolato il rischio
+associato al movimento dei prezzi di mercato, il cosiddetto \emph{market-risk
+}(si veda il Capitolo 7: \textsc{Value at Risk}). Notiamo innanzi
+tutto che ci sono due dimensioni da considerare. La prima riguarda
+il fatto che il portafoglio è composto da più titoli (dimensione \emph{cross-section}).
+Questo ci obbliga a con\-si\-de\-ra\-re un vettore $r_{t}$ di
+$N$ rendimenti. Le Proprietà \ref{prop cross section rend perc}
+e \ref{prop cross section rend log} riguardano proprio questa dimensione:\ la
+Proprietà \ref{prop cross section rend perc} afferma che il rendimento
+percentuale di un portafoglio è dato dalla \emph{combinazione lineare}
+dei rendimenti percentuali di ogni singolo titolo. I pesi di tale
+combinazione lineare corrispondono alle percentuali con cui i titoli
+erano rappresentati in portafoglio al momento dell'investimento, cioè
+$t-1$. Il rendimento logaritmico non possiede questa interessante
+proprietà (Proprietà \ref{prop cross section rend log}). Questo significa
+che il rendimento logaritmico di un portafoglio non è uguale alla
+somma pesata dei rendimenti logaritmici sui singoli titoli.
+
+\medskip{}
+ La seconda dimensione, che riguada invece le Proprietà \ref{prop aggreg temporale rend perc}
+e \ref{prop aggreg temporale rend log}, concerne l'aspetto \emph{temporale}
+dell'investimento: il rendimento percentuale di un singolo titolo
+aggrega in maniera geometrica rispetto al tempo (Proprietà \ref{prop aggreg temporale rend perc})
+mentre il rendimento logaritmico aggrega in maniera lineare (Proprietà
+\ref{prop aggreg temporale rend log}). È molto importante aver ben
+capito e sapere distinguere questi due aspetti al fine di non cadere
+in confusione e commettere errori. In particolare, come vedremo tra
+breve e nei prossimi capitoli, a dipendenza dalle ipotesi iniziali,
+dal tipo di rendimento e dalle sue proprietà d'aggregazione giungeremo
+a conclusioni diverse rispetto alle proprietà statistiche (distribuzione,
+momenti, ...)\ dei rendimenti.
+
+\medskip{}
+ Un'ultima osservazione: quando si discute dell'aspetto temporale
+di aggregazione dei rendimenti è necessario specificare la frequenza
+con cui si osservano i prezzi e l'orizzonte sul quale si desidera
+effettuare l'aggregazione. Ad esempio, se disponiamo di rendimenti
+giornalieri e desideriamo calcolare i rendimenti settimanali avremo
+un orizzonte temporale di $5$ periodi.
+
+\noindent \medskip{}
+ Consideriamo ora \emph{un intero portafoglio} e chiediamoci se l'uguaglianza
+(\ref{prodotto rendimenti perc su singola azione}) è valida anche
+per un portafoglio composto da più titoli. La risposta è sì, ma con
+un'importante precisazione.\medskip{}
+
+
+\begin{definizione} \label{def rendimento perc n periodi portaf}Il
+rendimento percentuale calcolato fra $t-n$ e $t$ \emph{di un portafoglio}
+è definito come\begin{equation}
+r_{p\left(t-n\right),t}:=\frac{P_{pt}-P_{p\left(t-n\right)}}{P_{p\left(t-n\right)}}=\frac{P_{pt}}{P_{p\left(t-n\right)}}-1~.\end{equation}
+ \end{definizione}
+
+\begin{proprieta} \label{prop rendimento perc n periodi portaf}Il
+rendimento percentuale su $n$ periodi soddisfa la seguente relazione\begin{equation}
+r_{p\left(t-n\right),t}=\prod_{k=1}^{n}\left(1+r_{p\left(t-k+1\right)}\right)-1,\end{equation}
+dove i singoli rendimenti $r_{p\left(t-k+1\right)}$ sono calcolati
+utilizzando la relazione (\ref{combinazione lineare rendimenti})
+ma ovviamente con un vettore di pesi $w_{t-k}$ diverso per ogni periodo.\medskip{}
+ \end{proprieta}
+
+\begin{remark} La proprietà \ref{prop rendimento perc n periodi portaf}
+evidenzia una caratteristica legata alla proprietà cross-section dei
+rendimenti percentuali di un portafoglio: i pesi $w_{it}$ generalmente
+\emph{non} sono costanti nel tempo (a meno di intervenire sulla composizione
+del portafoglio e ribilanciarlo continuamente). Questo perché i prezzi
+dei titoli che costituiscono un portafoglio non variano in ugual misura
+e di conseguenza il peso relativo di ciascun titolo rispetto al valore
+totale del portafoglio tenderà a variare nel tempo.\medskip{}
+ \end{remark}
+
+\begin{esercizio} \label{Esercizio pippo}
+\begin{enumerate}
+\item Dimensione $\emph{cross-section}$ dei rendimenti
+
+
+Il valore $P_{pt}$ al tempo $t$ di un portafoglio composto da solo
+due titoli è semplicemente \[
+P_{pt}=q_{1}P_{1,t}+q_{2}P_{2,t}\]
+dove $q_{1}$ e $q_{2}$ (per ipotesi costanti nel tempo)\ rappresentano
+la quantità della prima e rispettivamente della seconda azione in
+portafoglio.
+\begin{enumerate}
+\item Dimostrate \emph{algebricamente} che il rendimento percentuale del
+portafoglio \[
+r_{p\left(t+1\right)}=\left(P_{p\left(t+1\right)}-P_{pt}\right)/P_{pt}\]
+è uguale alla somma ponderata dei rendimenti percentuali \[
+r_{i\left(t+1\right)}=\left(P_{i\left(t+1\right)}-P_{it}\right)/P_{it}\]
+su ogni singola azione, ovvero\[
+r_{p\left(t+1\right)}=w_{1t}r_{1\left(t+1\right)}+w_{2t}r_{2\left(t+1\right)\ ,}\]
+verificando che ciascun peso $w_{it}$ corrisponde alla percentuale
+iniziale dell'$i-$esima azione in portafoglio.
+\item Verificate quanto avete dimostrato nel punto precedente utilizzando
+i dati dell'Esempio \ref{esempio1 benninga} (file Chapter 07.xls).
+Assumete $q_{1}=1$ e $q_{2}=2$.
+\item Mostrate numericamente con un semplice controesempio che ciò non è
+valido per i rendimenti logaritmici. 
+\end{enumerate}
+\item Variazione nel tempo della composizione percentuale del portafoglio
+
+
+Per risolvere quest'esercizio utilizzate le serie storiche contenute
+nel \emph{Sheet1} del file \emph{Esercizio2.xls}. Consideriamo un
+portafoglio costituito da un'azione di $Ubs$ ed un'azione di $Roche$.
+\begin{enumerate}
+\item In base ai dati a vostra disposizione a quanto ammonta l'unità di
+misura del tempo $t$?
+\item Eseguite il grafico delle due serie storiche.
+\item Calcolate il prezzo (o valore) del portafoglio a tutte le date disponibili.
+\item Utilizzando le serie dei prezzi calcolate i rendimenti percentuali
+di $Ubs$, $Roche$.
+\item Utilizzando la serie storica del valore (prezzo) del portafoglio calcolatene
+i rentimenti percentuali.
+\item Calcolate i pesi $w_{it}$ di $Ubs$ e $Roche$. Sono costanti? Sommano
+sempre a 1? Fate un grafico delle serie storiche dei due pesi.
+\item Calcolate i rendimenti percentuali del portafoglio utilizzando i rendimenti
+percentuali di $Ubs$, $Roche$ ed i pesi $w_{t}$. Verificate che
+essi corrispondano ai rendimenti calcolati al punto ($e)$. 
+\end{enumerate}
+\item Rendimenti su più periodi: aggregazione temporale
+
+
+\noindent Consideriamo dapprima i rendimenti \emph{logaritmici} settimanali
+di un'azione $i$, notati $r_{it}^{w}$ ($w$ = weekly) in funzione
+dei rendimenti giornalieri. Per definizione essi sono uguali a \[
+r_{it}^{w}:=r_{i\left(t-5\right),t}=\ln(P_{it}/P_{i\left(t-5\right)})=\sum_{k=1}^{5}r_{i\left(t-k+1\right)}.\]
+
+\begin{enumerate}
+\item Esplicitate la sommatoria che definisce $r_{it}^{w}$ per $t=5$.
+Disegnate l'asse temporale ed evidenziate con un colore l'intervallo
+temporale che comprende i rendimenti logaritmici giornalieri utilizzati
+per il calcolo di $r_{i5}^{w}$. Sul medesimo asse eseguite la stessa
+procedura ma per un valore di $t=11$. Notate sovrapposizioni fra
+i colori? Interpretate il risultato?
+\item Assumiamo che i rendimenti logaritmici giornalieri a date diverse
+non siano fra loro correlati e che $r_{i,t}\sim(\mu,\sigma^{2})$.
+Cosa possiamo dedurre riguardo
+
+\begin{enumerate}
+\item al valore atteso del rendimento logaritmico settimanale?
+\item alla varianza del rendimento logaritmico settimanale?
+\item alla covarianza fra due rendimenti settimanali $Cov(r_{i\left(t-l\right)}^{w},r_{it}^{w})$?
+Calcolate la covarianza per valori di $l$ pari a $1,2,5$ e $6$.
+
+
+Suggerimento: per ciascuna coppia $(r_{i\left(t-l\right)}^{w},r_{it}^{w})$
+eseguite il disegno dell'asse temporale $t$ ed indicate, con colori
+diversi, i due intervalli di tempo utilizzati per colcolare i rendimenti
+logaritmici settimanali corrispondenti. Calcolate i periodi in comune
+e confrontate con il valore della covarianza. 
+
+\end{enumerate}
+\item Se i rendimenti logaritmici giornalieri $r_{i,t}$ fossero $i.i.d.\sim(\mu,\sigma^{2})$,
+cambierebbe qualcosa nei risultati del punto precedente? Argomentate
+la vostra risposta.
+\item Se i rendimenti logaritmici giornalieri $r_{i,t}$ fossero $i.i.d.\sim N(\mu,\sigma^{2})$,
+quale sarebbe la distribuzione di $r_{it}^{w}$ e perché?
+
+
+Consideriamo ora i rendimenti \emph{percentuali} sempre di un'unica
+azione $i$
+
+\item Qual è la formula che esprime i rendimenti percentuali settimanali
+di un'azione $i$ in funzione dei suoi rendimenti percentuali giornalieri?
+\item Se i rendimenti percentuali giornalieri $r_{i,t}$ fossero non correlati
+$\sim(\mu,\sigma^{2})$, cosa potremmo concludere riguardo
+
+\begin{enumerate}
+\item al valore atteso del rendimento percentuale settimanale?
+\item alla varianza del rendimento percentuale settimanale?
+\item alla covarianza fra due rendimenti settimanali $Cov(r_{i\left(t-l\right)}^{w},r_{it}^{w})$?
+Suggerimento: non perdete troppo tempo su questo punto ... 
+\end{enumerate}
+\item Se i rendimenti percentuali giornalieri fossero $i.i.d.\sim(\mu,\sigma^{2})$,
+cambierebbe qualcosa nei risultati del punto precedente? Argomentate
+la vostra risposta.
+\item Se i rendimenti percentuali giornalieri fossero $i.i.d.\sim N(\mu,\sigma^{2})$,
+la distribuzione di $r_{it}^{w}$ sarebbe ancora normale? Argomentate
+la vostra risposta. 
+\end{enumerate}
+\hfill{}$\square$ 
+
+\end{enumerate}
+\end{esercizio}
+
+\vspace{0.75cm}
+In genere un portafoglio titoli pur essendo valutato in un'unica moneta
+(la cosiddetta moneta di riferimento) è costituito da titoli denominati
+in valute diverse (chf, eur, usd, jpy, ...). Sorge quindi il problema
+di come scomporre il rendimento o il rischio di un titolo (o in aggregato
+di un portafoglio)\ nella parte dovuta al movimento del tasso di
+cambio e in quella dovuta al movimento del prezzo in valuta estera.
+
+\medskip{}
+ Per chiarirci le idee, consideriamo un'azione trattata in $EUR$
+alla borsa di Francoforte, il cui prezzo sarà notato $P_{it}^{eur}$.
+Ovviamente quali investitori svizzeri siamo interessati al suo prezzo
+in franchi, cioè $P_{it}=P_{eur,t}P_{it}^{eur}$. Il termine $P_{eur,t}$
+denota quindi il tasso di cambio fra $EUR$ e $CHF$ alla data $t$:
+ad esempio $P_{eur,t}=1.43\ Fr/Eur$.\medskip{}
+
+
+\noindent \begin{esempio} Un investitore svizzero ha acquistato 10
+azioni della BASF. L'azione della BASF è quotata in euro. La tabella
+seguente riporta i prezzi a tre date successive.\vspace{0.5cm}
+
+
+$\begin{tabular}{|c|c|c|c|}
+ Data  &  Prezzo in eur  &  Cambio 1 eur = \ensuremath{x} chf  &  Prezzo in chf \\
+\hline 7-Apr-09  &  \ensuremath{23.40}  &  \ensuremath{1.516}  &  \\
+8-Apr-09  &  \ensuremath{23.43}  &  \ensuremath{1.523}  &  \\
+9-Apr-09  &  \ensuremath{24.96}  &  \ensuremath{1.522}  &  \end{tabular}$
+
+\vspace{0.5cm}
+Evidentemente il prezzo (e quindi il rendimento)\ in chf della BASF
+è soggetto a due fonti di incertezza: i movimenti del prezzo della
+BASF in eur e i movimenti del tasso di cambio.
+
+\hfill{}$\square$ \end{esempio}
+
+\medskip{}
+ Quattro sono le domande che concernono i rendimenti di titoli quotati
+in moneta estera:\vspace{0.5cm}
+
+
+\noindent \begin{domanda} Dato l'$i-$esimo titolo, che relazione
+sussiste fra il suo rendimento percentuale in $CHF$ ed il suo rendimento
+percentuale in $EUR$ \emph{su un singolo periodo}? \end{domanda}
+
+\begin{domanda} Dato l'$i-$esimo titolo, che relazione c'è fra il
+suo rendimento logaritmico in $CHF$ ed il suo rendimento logaritmico
+in $EUR$ \emph{su un singolo periodo}? \end{domanda}
+
+\begin{domanda} Come si calcola il rendimento percentuale in $CHF$
+fra $t-n$ e $t$ (su $n$ periodi)\ utilizzando i rendimenti percentuali
+calcolati su un singolo periodo (confronta la formula (\ref{prodotto rendimenti perc su singola azione}))?
+\end{domanda}
+
+\begin{domanda} Come si calcola il rendimento logaritmico in $CHF$
+fra $t-n$ e $t$ utilizzando i rendimenti logaritmici calcolati su
+un singolo periodo?\vspace{%
+0.5cm} \end{domanda}
+
+\noindent Risponderete a queste domande risolvendo l'esercizio seguente.
+
+\begin{esercizio} Utilizziamo quale unità di misura del tempo $t$
+il giorno. Consideriamo un'unica azione%
+\footnote{Eviteremo quindi di utilizzare l'indice $i$ a pedice del suo prezzo
+o del suo rendimento.%
+}, quotata in dollari al New York Stock Exchange e il cui prezzo in
+moneta locale ($usd$) è indicato%
+\footnote{Utilizziamo la convenzione che quando un prezzo (o un rendimento)
+è espresso in una valuta diversa dalla valuta di riferimento, tale
+valuta sarà posta ad apice del prezzo (rendimento).%
+} con $P_{t}^{usd}$. Quali investitori svizzeri siamo interessati
+ai rendimenti in moneta di riferimento, ovvero in $chf$. Indicando
+con $P_{usd,t}$ il tasso di cambio al tempo $t$ e con $r_{usd,t}$
+il suo rendimento percentuale, abbiamo la semplice relazione $P_{t}=P_{usd,t}P_{t}^{usd}$.
+\begin{enumerate}
+\item [D1.] Trovate la formula che lega il rendimento giornaliero percentuale
+$r_{t}:=\left(P_{t}-P_{t-1}\right)/P_{t-1}$ ai rendimenti percentuali
+giornalieri $r_{usd,t}$ e $r_{t}^{usd}$. Cosa notate?
+
+
+Suggerimento: \[
+r_{t}=\frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}+P_{usd,t}P_{t-1}^{usd}-P_{usd,t-1}P_{t-1}^{usd}}{P_{usd,t-1}P_{t-1}^{usd}}\]
+\[
+\frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}}{P_{usd,t-1}P_{t-1}^{usd}}=(1+r_{usd,t})r_{t}^{usd}\]
+
+
+\item [D2.] Mostrate che il rendimento giornaliero logaritmico in $chf$
+è uguale alla somma dei due rendimenti logaritmici giornalieri e cioè
+quello sul prezzo in valuta locale più quello sul tasso di cambio.
+\item [D3.] Parte 1. Derivate la relazione che lega il rendimento percentuale
+in $CHF$ fra $t-n$ e $t$, notato $r_{\left(t-n\right),t}$, ai
+rendimenti percentuali $r_{usd,\left(t-n\right),t}$ e $r_{\left(t-n\right),t}^{usd}$.
+
+
+Suggerimento: riutilizzate, adattando l'indice temporale, il suggerimento
+del punto 1.
+
+\item [D3.] Parte 2. Ricavate la formula per il calcolo del rendimento
+$r_{\left(t-n\right),t}$ a partire dai rendimenti percentuali sui
+singoli periodi $r_{usd,t}$ e $r_{t}^{usd}$.
+\item [D4.] Derivate la relazione che lega il rendimento logaritmico in
+$CHF$ fra $t-n$ e $t$, notato $r_{\left(t-n\right),t}$, ai rendimenti
+logaritmici $r_{usd,\left(t-n\right),t}$ e $r_{\left(t-n\right),t}^{usd}$.
+Utilizzando questo risultato derivate la formula per il calcolo $r_{\left(t-n\right),t}$
+a partire dai rendimenti logaritmici sui singoli periodi $r_{usd,t}$
+e $r_{t}^{usd}$ (proprietà di aggregazione temporale).
+\item [D5.] Assumiamo che i vettori $\left(r_{usd,t},r_{t}^{usd}\right)_{t=1,2,\cdots}^{\prime}$
+dei rendimenti logaritmici formino una successione $i.i.d.\sim N(\mu,\Sigma)$.
+Cosa possiamo concludere riguardo alla successione di rendimenti logaritmici
+in $chf$ $r_{t}$?
+
+
+\hfill{}$\square$ 
+
+\end{enumerate}
+\end{esercizio}
+
+
+\section{Flashback:\ varianze, covarianze e coefficiente di correlazione}
+
+La varianza di una variabile aleatoria $X$ (scalare)\ sappiamo essere
+definita da \begin{equation}
+Var(X):=E\left(X-E\left(X\right)\right)^{2}\label{varianza}\end{equation}
+mentre la covarianza con la variabile aleatoria $Y$ (anch'essa scalare)\ è
+uguale\begin{equation}
+Cov(X,Y):=E\left(X-E\left(X\right)\right)\left(Y-E\left(Y\right)\right)\ .\label{covarianza}\end{equation}
+Infine il coefficiente di correlazione fra $X$ e $Y$ è definito
+come\begin{equation}
+Cor(X,Y):=\frac{Cov(X,Y)}{\sqrt{Var(X)}\sqrt{Var(Y)}}\ .\end{equation}
+Per quanto riguarda varianza e covarianza, esistono formule alternative
+che possono essere ricavate a partire dalla loro definizione utilizzando
+la proprietà di linearità del valore atteso. Tali formule sono\[
+Var(X)=E\left(X^{2}\right)-\left(E\left(X\right)\right)^{2}\]
+e\[
+Cov(X,Y)=E\left(XY\right)-E\left(X\right)E\left(Y\right)\ .\]
+Poiché nel caso scalare la moltiplicazione è commutativa, vale che
+\[
+Cov(X,Y)=Cov(Y,X).\]
+Lo stesso non vale nel caso in cui $X$ e/o $Y$ siano dei vettori
+aleatori. In tal caso occorre prestare attenzione all'ordine in cui
+$X$ ed $Y$ appaiono nella funzione di $Cov$. Ricordiamo che la
+$Cov$ fra due vettori aleatori $\underset{\left(r\times1\right)}{X}$
+e $\underset{\left(c\times1\right)}{Y}$ è definita nel seguente modo
+(si noti il trasposto nella formula)\[
+\underset{\left(r\times c\right)}{Cov(X,Y)}=E\left[\left(X-E\left(X\right)\right)\left(Y-E\left(Y\right)\right)^{\prime}\right]\ .\]
+Come nel caso scalare potete dimostrare che \[
+Cov(X,Y)=E\left(XY^{\prime}\right)-E\left(X\right)E\left(Y\right)^{\prime}\]
+e quando $X=Y$ la formula della covarianza si riduce alla varianza
+del vettore aleatorio $X$: \[
+Cov(X,X)=Var(X)=E\left[\left(X-E\left(X\right)\right)\left(X-E\left(X\right)\right)^{\prime}\right]\ .\]
+Ricordiamo che, per definizione, la varianza di un vettore aleatorio
+è una matrice quadrata, simmetrica, avente quale elemento nella posizione
+$(i,j)$ la covarianza fra l'$i-$esima e la $j-$esima componente
+di $X$, $Cov(X_{i},X_{j})$. Allo stesso modo è possibile definire
+in maniera del tutto analoga la \emph{matrice di correlazione} del
+vettore aleatorio $X$ come la matrice quadrata avente nella posizione
+$(i,j)$ la correlazione fra l'$i-$esima e la $j-$esima componente
+di $X$, $Cor(X_{i},X_{j})$. Poiché $Cor(X_{i},X_{j})=Cor(X_{j},X_{i})$,
+anche la matrice di correlazione di $X$ è simmetrica! In particolare,
+la diagonale di qualsiasi matrice di correlazione è formata da $1$,
+mentre fuori dalla diagonale devono esserci dei numeri compresi nell'intervallo
+$[-1,1]$. La matrice di correlazione è positiva semidefinita. La
+matrice di correlazione del vettore aleatorio $X$ sarà notata \[
+Cor(X)\ .\]
+Abbiamo studiato nella prima parte del corso la convergenza in probabilità
+dei momenti empirici verso i momenti teorici (si riveda la parte riguardante
+la \emph{Convergenza dei momenti del campione}). La versione empirica
+della (\ref{varianza}) è, dato un campione di numerosità $n$, semplicemente
+uguale%
+\footnote{In MS Excel questa è esattamente la formula sottostante alla funzione
+$varp()$.%
+}\begin{equation}
+\widehat{Var}(X)=\frac{1}{n}\sum_{t=1}^{n}\left(x_{t}-\overline{x}\right)^{2}\ ,\end{equation}
+mentre la versione empirica della (\ref{covarianza}) altro non è
+che\begin{equation}
+\widehat{Cov}(X,Y)=\frac{1}{n}\sum_{t=1}^{n}\left(x_{t}-\overline{x}\right)\left(y_{t}-\overline{y}\right)\ .\label{covarianza empirica}\end{equation}
+
+
+\begin{esercizio} Consideriamo il vettore aleatorio%
+\footnote{Il vettore $\mu$ è semplicemente il vettore dei valori attesi di
+$Z$:\[
+\mu=E(Z)=E\left[\left(\begin{array}{c}
+X\\
+Y\end{array}\right)\right]=\left(\begin{array}{c}
+E\left[X\right]\\
+E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
+\mu_{1}\\
+\mu_{2}\end{array}\right)~.\]
+%
+} $Z:=(X,Y)^{\prime}\sim\left(\mu,V\right)$ di dimensione $N=2$,
+dalla cui popolazione bivariata estraiamo un campione aleatorio di
+numerosità $n=3$. Questo significa che avremo a che fare con le realizzazioni
+di $3$ vettori aleatori $Z_{1}=\left(X_{1}~Y_{1}\right)^{\prime}$,
+$Z_{2}=\left(X_{2}~Y_{2}\right)^{\prime}$ e $Z_{3}=\left(X_{3}~Y_{3}\right)^{\prime}.$\ I
+tre vettori $Z_{1}$, $Z_{2}$ e $Z_{3}$ sono fra loro indipendenti
+(ad esempio $X_{3}$ è indipendente da $Y_{1}$ o $X_{1}$) mentre
+le due componenti $X_{t}$ e $Y_{t}$ avranno covarianza uguale a
+$V_{12}.$ Possiamo impilare i $3$ vettori $Z_{t}$ disponendoli
+nelle righe di una matrice\[
+\left[\begin{array}{l}
+Z_{1}^{\prime}\\
+Z_{3}^{\prime}\\
+Z_{3}^{\prime}\end{array}\right]=\left[\begin{array}{l}
+X_{1}~Y_{1}\\
+X_{2}~Y_{2}\\
+X_{3}~Y_{3}\end{array}\right]=\left[x,y\right].\]
+Come nella regressione possiamo leggere ed interpretare il contenuto
+di questa matrice per riga o per colonna. Le colonne conterranno tutte
+le $3$ ($n$ in generale) osservazioni della medesima variabile,
+la $X$ ad esempio (prima colonna). Le righe invece conterranno le
+osservazioni su tutte le variabili ad un determinato istante (di una
+determinata estrazione). $x$ ed $y$ sono due vettori aleatori contenenti
+tutte le $n$ osservazioni della variabile $X$ e rispettivamente
+della $Y$.
+\begin{enumerate}
+\item Quale sarà la dimensione della matrice $Cov(x,y)$? Calcolatela esplicitamente
+in fuzione della matrice $V$.
+\item Riscrivete la (\ref{covarianza empirica}) come \[
+\widehat{Cov}(X,Y)=\frac{1}{3}x^{\prime}My\ ,\]
+e date esplicitamente il contenuto della matrice $M$. Di che matrice
+si tratta? Quali sono le sue caratteristiche?
+\item Consideriamo il prodotto ($S$ è il vettore somma a $3$ componenti)
+\[
+\left(y-\mu_{2}S\right)\left(x-\mu_{1}S\right)^{\prime}\ .\]
+Date dimensione e contenuto di ogni simbolo ed esplicitate il prodotto.
+Calcolatene poi il valore atteso.
+\item Applicando le proprietà di linearità e commutatività della traccia
+e del valore atteso (già viste ed utilizzate per il calcolo del valore
+atteso di una forma quadratica) calcolate il valore atteso di\begin{equation}
+\frac{1}{3}\left(x-\mu_{1}S\right)^{\prime}M\left(y-\mu_{2}S\right)\ .\label{forma quadratica centrata}\end{equation}
+e mostrate che è uguale a $\frac{2}{3}Cov(X,Y)$.
+\item Dopo aver sciolto le parentesi della (\ref{forma quadratica centrata})
+calcolate il valore atteso di ciascun termine. Utilizzando il risultato
+del punto precedente date $E\left(\widehat{Cov}(X,Y)\right)$.
+\item Generalizzate il risultato al caso con $n$ osservazioni.
+
+
+\hfill{}$\square$ 
+
+\end{enumerate}
+\end{esercizio}
+
+\begin{remark} L'esercizio precedente ci mostra che, come nel caso
+della stima della varianza, anche per la stima della covarianza lo
+stimatore (\ref{covarianza empirica}) non è corretto poiché sarebbe
+necessario dividere per $n-1$. Tuttavia la distorsione (Bias) è dell'ordine
+$\frac{1}{n}$ e diventa negligibile (tende a 0)\ al tendere di $n$
+all'infinito. \end{remark}
+
+\begin{remark} La dimensionalità cross-section del problema%
+\footnote{Ci riferiamo al numero di titoli in portafoglio.%
+}\ è espressa dalle dimensioni del vettore aleatorio $Z$ dalla cui
+distribuzione sono campionate le osservazioni. La dimensione temporale
+è data dal numero%
+\footnote{Tale numero corrisponde al numero di date per le quali abbiamo le
+osservazioni degli $N$ rendimenti azionari$.$%
+} $n=3$ di campionamenti. \end{remark}
+
+\medskip{}
+ Tornando al coefficiente di correlazione: poiché entrambi gli stimatori
+convergono in probabilità alla varianza di $X$ ($Y$) e alla covarianza
+fra $X$ ed $Y$, utilizzando una delle proprietà del $p\lim$ (quale?)
+avremo che lo stimatore \[
+\widehat{Cor}(X,Y):=\frac{\widehat{Cov}(X,Y)}{\sqrt{\widehat{Var}(X)}\sqrt{\widehat{Var}(Y)}}\ \]
+è uno stimatore consistente della correlazione fra $X$ ed $Y$.
+
+\medskip{}
+ Concludiamo questa sezione con una semplice applicazione di statistica
+multivariata. Sia $V$ la matrice delle varianze e covarianze del
+vettore aleatorio $N$-dimensionale $Z$ e $\Lambda$ la matrice diagonale
+con elementi $\Lambda_{ii}=Var(Z_{i})$, $\ i=1,\ldots,N$. Vale allora
+la relazione\begin{equation}
+Cor(Z)=\Lambda^{-1/2}V\Lambda^{-1/2}\ .\label{matrice cor Z}\end{equation}
+
+
+\noindent \begin{esercizio} Sia $Z=(X\ Y)^{\prime}$ un vettore aleatorio
+a $N=2$ componenti di valore atteso nullo e matrice delle varianze
+e covarianze \[
+V=\left[\begin{array}{cc}
+4 & -1\\
+-1 & 25\end{array}\right]\ .\]
+
+\begin{enumerate}
+\item Calcolate la matrice $\Lambda$ e $\Lambda^{-1/2}$.
+\item Verificate che \emph{post-moltiplicare} $V$ per la matrice \emph{diagonale}
+$\Lambda^{-1/2}$ significa moltiplicare la $i-$esima \emph{colonna}
+di $V$ per il corrispettivo $i-$esimo elemento della diagonale di
+$\Lambda^{-1/2}$.
+\item Verificate che \emph{pre-moltiplicare} $V$ per la matrice \emph{diagonale}
+$\Lambda^{-1/2}$ significa moltiplicare la $i-$esima \emph{riga}
+di $V$ per il corrispettivo $i-$esimo elemento della diagonale di
+$\Lambda^{-1/2}$.
+\item Calcolate $Cor(Z)$. 
+\end{enumerate}
+\end{esercizio}
+
+
+\section{Valore atteso e varianza del rendimento di un portafoglio}
+
+Abbiamo dimostrato che il rendimento percentuale $r_{p(t-n),t}$ di
+un portafoglio è la somma ponderata dei rendimenti $r_{i(t-n),t}$
+delle azioni che lo compongono. Il vettore di questa combinazione
+lineare è $w_{(t-n)}$. Esso contiene le posizioni percentuali ad
+inizio periodo. Per semplicità di notazione assumiamo $n=1$, tralasciando
+l'indice temporale sia dei pesi che dei rendimenti. Poiché il vettore
+dei rendimenti $r\sim(e,V)$ e $r_{p}=w^{\prime}r$, avremo per la
+famosissima formula $AVA^{\prime}$, che $Var(r_{p})=w^{\prime}Vw$.
+Il valore atteso di $r_{p}$ sarà invece uguale a $\mu_{p}=w^{\prime}e$.
+
+
+\subsection{Caso con due soli titoli}
+
+Il caso con due soli titoli è triviale: $r_{p}=w_{1}r_{1}+w_{2}r_{2}$
+da cui segue semplicemente che\begin{equation}
+\sigma_{p}^{2}:=Var(r_{p})=w_{1}^{2}V(r_{1})+w_{2}^{2}V(r_{2})+2w_{1}w_{2}Cov(r_{1},r_{2})\label{varianza portafoglio due titoli}\end{equation}
+Utilizzando il vincolo $w_{1}+w_{2}=1$ è possibile riscrivere la
+(\ref{varianza portafoglio due titoli}) solo in funzione di $w_{1}\ $(o
+$w_{2}$ ovviamente) ed eseguire un grafico della funzione $\sigma_{p}^{2}(w_{1})$
+ovvero della varianza di $r_{p}$ in funzione del peso $w_{1}$. Il
+tutto è lasciato come semplice esercizio.
+
+
+\subsection{Caso generale}
+
+Il caso con $N$ titoli è praticamente già stato discusso nell'introduzione.
+
+
+\section{Portafoglio efficiente: concetti generali e de\-fi\-ni\-zio\-ne}
+
+Supponiamo che i rendimenti percentuali $r_{t}$ dei titoli in portafoglio
+siano indipendenti ed identicamente distribuiti secondo la legge normale:\[
+r_{t}\sim i.i.d.\ N(e,V)\text{.}\]
+ Il rendimento $r_{pt}$ del portafoglio, quale combinazione lineare
+dei rendimenti dei singoli titoli, sarà pertanto una variabile aleatoria
+distribuita secondo la legge normale, di valore atteso $\mu_{p}$e
+varianza $\sigma_{p}^{2}$.
+
+\medskip{}
+ Sappiamo inoltre che per caratterizzare una variabile aleatoria normale
+è necessario e sufficiente specificare il suo valore atteso e la sua
+varianza. Un investitore avrà dunque quali unici parametri di scelta
+il valore atteso e la varianza del portafoglio. È quindi ovvio che
+se i rendimenti sono variabili aleatorie normali, un individuo \emph{razionale}
+ed \emph{avverso al rischio} preferirà investire in un portafoglio
+$A$ a bassa volatilità anziché in un portafoglio $B$ di medesimo
+rendimento atteso ma volatilità superiore. È dunque legittimo chiedersi
+se, per un fisso rendimento atteso $\mu_{p}=c$, esiste un portafoglio
+a varianza minima fra tutti i portafogli di rendimento atteso superiore
+o uguale a $c$. Un simile portafoglio, se esiste, sarà chiamato portafoglio
+frontiera ({}``envelope portfolio\textquotedblright{}).
+
+\noindent \medskip{}
+ Tuttavia nulla ci impedisce di ragionare partendo dal rischio associato
+al portafoglio, identificato da $\sigma_{p}^{2}=d$. In tal caso dovremo
+chiederci se esiste un portafoglio che massimizza il rendimento atteso
+fra tutti i portafogli con varianza minore o al massimo uguale a $\sigma_{p}^{2}$.
+Un portafoglio del genere, se esiste, è chiamato portafoglio efficiente.
+
+\noindent \bigskip{}
+
+
+\[
+Grafico\]
+
+
+\vspace{5cm}
+
+
+\noindent Nel definire il portafoglio frontiera ed il portafoglio
+efficiente abbiamo utilizzato nel nostro ragionamento la varianza
+del portafoglio. Avremmo potuto fare lo stesso ragionamento in termini
+della volatilità $\sigma_{p}$ del portafoglio e giungere esattamente
+alla stessa conclusione in quanto le due misure di dispersione sono
+legate fra loro da una trasformazione monotona crescente: dati due
+portafogli $p_{1}$e $p_{2}$: \[
+\sigma_{p_{1}}^{2}>\sigma_{p_{2}}^{2}\Longleftrightarrow\sigma_{p_{1}}>\sigma_{p_{2}}\ .\]
+
+
+
+\chapter{Introduzione al linguaggio di programmazione R}
+
+
+\section{Premessa}
+
+R è un ambiente di sviluppo per l'analisi dei dati nato come estensione
+del linguaggio di programmazione S sviluppato negli anni 80 nei Laboratori
+Bell americani dell'AT\&T. R è un ambiente statistico aperto e di
+pubblico dominio ({}``open source\textquotedblright{}) che, nel rispetto
+dei diritti d'autore, può essere copiato, distribuito e modificato
+da chiunque. Inizialmente scritto da Ross Ihaka e Robert Gentleman
+del Dipartimento di Statistica dell'Università di Auckland, Nuova
+Zelanda, dal 1997 lo sviluppo di R è affidato ad un gruppo internazionale,
+l' {}``R Core Team\textquotedblright{}. Il codice sorgente e gli
+eseguibili del programma di base e delle varie librerie aggiuntive
+possono essere scaricati accedendo all'indirizzo web \[
+\emph{http://www.r-project.org}\]
+dove si trovano le versioni del linguaggio per diversi sistemi operativi
+(Linux, Mac, Windows, ...).
+
+\medskip{}
+ Questo documento non è un manuale ma serve unicamente quale traccia
+o riassunto di quanto presentato in classe. Per ulteriori approfondimenti
+e precisazioni dei temi trattati, oltre ai manuali ed alla ricca documentazione
+disponibile all'indirizzo sopraccitato, si vedano i riferimenti bibliografici
+indicati all'indirizzo \[
+\emph{http://www.r-project.org/doc/bib/R-publications.html\ }.\]
+ Buona documentazione in varie lingue fra cui l'italiano è pure ottenibile
+all'in\-di\-riz\-zo \[
+\emph{http://stat.ethz.ch/CRAN/other-docs.html\ .}\]
+
+
+
+\section{Installazione}
+
+\noindent Il programma R è stato installato sul disco {}``Condivisione\textquotedblright{}\emph{\ }nella
+cartella \emph{programs/R/} (la versione attuale è la 2.10.1). Tuttavia
+i normali utenti non hanno diritto di scrittura su tale disco e pertanto
+prima di lanciare il programma dovete creare una shortcut in una cartella
+sulla quale avete diritto di lettura e scrittura. In \ pratica dovete
+seguire i seguenti passi:
+\begin{enumerate}
+\item Creare una cartella che verrà utilizzata come home di R. Suggerisco
+di creare la cartella {}``R\textquotedblright{}\ nella directory
+{}``My Documents\textquotedblright{}. In tal modo sarà possibile
+accedere ai dati da qualsiasi pc interno ed esterno all'USI.
+\item Andate poi in {}``\textbackslash{}\textbackslash{}usi\textbackslash{}dfs\textbackslash{}Condivisione\textbackslash{}programs\textbackslash{}R\textbackslash{}2.10.1\textbackslash{}bin\textquotedblright{}.
+\item Create una shortcut di {}``Rgui.exe\textquotedblright{} sul vostro
+desktop. L'icona {}``Rgui.exe\textquotedblright{} verrà utilizzata
+per lanciare R.
+\item Selezionare l'icona della shortcut appena creata col tasto destro
+del mouse e scegliere dal menu a cascata la voce properties.
+\item Nel campo {}``Start in\textquotedblright{} immettere il percorso
+della directory creata al punto 1. Nel mio caso il percorso è \[
+\text{\textquotedblleft}\backslash\backslash usi\backslash dfs\backslash istituti\backslash Documents\backslash ortellic\backslash My\: Documents\backslash R\text{\textquotedblright}.\]
+ Voi dovreste avere un percorso simile ma con {}``ortellic\textquotedblright{}
+rimpiazzato dal vostro identificativo d'accesso (login name).
+\item Chiudere la finestra delle proprietà della shortcut. 
+\end{enumerate}
+\medskip{}
+ Ora siete pronti ad avviare la vostra prima sessione di R!
+
+\noindent \medskip{}
+ È possibile configurare R andando ad aggiungere, eliminare o modificare
+il contenuto del file Rprofile.site che si trova nella sottocartella
+{}``etc\textquotedblright{} della cartella in cui è stato installato
+il programma. All'USI l'applicazione R è installata in \[
+\text{\textquotedblleft}\backslash\backslash usi\backslash dfs\backslash Condivisione\backslash programs\backslash R\backslash2.10.1\text{\textquotedblright}\]
+e il file Rprofile.site si troverà quindi in \[
+\text{\textquotedblleft}\backslash\backslash usi\backslash dfs\backslash Condivisione\backslash programs\backslash R\backslash2.10.1\backslash etc\text{\textquotedblright\ .}\]
+Tuttavia, poiché non avete diritto di scrittura è necessario operare
+diversamente. Anziché modificare il file Rprofile.site ne facciamo
+una copia e la mettiamo nella cartella di home di R (da noi creata
+in precedenza al punto 1). All'avvio di R il programma cerca automaticamente
+nella cartella di home la presenza del file {}``$.Rprofile$\textquotedblright{}
+e ne legge il contenuto. Modifichiamo il contenuto di Rprofile.site
+e in seguito cambiamo il suo nome%
+\footnote{Da explorer non è possibile rinominare un file con un nome che inizia
+con un punto. È necessario farlo da linea di comando (command prompt).
+Evito per ragioni di tempo di spiegare come aggirare il problema.
+La semplice alternativa è quella di copiare un file già esistente
+per poi modificarlo secondo le proprie necessità. Voi potete utilizzare
+il file .Rprofile che si trova sul disco Corsi.%
+} in {}``$.Rprofile$\textquotedblright{}. In tal modo ci assicuriamo
+che dopo l'avvio di R il programma abbia caricato la configurazione
+da noi desiderata. Un esempio di .Rprofie è dato qui di seguito%
+\footnote{Attenzione: i file che iniziano con un punto sono normalmente nascosti.
+Per vederli è\ necessario aprire la cartella contenente il file che
+si desidera visualizzare, selezionare il Menu \[
+\emph{Tools\ ->\ Folder\ Options\ ...}\]
+selezionare l'etichetta {}``View\textquotedblright{}\ e selezionare
+l'opzione {}``Show hidden files and folders\textquotedblright{}.%
+}:
+
+\noindent \# Things you might want to change
+
+options(papersize=\textquotedbl{}a4\textquotedbl{})
+
+\# options(editor=\textquotedbl{}notepad\textquotedbl{})
+
+\# options(pager=\textquotedbl{}internal\textquotedbl{})
+
+\# to prefer Compiled HTML help
+
+options(chmhelp=FALSE)
+
+\# to prefer HTML help
+
+options(htmlhelp=TRUE)
+
+\medskip{}
+ Il carattere {}``$\#$\textquotedblright{} serve per commentare
+il codice. Una linea che inizia con tale carattere non verà eseguita!
+
+\noindent \medskip{}
+ Se desiderate installare R a casa dovete scaricare il programma:
+\begin{enumerate}
+\item Andate al sito \emph{www.r-project.org}
+\item Cliccate su CRAN sul lato sinistro della finestra. Dopodiché selezionate
+un {}``CRAN Mirrors\textquotedblright{}, io generalmente seleziono
+quello dell'ETH-Zurigo:\[
+\emph{http://cran.ch.r-project.org/}\]
+In base alla piattaforma scaricate l'ultima versione di R, al momento
+la 2.10.1 ed installatela (a giorni dovrebbe essere rilasciata la
+versione 2.11.0). 
+\end{enumerate}
+\noindent \begin{remark} Gli utilizzatori del sistema operativo Linux
+trovano R nei pacchetti della loro distribuzione preferita. \end{remark}
+
+
+\section{La linea di comando}
+
+Alla sua apertura il programma R mostra una sola finestra. Questa
+finestra è chiamata $\emph{finestra\, di\, comando}$ in quanto essa
+contiene la \emph{linea di comando}, cioè il luogo dove scrivere i
+comandi che verranno poi eseguiti dal programma. A prima vista il
+tutto può sembrare molto scomodo, soprattutto per coloro che sono
+abituati a lavorare tramite mouse, menu a cascata, bottoni ecc. .
+Questo in parte è vero ... ma solo nella fase iniziale. Infatti, man
+mano che apprenderete i comandi di R vi accorgerete della velocità
+e dei vantaggi di questo sistema.
+
+\medskip{}
+ Particolarmente importante, soprattutto durante la fase di apprendimento,
+è il comando $\emph{help(}^{\prime}nome^{\prime}\emph{)}$. Con questo
+comando richiamate la pagina del manuale di R che descrive la sintassi
+ed il funzionamento del comando $\prime nome\prime$. Per esempio,
+digitando \emph{help(help)} appare la pagina con la descrizione del
+comando help. Potete leggere in tale pagina che una scorciatoia al
+comando help() è data dal punto interrogativo \emph{'?'}. Al posto
+di help(help) avremmo anche potuto scrivere ?help. Ancora un'osservazione
+prima di iniziare. Se voi digitate \emph{help }senza aggiungere le
+parentesi tonde verrà visualizzato il codice della funzione help.
+Questo comportamento vale per tutti i comandi di R. Infine, per ricerche
+avanzate digitare \emph{help.start()}.
+
+\medskip{}
+ Un primo grande vantaggio della linea di comando è dato dal fatto
+di poter richiamare e quindi ripetere velocemente un comando o una
+serie di comandi impartiti in precedenza. Utilizzando le frecce {}``in
+alto\textquotedblright{}\ e {}``in basso\textquotedblright{}\ è
+possibile scorrere la storia dei comandi impartiti. Per ottenere una
+lista degli ultimi comandi eseguiti digitare il comando \emph{history()}.
+Il numero massimo di comandi tenuti a mente è 512 (questo parametro
+è tuttavia modificabile). Di default \emph{history()} propone la lista
+degli ultimi 25 comandi. È possibile tramite l'argomento \emph{max.show}
+aumentare o diminuire il numero di comandi mostrati: history(max.show=3).
+
+
+\section{Strutture semplici e strutture di dati}
+
+Cominciamo utilizzando R come un'elementare macchina calcolatrice.
+
+
+\subsubsection{Operatori matematici\label{operatori matematici semplici}}
+
+Per quanto riguarda gli operatori matematici semplici quali la somma,
+la sottrazione, la moltiplicazione, la divisione e l'elevamento a
+potenza, R non si differenzia dagli altri linguaggi. \[
+\begin{tabular}{ll}
+ Somma  &  \ensuremath{+} \\
+Sottrazione  &  \ensuremath{-} \\
+Moltiplicazione  &  \ensuremath{\ast} \\
+Divisione  &  \ensuremath{/} \\
+Divisione intera  &  \ensuremath{\%/\%} \\
+Elevamento a potenza  &  \ensuremath{\ast\ast} oppure\:\ensuremath{\symbol{94}}\end{tabular}\]
+
+
+\noindent Ad esempio\medskip{}
+
+
+\noindent \textbf{> 5+7{*}3}
+
+\textbf{{[}1{]} 26}\medskip{}
+
+
+\noindent Per modificare le priorità in una sequenza di operazioni
+si utilizzano le parentesi tonde:\medskip{}
+
+
+\noindent \textbf{> (5+7){*}3}
+
+\textbf{{[}1{]}\ 36}
+
+\noindent \textbf{> 2{*}3\symbol{94}2}
+
+\textbf{{[}1{]} 18}
+
+\noindent \textbf{> (2{*}3)\symbol{94}2}
+
+\textbf{{[}1{]} 36}\bigskip{}
+
+
+
+\subsubsection{Assegnamenti}
+
+\noindent In R si assegna alla variabile $x$ il valore 2 tramite
+l'operatore '$=$' oppure '\inputencoding{latin1}{ }\inputencoding{latin9}<-':\medskip{}
+
+
+\noindent \textbf{> x <- 2}\medskip{}
+
+
+\noindent Per visualizzare il contenuto di $x$ basta eseguire\medskip{}
+
+
+\noindent \textbf{> x}\medskip{}
+
+
+\noindent oppure\medskip{}
+
+
+\noindent \textbf{> print(x)}\medskip{}
+
+
+\noindent Per rimuovere la variabile $x$ si utilizza il comando remove:
+'rm()' \medskip{}
+
+
+\noindent \textbf{> rm(x)}\medskip{}
+
+
+\noindent Per visualizzare la lista degli oggetti in memoria (variabili,
+funzioni, ecc.) si usa il comando 'objects()':\medskip{}
+
+
+\noindent \textbf{> objects()}\medskip{}
+
+
+\begin{remark} Un'assegnazione può essere effettuata anche da sinistra
+verso destra. In altre parole\medskip{}
+ \end{remark}
+
+\noindent \textbf{> 3 -> z}\medskip{}
+
+
+\noindent è un comando valido di R. Infatti\medskip{}
+
+
+\noindent \textbf{> z}
+
+\textbf{{[}1{]} 3}\bigskip{}
+
+
+
+\subsubsection{Successioni}
+
+\noindent Spesso è necessario creare delle successioni di numeri.
+In R esiste il comando \emph{seq (limite inferiore, limite superiore,
+incremento):}\medskip{}
+
+
+\noindent \textbf{> seq (1,5,1)}
+
+\textbf{{[}1{]} 1 2 3 4 5}
+
+\noindent \textbf{> seq (1996, 2003,1)}
+
+\textbf{{[}1{]} 1996 1997 1998 1999 2000 2001 2002 2003}
+
+\noindent > \textbf{seq (1, 0, -0.2)}
+
+\textbf{{[}1{]} 1.0 0.8 0.6 0.4 0.2 0.0}\medskip{}
+
+
+\noindent Il limite inferiore così come l'incremento sono definiti
+per default uguali ad 1. Così avremo che\medskip{}
+
+
+\noindent \textbf{> a <- seq(5)}
+
+\noindent \textbf{> a}
+
+\textbf{{[}1{]} 1 2 3 4 5}\medskip{}
+
+
+\noindent Quest'ultima operazione può essere svolta anche con l'operatore
+{}``due punti\textquotedblright{}:\medskip{}
+
+
+\noindent \textbf{> b <- 1:5}
+
+\noindent \textbf{> b}
+
+\textbf{{[}1{]} 1 2 3 4 5}\medskip{}
+
+
+\noindent Sono pure ammesse oltre che molto utili espressioni del
+tipo\medskip{}
+
+
+\noindent > 0:5/10
+
+{[}1{]} 0.0 0.1 0.2 0.3 0.4 0.5\bigskip{}
+
+
+
+\subsubsection{Concatenamento e copie multiple di elementi}
+
+\noindent L'operatore \emph{c() }serve a concatenare più elementi
+fra loro.\medskip{}
+
+
+\noindent \textbf{> nome.cognome <- c(\textquotedblright{}Claudio\textquotedblright{},\textquotedblright{}Ortelli\textquotedblright{})}
+
+\noindent \textbf{> nome.cognome}
+
+\textbf{{[}1{]} ''Claudio'' ''Ortelli''}\medskip{}
+
+
+\noindent L'oggetto creato è un vettore le cui componenti sono tutto
+del medesimo tipo (\emph{character} in questo caso). Se si tenta di
+concatenare oggetti di formato diverso la funzione \emph{c()} trasformerà
+tutti i dati nel tipo più generale, nel prossimo esempio in formato
+stringa:\medskip{}
+
+
+\noindent \textbf{> c(1,2.5,''nome'')}
+
+\textbf{{[}1{]} ''1'' ''2.5'' ''nome''}\medskip{}
+
+
+\noindent Lavorare con vettori è utile in quanto è possibile sfruttare
+la capacità di R di effettuare determinate operazioni su ogni componente
+del vettore tramite un unico comando. Oltre ad un tempo d'esecuzione
+inferiore rispetto ad un ciclo \emph{for} si ottiene anche una migliore
+leggibilità del codice.\medskip{}
+
+
+\noindent \textbf{> x <- c(2,3,-1)}
+
+\noindent \textbf{> x\symbol{94}2}
+
+\textbf{{[}1{]} 4 9 1}\medskip{}
+
+
+\noindent Tramite la funzione \emph{rep (oggetto, numero ripetizioni)
+}è possibile copiare un oggetto un certo numero di volte. Per esempio\medskip{}
+
+
+\noindent > \textbf{rep(1,5)}
+
+\textbf{{[}1{]} 1 1 1 1 1}
+
+\noindent \textbf{> rep(x,2)}
+
+\textbf{{[}1{]} 2 3 -1 2 3 -1}\medskip{}
+
+
+\noindent 'numero ripetizioni' può essere un vettore contenente numeri
+interi non negativi. In tal caso anche 'oggetto' deve essere un vettore
+della medesima lunghezza. Il risultato sarà un vettore dove ogni componente
+del vettore 'oggetto' è ripetuta tante volte quanto è indicato alla
+posizione corrispondente del vettore 'numero ripetizioni'.\medskip{}
+
+
+\noindent \textbf{> x}
+
+\textbf{{[}1{]} 2 3 -1}
+
+\noindent \textbf{> rep(x,c(3,2,1))}
+
+\textbf{{[}1{]} 2 2 2 3 3 -1}\bigskip{}
+
+
+
+\subsubsection{Operazioni matematiche}
+
+Abbiamo visto le operazioni matematiche su scalari al punto (\ref{operatori matematici semplici}).
+Cosa accade se applichiamo tali aperazioni fra due vettori numerici?
+La risposta è semplice: gli operatori aritmetici agiscono su vettori
+componente per componente. La prossima tabella mostra tale proprietà.\medskip{}
+
+
+\noindent > b <- 1:4
+
+\noindent > a <- 2{*}(0:3)\medskip{}
+
+
+\begin{center}
+\begin{tabular}{ll|lllll}
+\hline 
+a  & b  & a+b  & a-b  & a{*}b  & a/b  & a\symbol{94}b \tabularnewline
+\hline 
+0  & 1  & 1  & -1  & 0  & 0  & 0 \tabularnewline
+2  & 2  & 4  & 0  & 4  & 1  & 4 \tabularnewline
+4  & 3  & 7  & 1  & 12  & 1.33  & 64 \tabularnewline
+6  & 4  & 10  & 2  & 24  & 1.5  & 1296 \tabularnewline
+\hline
+\end{tabular}\medskip{}
+ 
+\par\end{center}
+
+\noindent È quindi possibile scrivere formule anche relativamente
+complesse.\medskip{}
+
+
+\noindent \textbf{> z <- (a\symbol{94}2 - b\symbol{%
+94}2)\symbol{94}2 / (a\symbol{94}2 + b\symbol{94}2)}
+
+\noindent \textbf{> z}
+
+{[}1{]} 1.000000 0.000000 1.960000 7.692308\bigskip{}
+
+
+
+\subsubsection{Tipi di parentesi e loro significato}
+
+\noindent R possiede tre tipi di parentesi: parentesi tonde, quadre
+e graffe. Le parentesi tonde servono a definire l'ordine nel quale
+le operazioni matematiche vanno eseguite. Le parentesi quadre invece
+servono a definire le componenti di un vettore o di una matrice sulle
+quali vogliamo operare (vedremo più tardi come definire una matrice
+in R). Infine, le parentesi graffe servono a delimitare blocchi di
+codice come ad esempio in caso di istruzioni if \{ ...\} else \{ ...\}.
+
+\noindent Definiamo ora un vettore qualsiasi di 3 componenti, per
+esempio\medskip{}
+
+
+\noindent \textbf{> x <- 1:3{*}10}
+
+\noindent \textbf{> x}
+
+\textbf{{[}1{]} 10 20 30}
+
+\noindent \textbf{> x{[}1{]}\qquad{}\qquad{}\#accesso al primo elemento}
+
+\textbf{{[}1{]} 10}
+
+\noindent \textbf{> x{[}2{]}\qquad{}\qquad{}\#accesso al secondo
+elemento}
+
+\textbf{{[}1{]} 20}
+
+\noindent \textbf{> x{[}3{]}\qquad{}\qquad{}\#accesso al terzo elemento}
+
+\textbf{{[}1{]} 30}
+
+\noindent \textbf{> x{[}4{]}\qquad{}\qquad{}\#accesso al quarto
+elemento}
+
+\textbf{{[}1{]} NA}\medskip{}
+
+
+\noindent Il termine \textbf{NA} significa {}``not available\textquotedblright{}.
+È possibile dare un vettore di interi quale argomento all'interno
+delle parentesi quadre:\medskip{}
+
+
+\noindent \textbf{> x{[}rep(1,5){]}}
+
+{[}1{]} 10 10 10 10 10
+
+\noindent \textbf{> x{[}c(1,3){]}}
+
+{[}1{]} 10 30
+
+\noindent Indici negativi significano {}``non voglio\textquotedblright{},
+cioè
+
+\noindent \textbf{> x{[}-1{]}\qquad{}\qquad{}\#non voglio il primo
+elemento}
+
+\textbf{{[}1{]} 20 30}
+
+\noindent \textbf{> x{[}-c(1,3){]}\qquad{}\#non voglio il primo \&
+il terzo elemento}
+
+{[}1{]} 20
+
+\noindent Tuttavia non è possibile mischiare indici positivi e negativi:
+\textbf{x{[}c(-1,3){]}} non funziona.\bigskip{}
+
+
+
+\subsubsection{Operatori logici}
+
+Le variabili logiche sono variabili binarie, cioè assumono solo due
+valori vero (1 o TRUE) e falso (0 o FALSE). In R si definisce una
+variabile logica assegnandole il valore TRUE o FALSE, esattamente
+come si usa fare con una qualsiasi altra variabile numerica o di tipo
+stringa. Spesso le variabili logiche sono il risultato di un operatore
+logico quale ad esempio {}``>=\textquotedblright{}, {}``<\textquotedblright{}:\medskip{}
+
+
+\noindent \textbf{> 5 >=4}
+
+\textbf{{[}1{]} TRUE}
+
+\medskip{}
+ In R troviamo i seguenti operatori logici:
+
+\noindent \begin{center}
+\begin{tabular}{ll}
+Operatore  & Funzione \tabularnewline
+<  & minore a \tabularnewline
+>  & maggiore a \tabularnewline
+<=  & minore o uguale a \tabularnewline
+>=  & maggiore o uguale a \tabularnewline
+==  & uguale a \tabularnewline
+!=  & diverso da\tabularnewline
+\end{tabular}\medskip{}
+ 
+\par\end{center}
+
+\noindent \textbf{> 5!=1}
+
+\textbf{{[}1{]} TRUE}\medskip{}
+
+
+\noindent Così come gli operatori matematici, anche gli operatori
+logici operano componente per componente quando vengono applicati
+a vettori o matrici.\medskip{}
+
+
+\noindent \textbf{> x <- 1:3}
+
+\noindent \textbf{> x < 3}
+
+\textbf{{[}1{]} TRUE TRUE FALSE}
+
+\noindent \textbf{> y <- 3:1}
+
+\noindent \textbf{> y}
+
+\textbf{{[}1{]} 3 2 1}
+
+\noindent \textbf{> x<y}
+
+\textbf{{[}1{]} TRUE FALSE FALSE}\medskip{}
+
+
+\noindent Una caratteristica molto utile degli operatori logici applicati
+a vettori consiste nel fatto che è possibile contare il numero di
+componenti che soddisfano una certa condizione. Per esempio, supponiamo
+di voler sapere quali componenti del vettore 1:10 sono maggiori o
+uguali a 7.\medskip{}
+
+
+\noindent \textbf{> 1:10 >= 7}
+
+\textbf{{[}1{]} FALSE FALSE FALSE FALSE FALSE FALSE TRUE TRUE TRUE
+TRUE}
+
+\noindent \textbf{> sum(1:10 >= 7)}
+
+\textbf{{[}1{]} 4}\medskip{}
+
+
+\noindent La funzione \emph{sum()} ha tramutato FALSE\ in 0 e TRUE\ in
+1 e sommato tutte le componenti.\bigskip{}
+
+
+
+\subsubsection{Estrazione di indici}
+
+I valori logici sono molto utilizzati per estrarre da strutture piu'
+complesse solo quelle parti che soddisfano determinate condizioni.
+Per esempio, supponiamo di avere osservazioni sull'altezza e sul peso
+di 9 individui,\medskip{}
+
+
+\noindent \textbf{> nome <- c(\textquotedblright{}Claudio\textquotedblright{},
+\textquotedblright{}Maria\textquotedblright{}, \textquotedblright{}Marco\textquotedblright{},
+\textquotedblright{}Matteo\textquotedblright{}, \textquotedblright{}Francesca\textquotedblright{},
+\textquotedblright{}Giovanni\textquotedblright{}, \textquotedblright{}Marta\textquotedblright{},
+\textquotedblright{}Giorgio\textquotedblright{}, \textquotedblright{}Alberto\textquotedblright{})}
+
+\noindent \textbf{> altezza <- 140:148}
+
+\noindent \textbf{> peso <- c(seq(50,
+64, 2),59)}\medskip{}
+
+
+\noindent Quali sono gli individui che hanno un peso superiore a 60
+Kg? Per rispondere a questa domanda è sufficiente eseguire il comando\medskip{}
+
+
+\noindent > \textbf{nome{[}peso>60{]}}
+
+\textbf{{[}1{]} ''Marta'', ''Giorgio''}\medskip{}
+
+
+\noindent E quanto sono alti?\medskip{}
+
+
+\noindent \textbf{> altezza{[}peso>60{]}}
+
+\textbf{{[}1{]} 146 147}\medskip{}
+
+
+\noindent È possibile specificare più condizioni, legandole fra loro
+tramite gli operatori \& (\textquotedblright{}logical and\textquotedblright{}),
+$|$ (\textquotedblright{}logical or\textquotedblright{}). Ad esempio\medskip{}
+
+
+\noindent \textbf{> nome{[}peso>60
+\& peso != 64{]}}
+
+\textbf{{[}1{]} ''Marta''}
+
+
+\subsection{Strutture di dati}
+
+Nel precedente paragrafo abbiamo visto come costruire una struttura
+\textquotedbl{}vettore\textquotedbl{} partendo da semplici variabili
+scalari (tramite la funzione di concatenamento \textbf{c()}). Come
+ben sapete dai vari corsi di statistica, matematica ed econometria,
+in molte circostanze è indispensabile generalizzare il concetto di
+vettore a strutture multidimensionali (chiamate generalmente arrays)
+di cui le matrici sono l'esempio più noto. Conosceremo ora le strutture
+multidimensionali contenute in R.
+
+
+\subsubsection{Data Frames}
+
+I data frames sono delle tabelle in cui è consentito inserire colonne
+di formato (tipo) diverso fra loro. Il comando per generare un data
+frame è il seguente: \[
+data.frame\ (Elemento1,\ Elemento2,\ ...)\]
+Tutti gli argomenti che vengono elencati in data.frame \emph{devono}
+avere il medesimo numero di righe. Tornando all'esempio precedente
+dei nove individui:\medskip{}
+
+
+\noindent \textbf{> tabella <- data.frame(nome,altezza,peso)}
+
+\noindent \textbf{> tabella}
+
+\begin{tabular}{rrrr}
+ & \textbf{nome}  & \textbf{altezza}  & \textbf{peso} \tabularnewline
+\textbf{1}  & \textbf{Claudio}  & \textbf{141}  & \textbf{50} \tabularnewline
+\textbf{2}  & \textbf{Maria}  & \textbf{142}  & \textbf{52} \tabularnewline
+\textbf{3}  & \textbf{Marco}  & \textbf{143}  & \textbf{54} \tabularnewline
+\textbf{4}  & \textbf{Matteo}  & \textbf{144}  & \textbf{56} \tabularnewline
+\textbf{5}  & \textbf{Francesca}  & \textbf{145}  & \textbf{58} \tabularnewline
+\textbf{6}  & \textbf{Giovanni}  & \textbf{146}  & \textbf{60} \tabularnewline
+\textbf{7}  & \textbf{Marta}  & \textbf{147}  & \textbf{62} \tabularnewline
+\textbf{8}  & \textbf{Giorgio}  & \textbf{148}  & \textbf{64} \tabularnewline
+\textbf{9}  & \textbf{Alberto}  & \textbf{149}  & \textbf{59}\tabularnewline
+\end{tabular}
+
+\medskip{}
+ Un esempio importante per la creazione di un data.frame è costituito
+dall'importazione di dati da una tabella in formato csv. Il comando
+da utililzzare è \textbf{read.table }(si veda la documentazione per
+la descrizione dettagliata digitando {}``help(read.table)\textquotedblright{}:
+
+\noindent \textbf{> dati <- read.table(\textquotedblright{}//usi/dfs/istituti/Documents/ortellic/}
+
+\nopagebreak\textbf{My Documents/R/daticorso.csv\textquotedblright{},header=TRUE,sep=\textquotedblright{};\textquotedblright{},}
+
+\nopagebreak\textbf{colClasses=c(\textquotedblright{}character\textquotedblright{},rep(\textquotedblright{}numeric\textquotedblright{},6)))}\medskip{}
+
+
+\noindent Il primo argomento indica il nome del file da aprire. Si
+noti che mentre Windows utilizza il carattere \textbf{{}``}\\textbf{\textquotedblright{}}
+per separare nomi di cartelle, R utilizza lo standard unix e cioè
+il carattere \textbf{{}``}/\textbf{\textquotedblright{}}. Quando
+il file da importare si trova nell'attuale cartella di lavoro (cioè
+la cartella indicata nel campo \textbf{{}``}start in\textbf{\textquotedblright{}}
+dell'icona con cui avviate il programma), è sufficiente indicare il
+nome del file. Avremmo dunque potuto anche scrivere\medskip{}
+
+
+\noindent \textbf{> dati <- read.table(''daticorso.csv'',
+header=TRUE, sep='';'', }
+
+\textbf{colClasses=c(''character'',rep(''numeric'',6)))}\medskip{}
+
+
+\noindent Il secondo argomento indica se la prima riga di dati contiene
+le intestazioni delle colonne. Il parametro \textbf{sep }determina
+il carattere utilizzato per separare il contenuto delle colonne. L'ultimo
+argomento, \textbf{colCasses}, determina il tipo di dato contenuto
+in ciascuna colonna (logical, integer, real, complex e character sono
+i tipi di vettori (colonne) che si possono importare in un data frame).
+
+\noindent Prima di eseguire l'importazione è bene dare un'occhiata
+al file contenente i dati. Aprite dunque il file con un semplice elaboratore
+di testo (Notepad) e verificate che il carattere di separazione sia
+la virgola, il punto e virgola o qualche altro carattere particolare.
+Modificate il comando di conseguenza (\textbf{sep=\textquotedbl{}{*}\textquotedbl{}}).
+
+\medskip{}
+ Per accedere a dati contenuti in un data frame si usano le parentesi
+quadre. Al loro interno vanno indicati i numeri delle righe e delle
+colonne che si vogliono estrarre. Se si desiderano tutte le righe
+o tutte le colonne di un data frame è sufficiente lasciare vuoto l'indice
+corrispondete. Per esempio\medskip{}
+
+
+\noindent \textbf{> dati{[}1,{]}}
+
+\textbf{\ }\begin{tabular}{rrrrrrrr}
+ & \textbf{date } & \textbf{SP100 } & \textbf{MIB30 } & \textbf{DAX } & \textbf{SMI } & \textbf{EUR } & \textbf{CHF }\tabularnewline
+\textbf{1 } & \textbf{1/1/1999 } & \textbf{604.03 } & \textbf{35152 } & \textbf{5002.39 } & \textbf{7160.7 } & \textbf{0.8516 } & \textbf{1.413}\tabularnewline
+\end{tabular}\medskip{}
+
+
+\noindent Per vedere la prima, la terza e l'ultima riga delle prime
+3 colonne del data frame {}``dati\textquotedblright{}\medskip{}
+
+
+\noindent \textbf{> dati{[}c(1,3,1141)},\textbf{1:3}{]}
+
+\begin{tabular}{rrrr}
+ & \textbf{date}  & \textbf{SP100}  & \textbf{MIB30} \tabularnewline
+\textbf{1}  & \textbf{1/1/1999}  & \textbf{604.03}  & \textbf{35152} \tabularnewline
+\textbf{3}  & \textbf{1/5/1999}  & \textbf{615.38}  & \textbf{37807} \tabularnewline
+\textbf{1141}  & \textbf{5/16/2003}  & \textbf{475.72}  & \textbf{24740}\tabularnewline
+\end{tabular}\medskip{}
+
+
+\noindent Così come con i vettori è possibile utilizzare indici negativi
+sia per le righe che per le colonne di un data frame. Ricordo che
+non è possibile avere indici di segno opposto per indicare rispettivamente
+escludere righe o colonne.\medskip{}
+
+
+\noindent \textbf{> dati{[}c(1,3,1141),-(2:5){]}}
+
+\begin{tabular}{rrrr}
+ & \textbf{date}  & \textbf{EUR}  & \textbf{CHF} \tabularnewline
+\textbf{1}  & \textbf{1/1/1999}  & \textbf{0.8516}  & \textbf{1.4130} \tabularnewline
+\textbf{3}  & \textbf{1/5/1999}  & \textbf{0.8486}  & \textbf{1.3697} \tabularnewline
+\textbf{1141}  & \textbf{5/16/2003}  & \textbf{0.8665}  & \textbf{1.3250}\tabularnewline
+\end{tabular}
+
+\medskip{}
+ Diamo alcuni comandi molto utili per lavorare con oggetti di tipo
+data frame.
+\begin{enumerate}
+\item Dimensioni di un data frame:
+
+
+Il comando \textbf{dim }restituisce un vettore contenente il numero
+di righe e di colonne del data frame.\medskip{}
+
+
+\textbf{> dim(dati)}
+
+\qquad{}\textbf{{[}1{]} 1141 7}
+
+\item Aggiungere una colonna ad un data frame
+
+
+Per aggiungere una colonna utilizzare il comando \textbf{cbind()}:\medskip{}
+
+
+\textbf{> \#genera 5 numeri aleatori normali di media
+0 e deviazione standard 1}
+
+> \textbf{caso <- rnorm(5)}
+
+\textbf{dati.test <- cbind(dati{[}1:5,1:3{]}, caso)}\medskip{}
+
+
+Da notare che R assegna quale nome della nuova colonna il nome della
+variabile utilizzata e cioè \textbf{caso}.\medskip{}
+
+
+\textbf{> dati.test}
+
+\begin{tabular}{rrrrr}
+ & \textbf{date}  & \textbf{SP100}  & \textbf{MIB30}  & \textbf{caso} \tabularnewline
+\textbf{1}  & \textbf{1/1/1999}  & \textbf{604.03}  & \textbf{35152}  & \textbf{0.26866637} \tabularnewline
+\textbf{2}  & \textbf{1/4/1999}  & \textbf{604.93}  & \textbf{37417}  & \textbf{-0.03481095} \tabularnewline
+\textbf{3}  & \textbf{1/5/1999}  & \textbf{615.38}  & \textbf{37807}  & \textbf{-0.50321912} \tabularnewline
+\textbf{4}  & \textbf{1/6/1999}  & \textbf{631.00}  & \textbf{37807}  & \textbf{-0.37532667} \tabularnewline
+\textbf{5}  & \textbf{1/7/1999}  & \textbf{632.76}  & \textbf{37797}  & \textbf{0.07938619}\tabularnewline
+\end{tabular}
+
+\item Per modificare il nome delle colonne di un data frame utilizzare il
+comando \textbf{names()}:\medskip{}
+
+
+
+\textbf{> names(dati.test)\ <- c(\textquotedblright{}Data\textquotedblright{},\textquotedblright{}S\&P100\textquotedblright{},\textquotedblright{}MIB\textquotedblright{},\textquotedblright{}Simulazione\textquotedblright{})}
+
+Il risultato del comando names è un vettore. Quindi se volessimo modificare
+solo alcuni dei nomi dovremmo utilizzare le parentesi quadre:\medskip{}
+
+
+\textbf{> names(dati.test)\ {[}c(2,4){]} <-
+c(\textquotedblright{}S\&P\textquotedblright{},\textquotedblright{}Sim\textquotedblright{})}
+
+\item Per modificare il nome delle righe di un data frame utilizzare il
+comando \textbf{row.names()}:\medskip{}
+
+
+
+\textbf{> row.names(dati.test)\ {[}1:3{]} <-
+c(\textquotedblright{}uno\textquotedblright{},\textquotedblright{}due\textquotedblright{},\textquotedblright{}tre\textquotedblright{})}
+
+\textbf{> dati.test}
+
+\begin{tabular}{rrrrr}
+ & \textbf{Data}  & \textbf{S\&P}  & \textbf{MIB}  & \textbf{Sim} \tabularnewline
+\textbf{uno}  & \textbf{1/1/1999}  & \textbf{604.03}  & \textbf{35152}  & \textbf{0.26866637} \tabularnewline
+\textbf{due}  & \textbf{1/4/1999}  & \textbf{604.93}  & \textbf{37417}  & \textbf{-0.03481095} \tabularnewline
+\textbf{tre}  & \textbf{1/5/1999}  & \textbf{615.38}  & \textbf{37807}  & \textbf{-0.50321912} \tabularnewline
+\textbf{4}  & \textbf{1/6/1999}  & \textbf{631.00}  & \textbf{37807}  & \textbf{-0.37532667} \tabularnewline
+\textbf{5}  & \textbf{1/7/1999}  & \textbf{632.76}  & \textbf{37797}  & \textbf{0.07938619}\tabularnewline
+\end{tabular}\bigskip{}
+ 
+
+\end{enumerate}
+\noindent Per accedere ai dati di un data frame è pure possibile scrivere
+i nomi delle colonne/righe\medskip{}
+
+
+\noindent \textbf{> dati.test{[}\textquotedblright{}uno\textquotedblright{},\textquotedblright{}MIB\textquotedblright{}{]}}
+
+\textbf{{[}1{]} 35152}\medskip{}
+
+
+\noindent mentre per accedere ai dati di un'intera colonna, oltre
+al comando \textbf{dati.test{[},\textquotedblright{}MIB\textquotedblright{}{]},
+}è consentita la sintassi\medskip{}
+
+
+\noindent \textbf{> dati.test\$MIB}
+
+\textbf{{[}1{]} 35152 37417 37807 37807 37797}\medskip{}
+
+
+\noindent Il comando attach() permette di utilizzare direttamente
+i nomi delle colonne di un data frame senza doverne anteporre il nome.
+Ciò significa che dopo l'esecuzione del comando\medskip{}
+
+
+\noindent \textbf{> attach(dati.test)}\medskip{}
+
+
+\noindent anziché scrivere \textbf{dati.test\$MIB} sarà consentito
+scrivere solo\medskip{}
+
+
+\noindent \textbf{> MIB}\medskip{}
+
+
+\noindent Data frames diversi possono contenere colonne (variabili)
+con nomi identici. Nel caso che due o più data frames contenenti variabili
+col medesimo nome siano stati richiamati col comando \textbf{attach()},
+R andrà a prendere i dati dall'ultimo data frame richiamato. Ad ogni
+modo esiste il comando \textbf{detach('nome') }\ che elimina il data
+frame 'nome' dalla lista.
+
+
+\subsubsection{Matrici ed arrays}
+
+Le matrici sono degli arrays a due dimensioni. Gli elementi di una
+matrice sono indicati tramite due indici, l'indice riga e l'indice
+colonna. In R un array può avere fino ad 8 dimensioni. Come i vettori
+anche le matrici (e più in generale gli arrays dunque) devono essere
+omogenee rispetto al formato dei dati. Per intenderci, non è possibile
+che una matrice contenga una colonna di stringhe ed una colonna di
+numeri interi. Per creare una matrice si usa il comando \emph{matrix()}.
+\[
+matrix(data=NA,nrow=1,ncol=1,byrow=FALSE)\]
+ Per default la matrice è riempita per colonne.\medskip{}
+
+
+\noindent \textbf{> matrix(1:6,nrow=3)}
+
+\begin{tabular}{lll}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{4}}\tabularnewline
+\textbf{{[}2,{]}}  & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{5}}\tabularnewline
+\textbf{{[}3,{]}}  & \multicolumn{1}{r}{\textbf{3}} & \multicolumn{1}{r}{\textbf{6}}\tabularnewline
+\end{tabular}\bigskip{}
+
+
+\noindent Se viene indicato il numero delle righe ma non quello delle
+colonne, R aggiunge tante colonne quante sono necessarie ad esaurire
+i dati che gli sono stati passati. È bene prestare molta attenzione
+quando si costruisce una matrice. Quando il numero di dati non corrisponde
+al numero di elementi della matrice, R ci avverte con un messaggio.
+Quando il numero di elementi della matrice è inferiore al numero di
+dati, R\ utilizza solo una parte di essi. Nel caso contrario R riutilizza
+i dati più volte fino al completamento della matrice.\medskip{}
+
+
+\noindent \textbf{> matrix(1:2,nrow=3,ncol=4)}
+
+\nopagebreak\begin{tabular}{lllll}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}}  & \textbf{{[},3{]}}  & \textbf{{[},4{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}}\tabularnewline
+\textbf{{[}2,{]}}  & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{1}}\tabularnewline
+\textbf{{[}3,{]}}  & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}}\tabularnewline
+\end{tabular}\bigskip{}
+
+
+\noindent Il comando \textbf{as.matrix()} tenta di convertire in matrice
+l'argomento che gli viene dato. Un'immediata applicazione è la conversione
+della parte numerica del data frame 'dati' in matrice%
+\footnote{Il comando as.data.frame(serie) converte la matrice 'serie' in un
+oggetto di classe data frame mantenendone le dimensioni ed il tipo.%
+}:\medskip{}
+
+
+\noindent \textbf{> serie <- as.matrix(dati{[},2:7{]})}\medskip{}
+
+
+Per default as.matrix mantiene i nomi delle colonne e delle righe.
+Come per un data frame anche per una matrice è possibile assegnare
+o modificare i nomi delle righe/colonne. Il comando è tuttavia leggermente
+diverso. Ecco un esempio:\medskip{}
+
+
+\noindent \textbf{> dim(serie)}
+
+\textbf{{[}1{]} 1141 6}
+
+\noindent \textbf{> indice.riga <-
+paste(\textquotedblright{}riga\textquotedblright{},1:1141,sep=\textquotedblright{}\textquotedblright{})}
+
+\noindent \textbf{> dimnames(serie){[}{[}1{]}{]} <-
+indice.riga}
+
+\noindent \textbf{> serie{[}1:3,1:2{]}}
+
+\noindent \begin{tabular}{rrr}
+ & \textbf{SP100}  & \textbf{MIB30} \tabularnewline
+\textbf{riga1}  & \textbf{604.03}  & \textbf{35152} \tabularnewline
+\textbf{riga2}  & \textbf{604.93}  & \textbf{37417} \tabularnewline
+\textbf{riga3}  & \textbf{615.38}  & \textbf{37807}\tabularnewline
+\end{tabular}\medskip{}
+
+
+\noindent Come per i data frames è possibile utilizzare i nomi al
+posto dei numeri di riga/colonna\medskip{}
+
+
+\noindent \textbf{> serie{[}\textquotedblright{}riga14\textquotedblright{},{]}}
+
+\noindent \begin{tabular}{rrrrrr}
+\textbf{SP100}  & \textbf{MIB30}  & \textbf{DAX}  & \textbf{SMI}  & \textbf{EUR}  & \textbf{CHF} \tabularnewline
+\textbf{626.0100}  & \textbf{35382.0000}  & \textbf{5143.0600}  & \textbf{7300.2000}  & \textbf{0.8642}  & \textbf{1.3887}\tabularnewline
+\end{tabular}\medskip{}
+
+
+
+\subsubsection{Calcolo matriciale}
+
+Il grosso vantaggio nell'aver trasformato il data frame 'dati' nella
+matrice 'serie' consiste nel fatto di poter utilizzare il calcolo
+matriciale. Gli operatori \textbf{+}, \textbf{-}, \textbf{{*}}, \textbf{/}
+e \textbf{\symbol{94%
+}}operano componente per componente quando utilizzati con matrici.\medskip{}
+
+
+\noindent \textbf{> A <- matrix(1:4,
+nrow=2,ncol=2)}
+
+\noindent \textbf{> B <- matrix(4,
+nrow=2,ncol=2)}
+
+\noindent \textbf{> A-B}
+
+\begin{tabular}{rrr}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \textbf{-3}  & \textbf{-1} \tabularnewline
+\textbf{{[}2,{]}}  & \textbf{-2}  & \textbf{0}\tabularnewline
+\end{tabular}\medskip{}
+
+
+\noindent Quando applichiamo una funzione matematica ad una matrice,
+ad esempio la funzione esponenziale \textbf{exp() }o la sua inversa
+\textbf{log()}, è come se applicassimo la funzione\ ad ogni componente
+della matrice:\medskip{}
+
+
+\textbf{> exp(matrix(c(1,0,0,1),nrow=2))}
+
+\nopagebreak\begin{tabular}{rrr}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \textbf{2.718282}  & \textbf{1.000000} \tabularnewline
+\textbf{{[}2,{]}}  & \textbf{1.000000}  & \textbf{2.718282}\tabularnewline
+\end{tabular}\medskip{}
+
+
+\noindent La moltiplicazione matriciale vera e propria è definita
+tramite l'operatore \textbf{\%{*}\%}, mentre per matrici quadrate
+non singolari l'inversione è data dalla funzione \textbf{solve()}:\medskip{}
+
+
+\noindent \textbf{> solve (A-B)}
+
+\begin{tabular}{rrr}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \textbf{0}  & \textbf{-0.5} \tabularnewline
+\textbf{{[}2,{]}}  & \textbf{-1}  & \textbf{1.5}\tabularnewline
+\end{tabular}
+
+\noindent \textbf{> solve(A-B) \%{*}\% (A-B)}
+
+\begin{tabular}{rrr}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{0} \tabularnewline
+\textbf{{[}2,{]}}  & \textbf{0}  & \textbf{1}\tabularnewline
+\end{tabular}\medskip{}
+
+
+\begin{remark} La funzione \textbf{solve() }permette di risolvere
+sistemi lineari del tipo $A\ x=b$. Per motivi di carattere numerico
+si raccomanda di utilizzare la funzione $\mathbf{solve(A,b)}$ anziché
+$solve(A)~\%\ast\%~b$ per il calcolo di espressioni quali $A^{-1}b$.\medskip{}
+ \end{remark}
+
+\noindent Tra le molte funzioni matriciali ecco alcune di particolare
+importanza:
+\begin{itemize}
+\item \textbf{t(A)}:\ ritorna la trasposta di A.
+\item \textbf{det(A)}: calcola il determinante di A.
+\item \textbf{eigen (A)}:\ ritorna una variabile di tipo 'list' contenente
+il vettore degli autovalori e la matrice degli autovettori di A. (Rimandiamo
+al punto \ref{liste} per la spiegazione delle variabili di classe
+'list').
+\item \textbf{diag\ (A)}: se A è una matrice ritorna gli elementi della
+diagonale principale di A, se A è un vettore ritorna una matrice diagonale
+dove gli elementi della diagonale principale sono le componenti del
+vettore A. 
+\end{itemize}
+\begin{domanda} Come fareste a calcolare la traccia di una matrice?
+\end{domanda}
+
+
+\subsubsection{Concatenamento di matrici}
+
+\noindent Capita spesso di dover aggiungere righe e/o colonne ad una
+matrice. I comandi \textbf{rbind()} e \textbf{cbind()} servono a tal
+fine.\medskip{}
+
+
+\noindent \textbf{> A}
+
+\begin{tabular}{rrr}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{3} \tabularnewline
+\textbf{{[}2,{]}}  & \textbf{2}  & \textbf{4}\tabularnewline
+\end{tabular}
+
+\noindent \textbf{>} \textbf{col3 <-
+c(5,6)}
+
+\noindent \textbf{> cbind(A,col3)}
+
+\begin{tabular}{rrrr}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}}  & \textbf{col3} \tabularnewline
+\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{3}  & \textbf{5} \tabularnewline
+\textbf{{[}2,{]}}  & \textbf{2}  & \textbf{4}  & \textbf{6}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{La funzione apply()}
+
+La funzione \textbf{apply()} permette di applicare una qualsiasi funzione
+(fra cui in particolare funzioni matematiche quali ad esempio \textbf{mean()},
+\textbf{max()} o \textbf{min())} rispetto ad una delle $k$ dimensioni
+di un array $k$ dimensionale. Noi per semplicità abbiamo trattato
+solo matrici ($k=2)$ ma l'uso di \textbf{apply()} si estende ad un
+qualsiasi array multidimensionale. La sintassi è la seguente
+
+\[
+apply(X,MARGIN,FUN)\]
+ \textbf{> A}
+
+\noindent \begin{tabular}{rrr}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{3} \tabularnewline
+\textbf{{[}2,{]}}  & \textbf{2}  & \textbf{4}\tabularnewline
+\end{tabular}
+
+\noindent \textbf{> apply(A,1,sum) }\# applica la
+funzione \textbf{sum} alle righe di A
+
+\textbf{{[}1{]} 4 6}
+
+\noindent \textbf{> apply(A,2,mean)}
+
+\textbf{{[}1{]} 1.5 3.5}
+
+
+\subsubsection{Calcolo di returns e di log returns}
+
+Ora che abbiamo i dati nella matrice serie possiamo calcolare agevolmente
+i returns,\medskip{}
+
+
+\noindent \textbf{> returns <- (serie{[}2:1141,{]}-serie{[}1:1140,{]})/serie{[}1:1140,{]}}\medskip{}
+
+
+\noindent e i log returns\medskip{}
+
+
+\noindent \textbf{> r <- log(serie{[}2:1141,{]}/serie{[}1:1140,{]})}\medskip{}
+
+
+\noindent oppure anche il comando (si veda\textbf{\ help(diff)})\medskip{}
+
+
+\noindent \textbf{> r <- apply(log(serie{[}1:1141,{]}),2,diff)}\medskip{}
+
+
+\noindent Spiegate il significato del seguente comando:\medskip{}
+
+
+\noindent \textbf{> apply(r==0,2,sum)}
+
+\begin{tabular}{rrrrrr}
+\textbf{SP100}  & \textbf{MIB30}  & \textbf{DAX}  & \textbf{SMI}  & \textbf{EUR}  & \textbf{CHF} \tabularnewline
+\textbf{41}  & \textbf{35}  & \textbf{33}  & \textbf{40}  & \textbf{22}  & \textbf{36}\tabularnewline
+\end{tabular}
+
+
+\subsubsection{Liste\label{liste}}
+
+Una lista è un vettore le cui componenti possono essere un qualsiasi
+oggetto di R. Le liste sono particolarmente utili per raggruppare
+in maniera ordinata scalari, vettori, matrici, arrays di formato e
+dimensione diversa. Una lista può contenere altre liste. La sintassi
+per creare una \ variabile di tipo lista è la seguente \[
+list\ (elemento1,~elemento2,~\ldots)\]
+
+
+\begin{esempio} Costruzione di una lista.
+
+\noindent \textbf{> mia.lista <- list(matrix(1:6,nrow=2),c(\textquotedblright{}Nome\textquotedblright{},\textquotedblright{}Cognome\textquotedblright{}),
+dati)}
+
+\noindent \textbf{> is.list(mia.lista)}
+
+\noindent \textbf{{[}1{]} TRUE}\medskip{}
+ \end{esempio}
+
+\noindent La variabile 'mia.lista' contiene ora tre oggetti: il primo
+è una matrice $(2\times3)$ di numeri interi, il secondo è un vettore
+di stringhe ed il terzo è un data frame. Per accedere ad uno o più
+elementi della lista è\ necessario utilizzare le \textbf{doppie}
+parentesi quadre:\medskip{}
+
+
+\noindent \textbf{> mia.lista {[}{[}1{]}{]}}
+
+\begin{tabular}{rrrr}
+ & \textbf{{[},1{]}}  & \textbf{{[},2{]}}  & \textbf{{[},3{]}} \tabularnewline
+\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{3}  & \textbf{5} \tabularnewline
+\textbf{{[}2,{]}}  & \textbf{2}  & \textbf{4}  & \textbf{6}\tabularnewline
+\end{tabular}\medskip{}
+
+
+\noindent Per accedere direttamente ad elementi della matrice \textbf{mia.lista
+{[}{[}1{]}{]} }è sufficiente aggiungere le parentesi quadre con i
+rispettivi indici desiderati\medskip{}
+
+
+\noindent \textbf{> mia.lista {[}{[}1{]}{]}{[}2,{]}}
+
+\textbf{{[}1{]} 2 4 6}\medskip{}
+
+
+\noindent Se viene utilizzato il comando \[
+list\ (nome1=elemento1,~nome2=elemento2,~\ldots)\]
+
+
+\noindent è possibile riferirsi direttamente ai singoli elementi della
+lista utilizzando il loro nome (come nel caso dei data frames):\medskip{}
+
+
+\noindent \textbf{> mia.lista <- list(A=matrix(1:6,nrow=2),b=c(\textquotedblright{}Nome\textquotedblright{},\textquotedblright{}Cognome\textquotedblright{}),
+dati=dati)}
+
+\noindent \textbf{> mia.lista\$b}
+
+\textbf{{[}1{]} \textquotedblright{}Nome\textquotedblright{}\ \textquotedblright{}Cognome\textquotedblright{}}
+
+\noindent \textbf{> mia.lista\$A{[}2,{]}}
+
+\textbf{{[}1{]} 2 4 6}\medskip{}
+
+
+\noindent Per sapere la lunghezza della lista (il numero di elementi)
+utilizzate il comando \textbf{length()}:\medskip{}
+
+
+\noindent \textbf{> length(mia.lista)}
+
+\textbf{{[}1{]} 3}\medskip{}
+
+
+\noindent Per aggiungere un nuovo elemento alla lista:\medskip{}
+
+
+\noindent \textbf{mia.lista{[}{[}5{]}{]} <- c(\textquotedblright{}Il\textquotedblright{},\textquotedblright{}mio\textquotedblright{},\textquotedblright{}nuovo\textquotedblright{},\textquotedblright{}elemento\textquotedblright{})}\medskip{}
+
+
+\noindent Come avrete forse notato, non è obbligatorio utilizzare
+indici adiacenti. Ora però mia.lista ha un \textquotedbl{}buco\textquotedbl{}.\medskip{}
+
+
+\noindent \textbf{> mia.lista{[}{[}4{]}{]}}
+
+\textbf{NULL}\medskip{}
+
+
+\noindent L'elemento in posizione 5 della lista non ha un nome. Un
+metodo alternativo per ampliare una lista è quello di utilizzare direttamente
+il nome desiderato, cioè\medskip{}
+
+
+\noindent \textbf{> mia.lista\$ultimo <-
+\textquotedblright{}Ultimo elemento\textquotedblright{}}
+
+\noindent \textbf{> mia.lista\$ultimo}
+
+\textbf{{[}1{]} \textquotedbl{}Ultimo elemento\textquotedbl{}}\medskip{}
+
+
+\noindent la lista viene ampliata di un elemento (posizione 6)\ ed
+è possibile accedere a quest'ultimo col suo nome.
+
+\noindent Per eliminare un elemento è sufficiente assegnare il valore
+\textbf{NULL}.\medskip{}
+
+
+\noindent > \textbf{mia.lista{[}{[}4{]}{]} <-
+NULL}\medskip{}
+
+
+\noindent Quando si elimina un elemento da una lista, tutti gli elementi
+con indice superiore a quello eliminato vengono scalati di uno. Ciò
+significa che ora la lista mia.lista nella posizione 4 contiene ...\medskip{}
+
+
+\noindent \textbf{> mia.lista{[}{[}4{]}{]}}
+
+\textbf{{[}1{]} \textquotedblright{}Il\textquotedblright{}\ \textquotedblright{}mio\textquotedblright{}\ \textquotedblright{}nuovo\textquotedblright{}\
+\textquotedblright{}elemento\textquotedblright{}}\medskip{}
+
+
+\noindent Non è possibile utilizzare indici multipli con le liste.
+Un comando del tipo \textbf{mia.lista{[}{[}2:3{]}{]}} non è accettato.
+
+\medskip{}
+ Concludiamo questo paragrafo sulle liste dicendo che le liste sono
+utilizzate per raccogliere l'output di comandi complessi, si veda
+ad esempio il comando utilizzato per stimare modelli lineari (\textquotedbl{}?lm\textquotedbl{}).
+
+
+\subsection{Grafici}
+
+\noindent Come vedremo fra poco R è particolarmente adatto all'analisi
+grafica di dati. Inizialmente occorre un investimento per apprendre
+i principali comandi. Il comando principale è \textbf{plot()}. Ecco
+un esempio.\medskip{}
+
+
+\noindent \textbf{> \#creazione di un vettore contenente
+i nomi delle serie}
+
+\noindent \textbf{> nomi <- dimnames(r)
+{[}{[}2{]}{]}}
+
+\noindent \textbf{> i <- 1}
+
+\noindent \textbf{> \#plot della prima serie di returns}
+
+\noindent \textbf{> plot (r{[},i{]}, }
+
+\textbf{type=\textquotedblright{}l\textquotedblright{}, }
+
+\textbf{main= paste(\textquotedblright{}Log returns di\textquotedblright{},nomi{[}i{]}), }
+
+\textbf{sub=paste(\textquotedblright{}Media:\textquotedblright{}, }
+
+\textbf{format(mean(r{[},i{]}),digits=2)), }
+
+\textbf{xlab=\textquotedblright{}Osservazione\textquotedblright{}, }
+
+\textbf{ylab=nomi{[}i{]})}\medskip{}
+
+
+\noindent Per avere un'idea di quanto due serie storiche possano essere
+correlate fra loro è utile fare un plot di una serie sull'altra.\medskip{}
+
+
+\noindent \textbf{> i <- 1; j <-
+2}
+
+\noindent \textbf{> plot\ (r{[},i{]},r{[},j{]}, }
+
+\textbf{main = paste (nomi{[}i{]}, \textquotedblright{}vs\textquotedblright{},
+nomi{[}j{]}), }
+
+\textbf{xlab=nomi{[}i{]}, }
+
+\textbf{ylab=nomi{[}j{]}, }
+
+\textbf{col=\textquotedblright{}blue\textquotedblright{})}\medskip{}
+
+
+\noindent \textbf{help(par)} indica tutte le opzioni disponibili.
+
+
+\subsubsection{Inserimento di elementi grafici}
+\begin{itemize}
+\item Il comando \textbf{abline(a=0,b=1) }inserisce un linea retta di pendenza
+\textbf{b} ed intercetta \textbf{a} nella finestra grafica attiva
+\medskip{}
+
+
+
+\textbf{> abline(a=0,b=1)}\medskip{}
+
+
+\item Per inserire una linea orizzontale lungo i punti 0.01, 0.02 e 0.03
+utilizzare\medskip{}
+
+
+
+\textbf{> abline(h=c(0.01,0.02,0.03))}\medskip{}
+
+
+mentre per linee verticali\medskip{}
+
+
+\textbf{abline(v=c(0.01,0.02,0.03))}\medskip{}
+
+
+\item Per inserire una freccia utilizzare arrows(x1,y1,x2,y2) dove (x1,y1)
+sono le coordinate della coda e (x2,y2) quelle della punta della freccia.\medskip{}
+
+
+
+\textbf{> arrows(-0.06,0,-0.04,0.05)}
+
+\item Per inserire del testo utilizzare il comando \textbf{text(x,y,text)}
+
+
+\textbf{> arrows(-0.04,0.05,\textquotedblright{}Guarda
+che bel grafico\textquotedblright{})} 
+
+\end{itemize}
+
+\subsubsection{Altri tipi di grafici}
+\begin{itemize}
+\item Il comando \textbf{pairs()}:\ matrici di grafici
+
+
+Il comando \textbf{pairs() }genera una matrice.contenente i crossplot
+di tutte le coppie (x,y) di variabili (colonne) di una matrice di
+dati.\medskip{}
+
+
+\textbf{> pairs(r{[},1:4{]})}
+
+\item Istogramma\medskip{}
+
+
+
+\textbf{> i <- 1}
+
+\textbf{> hist (r{[},i{]},}
+
+\qquad{}\textbf{probability=TRUE,}
+
+\qquad{}\textbf{main=paste(\textquotedblright{}Istogramma di\textquotedblright{},nomi{[}i{]}),}
+
+\qquad{}\textbf{xlab=nomi{[}i{]},}
+
+\qquad{}\textbf{breaks=17)}
+
+\item Q-Q plot rispetto alla normale\medskip{}
+
+
+
+\textbf{> qqnorm(r{[},i{]},main=paste(''Normal Q-Q
+Plot per'',nomi{[}i{]}),}
+
+\qquad{}\textbf{xlab=''Quantili teorici'',ylab=''Quantili empirici'')}
+
+\textbf{> qqline(r{[},i{]})}
+
+\item Q-Q plot\medskip{}
+
+
+
+\textbf{> i <- 1; j <-
+2}
+
+\textbf{> qqplot(r{[},i{]},r{[},j{]},main=paste(''Q-Q
+Plot fra'',nomi{[}i{]},''e'',nomi{[}j{]}),}
+
+\qquad{}\textbf{xlab=nomi{[}i{]},ylab=nomi{[}j{]})}
+
+\item Il comando \textbf{acf()} stima la funzione di autocovarianza o autocorrelazione
+e per default ne esegue il grafico \ Esempio:\medskip{}
+
+
+
+\textbf{> acf(r{[},i{]},lag.max=10,type=\textquotedblright{}correlation\textquotedblright{},main=nomi{[}i{]})}
+
+\item Il comando \textbf{ccf()} calcola ed esegue il grafico della cross-correlation,
+cross-covariance function.Esempio:\medskip{}
+
+
+
+\textbf{> i <- 2}
+
+\textbf{> j <- 3}
+
+\textbf{> ccf(r{[},i{]},r{[},j{]},lag.max=10, type=\textquotedblright{}correlation\textquotedblright{},
+main=}
+
+\qquad{}\textbf{paste(\textquotedblright{}Correlazione dei returns
+di \textquotedblright{},nomi{[}i{]},\textquotedblright{}e\textquotedblright{},nomi{[}j{]},}
+
+\qquad{}\textbf{sep=\textquotedblright{}\ \textquotedblright{}))}\medskip{}
+ 
+
+\end{itemize}
+\begin{domanda} Come interpretate quest'ultimo grafico? \end{domanda}
+
+
+\subsubsection{Alcuni utili comandi grafici}
+\begin{itemize}
+\item Il comando \textbf{windows()} apre una nuova finestra grafica e la
+rende attiva. Ciò significa che il prossimo grafico sarà visualizzato
+nella finestra appena aperta. Quando ci sono più finestre grafiche
+aperte il comando \textbf{dev.set('\#device')} permette di scegliere
+quale deve essere la finestra in cui ridirigere l'output. \textbf{'\#device'}
+indica il numero della finestra o più precisamente del device. Per
+ottenere il vettore contenente tutti i numeri di device aperti al
+momento utilizzare il comando \textbf{dev.list()}. Il comando \textbf{dev.cur()}
+restituisce il numero del device attivo al momento ('\emph{cur'} da
+'\emph{current'}) mentre \textbf{dev.off('\#device')} chiude il device
+specificato (per default chiude il device corrente).
+\item Il comando \textbf{par(mfcol=c(}$nr,nc$\textbf{)) }e \textbf{par(mfrow=c(}$nr,nc$\textbf{))}
+apre una finestra il cui contenuto sarà una matrice di $nr\times nc$
+grafici. Se è utilizzato il primo (secondo) comando, la matrice verrà
+riempita per colonne (righe).
+\item Il comando \textbf{postscript(''miofile.ps'')} apre come device
+un file testo di nome ''miofile.ps''. Esempio:\medskip{}
+
+
+
+\textbf{> postscript(''foo.ps'',paper=''a4'',width=5,height=4,bg=''yellow'')}
+
+\textbf{> plot(r{[},6{]},main=paste(\textquotedblright{}Log-returns
+di \textquotedblright{},nomi{[}6{]},sep=\textquotedblright{}\textquotedblright{}), }
+
+\qquad{}\textbf{type=\textquotedblright{}l\textquotedblright{},xlab=\textquotedblright{}Osservazioni\textquotedblright{},ylab=nomi{[}6{]})}
+
+\textbf{> dev.off()}\medskip{}
+
+
+Le dimensioni della larghezza e dell'altezza del grafico sono date
+in pollici (1 pollice =\ 2.54 centrimetri). È importante ricordarsi
+di chiudere il device una volta terminato!
+
+\item I comandi \textbf{pdf()}, \textbf{bpm()}, \textbf{jpeg()} e \textbf{png()}
+sono simili al comando \textbf{postscipt()} e servono a generare grafici
+nei rispettivi formati. 
+\end{itemize}
+
+\subsection{Comandi if, for, while, repeat}
+
+
+\subsubsection{Il comando if}
+
+La sintassi del comando è la seguente
+
+\[
+\text{if (condizione) comando else comando}\]
+
+
+\begin{esempio} Comando if semplice. \end{esempio}
+
+\textbf{> if (rnorm(1) > 0) print
+(''Maggiore di 0'') else print (''Minore o uguale a 0'')}\medskip{}
+
+
+\noindent Se si desidera eseguire più comandi, è necessario racchiudere
+il codice fra parentesi graffe \textquotedblright{}\{ ...\}\textquotedblright{}.
+
+\begin{esempio} Comando if. \end{esempio}
+
+\noindent \textbf{> if (rnorm(1)>0)
+\{}
+
+\textbf{plot (rnorm(10),main=''Normale'')}
+
+\textbf{print (''Terminato'')}
+
+\textbf{\} else \{}
+
+\textbf{plot (rt(10,df=6),main=''t-6'')}
+
+\textbf{print (''Terminato'')}
+
+\textbf{\}}\medskip{}
+
+
+\begin{remark} Abbiamo visto in precedenza che se x ed y sono due
+vettori il comando x == y verifica l'uguaglianza componente per componente
+ed il risultato consiste in un vettore di TRUE/FALSE. Per tale motivo
+l'utilizzo di un'espressione del genere nel contesto dell'istruzione
+\textbf{if} può porre dei problemi se l'operatore binario \textbf{==}
+non è utilizzato su scalari. R risolve il problema nella misura in
+cui considera solo la prima componente del vettore x==y. Per testare
+l'uguaglianza fra due oggetti (matrici, liste, vettori) si utilizza
+il comando \textbf{identical()}. \end{remark}
+
+
+\subsubsection{Il ciclo for}
+
+Capita sovente di eseguire più volte lo stesso comando o di dover
+applicare ripetutamente la stessa funzione ma con argomenti di valore
+diverso. La prima \ possibilità in situazioni del genere è quella
+di utilizzare il comando \textbf{for()}, la cui sintassi è
+
+\[
+\text{for (var in seq) comando}\]
+
+
+\begin{esempio} Comando for.
+
+\textbf{> for (nome in nomi) print (nome)}\medskip{}
+ \end{esempio}
+
+\noindent Dall'esempio precedente vi sarete resi conto che è possibile
+eseguire un ciclo \textbf{for} utilizzando un vettore numerico o non
+numerico quale fonte dei dati \ con cui eseguire il ciclo. In maniera
+simile al comando \textbf{if, }se si desidera eseguire più comandi
+è necessario utilizzare le parentesi graffe.
+
+\begin{esempio} Comando for. \end{esempio}
+
+\noindent > \textbf{for (indice in 1:10) \{}
+
+\textbf{\ x <- rnorm(1000)}
+
+\textbf{\ if (exists(''media'')) \{}
+
+\textbf{\ \ \ \ media <- c(media,mean(x))}
+
+\textbf{\ \} else \{}
+
+\textbf{\ \ \ \ media <- mean(x)}
+
+\textbf{\ \}}
+
+\textbf{if (exists(\textquotedblright{}varianza\textquotedblright{}))
+\{}
+
+\textbf{\ varianza <- c(varianza,var(x))}
+
+\textbf{\ \} else \{}
+
+\textbf{\ varianza <- var(x)}
+
+\textbf{\ \}}
+
+\noindent \textbf{\}}\medskip{}
+
+
+\noindent È possibile terminare anzitempo un ciclo for utilizzando
+il comando \textbf{break}:\medskip{}
+
+
+\noindent \textbf{> for (i in 1:10) \{}
+
+\textbf{if (i > 5) break}
+
+\textbf{print (i)}
+
+\noindent \textbf{\}}
+
+
+\subsubsection{Il ciclo while}
+
+Con un ciclo di tipo \textbf{for} il numero di ripetizioni è determinato
+anzitempo. Con il comando \textbf{while()} è invece possibile stabilire
+dinamicamente quante volte ripetere il ciclo: il ciclo viene ripetuto
+fin tanto che la condizione precisata fra parentesi tonde è vera.\medskip{}
+
+
+\noindent \textbf{> i <- 1}
+
+\noindent \textbf{> while (i <= 5)
+\{}
+
+\textbf{print (i)}
+
+\textbf{i <- i + 1}
+
+\noindent \textbf{\}}
+
+\begin{remark} Se la condizione precisata nel comando \textbf{while}
+non è inizialmente vera, il ciclo non verrà mai eseguito. Come con
+il comando \textbf{for} è possibile interrompere l'esecuzione di un
+ciclo \textbf{while} utilizzando il comando \textbf{break}. \end{remark}
+
+
+\subsubsection{Il ciclo repeat}
+
+L'ultimo comando per generare dei cicli è il comando \textbf{repeat}.
+Repeat non necessita un condizione iniziale come il comando while
+e questo assicura che il ciclo venga sempre eseguito almeno una volta.
+Per terminare un ciclo \textbf{repeat }è necessario utilizzare il
+comando \textbf{if} associato al comando \textbf{break}.
+
+\begin{esempio} Comando break. \end{esempio}
+
+\noindent \textbf{> i <- 1}
+
+\noindent \textbf{> repeat \{}
+
+\textbf{print (i)}
+
+\textbf{i <- i + 1}
+
+\textbf{if (i > 5) break}
+
+\noindent \textbf{\}}
+
+
+\subsubsection{Il comando next}
+
+\noindent Il comando next può essere adoperato in un qualsiasi ciclo
+\textbf{for}, \textbf{whil}e o \textbf{repeat.} Il suo scopo è quello
+di interrompere l'esecuzione del codice all'interno del ciclo e saltare
+immediatamente all'inizio del ciclo. Ecco un esempio:\medskip{}
+
+
+\noindent \textbf{x <- rnorm(10)}
+
+\noindent \textbf{for (i in 1:10) \{}
+
+\textbf{if (x{[}i{]} <0 ) next}
+
+\textbf{print (sqrt(x{[}i{]}))}
+
+\noindent \textbf{\}}
+
+
+\subsubsection{Vettorizzazione di cicli}
+
+Per ragioni di efficienza e velocità d'esecuzione è opportuno evitare,
+quando possibile, i cicli \textbf{for}, \textbf{while} o \textbf{repeat}
+in quanto rallentano l'esecuzione del programma. Spesso possiamo riscrivere
+un ciclo in forma vettoriale. Prendendo ad esempio l'ultimo ciclo
+appena trattato (quello del comando \textbf{next}) esso può essere
+riscritto come segue:\medskip{}
+
+
+\noindent \textbf{> x <- rnorm(10)}
+
+\noindent \textbf{> sqrt(x{[}x>0{]})}\medskip{}
+
+
+\noindent È questa una caratteristica molto importante di R (ed altri
+linguaggi di alto livello). Tuttavia ciò può avere anche degli svantaggi,
+come ad esempio un più largo uso della memoria.
+
+
+\subsection{Funzioni}
+
+Una funzione non è altro che un insieme ordinato di comandi che vengono
+raggruppati sotto un medesimo nome. Le funzioni possono ma non devono
+avere degli argomenti di input ed allo stesso modo possono ma non
+devono restituire un risultato. Vediamo un esempio:\medskip{}
+
+
+\noindent \textbf{> cubo <- function
+(x=10) \{ return(x\symbol{94}3) \}}\medskip{}
+
+
+\noindent Con questo comando abbiamo definito la funzione \textbf{cubo}.
+Essa è ora contenuta nella lista degli oggetti con le altre variabili
+(\textbf{objects()}). Per cancellare la funzione \textbf{cubo()} si
+utilizza il comando \textbf{rm(cubo)}.\medskip{}
+
+
+\noindent Alla sinistra del comando d'assegnazione troviamo sempre
+il nome della funzione che vogliamo creare mentre alla sua destra
+avremo la parola chiave \textbf{function} seguita in parentesi tonde
+dagli argomenti che vogliamo passare. È possibile assegnare ad ogni
+argomento un valore di default, nel nostro esempio 10, tramite l'operatore
+di uguaglianza. Ciò significa che se al momento della chiamata non
+viene specificato nessun valore per la variabile \textbf{x}, allora
+la funzione \textbf{cubo} assume un valore di \textbf{x} pari a 10.
+Infatti, provate a scrivere {}``\textbf{cubo()\textquotedblright{}}!
+Per finire viene specificato il codice fra parentesi graffe.\medskip{}
+
+
+\noindent Valgono inoltre le seguenti osservazioni.
+\begin{enumerate}
+\item È ammesso utilizzare qualsiasi variabile per cui l'esecuzione del
+codice è ben definita. Nel nostro primo esempio \textbf{x} potrebbe
+essere un qualsiasi vettore, data frame o matrice di soli numeri.
+\item Se vogliamo che la funzione ritorni il risultato ma senza che appaia
+sullo schermo occorre utilizzare il comando \textbf{return(invisible(x))}.
+In questo caso il comando\medskip{}
+
+
+
+\noindent \textbf{> cubo(4)}\medskip{}
+
+
+\noindent calcola il cubo di 4 ma senza mostrare il risultato.\medskip{}
+
+
+\noindent \textbf{> y <- cubo(4)}
+
+\noindent \textbf{> y}
+
+\noindent \textbf{{[}1{]} 64}\medskip{}
+
+
+\item Le variabili dichiarate all'interno di una funzione cessano di esistere
+una volta che la funzione è terminata. Tuttavia se l'assegnazione
+è fatta utilizzando l'operatore '\textbf{<<-'},
+anziché creare una variabile locale alla funzione, R genera una variabile
+globale, cioè una variabile definita a livello dello spazio di lavoro
+interattivo.
+\item Ci possono essere situazioni in cui il numero di argomenti che vengono
+passati alla funzione sono variabili: si pensi alla funzione di concatenamento
+\textbf{c()}. R permette quindi di creare funzioni alle quali è possibile
+passare un numero qualsiasi di argomenti. Il simbolo per indicare
+ciò è dato dai tre puntini '\textbf{...}'. Si veda il manuale di R
+per maggiori informazioni.
+\item È possibile testare l'esistenza di un argomento utilizzando il comando
+\textbf{missing()}. Esempio:\medskip{}
+
+
+
+\noindent \textbf{> cubo <- function
+(x) \{ if (missing(x)) }
+
+\qquad{}\textbf{print(\textquotedblright{}Argomento non specificato\textquotedblright{})
+else return(x\symbol{94}3) \}}
+
+\noindent \textbf{> cubo()}
+
+\qquad{}\textbf{{[}1{]} \textquotedblright{}Argomento non specificato\textquotedblright{}}\medskip{}
+
+
+\item \noindent Quando ci sono più argomenti è importante l'ordine con il
+quale essi vengono dati alla funzione. Esempio:\medskip{}
+
+
+
+\noindent \textbf{> potenza <- function
+(base,esponente) \{ return(base\symbol{94}esponente)\}}
+
+\noindent \textbf{> potenza (1,2)}
+
+\noindent \qquad{}\textbf{{[}1{]} 1}
+
+\noindent \textbf{> potenza (2,1)}
+
+\noindent \qquad{}\textbf{{[}1{]} 2}\medskip{}
+
+
+\noindent Se si è incerti si può sempre assegnare esplicitamente i
+valori alle variabili al momento della chiamata.\medskip{}
+
+
+\noindent \textbf{> potenza(esponente=2,base=1)}
+
+\noindent \qquad{}\textbf{{[}1{]} 1}
+
+\noindent R permette la chiamata alla funzione anche con nomi incompleti.
+Ad esempio\medskip{}
+
+
+\noindent \textbf{> potenza(esp=2,ba=1)}
+
+\noindent \qquad{}\textbf{{[}1{]} 1} 
+
+\end{enumerate}
+
+\subsubsection{La distribuzione dei log-returns}
+
+Vogliamo analizzare più in dettaglio la distribuzione e le proprietà
+statistiche dei rendimenti logaritmici o log-returns. Ci interessiamo
+dapprima ai quantili. In R è possibile ottenere i quantili desiderati
+utilizzando la funzione \textbf{quantile().}\medskip{}
+
+
+\noindent \textbf{> i <- 1}
+
+\noindent \textbf{> quantile(r{[},i{]}, seq(0,1,0.1))}\medskip{}
+
+
+\noindent La funzione quantile può essere utilizzata per fare il plot
+della funzione di ripartizione empirica dei nostri dati:\medskip{}
+
+
+\noindent \textbf{> plot(quantile(r{[},i{]}, seq(0,
+1, 0.01)), seq(0, 1, 0.01), type=\textquotedblright{}l\textquotedblright{}, }
+
+\noindent \textbf{main=nomi{[}i{]}, xlab=\textquotedblright{}Return\textquotedblright{},ylab=\textquotedblright{}Probability\textquotedblright{})}\medskip{}
+
+
+\noindent Per stimare la funzione di densità esiste il comando \textbf{density():}\medskip{}
+
+
+\noindent \textbf{> plot(density(r{[},i{]}), main=paste(\textquotedblright{}Densità
+stimata dei log-returns di \textquotedblright{}, nomi{[}i{]}))}
+
+
+\section{Funzioni e programmazione da Excel}
+
+È possibile utilizzare R direttamente da Excel tramite Visual Basic.
+Per fare questo è necessario installare uno o più pacchetti reperibili
+al seguente indirizzo:\[
+http://sunsite.univie.ac.at/rcom.\]
+La descrizione del processo d'installazione va oltre lo scopo di questa
+introduzione. All'utente inesperto si consiglia l'installazione del
+paccetto \emph{RAndFriendsLight} reperibile all'indirizzo (selezionate
+l'etichetta \textbf{Download} del precedente link) \[
+http://sunsite.univie.ac.at/rcom/download.html\]
+il quale installa e configura automaticamente, oltre che il pacchetto
+base di R, anche tutte le altre componenti necessarie al funzionamento
+e la comunicazione di R con Microsoft Excel.
+
+
+\chapter{B. Chapter 8: Calculating the Variance-Covariance Matrix}
+
+
+\section{In Excel}
+
+Si vedano le dispense tratte dal Capitolo 8 di Benninga.
+
+
+\section{In R}
+
+Supponiamo che i prezzi azionari siano in una matrice $\left(n\times N\right)$
+$P$ dove ad ogni colonna corrispondono le osservazioni dei prezzi
+di una certa azione. I prezzi sono ordinati cronologicamente, partendo
+dalla data più distante. I rendimenti logaritmici possono essere calcolati
+nel seguente modo:\bigskip{}
+
+\begin{enumerate}
+\item Calcola il logaritmo dei prezzi
+
+
+\textbf{> lnP <- log(P)}
+
+> \textbf{nrOss <- nrow(lnP)}
+
+\item Calcola i rendimenti storici
+
+
+\textbf{> lnRet <- lnP{[}-1,{]}-lnP{[}-nrOss,{]}}
+
+\item Calcola i rendimenti storici medi
+
+
+\textbf{> lnRetMedio <- mean(lnRet)}
+
+\item Calcola la matrice di covarianza
+
+
+\textbf{> V <- cov(lnRet,use=\textquotedbl{}pair\textquotedbl{})}
+
+\item Calcola le volatilità storiche
+
+
+\textbf{> volStoriche <- sqrt(diag(V))}
+
+\textbf{> names(volStoriche)\ <-
+colnames(V)}
+
+\item Calcola la matrice di correlazione
+
+
+\textbf{> rho <- cor(lnRet,use=\textquotedbl{}pair\textquotedbl{})}
+
+O in alternativa potremmo calcolare \textbf{rho} nel modo seguente
+
+\item \textbf{rho <- diag(1/volStoriche) \%{*}\% V \%{*}\%
+diag(1/volStoriche)}\medskip{}
+ 
+\end{enumerate}
+\begin{domanda} Spiegate cosa avviene nel punto 7. Suggerimento:
+confrontate il codice con la formula (\ref{matrice cor Z}). \end{domanda}
+
+\noindent Come potete vedere il calcolo di tutte queste quantità è
+estremamente semplice e rapido.
+
+
+\section{The Single-Index Model}
+
+Nel corso del semestre invernale avete incontrato un modello chiamato
+\textquotedblright{}The single-factor model\textquotedblright{}\ (Haugen,
+pp. 136). Questo modello lo ritroviamo ora in Benninga con il nome
+di \textquotedblright{}The Single-Index Model\textquotedblright{}\ (Capitolo
+8.5, pp. 156). Evidenzieremo ora alcune proprietà del modello applicandolo
+a dati svizzeri.\medskip{}
+
+
+\noindent Consideriamo dunque $N=5$ azioni incluse nello SMI\ e
+i cui rendimenti lo\-ga\-rit\-mi\-ci%
+\footnote{D'ora in poi in questo esercizio parleremo semplicemente di rendimenti
+intendendo però rendimenti logaritmici.%
+} sono delle variabili aleatorie notate $r_{i},$ $i=1,\ldots,5$.
+Il rendimento dell'indice di mercato, lo SMI nel nostro caso, sarà
+indicato con $r_{x}$. E' ipotizzata una relazione lineare fra $r_{i}$
+e $r_{x}$ del tipo \begin{equation}
+r_{it}=\alpha_{i}+\beta_{i}r_{xt}+\varepsilon_{it}\hspace{0.5cm}t=1,\ldots,n\label{eq11}\end{equation}
+Per fisso $t$ possiamo raccogliere i rendimenti delle $N=5$ azioni
+nel vettore aleatorio $r_{t}=\left(r_{1t},r_{2t},\ldots,r_{Nt}\right)^{\prime}$.
+Le $N$ equazioni possono essere scritte in forma compatta come \begin{equation}
+r_{t}=\alpha+\beta r_{xt}+\varepsilon_{t}\hspace{0.5cm}t=1,\ldots,n.\label{eq22}\end{equation}
+
+
+\begin{remark} La (\ref{eq22}) è dunque un sistema di $N=5$ equazioni:
+benvenuti nel mondo multivariato!\medskip{}
+ \end{remark}
+
+\noindent Ipotesi sulla variabile esplicativa (stocastica):
+
+\begin{ipotesi} $E(r_{xt})=\mu_{x}$ \end{ipotesi}
+
+\begin{ipotesi} $Var(r_{xt})=\sigma_{x}^{2}<\infty.$\medskip{}
+ \end{ipotesi}
+
+\noindent Ipotesi sugli errori:
+
+\begin{ipotesi} \label{ipotesi 1 sugli errori}$\varepsilon_{t}\sim i.i.d.\ \left(0,\Sigma\right).$
+\end{ipotesi}
+
+\begin{ipotesi} $Cov(\varepsilon_{it},\varepsilon_{jt})=0$ per $i\neq j.$\medskip{}
+ \end{ipotesi}
+
+\noindent Ipotesi sulla relazione tra $r_{xt}$ e gli errori:
+
+\begin{ipotesi} $Cov(r_{xt},\varepsilon_{t})=0.$ \end{ipotesi}
+
+\begin{ipotesi} \label{ipotesi rendimenti non correlati}Rendimenti
+a istanti temporali diversi non sono fra loro correlati.\medskip{}
+ \end{ipotesi}
+
+\begin{remark} È questo un modo compatto di esprimere le $N$ regressioni
+in un'unico grande modello di regressione. La sua struttura è molto
+simile a quella solita ma con l'importante differenza che la variabile
+spiegata è ora un vettore (dobbiamo spiegare $N$ rendimenti!). Automaticamente
+il vettore di parametri $\alpha$ contiene le $N$ costanti degli
+$N$ modelli (\ref{eq11}) di regressione semplice ed $\varepsilon_{t}$
+contiene gli $N$ termini d'errore. Le componenti di $\varepsilon_{t}$
+non sono fra loro correlate in quanto $cov(\varepsilon_{it},\varepsilon_{jt})=0$
+per $i\neq j.$ Tuttavia la loro varianza non è necessariamente uguale,
+infatti $Var(\varepsilon_{it})=\sigma_{i}^{2}$. Come nella regressione
+classica gli errori sono $i.i.d.$, quindi \emph{non correlati nel
+tempo}. Poiché la variabile esplicativa è aleatoria è necessario introdurre
+l'Ipotesi \ref{ipotesi rendimenti non correlati}. \end{remark}
+
+\begin{esercizio} \label{esercizio single-index model}Single-Index
+Model \end{esercizio}
+\begin{enumerate}
+\item Si dia dimensione e contenuto di ogni simbolo della (\ref{eq22}).
+\item Si espliciti la struttura della matrice $\Sigma=Var(\varepsilon_{t})$
+(Ipotesi \ref{ipotesi 1 sugli errori})\ in funzione dei $\sigma_{i}^{2}$.
+Che particolarità presenta $\Sigma$? Date infine la dimensione di
+$Cov(r_{xt},\varepsilon_{t}).$
+\item Calcolate $e=E(r_{t})$.
+\item Calcolate, utilizzando il modello \ref{eq22} e le sue ipotesi, $Var(r_{it})$
+e $Cov(r_{it},r_{jt})$ quando $i\neq j$.
+\item \label{risultato1}Si dia $Var(r_{t})$ (la matrice delle varianze
+e covarianze di $r_{t}$, notata $V$), in funzione di $\beta,$ $\sigma_{x}^{2}$
+e $\Sigma$.\medskip{}
+
+
+
+Il file '\textbf{esercizio\ref{esercizio single-index model}.xls}'
+contiene $158\times6$ prezzi osservati a frequenza \emph{settimanale}.
+Le sei serie storiche considerate si riferiscono a $N=5$ azioni svizzere
+ed all'indice SMI.
+
+\item \label{risultato2}Per tutte e sei le serie storiche di prezzi calcolate
+dapprima i rendimenti ed in seguito il rendimento medio. Utilizzando
+sempre i rendimenti calcolatene la matrice di covarianza, facendo
+in modo di lasciare quale ultima serie l'indice SMI. Della matrice
+di covarianza appena calcolata evidenziate in rosso la sottomatrice
+della covarianza stimata di $r_{t}$, denotata $\widehat{V}_{dati}$.
+
+
+Le 5 equazioni stimabili avranno tutte forma \[
+r_{i,t}=\alpha_{i}+\beta_{i}r_{x,t}+\varepsilon_{i,t}\;,\; t=1,\ldots,157\]
+
+
+\item Utilizzando esclusivamente i risultati del punto precedente (dunque
+senza eseguire la regressione) calcolate per ciascuna equazione le
+stime di $\alpha_{i}$, $\beta_{i}$ ed il vettore dei residui stimati.
+
+
+Suggerimento: Nella parte comune quando abbiamo trattato la regressione
+stocastica abbiamo visto che i coefficienti stimati di una regressione
+semplice (costante più una sola variabile esplicativa) sono funzioni
+delle varianze e covarianze stimate. Adattate questo risultato al
+caso in esame.
+
+\item Calcolate per ogni equazione la varianza stimata di $\varepsilon_{it}$,
+notata $\widehat{\sigma}_{i}^{2}$.
+\item Proponete $\widehat{\Sigma}$, lo stimatore della matrice $\Sigma$
+(prendete spunto dal punto 2).
+\item Utilizzando $\widehat{\beta},$ $\widehat{\sigma}_{x}^{2}$ e $\widehat{\Sigma}$
+calcolate $\widehat{V}$ (cf. punto \ref{risultato1}). Confrontate
+poi $\widehat{V}$ con $\widehat{V}_{dati}$. Notate delle differenze?
+Se sì, come le spiegate?
+
+
+\hfill{}$\square$ 
+
+\end{enumerate}
+
+\chapter{B. Chapter 10: Calculating Efficient Portfolios When are No Short-Sale
+Restrictions}
+
+
+\section{Notazione e definizioni preliminari}
+
+In questo capitolo utilizzeremo la notazione introdotta precedentemente.
+Ci troviamo al tempo $t$ e dobbiamo costruire un portafoglio la cui
+struttura verrà mantenuta sino al periodo successivo, ovvero $t+1$.
+Poiché il modello è statico, evitiamo di apporre l'indice temporale
+alle variabili: $r_{p}$ indicherà quindi il rendimento $r_{p\left(t+1\right)}$
+del portafoglio, $r$ sarà il vettore dei rendimenti azionari e così
+via. Assumiamo che
+\begin{itemize}
+\item esistano $N\geq2$ asset rischiosi il cui vettore dei rendimenti attesi
+è notato $e:=E(r)$,
+\item il rendimento $r_{i}$ di un qualsiasi asset non possa essere espresso
+quale combinazione lineare dei rendimenti dei restanti $N-1$ asset,
+il che implica una matrice $V$ delle varianze e covarianze dei rendimenti
+non singolare,
+\item ci siano almeno due asset di rendimento atteso diverso,
+\item sia ammesso vendere allo scoperto (short selling). 
+\end{itemize}
+
+\section{La matematica della frontiera efficiente}
+
+Sappiamo che un portafoglio $p$ si trova sulla frontiera se ha varianza
+minima rispetto a tutti i portafogli con medesimo rendimento. Matematicamente
+avremo che un portafoglio $p$ è sulla frontiera se e solo se $w_{p}$,
+il vettore degli $N$ pesi (weights) di $p$, è soluzione del seguente
+problema di minimizzazione quadratica:
+
+\newpage{}
+
+\[
+\underset{\{w\}}{\min}\frac{1}{2}w^{\prime}Vw\]
+sotto i vincoli\begin{eqnarray*}
+w^{\prime}e & = & E[r_{p}]\\
+w^{\prime}S & = & 1\end{eqnarray*}
+
+
+\begin{remark} Grazie all'ipotesi che gli $N$ asset non hanno tutti
+il medesimo rendimento atteso ed alla possibilità di vendere allo
+scoperto è possibile costruire portafogli aventi un qualsiasi rendimento
+atteso. Da ciò segue che ci sarà sempre almeno un portafoglio che
+soddisfa il primo vincolo e quindi, per qualsiasi rendimento atteso
+desiderato, il problema ha sempre soluzione. Ovviamente se ulteriori
+vincoli dovessero essere aggiunti ai due precedenti l'esistenza di
+una soluzione non sarebbe più garantita. \end{remark}
+
+
+\subsection{La soluzione}
+
+Formando il lagrangiano $\mathcal{L}(w,\lambda,\gamma)$, $w_{p}$
+è soluzione di\[
+\underset{\{w,\lambda,\gamma\}}{\min}\mathcal{L=}\frac{1}{2}w^{\prime}Vw+\lambda(E[r_{p}]-w^{\prime}e)+\gamma(1-w^{\prime}S)\]
+ovvero\begin{eqnarray}
+\frac{\partial L}{\partial w} & = & Vw_{p}-\lambda e-\gamma S=\underset{(N\times1)}{0}\label{cpo1}\\
+\frac{\partial L}{\partial\lambda} & = & E[r_{p}]-w_{p}^{\prime}e=0\label{cpo2}\\
+\frac{\partial L}{\partial\gamma} & = & 1-w_{p}^{\prime}S=0\label{cpo3}\end{eqnarray}
+
+
+Poiché $V$ è definita positiva, le condizioni di primo ordine (\ref{cpo1}),
+(\ref{cpo2}) e (\ref{cpo3}) sono necessarie e sufficienti per un
+mimimo globale. Risolvendo la (\ref{cpo1}) rispetto a $w_{p}$ si
+ottiene\begin{equation}
+w_{p}=\lambda V^{-1}e+\gamma V^{-1}S\label{eq2}\end{equation}
+e premoltiplicando (\ref{eq2}) per $e^{\prime}$ ed utilizzando la
+(\ref{cpo2}):\begin{equation}
+E[r_{p}]=\lambda e^{\prime}V^{-1}e+\gamma e^{\prime}V^{-1}S\label{eq2a}\end{equation}
+Premoltiplicando sempre la (\ref{eq2}) per $S^{\prime}$ ed utilizzando
+(\ref{cpo1}):\begin{equation}
+1=\lambda S^{\prime}V^{-1}e+\gamma S^{\prime}V^{-1}S\label{eq2b}\end{equation}
+Grazie a (\ref{eq2a}) e (\ref{eq2b}) abbiamo 2 equazioni in 2 incognite,
+$\lambda$ e $\gamma$. Risolvendo\begin{eqnarray}
+\lambda & = & \frac{CE[r_{p}]-A}{D}\label{eq3a}\\
+\gamma & = & \frac{B-AE[r_{p}]}{D}\label{eq3b}\end{eqnarray}
+dove\begin{eqnarray*}
+A & = & S^{\prime}V^{-1}e=e^{\prime}V^{-1}S\\
+B & = & e^{\prime}V^{-1}e\\
+C & = & S^{\prime}V^{-1}S\\
+D & = & BC-A^{2}\end{eqnarray*}
+Poiché l'inversa di una matrice definita positiva è definita positiva,
+$B$ e $C$ sono entrambi strettamente maggiori di $0$. Essendo\[
+0\overset{!}{<}(Ae-BS)^{\prime}V^{-1}(Ae-BS)=\underset{>0}{B}(BC-A^{2})\]
+segue che \[
+(BC-A^{2})>0\]
+e quindi $D>0$. Sostituiamo ora $\lambda$ e $\gamma$ in (\ref{eq2})
+così da ottenere\begin{equation}
+w_{p}=g+hE[r_{p}]\label{eq4}\end{equation}
+dove\begin{eqnarray*}
+\underset{(N\times1)}{g} & = & \frac{1}{D}\left[BV^{-1}S-AV^{-1}e\right]\\
+\underset{(N\times1)}{h} & = & \frac{1}{D}\left[CV^{-1}e-AV^{-1}S\right]\end{eqnarray*}
+
+
+
+\subsection{Proprietà della frontiera}
+
+\noindent Le equazioni (\ref{cpo1}), (\ref{cpo2}) e (\ref{cpo3})
+definiscono delle condizioni necessarie e sufficienti affinché la
+soluzione $w_{p}$ sia sulla frontiera (tuttavia non necessariamente
+sulla parte efficiente). Quindi se $w_{p}$ si trova sulla frontiera,
+esso avrà una rappresentazione in termini della (\ref{eq4}), cioé
+in termini di $g$ e $h$ . Per contro, se $w_{p}$ è rappresentabile
+tramite la (\ref{eq4}), $w_{p}$ soddisfa le (\ref{cpo1}), (\ref{cpo2})
+e (\ref{cpo3}) e quindi esso è sulla frontiera.\medskip{}
+
+
+L'interpretazione dei portafogli associati al vettore di pesi $g$
+e $g+h$ è la seguente:
+\begin{itemize}
+\item $g$ corrisponde al vettore di pesi del portafoglio frontiera avente
+$0$ \textquotedbl{}expected return\textquotedbl{}. Infatti\[
+w_{p}=g+h0=g.\]
+
+\item $g+h$ corrisponde al vettore di pesi del portafoglio frontiera con
+rendimento atteso $1$ \[
+w_{p}=g+h1=g+h.\]
+ 
+\end{itemize}
+\begin{theorem} Qualsiasi portafoglio situato sulla frontiera è generato
+tramite combinazione lineare dei due portafogli di pesi $g$ e $g+h$.
+\end{theorem}
+
+\begin{proof} Sia $r^{\ast}$ un qualsiasi rendimento e $w_{q^{\ast}}$
+il portafoglio frontiera di rendimento atteso $E[r_{q^{\ast}}]=r^{\ast}$.
+La formula (\ref{eq4}) afferma che tale portafoglio avrà pesi uguali
+a\[
+w_{q^{\ast}}=g+hE[r_{q^{\ast}}].\]
+Consideriamo la combinazione lineare dei portafogli $g$ e $g+h$
+con pesi $\{1-E[r_{q^{\ast}}],E[r_{q^{\ast}}]\}$:\[
+\left(1-E[r_{q^{\ast}}]\right)g+E[r_{q^{\ast}}]\left(g+h\right)=g+hE[r_{q^{\ast}}]=w_{q^{\ast}}.\]
+Tale combinazione lineare genera esattamente il portafoglio $q^{\ast}$!
+Poiché $r^{\ast}$ era un qualsiasi rendimento il teorema è dimostrato.
+\end{proof}
+
+\begin{remark} Notiamo che la precedente argomentazione fa indirettamente
+uso del fatto che i due portafogli frontiera $g$ e $g+h$ hanno rendimento
+atteso diverso, $0$ e $1$. È possibile generalizzare ulteriormente
+il teorema precedente. È infatti possibile dimostrare che l'intera
+frontiera può essere generata a partire da due qualsiasi portafogli
+frontiera distinti%
+\footnote{E quindi di valore atteso diverso fra loro!%
+}, non necessariamente $g$ e $g+h$. \end{remark}
+
+\begin{proof} Prendiamo due portafogli frontiera distinti, notati
+rispettivamente $p_{1}$ e $p_{2}$, di rendimento atteso $E[r_{p_{1}}]$,
+$E[r_{p_{2}}]$ e pesi $w_{p_{1}}=g+hE[r_{p_{1}}]$, $w_{p_{2}}=g+hE[r_{p_{2}}]$.
+Sia ora $p$ un qualsiasi portafoglio frontiera di rendimento atteso
+$E[r_{p}]$. Poiché $E[r_{p_{1}}]\neq E[r_{p_{2}}]$ l'equazione in
+$\alpha$\begin{equation}
+E[r_{p}]=\alpha E[r_{p_{1}}]+(1-\alpha)E[r_{p_{2}}]\label{eq5}\end{equation}
+ha quale unica soluzione\[
+\alpha^{\ast}=\frac{E[r_{p}]-E[r_{p_{2}}]}{E[r_{p_{1}}]-E[r_{p_{2}}]}.\]
+Consideriamo ora la combinazione lineare dei portafogli $p_{1}$ e
+$p_{2}$ di pesi $\{\alpha^{\ast},1-\alpha^{\ast}\}$. Avremo\begin{eqnarray*}
+\alpha^{\ast}w_{p_{1}}+(1-\alpha^{\ast})w_{p_{2}} & = & \alpha^{\ast}\left(g+hE[r_{p_{1}}]\right)+(1-\alpha^{\ast})\left(g+hE[r_{p_{2}}]\right)\\
+ & = & g+h\left(\alpha^{\ast}E[r_{p_{1}}]+(1-\alpha^{\ast})E[r_{p_{2}}]\right)\\
+ & = & g+hE[r_{p}]=w_{p}.\end{eqnarray*}
+Poiché il portafoglio $p$ era un qualsiasi portafoglio frontiera
+, abbiamo dimostrato che anche con $p_{1}$ e $p_{2}$ è possibile
+costruire l'intera frontiera. \end{proof}
+
+
+\subsection{\label{ref_cov_port_front}La covarianza fra portafogli frontiera}
+
+La covarianza fra due portafogli frontiera qualsiasi $p$ e $q$ è
+data da\begin{equation}
+Cov(r_{p},r_{q})=w_{p}^{\prime}Vw_{q}=\frac{C}{D}\left(E[r_{p}]-\frac{A}{C}\right)\left(E[r_{q}]-\frac{A}{C}\right)+\frac{1}{C}\label{formula covarianza fra due port frontiera}\end{equation}
+La formula (\ref{formula covarianza fra due port frontiera}) ci permette
+di concludere che la covarianza fra due portafogli efficienti è sempre
+positiva.
+
+\begin{domanda} Spiegate perché la covarianza fra due portafogli
+efficienti è sempre positiva. \end{domanda}
+
+\medskip{}
+ Quando $p=q$ la precedente formula si riduce alla varianza di $r_{p}$
+che potrà essere scritta come\begin{eqnarray*}
+\sigma_{p}^{2} & = & \frac{C}{D}\left(E[r_{p}]-\frac{A}{C}\right)^{2}+\frac{1}{C}\\
+ & = & \frac{1}{D}\left(C(E[r_{p}])^{2}-2AE[r_{p}]+\frac{A^{2}+D}{C}\right)\\
+ & = & \frac{1}{D}\left(C(E[r_{p}])^{2}-2AE[r_{p}]+B\right)\end{eqnarray*}
+
+
+che è una parabola nello spazio $\left(\sigma^{2},E[r]\right)$.
+
+\[
+\text{Grafico}\]
+\vspace{6cm}
+
+
+\noindent oppure un'iperbole di equazione\begin{equation}
+\frac{\sigma_{p}^{2}}{1/C}-\frac{\left(E[r_{p}]-A/C\right)^{2}}{D/C^{2}}=1\label{eq6}\end{equation}
+nello spazio $\left(\sigma,E[r]\right)$.
+
+\[
+\text{Grafico}\]
+\vspace{6cm}
+
+
+\noindent Calcoliamo ora il differenziale totale della funzione definita
+implicitamente dalla (\ref{eq6}):\[
+f(x,y)=1\]
+dove $x=\sigma_{p},\ y=E[r_{p}]$\begin{eqnarray*}
+\frac{x^{2}}{1/C}-\frac{\left(y-\frac{A}{C}\right)^{2}}{D/C^{2}} & = & 1\\
+2Cx\ dx-\frac{C^{2}}{D}2(y-\frac{A}{C})\ dy & = & 0\end{eqnarray*}
+da cui\begin{equation}
+\frac{dy}{dx}=\frac{Dx}{Cy-A}\Rightarrow\frac{dE[r_{p}]}{d\sigma_{p}}=\frac{D\sigma_{p}}{CE[r_{p}]-A}\label{stella2}\end{equation}
+Sapendo che la retta passa per il punto $p$ di coordinate $(\sigma_{p},E[r_{p}])$
+possiamo ora calcolare il coefficiente $a$ della tangente $y=a+bx$
+alla frontiera nel punto $p$:\begin{eqnarray}
+a & = & E[r_{p}]-b\sigma_{p}\underset{(\ref{stella2})}{=}E[r_{p}]-\frac{D\sigma_{p}}{CE[r_{p}]-A}\sigma_{p}\notag\\
+ & = & E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}\label{temp1}\end{eqnarray}
+Risolvendo rispetto a $\sigma_{p}^{2}$ nella (\ref{eq6}) e sostituendo
+nella (\ref{temp1}) otteniamo:\begin{eqnarray*}
+a & = & E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}\\
+ & = & E[r_{p}]-\frac{\left(E[r_{p}]-\frac{A}{C}\right)^{2}D}{\frac{D}{C^{2}}C\left(CE[r_{p}]-A\right)}-\frac{D}{C}\frac{1}{\left(E[r_{p}]C-A\right)}\\
+ & = & E[r_{p}]-\frac{\left(E[r_{p}]-\frac{A}{C}\right)^{2}D}{C^{2}\left(E[r_{p}]-\frac{A}{C}\right)\frac{D}{C^{2}}}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}\\
+ & = & E[r_{p}]-\left(E[r_{p}]-\frac{A}{C}\right)-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}\\
+ & = & \frac{A}{C}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}\end{eqnarray*}
+La retta tangente alla frontiera nel punto $\left(\sigma_{p},E[r_{p}]\right)$
+avrà dunque equazione \begin{equation}
+E[r]=\frac{A}{C}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}+\frac{D\sigma_{p}}{CE[r_{p}]-A}\ \sigma\ .\label{equazione retta tangente frontiera}\end{equation}
+
+
+
+\subsection{Il portafoglio a varianza minima}
+
+Il portafoglio a varianza minima, notato $mvp$, di valore atteso
+$\frac{A}{C}$ e varianza $\frac{1}{C}$ ha la seguente proprietà:\begin{equation}
+Cov(r_{q},r_{mvp})=Var(r_{mvp})\label{eq123}\end{equation}
+per ogni portafoglio $q$, non necessariamente sulla frontiera. Vogliamo
+dimostrare questo risultato.
+
+\begin{esercizio} Proprietà del minimum-variance-portfolio ($mvp)$
+\end{esercizio}
+
+\noindent Sia dunque $q$ un qualsiasi portafoglio. Consideriamo un
+portafoglio $p$ definito tramite una combinazione lineare di $q$
+e $mvp$ con pesi $a$ e $(1-a)$.
+\begin{enumerate}
+\item Si calcoli la varianza di $p$ in funzione del peso $a$, $\sigma_{q}^{2}$,
+$\sigma_{mvp}^{2}$ e $Cov(r_{q},r_{mvp})$.
+\item Si imposti il problema di minimizzazione della varianza di $p$ in
+funzione del parametro $a$. Si dia la condizione di primo ordine,
+notata $(c1)$, e si verifichi che un'eventuale soluzione è un punto
+di minimo.
+\item Ovviamente, essendo $mvp$ il portafoglio a varianza minima, esso
+è anche soluzione del precedente problema di minimizzazione e quindi
+avremo che $p=mvp$. Quanto vale dunque il parametro $a?$
+\item Inserite il valore di $a$ dedotto al punto precedente nell'equazione
+$(c1)$ e dimostrate la (\ref{eq123}).
+
+
+\hfill{}$\square$ 
+
+\end{enumerate}
+
+\subsection{La frontiera efficiente}
+
+I portafogli frontiera di rendimento atteso superiore ad $\frac{A}{C}$
+(rendimento atteso del $mvp$) sono chiamati portafogli efficienti.
+Abbiamo visto in precedenza che la combinazione lineare di due portafogli
+frontiera è ancora un portafoglio frontiera. Questa proprietà è generalizzabile
+alla combinazione lineare di un numero qualsiasi di portafogli frontiera.\medskip{}
+ \setcounter{prop}{0}
+
+\begin{proprieta} \label{comb lin port front}Qualsiasi combinazone
+lineare di portafogli frontiera è un portafoglio frontiera. \end{proprieta}
+
+\begin{proprieta} \label{com lin conv port front}Combinazioni lineari
+convesse (cioè $\alpha_{i}\geq0$ e $\tsum\alpha_{i}=1$) di portafogli
+efficienti sono portafogli efficienti. Da questa proprietà segue che
+l'insieme dei portafogli efficienti è un insieme convesso.\medskip{}
+ \end{proprieta}
+
+\begin{esercizio} \label{esercizio1 proprieta frontiera}Dimostrazione
+della Proprietà \ref{comb lin port front}
+
+\noindent Siano $w_{i}$, $i=1,2,\ldots m$, $m$ portafogli frontiera
+ed $\alpha_{i}$, $i=1,2,\ldots m$, $m$ numeri reali tali che $\sum\alpha_{i}=1$.
+Si dia in funzione dei rendimenti attesi dei portafogli $w_{i}$,
+notati $E(\widetilde{r}_{i})$, $i=1,2,\ldots m$, il rendimento atteso
+del portafoglio $p$ definito da $w_{p}=\sum\alpha_{i}w_{i}$ e si
+dimostri che $p$ è un portafoglio frontiera.
+
+\noindent Suggerimento: cercate di dimostrare che $w_{p}$ è esprimibile
+nella solita forma $g+hE(\widetilde{r}_{p})$.\medskip{}
+ \end{esercizio}
+
+\begin{esercizio} \label{esercizio2 proprieta frontiera}Dimostrazione
+della Proprietà \ref{com lin conv port front}
+
+\noindent Siano ora $w_{i}$, $i=1,2,\ldots m$, $m$ portafogli efficienti
+ed $\alpha_{i}\geq0$, $i=1,2,\ldots m$, $m$ numeri reali tali che
+la loro somma $\sum\alpha_{i}=1$. Dimostrate che se $w_{p}=\sum\alpha_{i}w_{i}$,
+allora $p$ è un portafoglio efficiente.
+
+\noindent Suggerimento: dovete dimostrare che
+\begin{enumerate}
+\item $p$ è un portafoglio frontiera,
+\item $E(\widetilde{r}_{p})>\frac{A}{C}$.\medskip{}
+ 
+\end{enumerate}
+\end{esercizio}
+
+
+\subsection{Portafogli frontiera a 0 covarianza}
+
+Una proprietà importante della frontiera è che per qualsiasi portafoglio
+frontiera $p$ diverso da $mvp$ esite un portafoglio frontiera, notato
+$zc(p)$, tale che $Cov(r_{p},r_{zc(p)})=0$. Utilizzando l'equazione
+caratterizzante la covarianza fra due portafogli frontiera è possibile
+determinare il rendimento atteso del portafoglio $zc(p)$ semplicemente
+eguagliando la $Cov(r_{p},r_{zc(p)})$ a $0$.\bigskip{}
+
+
+\noindent Nel paragrafo \ref{ref_cov_port_front} abbiamo calcolato
+la tangente alla frontiera nel punto $(\sigma_{p},E[r_{p}])$:\[
+E[r]=\underset{a}{\underbrace{E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}}}+\underset{b}{\underbrace{\frac{D\sigma_{p}}{CE[r_{p}]-A}}}\sigma.\]
+È possibile dimostrare che il coefficiente $a$ è uguale al rendimento
+atteso del portafoglio $zc(p)$. Questo implica che il rendimento
+del portafoglio a covarianza $0$ di un portafoglio $p$ può essere
+trovato graficamente trovando il punto di intersezione fra l'asse
+delle ordinate e la retta tangente alla frontiera nel punto $(\sigma_{p},E[r_{p}])$.
+
+
+\subsection{La security market line}
+
+Vogliamo ora caratterizzare la relazione fra il rendimento atteso
+di un qualsiasi portafoglio frontiera diverso da $mvp$ ed il rendimento
+di un qualsiasi altro portafoglio (non necessariamente sulla frontiera
+quindi). Sia dunque $p\neq mvp$ un portafoglio frontiera. Utilizzando
+la (\ref{eq2}) otteniamo\begin{eqnarray*}
+Cov(r_{p},r_{q}) & = & w_{p}^{\prime}Vw_{q}=\lambda e^{\prime}V^{-1}Vw_{q}+\gamma S^{\prime}V^{-1}Vw_{q}\\
+ & = & \lambda E[r_{q}]+\gamma\end{eqnarray*}
+Sostituendo la (\ref{eq3a}) e (\ref{eq3b}) a $\lambda$ e $\gamma$:\[
+E[r_{q}]=\frac{AE[r_{p}]-B}{CE[r_{p}]-A}+Cov(r_{p},r_{q})\frac{D}{CE[r_{p}]-A}\]
+e tramite l'equazione$\ (\ref{eq6})$\begin{eqnarray}
+E[r_{q}] & = & \frac{A}{C}-\frac{D/C^{2}}{E[r_{p}]-A/C}+\underset{\beta_{q,p}}{\underbrace{\frac{Cov(r_{p},r_{q})}{\sigma_{p}^{2}}}}\underset{\text{tramite (\ref{eq6}) }\sigma_{p}^{2}}{\underbrace{\left[\frac{1}{C}+\frac{\left(E[r_{p}]-A/C\right)^{2}}{D/C}\right]}}\frac{D}{CE[r_{p}]-A}\notag\\
+ & = & E[r_{zc(p)}]+\beta_{q,p}\left(E[r_{p}]-A/C+\frac{D/C^{2}}{E[r_{p}]-A/C}\right)\notag\\
+ & = & E[r_{zc(p)}]+\beta_{q,p}\left(E[r_{p}]-E[r_{zc(p)}]\right)\\
+ & = & \beta_{q,p}E[r_{p}]+(1-\beta_{q,p})E[r_{zc(p)}]\label{eq7}\end{eqnarray}
+Il rendimento atteso di un qualsiasi portafoglio $q$ può quindi scriversi
+come una combinazione lineare dei rendimenti attesi del portafoglio
+$p$ e del suo \textquotedbl{}zero covariance\textquotedbl{} $zc(p)$
+portafoglio con pesi uguali a $\beta_{q,p}$ e rispettivamente $(1-\beta_{q,p})$.
+
+\medskip{}
+ Notiamo che $zc(zc(p))=p$ (il portafoglio \textquotedbl{}zero covariance\textquotedbl{}
+del portafoglio $zc(p)$ è $p$) per qualsiasi portafoglio frontiera
+$p\neq mvp$. Questo ci permette di ripetere%
+\footnote{Tuttavia deve valere $\sigma_{zc(p)}^{2}>0$.%
+} l'argomentazione invertendo i ruoli fra $p$ e $zc(p)$, cioè prendendo
+quale portafoglio frontiera iniziale $zc(p)$ ed ottenendo per analogia%
+\footnote{Per un qualsiasi portafoglio frontiera $k$ vale: $E[\widetilde{r}_{q}]=\beta_{q,k}E[\widetilde{r}_{k}]+(1-\beta_{q,k})E[\widetilde{r}_{zc(k)}].$%
+}\begin{equation}
+E[r_{q}]=\beta_{q,zc(p)}E[r_{zc(p)}]+(1-\beta_{q,zc(p)})E[r_{p}]\label{eq8}\end{equation}
+Poiché $E[r_{zc(p)}]\neq E[r_{p}]$, l'equazione\[
+E[r_{q}]=\alpha E[r_{zc(p)}]+(1-\alpha)E[r_{p}]\]
+possiede un'unica soluzione che notiamo $\alpha^{\ast}$. Confrontanto
+i pesi di $E[r_{zc(p)}]$ nell'equazione (\ref{eq7}) e (\ref{eq8})
+otteniamo la seguente identità:\[
+(1-\beta_{q,p})=\alpha^{\ast}=\beta_{q,zc(p)}.\]
+Quindi, riprendendo l'equazione (\ref{eq7}) essa può essere riscritta
+come\begin{equation}
+E[r_{q}]=\beta_{q,p}E[r_{p}]+\beta_{q,zc(p)}E[r_{zc(p)}]\label{eq9}\end{equation}
+Le relazioni (\ref{eq7}), (\ref{eq8}) e (\ref{eq9}) sono tutte
+equivalenti fra loro.
+
+
+\subsection{Asset non rischioso}
+
+\noindent Assumiamo ora che esista un asset non rischioso il cui rendimento
+è certo. Notiamo con $p$ un portafoglio frontiera degli $N+1$ asset
+e con $\underset{N\times1}{w_{p}}$ il vettore dei pesi di $p$ negli
+investimenti a rischio. $w_{p}$ sarà dunque la soluzione al seguente
+problema di minimizzazione vincolato:\[
+\min\frac{1}{2}w^{\prime}Vw\]
+sotto i vincoli\begin{equation}
+w^{\prime}e+(1-w^{\prime}S)r_{f}=E[r_{p}]\label{vincoli somma pesi e rendimento rf}\end{equation}
+Come in precedenza formiamo il lagrangiano $\mathcal{L}$: $w_{p}$
+sarà soluzione del seguente problema\[
+\underset{\{w,\lambda\}}{\min}\frac{1}{2}w^{\prime}Vw+\lambda\left(E[r_{p}]-w^{\prime}e-(1-w^{\prime}S)r_{f}\right)\]
+Le condizioni di primo ordine saranno\begin{eqnarray}
+Vw_{p} & = & \lambda(e-r_{f}S)\label{cpo1rf}\\
+r_{f}+w_{p}^{\prime}(e-r_{f}S) & = & E[r_{p}]\label{cpo2rf}\\
+\text{da cui \ \ \ \ \ \ \ \ \ \ \ }w_{p} & = & \lambda V^{-1}(e-r_{f}S)\label{cpo3rf}\end{eqnarray}
+Premoltiplicando (\ref{cpo3rf}) per $(e-Sr_{f})^{\prime}$ e risolvendo
+su $\lambda$\[
+\lambda=\left[\underset{H}{\underbrace{(e-r_{f}S)^{\prime}V^{-1}(e-r_{f}S)}}\right]^{-1}\left(E[r_{p}]-r_{f}\right)\]
+da cui segue che\begin{equation}
+w_{p}=V^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}\label{eq4rf}\end{equation}
+La varianza di $r_{p}$:\begin{equation}
+\sigma_{p}^{2}=w_{p}^{\prime}Vw_{p}=\frac{\left(E[r_{p}]-r_{f}\right)^{2}}{H}\label{eq5rf}\end{equation}
+o equivalentemente \[
+\sigma_{p}=\left\{ \begin{array}{c}
+\ \ \frac{E[r_{p}]-r_{f}}{\sqrt{H}}\text{ se }E[r_{p}]\geq r_{f}\\
+-\frac{E[r_{p}]-r_{f}}{\sqrt{H}}\text{ se }E[r_{p}]<r_{f}\end{array}\right.\]
+\[
+\text{Grafico}\]
+\vspace{6cm}
+
+
+\noindent La frontiera di tutti gli asset è composta da due semirette
+originate in $\left(0,r_{f}\right)$ con pendenza $\sqrt{H}$ e $-\sqrt{H}$.
+Tre i casi possibili:
+\begin{enumerate}
+\item $r_{f}<\frac{A}{C}$
+
+
+$T$ è il punto di tangenza fra la semiretta $r_{f}+\sqrt{H}\sigma$
+e la frontiera.
+\begin{itemize}
+\item Portafogli situati sul segmento $\overline{r_{f}T}$ consistono in
+una combinazione lineare convessa tra $r_{f}$ ed il portafoglio $T$.
+\item Portafogli situati sulla parte $\overline{r_{f}T}^{c}$ utilizzano
+una posizione negativa (short selling) di risk free.
+\item Posizioni sulla semiretta $r_{f}-\sqrt{H}\sigma$ sono costituite
+tramite posizioni negative (short) in $T$. 
+\end{itemize}
+\item $r_{f}>\frac{A}{C}$
+
+
+Situazione \textquotedbl{}simmetrica\textquotedbl{} rispetto alla
+precedente.
+
+\item $r_{f}=\frac{A}{C}$
+
+
+In questo caso\begin{eqnarray*}
+H & = & (e-Sr_{f})^{\prime}V^{-1}(e-Sr_{f})\\
+ & = & e^{\prime}V^{-1}e-r_{f}e^{\prime}V^{-1}S-r_{f}S^{\prime}V^{-1}e+r_{f}^{2}S^{\prime}V^{-1}S\\
+ & = & B-2r_{f}A+r_{f}^{2}C\\
+ & = & \frac{BC-A^{2}}{C}=\frac{D}{C}>0\end{eqnarray*}
+dove $A,B$ e $C$ sono definiti come in precedenza. Otteniamo dunque
+che $H=\frac{D}{C}$ e \[
+E[r_{p}]=\frac{A}{C}\pm\sqrt{D/C}\sigma.\]
+Ma questi sono esattamente gli asintoti della parabola definita nel
+piano $\left(\sigma,E[r]\right)$ già incontrati nel paragrafi precedenti.
+Abbiamo quindi la seguente situazione:\[
+\text{Grafico}\]
+\vspace{6cm}
+
+
+La frontiera di tutti gli asset non è generata da una combinazione
+tra il riskless asset ed un portafoglio di asset rischiosi. Infatti,
+sostituendo nella (\ref{eq4rf}) $r_{f}=\frac{A}{C}$ e premoltiplicando
+$w_{p}$ per $S^{\prime}$\begin{eqnarray*}
+S^{\prime}w_{p} & = & S^{\prime}V^{-1}(e-\frac{A}{C}S)\frac{E[r_{p}]-r_{f}}{H}\\
+ & = & (A-\frac{A}{C}C)\frac{E[r_{p}]-r_{f}}{H}\\
+ & = & 0\end{eqnarray*}
+Quindi un qualsiasi portafoglio sulla frontiera di tutti gli asset
+è costruito investendo tutto nel risk free asset e tenendo un cosìddetto
+\textquotedbl{}arbitrage portfolio\textquotedbl{}: un portafoglio
+i cui pesi sommano a zero. 
+
+\end{enumerate}
+
+\subsection{La Security market line rivista}
+
+Sia $q$ un qualsiasi portafoglio e $w_{q}$ i rispettivi pesi delle
+componenti a rischio. Sia $p$ un portafolio frontiera. Assumiamo
+che $E[r_{p}]\neq r_{f}.$ Allora%
+\footnote{In quanto per la \ref{eq4rf} $w_{p}=V^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}$
+e quindi \[
+Cov(r_{q},r_{p})=w_{q}^{\prime}VV^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}.\]
+Terminate utilizzando la \ref{vincoli somma pesi e rendimento rf}.%
+} \[
+Cov(r_{q},r_{p})=w_{q}^{\prime}Vw_{p}=\frac{\left(E[r_{q}]-r_{f}\right)\left(E[r_{p}]-r_{f}\right)}{H}\]
+Utilizzando ora la (\ref{eq5rf}), cioè $\sigma_{p}^{2}=\frac{\left(E[r_{p}]-r_{f}\right)^{2}}{H}$
+otteniamo\begin{eqnarray*}
+Cov(r_{q},r_{p}) & = & \frac{\left(E[r_{q}]-r_{f}\right)\left(E[r_{p}]-r_{f}\right)}{H}\ \ \ \mid:\sigma_{p}^{2}\\
+\frac{Cov(r_{q},r_{p})}{\sigma_{p}^{2}} & = & \frac{\left(E[r_{q}]-r_{f}\right)}{\left(E[r_{p}]-r_{f}\right)}\end{eqnarray*}
+da cui è immediato ottenere\begin{equation}
+E[r_{q}]=r_{f}+\beta_{qp}\left(E[r_{p}]-r_{f}\right)\end{equation}
+Questa relazione è indipendente dal segno di $\frac{A}{C}-r_{f}$.
+Inoltre vale la seguente relazione\[
+r_{q}=r_{f}+\beta_{qp}\left(r_{p}-r_{f}\right)+\widetilde{\epsilon}_{qp}\]
+dove $\widetilde{\epsilon}_{qp}:=r_{q}-r_{f}-\beta_{qp}\left(r_{p}-r_{f}\right)$.
+È immediato verificare che per qualsiasi portafoglio frontiera $p$
+diverso $r_{f}$ vale che $Cov(\widetilde{\epsilon}_{qp},r_{p})=E(\widetilde{\epsilon}_{qp})=0$.
+
+
+\subsection{CAPM}
+
+Vogliamo derivare le conclusioni del Capital Asset Pricing Model che
+postula una relazione d'equilibrio di tipo lineare fra i rendimenti
+attesi di mercato. Definiamo il portafoglio di mercato, ovvero l'insieme
+degli asset trattati in un'economia. Sia $W_{i}$ il patrimonio dell'$i-$esimo
+individuo, $i=1,...,I$ mentre $w_{ij}$ la percentuale del suo patrimonio
+investita nel $j-$esimo asset, $j=1,...,N$. La sostanza totale nell'economia
+è dunque \[
+W:=\sum_{i=1}^{I}W_{i}\]
+Definiamo ora $w_{j}^{m}$ come la percentuale del valore dell'asset
+$j$ sul totale della sostanza $W$. Esemplificando, supponiamo che
+gli unici assets siano quelli trattati nell'indice Swiss Market Index%
+\footnote{Si veda a tal proposito il file historical\_basket\_nssmi\_20090415.csv
+e la discussione in classe sul suo contenuto.%
+}. $W$ sarà quindi la capitalizzazione totale dell'indice mentre $w_{ubs}^{m}$
+sarà il valore totale delle azioni $ubs$ divise per la capitalizzazione
+dell'indice. È chiaro che $\sum_{j}w_{j}^{m}=1$. I pesi $w_{j}^{m}$
+sono chiamati i pesi del portafoglio di mercato. Affinché il mercato
+sia in equilibrio dovrà essere\begin{equation}
+\underset{\text{domanda aggregata }j-esimo\text{ asset}}{\underbrace{\sum_{i=1}^{I}W_{i}w_{ij}}}=\underset{\text{capitaliz. }j-esimo\text{ asset}}{\underbrace{w_{j}^{m}W}}\end{equation}
+Dividendo entrambi i lati per $W$ otteniamo\begin{equation}
+\sum_{i=1}^{I}\underset{c_{i}\text{ = \% sostanza i-esimo individuo}}{\underbrace{\frac{W_{i}}{W}}\ \ w_{ij}}=w_{j}^{m}\label{combinazione convessa portafoglio mercato}\end{equation}
+Notiamo che $c_{i}=\frac{W_{i}}{W}\geq0$ e $\sum_{i=1}^{I}c_{i}=1$.
+Inoltre, poiché questa relazione vale per tutti gli asset $j$, essa
+può essere riformulata in termini vettoriali. Definendo $w_{i}$ e
+$w^{m}$ rispettivamente come il vettore dei pesi del portafoglio
+dell'$i-$esimo individuo ed il vettore dei pesi del portafoglio di
+mercato, la condizione d'equilibrio \ref{combinazione convessa portafoglio mercato}
+può essere riscritta nel modo seguente:\begin{equation}
+\sum_{i=1}^{I}\underset{(1\times1)}{c_{i}}\underset{(N\times1)}{w_{i}}=\underset{(N\times1)}{w_{m}}\ .\label{equilibrio capm}\end{equation}
+Quest'ultima equazione esprime la condizione d'equilibrio fra domanda
+ed offerta di titoli ed afferma che, in equilibrio, il portafoglio
+di mercato (lato destro della \ref{equilibrio capm}) è una combinazione
+lineare convessa dei portafogli dei singoli individui. Ora, se ogni
+individuo ha un portafoglio efficiente, per le proprietà viste negli
+esercizi \ref{esercizio1 proprieta frontiera} e \ref{esercizio2 proprieta frontiera}
+anche il portafoglio di mercato sarà sulla frontiera nonché efficiente.
+In particolare, esso sarà il portafoglio di tangenza $T$ visto nel
+paragrafo precedente.\[
+\text{Grafico}\]
+\vspace{6cm}
+
+
+
+\chapter{B. Chapter 15: The Lognormal Distribution}
+
+
+\section{Introduzione: il cammino dei prezzi azionari}
+
+In questo capitolo ci proponiamo di modellare la dinamica nel tempo
+del prezzo di un'azione. È evidente che il prezzo futuro di un'azione
+(fra un giorno, un mese, un anno, o anche solo fra un minuto) è aleatorio,
+esso non è determinabile con assoluta certezza. Il modello quindi
+non potrà essere deterministico.
+
+Quali sono le proprietà desiderabili per un modello aleatorio del
+prezzo di un'azione? Se utilizzassimo un modello di probabilità, quali
+caratteristiche dovrebbe avere la distribuzione del prezzo al tempo
+$t$? Inoltre, come evolve il prezzo nel tempo e quindi come cambia
+la sua distribuzione?
+
+Analizzando i prezzi osservabili sui vari mercati finanziari possiamo
+identificare alcune caratteristiche che li contraddistinguono e che
+il modello probabilistico dovrebbe riuscire a descrivere.
+\begin{enumerate}
+\item I prezzi cambiano con continuità: tanto più piccolo è l'arco di tempo
+fra un'osservazione e l'altra e tanto minore sarà la variazione nel
+prezzo dell'azione.
+\item Il prezzo non è mai negativo (può essere 0 in caso di fallimento della
+ditta ma in tal caso non è più osservato).
+\item Il rendimento atteso di un investimento azionario tende a crescere
+tanto più il titolo è tenuto in portafoglio.
+\item L'incertezza associata al rendimento di un investimento azionario
+tende a crescere all'aumentare della durata dell'investimento stesso.
+La varianza del prezzo aumenta nel tempo! 
+\end{enumerate}
+Possiamo disegnare il grafico a frequenza giornaliera dei prezzi di
+ADECCO. Questo grafico è anche chiamato {}``the stock price path\textquotedblright{}.
+Esso rappresenta il cammino effettivamente realizzato fra gli infiniti
+cammini che, ex-ante, avrebbero potuto realizzarsi.
+
+È bene osservare quanto segue:\ in realtà quando costruiamo il grafico
+dei prezzi di una qualsiasi azione noi stiamo rappresentando le realizzazioni
+di $n$ variabili aleatorie, dove $n$ rappresenta il numero di giorni
+osservati. Infatti, ad ogni data $t$ noi osserviamo la realizzazione
+di $P_{t}$, la cui distribuzione non necessariamente sarà uguale
+alla distribuzione di $P_{t-1}$ o $P_{t+1}$. A dipendenza del modello
+probabilistico utilizzato per descrivere la dinamica temporale dei
+prezzi le distribuzioni di $P_{t}$ e $P_{t+1}$ potranno variare.
+Inoltre, talvolta è necessario calcolare la distribuzione congiunta
+di due o più prezzi a date differenti, come ad esempio $P_{t}$ e
+$P_{t+20}$.
+
+Supponiamo di avere a disposizione un modello probabilistico ed essere
+in grado di simulare i cammini del processo dei prezzi $\left\{ P_{t}\right\} _{t=1}^{n}$.
+Potremmo allora, quale esercizio, simulare $M=1000$ cammini $\left\{ P_{t}^{s}\right\} _{t=1}^{n}$,
+$s=1,...,M$ indipendenti l'uno dall'altro ed in seguito, per una
+qualsiasi data $\widetilde{t}$, stimare valore atteso e varianza
+di $P_{\widetilde{t}}$ utilizzando le $M$ realizzazioni simulate
+disponibili per quella data. Dalla teoria asintotica sappiamo che
+al crescere di $M$ la media $\frac{1}{M}\sum_{s=1}^{M}P_{\widetilde{t}}^{s}$
+convergerà ad $E(P_{\widetilde{t}})$ e la varianza stimata convergerà
+alla varianza $Var(P_{\widetilde{t}})$.
+
+In realtà l'economia genera un solo ed unico cammino, cioè $M=1$.
+La vita non permette di tornare indietro nel tempo e ripetere l'esperimento.
+Per tale motivo non è possibile stimare il valore atteso del prezzo
+o la volatilità del rendimento di una qualsiasi data $\widetilde{t}$
+facendo una media di osservazioni: alla data $\widetilde{t}$ abbiamo
+un'unica osservazione! Sarà necessario appoggiarsi alle proprietà
+del modello di probabilità che noi supponiamo generi le osservazioni.
+In un primo passo, utilizzando i dati a disposizione, si stimeranno
+i parametri del modello dai quali, in una seconda fase, si dedurranno
+le informazioni cercate.
+
+
+\section{Flashback: Funzione di ripartizione, di densità, quantile}
+
+A una variabile aleatoria $X$ (continua o dicreta) è sempre associata
+un distribuzione (o legge) di probabilità $P$, ovvero una funzione
+che assegna la probabilità che $X$ assuma singoli valori (nel caso
+discreto) oppure che cada in singoli intervalli di valori (nel caso
+continuo).
+
+\begin{esempio} La legge di probabilità di Poisson si indica con
+$P(\lambda)$ e per qualsiasi evento $A\subset\left\{ 0,1,2,\ldots\right\} $
+è data dall'espressione:\[
+P_{X}(A)=\sum_{k\in A}\frac{\exp(-\lambda)\lambda^{k}}{k!}\ .\]
+\hfill{}$\square$ \end{esempio}
+
+\medskip{}
+ Tramite la legge di probabilità $P$ possiamo definire la cosiddetta
+funzione di ripartizione, notata $F_{X}$.
+
+\noindent \begin{definizione} La funzione di ripartizione della variabile
+aleatoria $X$ è la funzione \[
+F_{X}:\mathbb{R}\rightarrow\lbrack0,1]\]
+tale che per ogni $x\in\mathbb{R}$\[
+F_{X}(x)=P\left(X\in\left(-\infty,x\right]\right)\ .\]
+ \end{definizione}
+
+\begin{remark} Quando è chiaro a quale variabile aleatoria ci si
+riferisce si può semplicemente scrivere $F$ anziché $F_{X}$. \end{remark}
+
+\begin{definizione} Una funzione di ripartizione $F$ è detta assolutamente
+continua se esite una funzione non negativa $f$ tale che\[
+F(x)=\int_{-\infty}^{x}f(y)dy\ .\]
+La funzione $f$ è chiamata funzione di densità di $F$. \end{definizione}
+
+\begin{esempio} Sia $X\sim N(\mu,\sigma^{2}).$ La funzione di densità
+è uguale a\[
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{1}{2\sigma^{2}}(x-\mu)^{2}\right)\ .\]
+
+
+\hfill{}$\square$ \end{esempio}
+
+\medskip{}
+ Variabili aleatorie aventi una funzione di ripartizione assolutamente
+continua presentano alcuni vantaggi pratici per quanto riguarda il
+calcolo delle probabilità. Infatti, dato un qualsiasi intervallo $A=\left[a,b\right]$
+\[
+P\left(X\in A\right)=\int_{a}^{b}f(y)dy\ .\]
+Notate che non sempre è possibile ottenere una soluzione in forma
+analitica dell'integrale precedente. In taluni casi, come ad esempio
+con la distribuzione normale, il valore dell'integrale deve essere
+approssimato tramite procedure numeriche.\medskip{}
+
+
+\noindent \begin{definizione} Per semplicità consideriamo variabili
+aleatore le cui funzioni di ripartizione $F$ sono assolutamente continue
+e \emph{strettamente} crescenti%
+\footnote{Se $F$ possiede dei punti di discontinuità o non è strettamente crescente
+occorre modificare la definizione di quantile nel modo seguente:\[
+q_{\alpha}=\inf\left\{ x\in\mathbb{R}:\alpha\leq F(x)\right\} \text{.}\]
+%
+}. Per tali $V.A.$ la funzione quantile è definita per $\alpha\in\left(0,1\right)$
+come \[
+q_{\alpha}=F^{-1}(\alpha)~.\]
+Data la variabile aleatoria $X$ varrà quindi che $q_{\alpha}$ soddisfa
+la seguente identità:\[
+P(X\leq q_{\alpha})=\alpha\]
+\medskip{}
+ \end{definizione}
+
+\begin{esempio} La funzione di ripartizione di una variabile aleatoria
+$X$ distribuita secondo la legge esponenziale è uguale a \[
+F(x)=\left\{ \begin{array}{cc}
+0 & x<0\\
+1-\exp(-\lambda x) & x\geq0\end{array}\right.\]
+dove $\lambda>0$ è un parametro detto intensità. La funzione quantile
+è uguale a \[
+q_{\alpha}=F^{-1}(\alpha)=-\frac{\ln(1-\alpha)}{\lambda}\ .\]
+
+
+\hfill{}$\square$\medskip{}
+ \end{esempio}
+
+\hspace{-1cm}\FRAME{itbpFUX}{5.6234cm}{3.8111cm}{0cm}{\Qcb{Distribuzione
+esponenziale: $\lambda=0.5$}}{}{Plot funzione esponenziale}{\special{language
+\textquotedbl{}Scientific Word\textquotedbl{};type \textquotedbl{}MAPLEPLOT\textquotedbl{};width
+5.6234cm;height 3.8111cm;depth 0cm;display \textquotedbl{}USEDEF\textquotedbl{};plotsnapshots
+TRUE;mustRecompute FALSE;lastEngine \textquotedbl{}MuPAD\textquotedbl{};xmin
+\textquotedbl{}0\textquotedbl{};xmax \textquotedbl{}10\textquotedbl{};xviewmin
+\textquotedbl{}0\textquotedbl{};xviewmax \textquotedbl{}10\textquotedbl{};yviewmin
+\textquotedbl{}0\textquotedbl{};yviewmax \textquotedbl{}1\textquotedbl{};viewset\textquotedbl{}XY\textquotedbl{};rangeset\textquotedbl{}X\textquotedbl{};plottype
+4;labeloverrides 3;axesFont \textquotedbl{}Times New Roman,12,0000000000,useDefault,normal\textquotedbl{};numpoints
+100;plotstyle \textquotedbl{}patch\textquotedbl{};axesstyle \textquotedbl{}normal\textquotedbl{};axestips
+FALSE;xis \TEXUX{x};var1name \TEXUX{$x$};function \TEXUX{$1-\exp(-0.5x)$};linecolor
+\textquotedbl{}black\textquotedbl{};linestyle 1;pointstyle \textquotedbl{}point\textquotedbl{};linethickness
+2;lineAttributes \textquotedbl{}Solid\textquotedbl{};var1range \textquotedbl{}0,10\textquotedbl{};num-x-gridlines
+100;curveColor \textquotedbl{}{[}flat::RGB:0000000000{]}\textquotedbl{};curveStyle
+\textquotedbl{}Line\textquotedbl{};VCamFile 'KJBG5Y00.xvz';validfile
+\textquotedbl{}T\textquotedbl{};tempfilename 'KJBG5X00.wmf';tempfile-properties
+\textquotedbl{}XPR\textquotedbl{};}}\hspace{1cm}\FRAME{itbpFUX}{5.6234cm}{3.8111cm}{0cm}{\Qcb{Funz.
+quantile esponenziale: $\lambda=0.5$}}{}{Plot funzione quantile
+esponenziale}{\special{language \textquotedbl{}Scientific Word\textquotedbl{};type
+\textquotedbl{}MAPLEPLOT\textquotedbl{};width 5.6234cm;height 3.8111cm;depth
+0cm;display \textquotedbl{}USEDEF\textquotedbl{};plotsnapshots TRUE;mustRecompute
+FALSE;lastEngine \textquotedbl{}MuPAD\textquotedbl{};xmin \textquotedbl{}0\textquotedbl{};xmax
+\textquotedbl{}1\textquotedbl{};xviewmin \textquotedbl{}0\textquotedbl{};xviewmax
+\textquotedbl{}1\textquotedbl{};yviewmin \textquotedbl{}0\textquotedbl{};yviewmax
+\textquotedbl{}10\textquotedbl{};viewset\textquotedbl{}XY\textquotedbl{};rangeset\textquotedbl{}X\textquotedbl{};plottype
+4;labeloverrides 3;axesFont \textquotedbl{}Times New Roman,12,0000000000,useDefault,normal\textquotedbl{};numpoints
+100;plotstyle \textquotedbl{}patch\textquotedbl{};axesstyle \textquotedbl{}normal\textquotedbl{};axestips
+FALSE;xis \TEXUX{x};var1name \TEXUX{$x$};function \TEXUX{$-2\ln(1-x)$};linecolor
+\textquotedbl{}black\textquotedbl{};linestyle 1;pointstyle \textquotedbl{}point\textquotedbl{};linethickness
+2;lineAttributes \textquotedbl{}Solid\textquotedbl{};var1range \textquotedbl{}0,1\textquotedbl{};num-x-gridlines
+100;curveColor \textquotedbl{}{[}flat::RGB:0000000000{]}\textquotedbl{};curveStyle
+\textquotedbl{}Line\textquotedbl{};VCamFile 'KJBG6001.xvz';validfile
+\textquotedbl{}T\textquotedbl{};tempfilename 'KJBG6001.wmf';tempfile-properties
+\textquotedbl{}XPR\textquotedbl{};}}\medskip{}
+
+
+\begin{theorem} \label{densita di funzioni di VA}Densità di funzioni
+di $V.A.$. Sia $X$ una variabile aleatoria assolutamente continua
+con funzione di densità $f_{X}$. Definiamo la nuova variabile aleatoria
+\[
+Y=g(X)\]
+dove $g$ è una funzione biiettiva, derivabile e con funzione inversa
+$g^{-1}$. Allora $Y$ è variabile aleatoria assolutamente continua
+con funzione di densità \[
+f_{Y}(y)=f_{X}(g^{-1}(y))\ \mid\left(g^{-1}\right)^{\prime}(y)\mid~.\]
+ \end{theorem}
+
+
+\section{La distribuzione lognormale}
+
+\textbf{Definizione}: Una variabile casuale $X$ ha distribuzione
+lognormale, con parametri $a$ e $b^{2}$, se $\ln(X)$ ha distribuzione
+normale con media $a$ e varianza $b^{2}$. Equivalentemente $X=\exp(Y)$
+dove $Y\sim N(a,b^{2})$.
+\begin{itemize}
+\item Funzione di densità:
+
+
+La distribuzione lognormale ha densità uguale a \[
+f(x)=\exp\{-\frac{\left(ln(x)-a\right)^{2}}{2b^{2}}\}/\left(x\sqrt{2\pi}b\right)\text{ per }x>0\text{.}\]
+
+
+\item Funzione di ripartizione:
+
+
+E' possibile dimostrare (vedi serie esercizi)\ che la sua funzione
+di ripartizione è data da \[
+F(x)=G\{[-a+ln(x)]/b\}\text{ per }x>0\text{,}\]
+dove $G$ rappresenta la funzione di ripartizione della distribuzione
+normale standard, cioè\ $N(0,1)$.
+
+\item Funzione quantile:
+
+
+La funzione quantile di una variabile aleatoria lognormale è data
+da \[
+F^{-1}(\alpha)=exp\left[a+bG^{-1}(\alpha)\right]\text{ per }0<\alpha<1.\]
+
+
+\item Valore atteso e varianza in funzione dei parametri $a$ e $b^{2}$
+
+\begin{itemize}
+\item Il valore atteso di una variabile aleatoria lognormale è uguale a
+\[
+E(X)=exp(a+b^{2}/2).\]
+
+\item La varianza è uguale a \[
+V(X)=exp[2(a+b^{2})]-exp(2a+b^{2}).\]
+ 
+\end{itemize}
+\end{itemize}
+\begin{esercizio} Distribuzione lognormale. Utilizzando il Teorema
+\ref{densita di funzioni di VA}: \end{esercizio}
+\begin{enumerate}
+\item Derivate la funzione di densità di $Y=\exp(X)$ dove $X\sim N(\mu,\sigma^{2})$.
+\item Mostrate che la funzione di ripartizione di $Y$ può essere scritta
+come \[
+F(y)=G\{[-\mu+ln(y)]/\sigma\}\text{ per }y>0\text{,}\]
+dove $G$ rappresenta la funzione di ripartizione della distribuzione
+normale \emph{standard}.
+
+
+Suggerimento: Sappiamo che $F(y)=P(Y\leq y)=P(\exp(X)\leq y)$ \ldots{}
+
+\item Ricavate la funzione quantile di $Y$ \[
+q_{\alpha}=F^{-1}(\alpha)=exp\left[\mu+\sigma G^{-1}(\alpha)\right]\text{ per }0<\alpha<1.\]
+
+
+
+\hfill{}$\square$ 
+
+\end{enumerate}
+
+\section{Simulazione di variabili aleatorie}
+
+La funzione \emph{rand()} di MS\ Excel permette di generare un numero
+aleatorio estratto da una distribuzione uniforme $\left[0,1\right]$.
+Per la precisione, leggendo la pagina d'aiuto della funzione stessa
+si scopre che i numeri generati saranno compresi nell'intervallo $\left[0,1\right)$.
+Per generare $N$ variabili uniformi indipendenti sarà dunque sufficiente
+applicare la funzione \emph{rand()} ad $N$ celle.
+
+Una seconda possibilità per generare numeri aleatori in Excel è quella
+di utilizzare il comando del menu \textquotedbl{}\textbf{Tools $\vert$ Data}
+\textbf{Analysis...\textquotedbl{} }e poi\textbf{\ \textquotedbl{}Random
+Number Generation\textquotedbl{}}. Questo comando permette di simulare
+matrici di variabili aleatore campionando non solo dalla distribuzione
+uniforme $\left[0,1\right)$ ma da tutta una serie di distribuzioni
+discrete e non. Di particolare interesse è la casella \textquotedbl{}\textbf{Random
+seed}\textquotedbl{}. Il valore in essa contenuto serve ad inizializzare
+il generatore di numeri aleatori (si tratta infatti una funzione deterministica
+...). In pratica, due simulazioni aventi il medesimo Random seed saranno
+identiche. Se la casella Random seed viene lasciata vuota si otterranno
+simulazioni diverse.
+
+
+\subsubsection{Una procedura generale}
+
+E' possibile generare numeri aleatori campionati dalla distribuzione
+desiderata utilizzando la funzione quantile corrispondente abbinata
+ad un generatore $U\left[0,1\right]$. L'idea, molto semplice, è la
+seguente:
+\begin{itemize}
+\item Dapprima simuliamo un'osservazione da $U\left[0,1\right]$: $X\sim U\left[0,1\right]$
+\item In un secondo tempo calcoliamo $Y=F^{-1}\left(X\right)$, dove $F^{-1}$
+è la funzione quantile della distribuzione desiderata. 
+\end{itemize}
+\noindent La variabile aleatoria $Y=F^{-1}\left(X\right)$ ha dunque
+quale funzione di distribuzione $F$. Per dimostrare questo basta
+notare che \[
+P(Y\leq c)\underset{(1)}{=}P(F^{-1}\left(X\right)\leq c)\underset{(2)}{=}P(X\leq F(c))\underset{(3)}{=}F(c)\]
+Il primo uguale si ottiene inserendo la definizione di $Y$, il secondo
+applicando $F$ ad entrambi i lati della disuguaglianza e l'ultimo
+è una semplice conseguenza del fatto che $X$ è una variabile aleatoria
+uniforme $\left[0,1\right]$.
+
+
+\section{The Geometric random walk with drift}
+
+Indichiamo come d'abitudine il prezzo al tempo $t$ di un'azione con
+$P_{t}$ (poiché consideriamo una sola azione evitiamo l'uso dell'indice
+$i$). Sia invece $\Delta t$ un intervallo di tempo, ad esempio un
+giorno, espresso nell'unità di misura di $t$. Supponiamo che il prezzo
+$P_{t}$ segua un processo del tipo \begin{equation}
+P_{t+\Delta t}=P_{t}\exp(\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t}),\text{ \ \ }\varepsilon_{t}\sim i.i.d.~N(0,1),~\sigma>0.\label{delta_t}\end{equation}
+I parametri $\mu$ e $\sigma$ sono chiamati rispettivamente termine
+di \emph{drift} e termine di \emph{diffusione} (o di volatilità).
+Come osservato in Benninga, se ponessimo il termine di diffusione
+uguale a $0$ il modello si ridurrebbe ad un'equazione deterministica:
+\[
+P_{t+\Delta t}=P_{t}\exp(\mu\Delta t),\]
+il prezzo dell'azione crescerebbe in modo esponenziale ad un tasso
+composto continuamente $\mu$. Il rendimento logaritmico fra $t$
+e $t+\Delta t$ è appunto pari a $\ln(P_{t+\Delta t}/P_{t})=\mu\Delta t$.
+Quando $\sigma>0$ il rendimento è aleatorio: $P_{t+\Delta t}/P_{t}$
+ha distribuzione lognormale e la sua varianza dipende da $\Delta t$
+e da $\sigma$.
+
+\bigskip{}
+
+
+\begin{esercizio} Dimostrate che se i prezzi sono generati dall'equazione
+\ref{delta_t}, condizionatamente a $P_{t}$ il prezzo $P_{t+\Delta t}$
+è distribuito secondo la legge lognormale. \end{esercizio}
+
+\bigskip{}
+
+
+\noindent L'intervallo temporale $\Delta t$ può essere interpretato
+come la distanza di tempo fra un'osservazione e l'altra (intervallo
+di campionamento)\ e (\ref{delta_t}) è l'equazione che descrive
+la dinamica dei prezzi osservati a tali istanti temporali. Gli indici
+temporali dei prezzi osservati saranno nell'insieme $\left(\ldots,\ t-\Delta t,\ t,\ t+\Delta t,\ t+2\Delta t,\ldots\right)$.
+E' questa una notazione un po' insolita in quanto generalmente $\Delta t=1$.
+In realtà si tratta solo di un modo diverso e più generale di indicizzare
+le osservazioni.
+
+
+\subsection{Caratteristiche del modello}
+
+Il modello (\ref{delta_t}) presenta alcune interessanti proprietà
+che vogliamo analizzare. Innanzi tutto osserviamo che, applicando
+il logaritmo naturale ad entrambi i lati della (\ref{delta_t}), il
+modello può essere scritto come \[
+\ln(P_{t+\Delta t})=\ln(P_{t})+\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t}\]
+e ridefinendo appropriatamente i termini otteniamo \begin{equation}
+X_{t+\Delta t}=X_{t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+\Delta t}\text{.}\label{notazione_semplificata}\end{equation}
+Si tratta di un caso particolare del famoso modello $AR(1)$ già incontrato
+nella parte comune di questo corso. In questo caso il coefficiente
+della variabile ritardata è uguale a 1. In letteratura questo modello
+prende il nome di \emph{random walk con drift}. Il termine random
+walk (cammino aleatorio) deriva dal fatto che la dinamica di questo
+modello è puramente casuale. La costante $\widetilde{\mu}$, detta
+appunto drift, genera in $X$ una tendenza a crescere (quando $\widetilde{\mu}>0$
+ovviamente).
+
+\noindent Utilizzando la (\ref{notazione_semplificata}), sviluppiamo
+in modo ricorsivo \begin{eqnarray*}
+X_{t+\Delta t} & = & X_{t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+\Delta t}\text{,}\\
+X_{t+2\Delta t} & = & X_{t+\Delta t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+2\Delta t}=X_{t}+2\widetilde{\mu}+\widetilde{\varepsilon}_{t+2\Delta t}+\widetilde{\varepsilon}_{t+\Delta t}\text{,}\\
+X_{t+3\Delta t} & = & X_{t+2\Delta t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+3\Delta t}=X_{t}+3\widetilde{\mu}+\widetilde{\varepsilon}_{t+3\Delta t}+\widetilde{\varepsilon}_{t+2\Delta t}+\widetilde{\varepsilon}_{t+\Delta t}\text{,}\end{eqnarray*}
+e in questo modo dopo $n$ passi avremo che \begin{equation}
+X_{t+n\Delta t}=X_{t}+n\widetilde{\mu}+\sum_{i=1}^{n}\widetilde{\varepsilon}_{t+i\Delta t}\label{random_walk_sviluppato}\end{equation}
+$X_{t+n\Delta t}$ è dunque composto da tre termini:
+\begin{itemize}
+\item $X_{t}$: il valore del processo al tempo $t$ che sarà aleatorio
+se non osservato o deterministico (conosciuto) se osservato
+\item $n\widetilde{\mu}$: la costante deterministica $n\widetilde{\mu}$
+\item $\sum_{i=1}^{n}\widetilde{\varepsilon}_{t+i\Delta t}$: un ultimo
+termine aleatorio composto dalla somma degli errori degli ultimi $n$
+periodi. 
+\end{itemize}
+\noindent Supponiamo che $X_{t}$ sia conosciuto e quindi deterministico.
+Sarà allora semplice calcolare il valore atteso di $X_{t+n\Delta t}$
+e vedere che
+\begin{itemize}
+\item esso non è costante nel tempo ma aumenta linearmente in $n$,
+\item la varianza di $X_{t+n\Delta t}$ non è costante nel tempo. Essa è
+uguale a $n\left(\sigma^{2}\Delta t\right)$ e in maniera simile al
+valore atteso aumenta linearmente in $n$. 
+\end{itemize}
+\noindent Se invece $X_{t}$ fosse anch'esso aleatorio potremmo calcolare
+media e varianza di \[
+\underset{\ln(P_{t+n\Delta t}/P_{t})}{\underbrace{X_{t+n\Delta t}-X_{t}}}=n\widetilde{\mu}+\sum_{i=1}^{n}\widetilde{\varepsilon}_{t+i\Delta t}\]
+Il rendimento logaritmico quale funzione di $n$ possiede quindi le
+medesime proprietà di $X_{t+n\Delta t}$ quando $X_{t}$ è osservato.
+Infine, il termine \textquotedblright{}geometric\textquotedblright{}\ random
+walk, deriva dal fatto che sono i logaritmi del prezzo a seguire un
+random walk e non il prezzo stesso (come abbiamo visto ne deriva una
+crescita esponenziale).
+
+\bigskip{}
+
+
+Tornando al modello iniziale è immediato vedere che il modello presuppone
+rendimenti logaritmici normali: \[
+r_{t,t+\Delta t}=\ln(P_{t+\Delta t}/P_{t})=\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t},\]
+e quindi \[
+r_{t,t+\Delta t}\sim N(\mu\Delta t,\sigma^{2}\Delta t).\]
+Considerando invece il rendimento su un orizzonte di $n$ periodi,
+sulla base dei calcoli svolti in precedenza abbiamo che \begin{equation}
+r_{t,t+n\Delta t}=\ln(P_{t+n\Delta t}/P_{t})=n\mu\Delta t+\sigma\sqrt{\Delta t}\sum_{i=1}^{n}\varepsilon_{t+i\Delta t}\label{claudio}\end{equation}
+e quindi \[
+r_{t,t+n\Delta t}\sim N(n\mu\Delta t,n\sigma^{2}\Delta t)\text{.}\]
+\qquad{}\qquad{}Quando $n\Delta t=1$ dalla (\ref{claudio}) segue
+semplicemente che $r_{t,t+1}\sim N(\mu,\sigma^{2})$. $\mu$ e $\sigma$
+sono quindi il valore atteso e la volatilità del rendimento logaritmico
+su un periodo pari all'unità di misura prescelta, l'anno ad esempio.
+
+\begin{esercizio} Rispetto alle proprietà d'aggregazione temporale
+dei rendimenti logaritmici viste nei precedenti capitoli, quali sono
+le nuove conclusioni a cui il modello {}``geometric random walk\textquotedblright{}\
+permette di giungere? \end{esercizio}
+
+\bigskip{}
+
+
+\begin{esercizio} Benninga, pagina 288
+
+\noindent Supponiamo che $t$ indichi il tempo in anni. Noi desideriamo
+simulare a frequenza giornaliera. Poiché in un anno ci sono (circa)
+$250$ giorni lavorativi, dobbiamo scegliere $\Delta t=1/250$. Supponiamo
+che valore atteso e volatilità annui del rendimento logaritmico siano
+rispettivamente uguali al $10\%$ e $20\%$ e che il prezzo iniziale
+dell'azione sia di \$25. Simulate un anno di osservazioni giornaliere.\newpage{}
+\end{esercizio}
+
+\FRAME{ftbpF}{407.6875pt}{234.375pt}{0pt}{}{}{Figure}{\special{language
+\textquotedbl{}Scientific Word\textquotedbl{};type \textquotedbl{}GRAPHIC\textquotedbl{};maintain-aspect-ratio
+TRUE;display \textquotedbl{}USEDEF\textquotedbl{};validfile \textquotedbl{}T\textquotedbl{};width
+407.6875pt;height 234.375pt;depth 0pt;original-width 624.1875pt;original-height
+357.4375pt;cropleft \textquotedbl{}0\textquotedbl{};croptop \textquotedbl{}1\textquotedbl{};cropright
+\textquotedbl{}1\textquotedbl{};cropbottom \textquotedbl{}0\textquotedbl{};tempfilename
+'JI82KB00.wmf';tempfile-properties \textquotedbl{}XPR\textquotedbl{};}}
+
+\FRAME{ftbpF}{407.6875pt}{234.375pt}{0pt}{}{}{Figure}{\special{language
+\textquotedbl{}Scientific Word\textquotedbl{};type \textquotedbl{}GRAPHIC\textquotedbl{};maintain-aspect-ratio
+TRUE;display \textquotedbl{}USEDEF\textquotedbl{};validfile \textquotedbl{}T\textquotedbl{};width
+407.6875pt;height 234.375pt;depth 0pt;original-width 624.1875pt;original-height
+357.4375pt;cropleft \textquotedbl{}0\textquotedbl{};croptop \textquotedbl{}1\textquotedbl{};cropright
+\textquotedbl{}1\textquotedbl{};cropbottom \textquotedbl{}0\textquotedbl{};tempfilename
+'JI82KB01.wmf';tempfile-properties \textquotedbl{}XPR\textquotedbl{};}}
+
+
+\chapter{Value at Risk (VaR)}
+
+
+\section{Introduzione}
+
+Nell'ambito della gestione del rischio finanziario possiamo identificare
+i seguenti tipi di rischi
+\begin{enumerate}
+\item Market risk
+
+
+Rischio causato da movimenti inattesi ed avversi di prezzi, tassi
+d'interesse e tassi di cambio.
+
+\item Credit risk
+
+
+Rischio generato da un possibile fallimento della controparte relativamente
+ad un contratto finanziario (per esempio obbligazioni Parmalat).
+
+\item Liquidity risk
+
+
+Rischio dovuto alla poca liquidità dell'asset ed alla conseguente
+impossibilità d'acquisto/vendita sul mercato in caso di necessità.
+
+\item Operational risk
+
+
+Rischio causato da errori nell'esecuzioni di ordini d'acquisto/vendita,
+frodi, ecc. 
+
+\end{enumerate}
+Il Value at Risk (VaR) è attualmente la più utilizzata misura di rischio
+di mercato. Il VaR di un portafoglio di assets (non necessariamente
+di sole azioni) è una stima dell'$\left(1-\alpha\right)-$quantile
+della distribuzione della perdita di valore del portafoglio (in termini
+assoluti o percentuali) su di un orizzonte temporale di $T$ periodi.\FRAME{fhF}{8.9534cm}{5.4059cm}{0pt}{}{}{graficovar.jpg}{\special{language
+\textquotedbl{}Scientific Word\textquotedbl{};type \textquotedbl{}GRAPHIC\textquotedbl{};maintain-aspect-ratio
+TRUE;display \textquotedbl{}USEDEF\textquotedbl{};validfile \textquotedbl{}F\textquotedbl{};width
+8.9534cm;height 5.4059cm;depth 0pt;original-width 5.8729in;original-height
+3.5267in;cropleft \textquotedbl{}0\textquotedbl{};croptop \textquotedbl{}1\textquotedbl{};cropright
+\textquotedbl{}1\textquotedbl{};cropbottom \textquotedbl{}0\textquotedbl{};filename
+'graficoVar.jpg';file-properties \textquotedbl{}XNPEU\textquotedbl{};}}
+
+Nel calcolo del VaR abbiamo quindi due \textquotedbl{}gradi di libertà\textquotedbl{},
+ovvero possiamo decidere il livello di significatività $\alpha$ e
+l'orizzonte temporale $T$ per cui stimare la distribuzione del valore
+(rendimento) del portafoglio ed in seguito l'$\left(1-\alpha\right)-$quantile.
+La scelta di $\alpha$ e di $T$ dipendono dall'uso che si desidera
+fare del VaR. Ad esempio, il comitato%
+\footnote{\textquotedbl{}The Committee does not possess any formal supranational
+supervisory authority, and its conclusions do not, and were never
+intended to, have legal force. Rather, it formulates broad supervisory
+standards and guidelines and recommends statements of best practice
+in the expectation that individual authorities will take steps to
+implement them through detailed arrangements ...\textquotedbl{}.%
+} di Basilea II situato presso la Bank for international settlements
+(http://www.bis.org/bcbs/aboutbcbs.htm) suggerisce $T=5-10$ giorni
+ed $\alpha=99\%$ al fine di definire i margini di capitale necessari
+alle banche quale garanzia sui rischi derivanti dalle loro attività
+di trading. Per un gestore patrimoniale o una cassa pensione invece,
+$T$ potrebbe essere pari ad un anno ed $\alpha=95\%$.
+
+Ci sono almeno tre modi per stimare il VaR:
+\begin{enumerate}
+\item Assumere un modello parametrico dei rendimenti, stimarne i parametri
+ed infine calcolare il VaR.
+\item Utilizzare la simulazione di Monte Carlo.
+\item Utilizzare tecniche non parametriche. 
+\end{enumerate}
+Abbiamo visto il modello lognormale dei rendimenti azionari, ed è
+questo il modello che vogliamo ora analizzare in relazione al VaR.
+
+
+\section{VaR con rendimenti lognormali}
+
+Partendo dalla definizione di una variabile aleatoria lognormale $X$
+è evidente che per caratterizzare la sua distribuzione è necessario
+specificare unicamente valore atteso $\mu$ e varianza $\sigma^{2}$\ di
+$\ln(X)$ (che appunto sappiamo essere normale). Di conseguenza, poiché
+$\mu$ e $\sigma^{2}$ determinano in maniera univoca e completa la
+distribuzione di $X$ essi ne determineranno anche il rischio, e di
+conseguenza il VaR.
+
+Supponiamo quindi che l'azione $S_{T}$ abbia una distribuzione lognormale
+con parametri annuali $(T=1)$ pari a $\left(\mu,\sigma^{2}\right).$
+Questo significa che, indicando con $S_{0}$ il valore iniziale%
+\footnote{Utilizzate la notazione dell'equazione (\ref{claudio}) per dedurre
+che $T=n\Delta t$.%
+}, $\ln\left(S_{T}\right)=\ln\left(S_{0}\right)+T\mu+\sigma\sqrt{T}U$,
+con $U\sim N(0,1)$. $\ln\left(S_{T}\right)$ ha quindi valore atteso
+$\ln\left(S_{0}\right)+T\mu$ e varianza $\sigma^{2}T$. Utilizzando
+la formula per il calcolo del valore atteso di una v.a. lognormale
+otteniamo che \[
+E(S_{T})=\exp\left(\ln\left(S_{0}\right)+T\mu+\frac{\sigma^{2}T}{2}\right)=S_{0}\exp\left((\mu+\frac{\sigma^{2}}{2})T\right).\]
+Notate che $E(S_{T})\neq S_{0}\exp(\mu T)=\exp(E\left[\ln\left(S_{T}\right)\right])$!
+
+\bigskip{}
+
+
+Per quanto riguarda il calcolo del VaR di quest'azione con un orizzonte
+di $T$ anni ad un livello di confidenza del $99\%$: \[
+q_{1\%}=\exp\left(\ln\left(S_{0}\right)+T\mu+\sigma\sqrt{T}G^{-1}(1\%)\right)=S_{0}\exp(T\mu+\sigma\sqrt{T}G^{-1}(1\%)).\]
+Per un'azione $S_{0}=80$ con $\mu=10\%$, $\sigma=30\%$ ed un orizzonte
+temporale pari a $T=1$ avremo un $q_{1\%}\ =44$ e quindi un $VaR(T;99\%)=-(44-80)=36$.
+In percentuale $VaR(T;99\%)=45\%$. Notate che il segno è stato cambiato
+in quanto siamo interessati alla coda sinistra (negativa) della distribuzione.
+L'interpretazione è che 1 anno su 100 la \emph{perdita} sarà superiore
+a 36 fr (superiore al 45\%).
+
+Avremmo pure potuto calcolare il quantile $q_{1\%}$ del rendimento
+e non del valore dell'azione. Infatti, sapendo che \[
+\ln\left(S_{T}/S_{0}\right)=T\mu+\sigma\sqrt{T}U,\]
+sempre con $\mu=10\%$, $\sigma=30\%$ e $T=1$: \[
+q_{1\%}=T\mu+\sigma\sqrt{T}G^{-1}(1\%)=10\%+30\%\cdot(-2.326)=-0.5979\;.\]
+Con una probabilità del $1\%$ il rendimento lognormale sarà inferiore
+o uguale a $-0.5979$. Ora, essendo $S_{T}=S_{0}\exp(r_{T})$ otteniamo
+$S_{T}=80\exp(-0.5979)=44$, che corrisponde ad un $VaR$ del $45\%$
+calcolato come $-100\frac{44-80}{80}$.
+
+
+\section{A Three-Asset Problem}
+
+Nel caso che il portafoglio consista in due o più azioni abbiamo visto
+nell'esercizio 2 della serie 4 che il rendimento logaritmico di un
+portafoglio, $\ln(V_{T}/V_{0})$, è diverso dalla somma pesata dei
+rendimenti logaritmici sulle singole posizioni. Tuttavia, sempre nella
+serie 4, avete dimostrato che \begin{equation}
+\left(V_{T}-V_{0}\right)/V_{0}=\sum\limits _{i=1}^{N}w_{i,0}\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\label{basandoci}\end{equation}
+Facendo uso della (\ref{basandoci}) e del fatto che%
+\footnote{Per $x$ prossimi allo $0$ vale infatti che $\ln(1+x)\simeq x$.%
+} \[
+\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\simeq\ln\left(1+\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\right)=\ln\left(P_{i,T}/P_{i.0}\right)\thicksim N\left(T\mu_{i},\sigma_{i}^{2}T\right)\]
+approssimiamo la distribuzione multivariata dei rendimenti percentuali
+$r_{0,T}$ con la distribuzione normale multivariata dei rendimenti
+logaritmici $\ln\left(P_{T}/P_{0}\right)$.
+
+
+\section{Historical simulation}
+
+Nei paragrafi precedenti abbiamo visto come calcolare il $VaR$ utilizzando
+il modello parametrico lognormale. Tuttavia quando è necessario calcolare
+il $VaR$ di portafogli composti da numerosi strumenti finanziari
+quali ad esempio bonds, derivati, swaps, futures ecc. è necessario
+rivedere l'approccio in quanto, ad esempio, la relazione fra i rendimenti
+su un call e rendimenti sul relativo sottostante non è più lineare.
+Semplificazioni ed ipotesi aggiuntive sono quindi necessarie.
+
+Abbiamo precedentemente visto come simulare variabili aleatorie indipendenti
+aventi la distribuzione desiderata. Una prima possibilità sarebbe
+quindi quella di utilizzare il modello parametrico per simulare la
+distribuzione futura dei prezzi alla data desiderata. In pratica si
+procederebbe a tappe:
+\begin{enumerate}
+\item Utilizzando le osservazioni a disposizione, stimate i parametri del
+modello parametrico
+\item $i=1$;
+\item Utilizzando il modello parametrico e le stime ottenute simula un \emph{rendimento}
+all'orizzonte desiderato.
+\item Tramite il rendimento simulato calcola il prezzo corrispondente.
+\item Calcola il valore totale del portafoglio.
+\item Se $i=1000$ termina, altrimenti $i=i+1$ e torna la punto 3. 
+\end{enumerate}
+Utilizzando la distribuzione empirica delle $1000$ simulazioni calcola
+il quantile desiderato.
+
+Questa metodologia chiamata \textbf{simulazione di Monte Carlo} dipende
+dalla validità del modello parametrico utilizzato.
+
+La simulazione storica (historical simulation) tende a staccarsi da
+un modello parametrico ed utilizza esclusivamente la distribuzione
+empirica dei rendimenti (logaritmici). E' consuetudine utilizzare
+rendimenti giornalieri per eseguire la seguente variante dell'algoritmo
+descritto in precedenza. Supponiamo di avere $N+1$ osservazioni giornaliere
+di prezzi, tassi d'interesse, tassi di cambio... . Allora:
+\begin{enumerate}
+\item $i=1$;
+\item Estraete a caso una delle $N$ date per le quale potete calcolare
+i rendimenti giornalieri.
+\item Prendete tutti i rendimenti corrispondenti alla data estratta e moltiplicateli
+per $\sqrt{T}$, dove $T$ corrisponde alla lunghezza in giorni dell'orizzonte
+temporale per il quale desiderate calcolare il $VaR$.
+\item Con i rendimenti scalati calcolate i prezzi degli strumenti in portafoglio.
+\item Calcola il valore totale del portafoglio.
+\item Se $i=1000$ termina, altrimenti $i=i+1$ e torna la punto 2. 
+\end{enumerate}
+Utilizzando la distribuzione empirica delle $1000$ simulazioni calcolate
+il quantile desiderato.
+
+\newpage{}
+
+\textbf{Osservazione}:
+\begin{enumerate}
+\item Ad ogni ripetizione $i$ è \emph{fondamentale} che tutti i rendimenti
+siano della medesima data. Questo per mantenere la struttura di correlazione
+$\emph{cross-section}$ fra i rendimenti stessi. Quanto è spiegato
+nel capitolo 12.5 di Benninga è sbagliato!
+\item Questa metodologia è chiamata col nome di historical simulation. 
+\end{enumerate}
+
+\end{document}
