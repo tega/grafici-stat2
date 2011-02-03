@@ -55,11 +55,20 @@ x <- seq(-3.5,3.5,length.out = 100)
 y <- dnorm(x)
 
 q975 <- qnorm(0.975)
+q95 <- qnorm(0.95)
 
 Xd <- seq(q975,-1.5,length.out=30)
 Yd<- dnorm(Xd,mean=2)
 Xd <- c(q975,Xd,Xd[30])
 Yd <- c(0,Yd,0)
+
+Xd1 <- seq(q95,q975,length.out=30)
+Yd1<- dnorm(Xd1,mean=2)
+Xd1 <- c(q95,Xd1,Xd1[30])
+Yd1 <- c(0,Yd1,0)
+
+Xd <- c(Xd,NA,Xd1)
+Yd <- c(Yd,NA,Yd1)
 
 #Xd <- c(Xd,NA,q975,seq(q975,3.5,length.out=30),seq(q975,3.5,length.out=30)[30])
 #Yd <- c(Yd,NA,0,dnorm(seq(q975,3.5,length.out=30)),0)
@@ -69,7 +78,7 @@ y <- dnorm(x,mean=0,sd=1)
 
 
 plot(x,y,xlab=expression(mu==0),type="l",ylab=expression(f(x)),
-		panel.first=polygon(Xd,Yd,col="coral",border = NA),
+		panel.first=polygon(Xd,Yd,col=c("coral","yellowgreen"),border = NA),
 		las=1,axes=FALSE,xlim=c(-5,5),ylim=c(0,0.4))
 
 
@@ -90,5 +99,6 @@ text(0.2, 0.025, expression(1-beta),pos=4,cex = 1.2)
 text(2.15, 0.02, expression(alpha),cex = 1)
 text(2, -0.007, expression(k[paste(2.5,symbol("%"))]),cex = 1)
 
+lines(c(q95,q95),c(0,dnorm(q95,mean=2,sd=1)),lty=3)
 
 dev.off()
