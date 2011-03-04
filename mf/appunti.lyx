@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -103,28 +103,24 @@ La raccolta e l'archiviazione di dati è un tema estremamente importante
  in finanza.
  Pensate semplicemente ad una banca che offre un servizio di gestione patrimonia
 le.
- Essa deve essere in grado di 
+ Essa deve, tra le altre cose, essere in grado di 
 \end_layout
 
 \begin_layout Itemize
-calcolare il valore (odierno e passato) dei portafogli in deposito, 
+calcolare il valore (attuale e passato) dei portafogli in deposito, 
 \end_layout
 
 \begin_layout Itemize
 valutare il rischio associato alle singole posizioni assunte sui vari mercati
  finanziari (azionario, dei cambi, reddito fisso, derivati, ecc.) ed in aggregato.
- 
 \end_layout
 
 \begin_layout Standard
 \noindent
 A tale scopo la banca (il discorso è tuttavia generalizzabile a qualsiasi
  operatore finanziario) deve conoscere la composizione attuale e passata
- di un portafoglio (le quantità)
-\begin_inset space \space{}
-\end_inset
-
-nonché i prezzi correnti e passati degli strumenti in esso contenuti.
+ di un portafoglio (le quantità) nonché i prezzi d'acquisto e/o vendita,
+ i prezzi correnti e i prezzi passati di tutti gli strumenti in esso contenuti.
  Con il costante aumento della potenza di calcolo disponibile e grazie 
 \end_layout
 
@@ -133,7 +129,7 @@ all'avvento di internet
 \end_layout
 
 \begin_layout Itemize
-al diffondersi di database relazionali 
+al diffondersi di database relazionali (vedi informatica I eII)
 \end_layout
 
 \begin_layout Standard
@@ -183,8 +179,8 @@ Formazione di aspettative
 
 \begin_layout Enumerate
 affidabile: il flusso di dati non deve essere interrotto (applicazioni di
- borsa real time), la qualità deve essere impeccabile (i dati non possono
- contenere errori), 
+ borsa real time), la qualità deve essere impeccabile (i dati non devono
+ e non possono contenere errori), 
 \end_layout
 
 \begin_layout Enumerate
@@ -193,11 +189,8 @@ efficace: i dati devono arrivare per tempo e poter essere elaborati facilmente,
 \end_layout
 
 \begin_layout Enumerate
-economica:
-\begin_inset space \space{}
-\end_inset
-
-i costi devono essere tali da non pregiudicare l'attività 
+economica: i costi devono essere tali da non pregiudicare l'attività (la
+ redditività del business) 
 \end_layout
 
 \begin_layout Standard
@@ -222,11 +215,7 @@ Datastream (www.thomsonreuters.com/business_units/financial/)
 \end_layout
 
 \begin_layout Itemize
-Telekurs
-\begin_inset space \space{}
-\end_inset
-
-(www.telekurs.com) 
+Telekurs (www.telekurs.com) 
 \end_layout
 
 \begin_layout Itemize
@@ -269,14 +258,10 @@ Altri ...
 \begin_layout Standard
 \noindent
 Qui all'Università della Svizzera italiana abbiamo a disposizione due importanti
- fonti dati:
-\begin_inset space \space{}
-\end_inset
-
-Datastream, che sarà oggetto di approfondimento nel corso di questo capitolo
- e l'applicazione Reuters 3000 Xtra (un grazie all'associazione Finance
- Floor USI ( www.people.lu.unisi.ch/financefloor/ ) senza la quale l'applicazione
- non sarebbe disponibile).
+ fonti di dati finanziari: Datastream, che sarà oggetto di approfondimento
+ nel corso di questo capitolo e l'applicazione Reuters 3000 Xtra (un grazie
+ all'associazione Finance Floor USI ( www.people.lu.unisi.ch/financefloor/ )
+ senza la quale l'applicazione non sarebbe disponibile).
 \end_layout
 
 \begin_layout Standard
@@ -354,10 +339,7 @@ Quando cerchiamo i dati di un qualsiasi prodotto o strumento finanziario
  Per identificativo intendiamo un sequenza alfanumerica che identifica l'emissio
 ne di ogni strumento finanziario in maniera univoca.
  Purtroppo non esiste uno standard unico: ogni borsa ed ogni data provider
-\begin_inset space \space{}
-\end_inset
-
-ha la propria metodologia di classificazione.
+ ha la propria metodologia di classificazione.
  Noi studieremo in dettaglio Datastream.
  Tuttavia è utile osservare quanto segue: 
 \end_layout
@@ -373,15 +355,7 @@ ISIN
 
 \begin_deeper
 \begin_layout Standard
-ISIN
-\begin_inset space \space{}
-\end_inset
-
-=
-\begin_inset space \space{}
-\end_inset
-
-International Securites Identification Number.
+ISIN = International Securites Identification Number.
  An ISO coding system that uniquely identifies a specific securities issue.
  The organization that allocates ISINs in any particular country is the
  National Numbering Agency (NNA).
@@ -394,15 +368,7 @@ SEDOL
 
 \begin_deeper
 \begin_layout Standard
-SEDOL
-\begin_inset space \space{}
-\end_inset
-
-=
-\begin_inset space \space{}
-\end_inset
-
-Stock Exchange Daily Official List.
+SEDOL = Stock Exchange Daily Official List.
  The stock code used to identify all securities issued in the UK or Eire.
  It is the basis of the ISIN code for UK securities, and is composed of
  a 7-digit number allocated by the master file service of the London Stock
@@ -419,11 +385,8 @@ Conoscere uno di questi due identificativi è particolarmente utile poiché,
 
 \end_deeper
 \begin_layout Enumerate
-In Svizzera è ancora molto utilizzato il numero di valore (in tedesco:
-\begin_inset space \space{}
-\end_inset
-
-Valorennummer).
+In Svizzera è ancora molto utilizzato il numero di valore (in tedesco: Valorennu
+mmer).
  Tuttavia il codice ISIN sembra lentamente ma inesorabilmente avere il sopravven
 to.
  
@@ -558,17 +521,11 @@ Datastream
 
 \begin_deeper
 \begin_layout Standard
-Il codice alfanumerico ISIN
-\begin_inset space \space{}
-\end_inset
-
-può essere d'aiuto nella ricerca dell'azione desiderata.
- Datastream infatti contiene questo codice nel suo ”mnemonic”
-\begin_inset space \space{}
-\end_inset
-
-(è questo il nome del codice interno a Datastream che identifica univocamente
- ogni singola serie).
+Il codice alfanumerico ISIN può essere d'aiuto nella ricerca dell'azione
+ desiderata.
+ Datastream infatti contiene questo codice nel suo ”mnemonic” (è questo
+ il nome del codice interno a Datastream che identifica univocamente ogni
+ singola serie).
 \end_layout
 
 \begin_layout Standard
@@ -582,11 +539,7 @@ I:ASR”.
 \begin_inset Quotes eld
 \end_inset
 
-KO”
-\begin_inset space \space{}
-\end_inset
-
-e Datastream ha quale mnemonic 
+KO” e Datastream ha quale mnemonic 
 \begin_inset Quotes eld
 \end_inset
 
@@ -652,8 +605,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
-	filename datastream.eps
+	filename datastream.bmp
 	width 8.055cm
 	height 6.6821cm
 
@@ -663,7 +618,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
+Datastream Advance
 \end_layout
 
 \end_inset
@@ -677,11 +632,8 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-Aprire Datastream Advance e selezionare il foglio ”Request”
-\begin_inset space \space{}
-\end_inset
-
-(selezionare la prima etichetta in fondo alla pagina).
+Aprire Datastream Advance e selezionare il foglio ”Request” (selezionare
+ la prima etichetta in fondo alla pagina).
  
 \end_layout
 
@@ -907,11 +859,8 @@ Run Now
 .
  I risultati della ricerca sono visualizzati nel riquadro superiore sinistro.
  Se la ricerca è stata fruttuosa, potete esportare i dati in un foglio excel
- premendo il bottone con il simbolo di excel nella ”Toolbar”
-\begin_inset space \space{}
-\end_inset
-
-proprio sotto i menu a cascata.
+ premendo il bottone con il simbolo di excel nella ”Toolbar” proprio sotto
+ i menu a cascata.
  
 \begin_inset Float figure
 wide false
@@ -919,29 +868,25 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-includegraphics[width=9.63cm,height=7.4971cm]
-\begin_inset ERT
-status collapsed
+\begin_inset Graphics
+	filename datastricerca.bmp
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
 
 \begin_layout Plain Layout
 
-{
 \end_layout
 
 \end_inset
 
-datastricerca
-\begin_inset ERT
-status collapsed
 
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
 \end_layout
 
 \end_inset
@@ -954,11 +899,7 @@ status collapsed
 \end_inset
 
  Datastream associa a ciascuna classe di strumenti finanziari (azioni, indici
- azionari, bonds, ...)
-\begin_inset space \space{}
-\end_inset
-
-più di un tipo di serie storica scaricabile.
+ azionari, bonds, ...) più di un tipo di serie storica scaricabile.
  I tipi di dati disponibili variano a seconda della classe di strumenti.
  Ad esempio, il tipo di default per la classe equity è il ”Price (Adjusted)”.
  Cliccando alla sua destra il bottone con la scritta Dt (
@@ -981,10 +922,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
-	filename datatypes.eps
+	filename datatypes.bmp
 	width 10.1945cm
 	height 8.3362cm
+	keepAspectRatio
 
 \end_inset
 
@@ -1079,12 +1023,8 @@ reference "figura request table"
  inoltre la possibilità di scaricare le serie storiche direttamente in un
  file Excel, senza dover passare dall'applicazione Datastream Advance.
  Due sono i principali vantaggi di un simile approccio.
- Da un lato è
-\begin_inset space \space{}
-\end_inset
-
-possibile scaricare simultaneamente più di una serie storica e di un tipo
- di dato.
+ Da un lato è possibile scaricare simultaneamente più di una serie storica
+ e di un tipo di dato.
  Secondariamente l'aggiornamento di serie già scaricate richiede pochi passi
  ed un eventuale ulteriore elaborazione può essere automatizzata utilizzando
  la grande flessibilità di VBA (Visual Basic for Applications).
@@ -1241,10 +1181,13 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
-	filename requestTable.eps
+	filename requestTable.bmp
 	width 5.3394in
 	height 1.8239in
+	keepAspectRatio
 
 \end_inset
 
@@ -1451,17 +1394,17 @@ name "esempio1 benninga"
 
 \end_inset
 
-Nell'esempio a pagina 131 di Benninga troviamo 
+Nell'esempio a pagina 240 di Benninga troviamo 
 \begin_inset Formula $N=2$
 \end_inset
 
  titoli (azioni in questo caso) con i relativi prezzi.
  Gli 
-\begin_inset Formula $n=13$
+\begin_inset Formula $n=61$
 \end_inset
 
  periodi riportati sono 
-\begin_inset Formula $t=0,\ ...,12$
+\begin_inset Formula $t="2001-07-05",\ ...,"2006-07-03"$
 \end_inset
 
 .
@@ -1486,9 +1429,9 @@ esima riga conterrà i prezzi osservati di tutti gli
  mentre la prima (seconda ...) colonna conterrà tutte le osservazioni del primo
  (secondo ...) titolo.
  Nell'esempio di Benninga la prima colonna (colonna 
-\begin_inset Formula $A$
-\end_inset
-
+\series bold
+Date
+\series default
 ) contiene l'indice temporale
 \begin_inset Foot
 status collapsed
@@ -1517,22 +1460,42 @@ Notiamo che la frequenza con cui vengono osservati i prezzi è il mese.
 \end_layout
 
 \begin_layout Standard
-\begin_inset space \hfill{}
-\end_inset
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename tabellaDatiBenninga.jpeg
+	scale 60
 
-\begin_inset Formula $\square$
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-5.4938cm - 5.7837cm Esempio con 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Esempio con 
 \begin_inset Formula $N=2$
 \end_inset
 
- titoli, Benninga Chapter 07.xls 'KHMFPJ00.wmf' 
+ titoli, Benninga Capitolo 8.2 .
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -1688,11 +1651,11 @@ prezzo”) del portafoglio al tempo
 .
  Formalmente abbiamo
 \begin_inset Formula \[
-w_{it}=\frac{q_{it}P_{it}}{P_{pt}}~.\]
+w_{it}=\frac{q_{it}P_{it}}{P_{pt}}\;.\]
 
 \end_inset
 
- Poiché sono permesse vendite allo scoperto (short selling), 
+Poiché sono permesse vendite allo scoperto (short selling), 
 \begin_inset Formula $w_{it}$
 \end_inset
 
@@ -1979,12 +1942,12 @@ end{remark}
 \end_inset
 
  deve comprendere tutti i dividendi versati nel periodo (alcune azioni pagano
- dividendi a scadenza semestrale o addirittura trimestrale).
+ dividendi a frequenza semestrale o addirittura trimestrale).
  Se il periodo è particolarmente lungo occorre tener conto del fatto che
  il dividendo è reinvestito.
  Questo comporta un aumento del numero di azioni che, a sua volta, va ad
  incidere sul calcolo del rendimento per il periodo successivo (si veda
- l'esempio numerico a pagina 147 di Benninga).
+ l'esempio numerico a pagina 256 di Benninga).
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -2005,7 +1968,7 @@ begin{esempio}
 \end_inset
 
  Continuando con l'esempio precedente (vedi pag.
- 132 di Benninga) possiamo calcolare i 
+ 240 di Benninga) possiamo calcolare i 
 \begin_inset Formula $12$
 \end_inset
 
