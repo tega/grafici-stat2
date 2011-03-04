@@ -131,7 +131,7 @@ ti in 2 gruppi:
 la matrice delle variabili esplicative
 \begin_inset Formula \[
 X=\left[\begin{tabular}{l|l}
- \ensuremath{\underset{\left(n\times K_{1}\right)}{X_{1}}}  &  \ensuremath{\underset{\left(n\times K_{2}\right)}{X_{2}}}\end{tabular}\right]\]
+ \ensuremath{\underset{\left(n\times K_{1}\right)}{X_{1}}} &  \ensuremath{\underset{\left(n\times K_{2}\right)}{X_{2}}}\end{tabular}\right]\]
 
 \end_inset
 
@@ -337,8 +337,8 @@ soltanto che essa è formata a partire da
  si dimostra facilmente che
 \begin_inset Formula \[
 \begin{tabular}{l}
- \ensuremath{\bullet\ M_{1}^{\prime}=M_{1}} e \ensuremath{M_{1}M_{1}=M_{1}\text{ (è simmetrica e idempotente)}} \\
-\ensuremath{\bullet\ rg(M_{1})=tr(M_{1})=n-K_{1}} \\
+ \ensuremath{\bullet\ M_{1}^{\prime}=M_{1}}e \ensuremath{M_{1}M_{1}=M_{1}\text{ (è simmetrica e idempotente)}}\\
+\ensuremath{\bullet\ rg(M_{1})=tr(M_{1})=n-K_{1}}\\
 \ensuremath{\bullet\ M_{1}X_{1}=0}\end{tabular}\]
 
 \end_inset
@@ -367,11 +367,7 @@ Quando la matrice
 status open
 
 \begin_layout Plain Layout
-Dimostrazione:
-\begin_inset space \space{}
-\end_inset
-
-Supponiamo che 
+Dimostrazione: Supponiamo che 
 \begin_inset Formula $rg(X_{2}^{\prime}M_{1}X_{2})<K_{2}$
 \end_inset
 
@@ -391,14 +387,14 @@ X_{2}^{\prime}M_{1}X_{2}z=0.\]
 \end_inset
 
 Premoltiplicando la seguente uguaglianza per 
-\begin_inset Formula $y^{\ast\prime}$
+\begin_inset Formula $z^{\prime}$
 \end_inset
 
- otteniamo una, utilizzando la proprietà di idempotenza di 
+ ed utilizzando la proprietà di idempotenza di 
 \begin_inset Formula $M_{1}$
 \end_inset
 
-, la seguente forma quadratica
+, otteniamo la seguente forma quadratica
 \begin_inset Formula \begin{eqnarray*}
 \underset{\widetilde{z}^{\prime}}{\underbrace{z^{\prime}X_{2}^{\prime}M_{1}}}\underset{\widetilde{z}}{\ \underbrace{M_{1}X_{2}z}} & = & 0\\
 \widetilde{z}^{\prime}\widetilde{z} & = & 0\end{eqnarray*}
@@ -442,21 +438,6 @@ X\ y^{\ast} & = & 0\end{eqnarray*}
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -864,7 +845,7 @@ La stessa interpretazione vale per ogni colonna di
 :
 \begin_inset Formula \[
 M_{1}X_{2}=\left[\begin{tabular}{l|l|l|l}
- \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,1}}  &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,2}}  &  \ensuremath{\ldots}  &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,K_{2}}}\end{tabular}\right]\]
+ \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,1}} &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,2}} &  \ensuremath{\ldots} &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,K_{2}}}\end{tabular}\right]\]
 
 \end_inset
 
@@ -4045,7 +4026,7 @@ Come sarà quindi la matrice
 \begin_layout Standard
 \begin_inset Formula \[
 P(\rho)=\left[\begin{array}{ccccc}
-\\\\\\\end{array}\right]\]
+\\\\\end{array}\right]\]
 
 \end_inset
 
@@ -8891,7 +8872,8 @@ Se a torto utilizzassimo la formula per la varianza di
 
 \begin_layout Standard
 \begin_inset Formula \begin{eqnarray*}
-Var(\widehat{\alpha}) & = & \frac{\widehat{\sigma}^{2}}{\sum y_{t-1}^{2}},\\ \widehat{\sigma}^{2}=\frac{1}{n-1}\sum\widehat{\varepsilon}_{t}^{2}=\frac{1}{n-1}\sum\left(y_{t}-\widehat{\alpha}y_{t-1}\right)^{2}\\
+Var(\widehat{\alpha}) & = & \frac{\widehat{\sigma}^{2}}{\sum y_{t-1}^{2}},\\
+\widehat{\sigma}^{2}=\frac{1}{n-1}\sum\widehat{\varepsilon}_{t}^{2}=\frac{1}{n-1}\sum\left(y_{t}-\widehat{\alpha}y_{t-1}\right)^{2}\\
 Var(\widehat{\alpha}) & \simeq & \frac{\frac{1}{n}\sum\left(y_{t}^{2}-2\widehat{\alpha}y_{t}y_{t-1}+\widehat{\alpha}^{2}y_{t-1}^{2}\right)}{\sum y_{t-1}^{2}}\\
  & = & \frac{1}{n}\frac{\sum y_{t}^{2}-\widehat{\alpha}\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}\simeq\frac{1}{n}\left(1-\widehat{\alpha}^{2}\right)\end{eqnarray*}
 
@@ -10912,7 +10894,8 @@ dipende da soli 3 parametri:
 
 .
 \begin_inset Formula \begin{eqnarray*}
-y_{t-1} & = & a+b_{0}x_{t-1}+b_{0}cx_{t-2}+b_{0}c^{2}x_{t-3}+\ldots\ \ \ \ \ \\ \ \mid\cdot c\\
+y_{t-1} & = & a+b_{0}x_{t-1}+b_{0}cx_{t-2}+b_{0}c^{2}x_{t-3}+\ldots\ \ \ \ \ \\
+\ \mid\cdot c\\
 y_{t}-cy_{t-1} & = & a(1-c)+b_{0}c\end{eqnarray*}
 
 \end_inset
@@ -11312,7 +11295,8 @@ la forma canonica
 
  in quanto 
 \begin_inset Formula \begin{eqnarray*}
-\alpha(L)_{r}a & = & \left(1+\alpha_{1}L+\ldots+\alpha_{r}L^{r}\right)a\\ \ \ \ \ \ \text{con }La=a\\
+\alpha(L)_{r}a & = & \left(1+\alpha_{1}L+\ldots+\alpha_{r}L^{r}\right)a\\
+\ \ \ \ \ \text{con }La=a\\
  & = & \left(1+\alpha_{1}+\ldots+\alpha_{r}\right)a\\
  & = & \alpha(1)_{r}a\ .\end{eqnarray*}
 
@@ -12596,6 +12580,7 @@ Due serie non stazionarie possono ammettere una relazione stabile di lungo
 status open
 
 \begin_layout Plain Layout
+
 
 \backslash
 begin{definizione}
