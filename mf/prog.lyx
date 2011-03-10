@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -47,6 +47,7 @@
 \paperpagestyle empty
 \tracking_changes false
 \output_changes false
+\author "" 
 \author "" 
 \end_header
 
@@ -253,8 +254,8 @@ status collapsed
 \begin_layout Enumerate
 
 \shape smallcaps
-B.
- Chapter 7: Portfolio Models - Introduction
+Portfolio Models - Introduction (B.
+ chapter 8)
 \end_layout
 
 \begin_deeper
@@ -624,8 +625,8 @@ status collapsed
 \begin_layout Enumerate
 
 \shape smallcaps
-B.
- Chapter 8: Calculating the Variance-Covariance Matrix
+Calculating the Variance-Covariance Matrix (B.
+ Chapter 10)
 \end_layout
 
 \begin_deeper
@@ -715,9 +716,8 @@ status collapsed
 \begin_layout Enumerate
 
 \shape smallcaps
-B.
- Chapter 10: Calculating Efficient Portfolios When are No Short-Sale Restriction
-s
+Calculating Efficient Portfolios When are No Short-Sale Restrictions (B.
+ Chapter 9)
 \end_layout
 
 \begin_deeper
@@ -800,8 +800,8 @@ status collapsed
 \begin_layout Enumerate
 
 \shape smallcaps
-B.
- Chapter 15: The Lognormal Distribution
+The Lognormal Distribution (B.
+ Chapter 18)
 \end_layout
 
 \begin_deeper
@@ -909,8 +909,8 @@ status collapsed
 \begin_layout Enumerate
 
 \shape smallcaps
-B.
- Chapter 12: Value at Risk (VaR)
+Value at Risk (VaR) [B.
+ Chapter 15]
 \end_layout
 
 \begin_deeper

@@ -577,25 +577,9 @@ ospite_datastream”, mentre la password è:
 \end_inset
 
 datastream”.
- Per lanciare il programma andate come d'abitudine nel menu Start -> Programs
- -> Datastream Advance -> Advance 4.0.
- Per scaricare dati da Datastream è necessario procedere come segue
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Si guardi anche il tutorial presente in 
-\begin_inset Formula \[
-\text{{\small\ensuremath{\backslash\backslash}usi\ensuremath{\backslash}dfs\ensuremath{\backslash}Corsi\ensuremath{\backslash}Facoltà\ di\ Economia\ensuremath{\backslash}Econometria\ensuremath{\backslash}MetodiQuantitativiFinanza2010\ensuremath{\backslash}datastream}}\]
-
-\end_inset
-
- o l'immagine della maschera principale del programma.
-\end_layout
-
-\end_inset
-
-:
+ Per lanciare il programma andate come d'abitudine nel menu Start -> All
+ Programs -> Datastream -> Datastream 5.1.
+ Per scaricare dati da Datastream è necessario procedere come segue:
 \end_layout
 
 \begin_layout Standard
@@ -609,16 +593,15 @@ status open
 \align center
 \begin_inset Graphics
 	filename datastream.bmp
-	width 8.055cm
-	height 6.6821cm
+	scale 20
 
 \end_inset
 
- 
+
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Datastream Advance
+L'applicativo Datastream.
 \end_layout
 
 \end_inset
@@ -868,6 +851,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename datastricerca.bmp
 	scale 60
@@ -881,7 +865,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
+Criteri di ricerca di un titolo azionario.
 \end_layout
 
 \end_inset
@@ -936,7 +920,15 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+Selezione dei 
+\begin_inset Quotes eld
+\end_inset
 
+datatypes
+\begin_inset Quotes erd
+\end_inset
+
+ azionari.
 \end_layout
 
 \end_inset
@@ -1195,7 +1187,7 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
+Request table in Excel.
 \end_layout
 
 \end_inset
