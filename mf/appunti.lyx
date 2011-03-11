@@ -6,7 +6,6 @@
 \begin_preamble
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amsthm}\usepackage{multicol}
-
 \setcounter{MaxMatrixCols}{10}%TCIDATA{OutputFilter=LATEX.DLL}
 %TCIDATA{Version=5.50.0.2953}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
@@ -184,8 +183,8 @@ affidabile: il flusso di dati non deve essere interrotto (applicazioni di
 \end_layout
 
 \begin_layout Enumerate
-efficace: i dati devono arrivare per tempo e poter essere elaborati facilmente,
- 
+efficace: i dati devono arrivare in tempo utile e poter essere elaborati
+ facilmente, 
 \end_layout
 
 \begin_layout Enumerate
@@ -203,44 +202,113 @@ tutte le informazioni desiderate.
 \end_layout
 
 \begin_layout Itemize
-Reuters (www.reuters.com) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Reuters"
+target "www.reuters.com"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Bloomberg (www.bloomberg.com) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Bloomberg"
+target "http://www.bloomberg.com"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
-Datastream (www.thomsonreuters.com/business_units/financial/) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Datastream"
+target "http://www.thomsonreuters.com/business_units/financial/"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
-Telekurs (www.telekurs.com) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Telekurs"
+target "http://www.telekurs.com"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Infotec (www.infotecnet.com) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Infotec"
+target "http://www.infotecnet.com"
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
-Fides (www.vwdgroup.ch/fides/markt.htm) 
+\begin_inset CommandInset href
+LatexCommand href
+name "VWD group"
+target "http://www.vwdgroup.ch/schweiz"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Yahoo (http://finance.yahoo.com/) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Yahoo finance"
+target "http://finance.yahoo.com/"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Swiss Exchange (http://www.swxeurope.com/index.html e www.six-swiss-exchange.com/inde
-x.html) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Swiss Exchange"
+target "www.six-swiss-exchange.com/index.html"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Swissquote (www.swissquote.ch) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Swissquote"
+target "http://www.swissquote.ch"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
-Google (www.google.com/finance?hl=en&tab=we) 
+\begin_inset CommandInset href
+LatexCommand href
+name "Google finance"
+target "http://www.google.com/finance?hl=en&tab=we"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -260,7 +328,14 @@ Altri ...
 Qui all'Università della Svizzera italiana abbiamo a disposizione due importanti
  fonti di dati finanziari: Datastream, che sarà oggetto di approfondimento
  nel corso di questo capitolo e l'applicazione Reuters 3000 Xtra (un grazie
- all'associazione Finance Floor USI ( www.people.lu.unisi.ch/financefloor/ )
+ all'associazione 
+\begin_inset CommandInset href
+LatexCommand href
+name "Finance Floor USI"
+target "www.people.lu.unisi.ch/financefloor/"
+
+\end_inset
+
  senza la quale l'applicazione non sarebbe disponibile).
 \end_layout
 
@@ -401,58 +476,63 @@ Talvolta è necessario verificare attentamente che i dati raccolti corrispondano
  se non si presta la massima attenzione all'origine dei dati.
  In caso di dubbio e quando ciò è possibile andate a verificare e/o cercare
  direttamente nelle varie borse gli identificativi appropriati.
- All'indirizzo 
-\begin_inset Formula \[
-\emph{http://www.tdd.lt/slnews/Stock\_Exchanges/Stock.Exchanges.html}\]
+ Su 
+\begin_inset CommandInset href
+LatexCommand href
+name "Wikipedia"
+target "http://en.wikipedia.org/wiki/List_of_stock_exchanges"
 
 \end_inset
 
- oppure
-\begin_inset Formula \[
-\emph{http://en.wikipedia.org/wiki/List\_of\_stock\_exchanges}\]
-
-\end_inset
-
- troverete i collegamenti alle principali piazze finanziarie, raggruppate
+ trovate i collegamenti alle principali piazze finanziarie, raggruppate
  per area geografica.
  Fra queste scegliamo quattro esempi:
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-Mercato svizzero
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
 
 \emph on
-http://www.swx.com/index_en.html
-\emph default
- e poi
+\begin_inset CommandInset href
+LatexCommand href
+name "Mercato svizzero"
+target "http://www.swx.com/index_en.html"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-Market data (http://www.swx.com/market_en.html) ...
- Equities -> Quotes
+Seguite poi 
+\begin_inset CommandInset href
+LatexCommand href
+name "Shares"
+target "http://www.six-swiss-exchange.com/shares/overview_en.html"
+
+\end_inset
+
+ ...
+ Company -> List of Companies
 \end_layout
 
 \begin_layout Standard
--> ABB LTD N [VN: ...
+-> ABB LTD -> Share details [VN: ...
  ISIN: CH0012221716 ...
- Currency: ...]
+ Trading currency: ...]
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
-Mercato svedese
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
 
 \emph on
-http://omxgroup.com/nordicexchange/
+\begin_inset CommandInset href
+LatexCommand href
+name "Mercato svedese"
+target "http://omxgroup.com/nordicexchange/"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -461,46 +541,52 @@ Cercate ABB e controllate il codice ISIN e la moneta in cui è quotata l'azione.
  CH0012221716) è quotata in valuta diversa!
 \end_layout
 
-\end_deeper
 \begin_layout Itemize
-Mercato inglese
+
+\emph on
+\begin_inset CommandInset href
+LatexCommand href
+name "Mercato inglese"
+target "http://www.londonstockexchange.com"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+\begin_inset CommandInset href
+LatexCommand href
+name "Mercato italiano"
+target "http://www.borsaitalia.it/homepage/homepage.htm"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-
-\emph on
-http://www.londonstockexchange.com
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Mercato italiano
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-
-\emph on
-http://www.borsaitalia.it/homepage/homepage.htm
-\end_layout
-
 \begin_layout Standard
 -> Quotazioni -> Cerca Strumento -> Azioni -> Roma -> ISIN: IT0001008876
 \end_layout
 
 \end_deeper
 \begin_layout Itemize
-Titoli azionari americani
+
+\emph on
+\begin_inset CommandInset href
+LatexCommand href
+name "Titoli azionari americani"
+target "http://www.nyse.com/"
+
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-
-\emph on
-http://www.nyse.com/
-\end_layout
-
 \begin_layout Standard
 -> SYMBOL LOOKUP (The Coca-Cola Company)
 \end_layout
@@ -510,7 +596,14 @@ Symbol: KO
 \end_layout
 
 \begin_layout Standard
-Website: http://www.coca-cola.com
+\begin_inset CommandInset href
+LatexCommand href
+name "Website Coca Cola"
+target "http://www.coca-cola.com"
+
+\end_inset
+
+: http://www.coca-cola.com
 \end_layout
 
 \end_deeper
@@ -615,18 +708,28 @@ L'applicativo Datastream.
 \end_layout
 
 \begin_layout Enumerate
-Aprire Datastream Advance e selezionare il foglio ”Request” (selezionare
- la prima etichetta in fondo alla pagina).
+Aprire Datastream Advance e selezionare da ”Data category” il tipo di strumento
+ per cui si desidera ottenere la serie storica.
  
 \end_layout
 
 \begin_layout Enumerate
-Nel riquadro superiore destro selezionare l'etichetta con il simbolo simile
- ad una tabella (quarta etichetta).
- Il nome del campo è 
-\emph on
-Data for a single series
-\emph default
+Nel riquadro inferiore sinistro 
+\begin_inset Quotes eld
+\end_inset
+
+Analysis
+\begin_inset Quotes erd
+\end_inset
+
+ selezionare 
+\begin_inset Quotes eld
+\end_inset
+
+Single Series - Data
+\begin_inset Quotes erd
+\end_inset
+
 .
  Selezionare 
 \emph on
@@ -637,7 +740,52 @@ Time Series Data
 \end_layout
 
 \begin_layout Enumerate
-Sempre nel medesimo riquadro premere il bottone 
+Nella parte superiore centrale della finestra di Datastream se conoscete
+ il codice SEDOL o quello ISIN inseritelo direttamente nel campo 
+\emph on
+Series
+\emph default
+ dopo aver attivato il Chekbox denominato 
+\emph on
+Expert entry
+\emph default
+.
+\end_layout
+
+\begin_layout Enumerate
+Nel caso in cui non si conoscano né il codice ISIN, nè il codice SEDOL e
+ neppure il 
+\emph on
+mnemonic
+\emph default
+ Datastream, quale aiuto alla ricerca è possibile definire dei filtri.
+ I criteri dipendono dalla categoria in cui si effettua la ricerca.
+ Per esempio, i criteri disponibili per la categoria Equity sono diversi
+ da quelli della categoria Economics.
+ Per eseguire una ricerca cliccare il bottone 
+\begin_inset Quotes eld
+\end_inset
+
+Find series
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Selezionate il periodo per il quale desiderate scaricare i dati (bottone
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Time period
+\begin_inset Quotes erd
+\end_inset
+
+ oppure cliccando sul checkbox corrispondente).
+ Sempre nel medesimo riquadro ma più a destra premere il bottone 
 \emph on
 Settings...
  
@@ -649,188 +797,13 @@ Settings...
 \end_layout
 
 \begin_layout Enumerate
-Nel riquadro inferiore destro selezionare il periodo per il quale si vogliono
- scaricare i dati.
- 
-\end_layout
-
-\begin_layout Enumerate
 Selezionare la valuta.
  
 \emph on
 Local currency
 \emph default
- significa che verrà utilizzata la valuta indicata nel campo 
-\emph on
-Currency 
-\emph default
-della tabella che appare nella fase di ricerca.
- La fase di ricerca è attivata cliccando il bottone con la freccia rossa
- verso destra, presente nel riquadro inferiore sinistro.
- 
-\end_layout
-
-\begin_layout Enumerate
-Nel riquadro inferiore sinistro selezionare l'etichetta 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-
-\series bold
-Category
-\series default
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
- indicante la categoria di prodotti desiderata:
-\begin_inset space \space{}
-\end_inset
-
-Equity, Index, Constituents, ecc.
- .
- 
-\end_layout
-
-\begin_layout Enumerate
-Se conoscete il codice SEDOL
-\begin_inset space \space{}
-\end_inset
-
-o quello ISIN
-\begin_inset space \space{}
-\end_inset
-
-inseritelo direttamente nel campo 
-\emph on
-Series
-\emph default
- dopo aver attivato il Chekbox denominato 
-\emph on
-Expert entry
-\emph default
- ed andate direttamente al punto 9.
- Altrimenti utilizzate la ricerca per nome selezionando l'etichetta corrisponden
-te del campo 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-Search by:
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-textquotedbl
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
- e scegliendo il tipo di ricerca (
-\begin_inset Formula $\emph{Starts}$
-\end_inset
-
- 
-\begin_inset Formula $\emph{with}$
-\end_inset
-
- o 
-\emph on
-Contains
-\emph default
-).
- 
-\end_layout
-
-\begin_layout Enumerate
-Nel casa in cui non si conoscano né il codice ISIN, nè il codice SEDOL
-\begin_inset space \space{}
-\end_inset
-
-e neppure il 
-\emph on
-mnemonic
-\emph default
- Datastream Quale aiuto alla ricerca è possibile definire dei filtri.
- I criteri dipendono dalla categoria in cui si effettua la ricerca.
- Per esempio, i criteri disponibili per la categoria Equity sono diversi
- da quelli della categoria Economics.
- Per eseguire una ricerca cliccare il bottone con la freccia rossa verso
- destra, presente nel riquadro inferiore sinistro.
- 
+ significa che verrà utilizzata la valuta propria del paese (stock exchange)
+ in cui è scambiato il titolo.
 \end_layout
 
 \begin_layout Enumerate
@@ -840,112 +813,41 @@ Una volta che la serie desiderata è stata individuata, premere il bottone
 Run Now
 \emph default
 .
- I risultati della ricerca sono visualizzati nel riquadro superiore sinistro.
+ I risultati della ricerca sono visualizzati nel riquadro inferiore centrale.
  Se la ricerca è stata fruttuosa, potete esportare i dati in un foglio excel
  premendo il bottone con il simbolo di excel nella ”Toolbar” proprio sotto
  i menu a cascata.
  
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename datastricerca.bmp
-	scale 60
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Criteri di ricerca di un titolo azionario.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
- Datastream associa a ciascuna classe di strumenti finanziari (azioni, indici
- azionari, bonds, ...) più di un tipo di serie storica scaricabile.
- I tipi di dati disponibili variano a seconda della classe di strumenti.
- Ad esempio, il tipo di default per la classe equity è il ”Price (Adjusted)”.
- Cliccando alla sua destra il bottone con la scritta Dt (
-\emph on
-Data type
-\emph default
-) si ottiene la lista dei tipi disponibili.
- Ad ogni tipo è associato un codice.
- Il ”Price (Adjusted - Default)”
-\begin_inset space \space{}
-\end_inset
-
-ha codice uguale a P.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename datatypes.bmp
-	width 10.1945cm
-	height 8.3362cm
-	keepAspectRatio
-
+\begin_inset VSpace smallskip
 \end_inset
 
  
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Selezione dei 
-\begin_inset Quotes eld
-\end_inset
-
-datatypes
-\begin_inset Quotes erd
-\end_inset
-
- azionari.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace bigskip
+Datastream associa a ciascuna classe di strumenti finanziari (azioni, indici
+ azionari, bonds, ...) più di un tipo di serie storica scaricabile.
+ I tipi di dati disponibili variano a seconda della classe di strumenti.
+ Ad esempio, il tipo di default per la classe equity è il ”Price (Adjusted)”.
+ Cliccando il bottone arancione con la scritta 
+\emph on
+
+\begin_inset Quotes eld
 \end_inset
 
+Datatype
+\emph default
+
+\begin_inset Quotes erd
+\end_inset
+
+ si ottiene la lista completa dei tipi disponibili.
+ Ad ogni tipo è associato un codice.
+ Il ”Price (Adjusted - Default)” ha codice uguale a P.
  Discutiamo ora i seguenti tipi: 
 \end_layout
 
@@ -979,31 +881,37 @@ Date - Dividend Payment (Mnemonic = PYD)
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace bigskip
+\begin_inset VSpace 0.3cm
 \end_inset
 
- Come potrete constatare voi stessi, cambiando la classe di strumenti finanziari
- e selezionando nuovamente il bottone 
-\emph on
-Data type
-\emph default
- la lista di tipi di dato fra cui scegliere cambierà.
+
 \end_layout
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace bigskip
+Come potrete constatare voi stessi, cambiando la classe di strumenti finanziari
+ e selezionando nuovamente il bottone 
+\emph on
+Datatype
+\emph default
+ la lista di tipi di dato fra cui scegliere cambierà.
+\begin_inset VSpace 0.3cm
 \end_inset
 
- Datastream prevede
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Datastream prevede
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Si veda la Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "figura request table"
+reference "fig:Request-table"
 
 \end_inset
 
@@ -1026,7 +934,7 @@ reference "figura request table"
 Creating time series requests in Excel
 \emph default
  è un buon punto di partenza.
-\begin_inset VSpace 0.3in
+\begin_inset VSpace 0.3cm
 \end_inset
 
 
@@ -1053,9 +961,41 @@ begin{esercizio}
 \begin_layout Enumerate
 Trovate su internet le azioni che attualmente sono incluse nello Swiss Market
  Index.
- Suggerimento: visitate 
-\begin_inset Formula \[
-http://www.six-swiss-exchange.com/indices/overview\_en.html\]
+ Suggerimento: visitate il seguente sito 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newline
+\end_layout
+
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+url{http://www.six-swiss-exchange.com/indices/overview
+\backslash
+_en.html}
+\end_layout
 
 \end_inset
 
@@ -1168,6 +1108,85 @@ end{esercizio}
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename datastricerca.bmp
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Criteri di ricerca di un titolo azionario.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename datatypes.bmp
+	width 10.1945cm
+	height 8.3362cm
+	keepAspectRatio
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Selezione dei 
+\begin_inset Quotes eld
+\end_inset
+
+datatypes
+\begin_inset Quotes erd
+\end_inset
+
+ azionari.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
 wide false
 sideways false
 status open
@@ -1187,6 +1206,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Request-table"
+
+\end_inset
+
 Request table in Excel.
 \end_layout
 
@@ -1201,8 +1226,7 @@ Request table in Excel.
 \end_layout
 
 \begin_layout Chapter
-B.
- Chapter 7: Portfolio Models - Introduction
+Portfolio Models - Introduction
 \end_layout
 
 \begin_layout Section
@@ -1391,12 +1415,48 @@ Nell'esempio a pagina 240 di Benninga troviamo
 \end_inset
 
  titoli (azioni in questo caso) con i relativi prezzi.
- Gli 
+ Le 
 \begin_inset Formula $n=61$
 \end_inset
 
- periodi riportati sono 
-\begin_inset Formula $t="2001-07-05",\ ...,"2006-07-03"$
+ osservazioni riportate sono a frequenza mensile: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $t=$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+2001-07-05
+\begin_inset Quotes erd
+\end_inset
+
+, ...,
+\begin_inset Quotes erd
+\end_inset
+
+2006-07-03
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang italian
+
+\begin_inset Quotes erd
 \end_inset
 
 .
@@ -16407,8 +16467,7 @@ http://sunsite.univie.ac.at/rcom/download.html\]
 \end_layout
 
 \begin_layout Chapter
-B.
- Chapter 8: Calculating the Variance-Covariance Matrix
+Calculating the Variance-Covariance Matrix
 \end_layout
 
 \begin_layout Section
@@ -17503,9 +17562,7 @@ reference "risultato1"
 
 \end_deeper
 \begin_layout Chapter
-B.
- Chapter 10: Calculating Efficient Portfolios When are No Short-Sale Restriction
-s
+Calculating Efficient Portfolios When are No Short-Sale Restrictions
 \end_layout
 
 \begin_layout Section
@@ -20309,8 +20366,7 @@ reference "esercizio2 proprieta frontiera"
 \end_layout
 
 \begin_layout Chapter
-B.
- Chapter 15: The Lognormal Distribution
+The Lognormal Distribution
 \end_layout
 
 \begin_layout Section
@@ -22211,7 +22267,7 @@ Inserire grafico
 \end_layout
 
 \begin_layout Chapter
-Value at Risk (VaR)
+Value at Risk - VaR
 \end_layout
 
 \begin_layout Section
