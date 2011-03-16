@@ -106,20 +106,23 @@ le.
 \end_layout
 
 \begin_layout Itemize
-calcolare il valore (attuale e passato) dei portafogli in deposito, 
+calcolare il valore attuale ma anche a qualsiasi data passata dei portafogli
+ in deposito, 
 \end_layout
 
 \begin_layout Itemize
 valutare il rischio associato alle singole posizioni assunte sui vari mercati
- finanziari (azionario, dei cambi, reddito fisso, derivati, ecc.) ed in aggregato.
+ finanziari (azionario, dei cambi, reddito fisso, derivati, ecc.) o in aggregato
+ dell'intero portafoglio.
 \end_layout
 
 \begin_layout Standard
 \noindent
 A tale scopo la banca (il discorso è tuttavia generalizzabile a qualsiasi
- operatore finanziario) deve conoscere la composizione attuale e passata
- di un portafoglio (le quantità) nonché i prezzi d'acquisto e/o vendita,
- i prezzi correnti e i prezzi passati di tutti gli strumenti in esso contenuti.
+ operatore finanziario) deve conoscere la composizione attuale del portafoglio,
+ le transazioni effettuate in passato con i relativi prezzi d'acquisto e/o
+ vendita, i prezzi odierni ed i prezzi storici di chiusura di tutti gli
+ strumenti in portafoglio.
  Con il costante aumento della potenza di calcolo disponibile e grazie 
 \end_layout
 
@@ -135,8 +138,8 @@ al diffondersi di database relazionali (vedi informatica I eII)
 \noindent
 la domanda e l'offerta di dati finanziari sono entrambe cresciute enormemente
  nel corso dell'ultimo decennio.
- Oltre ai banali esempi sopracitati esiste tutta una serie di attività legate
- al settore finanziario che fanno largo uso di dati.
+ Oltre ai banali esempi sopracitati esiste tutta una serie di attività proprie
+ del settore finanziario che fanno largo uso di dati.
  Fra queste, senza pretesa di esaustività, citiamo 
 \end_layout
 
@@ -325,7 +328,7 @@ Altri ...
 
 \begin_layout Standard
 \noindent
-Qui all'Università della Svizzera italiana abbiamo a disposizione due importanti
+All'Università della Svizzera italiana sono a disposizione due importanti
  fonti di dati finanziari: Datastream, che sarà oggetto di approfondimento
  nel corso di questo capitolo e l'applicazione Reuters 3000 Xtra (un grazie
  all'associazione 
@@ -409,11 +412,13 @@ Codici d'identificazione
 
 \begin_layout Standard
 Quando cerchiamo i dati di un qualsiasi prodotto o strumento finanziario
- (un'azione, un'obbligazione, un fondo, un indice, ecc.) è necessario conoscere
+ (un'a\SpecialChar \-
+zio\SpecialChar \-
+ne, un'obbligazione, un fondo, un indice, ecc.) è necessario conoscere
  il suo identificativo.
  Per identificativo intendiamo un sequenza alfanumerica che identifica l'emissio
 ne di ogni strumento finanziario in maniera univoca.
- Purtroppo non esiste uno standard unico: ogni borsa ed ogni data provider
+ Purtroppo non esiste un unico standard: ogni borsa ed ogni data provider
  ha la propria metodologia di classificazione.
  Noi studieremo in dettaglio Datastream.
  Tuttavia è utile osservare quanto segue: 
@@ -455,7 +460,7 @@ SEDOL = Stock Exchange Daily Official List.
 Conoscere uno di questi due identificativi è particolarmente utile poiché,
  soprattutto per quanto riguarda il codice ISIN, praticamente tutti i data
  provider lo riconoscono.
- La banca dati Datastream ad esempio, accetta entrambi questi codici.
+ Ad esempio, la banca dati Datastream accetta entrambi questi codici.
 \end_layout
 
 \end_deeper
@@ -468,7 +473,7 @@ to.
 \end_layout
 
 \begin_layout Enumerate
-Talvolta è necessario verificare attentamente che i dati raccolti corrispondano
+È sempre utile verificare attentamente che i dati raccolti corrispondano
  a quanto desiderato.
  Capita infatti che lo stesso prodotto finanziario venga trattato su più
  borse o in più valute.
@@ -637,7 +642,7 @@ KO” e Datastream ha quale mnemonic
 \end_inset
 
 U:KO”.
- La prima lettera denota quindi il paese (I=Italy, U=United States,C=Canada,
+ La prima lettera denota quindi il paese (I=Italy, U=United States, C=Canada,
  ...), il carattere 
 \begin_inset Quotes eld
 \end_inset
@@ -708,8 +713,9 @@ L'applicativo Datastream.
 \end_layout
 
 \begin_layout Enumerate
-Aprire Datastream Advance e selezionare da ”Data category” il tipo di strumento
- per cui si desidera ottenere la serie storica.
+Aprire Datastream Advance e selezionare dal riquadro superiore sinistro
+ ”Data category” il tipo di strumento per cui si desidera ottenere la serie
+ storica.
  
 \end_layout
 
@@ -743,11 +749,11 @@ Time Series Data
 Nella parte superiore centrale della finestra di Datastream se conoscete
  il codice SEDOL o quello ISIN inseritelo direttamente nel campo 
 \emph on
-Series
+Enter Series
 \emph default
  dopo aver attivato il Chekbox denominato 
 \emph on
-Expert entry
+Expert
 \emph default
 .
 \end_layout
@@ -762,7 +768,7 @@ mnemonic
  I criteri dipendono dalla categoria in cui si effettua la ricerca.
  Per esempio, i criteri disponibili per la categoria Equity sono diversi
  da quelli della categoria Economics.
- Per eseguire una ricerca cliccare il bottone 
+ Per eseguire una ricerca cliccare il bottone arancione 
 \begin_inset Quotes eld
 \end_inset
 
@@ -776,7 +782,7 @@ Find series
 
 \begin_layout Enumerate
 Selezionate il periodo per il quale desiderate scaricare i dati (bottone
- 
+ blu 
 \begin_inset Quotes eld
 \end_inset
 
@@ -784,8 +790,9 @@ Time period
 \begin_inset Quotes erd
 \end_inset
 
- oppure cliccando sul checkbox corrispondente).
- Sempre nel medesimo riquadro ma più a destra premere il bottone 
+ oppure cliccando sul checkbox corrispondente il numero di periodi a partire
+ da oggi per i quali volete scaricare le osservazioni).
+ Sempre nel medesimo riquadro ma più a destra premere il bottone blu 
 \emph on
 Settings...
  
