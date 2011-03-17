@@ -680,38 +680,6 @@ datastream”.
  Per scaricare dati da Datastream è necessario procedere come segue:
 \end_layout
 
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset Graphics
-	filename datastream.bmp
-	scale 20
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-L'applicativo Datastream.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Enumerate
 Aprire Datastream Advance e selezionare dal riquadro superiore sinistro
  ”Data category” il tipo di strumento per cui si desidera ottenere la serie
@@ -837,7 +805,22 @@ Run Now
 \begin_layout Standard
 \noindent
 Datastream associa a ciascuna classe di strumenti finanziari (azioni, indici
- azionari, bonds, ...) più di un tipo di serie storica scaricabile.
+ a\SpecialChar \-
+zio\SpecialChar \-
+na\SpecialChar \-
+ri, bonds, ...) un determinato insieme di 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+Datatype
+\emph default
+s
+\begin_inset Quotes erd
+\end_inset
+
+ per ciascuno dei quali è possibile scaricare una serie storica.
  I tipi di dati disponibili variano a seconda della classe di strumenti.
  Ad esempio, il tipo di default per la classe equity è il ”Price (Adjusted)”.
  Cliccando il bottone arancione con la scritta 
@@ -927,8 +910,8 @@ reference "fig:Request-table"
 
 \end_inset
 
- inoltre la possibilità di scaricare le serie storiche direttamente in un
- file Excel, senza dover passare dall'applicazione Datastream Advance.
+ la possibilità di scaricare le serie storiche direttamente in un file Excel,
+ senza dover passare dall'applicazione Datastream Advance.
  Due sono i principali vantaggi di un simile approccio.
  Da un lato è possibile scaricare simultaneamente più di una serie storica
  e di un tipo di dato.
@@ -1114,6 +1097,55 @@ end{esercizio}
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename datastream.bmp
+	scale 33
+	scaleBeforeRotation
+	rotateAngle 90
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+L'applicativo Datastream.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -1125,7 +1157,9 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename datastricerca.bmp
-	scale 30
+	scale 45
+	scaleBeforeRotation
+	rotateAngle 90
 
 \end_inset
 
@@ -1150,20 +1184,27 @@ Criteri di ricerca di un titolo azionario.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
 	filename datatypes.bmp
-	width 10.1945cm
-	height 8.3362cm
-	keepAspectRatio
+	scale 45
+	scaleBeforeRotation
+	rotateAngle 90
 
 \end_inset
 
@@ -1193,19 +1234,26 @@ datatypes
 \end_layout
 
 \begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
 \align center
 \begin_inset Graphics
 	filename requestTable.bmp
-	width 5.3394in
-	height 1.8239in
-	keepAspectRatio
+	scale 45
+	scaleBeforeRotation
+	rotateAngle 90
 
 \end_inset
 
@@ -1426,7 +1474,7 @@ Nell'esempio a pagina 240 di Benninga troviamo
 \begin_inset Formula $n=61$
 \end_inset
 
- osservazioni riportate sono a frequenza mensile: 
+ osservazioni riportate sono a frequenza mensile: da 
 \family roman
 \series medium
 \shape up
@@ -1440,7 +1488,7 @@ Nell'esempio a pagina 240 di Benninga troviamo
 \begin_inset Formula $t=$
 \end_inset
 
-
+ 
 \begin_inset Quotes erd
 \end_inset
 
@@ -1448,7 +1496,7 @@ Nell'esempio a pagina 240 di Benninga troviamo
 \begin_inset Quotes erd
 \end_inset
 
-, ...,
+ a 
 \begin_inset Quotes erd
 \end_inset
 
@@ -1540,6 +1588,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Esempio calcolo rendimenti"
+
+\end_inset
+
 Esempio con 
 \begin_inset Formula $N=2$
 \end_inset
@@ -2027,36 +2081,26 @@ begin{esempio}
 \end_inset
 
  Continuando con l'esempio precedente (vedi pag.
- 240 di Benninga) possiamo calcolare i 
-\begin_inset Formula $12$
-\end_inset
-
- rendimenti logaritimici 
+ 240 di Benninga) possiamo calcolare i rendimenti logaritimici 
 \emph on
 mensili
 \emph default
  delle due azioni 
-\begin_inset Formula $A$
+\begin_inset Formula $WMT$
 \end_inset
 
  e 
-\begin_inset Formula $B$
+\begin_inset Formula $TGT$
 \end_inset
 
  utilizzando la funzione 
 \begin_inset Formula $LN$
 \end_inset
 
- (logaritmo naturale)
-\begin_inset space \space{}
-\end_inset
-
-di Excel.
+ (logaritmo naturale) di Excel.
  In questo esempio gli eventuali dividendi versati nel periodo non sono
  stati considerati.
- 11.1501cm - 5.7024cm Esempio calcolo rendimenti Figura esempio calcolo rendimenti
- 'KHMGBC01.wmf' Poiché l'osservazione per il calcolo del rendimento alla
- data 
+ Poiché l'osservazione per il calcolo del rendimento alla data 
 \begin_inset Formula $0$
 \end_inset
 
@@ -2068,7 +2112,7 @@ di Excel.
  matrice dei prezzi osservati (vedi Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Figura esempio calcolo rendimenti"
+reference "fig:Esempio calcolo rendimenti"
 
 \end_inset
 
@@ -2118,9 +2162,8 @@ cross-section
 
 dei rendimenti di un portafoglio.
  La domanda a cui si desidera rispondere è la seguente: qual è la relazione
- tra il rendimento del portafoglio su un singolo periodo e i rendimenti
- dei singoli titoli in esso contenuto? La proprietà 1 dà una risposta a
- questa domanda.
+ tra il rendimento del portafoglio e i rendimenti dei singoli titoli in
+ esso contenuto? La proprietà 1 dà una risposta a questa domanda.
 \end_layout
 
 \begin_layout Standard
@@ -2166,6 +2209,7 @@ end{proprieta}
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset VSpace medskip
 \end_inset
 
@@ -2412,11 +2456,7 @@ begin{remark}
 \begin_inset Formula $n=1$
 \end_inset
 
-)
-\begin_inset Formula $\ $
-\end_inset
-
-ora notato 
+) anziché 
 \begin_inset Formula $r_{i(t-1),t}$
 \end_inset
 
@@ -2545,7 +2585,7 @@ end{proprieta}
 \begin_inset VSpace medskip
 \end_inset
 
- Le Proprietà 
+Le Proprietà 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "prop cross section rend perc"
@@ -2643,7 +2683,7 @@ reference "prop cross section rend log"
 \begin_inset VSpace medskip
 \end_inset
 
- La seconda dimensione, che riguada invece le Proprietà 
+La seconda dimensione, che riguada invece le Proprietà 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "prop aggreg temporale rend perc"
@@ -2694,8 +2734,8 @@ dei rendimenti.
 \begin_inset VSpace medskip
 \end_inset
 
- Un'ultima osservazione: quando si discute dell'aspetto temporale di aggregazion
-e dei rendimenti è necessario specificare la frequenza con cui si osservano
+Un'ultima osservazione: quando si discute dell'aspetto temporale di aggregazione
+ dei rendimenti è necessario specificare la frequenza con cui si osservano
  i prezzi e l'orizzonte sul quale si desidera effettuare l'aggregazione.
  Ad esempio, se disponiamo di rendimenti giornalieri e desideriamo calcolare
  i rendimenti settimanali avremo un orizzonte temporale di 
@@ -2707,10 +2747,14 @@ e dei rendimenti è necessario specificare la frequenza con cui si osservano
 
 \begin_layout Standard
 \noindent
-\begin_inset VSpace medskip
+\begin_inset VSpace smallskip
 \end_inset
 
- Consideriamo ora 
+
+\end_layout
+
+\begin_layout Standard
+Consideriamo ora 
 \emph on
 un intero portafoglio
 \emph default
@@ -2723,10 +2767,6 @@ reference "prodotto rendimenti perc su singola azione"
 
 ) è valida anche per un portafoglio composto da più titoli.
  La risposta è sì, ma con un'importante precisazione.
-\begin_inset VSpace medskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -3487,12 +3527,9 @@ begin{esempio}
 \begin_inset VSpace 0.5cm
 \end_inset
 
- Evidentemente il prezzo (e quindi il rendimento)
-\begin_inset space \space{}
-\end_inset
-
-in chf della BASF è soggetto a due fonti di incertezza: i movimenti del
- prezzo della BASF in eur e i movimenti del tasso di cambio.
+ Evidentemente il prezzo (e quindi il rendimento) in chf della BASF è soggetto
+ a due fonti di incertezza: i movimenti del prezzo della BASF in eur e i
+ movimenti del tasso di cambio.
 \end_layout
 
 \begin_layout Standard
@@ -3520,6 +3557,7 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset VSpace medskip
 \end_inset
 
@@ -4152,44 +4190,36 @@ varianze, covarianze e coefficiente di correlazione
 
 \begin_layout Standard
 La varianza di una variabile aleatoria 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
- (scalare)
-\begin_inset space \space{}
-\end_inset
-
-sappiamo essere definita da 
+ (scalare) sappiamo essere definita da 
 \begin_inset Formula \begin{equation}
-Var(X):=E\left(X-E\left(X\right)\right)^{2}\label{varianza}\end{equation}
+Var(Y):=E\left(Y-E\left(Y\right)\right)^{2}\label{varianza}\end{equation}
 
 \end_inset
 
  mentre la covarianza con la variabile aleatoria 
-\begin_inset Formula $Y$
+\begin_inset Formula $W$
 \end_inset
 
- (anch'essa scalare)
-\begin_inset space \space{}
-\end_inset
-
-è uguale
+ (anch'essa scalare) è uguale
 \begin_inset Formula \begin{equation}
-Cov(X,Y):=E\left(X-E\left(X\right)\right)\left(Y-E\left(Y\right)\right)\ .\label{covarianza}\end{equation}
+Cov(Y,W):=E\left(Y-E\left(Y\right)\right)\left(W-E\left(W\right)\right)\ .\label{covarianza}\end{equation}
 
 \end_inset
 
  Infine il coefficiente di correlazione fra 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
  e 
-\begin_inset Formula $Y$
+\begin_inset Formula $W$
 \end_inset
 
  è definito come
 \begin_inset Formula \begin{equation}
-Cor(X,Y):=\frac{Cov(X,Y)}{\sqrt{Var(X)}\sqrt{Var(Y)}}\ .\end{equation}
+Cor(Y,W):=\frac{Cov(Y,W)}{\sqrt{Var(Y)}\sqrt{Var(W)}}\ .\end{equation}
 
 \end_inset
 
@@ -4198,37 +4228,37 @@ Cor(X,Y):=\frac{Cov(X,Y)}{\sqrt{Var(X)}\sqrt{Var(Y)}}\ .\end{equation}
  la proprietà di linearità del valore atteso.
  Tali formule sono
 \begin_inset Formula \[
-Var(X)=E\left(X^{2}\right)-\left(E\left(X\right)\right)^{2}\]
+Var(Y)=E\left(Y^{2}\right)-\left(E\left(Y\right)\right)^{2}\]
 
 \end_inset
 
  e
 \begin_inset Formula \[
-Cov(X,Y)=E\left(XY\right)-E\left(X\right)E\left(Y\right)\ .\]
+Cov(Y,W)=E\left(YW\right)-E\left(Y\right)E\left(W\right)\ .\]
 
 \end_inset
 
  Poiché nel caso scalare la moltiplicazione è commutativa, vale che 
 \begin_inset Formula \[
-Cov(X,Y)=Cov(Y,X).\]
+Cov(Y,W)=Cov(W,Y).\]
 
 \end_inset
 
  Lo stesso non vale nel caso in cui 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
  e/o 
-\begin_inset Formula $Y$
+\begin_inset Formula $W$
 \end_inset
 
  siano dei vettori aleatori.
  In tal caso occorre prestare attenzione all'ordine in cui 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
- ed 
-\begin_inset Formula $Y$
+ e 
+\begin_inset Formula $W$
 \end_inset
 
  appaiono nella funzione di 
@@ -4241,37 +4271,37 @@ Cov(X,Y)=Cov(Y,X).\]
 \end_inset
 
  fra due vettori aleatori 
-\begin_inset Formula $\underset{\left(r\times1\right)}{X}$
+\begin_inset Formula $\underset{\left(r\times1\right)}{Y}$
 \end_inset
 
  e 
-\begin_inset Formula $\underset{\left(c\times1\right)}{Y}$
+\begin_inset Formula $\underset{\left(c\times1\right)}{W}$
 \end_inset
 
  è definita nel seguente modo (si noti il trasposto nella formula)
 \begin_inset Formula \[
-\underset{\left(r\times c\right)}{Cov(X,Y)}=E\left[\left(X-E\left(X\right)\right)\left(Y-E\left(Y\right)\right)^{\prime}\right]\ .\]
+\underset{\left(r\times c\right)}{Cov(Y,W)}=E\left[\left(Y-E\left(Y\right)\right)\left(W-E\left(W\right)\right)^{\prime}\right]\ .\]
 
 \end_inset
 
  Come nel caso scalare potete dimostrare che 
 \begin_inset Formula \[
-Cov(X,Y)=E\left(XY^{\prime}\right)-E\left(X\right)E\left(Y\right)^{\prime}\]
+Cov(Y,W)=E\left(YW^{\prime}\right)-E\left(Y\right)E\left(W\right)^{\prime}\]
 
 \end_inset
 
  e quando 
-\begin_inset Formula $X=Y$
+\begin_inset Formula $Y=W$
 \end_inset
 
  la formula della covarianza si riduce alla varianza del vettore aleatorio
  
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
 : 
 \begin_inset Formula \[
-Cov(X,X)=Var(X)=E\left[\left(X-E\left(X\right)\right)\left(X-E\left(X\right)\right)^{\prime}\right]\ .\]
+Cov(Y,Y)=Var(Y)=E\left[\left(Y-E\left(Y\right)\right)\left(Y-E\left(Y\right)\right)^{\prime}\right]\ .\]
 
 \end_inset
 
@@ -4290,20 +4320,20 @@ esima e la
 \end_inset
 
 esima componente di 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
 , 
-\begin_inset Formula $Cov(X_{i},X_{j})$
+\begin_inset Formula $Cov(Y_{i},Y_{j})$
 \end_inset
 
 .
- Allo stesso modo è possibile definire in maniera del tutto analoga la 
+ È possibile definire in maniera del tutto analoga la 
 \emph on
 matrice di correlazione
 \emph default
  del vettore aleatorio 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
  come la matrice quadrata avente nella posizione 
@@ -4319,20 +4349,20 @@ esima e la
 \end_inset
 
 esima componente di 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
 , 
-\begin_inset Formula $Cor(X_{i},X_{j})$
+\begin_inset Formula $Cor(Y_{i},Y_{j})$
 \end_inset
 
 .
  Poiché 
-\begin_inset Formula $Cor(X_{i},X_{j})=Cor(X_{j},X_{i})$
+\begin_inset Formula $Cor(Y_{i},Y_{j})=Cor(Y_{j},Y_{i})$
 \end_inset
 
 , anche la matrice di correlazione di 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
  è simmetrica! In particolare, la diagonale di qualsiasi matrice di correlazione
@@ -4348,12 +4378,12 @@ o
 .
  La matrice di correlazione è positiva semidefinita.
  La matrice di correlazione del vettore aleatorio 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset
 
  sarà notata 
 \begin_inset Formula \[
-Cor(X)\ .\]
+Cor(Y)\ .\]
 
 \end_inset
 
@@ -4391,7 +4421,7 @@ In MS Excel questa è esattamente la formula sottostante alla funzione
 
 
 \begin_inset Formula \begin{equation}
-\widehat{Var}(X)=\frac{1}{n}\sum_{t=1}^{n}\left(x_{t}-\overline{x}\right)^{2}\ ,\end{equation}
+\widehat{Var}(Y)=\frac{1}{n}\sum_{t=1}^{n}\left(y_{t}-\overline{y}\right)^{2}\ ,\end{equation}
 
 \end_inset
 
@@ -4404,7 +4434,7 @@ reference "covarianza"
 
 ) altro non è che
 \begin_inset Formula \begin{equation}
-\widehat{Cov}(X,Y)=\frac{1}{n}\sum_{t=1}^{n}\left(x_{t}-\overline{x}\right)\left(y_{t}-\overline{y}\right)\ .\label{covarianza empirica}\end{equation}
+\widehat{Cov}(Y,W)=\frac{1}{n}\sum_{t=1}^{n}\left(y_{t}-\overline{y}\right)\left(w_{t}-\overline{w}\right)\ .\label{covarianza empirica}\end{equation}
 
 \end_inset
 
@@ -4455,7 +4485,7 @@ E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
 \end_inset
 
  
-\begin_inset Formula $Z:=(X,Y)^{\prime}\sim\left(\mu,V\right)$
+\begin_inset Formula $Z:=(Y,W)^{\prime}\sim\left(\mu,V\right)$
 \end_inset
 
  di dimensione 
@@ -4473,22 +4503,18 @@ E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
 \end_inset
 
  vettori aleatori 
-\begin_inset Formula $Z_{1}=\left(X_{1}~Y_{1}\right)^{\prime}$
+\begin_inset Formula $Z_{1}=\left(Y_{1}~W_{1}\right)^{\prime}$
 \end_inset
 
 , 
-\begin_inset Formula $Z_{2}=\left(X_{2}~Y_{2}\right)^{\prime}$
+\begin_inset Formula $Z_{2}=\left(Y_{2}~W_{2}\right)^{\prime}$
 \end_inset
 
  e 
-\begin_inset Formula $Z_{3}=\left(X_{3}~Y_{3}\right)^{\prime}.$
+\begin_inset Formula $Z_{3}=\left(Y_{3}~W_{3}\right)^{\prime}.$
 \end_inset
 
-
-\begin_inset space \space{}
-\end_inset
-
-I tre vettori 
+ I tre vettori 
 \begin_inset Formula $Z_{1}$
 \end_inset
 
@@ -4501,26 +4527,26 @@ I tre vettori
 \end_inset
 
  sono fra loro indipendenti (ad esempio 
-\begin_inset Formula $X_{3}$
+\begin_inset Formula $Y_{3}$
 \end_inset
 
  è indipendente da 
-\begin_inset Formula $Y_{1}$
+\begin_inset Formula $W_{1}$
 \end_inset
 
  o 
-\begin_inset Formula $X_{1}$
+\begin_inset Formula $Y_{1}$
 \end_inset
 
 ) mentre le due componenti 
-\begin_inset Formula $X_{t}$
-\end_inset
-
- e 
 \begin_inset Formula $Y_{t}$
 \end_inset
 
- avranno covarianza uguale a 
+ e 
+\begin_inset Formula $W_{t}$
+\end_inset
+
+ avranno covarianza pari a 
 \begin_inset Formula $V_{12}.$
 \end_inset
 
@@ -4538,9 +4564,9 @@ I tre vettori
 Z_{1}^{\prime}\\
 Z_{3}^{\prime}\\
 Z_{3}^{\prime}\end{array}\right]=\left[\begin{array}{l}
-X_{1}~Y_{1}\\
-X_{2}~Y_{2}\\
-X_{3}~Y_{3}\end{array}\right]=\left[x,y\right].\]
+Y_{1}~W_{1}\\
+Y_{2}~W_{2}\\
+Y_{3}~W_{3}\end{array}\right]=\left[y,\right].\]
 
 \end_inset
 
