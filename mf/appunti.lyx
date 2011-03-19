@@ -1,4 +1,4 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -944,7 +944,14 @@ begin{esercizio}
 
 \end_inset
 
- Desideriamo analizzare lo Swiss Market Index (SMI).
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "Esercizio 1"
+
+\end_inset
+
+Desideriamo analizzare lo Swiss Market Index (SMI).
  
 \end_layout
 
@@ -2156,11 +2163,7 @@ Consideriamo in questo paragrafo la proprietà
 \emph on
 cross-section
 \emph default
-”
-\begin_inset space \space{}
-\end_inset
-
-dei rendimenti di un portafoglio.
+” dei rendimenti di un portafoglio.
  La domanda a cui si desidera rispondere è la seguente: qual è la relazione
  tra il rendimento del portafoglio e i rendimenti dei singoli titoli in
  esso contenuto? La proprietà 1 dà una risposta a questa domanda.
@@ -2996,12 +2999,8 @@ P_{pt}=q_{1}P_{1,t}+q_{2}P_{2,t}\]
 \begin_inset Formula $q_{2}$
 \end_inset
 
- (per ipotesi costanti nel tempo)
-\begin_inset space \space{}
-\end_inset
-
-rappresentano la quantità della prima e rispettivamente della seconda azione
- in portafoglio.
+ (per ipotesi costanti nel tempo) rappresentano la quantità della prima
+ e rispettivamente della seconda azione in portafoglio.
  
 \end_layout
 
@@ -4181,21 +4180,17 @@ end{esercizio}
 \end_layout
 
 \begin_layout Section
-Flashback:
-\begin_inset space \space{}
-\end_inset
-
-varianze, covarianze e coefficiente di correlazione
+Flashback: varianze, covarianze e coefficiente di correlazione
 \end_layout
 
 \begin_layout Standard
 La varianza di una variabile aleatoria 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
  (scalare) sappiamo essere definita da 
 \begin_inset Formula \begin{equation}
-Var(Y):=E\left(Y-E\left(Y\right)\right)^{2}\label{varianza}\end{equation}
+Var(U):=E\left(U-E\left(U\right)\right)^{2}\label{varianza}\end{equation}
 
 \end_inset
 
@@ -4205,12 +4200,12 @@ Var(Y):=E\left(Y-E\left(Y\right)\right)^{2}\label{varianza}\end{equation}
 
  (anch'essa scalare) è uguale
 \begin_inset Formula \begin{equation}
-Cov(Y,W):=E\left(Y-E\left(Y\right)\right)\left(W-E\left(W\right)\right)\ .\label{covarianza}\end{equation}
+Cov(U,W):=E\left(U-E\left(U\right)\right)\left(W-E\left(W\right)\right)\ .\label{covarianza}\end{equation}
 
 \end_inset
 
  Infine il coefficiente di correlazione fra 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
  e 
@@ -4219,7 +4214,7 @@ Cov(Y,W):=E\left(Y-E\left(Y\right)\right)\left(W-E\left(W\right)\right)\ .\label
 
  è definito come
 \begin_inset Formula \begin{equation}
-Cor(Y,W):=\frac{Cov(Y,W)}{\sqrt{Var(Y)}\sqrt{Var(W)}}\ .\end{equation}
+Cor(U,W):=\frac{Cov(U,W)}{\sqrt{Var(U)}\sqrt{Var(W)}}\ .\end{equation}
 
 \end_inset
 
@@ -4228,24 +4223,24 @@ Cor(Y,W):=\frac{Cov(Y,W)}{\sqrt{Var(Y)}\sqrt{Var(W)}}\ .\end{equation}
  la proprietà di linearità del valore atteso.
  Tali formule sono
 \begin_inset Formula \[
-Var(Y)=E\left(Y^{2}\right)-\left(E\left(Y\right)\right)^{2}\]
+Var(U)=E\left(U^{2}\right)-\left(E\left(U\right)\right)^{2}\]
 
 \end_inset
 
  e
 \begin_inset Formula \[
-Cov(Y,W)=E\left(YW\right)-E\left(Y\right)E\left(W\right)\ .\]
+Cov(U,W)=E\left(UW\right)-E\left(U\right)E\left(W\right)\ .\]
 
 \end_inset
 
  Poiché nel caso scalare la moltiplicazione è commutativa, vale che 
 \begin_inset Formula \[
-Cov(Y,W)=Cov(W,Y).\]
+Cov(U,W)=Cov(W,U).\]
 
 \end_inset
 
  Lo stesso non vale nel caso in cui 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
  e/o 
@@ -4254,7 +4249,7 @@ Cov(Y,W)=Cov(W,Y).\]
 
  siano dei vettori aleatori.
  In tal caso occorre prestare attenzione all'ordine in cui 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
  e 
@@ -4271,7 +4266,7 @@ Cov(Y,W)=Cov(W,Y).\]
 \end_inset
 
  fra due vettori aleatori 
-\begin_inset Formula $\underset{\left(r\times1\right)}{Y}$
+\begin_inset Formula $\underset{\left(r\times1\right)}{U}$
 \end_inset
 
  e 
@@ -4280,18 +4275,18 @@ Cov(Y,W)=Cov(W,Y).\]
 
  è definita nel seguente modo (si noti il trasposto nella formula)
 \begin_inset Formula \[
-\underset{\left(r\times c\right)}{Cov(Y,W)}=E\left[\left(Y-E\left(Y\right)\right)\left(W-E\left(W\right)\right)^{\prime}\right]\ .\]
+\underset{\left(r\times c\right)}{Cov(U,W)}=E\left[\left(U-E\left(U\right)\right)\left(W-E\left(W\right)\right)^{\prime}\right]\ .\]
 
 \end_inset
 
  Come nel caso scalare potete dimostrare che 
 \begin_inset Formula \[
-Cov(Y,W)=E\left(YW^{\prime}\right)-E\left(Y\right)E\left(W\right)^{\prime}\]
+Cov(U,W)=E\left(UW^{\prime}\right)-E\left(U\right)E\left(W\right)^{\prime}\]
 
 \end_inset
 
  e quando 
-\begin_inset Formula $Y=W$
+\begin_inset Formula $U=W$
 \end_inset
 
  la formula della covarianza si riduce alla varianza del vettore aleatorio
@@ -4301,7 +4296,7 @@ Cov(Y,W)=E\left(YW^{\prime}\right)-E\left(Y\right)E\left(W\right)^{\prime}\]
 
 : 
 \begin_inset Formula \[
-Cov(Y,Y)=Var(Y)=E\left[\left(Y-E\left(Y\right)\right)\left(Y-E\left(Y\right)\right)^{\prime}\right]\ .\]
+Cov(U,U)=Var(U)=E\left[\left(U-E\left(U\right)\right)\left(U-E\left(U\right)\right)^{\prime}\right]\ .\]
 
 \end_inset
 
@@ -4320,11 +4315,11 @@ esima e la
 \end_inset
 
 esima componente di 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
 , 
-\begin_inset Formula $Cov(Y_{i},Y_{j})$
+\begin_inset Formula $Cov(U_{i},U_{j})$
 \end_inset
 
 .
@@ -4333,7 +4328,7 @@ esima componente di
 matrice di correlazione
 \emph default
  del vettore aleatorio 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
  come la matrice quadrata avente nella posizione 
@@ -4349,20 +4344,20 @@ esima e la
 \end_inset
 
 esima componente di 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
 , 
-\begin_inset Formula $Cor(Y_{i},Y_{j})$
+\begin_inset Formula $Cor(U_{i},U_{j})$
 \end_inset
 
 .
  Poiché 
-\begin_inset Formula $Cor(Y_{i},Y_{j})=Cor(Y_{j},Y_{i})$
+\begin_inset Formula $Cor(U_{i},U_{j})=Cor(U_{j},U_{i})$
 \end_inset
 
 , anche la matrice di correlazione di 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
  è simmetrica! In particolare, la diagonale di qualsiasi matrice di correlazione
@@ -4378,12 +4373,12 @@ o
 .
  La matrice di correlazione è positiva semidefinita.
  La matrice di correlazione del vettore aleatorio 
-\begin_inset Formula $Y$
+\begin_inset Formula $U$
 \end_inset
 
  sarà notata 
 \begin_inset Formula \[
-Cor(Y)\ .\]
+Cor(U)\ .\]
 
 \end_inset
 
@@ -4421,7 +4416,7 @@ In MS Excel questa è esattamente la formula sottostante alla funzione
 
 
 \begin_inset Formula \begin{equation}
-\widehat{Var}(Y)=\frac{1}{n}\sum_{t=1}^{n}\left(y_{t}-\overline{y}\right)^{2}\ ,\end{equation}
+\widehat{Var}(U)=\frac{1}{n}\sum_{t=1}^{n}\left(U_{t}-\overline{U}\right)^{2}\ ,\end{equation}
 
 \end_inset
 
@@ -4434,7 +4429,7 @@ reference "covarianza"
 
 ) altro non è che
 \begin_inset Formula \begin{equation}
-\widehat{Cov}(Y,W)=\frac{1}{n}\sum_{t=1}^{n}\left(y_{t}-\overline{y}\right)\left(w_{t}-\overline{w}\right)\ .\label{covarianza empirica}\end{equation}
+\widehat{Cov}(U,W)=\frac{1}{n}\sum_{t=1}^{n}\left(U_{t}-\overline{U}\right)\left(W_{t}-\overline{W}\right)\ .\label{covarianza empirica}\end{equation}
 
 \end_inset
 
@@ -4470,10 +4465,10 @@ Il vettore
 :
 \begin_inset Formula \[
 \mu=E(Z)=E\left[\left(\begin{array}{c}
-X\\
-Y\end{array}\right)\right]=\left(\begin{array}{c}
-E\left[X\right]\\
-E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
+U\\
+W\end{array}\right)\right]=\left(\begin{array}{c}
+E\left[U\right]\\
+E\left[W\right]\end{array}\right)=\left(\begin{array}{c}
 \mu_{1}\\
 \mu_{2}\end{array}\right)~.\]
 
@@ -4485,7 +4480,7 @@ E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
 \end_inset
 
  
-\begin_inset Formula $Z:=(Y,W)^{\prime}\sim\left(\mu,V\right)$
+\begin_inset Formula $Z:=(U,W)^{\prime}\sim\left(\mu,V\right)$
 \end_inset
 
  di dimensione 
@@ -4503,15 +4498,15 @@ E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
 \end_inset
 
  vettori aleatori 
-\begin_inset Formula $Z_{1}=\left(Y_{1}~W_{1}\right)^{\prime}$
+\begin_inset Formula $Z_{1}=\left(U_{1}~W_{1}\right)^{\prime}$
 \end_inset
 
 , 
-\begin_inset Formula $Z_{2}=\left(Y_{2}~W_{2}\right)^{\prime}$
+\begin_inset Formula $Z_{2}=\left(U_{2}~W_{2}\right)^{\prime}$
 \end_inset
 
  e 
-\begin_inset Formula $Z_{3}=\left(Y_{3}~W_{3}\right)^{\prime}.$
+\begin_inset Formula $Z_{3}=\left(U_{3}~W_{3}\right)^{\prime}.$
 \end_inset
 
  I tre vettori 
@@ -4527,7 +4522,7 @@ E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
 \end_inset
 
  sono fra loro indipendenti (ad esempio 
-\begin_inset Formula $Y_{3}$
+\begin_inset Formula $U_{3}$
 \end_inset
 
  è indipendente da 
@@ -4535,11 +4530,11 @@ E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
 \end_inset
 
  o 
-\begin_inset Formula $Y_{1}$
+\begin_inset Formula $U_{1}$
 \end_inset
 
 ) mentre le due componenti 
-\begin_inset Formula $Y_{t}$
+\begin_inset Formula $U_{t}$
 \end_inset
 
  e 
@@ -4564,9 +4559,9 @@ E\left[Y\right]\end{array}\right)=\left(\begin{array}{c}
 Z_{1}^{\prime}\\
 Z_{3}^{\prime}\\
 Z_{3}^{\prime}\end{array}\right]=\left[\begin{array}{l}
-Y_{1}~W_{1}\\
-Y_{2}~W_{2}\\
-Y_{3}~W_{3}\end{array}\right]=\left[y,\right].\]
+U_{1}~W_{1}\\
+U_{2}~W_{2}\\
+U_{3}~W_{3}\end{array}\right]=\left[x,y\right].\]
 
 \end_inset
 
@@ -4581,7 +4576,7 @@ Y_{3}~W_{3}\end{array}\right]=\left[y,\right].\]
 \end_inset
 
  in generale) osservazioni della medesima variabile, la 
-\begin_inset Formula $X$
+\begin_inset Formula $U$
 \end_inset
 
  ad esempio (prima colonna).
@@ -4595,16 +4590,16 @@ Y_{3}~W_{3}\end{array}\right]=\left[y,\right].\]
 \begin_inset Formula $y$
 \end_inset
 
- sono due vettori aleatori contenenti tutte le 
+ sono i due vettori aleatori contenenti tutte le 
 \begin_inset Formula $n$
 \end_inset
 
  osservazioni della variabile 
-\begin_inset Formula $X$
+\begin_inset Formula $U$
 \end_inset
 
  e rispettivamente della 
-\begin_inset Formula $Y$
+\begin_inset Formula $W$
 \end_inset
 
 .
@@ -4634,7 +4629,7 @@ reference "covarianza empirica"
 
 ) come 
 \begin_inset Formula \[
-\widehat{Cov}(X,Y)=\frac{1}{3}x^{\prime}My\ ,\]
+\widehat{Cov}(U,W)=\frac{1}{3}x^{\prime}My\ ,\]
 
 \end_inset
 
@@ -4676,7 +4671,7 @@ Applicando le proprietà di linearità e commutatività della traccia e del
 \end_inset
 
  e mostrate che è uguale a 
-\begin_inset Formula $\frac{2}{3}Cov(X,Y)$
+\begin_inset Formula $\frac{2}{3}Cov(U,W)$
 \end_inset
 
 .
@@ -4693,7 +4688,7 @@ reference "forma quadratica centrata"
 
 ) calcolate il valore atteso di ciascun termine.
  Utilizzando il risultato del punto precedente date 
-\begin_inset Formula $E\left(\widehat{Cov}(X,Y)\right)$
+\begin_inset Formula $E\left(\widehat{Cov}(U,W)\right)$
 \end_inset
 
 .
@@ -4767,11 +4762,7 @@ reference "covarianza empirica"
 \begin_inset Formula $\frac{1}{n}$
 \end_inset
 
- e diventa negligibile (tende a 0)
-\begin_inset space \space{}
-\end_inset
-
-al tendere di 
+ e diventa trascurabile (tende a 0) al tendere di 
 \begin_inset Formula $n$
 \end_inset
 
@@ -4815,11 +4806,7 @@ Ci riferiamo al numero di titoli in portafoglio.
 
 \end_inset
 
-
-\begin_inset space \space{}
-\end_inset
-
-è espressa dalle dimensioni del vettore aleatorio 
+ è espressa dalle dimensioni del vettore aleatorio 
 \begin_inset Formula $Z$
 \end_inset
 
@@ -5180,10 +5167,10 @@ reference "varianza portafoglio due titoli"
 \end_inset
 
 ) solo in funzione di 
-\begin_inset Formula $w_{1}\ $
+\begin_inset Formula $w_{1}$
 \end_inset
 
-(o 
+ (o 
 \begin_inset Formula $w_{2}$
 \end_inset
 
@@ -5245,18 +5232,19 @@ r_{t}\sim i.i.d.\ N(e,V)\text{.}\]
 \begin_inset Formula $\mu_{p}$
 \end_inset
 
-e varianza 
+ e varianza 
 \begin_inset Formula $\sigma_{p}^{2}$
 \end_inset
 
 .
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace medskip
-\end_inset
-
- Sappiamo inoltre che per caratterizzare una variabile aleatoria normale
+Sappiamo inoltre che per caratterizzare una variabile aleatoria normale
  è necessario e sufficiente specificare il suo valore atteso e la sua varianza.
  Un investitore avrà dunque quali unici parametri di scelta il valore atteso
  e la varianza del portafoglio.
@@ -5283,7 +5271,7 @@ avverso al rischio
 \end_inset
 
 , esiste un portafoglio a varianza minima fra tutti i portafogli di rendimento
- atteso superiore o uguale a 
+ atteso uguale a 
 \begin_inset Formula $c$
 \end_inset
 
@@ -5293,15 +5281,18 @@ avverso al rischio
 \end_inset
 
 envelope portfolio”).
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\noindent
-\begin_inset VSpace medskip
-\end_inset
-
- Tuttavia nulla ci impedisce di ragionare partendo dal rischio associato
- al portafoglio, identificato da 
+Tuttavia nulla ci impedisce di ragionare partendo dal rischio associato
+ al por\SpecialChar \-
+ta\SpecialChar \-
+fo\SpecialChar \-
+glio, identificato da 
 \begin_inset Formula $\sigma_{p}^{2}=d$
 \end_inset
 
@@ -5314,34 +5305,17 @@ envelope portfolio”).
 
 .
  Un portafoglio del genere, se esiste, è chiamato portafoglio efficiente.
+ 
 \end_layout
 
 \begin_layout Standard
-\noindent
-\begin_inset VSpace bigskip
+\begin_inset VSpace smallskip
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-Grafico\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 5cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
 Nel definire il portafoglio frontiera ed il portafoglio efficiente abbiamo
  utilizzato nel nostro ragionamento la varianza del portafoglio.
  Avremmo potuto fare lo stesso ragionamento in termini della volatilità
@@ -5362,6 +5336,37 @@ e
 : 
 \begin_inset Formula \[
 \sigma_{p_{1}}^{2}>\sigma_{p_{2}}^{2}\Longleftrightarrow\sigma_{p_{1}}>\sigma_{p_{2}}\ .\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset VSpace 5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Portafogli frontiera
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5396,40 +5401,45 @@ R Core Team”.
  Il codice sorgente e gli eseguibili del programma di base e delle varie
  librerie aggiuntive possono essere scaricati accedendo all'indirizzo web
  
-\begin_inset Formula \[
-\emph{http://www.r-project.org}\]
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.r-project.org"
+target "http://www.r-project.org"
 
 \end_inset
 
  dove sono scaricabili le versioni del linguaggio per diversi sistemi operativi
  (Linux, Mac, Windows, ...).
+ 
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace medskip
-\end_inset
-
- Questo documento non è un manuale ma vuole essere semplicemente una traccia
+Questo documento non è un manuale ma vuole essere semplicemente una traccia
  o un riassunto di quanto presentato in classe.
  Per ulteriori approfondimenti e precisazioni dei temi trattati, oltre ai
  manuali ed alla ricca documentazione disponibile all'indirizzo sopraccitato,
  si vedano i riferimenti bibliografici indicati all'indirizzo 
-\begin_inset Formula \[
-\emph{http://www.r-project.org/doc/bib/R-publications.html\ }.\]
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.r-project.org/doc/bib/R-publications.html"
+target "http://www.r-project.org/doc/bib/R-publications.html"
 
 \end_inset
 
+.
  Buona documentazione in varie lingue fra cui l'italiano è pure ottenibile
  all'in\SpecialChar \-
 di\SpecialChar \-
 riz\SpecialChar \-
 zo 
-\begin_inset Formula \[
-\emph{http://stat.ethz.ch/CRAN/other-docs.html\ .}\]
+\begin_inset CommandInset href
+LatexCommand href
+name "http://stat.ethz.ch/CRAN/other-docs.html"
+target "http://stat.ethz.ch/CRAN/other-docs.html"
 
 \end_inset
 
-
+.
 \end_layout
 
 \begin_layout Section
@@ -5593,13 +5603,22 @@ te.
 status collapsed
 
 \begin_layout Plain Layout
-Da explorer non è possibile rinominare un file con un nome che inizia con
- un punto.
+In Windows XP non è possibile rinominare un file da explorer con un nome
+ che inizia con un punto.
  È necessario farlo da linea di comando (command prompt).
  Evito per ragioni di tempo di spiegare come aggirare il problema.
  La semplice alternativa è quella di copiare un file già esistente per poi
  modificarlo secondo le proprie necessità.
- Voi potete utilizzare il file .Rprofile che si trova sul disco Corsi.
+ Voi potete utilizzare il file .Rprofile disponibile su 
+\begin_inset CommandInset href
+LatexCommand href
+name "www.iCorsi.ch"
+target "www.iCorsi.ch"
+
+\end_inset
+
+.
+ Con Windows 7 questo problema non sussiste.
 \end_layout
 
 \end_inset
@@ -5636,11 +5655,7 @@ necessario aprire la cartella contenente il file che si desidera visualizzare,
 \begin_inset Quotes eld
 \end_inset
 
-View”
-\begin_inset space \space{}
-\end_inset
-
-e selezionare l'opzione 
+View” e selezionare l'opzione 
 \begin_inset Quotes eld
 \end_inset
 
@@ -5856,9 +5871,17 @@ options(htmlhelp=TRUE)
 \begin_layout Enumerate
 Andate al sito 
 \emph on
-www.r-project.org
+
+\begin_inset CommandInset href
+LatexCommand href
+name "www.r-project.org"
+target "www.r-project.org"
+
+\end_inset
+
+
 \emph default
- 
+ .
 \end_layout
 
 \begin_layout Enumerate
@@ -5867,14 +5890,17 @@ Cliccate su CRAN sul lato sinistro della finestra.
 \begin_inset Quotes eld
 \end_inset
 
-CRAN Mirrors”, io generalmente seleziono quello dell'ETH-Zurigo:
-\begin_inset Formula \[
-\emph{http://cran.ch.r-project.org/}\]
+CRAN Mirrors”, io generalmente seleziono quello dell'ETH-Zurigo: 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://cran.ch.r-project.org/"
+target "http://cran.ch.r-project.org/"
 
 \end_inset
 
+.
  In base alla piattaforma scaricate l'ultima versione di R, al momento la
- 2.10.1 ed installatela (a giorni dovrebbe essere rilasciata la versione 2.11.0).
+ 2.12.2 ed installatela (a giorni dovrebbe essere rilasciata la versione 2.13.0).
  
 \end_layout
 
@@ -5917,9 +5943,11 @@ La linea di comando
 \begin_layout Standard
 Alla sua apertura il programma R mostra una sola finestra.
  Questa finestra è chiamata 
-\begin_inset Formula $\emph{finestra\,\ di\,\ comando}$
-\end_inset
-
+\emph on
+\lang english
+finestra di comando
+\emph default
+\lang italian
  in quanto essa contiene la 
 \emph on
 linea di comando
@@ -10290,11 +10318,7 @@ names()
 \begin_layout Standard
 
 \series bold
-> names(dati.test)
-\begin_inset space \space{}
-\end_inset
-
-<- c(”Data”,”S&P100”,”MIB”,”Simulazione”)
+> names(dati.test) <- c(”Data”,”S&P100”,”MIB”,”Simulazione”)
 \end_layout
 
 \begin_layout Standard
@@ -10310,11 +10334,7 @@ Il risultato del comando names è un vettore.
 \begin_layout Standard
 
 \series bold
-> names(dati.test)
-\begin_inset space \space{}
-\end_inset
-
-[c(2,4)] <- c(”S&P”,”Sim”)
+> names(dati.test) [c(2,4)] <- c(”S&P”,”Sim”)
 \end_layout
 
 \end_deeper
@@ -10889,10 +10909,6 @@ attach()
 \series bold
 detach('nome') 
 \series default
-
-\begin_inset space \space{}
-\end_inset
-
 che elimina il data frame 'nome' dalla lista.
 \end_layout
 
@@ -12610,11 +12626,7 @@ Tra le molte funzioni matriciali ecco alcune di particolare importanza:
 \series bold
 t(A)
 \series default
-:
-\begin_inset space \space{}
-\end_inset
-
-ritorna la trasposta di A.
+: ritorna la trasposta di A.
  
 \end_layout
 
@@ -12632,11 +12644,7 @@ det(A)
 \series bold
 eigen (A)
 \series default
-:
-\begin_inset space \space{}
-\end_inset
-
-ritorna una variabile di tipo 'list' contenente il vettore degli autovalori
+: ritorna una variabile di tipo 'list' contenente il vettore degli autovalori
  e la matrice degli autovettori di A.
  (Rimandiamo al punto 
 \begin_inset CommandInset ref
@@ -12652,11 +12660,7 @@ reference "liste"
 \begin_layout Itemize
 
 \series bold
-diag
-\begin_inset space \space{}
-\end_inset
-
-(A)
+diag (A)
 \series default
 : se A è una matrice ritorna gli elementi della diagonale principale di
  A, se A è un vettore ritorna una matrice diagonale dove gli elementi della
@@ -14190,15 +14194,7 @@ Quando si elimina un elemento da una lista, tutti gli elementi con indice
 \begin_layout Standard
 
 \series bold
-[1] ”Il”
-\begin_inset space \space{}
-\end_inset
-
-”mio”
-\begin_inset space \space{}
-\end_inset
-
-”nuovo”
+[1] ”Il” ”mio” ”nuovo”
 \begin_inset ERT
 status collapsed
 
@@ -14836,11 +14832,7 @@ paste(”Correlazione dei returns di ”,nomi[i],”e”,nomi[j],
 
 
 \series bold
-sep=”
-\begin_inset space \space{}
-\end_inset
-
-”))
+sep=” ”))
 \series default
 
 \begin_inset VSpace medskip
@@ -15051,11 +15043,7 @@ type=”l”,xlab=”Osservazioni”,ylab=nomi[6])
 
 \begin_layout Standard
 Le dimensioni della larghezza e dell'altezza del grafico sono date in pollici
- (1 pollice =
-\begin_inset space \space{}
-\end_inset
-
-2.54 centrimetri).
+ (1 pollice = 2.54 centrimetri).
  È importante ricordarsi di chiudere il device una volta terminato!
 \end_layout
 
@@ -16472,31 +16460,56 @@ Funzioni e programmazione da Excel
 \begin_layout Standard
 È possibile utilizzare R direttamente da Excel tramite Visual Basic.
  Per fare questo è necessario installare uno o più pacchetti reperibili
- al seguente indirizzo:
-\begin_inset Formula \[
-http://sunsite.univie.ac.at/rcom.\]
+ al seguente indirizzo 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "http://sunsite.univie.ac.at/rcom"
+target "http://sunsite.univie.ac.at/rcom"
 
 \end_inset
 
- La descrizione del processo d'installazione va oltre lo scopo di questa
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+La descrizione del processo d'installazione va oltre lo scopo di questa
  introduzione.
  All'utente inesperto si consiglia l'installazione del paccetto 
 \emph on
 RAndFriendsLight
 \emph default
- reperibile all'indirizzo (selezionate l'etichetta 
-\series bold
-Download
-\series default
- del precedente link) 
-\begin_inset Formula \[
-http://sunsite.univie.ac.at/rcom/download.html\]
+ reperibile all'indirizzo 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset CommandInset href
+LatexCommand href
+name "http://sunsite.univie.ac.at/rcom/download.html"
+target "http://sunsite.univie.ac.at/rcom/download.html"
 
 \end_inset
 
- il quale installa e configura automaticamente, oltre che il pacchetto base
- di R, anche tutte le altre componenti necessarie al funzionamento e la
- comunicazione di R con Microsoft Excel.
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+(selezionate l'etichetta 
+\series bold
+Download
+\series default
+ del precedente link) il quale installa e configura automaticamente, oltre
+ che il pacchetto base di R, anche tutte le altre componenti necessarie
+ al funzionamento e la comunicazione di R con Microsoft Excel.
 \end_layout
 
 \begin_layout Chapter
@@ -16788,19 +16801,11 @@ The Single-Index Model
 
 \begin_layout Standard
 Nel corso del semestre invernale avete incontrato un modello chiamato ”The
- single-factor model”
-\begin_inset space \space{}
-\end_inset
-
-(Haugen, pp.
+ single-factor model” (Haugen, pp.
  136).
  Questo modello lo ritroviamo ora in Benninga con il nome di ”The Single-Index
- Model”
-\begin_inset space \space{}
-\end_inset
-
-(Capitolo 8.5, pp.
- 156).
+ Model” (Capitolo 10, pp.
+ 304).
  Evidenzieremo ora alcune proprietà del modello applicandolo a dati svizzeri.
 \begin_inset VSpace medskip
 \end_inset
@@ -16824,11 +16829,11 @@ rit\SpecialChar \-
 mi\SpecialChar \-
 ci
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-D'ora in poi in questo esercizio parleremo semplicemente di rendimenti intendend
-o però rendimenti logaritmici.
+In questa sezione parleremo semplicemente di rendimenti intendendo però
+ rendimenti logaritmici.
 \end_layout
 
 \end_inset
@@ -20266,11 +20271,17 @@ W:=\sum_{i=1}^{I}W_{i}\]
  Esemplificando, supponiamo che gli unici assets siano quelli trattati nell'indi
 ce Swiss Market Index
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Si veda a tal proposito il file historical_basket_nssmi_20090415.csv e la
- discussione in classe sul suo contenuto.
+Si veda a tal proposito quanto discusso nell'Esercizio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Esercizio 1"
+
+\end_inset
+
+ .
 \end_layout
 
 \end_inset
@@ -21044,10 +21055,6 @@ q_{\alpha}=F^{-1}(\alpha)=-\frac{\ln(1-\alpha)}{\lambda}\ .\]
 \begin_inset Formula $\square$
 \end_inset
 
-
-\begin_inset VSpace medskip
-\end_inset
-
  
 \begin_inset ERT
 status collapsed
@@ -21061,7 +21068,7 @@ end{esempio}
 
 \end_inset
 
- Inserire Grafico!
+ 
 \begin_inset VSpace medskip
 \end_inset
 
@@ -21619,7 +21626,7 @@ status collapsed
 
 .
  Il valore in essa contenuto serve ad inizializzare il generatore di numeri
- aleatori (si tratta infatti una funzione deterministica ...).
+ aleatori (in realtà si tratta di una funzione deterministica ...).
  In pratica, due simulazioni aventi il medesimo Random seed saranno identiche.
  Se la casella Random seed viene lasciata vuota si otterranno simulazioni
  diverse.
