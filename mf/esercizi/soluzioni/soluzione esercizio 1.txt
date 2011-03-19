@@ -1,0 +1,11 @@
+- I dati da scaricare sono nel file excel della
+cartella dati.
+
+- La risposta alle altre domande è discussa in 
+classe ma non ho preparato soluzioni. Le risposte
+sono contenute nei files:
+
+1) RULES GOVERNING SMI® INDEX FAMILY 
+2) SMI® Family – Factsheet
+3) Equity index selection list
+4) Current index-composition and divisor with adjusted closing prices from the most recent trading day

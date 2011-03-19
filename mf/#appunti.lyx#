@@ -3037,14 +3037,14 @@ esima azione in portafoglio.
 
 \begin_layout Enumerate
 Verificate quanto avete dimostrato nel punto precedente prendendo due serie
- storiche qualsiasi dei dati scaricati nell'Esercizio 
+ storiche qualsiasi i dati dell'Esempio 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "Esercizio 1"
+reference "esempio1 benninga"
 
 \end_inset
 
-.
+ (file Chapter 07.xls).
  Assumete 
 \begin_inset Formula $q_{1}=1$
 \end_inset
@@ -3394,9 +3394,7 @@ Se i rendimenti percentuali giornalieri fossero
  
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
-Utilizzando ...
+\begin_layout Standard
 \begin_inset space \hfill{}
 \end_inset
 
@@ -3407,6 +3405,7 @@ Utilizzando ...
 
 \end_layout
 
+\end_deeper
 \begin_layout Standard
 \begin_inset ERT
 status collapsed
