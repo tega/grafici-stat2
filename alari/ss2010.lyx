@@ -1,0 +1,378 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{amsfonts}
+
+\usetheme{Madrid}
+
+\title[ALARIStatisticsCourse]{ALARIStatisticsCourse}\subtitle{PartII}\author[ClaudioOrtelli]{ClaudioOrtelli}\institute[USI]{Universit\`{a}dellaSvizzeraitaliana}\date[29/2010]{April2011}
+\end_preamble
+\options handout
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a continous random variable with distribution function 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+, 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ a function and 
+\begin_inset Formula \[
+Y=\Psi(X).\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Under regularity conditions on 
+\begin_inset Formula $\Psi$
+\end_inset
+
+, 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a random variable! 
+\end_layout
+
+\begin_layout Itemize
+Continuity or stepwise continuity of 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ are sufficient conditions for 
+\begin_inset Formula $Y$
+\end_inset
+
+ to be a random variable.
+ 
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Example: Quadratic cost function.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout ExampleBlock
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ denote a measurement error.
+ We assume a quadratic cost function, i.e.
+ 
+\begin_inset Formula $Y=\Psi(X)=X^{2}$
+\end_inset
+
+.
+ The random variable 
+\begin_inset Formula $Y$
+\end_inset
+
+ has a distribution function 
+\begin_inset Formula $F_{Y}$
+\end_inset
+
+ which depends on 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Itemize
+To derive 
+\begin_inset Formula $F_{Y}$
+\end_inset
+
+ simply compute the preimage of the event 
+\begin_inset Formula $C=(-\infty,y]$
+\end_inset
+
+.
+ In fact by definition of 
+\begin_inset Formula $F_{Y}$
+\end_inset
+
+
+\begin_inset Formula \begin{eqnarray*}
+F_{Y}(y) & = & P(Y\leq y)=P(Y\in C)\\
+ & = & P(\Psi(X)\in C)\\
+ & = & P(\Psi^{-1}(C))\\
+ & = & P_{X}(B)\end{eqnarray*}
+
+\end_inset
+
+where the set 
+\begin_inset Formula $B$
+\end_inset
+
+ is the preimage of 
+\begin_inset Formula $C$
+\end_inset
+
+, i.e.
+\begin_inset Formula \[
+B=\Psi^{-1}(C)=\{x\in\mathbb{R\mid}\Psi(x)\in C\}.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The preimage function of 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is a set function (the arguments are subsets of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+) and is defined even if 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is not one-to-one.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/variabileAleatoria.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/funzioneDivariabileAleatoria.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Example continued
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Because 
+\begin_inset Formula $Y=X^{2}\geqslant0$
+\end_inset
+
+ and 
+\begin_inset Formula $X=\pm\sqrt{Y}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+when 
+\begin_inset Formula $y\leq0$
+\end_inset
+
+ it follows 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $F_{Y}(y)=0$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+when 
+\begin_inset Formula $y>0$
+\end_inset
+
+ it follows 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $Y\leqslant y\Leftrightarrow-\sqrt{y}\leqslant X\leqslant\sqrt{y}$
+\end_inset
+
+ so that 
+\begin_inset Formula $F_{Y}(y)=F_{X}(\sqrt{y})-F_{X}(-\sqrt{y})$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+pippo
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document
