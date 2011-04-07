@@ -9,6 +9,9 @@
 
 \setbeamercovered{transparent}
 % or whatever (possibly just delete it)
+
+\newcounter{esr}
+\newtheorem{esercizio}[esr]{Exercise}
 \end_preamble
 \use_default_options false
 \language english
@@ -129,181 +132,60 @@ optional, should be abbreviation of conference name
 
 \end_layout
 
-\begin_layout Section
-Motivation
+\begin_layout BeginFrame
+Functions of random variables
 \end_layout
 
-\begin_layout Subsection
-The Basic Problem That We Studied
-\begin_inset OptArg
-status open
+\begin_layout Itemize
+Let 
+\begin_inset Formula $X$
+\end_inset
 
-\begin_layout Plain Layout
-Basic Problem
-\end_layout
+ be a continuous random variable with distribution function 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+, 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ a function and 
+\begin_inset Formula \[
+Y=\Psi(X).\]
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout BeginFrame
-Make Titles Informative.
- Use Uppercase Letters.
+\begin_layout Itemize
+Under regularity conditions on 
+\begin_inset Formula $\Psi$
+\end_inset
+
+, 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a random variable! 
 \end_layout
 
-\begin_layout FrameSubtitle
-Frame subtitles are optional.
- Use upper- or lowercase letters.
-\begin_inset Note Note
-status open
+\begin_layout Itemize
+Continuity or stepwise continuity of 
+\begin_inset Formula $\Psi$
+\end_inset
 
-\begin_layout Plain Layout
-A title should summarize the slide in an understandable fashion for anyone
- how does not follow everything on the slide itself.
+ are sufficient conditions for 
+\begin_inset Formula $Y$
+\end_inset
+
+ to be a random variable.
  
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Use Itemize a lot.
-\end_layout
-
-\begin_deeper
-\begin_layout Pause
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-Use very short sentences or short phrases.
-\end_layout
-
-\begin_deeper
-\begin_layout Pause
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-These overlays are created using the Pause style.
-\end_layout
-
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-You can also use overlay specifications to create overlays.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<3->
-\end_layout
-
-\end_inset
-
-This allows you to present things in any order.
-\end_layout
-
-\begin_layout Itemize
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-This is shown second.
-\end_layout
-
-\begin_layout BeginFrame
-Make Titles Informative.
-\end_layout
-
-\begin_layout Block
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Untitled block.
-\end_layout
-
-\begin_layout Itemize
-Shown on all slides.
-\end_layout
-
-\end_deeper
 \begin_layout ExampleBlock
 \begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -312,9 +194,186 @@ status collapsed
 
 \end_inset
 
-Some Example Block Title
+Example: Quadratic cost function.
 \begin_inset ERT
-status collapsed
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout ExampleBlock
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ denote a measurement error.
+ We assume a quadratic cost function, i.e.
+ 
+\begin_inset Formula $Y=\Psi(X)=X^{2}$
+\end_inset
+
+.
+ The random variable 
+\begin_inset Formula $Y$
+\end_inset
+
+ has a distribution function 
+\begin_inset Formula $F_{Y}$
+\end_inset
+
+ which depends on 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Psi$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Itemize
+To derive 
+\begin_inset Formula $F_{Y}$
+\end_inset
+
+ simply compute the preimage of the event 
+\begin_inset Formula $C=(-\infty,y]$
+\end_inset
+
+.
+ In fact by definition of 
+\begin_inset Formula $F_{Y}$
+\end_inset
+
+
+\begin_inset Formula \begin{eqnarray*}
+F_{Y}(y) & = & P(Y\leq y)=P(Y\in C)\\
+ & = & P(\Psi(X)\in C)\\
+ & = & P(\Psi^{-1}(C))\\
+ & = & P_{X}(B)\end{eqnarray*}
+
+\end_inset
+
+where the set 
+\begin_inset Formula $B$
+\end_inset
+
+ is the preimage of 
+\begin_inset Formula $C$
+\end_inset
+
+, i.e.
+\begin_inset Formula \[
+B=\Psi^{-1}(C)=\{x\in\mathbb{R\mid}\Psi(x)\in C\}.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The preimage function of 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is a set function (the arguments are subsets of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\mathbb{R}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+) and is defined even if 
+\begin_inset Formula $\Psi$
+\end_inset
+
+ is not one-to-one.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/variabileAleatoria.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/funzioneDivariabileAleatoria.pdf
+	scale 95
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Example continued
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
 
@@ -326,204 +385,122 @@ status collapsed
 
 \end_layout
 
-\begin_deeper
-\begin_layout Itemize
-\begin_inset Formula $e^{i\pi}=-1$
+\begin_layout ExampleBlock
+Because 
+\begin_inset Formula $Y=X^{2}$
+\end_inset
+
+ is always positive 
+\begin_inset Formula $F_{Y}(y)=0$
+\end_inset
+
+ whenever 
+\begin_inset Formula $y\leq0$
 \end_inset
 
 .
-\end_layout
+ When 
+\begin_inset Formula $y>0$
+\end_inset
 
-\begin_layout Itemize
-\begin_inset Formula $e^{i\pi/2}=i$
+ it follows 
+\begin_inset Formula $Y\leqslant y\Leftrightarrow-\sqrt{y}\leqslant X\leqslant\sqrt{y}$
+\end_inset
+
+ so that 
+\begin_inset Formula $F_{Y}(y)=F_{X}(\sqrt{y})-F_{X}(-\sqrt{y})$
 \end_inset
 
 .
-\end_layout
+ If the random variable 
+\begin_inset Formula $X$
+\end_inset
 
-\end_deeper
-\begin_layout Subsection
-Previous Work
-\end_layout
+ has a density function we can differentiate the last expression to obtain
+ the density function of 
+\begin_inset Formula $Y$
+\end_inset
 
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout Example
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
+:
+\begin_inset Formula \[
+f_{Y}(y)=\begin{cases}
+\frac{1}{2\sqrt{y}}\left[f_{X}(\sqrt{y})+f_{X}(-\sqrt{y})\right], & y>0,\\
+0, & \mbox{otherwise.}\end{cases}\]
 
 \end_inset
 
-On first slide.
- 
-\end_layout
 
-\begin_layout Separator
-
-\end_layout
-
-\begin_layout Example
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-On second slide.
-\end_layout
-
-\begin_layout Section
-Our Results/Contribution
-\end_layout
-
-\begin_layout Subsection
-Main Results
-\end_layout
-
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout Theorem
-On first slide.
-\end_layout
-
-\begin_layout Pause
-
-\end_layout
-
-\begin_layout Corollary
-On second slide.
-\end_layout
-
-\begin_layout BeginFrame
-Make Titles Informative.
- 
-\end_layout
-
-\begin_layout ColumnsTopAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Theorem
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<1->
-\end_layout
-
-\end_inset
-
-In left column.
-\end_layout
-
-\begin_layout Column
-5cm
-\end_layout
-
-\begin_layout Corollary
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-<2->
-\end_layout
-
-\end_inset
-
-In right column.
-\begin_inset Newline newline
-\end_inset
-
-New line
-\end_layout
-
-\end_deeper
-\begin_layout Subsection
-Basic Ideas for Proofs/Implementations
-\end_layout
-
-\begin_layout Section*
-Summary
-\end_layout
-
-\begin_layout BeginFrame
-Summary
-\end_layout
-
-\begin_layout Itemize
-The
-\color none
- 
-\color red
-first main message
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-The
-\color none
- 
-\color red
-second main message
-\color none
- of your talk in one or two lines.
-\end_layout
-
-\begin_layout Itemize
-Perhaps a
-\color none
- 
-\color red
-third message
-\color none
-, but not more than that.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
+\begin_inset ERT
 status open
-
-\begin_layout Plain Layout
-An outlook is always optional.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
 
 \begin_layout Plain Layout
 
 
 \backslash
-vskip0pt plus.5fill
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be uniformly distributed on 
+\begin_inset Formula $(0,1)$
+\end_inset
+
+ and define 
+\begin_inset Formula $Y=\lambda^{-1}ln(1-X)$
+\end_inset
+
+ where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ is a parameter.
+ Show that 
+\begin_inset Formula $Y$
+\end_inset
+
+ has an exponential distribution with parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
 \end_layout
 
 \end_inset
@@ -531,20 +508,137 @@ vskip0pt plus.5fill
 
 \end_layout
 
-\begin_layout Itemize
-Outlook
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a continuous random variable with density function 
+\begin_inset Formula $f_{X}$
+\end_inset
+
+ satisfying 
 \end_layout
 
 \begin_deeper
 \begin_layout Itemize
-What we have not done yet.
+\begin_inset Formula $f_{X}>0$
+\end_inset
+
+ for 
+\begin_inset Formula $x\in I\subset\mathbb{R}$
+\end_inset
+
+ and 
 \end_layout
 
 \begin_layout Itemize
-Even more stuff.
+\begin_inset Formula $f_{X}>0$
+\end_inset
+
+ for 
+\begin_inset Formula $x\notin I$
+\end_inset
+
+ 
 \end_layout
 
 \end_deeper
+\begin_layout Theorem
+and let 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ be a 
+\emph on
+differentiable
+\emph default
+ and 
+\emph on
+monotone
+\emph default
+ real valued funtion with domain 
+\begin_inset Formula $I$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula $Y=\Phi(X)$
+\end_inset
+
+ is a continuous random variable with density function
+\begin_inset Formula \[
+f_{Y}(y)=\begin{cases}
+f_{X}\left[\Phi^{-1}(y)\right]\left[\mid\frac{\partial}{\partial y}\left(\Phi^{-1}\right)(y)\mid\right], & y\in\Phi(I),\\
+0, & \mbox{otherwise.}\end{cases}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $\Phi$
+\end_inset
+
+ be the distribution function 
+\begin_inset Formula $F$
+\end_inset
+
+ of the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ with density function 
+\begin_inset Formula $f$
+\end_inset
+
+ (we need to assume that 
+\begin_inset Formula $F$
+\end_inset
+
+ has the previous properties of continuity and differentiability) and define
+ 
+\begin_inset Formula $Y=F(X)$
+\end_inset
+
+.
+ The random variable 
+\begin_inset Formula $Y$
+\end_inset
+
+ has density given by 
+\begin_inset Formula \[
+f_{Y}(y)=\begin{cases}
+1, & 0<y<1,\\
+0, & \mbox{otherwise}.\end{cases}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout
