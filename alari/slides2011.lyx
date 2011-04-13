@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -2315,7 +2315,7 @@ Distributions of functions of continuous random variables
  case.
  
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2327,24 +2327,24 @@ begin{Theorem}
 \end_inset
 
  Assume that 
-\begin_inset Formula $X=(X_{1},X_{2})$
+\begin_inset Formula $X=(X_{1},\ldots,X_{n})$
 \end_inset
 
  is a random vector with joint density function 
-\begin_inset Formula $f_{X}(x_{1},x_{2})$
+\begin_inset Formula $f_{X}(x_{1},\ldots,x_{n})$
 \end_inset
 
  and 
-\begin_inset Formula $g:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$
+\begin_inset Formula $g:\mathbb{R}^{n}\rightarrow\mathbb{R}^{n}$
 \end_inset
 
  a one-to-one and continuously differentiable function.
  Define 
-\begin_inset Formula $Y=(Y_{1},Y_{2})=g(X)$
+\begin_inset Formula $Y=(Y_{1},\ldots,Y_{n})=g(X)$
 \end_inset
 
 .
- The density function of 
+ The joint density function of 
 \begin_inset Formula $Y$
 \end_inset
 
@@ -2356,7 +2356,7 @@ f_{Y}(y)=f_{X}(g^{-1}(y))\ \rvert J(g^{-1}(y))\rvert\]
 
  where 
 \begin_inset Formula \[
-J(g^{-1}(y))=\det(M_{J})=\det\left[\frac{\partial x_{i}(y)}{\partial y_{j}}\right]_{i=1,2;\ j=1,2}\]
+J(g^{-1}(y))=\det(M_{J})=\det\left[\frac{\partial x_{i}(y)}{\partial y_{j}}\right]_{i=1,n;\ j=1,n}\]
 
 \end_inset
 
@@ -3462,6 +3462,96 @@ status collapsed
 
 \end_inset
 
+Expectation based on multiple Random Variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X_{1},X_{2},...,X_{n}$
+\end_inset
+
+ be 
+\begin_inset Formula $n$
+\end_inset
+
+ random variables defined on the same probability space and define 
+\begin_inset Formula $Y=\Phi(X_{1},X_{2},...,X_{n})$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula \begin{eqnarray*}
+E[Y] & = & E[\Phi(X)]\\
+ & = & \begin{cases}
+\sum_{x_{1}}\ldots\sum_{x_{n}}\Phi(x_{1},x_{2},...,x_{n})p(x_{1},x_{2},...,x_{n}), & \mbox{descrete case}\\
+\int_{\mathbb{R}}\ldots\int_{\mathbb{R}}\Phi(x_{1},x_{2},...,x_{n})p(x_{1},x_{2},...,x_{n})dx_{1}\ldots dx_{n}, & \mbox{contin. case}\end{cases}\end{eqnarray*}
+
+\end_inset
+
+
+\series bold
+Remark:
+\series default
+ It is not necessary to derive the pmf (descrete case) or the pdf (cont.
+ case) of the random variable 
+\begin_inset Formula $Y$
+\end_inset
+
+ in order to compute its expected value.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
 Moments
 \begin_inset ERT
 status collapsed
@@ -3509,10 +3599,26 @@ The expected value is a linear operator.
 
 \end_layout
 
+\begin_layout Standard
+This property does not require that 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be independent and can be generalized to the case of 
+\begin_inset Formula $n$
+\end_inset
+
+ random variables!
+\end_layout
+
 \end_deeper
 \begin_layout Itemize
 The variance satisfies the following property: 
-\begin_inset Formula $V[a+bX]=b^{2}V[X].$
+\begin_inset Formula $Var[a+bX]=b^{2}Var[X].$
 \end_inset
 
 
@@ -3540,14 +3646,13 @@ begin{esercizio}
 \end_inset
 
  use the property of linearity of the expected value to prove that 
-\begin_inset Formula $V[X]=E[X^{2}]-(E[X])^{2}$
+\begin_inset Formula $Var[X]=E[X^{2}]-(E[X])^{2}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-
 2) Define the function 
 \begin_inset Formula $g:\mathbb{R}\rightarrow[0,\infty]$
 \end_inset
@@ -3583,6 +3688,493 @@ end{esercizio}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be two random variable.
+ The covariance between 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is defined to be
+\begin_inset Formula \[
+Cov(X,Y)=E[(X-E[X])(Y-E(Y)].\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The covariance is a measure of linear dependence between two random variables.
+ If 
+\begin_inset Formula $Cov(X,Y)=0$
+\end_inset
+
+ we say that 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are uncorrelated.
+\end_layout
+
+\begin_layout Itemize
+The covariance is a 
+\emph on
+bilinear
+\emph default
+ operator.
+ In fact let 
+\begin_inset Formula $X$
+\end_inset
+
+,Y and 
+\begin_inset Formula $Z$
+\end_inset
+
+ be two random variables with existing expectation and 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $Cov(X+Y,Z)=Cov(X,Z)+Cov(Y,Z)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Cov(\lambda X,Z)=\lambda Cov(X,Z)$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Cov(X,Z)=Cov(Z,X).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+General rule: freeze the first (second) argument and consider the covariance
+ an expectation in the second (first) argument.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+examle 4.9
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Starting from the definition of 
+\begin_inset Formula $Cov$
+\end_inset
+
+ use the property of linearity of the expected value to prove property 1.
+ and 2.
+ of the covariance.
+\end_layout
+
+\begin_layout Enumerate
+Using the linearity of the expected value show that 
+\begin_inset Formula $Cov(X,Y)=E[XY]-E[X]E[Y]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Show that if 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are two independent random variables, then 
+\begin_inset Formula $Cov(X,Y)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $Cov(X,X)=Var(X)$
+\end_inset
+
+.
+ Hint: simply start from the definition of 
+\begin_inset Formula $Cov$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $Var(X+Y)=Var(X)+Var(Y)+2Cov(X,Y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $X\sim N(0,1)$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ a random variable independent from 
+\begin_inset Formula $X$
+\end_inset
+
+ and such that 
+\begin_inset Formula $P(Y=1)=P(Y=-1)=0.5$
+\end_inset
+
+.
+ Finally define 
+\begin_inset Formula $Z=X\cdot Y$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $Cov(X,Z)=0.$
+\end_inset
+
+ Are 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Z$
+\end_inset
+
+ independent random variables?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Correlation:
+\series default
+ the correlation coefficient 
+\begin_inset Formula $\rho(X,Y)$
+\end_inset
+
+ between the random variables 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is defined by
+\begin_inset Formula \[
+\rho(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var(X)\: Var(Y)}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Remark:
+\series default
+ the correlation coefficient satisfies the following inequalities: 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $-1<\rho(X,Y)<1$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
