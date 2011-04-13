@@ -4,10 +4,14 @@
 \begin_header
 \textclass beamer
 \begin_preamble
-\usetheme{Warsaw}
+\usepackage{amsfonts}
+
+\usetheme{Madrid}
+
+%\usetheme{Warsaw}
 % or ...
 
-\setbeamercovered{transparent}
+%\setbeamercovered{transparent}
 % or whatever (possibly just delete it)
 
 \newcounter{esr}
@@ -517,6 +521,12 @@ Functions of random variables
 \end_layout
 
 \begin_layout Theorem
+\begin_inset CommandInset label
+LatexCommand label
+name "the:transform theorem"
+
+\end_inset
+
 Let 
 \begin_inset Formula $X$
 \end_inset
@@ -593,8 +603,8 @@ f_{X}\left[\Phi^{-1}(y)\right]\left[\mid\frac{\partial}{\partial y}\left(\Phi^{-
 Functions of random variables
 \end_layout
 
-\begin_layout Example
-Let 
+\begin_layout Examples
+1) Let 
 \begin_inset Formula $\Phi$
 \end_inset
 
@@ -635,7 +645,47 @@ f_{Y}(y)=\begin{cases}
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Examples
+2) Assume 
+\begin_inset Formula $Y=aX+b$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ is a affine linear trasformation of 
+\begin_inset Formula $X$
+\end_inset
+
+ By Theorem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "the:transform theorem"
+
+\end_inset
+
+ we have that ( where 
+\begin_inset Formula $I$
+\end_inset
+
+ is the set over which 
+\begin_inset Formula $f_{X}\neq0$
+\end_inset
+
+) 
+\begin_inset Formula \[
+f_{Y}(y)=\begin{cases}
+\frac{1}{\mid a\mid}f_{X}\left(\frac{y-b}{a}\right), & y\in aI+b,\\
+0, & \mbox{otherwise.}\end{cases}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Examples
 
 \end_layout
 
@@ -643,36 +693,263 @@ f_{Y}(y)=\begin{cases}
 
 \end_layout
 
-\begin_layout Section*
-\start_of_appendix
-\begin_inset Note Note
+\begin_layout BeginFrame
+Functions of random variables
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-All of the following is optional and typically not needed.
+
+
+\backslash
+begin{esercizio}
 \end_layout
 
 \end_inset
 
-Appendix
+In the previous Example assume 
+\begin_inset Formula $X\thicksim N(\mu,sigma^{2})$
+\end_inset
+
+ and derive the density function of 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ What do you observe?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
 \end_layout
 
-\begin_layout Subsection*
-For Further Reading
+\end_inset
+
+
 \end_layout
 
-\begin_layout BeginFrame
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
 
-[allowframebreaks]
+{
 \end_layout
 
 \end_inset
 
-For Further Reading
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Motivation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+We are interested in simulating a model of a real system (network, electronic
+ device, ...).
+ 
+\end_layout
+
+\begin_layout Itemize
+The output 
+\begin_inset Formula $Y$
+\end_inset
+
+ of the model depends on a stochastic input, i.e.
+ a random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ with known distribution function 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+: 
+\begin_inset Formula \[
+Y=g(X).\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename sistemaComplesso.png
+	width 157pt
+	keepAspectRatio
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% sistemaComplesso.png: 314x158 pixel, 72dpi, 11.08x5.57 cm, bb=0 0 314 158
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Simulation of random variables
+\end_layout
+
+\begin_layout Itemize
+The model is too complex in order to analytically derive the probabilistic
+ properties of the output, i.e.
+ 
+\begin_inset Formula $F_{Y}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Idea: simulate a possible outcome 
+\begin_inset Formula $x$
+\end_inset
+
+ of the input 
+\begin_inset Formula $X$
+\end_inset
+
+ and evaluate the corresponding outcome 
+\begin_inset Formula $y=g(x)$
+\end_inset
+
+ of the output.
+ Repeat the experiment 
+\begin_inset Formula $N$
+\end_inset
+
+ times and analyse the results.
+ 
+\end_layout
+
+\begin_layout Itemize
+The simulated values of the input must be drawn from the distribution of
+ 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Question: how is it possible to simulate independent realizations from a
+ given distribution 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Itemize
+Answer: different methods available.
+ The simplest of them requires simulating from the uniform distribution
+ on the open interval (0,1), i.e.
+ 
+\begin_inset Formula $U(0,1)$
+\end_inset
+
+.
+ In Matlab use the function 
+\begin_inset Quotes eld
+\end_inset
+
+rand
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
 \end_layout
 
 \begin_layout Standard
@@ -683,100 +960,1744 @@ status collapsed
 
 
 \backslash
-beamertemplatebookbibitems
+begin{frame}
 \end_layout
 
 \end_inset
 
 
-\begin_inset Note Note
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Inverse Transform Method
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ If the distribution function 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+ is continuous and strictly increasing then 
+\begin_inset Formula $F_{X}^{-1}:\ (0,1)\rightarrow\mathbb{R}$
+\end_inset
+
+ exists.
+ 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+Example: Chi-Squared Distribution with 5 degrees of freedom 
+\begin_inset Graphics
+	filename distChi2.pdf
+	width 5.8cm
+	keepAspectRatio
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename quantileChi2.pdf
+	width 5.8cm
+	keepAspectRatio
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ For a general distribution function not necessarily strictly increasing
+ define 
+\begin_inset Formula \[
+F_{X}^{-1}(p)=\inf\{x:p\leq F_{X}(x)\}\ \ 0<p<1.\]
+
+\end_inset
+
+ It then follows that 
+\begin_inset Formula $F_{X}^{-1}(p)\leq x\Longleftrightarrow p\leq F_{X}(x).$
+\end_inset
+
+ 
+\begin_inset VSpace 0.2cm
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+Example: Binomial distribution 
+\begin_inset Formula $Bin(n=3,p=0.3)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.7cm
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename distBinomiale.pdf
+	width 5.8cm
+	keepAspectRatio
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename quantileBinomiale.pdf
+	width 5.8cm
+	keepAspectRatio
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Inverse Transform Method
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+[Inverse Transform Method] Let 
+\begin_inset Formula $U$
+\end_inset
+
+ a continuous Unif(0,1) distributed random variable.
+ The random variable 
+\begin_inset Formula $Y=F_{X}^{-1}(U)$
+\end_inset
+
+ has distribution function 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ By definition 
+\begin_inset Formula \[
+F_{Y}(c):=P(Y\leq c)=P(F_{X}^{-1}(U)\leq c).\]
+
+\end_inset
+
+ But the last equality is equivalent to (see previous slide) 
+\begin_inset Formula \[
+P(U\leq F_{X}(c))=F_{X}(c).\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Inverse Transform Method
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ From the previous theorem we derive the following 
+\emph on
+two steps
+\emph default
+ simulation algorithm 
+\end_layout
+
+\begin_layout Enumerate
+Simulate a realization 
+\begin_inset Formula $u$
+\end_inset
+
+ from a Unif(0,1) random variable 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $x=F_{X}^{-1}(u)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Example
+Simulation of 
+\begin_inset Formula $Y\sim Exp(\lambda)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+The distribution function is 
+\begin_inset Formula $F_{Y}(x)=1-\exp(-\lambda x)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Compute 
+\begin_inset Formula $F_{Y}^{-1}(p)=-\frac{1}{\lambda}\ln(1-p)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+Sample a random draw 
+\begin_inset Formula $u$
+\end_inset
+
+ from 
+\begin_inset Formula $U\sim$
+\end_inset
+
+ Unif(0,1)
+\end_layout
+
+\begin_layout Itemize
+Set 
+\begin_inset Formula $y=-\frac{1}{\lambda}\ln(1-u)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Inverse Transform Method
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset VSpace -4cm
+\end_inset
+
+ Remark: if 
+\begin_inset Formula $U\sim$
+\end_inset
+
+ Unif(0,1) then 
+\begin_inset Formula $1-U$
+\end_inset
+
+ is also Unif(0,1).
+ Therefore we can also write 
+\begin_inset Formula $Y=-\frac{1}{\lambda}\ln(U)$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Inverse Transform Method
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ For a descrete random variable 
+\begin_inset Formula $Y$
+\end_inset
+
+ with probability mass function 
+\begin_inset Formula $P(Y=x_{i})=p_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,...,m$
+\end_inset
+
+ consider the following algorithm: 
+\end_layout
+
+\begin_layout Enumerate
+Generate a Unif(0,1) random variable 
+\begin_inset Formula $U$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Compute 
+\begin_inset Formula $Y$
+\end_inset
+
+ as follows 
+\begin_inset Formula \[
+Y=x_{j}\textnormal{\hspace{0.5cm} if \hspace{0.1cm}}\sum_{i=1}^{j-1}p_{i}<U\leq\sum_{i=1}^{j}p_{i}.\]
+
+\end_inset
+
+ i.e.
+ 
+\begin_inset Formula $Y=x_{j}$
+\end_inset
+
+ if 
+\begin_inset Formula $F_{Y}(x_{j-1})<U\leq F_{Y}(x_{j})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Inverse Transform Method
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ have the following mass function 
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="4">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{3}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p_{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.4 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+The simulation algorithm is the following:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u\leq p_{1}=0.1$
+\end_inset
+
+ then 
+\begin_inset Formula $y=x_{1}$
+\end_inset
+
+.
+ Stop.
+\end_layout
+
+\begin_layout Enumerate
+if 
+\begin_inset Formula $u\leq p_{1}+p_{2}=0.3$
+\end_inset
+
+ then 
+\begin_inset Formula $y=x_{2}$
+\end_inset
+
+.
+ Stop.
+ 
+\end_layout
+
+\begin_layout Enumerate
+if 
+\begin_inset Formula $u\leq p_{1}+p_{2}+p_{3}=0.7$
+\end_inset
+
+ then 
+\begin_inset Formula $y=x_{3}$
+\end_inset
+
+.
+ Stop.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y=x_{4}$
+\end_inset
+
+.
+ Stop.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Example
+This algorithm is correct but inefficient.
+ In fact, probabilities of one, two, ...
+ comparisons are equal to the probabilities of 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+, ..., respectively.
+ The expected number of comparisons is 
+\begin_inset Formula \[
+p_{1}+2p_{2}+3p_{3}+4p_{4}=2.9.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Inverse Transform Method
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ We can improve efficiency by sorting the values of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ by decreasing order of probabilities 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+'s: 
+\begin_inset Formula $x_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $u\leq p_{3}=0.4$
+\end_inset
+
+ then 
+\begin_inset Formula $y=x_{3}$
+\end_inset
+
+.
+ Stop.
+ 
+\end_layout
+
+\begin_layout Enumerate
+if 
+\begin_inset Formula $u\leq p_{3}+p_{4}=0.7$
+\end_inset
+
+ then 
+\begin_inset Formula $y=x_{4}$
+\end_inset
+
+.
+ Stop.
+ 
+\end_layout
+
+\begin_layout Enumerate
+if 
+\begin_inset Formula $u\leq p_{3}+p_{4}+p_{2}=0.9$
+\end_inset
+
+ then 
+\begin_inset Formula $y=x_{2}$
+\end_inset
+
+.
+ Stop.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $y=x_{1}$
+\end_inset
+
+.
+ Stop.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+ The expected number of comparisons is now equal to 
+\begin_inset Formula \[
+p_{3}+2p_{4}+3p_{2}+4p_{1}=2.\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Exercises
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The Laplace distribution is a continuous distribution with density function
+ 
+\begin_inset Formula \[
+f(x;\mu,b)=\left\{ \begin{array}{ll}
+\frac{1}{2b}\exp(-\frac{\mu-x}{b}) & \textnormal{if }x<\mu\\
+\frac{1}{2b}\exp(-\frac{x-\mu}{b}) & \textnormal{if }x\geq\mu\end{array}\right.\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the mean and 
+\begin_inset Formula $b$
+\end_inset
+
+ a scale parameter.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Plot the density, distribution and quantile functions of the Laplace distributio
+n with parameter 
+\begin_inset Formula $\mu=1$
+\end_inset
+
+ and 
+\begin_inset Formula $b=0.5$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Using the previous values of 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $b$
+\end_inset
+
+ simulate 
+\begin_inset Formula $N=1000$
+\end_inset
+
+ independent realizations of a Laplace distributed random variable 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Plot the histogram of the simulated random variables and compare it with
+ the density function of 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Plot the empiric distribution function of the simulated sample and compare
+ it with the distribution function of 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Transform methods
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The theorem on 
+\emph on
+Distributions of functions of continuous random variables
+\emph default
+ allows us to generate random variables by means of ad hoc transformations
+ of Unif(0,1) random variables.
+ The following theorem generalizes the previous theorem to the multivariate
+ case.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{Theorem}
+\end_layout
+
+\end_inset
+
+ Assume that 
+\begin_inset Formula $X=(X_{1},X_{2})$
+\end_inset
+
+ is a random vector with joint density function 
+\begin_inset Formula $f_{X}(x_{1},x_{2})$
+\end_inset
+
+ and 
+\begin_inset Formula $g:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$
+\end_inset
+
+ a one-to-one and continuously differentiable function.
+ Define 
+\begin_inset Formula $Y=(Y_{1},Y_{2})=g(X)$
+\end_inset
+
+.
+ The density function of 
+\begin_inset Formula $Y$
+\end_inset
+
+ is then equal to 
+\begin_inset Formula \[
+f_{Y}(y)=f_{X}(g^{-1}(y))\ \rvert J(g^{-1}(y))\rvert\]
+
+\end_inset
+
+ where 
+\begin_inset Formula \[
+J(g^{-1}(y))=\det(M_{J})=\det\left[\frac{\partial x_{i}(y)}{\partial y_{j}}\right]_{i=1,2;\ j=1,2}\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{Theorem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Transform methods
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $X\sim N(\mu,\Sigma)$
+\end_inset
+
+ be a 
+\begin_inset Formula $2\times1$
+\end_inset
+
+ random vector and consider the affine transformation 
+\begin_inset Formula \[
+Y=b+A\ X\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $b$
+\end_inset
+
+ is a deterministic 
+\begin_inset Formula $2\times1$
+\end_inset
+
+ vector and 
+\begin_inset Formula $A$
+\end_inset
+
+ a 
+\begin_inset Formula $2\times2$
+\end_inset
+
+ invertible matrix.
+ We then have 
+\begin_inset Formula \[
+X=A^{-1}(Y-b);\ M_{J}=A^{-1}\]
+
+\end_inset
+
+ and 
+\begin_inset Formula $f_{Y}(y)$
+\end_inset
+
+ is equal to 
+\begin_inset Formula \[
+\frac{1}{\sqrt{2\pi det(\Sigma)}}\exp(-\frac{1}{2}(A^{-1}(Y-b)-\mu)'\Sigma^{-1}(A^{-1}(Y-b)-\mu))\rvert det(A^{-1})\rvert\]
+
+\end_inset
+
+ 
+\begin_inset Formula \[
+\frac{1}{\sqrt{2\pi det(A\Sigma A')}}\exp(-\frac{1}{2}(Y-b-A\mu)'(A\Sigma A')^{-1}(Y-b-A\mu))\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Transform methods
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout ExampleBlock
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Start with overview books.
+
+{
 \end_layout
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Author1990"
-
-\end_inset
-
-A.
- Author.
- 
+Example continued
 \begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
-
-\emph on
-Handbook of Everything
-\emph default
-.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-newblock
-\end_layout
-
-\end_inset
-
- Some Press, 1990.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-beamertemplatearticlebibitems
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Followed by interesting articles.
- Keep the list short.
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ExampleBlock
+Looking at the density function of 
+\begin_inset Formula $Y$
+\end_inset
+
+ we note that 
+\begin_inset Formula $Y\sim N(\tilde{\mu},\tilde{\Sigma})$
+\end_inset
+
+ whith 
+\begin_inset Formula $\tilde{\mu}=b+A\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $\tilde{\Sigma}=A\Sigma A'$
+\end_inset
+
+.
+ 
+\begin_inset VSpace 1cm
+\end_inset
+
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $U_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $U_{2}$
+\end_inset
+
+ are two independent Unif(0,1) distributed random variables.
+ Define 
+\begin_inset Formula $Y=(Y_{1},Y_{2})$
+\end_inset
+
+ with 
+\begin_inset Formula \[
+Y_{1}=\sqrt{-2\ln(U_{1})}\cos(2\pi U_{2})\textnormal{ and }Y_{2}=\sqrt{-2\ln(U_{1})}\sin(2\pi U_{2})\]
+
 \end_inset
 
 
 \end_layout
 
-\begin_layout Bibliography
-\begin_inset CommandInset bibitem
-LatexCommand bibitem
-key "Someone2002"
+\begin_layout Standard
+Show that 
+\begin_inset Formula $Y\sim N(0,I)$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $Y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{2}$
+\end_inset
+
+ are independent standard normal distributed random variables.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
 
 \end_inset
 
-S.
- Someone.
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
@@ -784,16 +2705,11 @@ status collapsed
 
 
 \backslash
-newblock
+end{frame}
 \end_layout
 
 \end_inset
 
- On this and that
-\emph on
-.
-
-\emph default
  
 \begin_inset ERT
 status collapsed
@@ -802,20 +2718,886 @@ status collapsed
 
 
 \backslash
-newblock
+begin{frame}
 \end_layout
 
 \end_inset
 
 
-\emph on
-Journal on This and That
-\emph default
-.
- 2(1):50--100, 2000.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
 \end_layout
 
-\begin_layout EndFrame
+\end_inset
+
+Simulation of random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Transform methods
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+The joint density of the random variables 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ is 
+\begin_inset Formula \[
+f(x_{1},x_{2})=2\exp(−x_{1})\exp(−x_{2}),\textnormal{ for }0<x_{1}<x_{2}<\infty\]
+
+\end_inset
+
+ and 
+\begin_inset Formula $f(x_{1},x_{2})=0$
+\end_inset
+
+ otherwise.
+ 
+\begin_inset Newline newline
+\end_inset
+
+ We define the transformation 
+\begin_inset Formula \[
+Y_{1}=2X_{1},Y_{2}=X_{2}-X_{1}.\]
+
+\end_inset
+
+ Find the joint density of 
+\begin_inset Formula $Y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y_{2}$
+\end_inset
+
+.
+ Are 
+\begin_inset Formula $Y_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $Y2$
+\end_inset
+
+ independent?
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Expectation, moments, transform methods, mean time to failure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+The expectation, 
+\begin_inset Formula $E\left[X\right]$
+\end_inset
+
+, of a random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ is defined by 
+\begin_inset Formula \[
+E\left[X\right]=\begin{cases}
+\sum_{i}x_{i}p(x_{i}), & \mbox{if }X\mbox{ is discrete,}\\
+\int_{-\infty}^{\infty}xf(x)dx, & \mbox{if }X\mbox{ is continuous,}\end{cases}\]
+
+\end_inset
+
+ provided the relevant sum or integral is absolutely convergent, i.e.
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\sum_{i}\mid x_{i}\mid p(x_{i})<\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $\int_{-\infty}^{\infty}\mid x\mid f(x)dx<\infty$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Assume 
+\begin_inset Formula $X$
+\end_inset
+
+ is Binomial di stributed with 
+\begin_inset Formula $n=5$
+\end_inset
+
+ and 
+\begin_inset Formula $p=0.5$
+\end_inset
+
+.
+ Then
+\begin_inset Formula \begin{multline*}
+E\left[X\right]=\sum_{i}x_{i}p(x_{i})=0\cdot\frac{1}{32}+1\cdot\frac{5}{32}+2\cdot\frac{10}{32}+3\cdot\frac{10}{32}+4\cdot\frac{5}{32}+5\cdot\frac{1}{32}=2.5\end{multline*}
+
+\end_inset
+
+The expected value need not correspond to a possible value of 
+\begin_inset Formula $X$
+\end_inset
+
+! 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+The expected value is a weighted average and it denotes the 
+\begin_inset Quotes eld
+\end_inset
+
+center
+\begin_inset Quotes erd
+\end_inset
+
+ of a probability mass or density function in the sense of a center of gravity.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable, and define 
+\begin_inset Formula $Y=\phi(X).$
+\end_inset
+
+ Suppose we want to compute 
+\begin_inset Formula $E[Y].$
+\end_inset
+
+ In order to apply the definition of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $E[Y]$
+\end_inset
+
+ we need to derive the 
+\begin_inset Formula $pmf$
+\end_inset
+
+ (or the 
+\begin_inset Formula $pdf$
+\end_inset
+
+) of 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ An easier method is to use the following result
+\begin_inset Formula \[
+E[Y]=E[\phi(X)]=\begin{cases}
+\sum_{i}\phi(x_{i})p_{X}(x_{i}), & \mbox{if }X\mbox{ is descrete,}\\
+\int_{-\infty}^{\infty}\phi(x)f_{X}(x)dx, & \mbox{if }X\mbox{ is continuous,}\end{cases}\]
+
+\end_inset
+
+privided the sum or the integral is absolutely convergent.
+\end_layout
+
+\begin_layout Definition
+A special case is the power function 
+\begin_inset Formula $\phi(X)=X^{k}$
+\end_inset
+
+, 
+\begin_inset Formula $k=1,2,3,...$
+\end_inset
+
+ .
+ 
+\begin_inset Formula $E(X^{k})$
+\end_inset
+
+ is known to be the 
+\begin_inset Formula $k-$
+\end_inset
+
+th moment of the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ The first moment, i.e.
+ 
+\begin_inset Formula $k=1$
+\end_inset
+
+, is the ordinary expectation of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Sometimes it is usefull to center the origin of measurement, i.e.
+ to work with powers of 
+\begin_inset Formula $X-E[X]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+The 
+\begin_inset Formula $k-$
+\end_inset
+
+th central moment of the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+, 
+\begin_inset Formula $\mu_{k}$
+\end_inset
+
+, is defined as 
+\begin_inset Formula \[
+\mu_{k}=E[(X-E[X])^{k}].\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The second central moment 
+\begin_inset Formula $\mu_{2}$
+\end_inset
+
+ is called the 
+\emph on
+Variance
+\emph default
+ of the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+, typically denoted by 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+, is a measure of dispersion.
+ It measure the amount by wich the R.V.
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ deviates from its expected value.
+ 
+\end_layout
+
+\begin_layout Definition
+The variance of a random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula \[
+\sigma^{2}=\begin{cases}
+\sum_{i}(x_{i}-E[X])^{2}p(x_{i}), & \mbox{discrete case,}\\
+\int_{-\infty}^{\infty}(x-E[X])^{2}f(x)dx, & \mbox{continuous case.}\end{cases}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+The variance is a sum of squares and therefore is a nonnegative number.
+ 
+\end_layout
+
+\begin_layout Itemize
+The square root of the variance is denoted by 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ and is called the standard deviation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/figura small variance.png
+	width 6cm
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/figura large variance.png
+	width 6cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Small and large variance.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+The expected value is a linear operator.
+ In fact let 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be two random variables with existing expectation and 
+\begin_inset Formula $\lambda\in\mathbb{R}$
+\end_inset
+
+.
+ Then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $E\left[X+Y\right]=E\left[X\right]+E\left[Y\right]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $E[\lambda X]=\lambda E[X].$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The variance satisfies the following property: 
+\begin_inset Formula $V[a+bX]=b^{2}V[X].$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1) Starting from the definition of 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+ use the property of linearity of the expected value to prove that 
+\begin_inset Formula $V[X]=E[X^{2}]-(E[X])^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+2) Define the function 
+\begin_inset Formula $g:\mathbb{R}\rightarrow[0,\infty]$
+\end_inset
+
+, 
+\begin_inset Formula $c\mapsto E[(X-c)^{2}]$
+\end_inset
+
+.
+ Show that 
+\begin_inset Formula $c_{min}=E[X]$
+\end_inset
+
+ is the minimum of the function 
+\begin_inset Formula $g$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 

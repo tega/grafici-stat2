@@ -1,5 +1,5 @@
-#LyX file created by tex2lyx 1.6.5
-\lyxformat 264
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
 \textclass beamer
@@ -9,10 +9,9 @@
 \usetheme{Madrid}
 
 \title[ALARIStatisticsCourse]{ALARIStatisticsCourse}\subtitle{PartII}\author[ClaudioOrtelli]{ClaudioOrtelli}\institute[USI]{Universit\`{a}dellaSvizzeraitaliana}\date[29/2010]{April2011}
-
-
 \end_preamble
 \options handout
+\use_default_options false
 \language english
 \inputencoding auto
 \font_roman default
@@ -23,9 +22,11 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 2
@@ -43,140 +44,21 @@
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
+\author "" 
+\author "" 
 \end_header
 
 \begin_body
 
 \begin_layout Standard
 
+\end_layout
 
+\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
-
-
-\backslash
-section{Function of random variables}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-{
-\end_layout
-
-\end_inset
-
-Function of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a continous random variable with distribution function 
-\begin_inset Formula $F_X$
-\end_inset
-
-, 
-\begin_inset Formula $\Psi$
-\end_inset
-
- a function and 
-\begin_inset Formula \[ Y = \Psi(X) .\]
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-
-Under regularity conditions on 
-\begin_inset Formula $\Psi$
-\end_inset
-
-, 
-\begin_inset Formula $Y$
-\end_inset
-
- is a random variable! 
-\end_layout
-
-\begin_layout Itemize
-
-Continuity or stepwise continuity of 
-\begin_inset Formula $\Psi$
-\end_inset
-
- are sufficient conditions for 
-\begin_inset Formula $Y$
-\end_inset
-
- to be a random variable 
-\end_layout
-
-\begin_layout Itemize
-
-
-\end_layout
-
-\begin_layout Standard
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -189,7 +71,7 @@ section{Simulation of random variables}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -202,7 +84,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -213,7 +95,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -224,7 +106,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -235,7 +117,7 @@ Motivation
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -246,26 +128,29 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
-
-We are interested in simulating a model of a real system (network, electronic device, ...). 
+We are interested in simulating a model of a real system (network, electronic
+ device, ...).
+ 
 \end_layout
 
 \begin_layout Itemize
-
 The output 
 \begin_inset Formula $Y$
 \end_inset
 
- of the model depends on a stochastic input, i.e. a random variable 
+ of the model depends on a stochastic input, i.e.
+ a random variable 
 \begin_inset Formula $X$
 \end_inset
 
  with known distribution function 
-\begin_inset Formula $F_X$
+\begin_inset Formula $F_{X}$
 \end_inset
 
 : 
-\begin_inset Formula \[ Y = g(X). \]
+\begin_inset Formula \[
+Y=g(X).\]
+
 \end_inset
 
  
@@ -273,9 +158,7 @@ The output
 
 \begin_layout Standard
 \align center
-
-
-\begin_inset Graphics 
+\begin_inset Graphics
 	filename sistemaComplesso.png
 	width 157pt
 	keepAspectRatio
@@ -286,13 +169,12 @@ The output
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 % sistemaComplesso.png: 314x158 pixel, 72dpi, 11.08x5.57 cm, bb=0 0 314 158
 \end_layout
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -302,12 +184,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -320,12 +200,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -338,7 +216,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -349,7 +227,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -360,7 +238,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {}
 \end_layout
@@ -371,16 +249,17 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
-
-The model is too complex in order to analytically derive the probabilistic properties of the output, i.e. 
-\begin_inset Formula $F_Y$
+The model is too complex in order to analytically derive the probabilistic
+ properties of the output, i.e.
+ 
+\begin_inset Formula $F_{Y}$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Itemize
-
 Idea: simulate a possible outcome 
 \begin_inset Formula $x$
 \end_inset
@@ -393,38 +272,44 @@ Idea: simulate a possible outcome
 \begin_inset Formula $y=g(x)$
 \end_inset
 
- of the output. Repeat the experiment 
+ of the output.
+ Repeat the experiment 
 \begin_inset Formula $N$
 \end_inset
 
- times and analyse the results. 
+ times and analyse the results.
+ 
 \end_layout
 
 \begin_layout Itemize
-
-The simulated values of the input must be drawn from the distribution of 
+The simulated values of the input must be drawn from the distribution of
+ 
 \begin_inset Formula $X$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Itemize
-
-Question: how is it possible to simulate independent realizations from a given distribution 
-\begin_inset Formula $F_X$
+Question: how is it possible to simulate independent realizations from a
+ given distribution 
+\begin_inset Formula $F_{X}$
 \end_inset
 
 ? 
 \end_layout
 
 \begin_layout Itemize
-
-Answer: different methods available. The simplest of them requires simulating from the uniform distribution on the open interval (0,1), i.e. 
+Answer: different methods available.
+ The simplest of them requires simulating from the uniform distribution
+ on the open interval (0,1), i.e.
+ 
 \begin_inset Formula $U(0,1)$
 \end_inset
 
-. In Matlab use the function 
+.
+ In Matlab use the function 
 \begin_inset Quotes eld
 \end_inset
 
@@ -432,16 +317,15 @@ rand
 \begin_inset Quotes erd
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -454,12 +338,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -472,7 +354,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -483,7 +365,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -494,7 +376,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -505,7 +387,7 @@ Inverse Transform Method
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -513,23 +395,25 @@ status collapsed
 \end_inset
 
  If the distribution function 
-\begin_inset Formula $F_X$
+\begin_inset Formula $F_{X}$
 \end_inset
 
  is continuous and strictly increasing then 
-\begin_inset Formula $F_X^{-1}:\ (0,1)\rightarrow \mathbb{R}$
+\begin_inset Formula $F_{X}^{-1}:\ (0,1)\rightarrow\mathbb{R}$
 \end_inset
 
- exists. 
-\newline
+ exists.
+ 
+\begin_inset Newline newline
+\end_inset
+
  
 \end_layout
 
 \begin_layout Standard
 \align center
-
 Example: Chi-Squared Distribution with 5 degrees of freedom 
-\begin_inset Graphics 
+\begin_inset Graphics
 	filename distChi2.pdf
 	width 5.8cm
 	keepAspectRatio
@@ -537,7 +421,7 @@ Example: Chi-Squared Distribution with 5 degrees of freedom
 \end_inset
 
  
-\begin_inset Graphics 
+\begin_inset Graphics
 	filename quantileChi2.pdf
 	width 5.8cm
 	keepAspectRatio
@@ -548,12 +432,10 @@ Example: Chi-Squared Distribution with 5 degrees of freedom
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -566,12 +448,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -584,7 +464,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -595,19 +475,22 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
 
 \end_inset
 
- For a general distribution function not necessarily strictly increasing define 
-\begin_inset Formula \[F_X^{-1}(p) = \inf \{x : p \leq F_X(x) \}  \ \ 0 < p < 1.\]
+ For a general distribution function not necessarily strictly increasing
+ define 
+\begin_inset Formula \[
+F_{X}^{-1}(p)=\inf\{x:p\leq F_{X}(x)\}\ \ 0<p<1.\]
+
 \end_inset
 
  It then follows that 
-\begin_inset Formula $F_X^{-1}(p) \leq x   \Longleftrightarrow p \leq F_X(x).$
+\begin_inset Formula $F_{X}^{-1}(p)\leq x\Longleftrightarrow p\leq F_{X}(x).$
 \end_inset
 
  
@@ -619,7 +502,6 @@ status collapsed
 
 \begin_layout Standard
 \align center
-
 Example: Binomial distribution 
 \begin_inset Formula $Bin(n=3,p=0.3)$
 \end_inset
@@ -628,8 +510,6 @@ Example: Binomial distribution
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset VSpace -0.7cm
 \end_inset
 
@@ -638,9 +518,7 @@ Example: Binomial distribution
 
 \begin_layout Standard
 \align center
-
-
-\begin_inset Graphics 
+\begin_inset Graphics
 	filename distBinomiale.pdf
 	width 5.8cm
 	keepAspectRatio
@@ -648,7 +526,7 @@ Example: Binomial distribution
 \end_inset
 
  
-\begin_inset Graphics 
+\begin_inset Graphics
 	filename quantileBinomiale.pdf
 	width 5.8cm
 	keepAspectRatio
@@ -659,12 +537,10 @@ Example: Binomial distribution
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -677,12 +553,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -695,7 +569,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -706,7 +580,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -717,7 +591,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -728,7 +602,7 @@ Inverse Transform Method
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -739,7 +613,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -752,19 +626,21 @@ begin{theorem}
 \begin_inset Formula $U$
 \end_inset
 
- a continuous Unif(0,1) distributed random variable. The random variable 
-\begin_inset Formula $Y=F_X^{-1}(U)$
+ a continuous Unif(0,1) distributed random variable.
+ The random variable 
+\begin_inset Formula $Y=F_{X}^{-1}(U)$
 \end_inset
 
  has distribution function 
-\begin_inset Formula $F_X$
+\begin_inset Formula $F_{X}$
 \end_inset
 
-. 
+.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -777,7 +653,7 @@ end{theorem}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -787,21 +663,22 @@ begin{proof}
 \end_inset
 
  By definition 
-\begin_inset Formula \[ F_Y(c) := P(Y \leq c) = P(F_X^{-1}(U)\leq c).
-\]
+\begin_inset Formula \[
+F_{Y}(c):=P(Y\leq c)=P(F_{X}^{-1}(U)\leq c).\]
+
 \end_inset
 
  But the last equality is equivalent to (see previous slide) 
 \begin_inset Formula \[
-P(U\leq F_X(c)) = F_X(c).
-\]
+P(U\leq F_{X}(c))=F_{X}(c).\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -814,7 +691,7 @@ end{proof}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -827,12 +704,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -845,7 +720,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -856,7 +731,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -867,7 +742,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -878,7 +753,7 @@ Inverse Transform Method
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -893,7 +768,6 @@ two steps
 \end_layout
 
 \begin_layout Itemize
-
 <1->Simulate a realization 
 \begin_inset Formula $u$
 \end_inset
@@ -902,78 +776,71 @@ two steps
 \begin_inset Formula $U$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Itemize
-
 <2-> Compute 
-\begin_inset Formula $x = F_X^{-1}(u)$
+\begin_inset Formula $x=F_{X}^{-1}(u)$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset VSpace 0.8cm
 \end_inset
 
  Example: Simulation of 
-\begin_inset Formula $Y \sim Exp(\lambda)$
+\begin_inset Formula $Y\sim Exp(\lambda)$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Itemize
-
 The distribution function is 
-\begin_inset Formula $F_Y(x)=1-\exp(-\lambda x)$
+\begin_inset Formula $F_{Y}(x)=1-\exp(-\lambda x)$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Itemize
-
 Compute 
-\begin_inset Formula $F^{-1}_Y(p)=-\frac{1}{\lambda}\ln(1-p)$
+\begin_inset Formula $F_{Y}^{-1}(p)=-\frac{1}{\lambda}\ln(1-p)$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Itemize
-
 Sample a random draw 
 \begin_inset Formula $u$
 \end_inset
 
  from 
-\begin_inset Formula $U \sim$
+\begin_inset Formula $U\sim$
 \end_inset
 
  Unif(0,1) 
 \end_layout
 
 \begin_layout Itemize
-
 Set 
-\begin_inset Formula $y = -\frac{1}{\lambda}\ln(1-u)$
+\begin_inset Formula $y=-\frac{1}{\lambda}\ln(1-u)$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -986,12 +853,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1004,7 +869,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1015,7 +880,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1026,7 +891,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1037,7 +902,7 @@ Inverse Transform Method
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1049,22 +914,24 @@ status collapsed
 \end_inset
 
  Remark: if 
-\begin_inset Formula $U \sim$
+\begin_inset Formula $U\sim$
 \end_inset
 
  Unif(0,1) then 
 \begin_inset Formula $1-U$
 \end_inset
 
- is also Unif(0,1). Therefore we can also write 
-\begin_inset Formula $Y = -\frac{1}{\lambda}\ln(U)$
+ is also Unif(0,1).
+ Therefore we can also write 
+\begin_inset Formula $Y=-\frac{1}{\lambda}\ln(U)$
 \end_inset
 
-. 
+.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1077,12 +944,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1095,7 +960,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1106,7 +971,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1117,7 +982,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1128,7 +993,7 @@ Inverse Transform method
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1140,18 +1005,17 @@ status collapsed
 \end_inset
 
  with probability mass function 
-\begin_inset Formula $P(Y=x_i)=p_i$
+\begin_inset Formula $P(Y=x_{i})=p_{i}$
 \end_inset
 
 , 
-\begin_inset Formula $i=1, ...,m$
+\begin_inset Formula $i=1,...,m$
 \end_inset
 
  consider the following algorithm: 
 \end_layout
 
 \begin_layout Enumerate
-
 Generate a Unif(0,1) random variable 
 \begin_inset Formula $U$
 \end_inset
@@ -1160,35 +1024,34 @@ Generate a Unif(0,1) random variable
 \end_layout
 
 \begin_layout Enumerate
-
 Compute 
 \begin_inset Formula $Y$
 \end_inset
 
  as follows 
 \begin_inset Formula \[
- Y = x_j \textnormal{\hspace{0.5cm} if \hspace{0.1cm}} \sum_{i=1}^{j-1} p_i < U \leq  \sum_{i=1}^{j} p_i.
-\]
+Y=x_{j}\textnormal{\hspace{0.5cm} if \hspace{0.1cm}}\sum_{i=1}^{j-1}p_{i}<U\leq\sum_{i=1}^{j}p_{i}.\]
+
 \end_inset
 
- i.e. 
-\begin_inset Formula $Y = x_j$
+ i.e.
+ 
+\begin_inset Formula $Y=x_{j}$
 \end_inset
 
  if 
-\begin_inset Formula $F_Y(x_{j-1})< U \leq F_Y(x_j)$
+\begin_inset Formula $F_{Y}(x_{j-1})<U\leq F_{Y}(x_{j})$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1201,12 +1064,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1219,7 +1080,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1230,7 +1091,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1241,7 +1102,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1252,7 +1113,7 @@ Inverse Transform method
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1268,23 +1129,19 @@ status collapsed
 
 \begin_layout Standard
 \align center
-
-
-\begin_inset Tabular 
+\begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="4">
 <features>
-<column alignment="center" valignment="top" leftline="true" rightline="true">
-<column alignment="center" valignment="top" rightline="true">
-<column alignment="center" valignment="top" rightline="true">
-<column alignment="center" valignment="top" rightline="true">
-<row topline="true">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
-
-\begin_inset Formula $p_1$
+\begin_layout Plain Layout
+\begin_inset Formula $p_{1}$
 \end_inset
 
  
@@ -1295,10 +1152,8 @@ status collapsed
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
-
-\begin_inset Formula $p_2$
+\begin_layout Plain Layout
+\begin_inset Formula $p_{2}$
 \end_inset
 
  
@@ -1309,10 +1164,8 @@ status collapsed
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
-
-\begin_inset Formula $p_3$
+\begin_layout Plain Layout
+\begin_inset Formula $p_{3}$
 \end_inset
 
  
@@ -1323,10 +1176,8 @@ status collapsed
 <cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
-
-\begin_inset Formula $p_4$
+\begin_layout Plain Layout
+\begin_inset Formula $p_{4}$
 \end_inset
 
 
@@ -1335,12 +1186,11 @@ status collapsed
 \end_inset
 </cell>
 </row>
-<row topline="true" bottomline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 0.1 
 \end_layout
 
@@ -1349,8 +1199,7 @@ status collapsed
 <cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 0.2 
 \end_layout
 
@@ -1359,8 +1208,7 @@ status collapsed
 <cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 0.4 
 \end_layout
 
@@ -1369,8 +1217,7 @@ status collapsed
 <cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
+\begin_layout Plain Layout
 0.3 
 \end_layout
 
@@ -1385,77 +1232,83 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
 The simulation algorithm is the following: 
 \end_layout
 
 \begin_layout Enumerate
-
 If 
-\begin_inset Formula $u \leq p_1 = 0.1$
+\begin_inset Formula $u\leq p_{1}=0.1$
 \end_inset
 
  then 
-\begin_inset Formula $y=x_1$
+\begin_inset Formula $y=x_{1}$
 \end_inset
 
-. Stop. 
+.
+ Stop.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 if 
-\begin_inset Formula $u \leq p_1 + p_2 = 0.3$
+\begin_inset Formula $u\leq p_{1}+p_{2}=0.3$
 \end_inset
 
  then 
-\begin_inset Formula $y=x_2$
+\begin_inset Formula $y=x_{2}$
 \end_inset
 
-. Stop. 
+.
+ Stop.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 if 
-\begin_inset Formula $u \leq p_1 + p_2 + p_3 = 0.7$
+\begin_inset Formula $u\leq p_{1}+p_{2}+p_{3}=0.7$
 \end_inset
 
  then 
-\begin_inset Formula $y=x_3$
+\begin_inset Formula $y=x_{3}$
 \end_inset
 
-. Stop. 
+.
+ Stop.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
-
-\begin_inset Formula $y=x_4$
+\begin_inset Formula $y=x_{4}$
 \end_inset
 
-. Stop. 
+.
+ Stop.
+ 
 \end_layout
 
 \begin_layout Standard
-
-This algorithm is correct but inefficient. In fact, probabilities of one, two, ... comparisons are equal to the probabilities of 
-\begin_inset Formula $x_1$
+This algorithm is correct but inefficient.
+ In fact, probabilities of one, two, ...
+ comparisons are equal to the probabilities of 
+\begin_inset Formula $x_{1}$
 \end_inset
 
 , 
-\begin_inset Formula $x_2$
+\begin_inset Formula $x_{2}$
 \end_inset
 
-, ..., respectively. The expected number of comparisons is 
-\begin_inset Formula \[ p_1 + 2 p_2 + 3 p_3 + 4 p_4 = 2.9 .\]
+, ..., respectively.
+ The expected number of comparisons is 
+\begin_inset Formula \[
+p_{1}+2p_{2}+3p_{3}+4p_{4}=2.9.\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1468,12 +1321,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1486,7 +1337,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1497,7 +1348,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1508,7 +1359,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1519,7 +1370,7 @@ Inverse Transform method
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1527,95 +1378,99 @@ status collapsed
 \end_inset
 
  We can improve efficiency by sorting the values of 
-\begin_inset Formula $x_i$
+\begin_inset Formula $x_{i}$
 \end_inset
 
  by decreasing order of probabilities 
-\begin_inset Formula $p_i$
+\begin_inset Formula $p_{i}$
 \end_inset
 
 's: 
-\begin_inset Formula $x_3$
+\begin_inset Formula $x_{3}$
 \end_inset
 
 , 
-\begin_inset Formula $x_4$
+\begin_inset Formula $x_{4}$
 \end_inset
 
 , 
-\begin_inset Formula $x_2$
+\begin_inset Formula $x_{2}$
 \end_inset
 
  and 
-\begin_inset Formula $x_1$
+\begin_inset Formula $x_{1}$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 If 
-\begin_inset Formula $u \leq p_3 = 0.4$
+\begin_inset Formula $u\leq p_{3}=0.4$
 \end_inset
 
  then 
-\begin_inset Formula $y=x_3$
+\begin_inset Formula $y=x_{3}$
 \end_inset
 
-. Stop. 
+.
+ Stop.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 if 
-\begin_inset Formula $u \leq p_3 + p_4 = 0.7$
+\begin_inset Formula $u\leq p_{3}+p_{4}=0.7$
 \end_inset
 
  then 
-\begin_inset Formula $y=x_4$
+\begin_inset Formula $y=x_{4}$
 \end_inset
 
-. Stop. 
+.
+ Stop.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 if 
-\begin_inset Formula $u \leq p_3 + p_4 + p_2 = 0.9$
+\begin_inset Formula $u\leq p_{3}+p_{4}+p_{2}=0.9$
 \end_inset
 
  then 
-\begin_inset Formula $y=x_2$
+\begin_inset Formula $y=x_{2}$
 \end_inset
 
-. Stop. 
+.
+ Stop.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
-
-\begin_inset Formula $y=x_1$
+\begin_inset Formula $y=x_{1}$
 \end_inset
 
-. Stop. 
+.
+ Stop.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset VSpace 1cm
 \end_inset
 
  The expected number of comparisons is now equal to 
-\begin_inset Formula \[ p_3 + 2 p_4 + 3 p_2 + 4 p_1 = 2 .\]
+\begin_inset Formula \[
+p_{3}+2p_{4}+3p_{2}+4p_{1}=2.\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1628,12 +1483,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1646,7 +1499,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1657,7 +1510,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1668,7 +1521,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1679,19 +1532,20 @@ Exercises
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
 
 \end_inset
 
- The Laplace distribution is a continuous distribution with density function 
-\begin_inset Formula \[f(x;\mu,b)=\left\{\begin{array}{ll}
-\frac{1}{2b}\exp(- \frac{\mu - x}{b}) & \textnormal{if } x < \mu\\
-\frac{1}{2b}\exp(- \frac{x - \mu}{b}) & \textnormal{if } x \geq \mu
-\end{array} \right.
-\]
+ The Laplace distribution is a continuous distribution with density function
+ 
+\begin_inset Formula \[
+f(x;\mu,b)=\left\{ \begin{array}{ll}
+\frac{1}{2b}\exp(-\frac{\mu-x}{b}) & \textnormal{if }x<\mu\\
+\frac{1}{2b}\exp(-\frac{x-\mu}{b}) & \textnormal{if }x\geq\mu\end{array}\right.\]
+
 \end_inset
 
  where 
@@ -1702,12 +1556,13 @@ status collapsed
 \begin_inset Formula $b$
 \end_inset
 
- a scale parameter. 
+ a scale parameter.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
-Plot the density, distribution and quantile functions of the Laplace distribution with parameter 
+Plot the density, distribution and quantile functions of the Laplace distributio
+n with parameter 
 \begin_inset Formula $\mu=1$
 \end_inset
 
@@ -1715,11 +1570,11 @@ Plot the density, distribution and quantile functions of the Laplace distributio
 \begin_inset Formula $b=0.5$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Using the previous values of 
 \begin_inset Formula $\mu$
 \end_inset
@@ -1736,34 +1591,35 @@ Using the previous values of
 \begin_inset Formula $Y$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
-Plot the histogram of the simulated random variables and compare it with the density function of 
+Plot the histogram of the simulated random variables and compare it with
+ the density function of 
 \begin_inset Formula $Y$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
-Plot the empiric distribution function of the simulated sample and compare it with the distribution function of 
+Plot the empiric distribution function of the simulated sample and compare
+ it with the distribution function of 
 \begin_inset Formula $Y$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1776,12 +1632,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1794,7 +1648,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1805,7 +1659,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1816,7 +1670,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1827,7 +1681,7 @@ Transform methods
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1838,11 +1692,15 @@ status collapsed
 \emph on
 Distributions of functions of continuous random variables
 \emph default
- allows us to generate random variables by means of ad hoc transformations of Unif(0,1) random variables. The following theorem generalizes the previous theorem to the multivariate case. 
+ allows us to generate random variables by means of ad hoc transformations
+ of Unif(0,1) random variables.
+ The following theorem generalizes the previous theorem to the multivariate
+ case.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1852,42 +1710,44 @@ begin{Theorem}
 \end_inset
 
  Assume that 
-\begin_inset Formula $X=(X_1,X_2)$
+\begin_inset Formula $X=(X_{1},X_{2})$
 \end_inset
 
  is a random vector with joint density function 
-\begin_inset Formula $f_X(x_1,x_2)$
+\begin_inset Formula $f_{X}(x_{1},x_{2})$
 \end_inset
 
  and 
-\begin_inset Formula $g: \mathbb{R}^2 \rightarrow \mathbb{R}^2$
+\begin_inset Formula $g:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$
 \end_inset
 
- a one-to-one and continuously differentiable function. Define 
-\begin_inset Formula $Y=(Y_1,Y_2)=g(X)$
+ a one-to-one and continuously differentiable function.
+ Define 
+\begin_inset Formula $Y=(Y_{1},Y_{2})=g(X)$
 \end_inset
 
-. The density function of 
+.
+ The density function of 
 \begin_inset Formula $Y$
 \end_inset
 
  is then equal to 
 \begin_inset Formula \[
- f_Y(y)=f_X(g^{-1}(y)) \ \rvert J(g^{-1}(y)) \rvert
-\]
+f_{Y}(y)=f_{X}(g^{-1}(y))\ \rvert J(g^{-1}(y))\rvert\]
+
 \end_inset
 
  where 
 \begin_inset Formula \[
-       J(g^{-1}(y)) = \det (M_J) = \det \left [ \frac{\partial x_i(y)}{\partial y_j}\right ]_{i=1,2; \ j=1,2}
-      \]
+J(g^{-1}(y))=\det(M_{J})=\det\left[\frac{\partial x_{i}(y)}{\partial y_{j}}\right]_{i=1,2;\ j=1,2}\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1900,7 +1760,7 @@ end{Theorem}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1913,12 +1773,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1931,7 +1789,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1942,7 +1800,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1953,7 +1811,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -1964,7 +1822,7 @@ Transform methods
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -1972,17 +1830,17 @@ status collapsed
 \end_inset
 
  Example: Let 
-\begin_inset Formula $X \sim N(\mu, \Sigma)$
+\begin_inset Formula $X\sim N(\mu,\Sigma)$
 \end_inset
 
  be a 
-\begin_inset Formula $2 \times 1$
+\begin_inset Formula $2\times1$
 \end_inset
 
  random vector and consider the affine transformation 
 \begin_inset Formula \[
- Y = b + A \ X
-\]
+Y=b+A\ X\]
+
 \end_inset
 
  where 
@@ -1990,7 +1848,7 @@ status collapsed
 \end_inset
 
  is a deterministic 
-\begin_inset Formula $2 \times 1$
+\begin_inset Formula $2\times1$
 \end_inset
 
  vector and 
@@ -1998,36 +1856,37 @@ status collapsed
 \end_inset
 
  a 
-\begin_inset Formula $2 \times 2$
+\begin_inset Formula $2\times2$
 \end_inset
 
- invertible matrix. We then have 
+ invertible matrix.
+ We then have 
 \begin_inset Formula \[
- X = A^{-1}(Y-b); \ M_J = A^{-1} 
-\]
+X=A^{-1}(Y-b);\ M_{J}=A^{-1}\]
+
 \end_inset
 
  and 
-\begin_inset Formula $f_Y(y)$
+\begin_inset Formula $f_{Y}(y)$
 \end_inset
 
  is equal to 
 \begin_inset Formula \[
-\frac{1}{\sqrt{2 \pi det(\Sigma)}} \exp(-\frac{1}{2} (A^{-1}(Y-b) - \mu)'\Sigma^{-1} (A^{-1}(Y-b) - \mu)) \rvert det(A^{-1}) \rvert 
-\]
+\frac{1}{\sqrt{2\pi det(\Sigma)}}\exp(-\frac{1}{2}(A^{-1}(Y-b)-\mu)'\Sigma^{-1}(A^{-1}(Y-b)-\mu))\rvert det(A^{-1})\rvert\]
+
 \end_inset
 
  
 \begin_inset Formula \[
-\frac{1}{\sqrt{2 \pi det(A\Sigma A')}} \exp(-\frac{1}{2} (Y - b - A\mu)'(A\Sigma A')^{-1} (Y - b - A\mu))  
-\]
+\frac{1}{\sqrt{2\pi det(A\Sigma A')}}\exp(-\frac{1}{2}(Y-b-A\mu)'(A\Sigma A')^{-1}(Y-b-A\mu))\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2040,12 +1899,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2058,7 +1915,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2069,7 +1926,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2080,7 +1937,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2091,7 +1948,7 @@ Transform methods
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2099,74 +1956,78 @@ status collapsed
 \end_inset
 
  Example (continued):
-\newline
+\begin_inset Newline newline
+\end_inset
+
  Looking at the density function of 
 \begin_inset Formula $Y$
 \end_inset
 
  we note that 
-\begin_inset Formula $Y\sim N(\tilde \mu, \tilde\Sigma)$
+\begin_inset Formula $Y\sim N(\tilde{\mu},\tilde{\Sigma})$
 \end_inset
 
  whith 
-\begin_inset Formula $\tilde \mu = b + A\mu$
+\begin_inset Formula $\tilde{\mu}=b+A\mu$
 \end_inset
 
  and 
-\begin_inset Formula $\tilde\Sigma=A\Sigma A'$
+\begin_inset Formula $\tilde{\Sigma}=A\Sigma A'$
 \end_inset
 
-. 
+.
+ 
 \begin_inset VSpace 1cm
 \end_inset
 
  
-\newline
+\begin_inset Newline newline
+\end_inset
+
  Exercise: 
-\begin_inset Formula $U_1$
+\begin_inset Formula $U_{1}$
 \end_inset
 
  and 
-\begin_inset Formula $U_2$
+\begin_inset Formula $U_{2}$
 \end_inset
 
- are two independent Unif(0,1) distributed random variables. Define 
-\begin_inset Formula $Y=(Y_1,Y_2)$
+ are two independent Unif(0,1) distributed random variables.
+ Define 
+\begin_inset Formula $Y=(Y_{1},Y_{2})$
 \end_inset
 
  with 
 \begin_inset Formula \[
- Y_1=\sqrt{-2 \ln(U_1)}\cos(2 \pi U_2) \textnormal{ and }  Y_2=\sqrt{-2 \ln(U_1)}\sin(2 \pi U_2) 
-\]
+Y_{1}=\sqrt{-2\ln(U_{1})}\cos(2\pi U_{2})\textnormal{ and }Y_{2}=\sqrt{-2\ln(U_{1})}\sin(2\pi U_{2})\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
 Show that 
-\begin_inset Formula $Y \sim N(0,I)$
+\begin_inset Formula $Y\sim N(0,I)$
 \end_inset
 
-, i.e. 
-\begin_inset Formula $Y_1$
+, i.e.
+ 
+\begin_inset Formula $Y_{1}$
 \end_inset
 
  and 
-\begin_inset Formula $Y_2$
+\begin_inset Formula $Y_{2}$
 \end_inset
 
  are independent standard normal distributed random variables.
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2179,7 +2040,7 @@ end{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2192,7 +2053,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2203,7 +2064,7 @@ Simulation of random variables
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2214,7 +2075,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2225,7 +2086,7 @@ Transform methods
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2233,40 +2094,45 @@ status collapsed
 \end_inset
 
  Exercise: The joint density of the random variables 
-\begin_inset Formula $X_1$
+\begin_inset Formula $X_{1}$
 \end_inset
 
  and 
-\begin_inset Formula $X_2$
+\begin_inset Formula $X_{2}$
 \end_inset
 
  is 
 \begin_inset Formula \[
-f(x_1,x_2) = 2\exp(−x_1)\exp(−x_2) , \textnormal{ for } 0 < x_1 < x_2 < \infty 
-\]
+f(x_{1},x_{2})=2\exp(−x_{1})\exp(−x_{2}),\textnormal{ for }0<x_{1}<x_{2}<\infty\]
+
 \end_inset
 
  and 
-\begin_inset Formula $f(x_1,x_2) = 0$
+\begin_inset Formula $f(x_{1},x_{2})=0$
 \end_inset
 
- otherwise. 
-\newline
+ otherwise.
+ 
+\begin_inset Newline newline
+\end_inset
+
  We define the transformation 
-\begin_inset Formula \[ Y_1 = 2X_1 , Y_2 = X_2 - X_1.
-\]
+\begin_inset Formula \[
+Y_{1}=2X_{1},Y_{2}=X_{2}-X_{1}.\]
+
 \end_inset
 
  Find the joint density of 
-\begin_inset Formula $Y_1$
+\begin_inset Formula $Y_{1}$
 \end_inset
 
  and 
-\begin_inset Formula $Y_2$
+\begin_inset Formula $Y_{2}$
 \end_inset
 
-. Are 
-\begin_inset Formula $Y_1$
+.
+ Are 
+\begin_inset Formula $Y_{1}$
 \end_inset
 
  and 
@@ -2277,12 +2143,10 @@ f(x_1,x_2) = 2\exp(−x_1)\exp(−x_2) , \textnormal{ for } 0 < x_1 < x_2 < \inf
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2295,12 +2159,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
-status collapsed
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2313,7 +2175,7 @@ section{Distribution and moments of a random variable}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2326,7 +2188,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2337,7 +2199,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2348,7 +2210,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2359,7 +2221,7 @@ Transform methods: definitions
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2370,22 +2232,22 @@ status collapsed
 \end_layout
 
 \begin_layout Itemize
-
-Transform methods are transformations of the probability mass function (discrete case) or the density function (continuous case). 
+Transform methods are transformations of the probability mass function (discrete
+ case) or the density function (continuous case).
+ 
 \end_layout
 
 \begin_layout Itemize
-
-They are particular useful to compute moments of a distribution and in problems involving sums of independent random variables. 
+They are particular useful to compute moments of a distribution and in problems
+ involving sums of independent random variables.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2395,7 +2257,7 @@ begin{definition}
 \end_inset
 
  The moment generating function (MGF) 
-\begin_inset Formula $M_X(\theta)$
+\begin_inset Formula $M_{X}(\theta)$
 \end_inset
 
 , abbreviated 
@@ -2408,8 +2270,8 @@ begin{definition}
 
  is defined by 
 \begin_inset Formula \[
-M(\theta) = E \left[\exp(X \theta)\right]
-\]
+M(\theta)=E\left[\exp(X\theta)\right]\]
+
 \end_inset
 
  provided the expectation exists (
@@ -2417,14 +2279,15 @@ M(\theta) = E \left[\exp(X \theta)\right]
 \end_inset
 
  may not exist for all 
-\begin_inset Formula $\theta \in \mathbb{R}$
+\begin_inset Formula $\theta\in\mathbb{R}$
 \end_inset
 
-). 
+).
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2437,7 +2300,7 @@ end{definition}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2450,12 +2313,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2468,7 +2329,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2479,7 +2340,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2490,7 +2351,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2501,7 +2362,7 @@ Transform methods: definitions
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2512,12 +2373,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2532,15 +2391,15 @@ begin{definition}
 
  is given by 
 \begin_inset Formula \[
- N_X(\tau) = N(\tau)=E \left[\exp(iX \tau)\right] = M_X(i \tau) \textnormal{ where } i = \sqrt{-1}.
-\]
+N_{X}(\tau)=N(\tau)=E\left[\exp(iX\tau)\right]=M_{X}(i\tau)\textnormal{ where }i=\sqrt{-1}.\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2550,7 +2409,7 @@ end{definition}
 \end_inset
 
  Note that 
-\begin_inset Formula $N_X(\tau)$
+\begin_inset Formula $N_{X}(\tau)$
 \end_inset
 
  is always defined for any 
@@ -2565,12 +2424,10 @@ end{definition}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2583,21 +2440,22 @@ begin{definition}
 \begin_inset Formula $X$
 \end_inset
 
- be a nonnegative continuous random variable. The Laplace - Stieltjes transform of 
+ be a nonnegative continuous random variable.
+ The Laplace - Stieltjes transform of 
 \begin_inset Formula $X$
 \end_inset
 
  is 
 \begin_inset Formula \[
- L_X(s) = L(s) = M_X(-s) = \int_0^\infty \exp(-sx) f(x) dx.
-\]
+L_{X}(s)=L(s)=M_{X}(-s)=\int_{0}^{\infty}\exp(-sx)f(x)dx.\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2610,12 +2468,10 @@ end{definition}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2628,12 +2484,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2646,7 +2500,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2657,7 +2511,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2668,7 +2522,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2679,7 +2533,7 @@ Transform methods: definition and theorems
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2690,7 +2544,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2703,7 +2557,8 @@ begin{definition}
 \begin_inset Formula $X$
 \end_inset
 
- be a discrete nonnegative integer-valued random variable. The 
+ be a discrete nonnegative integer-valued random variable.
+ The 
 \begin_inset Formula $z$
 \end_inset
 
@@ -2713,15 +2568,15 @@ begin{definition}
 
  is defined as 
 \begin_inset Formula \[
- G_X(z) = G(z) = E\left[ z^X \right] = M_X(ln(z)) = \sum_{i=0}^{\infty} p_X(i)z^i.
-\]
+G_{X}(z)=G(z)=E\left[z^{X}\right]=M_{X}(ln(z))=\sum_{i=0}^{\infty}p_{X}(i)z^{i}.\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2734,7 +2589,7 @@ end{definition}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2743,21 +2598,23 @@ begin{Theorem}
 
 \end_inset
 
- Affine transformation. Let 
-\begin_inset Formula $Y=aX + b$
+ Affine transformation.
+ Let 
+\begin_inset Formula $Y=aX+b$
 \end_inset
 
-. Then 
+.
+ Then 
 \begin_inset Formula \[
- M_Y(\theta)=\exp(b\theta)M_X(a\theta)
-\]
+M_{Y}(\theta)=\exp(b\theta)M_{X}(a\theta)\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2770,7 +2627,7 @@ end{Theorem}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2783,12 +2640,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2801,7 +2656,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2812,7 +2667,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2823,7 +2678,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2834,7 +2689,7 @@ Transform methods: theorems
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2845,7 +2700,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2855,15 +2710,17 @@ begin{Theorem}
 \end_inset
 
 [The Convolution Theorem] Let 
-\begin_inset Formula $X_1, X_2, ...,X_n$
+\begin_inset Formula $X_{1},X_{2},...,X_{n}$
 \end_inset
 
- be mutually independent random variables. Define 
-\begin_inset Formula $Y=\sum_{i=1}^n X_i$
+ be mutually independent random variables.
+ Define 
+\begin_inset Formula $Y=\sum_{i=1}^{n}X_{i}$
 \end_inset
 
-. If 
-\begin_inset Formula $M_{X_i}(\theta)$
+.
+ If 
+\begin_inset Formula $M_{X_{i}}(\theta)$
 \end_inset
 
  exists for all 
@@ -2871,20 +2728,20 @@ begin{Theorem}
 \end_inset
 
 , then 
-\begin_inset Formula $M_Y(\theta)$
+\begin_inset Formula $M_{Y}(\theta)$
 \end_inset
 
  exists, and 
 \begin_inset Formula \[
- M_Y(\theta)=\prod _{i=1}^n M_{X_i}(\theta).
-\]
+M_{Y}(\theta)=\prod_{i=1}^{n}M_{X_{i}}(\theta).\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2897,7 +2754,7 @@ end{Theorem}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2907,7 +2764,7 @@ begin{Theorem}
 \end_inset
 
 [Uniqueness Theorem] If 
-\begin_inset Formula $M_X(\theta)=M_Y(\theta)$
+\begin_inset Formula $M_{X}(\theta)=M_{Y}(\theta)$
 \end_inset
 
  for all 
@@ -2915,10 +2772,11 @@ begin{Theorem}
 \end_inset
 
 , then 
-\begin_inset Formula $F_X=F_Y$
+\begin_inset Formula $F_{X}=F_{Y}$
 \end_inset
 
-, i.e. 
+, i.e.
+ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2926,11 +2784,12 @@ begin{Theorem}
 \begin_inset Formula $Y$
 \end_inset
 
- have the same distribution. 
+ have the same distribution.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2943,7 +2802,7 @@ end{Theorem}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2956,12 +2815,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2974,7 +2831,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -2985,7 +2842,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -2996,7 +2853,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3007,7 +2864,7 @@ Transform methods: theorems
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3018,7 +2875,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3035,22 +2892,21 @@ begin{theorem}
 \begin_inset Formula $X$
 \end_inset
 
- be a random variable such that all moments exist. Then 
+ be a random variable such that all moments exist.
+ Then 
 \begin_inset Formula \[
- E\left[ X^k \right] = \frac{\partial^k M_X}{\partial \theta ^k} \left \vert _ {\theta=0} \right. \, \ \ k=1,2, \dots
-\]
+E\left[X^{k}\right]=\frac{\partial^{k}M_{X}}{\partial\theta^{k}}\left\vert _{\theta=0}\right.\,\ \ k=1,2,\dots\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3063,12 +2919,10 @@ end{theorem}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3079,22 +2933,21 @@ begin{proof}
 
  
 \begin_inset Formula \[
- \exp(X\theta) = 1+X\theta + \frac{X^2\theta^2}{2!} + \dots +\frac{X^k\theta^k}{k!} + \dots
-\]
+\exp(X\theta)=1+X\theta+\frac{X^{2}\theta^{2}}{2!}+\dots+\frac{X^{k}\theta^{k}}{k!}+\dots\]
+
 \end_inset
 
  Taking expectation on both sides 
 \begin_inset Formula \[
- M_X(\theta) = E\left[  \exp(X\theta) \right] = 1 + E\left[X\right]\theta + \frac{E\left[X^2\right]\theta^2}{2!} + \dots + 
- \frac{E\left[X^k\right]\theta^k}{k!} + \dots
-\]
+M_{X}(\theta)=E\left[\exp(X\theta)\right]=1+E\left[X\right]\theta+\frac{E\left[X^{2}\right]\theta^{2}}{2!}+\dots+\frac{E\left[X^{k}\right]\theta^{k}}{k!}+\dots\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3107,7 +2960,7 @@ end{proof}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3120,12 +2973,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3138,7 +2989,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3149,7 +3000,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3160,7 +3011,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3171,7 +3022,7 @@ Transform methods: theorems
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3179,11 +3030,11 @@ status collapsed
 \end_inset
 
  The corresponding properties for the characteristic function 
-\begin_inset Formula $N_X$
+\begin_inset Formula $N_{X}$
 \end_inset
 
 , the Laplace - Stieltjes transform 
-\begin_inset Formula $L_X$
+\begin_inset Formula $L_{X}$
 \end_inset
 
  and the 
@@ -3191,36 +3042,37 @@ status collapsed
 \end_inset
 
  transform 
-\begin_inset Formula $G_X$
+\begin_inset Formula $G_{X}$
 \end_inset
 
  are 
 \begin_inset Formula \[
-  E\left[ X^k \right] = (-i)^k \frac{\partial^k N_X}{\partial \tau ^k} \left \vert _ {\tau=0} \right.  \, \ \ k=0,1, \dots
-\]
+E\left[X^{k}\right]=(-i)^{k}\frac{\partial^{k}N_{X}}{\partial\tau^{k}}\left\vert _{\tau=0}\right.\,\ \ k=0,1,\dots\]
+
 \end_inset
 
  
 \begin_inset Formula \[
- E\left[ X^k \right] = (-1)^k \frac{\partial^k L_X}{\partial s ^k} \left \vert _ {s=0} \right.  \, \ \ k=0,1, \dots
-\]
+E\left[X^{k}\right]=(-1)^{k}\frac{\partial^{k}L_{X}}{\partial s^{k}}\left\vert _{s=0}\right.\,\ \ k=0,1,\dots\]
+
 \end_inset
 
  
 \begin_inset Formula \[
- E\left[\frac{X!}{(X-k)!} \right] = \lim_{\tilde z\uparrow 1} \frac{\partial^k G_X}{\partial z ^k} \left \vert _ {z=\tilde z} \right. \, \ \ k=0,1, \dots
-\]
+E\left[\frac{X!}{(X-k)!}\right]=\lim_{\tilde{z}\uparrow1}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=\tilde{z}}\right.\,\ \ k=0,1,\dots\]
+
 \end_inset
 
  respectively, where 
-\begin_inset Formula $\left[\frac{X!}{(X-k)!} \right] = X (X-1) \dots (X-k+1)$
+\begin_inset Formula $\left[\frac{X!}{(X-k)!}\right]=X(X-1)\dots(X-k+1)$
 \end_inset
 
-. 
+.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3233,12 +3085,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3251,7 +3101,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3262,7 +3112,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3273,7 +3123,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3284,7 +3134,7 @@ Transform methods: theorems and examples
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3300,17 +3150,19 @@ status collapsed
 \end_inset
 
  transform 
-\begin_inset Formula $G_X$
+\begin_inset Formula $G_{X}$
 \end_inset
 
-. The probability mass function of X can be recovered by taking derivatives of 
-\begin_inset Formula $G_X$
+.
+ The probability mass function of X can be recovered by taking derivatives
+ of 
+\begin_inset Formula $G_{X}$
 \end_inset
 
 : 
 \begin_inset Formula \[
- p_k = P(X=k) = \frac{1}{k!}\frac{\partial^k G_X}{\partial z ^k} \left \vert _ {z=0} \right.
-\]
+p_{k}=P(X=k)=\frac{1}{k!}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=0}\right.\]
+
 \end_inset
 
  Examples: Let 
@@ -3321,25 +3173,26 @@ status collapsed
 \begin_inset Formula $\lambda$
 \end_inset
 
-. Then 
+.
+ Then 
 \begin_inset Formula \[
- f_X(x)=\lambda \exp(-\lambda x), \ x>0.
-\]
+f_{X}(x)=\lambda\exp(-\lambda x),\ x>0.\]
+
 \end_inset
 
  
 \begin_inset Formula \begin{align*}
- L_X(s) &= \int_0^\infty exp(-sx)exp(-\lambda x) dx\\
-   &= \frac{\lambda}{s+\lambda} \int_0^\infty (\lambda+s)exp(-(\lambda+s) x) dx \\
-   &= \frac{\lambda}{s+\lambda}.
-\end{align*}
+L_{X}(s) & =\int_{0}^{\infty}exp(-sx)exp(-\lambda x)dx\\
+ & =\frac{\lambda}{s+\lambda}\int_{0}^{\infty}(\lambda+s)exp(-(\lambda+s)x)dx\\
+ & =\frac{\lambda}{s+\lambda}.\end{align*}
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3352,12 +3205,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3370,7 +3221,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3381,7 +3232,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3392,7 +3243,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3403,7 +3254,7 @@ Transform methods: examples
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3412,11 +3263,9 @@ status collapsed
 
  Example (continued): 
 \begin_inset Formula \begin{align*}
-  E\left[ X\right] &= (-1)\frac{\partial L_X}{\partial s} \left \vert_{s=0} \right. = 
-(-1)\frac{-\lambda}{(\lambda + s)^2} \left \vert _ {s=0} \right. = \frac{1}{\lambda}. \\
-  E\left[ X^2\right] &= \frac{\partial^2 L_X}{\partial s^2} \left \vert_{s=0} \right. = 
-\frac{2\lambda}{(\lambda + s)^3} \left \vert _ {s=0} \right. = \frac{2}{\lambda^2}. \\
- \end{align*}
+E\left[X\right] & =(-1)\frac{\partial L_{X}}{\partial s}\left\vert _{s=0}\right.=(-1)\frac{-\lambda}{(\lambda+s)^{2}}\left\vert _{s=0}\right.=\frac{1}{\lambda}.\\
+E\left[X^{2}\right] & =\frac{\partial^{2}L_{X}}{\partial s^{2}}\left\vert _{s=0}\right.=\frac{2\lambda}{(\lambda+s)^{3}}\left\vert _{s=0}\right.=\frac{2}{\lambda^{2}}.\end{align*}
+
 \end_inset
 
  Example: Let 
@@ -3427,11 +3276,13 @@ status collapsed
 \begin_inset Formula $n$
 \end_inset
 
- trials Binomial distributed random variable with probability of success 
+ trials Binomial distributed random variable with probability of success
+ 
 \begin_inset Formula $p$
 \end_inset
 
-. The 
+.
+ The 
 \begin_inset Formula $z$
 \end_inset
 
@@ -3441,24 +3292,21 @@ status collapsed
 
  is by definition 
 \begin_inset Formula \begin{eqnarray*}
- G_X(z) &=& E(z^X) = \sum_{k=0}^n z^k \left( \begin{array}{c}
+G_{X}(z) & = & E(z^{X})=\sum_{k=0}^{n}z^{k}\left(\begin{array}{c}
 n\\
-k
-\end{array} \right) p^k (1-p)^{n-k} \\
-&=& (pz+1-p)^n
-\end{eqnarray*}
+k\end{array}\right)p^{k}(1-p)^{n-k}\\
+ & = & (pz+1-p)^{n}\end{eqnarray*}
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3471,12 +3319,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3489,7 +3335,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3500,7 +3346,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3511,7 +3357,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3522,7 +3368,7 @@ Transform methods: exercises
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3530,80 +3376,83 @@ status collapsed
 \end_inset
 
  Exercise:
-\newline
+\begin_inset Newline newline
+\end_inset
+
  Let 
 \begin_inset Formula $X$
 \end_inset
 
- be a Bernoulli distributed random variable with probability of success 
+ be a Bernoulli distributed random variable with probability of success
+ 
 \begin_inset Formula $p$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute the MGF 
-\begin_inset Formula $M_X$
+\begin_inset Formula $M_{X}$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute skewness and kurtosis of 
 \begin_inset Formula $X$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset VSpace 0.8cm
 \end_inset
 
  Exercise:
-\newline
+\begin_inset Newline newline
+\end_inset
+
  Let 
-\begin_inset Formula $X_1, X_2, \dots,X_n$
+\begin_inset Formula $X_{1},X_{2},\dots,X_{n}$
 \end_inset
 
- a sequence of independent Bernoulli distributed random variables. 
+ a sequence of independent Bernoulli distributed random variables.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute the moment generating function of 
-\begin_inset Formula $Y=\sum_{i=1}^n X_i$
+\begin_inset Formula $Y=\sum_{i=1}^{n}X_{i}$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Show that 
-\begin_inset Formula $M_Y$
+\begin_inset Formula $M_{Y}$
 \end_inset
 
  is the MGF of a Bernoulli 
 \begin_inset Formula $(n,p)$
 \end_inset
 
- distributed random variable. 
+ distributed random variable.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3616,12 +3465,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3634,7 +3481,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3645,7 +3492,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3656,7 +3503,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3667,7 +3514,7 @@ Transform methods: exercises
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3675,70 +3522,75 @@ status collapsed
 \end_inset
 
  Exercise:
-\newline
+\begin_inset Newline newline
+\end_inset
+
  Let 
 \begin_inset Formula $X$
 \end_inset
 
- be a standard normally distributed random variable. 
+ be a standard normally distributed random variable.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute the MGF of 
 \begin_inset Formula $X$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute the Kurtosis of 
 \begin_inset Formula $X$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Define 
-\begin_inset Formula $Y=\sigma X + \mu$
+\begin_inset Formula $Y=\sigma X+\mu$
 \end_inset
 
-. Derive the MGF of 
+.
+ Derive the MGF of 
 \begin_inset Formula $Y$
 \end_inset
 
- and compute its expected value and variance. 
+ and compute its expected value and variance.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset VSpace 0.2cm
 \end_inset
 
  Exercise:
-\newline
+\begin_inset Newline newline
+\end_inset
+
  Let 
 \begin_inset Formula $X$
 \end_inset
 
- be a geometric distributed random variable with probability mass function 
-\begin_inset Formula $p_X(i) = p(1-p)^i$
+ be a geometric distributed random variable with probability mass function
+ 
+\begin_inset Formula $p_{X}(i)=p(1-p)^{i}$
 \end_inset
 
 , 
 \begin_inset Formula $i=1,2,...$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute the 
 \begin_inset Formula $z$
 \end_inset
@@ -3747,25 +3599,24 @@ Compute the
 \begin_inset Formula $X$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute the skewness of 
 \begin_inset Formula $X$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3778,12 +3629,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3796,7 +3645,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3807,7 +3656,7 @@ Distribution and moments of a random variable
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3818,7 +3667,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3829,7 +3678,7 @@ Transform methods: exercises
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3837,7 +3686,9 @@ status collapsed
 \end_inset
 
  Exercise:
-\newline
+\begin_inset Newline newline
+\end_inset
+
  Let 
 \begin_inset Formula $X$
 \end_inset
@@ -3847,37 +3698,36 @@ status collapsed
 \end_inset
 
  distributed random variable with 
-\begin_inset Formula $0\leq a < b$
+\begin_inset Formula $0\leq a<b$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute the MGF and the Laplace - Stieltjes transform of 
 \begin_inset Formula $X$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Enumerate
-
 Compute skewness and kurtosis of 
 \begin_inset Formula $X$
 \end_inset
 
-. 
+.
+ 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3890,7 +3740,7 @@ end{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3903,12 +3753,10 @@ section{System's reliability}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3921,7 +3769,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3932,7 +3780,7 @@ System's reliability
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3943,7 +3791,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -3954,7 +3802,7 @@ Reliability of a component
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3965,16 +3813,18 @@ status collapsed
 \begin_inset Formula $n$
 \end_inset
 
- independent components. Define the event 
+ independent components.
+ Define the event 
 \begin_inset Formula \[
- A_i:=\textnormal{\textquotedblleft The }i-th\]
+A_{i}:=\textnormal{“The }i-th\]
+
 \end_inset
 
  component is functioning properly ”.
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -3985,7 +3835,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3998,7 +3848,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4013,15 +3863,17 @@ begin{Definition}
 
  is defined as 
 \begin_inset Formula \[
- R_i = P(A_i),
-\]
+R_{i}=P(A_{i}),\]
+
 \end_inset
 
- i.e. it is the probability that the component is functioning properly. 
+ i.e.
+ it is the probability that the component is functioning properly.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4034,12 +3886,10 @@ end{Definition}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4048,11 +3898,13 @@ begin{Definition}
 
 \end_inset
 
- A series system is a system such that the entire system fails if any one of its components fails. 
+ A series system is a system such that the entire system fails if any one
+ of its components fails.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4065,7 +3917,7 @@ end{Definition}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4078,12 +3930,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4096,7 +3946,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4107,7 +3957,7 @@ System's reliability
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4118,7 +3968,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4129,7 +3979,7 @@ Parallel system
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4140,12 +3990,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4154,11 +4002,13 @@ begin{Definition}
 
 \end_inset
 
- A parallel system is a system such that the entire system fails only if all its components fail. 
+ A parallel system is a system such that the entire system fails only if
+ all its components fail.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4171,12 +4021,10 @@ end{Definition}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4185,15 +4033,17 @@ begin{theorem}
 
 \end_inset
 
-[Product law of reliabilities for series systems] The reliability of a series system decreases 
+[Product law of reliabilities for series systems] The reliability of a series
+ system decreases 
 \begin_inset Quotes grd
 \end_inset
 
-quickly ”with an increase in complexity (number of components). 
+quickly ”with an increase in complexity (number of components).
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4206,12 +4056,10 @@ end{theorem}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4228,32 +4076,31 @@ begin{proof}
 \begin_inset Quotes grd
 \end_inset
 
-The system functions properly”. The reliability of a series system of 
+The system functions properly”.
+ The reliability of a series system of 
 \begin_inset Formula $n$
 \end_inset
 
  components is then 
-\newline
+\begin_inset Newline newline
+\end_inset
+
  
 \end_layout
 
 \begin_layout Standard
 \align center
-
-
-\begin_inset Formula $ R = P(A) = P(A_1 \cap A_2 \dots \cap A_n)= \prod_{i=1}^n P(A_i)$
+\begin_inset Formula $R=P(A)=P(A_{1}\cap A_{2}\dots\cap A_{n})=\prod_{i=1}^{n}P(A_{i})$
 \end_inset
 
  
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4266,7 +4113,7 @@ end{proof}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4279,12 +4126,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4297,7 +4142,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4308,7 +4153,7 @@ System's reliability
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4319,7 +4164,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4330,7 +4175,7 @@ Parallel redundancy
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4341,7 +4186,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4355,24 +4200,27 @@ begin{example}
 \end_inset
 
  components and 
-\begin_inset Formula $P(A_i)=0.970$
+\begin_inset Formula $P(A_{i})=0.970$
 \end_inset
 
  for all components.
-\newline
+\begin_inset Newline newline
+\end_inset
+
  
 \begin_inset VSpace 0.75cm
 \end_inset
 
  The system reliability is then equal to 
-\begin_inset Formula \[ R = P(A_1)^5 = 0.97^5 = 0.859.\]
+\begin_inset Formula \[
+R=P(A_{1})^{5}=0.97^{5}=0.859.\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
 If we increase 
 \begin_inset Formula $n=10$
 \end_inset
@@ -4382,7 +4230,9 @@ If we increase
 \end_inset
 
 !
-\newline
+\begin_inset Newline newline
+\end_inset
+
  
 \begin_inset VSpace 0.75cm
 \end_inset
@@ -4399,7 +4249,7 @@ If we increase
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4412,7 +4262,7 @@ end{example}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4425,12 +4275,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4443,7 +4291,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4454,7 +4302,7 @@ System's reliability
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4465,7 +4313,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4476,18 +4324,20 @@ Parallel redundancy
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
 
 \end_inset
 
- In order to mitigate the problem one possible solution is to implement parallel redundancy. 
+ In order to mitigate the problem one possible solution is to implement
+ parallel redundancy.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4500,22 +4350,26 @@ begin{example}
 \begin_inset Formula $n$
 \end_inset
 
- independent components. The system runs correctly if at least one of its components runs properly, i.e. 
+ independent components.
+ The system runs correctly if at least one of its components runs properly,
+ i.e.
+ 
 \begin_inset Formula \[
- A = (A_1 \cup A_2 \dots \cup A_n). 
-\]
+A=(A_{1}\cup A_{2}\dots\cup A_{n}).\]
+
 \end_inset
 
  But this means that 
-\begin_inset Formula \[ P(\overline A) = P(\overline{(A_1 \cup A_2 \dots \cup A_n)})=P(\overline A_1 \cap \overline A_2 \dots \cap 
-\overline A_n))=\prod_{i=1}^n P(\overline A_i)\]
+\begin_inset Formula \[
+P(\overline{A})=P(\overline{(A_{1}\cup A_{2}\dots\cup A_{n})})=P(\overline{A}_{1}\cap\overline{A}_{2}\dots\cap\overline{A}_{n}))=\prod_{i=1}^{n}P(\overline{A}_{i})\]
+
 \end_inset
 
  
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4528,7 +4382,7 @@ end{example}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4541,12 +4395,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4559,7 +4411,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4570,7 +4422,7 @@ System's reliability
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4581,7 +4433,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4592,7 +4444,7 @@ Parallel redundancy
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4603,7 +4455,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4613,17 +4465,18 @@ begin{example}
 \end_inset
 
 [continued] Applying the identity 
-\begin_inset Formula $P(\overline B)=1-P(B)$
+\begin_inset Formula $P(\overline{B})=1-P(B)$
 \end_inset
 
- to both sides of the equality and solving w.r.t. 
+ to both sides of the equality and solving w.r.t.
+ 
 \begin_inset Formula $P(A)$
 \end_inset
 
 , we obtain the final formula 
 \begin_inset Formula \[
-P(A) = 1 - \prod_{i=1}^n (1 - P(A_i)) 
-\]
+P(A)=1-\prod_{i=1}^{n}(1-P(A_{i}))\]
+
 \end_inset
 
  or equivalently, in terms of 
@@ -4631,20 +4484,21 @@ P(A) = 1 - \prod_{i=1}^n (1 - P(A_i))
 \end_inset
 
  and 
-\begin_inset Formula $R_i$
+\begin_inset Formula $R_{i}$
 \end_inset
 
  
 \begin_inset Formula \[
- R = 1 - \prod_{i=1}^n (1 - R_i).
-\]
+R=1-\prod_{i=1}^{n}(1-R_{i}).\]
+
 \end_inset
 
- The next picture shows the so called Product Law of Unreliabilities. 
+ The next picture shows the so called Product Law of Unreliabilities.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4657,12 +4511,10 @@ end{example}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4675,12 +4527,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4693,7 +4543,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4704,7 +4554,7 @@ System's reliability
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4715,7 +4565,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4726,7 +4576,7 @@ Product Law of Unriliabilities
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4738,9 +4588,7 @@ status collapsed
 
 \begin_layout Standard
 \align center
-
-
-\begin_inset Graphics 
+\begin_inset Graphics
 	filename parallelRedundancy1.png
 	width 314pt
 	keepAspectRatio
@@ -4751,12 +4599,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4769,12 +4615,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4787,7 +4631,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4798,7 +4642,7 @@ System's reliability
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4809,7 +4653,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4820,22 +4664,26 @@ Law of Diminishing Returns
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
 
 \end_inset
 
- From the previous picture it is evident one characteristic of parallel redundancy: the marginal increase in reliability decreases with increasing number of parallel components. This behaviour is called the 
+ From the previous picture it is evident one characteristic of parallel
+ redundancy: the marginal increase in reliability decreases with increasing
+ number of parallel components.
+ This behaviour is called the 
 \series bold
 Law of Diminishing Returns
 \series default
-. 
+.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4844,11 +4692,13 @@ begin{definition}
 
 \end_inset
 
-[series-parallel system] A system with both series and parallel parts is called a series-parallel system. 
+[series-parallel system] A system with both series and parallel parts is
+ called a series-parallel system.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4863,14 +4713,11 @@ wide false
 sideways false
 status open
 
-
-\begin_layout Standard
-
-
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4880,7 +4727,7 @@ centering
 \end_inset
 
  
-\begin_inset Graphics 
+\begin_inset Graphics
 	filename seriesparalleldiagram.png
 	width 230pt
 	keepAspectRatio
@@ -4890,18 +4737,18 @@ centering
  
 \begin_inset Caption
 
-\begin_layout Standard
+\begin_layout Plain Layout
 series-parallel reliability block diagram
 \end_layout
 
 \end_inset
 
+
 \end_layout
 
-\begin_layout Standard
-
-
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:seriesParallelBlockDiagram"
 
 \end_inset
@@ -4915,12 +4762,10 @@ name "fig:seriesParallelBlockDiagram"
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4933,12 +4778,10 @@ end{frame}
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4951,7 +4794,7 @@ begin{frame}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4962,7 +4805,7 @@ System's reliability
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4973,7 +4816,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 {
 \end_layout
@@ -4984,7 +4827,7 @@ Structure function
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -4995,7 +4838,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5013,22 +4856,20 @@ begin{definition}
 \end_inset
 
  components so that 
-\begin_inset Formula $X=(x_1,\dots,x_n)$
+\begin_inset Formula $X=(x_{1},\dots,x_{n})$
 \end_inset
 
  where 
 \begin_inset Formula \[
-  x_i = \left\{ \begin{array}{l l}
-            x_i=1 & \textnormal{if component }i\end{array} is functioning,unexpected '}' in math
-\\
-            x_i=0 & \textnormal{if component }i\]
+x_{i}=\]
+
 \end_inset
 
  has failed.
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 }
 \end_layout
@@ -5039,7 +4880,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5052,7 +4893,7 @@ end{definition}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5061,11 +4902,12 @@ right
 
 \end_inset
 
-. 
+.
+ 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5080,29 +4922,26 @@ status collapsed
 
  is defined by 
 \begin_inset Formula \[
-  \Phi(X) = \left\{ \begin{array}{l l}
-            x_i=1 & \textnormal{if system is functioning,}\\
-            x_i=0 & \textnormal{if system has failed.}    
-           \end{array} \right.
-\]
+\Phi(X)=\left\{ \begin{array}{ll}
+x_{i}=1 & \textnormal{if system is functioning,}\\
+x_{i}=0 & \textnormal{if system has failed.}\end{array}\right.\]
+
 \end_inset
 
  The reliability of the system is then 
 \begin_inset Formula \[
- R = P(\Phi(X)=1).
-\]
+R=P(\Phi(X)=1).\]
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-
-
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
