@@ -4,11 +4,12 @@
 \begin_header
 \textclass beamer
 \begin_preamble
+
 \usepackage{amsfonts}
 
 \usetheme{Madrid}
 
-\title[ALARIStatisticsCourse]{ALARIStatisticsCourse}\subtitle{PartII}\author[ClaudioOrtelli]{ClaudioOrtelli}\institute[USI]{Universit\`{a}dellaSvizzeraitaliana}\date[29/2010]{April2011}
+\title[ALARIStatisticsCourse]{ALARIStatisticsCourse}\subtitle{PartII}\author[ClaudioOrtelli]{ClaudioOrtelli}\institute[USI]{Universit\`{a}dellaSvizzeraitaliana}\date[29/2010]{April2010}
 \end_preamble
 \options handout
 \use_default_options false
@@ -45,7 +46,6 @@
 \tracking_changes false
 \output_changes false
 \author "" 
-\author "" 
 \end_header
 
 \begin_body
@@ -62,19 +62,6 @@ status collapsed
 
 
 \backslash
-section{Simulation of random variables}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
 begin{frame}
 \end_layout
 
@@ -91,7 +78,7 @@ status collapsed
 
 \end_inset
 
-Simulation of random variables
+Some special distributions with applications
 \begin_inset ERT
 status collapsed
 
@@ -113,7 +100,7 @@ status collapsed
 
 \end_inset
 
-Motivation
+The memoryless property of the exponential distribution
 \begin_inset ERT
 status collapsed
 
@@ -124,1495 +111,44 @@ status collapsed
 
 \end_inset
 
- 
-\end_layout
-
-\begin_layout Itemize
-We are interested in simulating a model of a real system (network, electronic
- device, ...).
- 
-\end_layout
-
-\begin_layout Itemize
-The output 
-\begin_inset Formula $Y$
+ Result:
+\begin_inset Newline newline
 \end_inset
 
- of the model depends on a stochastic input, i.e.
- a random variable 
+ The conditional distribution 
+\begin_inset Formula $G_{Y}(y\rvert t)$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $t$
+\end_inset
+
+ and is identical to the distribution of 
 \begin_inset Formula $X$
 \end_inset
 
- with known distribution function 
-\begin_inset Formula $F_{X}$
-\end_inset
-
-: 
-\begin_inset Formula \[
-Y=g(X).\]
-
-\end_inset
-
+, i.e.
  
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename sistemaComplesso.png
-	width 157pt
-	keepAspectRatio
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-% sistemaComplesso.png: 314x158 pixel, 72dpi, 11.08x5.57 cm, bb=0 0 314 158
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-The model is too complex in order to analytically derive the probabilistic
- properties of the output, i.e.
- 
-\begin_inset Formula $F_{Y}$
+\begin_inset Formula $Exp(\lambda)$
 \end_inset
 
 .
- 
-\end_layout
-
-\begin_layout Itemize
-Idea: simulate a possible outcome 
-\begin_inset Formula $x$
-\end_inset
-
- of the input 
-\begin_inset Formula $X$
-\end_inset
-
- and evaluate the corresponding outcome 
-\begin_inset Formula $y=g(x)$
-\end_inset
-
- of the output.
- Repeat the experiment 
-\begin_inset Formula $N$
-\end_inset
-
- times and analyse the results.
- 
-\end_layout
-
-\begin_layout Itemize
-The simulated values of the input must be drawn from the distribution of
- 
-\begin_inset Formula $X$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Itemize
-Question: how is it possible to simulate independent realizations from a
- given distribution 
-\begin_inset Formula $F_{X}$
-\end_inset
-
-? 
-\end_layout
-
-\begin_layout Itemize
-Answer: different methods available.
- The simplest of them requires simulating from the uniform distribution
- on the open interval (0,1), i.e.
- 
-\begin_inset Formula $U(0,1)$
-\end_inset
-
-.
- In Matlab use the function 
-\begin_inset Quotes eld
-\end_inset
-
-rand
-\begin_inset Quotes erd
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Inverse Transform Method
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- If the distribution function 
-\begin_inset Formula $F_{X}$
-\end_inset
-
- is continuous and strictly increasing then 
-\begin_inset Formula $F_{X}^{-1}:\ (0,1)\rightarrow\mathbb{R}$
-\end_inset
-
- exists.
- 
 \begin_inset Newline newline
 \end_inset
 
  
-\end_layout
-
-\begin_layout Standard
-\align center
-Example: Chi-Squared Distribution with 5 degrees of freedom 
-\begin_inset Graphics
-	filename distChi2.pdf
-	width 5.8cm
-	keepAspectRatio
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename quantileChi2.pdf
-	width 5.8cm
-	keepAspectRatio
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- For a general distribution function not necessarily strictly increasing
- define 
-\begin_inset Formula \[
-F_{X}^{-1}(p)=\inf\{x:p\leq F_{X}(x)\}\ \ 0<p<1.\]
-
-\end_inset
-
- It then follows that 
-\begin_inset Formula $F_{X}^{-1}(p)\leq x\Longleftrightarrow p\leq F_{X}(x).$
-\end_inset
-
- 
-\begin_inset VSpace 0.2cm
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\align center
-Example: Binomial distribution 
-\begin_inset Formula $Bin(n=3,p=0.3)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace -0.7cm
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename distBinomiale.pdf
-	width 5.8cm
-	keepAspectRatio
-
-\end_inset
-
- 
-\begin_inset Graphics
-	filename quantileBinomiale.pdf
-	width 5.8cm
-	keepAspectRatio
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Inverse Transform Method
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{theorem}
-\end_layout
-
-\end_inset
-
-[Inverse Transform Method] Let 
-\begin_inset Formula $U$
-\end_inset
-
- a continuous Unif(0,1) distributed random variable.
- The random variable 
-\begin_inset Formula $Y=F_{X}^{-1}(U)$
-\end_inset
-
- has distribution function 
-\begin_inset Formula $F_{X}$
-\end_inset
-
-.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{theorem}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
- By definition 
-\begin_inset Formula \[
-F_{Y}(c):=P(Y\leq c)=P(F_{X}^{-1}(U)\leq c).\]
-
-\end_inset
-
- But the last equality is equivalent to (see previous slide) 
-\begin_inset Formula \[
-P(U\leq F_{X}(c))=F_{X}(c).\]
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Inverse Transform Method
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- From the previous theorem we derive the following 
-\emph on
-two steps
-\emph default
- simulation algorithm 
-\end_layout
-
-\begin_layout Itemize
-<1->Simulate a realization 
-\begin_inset Formula $u$
-\end_inset
-
- from a Unif(0,1) random variable 
-\begin_inset Formula $U$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Itemize
-<2-> Compute 
-\begin_inset Formula $x=F_{X}^{-1}(u)$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 0.8cm
-\end_inset
-
- Example: Simulation of 
-\begin_inset Formula $Y\sim Exp(\lambda)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-The distribution function is 
-\begin_inset Formula $F_{Y}(x)=1-\exp(-\lambda x)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-Compute 
-\begin_inset Formula $F_{Y}^{-1}(p)=-\frac{1}{\lambda}\ln(1-p)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-Sample a random draw 
-\begin_inset Formula $u$
-\end_inset
-
- from 
-\begin_inset Formula $U\sim$
-\end_inset
-
- Unif(0,1) 
-\end_layout
-
-\begin_layout Itemize
-Set 
-\begin_inset Formula $y=-\frac{1}{\lambda}\ln(1-u)$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Inverse Transform Method
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset VSpace -4cm
-\end_inset
-
- Remark: if 
-\begin_inset Formula $U\sim$
-\end_inset
-
- Unif(0,1) then 
-\begin_inset Formula $1-U$
-\end_inset
-
- is also Unif(0,1).
- Therefore we can also write 
-\begin_inset Formula $Y=-\frac{1}{\lambda}\ln(U)$
-\end_inset
-
-.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Inverse Transform method
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- For a descrete random variable 
-\begin_inset Formula $Y$
-\end_inset
-
- with probability mass function 
-\begin_inset Formula $P(Y=x_{i})=p_{i}$
-\end_inset
-
-, 
-\begin_inset Formula $i=1,...,m$
-\end_inset
-
- consider the following algorithm: 
-\end_layout
-
-\begin_layout Enumerate
-Generate a Unif(0,1) random variable 
-\begin_inset Formula $U$
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Enumerate
-Compute 
-\begin_inset Formula $Y$
-\end_inset
-
- as follows 
-\begin_inset Formula \[
-Y=x_{j}\textnormal{\hspace{0.5cm} if \hspace{0.1cm}}\sum_{i=1}^{j-1}p_{i}<U\leq\sum_{i=1}^{j}p_{i}.\]
-
-\end_inset
-
- i.e.
- 
-\begin_inset Formula $Y=x_{j}$
-\end_inset
-
- if 
-\begin_inset Formula $F_{Y}(x_{j-1})<U\leq F_{Y}(x_{j})$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Inverse Transform method
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Example: let 
-\begin_inset Formula $Y$
-\end_inset
-
- have the following mass function 
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="4">
-<features>
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $p_{1}$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $p_{2}$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $p_{3}$
-\end_inset
-
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $p_{4}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.1 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.2 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.4 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.3 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-</lyxtabular>
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The simulation algorithm is the following: 
-\end_layout
-
-\begin_layout Enumerate
-If 
-\begin_inset Formula $u\leq p_{1}=0.1$
-\end_inset
-
- then 
-\begin_inset Formula $y=x_{1}$
-\end_inset
-
-.
- Stop.
- 
-\end_layout
-
-\begin_layout Enumerate
-if 
-\begin_inset Formula $u\leq p_{1}+p_{2}=0.3$
-\end_inset
-
- then 
-\begin_inset Formula $y=x_{2}$
-\end_inset
-
-.
- Stop.
- 
-\end_layout
-
-\begin_layout Enumerate
-if 
-\begin_inset Formula $u\leq p_{1}+p_{2}+p_{3}=0.7$
-\end_inset
-
- then 
-\begin_inset Formula $y=x_{3}$
-\end_inset
-
-.
- Stop.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $y=x_{4}$
-\end_inset
-
-.
- Stop.
- 
-\end_layout
-
-\begin_layout Standard
-This algorithm is correct but inefficient.
- In fact, probabilities of one, two, ...
- comparisons are equal to the probabilities of 
-\begin_inset Formula $x_{1}$
-\end_inset
-
-, 
-\begin_inset Formula $x_{2}$
-\end_inset
-
-, ..., respectively.
- The expected number of comparisons is 
-\begin_inset Formula \[
-p_{1}+2p_{2}+3p_{3}+4p_{4}=2.9.\]
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Inverse Transform method
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- We can improve efficiency by sorting the values of 
-\begin_inset Formula $x_{i}$
-\end_inset
-
- by decreasing order of probabilities 
-\begin_inset Formula $p_{i}$
-\end_inset
-
-'s: 
-\begin_inset Formula $x_{3}$
-\end_inset
-
-, 
-\begin_inset Formula $x_{4}$
-\end_inset
-
-, 
-\begin_inset Formula $x_{2}$
-\end_inset
-
- and 
-\begin_inset Formula $x_{1}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-If 
-\begin_inset Formula $u\leq p_{3}=0.4$
-\end_inset
-
- then 
-\begin_inset Formula $y=x_{3}$
-\end_inset
-
-.
- Stop.
- 
-\end_layout
-
-\begin_layout Enumerate
-if 
-\begin_inset Formula $u\leq p_{3}+p_{4}=0.7$
-\end_inset
-
- then 
-\begin_inset Formula $y=x_{4}$
-\end_inset
-
-.
- Stop.
- 
-\end_layout
-
-\begin_layout Enumerate
-if 
-\begin_inset Formula $u\leq p_{3}+p_{4}+p_{2}=0.9$
-\end_inset
-
- then 
-\begin_inset Formula $y=x_{2}$
-\end_inset
-
-.
- Stop.
- 
-\end_layout
-
-\begin_layout Enumerate
-\begin_inset Formula $y=x_{1}$
-\end_inset
-
-.
- Stop.
- 
-\end_layout
-
-\begin_layout Standard
 \begin_inset VSpace 1cm
 \end_inset
 
- The expected number of comparisons is now equal to 
-\begin_inset Formula \[
-p_{3}+2p_{4}+3p_{2}+4p_{1}=2.\]
-
+ Interpretation:
+\begin_inset Newline newline
 \end_inset
 
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Exercises
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- The Laplace distribution is a continuous distribution with density function
- 
-\begin_inset Formula \[
-f(x;\mu,b)=\left\{ \begin{array}{ll}
-\frac{1}{2b}\exp(-\frac{\mu-x}{b}) & \textnormal{if }x<\mu\\
-\frac{1}{2b}\exp(-\frac{x-\mu}{b}) & \textnormal{if }x\geq\mu\end{array}\right.\]
-
-\end_inset
-
- where 
-\begin_inset Formula $\mu$
-\end_inset
-
- is the mean and 
-\begin_inset Formula $b$
-\end_inset
-
- a scale parameter.
- 
-\end_layout
-
-\begin_layout Enumerate
-Plot the density, distribution and quantile functions of the Laplace distributio
-n with parameter 
-\begin_inset Formula $\mu=1$
-\end_inset
-
- and 
-\begin_inset Formula $b=0.5$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Using the previous values of 
-\begin_inset Formula $\mu$
-\end_inset
-
- and 
-\begin_inset Formula $b$
-\end_inset
-
- simulate 
-\begin_inset Formula $N=1000$
-\end_inset
-
- independent realizations of a Laplace distributed random variable 
-\begin_inset Formula $Y$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Plot the histogram of the simulated random variables and compare it with
- the density function of 
-\begin_inset Formula $Y$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Plot the empiric distribution function of the simulated sample and compare
- it with the distribution function of 
-\begin_inset Formula $Y$
-\end_inset
-
-.
- 
+ The distribution of the remaining life does not depend on how long the
+ component has been operating, i.e.
+ the component does not age (it is as good as new).
+ Therefore, the exponential distribution is not suited to model components
+ or devices that gradually deteriorate.
 \end_layout
 
 \begin_layout Standard
@@ -1655,7 +191,7 @@ status collapsed
 
 \end_inset
 
-Simulation of random variables
+Some special distributions with applications
 \begin_inset ERT
 status collapsed
 
@@ -1677,7 +213,7 @@ status collapsed
 
 \end_inset
 
-Transform methods
+The reliability and failure rate
 \begin_inset ERT
 status collapsed
 
@@ -1688,14 +224,11 @@ status collapsed
 
 \end_inset
 
- The theorem on 
-\emph on
-Distributions of functions of continuous random variables
-\emph default
- allows us to generate random variables by means of ad hoc transformations
- of Unif(0,1) random variables.
- The following theorem generalizes the previous theorem to the multivariate
- case.
+ Let the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ be the lifetime (or time to failure) of a component.
  
 \begin_inset ERT
 status collapsed
@@ -1704,45 +237,40 @@ status collapsed
 
 
 \backslash
-begin{Theorem}
+begin{definition}
 \end_layout
 
 \end_inset
 
- Assume that 
-\begin_inset Formula $X=(X_{1},X_{2})$
+ The 
+\series bold
+reliability
+\series default
+ 
+\begin_inset Formula $R(t)$
 \end_inset
 
- is a random vector with joint density function 
-\begin_inset Formula $f_{X}(x_{1},x_{2})$
+ of the component is the probability that the component survives until some
+ time 
+\begin_inset Formula $t$
 \end_inset
 
- and 
-\begin_inset Formula $g:\mathbb{R}^{2}\rightarrow\mathbb{R}^{2}$
-\end_inset
-
- a one-to-one and continuously differentiable function.
- Define 
-\begin_inset Formula $Y=(Y_{1},Y_{2})=g(X)$
-\end_inset
-
-.
- The density function of 
-\begin_inset Formula $Y$
-\end_inset
-
- is then equal to 
+, i.e.
+ 
 \begin_inset Formula \[
-f_{Y}(y)=f_{X}(g^{-1}(y))\ \rvert J(g^{-1}(y))\rvert\]
+R(t)=P(X>t)=1-F_{X}(t)\]
 
 \end_inset
 
- where 
-\begin_inset Formula \[
-J(g^{-1}(y))=\det(M_{J})=\det\left[\frac{\partial x_{i}(y)}{\partial y_{j}}\right]_{i=1,2;\ j=1,2}\]
-
+ 
+\begin_inset Formula $F_{X}(t)$
 \end_inset
 
+ is often called the 
+\series bold
+unreliability
+\series default
+ of the component.
  
 \begin_inset ERT
 status collapsed
@@ -1751,134 +279,26 @@ status collapsed
 
 
 \backslash
-end{Theorem}
+end{definition}
 \end_layout
 
 \end_inset
 
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
+ The conditional probability that the component 
+\color red
+does not
+\color inherit
+ survive for an additional interval of duration 
+\begin_inset Formula $x$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Example: Let 
-\begin_inset Formula $X\sim N(\mu,\Sigma)$
-\end_inset
-
- be a 
-\begin_inset Formula $2\times1$
-\end_inset
-
- random vector and consider the affine transformation 
-\begin_inset Formula \[
-Y=b+A\ X\]
-
-\end_inset
-
- where 
-\begin_inset Formula $b$
-\end_inset
-
- is a deterministic 
-\begin_inset Formula $2\times1$
-\end_inset
-
- vector and 
-\begin_inset Formula $A$
-\end_inset
-
- a 
-\begin_inset Formula $2\times2$
-\end_inset
-
- invertible matrix.
- We then have 
-\begin_inset Formula \[
-X=A^{-1}(Y-b);\ M_{J}=A^{-1}\]
-
-\end_inset
-
- and 
-\begin_inset Formula $f_{Y}(y)$
+ given that it has survived until time 
+\begin_inset Formula $t$
 \end_inset
 
  is equal to 
 \begin_inset Formula \[
-\frac{1}{\sqrt{2\pi det(\Sigma)}}\exp(-\frac{1}{2}(A^{-1}(Y-b)-\mu)'\Sigma^{-1}(A^{-1}(Y-b)-\mu))\rvert det(A^{-1})\rvert\]
-
-\end_inset
-
- 
-\begin_inset Formula \[
-\frac{1}{\sqrt{2\pi det(A\Sigma A')}}\exp(-\frac{1}{2}(Y-b-A\mu)'(A\Sigma A')^{-1}(Y-b-A\mu))\]
+G_{Y}(x\rvert t)=\frac{P(t<X\leq t+x)}{P(X>t)}=\frac{F_{X}(t+x)-F_{X}(t)}{R(t)}\]
 
 \end_inset
 
@@ -1922,7 +342,7 @@ status collapsed
 
 \end_inset
 
-Simulation of random variables
+Some special distributions with applications
 \begin_inset ERT
 status collapsed
 
@@ -1944,592 +364,7 @@ status collapsed
 
 \end_inset
 
-Transform methods
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Example (continued):
-\begin_inset Newline newline
-\end_inset
-
- Looking at the density function of 
-\begin_inset Formula $Y$
-\end_inset
-
- we note that 
-\begin_inset Formula $Y\sim N(\tilde{\mu},\tilde{\Sigma})$
-\end_inset
-
- whith 
-\begin_inset Formula $\tilde{\mu}=b+A\mu$
-\end_inset
-
- and 
-\begin_inset Formula $\tilde{\Sigma}=A\Sigma A'$
-\end_inset
-
-.
- 
-\begin_inset VSpace 1cm
-\end_inset
-
- 
-\begin_inset Newline newline
-\end_inset
-
- Exercise: 
-\begin_inset Formula $U_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $U_{2}$
-\end_inset
-
- are two independent Unif(0,1) distributed random variables.
- Define 
-\begin_inset Formula $Y=(Y_{1},Y_{2})$
-\end_inset
-
- with 
-\begin_inset Formula \[
-Y_{1}=\sqrt{-2\ln(U_{1})}\cos(2\pi U_{2})\textnormal{ and }Y_{2}=\sqrt{-2\ln(U_{1})}\sin(2\pi U_{2})\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Show that 
-\begin_inset Formula $Y\sim N(0,I)$
-\end_inset
-
-, i.e.
- 
-\begin_inset Formula $Y_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $Y_{2}$
-\end_inset
-
- are independent standard normal distributed random variables.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Simulation of random variables
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Exercise: The joint density of the random variables 
-\begin_inset Formula $X_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $X_{2}$
-\end_inset
-
- is 
-\begin_inset Formula \[
-f(x_{1},x_{2})=2\exp(−x_{1})\exp(−x_{2}),\textnormal{ for }0<x_{1}<x_{2}<\infty\]
-
-\end_inset
-
- and 
-\begin_inset Formula $f(x_{1},x_{2})=0$
-\end_inset
-
- otherwise.
- 
-\begin_inset Newline newline
-\end_inset
-
- We define the transformation 
-\begin_inset Formula \[
-Y_{1}=2X_{1},Y_{2}=X_{2}-X_{1}.\]
-
-\end_inset
-
- Find the joint density of 
-\begin_inset Formula $Y_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $Y_{2}$
-\end_inset
-
-.
- Are 
-\begin_inset Formula $Y_{1}$
-\end_inset
-
- and 
-\begin_inset Formula $Y2$
-\end_inset
-
- independent?
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-section{Distribution and moments of a random variable}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: definitions
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Itemize
-Transform methods are transformations of the probability mass function (discrete
- case) or the density function (continuous case).
- 
-\end_layout
-
-\begin_layout Itemize
-They are particular useful to compute moments of a distribution and in problems
- involving sums of independent random variables.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{definition}
-\end_layout
-
-\end_inset
-
- The moment generating function (MGF) 
-\begin_inset Formula $M_{X}(\theta)$
-\end_inset
-
-, abbreviated 
-\begin_inset Formula $M(\theta)$
-\end_inset
-
-, of the random variable 
-\begin_inset Formula $X$
-\end_inset
-
- is defined by 
-\begin_inset Formula \[
-M(\theta)=E\left[\exp(X\theta)\right]\]
-
-\end_inset
-
- provided the expectation exists (
-\begin_inset Formula $M(\theta)$
-\end_inset
-
- may not exist for all 
-\begin_inset Formula $\theta\in\mathbb{R}$
-\end_inset
-
-).
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{definition}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: definitions
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{definition}
-\end_layout
-
-\end_inset
-
- The characteristic function of a random variable 
-\begin_inset Formula $X$
-\end_inset
-
- is given by 
-\begin_inset Formula \[
-N_{X}(\tau)=N(\tau)=E\left[\exp(iX\tau)\right]=M_{X}(i\tau)\textnormal{ where }i=\sqrt{-1}.\]
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{definition}
-\end_layout
-
-\end_inset
-
- Note that 
-\begin_inset Formula $N_{X}(\tau)$
-\end_inset
-
- is always defined for any 
-\begin_inset Formula $X$
-\end_inset
-
- and all 
-\begin_inset Formula $\tau$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{definition}
-\end_layout
-
-\end_inset
-
- Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a nonnegative continuous random variable.
- The Laplace - Stieltjes transform of 
-\begin_inset Formula $X$
-\end_inset
-
- is 
-\begin_inset Formula \[
-L_{X}(s)=L(s)=M_{X}(-s)=\int_{0}^{\infty}\exp(-sx)f(x)dx.\]
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{definition}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: definition and theorems
+The reliability and failure rate
 \begin_inset ERT
 status collapsed
 
@@ -2553,22 +388,19 @@ begin{definition}
 
 \end_inset
 
- Let 
-\begin_inset Formula $X$
+ The instantaneous failure rate 
+\begin_inset Formula $h(t)$
 \end_inset
 
- be a discrete nonnegative integer-valued random variable.
- The 
-\begin_inset Formula $z$
-\end_inset
-
- transform (or probability generating function) of 
-\begin_inset Formula $X$
-\end_inset
-
- is defined as 
+ is defined to be 
 \begin_inset Formula \[
-G_{X}(z)=G(z)=E\left[z^{X}\right]=M_{X}(ln(z))=\sum_{i=0}^{\infty}p_{X}(i)z^{i}.\]
+h(t)=\lim_{x\rightarrow0}\frac{1}{x}G_{Y}(x\rvert t)=\lim_{x\rightarrow0}\frac{F_{X}(t+x)-F_{X}(t)}{xR(t)}\ ,\]
+
+\end_inset
+
+ so that 
+\begin_inset Formula \[
+h(t)=\frac{f_{X}(t)}{R(t)}.\]
 
 \end_inset
 
@@ -2585,1138 +417,48 @@ end{definition}
 
 \end_inset
 
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{Theorem}
-\end_layout
-
-\end_inset
-
- Affine transformation.
- Let 
-\begin_inset Formula $Y=aX+b$
-\end_inset
-
-.
- Then 
-\begin_inset Formula \[
-M_{Y}(\theta)=\exp(b\theta)M_{X}(a\theta)\]
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Theorem}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: theorems
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{Theorem}
-\end_layout
-
-\end_inset
-
-[The Convolution Theorem] Let 
-\begin_inset Formula $X_{1},X_{2},...,X_{n}$
-\end_inset
-
- be mutually independent random variables.
- Define 
-\begin_inset Formula $Y=\sum_{i=1}^{n}X_{i}$
-\end_inset
-
-.
- If 
-\begin_inset Formula $M_{X_{i}}(\theta)$
-\end_inset
-
- exists for all 
-\begin_inset Formula $i$
-\end_inset
-
-, then 
-\begin_inset Formula $M_{Y}(\theta)$
-\end_inset
-
- exists, and 
-\begin_inset Formula \[
-M_{Y}(\theta)=\prod_{i=1}^{n}M_{X_{i}}(\theta).\]
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Theorem}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{Theorem}
-\end_layout
-
-\end_inset
-
-[Uniqueness Theorem] If 
-\begin_inset Formula $M_{X}(\theta)=M_{Y}(\theta)$
-\end_inset
-
- for all 
-\begin_inset Formula $\theta$
-\end_inset
-
-, then 
-\begin_inset Formula $F_{X}=F_{Y}$
-\end_inset
-
-, i.e.
- 
-\begin_inset Formula $X$
-\end_inset
-
- and 
-\begin_inset Formula $Y$
-\end_inset
-
- have the same distribution.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Theorem}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: theorems
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{theorem}
-\end_layout
-
-\end_inset
-
-[Moment generating property of the 
-\begin_inset Formula $MGF$
-\end_inset
-
-] Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a random variable such that all moments exist.
- Then 
-\begin_inset Formula \[
-E\left[X^{k}\right]=\frac{\partial^{k}M_{X}}{\partial\theta^{k}}\left\vert _{\theta=0}\right.\,\ \ k=1,2,\dots\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{theorem}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{proof}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula \[
-\exp(X\theta)=1+X\theta+\frac{X^{2}\theta^{2}}{2!}+\dots+\frac{X^{k}\theta^{k}}{k!}+\dots\]
-
-\end_inset
-
- Taking expectation on both sides 
-\begin_inset Formula \[
-M_{X}(\theta)=E\left[\exp(X\theta)\right]=1+E\left[X\right]\theta+\frac{E\left[X^{2}\right]\theta^{2}}{2!}+\dots+\frac{E\left[X^{k}\right]\theta^{k}}{k!}+\dots\]
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{proof}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: theorems
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- The corresponding properties for the characteristic function 
-\begin_inset Formula $N_{X}$
-\end_inset
-
-, the Laplace - Stieltjes transform 
-\begin_inset Formula $L_{X}$
-\end_inset
-
- and the 
-\begin_inset Formula $z$
-\end_inset
-
- transform 
-\begin_inset Formula $G_{X}$
+ Alternate terms for 
+\begin_inset Formula $h(t)$
 \end_inset
 
  are 
-\begin_inset Formula \[
-E\left[X^{k}\right]=(-i)^{k}\frac{\partial^{k}N_{X}}{\partial\tau^{k}}\left\vert _{\tau=0}\right.\,\ \ k=0,1,\dots\]
-
-\end_inset
-
- 
-\begin_inset Formula \[
-E\left[X^{k}\right]=(-1)^{k}\frac{\partial^{k}L_{X}}{\partial s^{k}}\left\vert _{s=0}\right.\,\ \ k=0,1,\dots\]
-
-\end_inset
-
- 
-\begin_inset Formula \[
-E\left[\frac{X!}{(X-k)!}\right]=\lim_{\tilde{z}\uparrow1}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=\tilde{z}}\right.\,\ \ k=0,1,\dots\]
-
-\end_inset
-
- respectively, where 
-\begin_inset Formula $\left[\frac{X!}{(X-k)!}\right]=X(X-1)\dots(X-k+1)$
-\end_inset
-
-.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: theorems and examples
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Finally, let 
-\begin_inset Formula $X$
-\end_inset
-
- be a discrete nonnegative integer-valued random variable with 
-\begin_inset Formula $z$
-\end_inset
-
- transform 
-\begin_inset Formula $G_{X}$
-\end_inset
-
-.
- The probability mass function of X can be recovered by taking derivatives
- of 
-\begin_inset Formula $G_{X}$
-\end_inset
-
-: 
-\begin_inset Formula \[
-p_{k}=P(X=k)=\frac{1}{k!}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=0}\right.\]
-
-\end_inset
-
- Examples: Let 
-\begin_inset Formula $X$
-\end_inset
-
- be exponentially distributed with parameter 
-\begin_inset Formula $\lambda$
-\end_inset
-
-.
- Then 
-\begin_inset Formula \[
-f_{X}(x)=\lambda\exp(-\lambda x),\ x>0.\]
-
-\end_inset
-
- 
-\begin_inset Formula \begin{align*}
-L_{X}(s) & =\int_{0}^{\infty}exp(-sx)exp(-\lambda x)dx\\
- & =\frac{\lambda}{s+\lambda}\int_{0}^{\infty}(\lambda+s)exp(-(\lambda+s)x)dx\\
- & =\frac{\lambda}{s+\lambda}.\end{align*}
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: examples
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Example (continued): 
-\begin_inset Formula \begin{align*}
-E\left[X\right] & =(-1)\frac{\partial L_{X}}{\partial s}\left\vert _{s=0}\right.=(-1)\frac{-\lambda}{(\lambda+s)^{2}}\left\vert _{s=0}\right.=\frac{1}{\lambda}.\\
-E\left[X^{2}\right] & =\frac{\partial^{2}L_{X}}{\partial s^{2}}\left\vert _{s=0}\right.=\frac{2\lambda}{(\lambda+s)^{3}}\left\vert _{s=0}\right.=\frac{2}{\lambda^{2}}.\end{align*}
-
-\end_inset
-
- Example: Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a 
-\begin_inset Formula $n$
-\end_inset
-
- trials Binomial distributed random variable with probability of success
- 
-\begin_inset Formula $p$
-\end_inset
-
-.
- The 
-\begin_inset Formula $z$
-\end_inset
-
- transform of 
-\begin_inset Formula $X$
-\end_inset
-
- is by definition 
-\begin_inset Formula \begin{eqnarray*}
-G_{X}(z) & = & E(z^{X})=\sum_{k=0}^{n}z^{k}\left(\begin{array}{c}
-n\\
-k\end{array}\right)p^{k}(1-p)^{n-k}\\
- & = & (pz+1-p)^{n}\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: exercises
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Exercise:
-\begin_inset Newline newline
-\end_inset
-
- Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a Bernoulli distributed random variable with probability of success
- 
-\begin_inset Formula $p$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Compute the MGF 
-\begin_inset Formula $M_{X}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Compute skewness and kurtosis of 
-\begin_inset Formula $X$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 0.8cm
-\end_inset
-
- Exercise:
-\begin_inset Newline newline
-\end_inset
-
- Let 
-\begin_inset Formula $X_{1},X_{2},\dots,X_{n}$
-\end_inset
-
- a sequence of independent Bernoulli distributed random variables.
- 
-\end_layout
-
-\begin_layout Enumerate
-Compute the moment generating function of 
-\begin_inset Formula $Y=\sum_{i=1}^{n}X_{i}$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Show that 
-\begin_inset Formula $M_{Y}$
-\end_inset
-
- is the MGF of a Bernoulli 
-\begin_inset Formula $(n,p)$
-\end_inset
-
- distributed random variable.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: exercises
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Exercise:
-\begin_inset Newline newline
-\end_inset
-
- Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a standard normally distributed random variable.
- 
-\end_layout
-
-\begin_layout Enumerate
-Compute the MGF of 
-\begin_inset Formula $X$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Compute the Kurtosis of 
-\begin_inset Formula $X$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Define 
-\begin_inset Formula $Y=\sigma X+\mu$
-\end_inset
-
-.
- Derive the MGF of 
-\begin_inset Formula $Y$
-\end_inset
-
- and compute its expected value and variance.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace 0.2cm
-\end_inset
-
- Exercise:
-\begin_inset Newline newline
-\end_inset
-
- Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a geometric distributed random variable with probability mass function
- 
-\begin_inset Formula $p_{X}(i)=p(1-p)^{i}$
-\end_inset
-
+\shape italic
+hazard rate
+\shape default
 , 
-\begin_inset Formula $i=1,2,...$
-\end_inset
-
+\shape italic
+force of mortality
+\shape default
+, 
+\shape italic
+intensity rate
+\shape default
+, 
+\shape italic
+conditional failure rate
+\shape default
+ or 
+\series bold
+failure rate
+\series default
 .
- 
-\end_layout
-
-\begin_layout Enumerate
-Compute the 
-\begin_inset Formula $z$
-\end_inset
-
- transform of 
-\begin_inset Formula $X$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Enumerate
-Compute the skewness of 
-\begin_inset Formula $X$
-\end_inset
-
-.
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Distribution and moments of a random variable
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Transform methods: exercises
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Exercise:
 \begin_inset Newline newline
 \end_inset
 
- Let 
-\begin_inset Formula $X$
-\end_inset
-
- be a continuous Unif
-\begin_inset Formula $(a,b)$
-\end_inset
-
- distributed random variable with 
-\begin_inset Formula $0\leq a<b$
-\end_inset
-
-.
- 
+ Interpretation: 
 \end_layout
 
-\begin_layout Enumerate
-Compute the MGF and the Laplace - Stieltjes transform of 
-\begin_inset Formula $X$
+\begin_layout Itemize
+\begin_inset Formula $h(t)\Delta t$
 \end_inset
 
-.
- 
-\end_layout
+ represents the conditional probability that a component having survived
+ to age 
+\begin_inset Formula $t$
+\end_inset
 
-\begin_layout Enumerate
-Compute skewness and kurtosis of 
-\begin_inset Formula $X$
+ will fail in the interval 
+\begin_inset Formula $(t,t+\Delta t]$
 \end_inset
 
 .
@@ -3724,196 +466,6 @@ Compute skewness and kurtosis of
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-section{System's reliability}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Reliability of a component
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- Let us consider an electronic system with 
-\begin_inset Formula $n$
-\end_inset
-
- independent components.
- Define the event 
-\begin_inset Formula \[
-A_{i}:=\textnormal{“The }i-th\]
-
-\end_inset
-
- component is functioning properly ”.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-]
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{Definition}
-\end_layout
-
-\end_inset
-
- The reliability of component 
-\begin_inset Formula $i$
-\end_inset
-
- is defined as 
-\begin_inset Formula \[
-R_{i}=P(A_{i}),\]
-
-\end_inset
-
- i.e.
- it is the probability that the component is functioning properly.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Definition}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{Definition}
-\end_layout
-
-\end_inset
-
- A series system is a system such that the entire system fails if any one
- of its components fails.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Definition}
-\end_layout
-
-\end_inset
-
- 
 \begin_inset ERT
 status collapsed
 
@@ -3953,7 +505,7 @@ status collapsed
 
 \end_inset
 
-System's reliability
+Some special distributions with applications
 \begin_inset ERT
 status collapsed
 
@@ -3975,7 +527,7 @@ status collapsed
 
 \end_inset
 
-Parallel system
+The reliability and failure rate
 \begin_inset ERT
 status collapsed
 
@@ -3987,40 +539,42 @@ status collapsed
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
 
+%[allowframebreaks]
+\end_layout
 
-\backslash
-begin{Definition}
+\begin_layout Plain Layout
+
 \end_layout
 
 \end_inset
 
- A parallel system is a system such that the entire system fails only if
- all its components fail.
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{X}(t)\Delta t$
+\end_inset
+
+ is the 
+\shape italic
+unconditional
+\shape default
+ probability while 
+\begin_inset Formula $h(t)\Delta t$
+\end_inset
+
+ is a conditional probability.
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Definition}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
+Next theorem shows the connection between reliability and failure rate.
+ 
 \begin_inset ERT
 status collapsed
 
@@ -4033,12 +587,12 @@ begin{theorem}
 
 \end_inset
 
-[Product law of reliabilities for series systems] The reliability of a series
- system decreases 
-\begin_inset Quotes grd
+ 
+\begin_inset Formula \[
+R(t)=\exp\left(-\int_{0}^{t}h(x)dx\right)\]
+
 \end_inset
 
-quickly ”with an increase in complexity (number of components).
  
 \begin_inset ERT
 status collapsed
@@ -4052,10 +606,7 @@ end{theorem}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+ 
 \begin_inset ERT
 status collapsed
 
@@ -4068,35 +619,22 @@ begin{proof}
 
 \end_inset
 
- Let us consider the event 
-\begin_inset Formula $A=$
-\end_inset
-
-
-\begin_inset Quotes grd
-\end_inset
-
-The system functions properly”.
- The reliability of a series system of 
-\begin_inset Formula $n$
-\end_inset
-
- components is then 
-\begin_inset Newline newline
-\end_inset
-
  
-\end_layout
+\begin_inset Formula \[
+\int_{0}^{t}h(x)dx=\int_{0}^{t}\frac{f_{X}(t)}{R(t)}dx=\int_{0}^{t}\frac{-R'(t)}{R(t)}dx=-\ln(R(t))\]
 
-\begin_layout Standard
-\align center
-\begin_inset Formula $R=P(A)=P(A_{1}\cap A_{2}\dots\cap A_{n})=\prod_{i=1}^{n}P(A_{i})$
 \end_inset
 
- 
-\end_layout
+ using the fact that 
+\begin_inset Formula $R'(t)=-f_{X}(t)$
+\end_inset
 
-\begin_layout Standard
+ and the boundary contition 
+\begin_inset Formula $R(0)=1$
+\end_inset
+
+.
+ 
 \begin_inset ERT
 status collapsed
 
@@ -4109,404 +647,6 @@ end{proof}
 
 \end_inset
 
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Parallel redundancy
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
- Let a series system have 
-\begin_inset Formula $n=5$
-\end_inset
-
- components and 
-\begin_inset Formula $P(A_{i})=0.970$
-\end_inset
-
- for all components.
-\begin_inset Newline newline
-\end_inset
-
- 
-\begin_inset VSpace 0.75cm
-\end_inset
-
- The system reliability is then equal to 
-\begin_inset Formula \[
-R=P(A_{1})^{5}=0.97^{5}=0.859.\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-If we increase 
-\begin_inset Formula $n=10$
-\end_inset
-
- the system reliability decreases to 
-\begin_inset Formula $0.738$
-\end_inset
-
-!
-\begin_inset Newline newline
-\end_inset
-
- 
-\begin_inset VSpace 0.75cm
-\end_inset
-
- What if 
-\begin_inset Formula $n=1'000'000$
-\end_inset
-
-? 
-\begin_inset VSpace 0.5cm
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Parallel redundancy
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- In order to mitigate the problem one possible solution is to implement
- parallel redundancy.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
- Consider a parallel system of 
-\begin_inset Formula $n$
-\end_inset
-
- independent components.
- The system runs correctly if at least one of its components runs properly,
- i.e.
- 
-\begin_inset Formula \[
-A=(A_{1}\cup A_{2}\dots\cup A_{n}).\]
-
-\end_inset
-
- But this means that 
-\begin_inset Formula \[
-P(\overline{A})=P(\overline{(A_{1}\cup A_{2}\dots\cup A_{n})})=P(\overline{A}_{1}\cap\overline{A}_{2}\dots\cap\overline{A}_{n}))=\prod_{i=1}^{n}P(\overline{A}_{i})\]
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Parallel redundancy
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
-[continued] Applying the identity 
-\begin_inset Formula $P(\overline{B})=1-P(B)$
-\end_inset
-
- to both sides of the equality and solving w.r.t.
- 
-\begin_inset Formula $P(A)$
-\end_inset
-
-, we obtain the final formula 
-\begin_inset Formula \[
-P(A)=1-\prod_{i=1}^{n}(1-P(A_{i}))\]
-
-\end_inset
-
- or equivalently, in terms of 
-\begin_inset Formula $R$
-\end_inset
-
- and 
-\begin_inset Formula $R_{i}$
-\end_inset
-
- 
-\begin_inset Formula \[
-R=1-\prod_{i=1}^{n}(1-R_{i}).\]
-
-\end_inset
-
- The next picture shows the so called Product Law of Unreliabilities.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
-\end_layout
-
-\end_inset
-
 
 \end_layout
 
@@ -4550,7 +690,7 @@ status collapsed
 
 \end_inset
 
-System's reliability
+Some special distributions with applications
 \begin_inset ERT
 status collapsed
 
@@ -4572,7 +712,7 @@ status collapsed
 
 \end_inset
 
-Product Law of Unriliabilities
+The reliability and failure rate
 \begin_inset ERT
 status collapsed
 
@@ -4580,25 +720,10 @@ status collapsed
 
 }
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\align center
-\begin_inset Graphics
-	filename parallelRedundancy1.png
-	width 314pt
-	keepAspectRatio
 
 \end_inset
 
  
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
@@ -4606,15 +731,18 @@ status collapsed
 
 
 \backslash
-end{frame}
+begin{definition}
 \end_layout
 
 \end_inset
 
+ The cumulative hazard is defined to be 
+\begin_inset Formula \[
+H(t)=\int_{0}^{t}h(x)dx\]
 
-\end_layout
+\end_inset
 
-\begin_layout Standard
+ 
 \begin_inset ERT
 status collapsed
 
@@ -4622,62 +750,15 @@ status collapsed
 
 
 \backslash
-begin{frame}
+end{definition}
 \end_layout
 
 \end_inset
 
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
+ Then, reliability can also be written as 
+\begin_inset Formula $R(t)=\exp(-H(t))$
 \end_inset
 
-System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Law of Diminishing Returns
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- From the previous picture it is evident one characteristic of parallel
- redundancy: the marginal increase in reliability decreases with increasing
- number of parallel components.
- This behaviour is called the 
-\series bold
-Law of Diminishing Returns
-\series default
 .
  
 \begin_inset ERT
@@ -4692,8 +773,33 @@ begin{definition}
 
 \end_inset
 
-[series-parallel system] A system with both series and parallel parts is
- called a series-parallel system.
+
+\begin_inset CommandInset label
+LatexCommand label
+name "DefConditionalReliability"
+
+\end_inset
+
+ The conditional reliability 
+\begin_inset Formula $R_{t}(y)$
+\end_inset
+
+ is the probability that the component survives an additional interval of
+ duration 
+\begin_inset Formula $y$
+\end_inset
+
+ given that it has survived until time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ 
+\begin_inset Formula \begin{eqnarray}
+R_{t}(y)=\frac{R(t+y)}{R(t)}\label{conditionalReliability}\end{eqnarray}
+
+\end_inset
+
  
 \begin_inset ERT
 status collapsed
@@ -4708,12 +814,6 @@ end{definition}
 \end_inset
 
  
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -4721,44 +821,215 @@ status collapsed
 
 
 \backslash
-centering
+end{frame}
 \end_layout
 
 \end_inset
 
- 
-\begin_inset Graphics
-	filename seriesparalleldiagram.png
-	width 230pt
-	keepAspectRatio
 
-\end_inset
+\end_layout
 
- 
-\begin_inset Caption
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-series-parallel reliability block diagram
+
+
+\backslash
+begin{frame}
 \end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:seriesParallelBlockDiagram"
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Assume a component does not age stochastically, i.e.
+ the survival probability over an additional time interval 
+\begin_inset Formula $y$
+\end_inset
+
+ is the same regardless of the age 
+\begin_inset Formula $t$
+\end_inset
+
+ of the component: 
+\begin_inset Formula \begin{eqnarray*}
+R_{t}(y) & = & R_{s}(y)\textnormal{ \ for all }t,s\geq0.\end{eqnarray*}
+
+\end_inset
+
+ For 
+\begin_inset Formula $s=0$
+\end_inset
+
+ 
+\begin_inset Formula \begin{eqnarray*}
+R_{t}(y) & = & R_{0}(y)=\frac{R(y)}{R(0)}=R(y),\end{eqnarray*}
+
+\end_inset
+
+ so that 
+\begin_inset Formula \begin{eqnarray*}
+R(t+y) & = & R(t)R(y).\end{eqnarray*}
+
+\end_inset
+
+ In particular we obtain 
+\begin_inset Formula \begin{eqnarray*}
+\frac{R(t+y)-R(y)}{t} & = & \frac{(R(t)-1)R(y)}{t}=\frac{(R(t)-R(0))R(y)}{t}.\end{eqnarray*}
 
 \end_inset
 
  
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Taking the limit as 
+\begin_inset Formula $t\rightarrow0$
+\end_inset
+
+ 
+\begin_inset Formula \begin{eqnarray*}
+R'(y) & = & R'(0)R(y)\\
+R(y) & = & \exp(yR'(0))=\exp(-\lambda y)\end{eqnarray*}
+
+\end_inset
+
+ which shows that the lifetime 
+\begin_inset Formula $X\sim Exp(\lambda)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ If a component has exponential lifetime distribution it follows that 
+\end_layout
+
+\begin_layout Enumerate
+A replacement policy of used components based on the lifetime of the components
+ is useless.
+ 
+\end_layout
+
+\begin_layout Enumerate
+In estimating mean life and reliability the age of the observed components
+ are of no concern.
+ The number of hours of observed live and the number of observed failures
+ are of interest.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -4801,7 +1072,7 @@ status collapsed
 
 \end_inset
 
-System's reliability
+Some special distributions with applications
 \begin_inset ERT
 status collapsed
 
@@ -4823,7 +1094,7 @@ status collapsed
 
 \end_inset
 
-Structure function
+The reliability and failure rate
 \begin_inset ERT
 status collapsed
 
@@ -4845,37 +1116,38 @@ status collapsed
 begin{definition}
 \end_layout
 
+\end_inset
+
+ Increasing (decreasing) failure rate distribution
+\begin_inset Newline newline
 \end_inset
 
  Let 
 \begin_inset Formula $X$
 \end_inset
 
- be a state vector of a system with 
-\begin_inset Formula $n$
+ be the lifetime of a component and 
+\begin_inset Formula $F_{X}(t)$
 \end_inset
 
- components so that 
-\begin_inset Formula $X=(x_{1},\dots,x_{n})$
+ the corresponding distribution function.
+ If its failure rate 
+\begin_inset Formula $h(t)$
 \end_inset
 
- where 
-\begin_inset Formula \[
-x_{i}=\]
-
+ is an increasing (decreasing) function of 
+\begin_inset Formula $t$
 \end_inset
 
- has failed.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
+ for 
+\begin_inset Formula $t\geq0$
 \end_inset
 
+ then 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+ is an Increasing (Decreasing) Failure Rate distribution: IFR (DFR) distribution.
  
 \begin_inset ERT
 status collapsed
@@ -4886,51 +1158,6 @@ status collapsed
 \backslash
 end{definition}
 \end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-right
-\end_layout
-
-\end_inset
-
-.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-]
-\end_layout
-
-\end_inset
-
- The structure function 
-\begin_inset Formula $\Phi(X)$
-\end_inset
-
- is defined by 
-\begin_inset Formula \[
-\Phi(X)=\left\{ \begin{array}{ll}
-x_{i}=1 & \textnormal{if system is functioning,}\\
-x_{i}=0 & \textnormal{if system has failed.}\end{array}\right.\]
-
-\end_inset
-
- The reliability of the system is then 
-\begin_inset Formula \[
-R=P(\Phi(X)=1).\]
 
 \end_inset
 
@@ -4951,6 +1178,638 @@ end{frame}
 \end_inset
 
  
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The behavior of the failure rate 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ as a function of age is known as the 
+\shape italic
+mortality curve
+\shape default
+, 
+\shape italic
+hazard function
+\shape default
+, 
+\shape italic
+life characteristic
+\shape default
+ or 
+\shape italic
+lambda characteristic
+\shape default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Figura3_6.png
+	width 110pt
+	keepAspectRatio
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Figura3.6: 336x256 pixel, 90dpi, 9.48x7.23 cm, bb=0 0 269 205
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypoexponential Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The hypoexponential distribution is used to model processes that can be
+ divided into sequential phases such that the time the process spends in
+ each phase is independent and exponentially distributed.
+ 
+\end_layout
+
+\begin_layout Itemize
+Service times for input-output operations in a computer system often follow
+ this distribution.
+ 
+\end_layout
+
+\begin_layout Standard
+A two stage hypoexponential random variable 
+\begin_inset Formula $X\sim Hypo(\lambda_{1},\lambda_{2})$
+\end_inset
+
+ has pdf and distribution function equal to 
+\begin_inset Formula \begin{eqnarray*}
+f(t) & = & \frac{\lambda_{1}\lambda_{2}}{\lambda_{2}-\lambda_{1}}(\exp(-\lambda_{1}t)-\exp(\lambda_{2}t)),\ \ t>0\\
+F(t) & = & 1-\frac{\lambda_{2}}{\lambda_{2}-\lambda_{1}}\exp(-\lambda_{1}t)+\frac{\lambda_{1}}{\lambda_{2}-\lambda_{1}}\exp(-\lambda_{2}t)\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Erlang Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ When 
+\begin_inset Formula $r$
+\end_inset
+
+ sequential phases have identical exponential distribution the resulting
+ density is known as 
+\begin_inset Formula $r-$
+\end_inset
+
+stage Erlang and is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+f(t) & = & \frac{\lambda^{r}t^{r-1}\exp(-\lambda t)}{(r-1)!}\textnormal{ with }t>0,\ \lambda>0,\ r=1,2,\dots\\
+F(t) & = & 1-\sum_{k=0}^{r-1}\frac{(\lambda t)^{k}}{k!}\exp(-\lambda t)\textnormal{ with }t\geq0,\ \lambda>0,\ r=1,2,\dots\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hyperexponential Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Suppose that a process consists of alternate phases, i.e.
+ during any single experiment the process experiences one and only one of
+ the many alternate phases, and thes phases have exponential distributions.
+ The overall distribution is then hyperexponential with density and distribution
+ functions given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+f(t) & = & \sum_{i=1}^{k}\alpha_{i}\lambda_{i}\exp(-\lambda_{i}t)\textnormal{ with }t>0,\ \lambda_{i}>0,\ \sum_{i=1}^{k}\alpha_{i}=1\\
+F(t) & = & \sum_{i}\alpha_{i}(1-\exp(\lambda_{i}t))\ \ t\geq0\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Weibull Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The Weibull distribution is the most widely used parametric family of failure
+ distributions.
+ It has been used to describe 
+\end_layout
+
+\begin_layout Itemize
+fatigue failure 
+\end_layout
+
+\begin_layout Itemize
+electronic component failure 
+\end_layout
+
+\begin_layout Itemize
+ballbearing failure 
+\end_layout
+
+\begin_layout Standard
+The reason is that by a proper choice of the shape parameter 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ we can obtain an IFR, DFR or constant failure rate distribution.
+ The corresponding density and distribution functions are given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+f(t) & = & \lambda\alpha t^{\alpha-1}\exp(-\lambda t^{\alpha})\\
+F(t) & = & 1-\exp(-\lambda t^{\alpha})\end{eqnarray*}
+
+\end_inset
+
+ where 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Pareto Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The Pareto (also knonw as double-exponential, hyperbolic or power-law)
+ distribution has been used to model 
+\end_layout
+
+\begin_layout Itemize
+the amount of CPU time consumed by an arbitrary process 
+\end_layout
+
+\begin_layout Itemize
+the Web file size on the Internet servers 
+\end_layout
+
+\begin_layout Itemize
+the thinking time of the web browser 
+\end_layout
+
+\begin_layout Itemize
+the number of data bytes in FTP bursts 
+\end_layout
+
+\begin_layout Itemize
+the access frequency of Web traffic 
+\end_layout
+
+\begin_layout Standard
+The density and distributions functions are given by 
+\begin_inset Formula \begin{eqnarray*}
+f(x) & = & \alpha k^{\alpha}x^{-\alpha-1}\ \ x\geq k,\ k>0,\ \alpha>0\\
+F(x) & = & \left\{ \begin{array}{ll}
+1-\left(\frac{k}{x}\right)^{\alpha} & \ x\geq k\\
+0 & x<k\end{array}\right.\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

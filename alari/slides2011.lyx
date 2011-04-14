@@ -1,4 +1,4 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -61,8 +61,7 @@ Statistics Lecture
 \end_layout
 
 \begin_layout Author
-C.
- Ortelli
+Claudio Ortelli
 \begin_inset space ~
 \end_inset
 
@@ -129,6 +128,1977 @@ optional, should be abbreviation of conference name
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+section{Some special distributions with applications}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+ 
+\backslash
+begin{frame}{Some special distributions with applications}{Exponential distribut
+ion}
+\end_layout
+
+\end_inset
+
+ The exponential distribution find its application in reliability theory
+ and queuing theory.
+ The following random variables are often modeled as exponential: 
+\end_layout
+
+\begin_layout Enumerate
+Time between two successive job arrivals to a file server (often called
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+ 
+\backslash
+textbf{interarrival time}
+\end_layout
+
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Service time at a server in a queuing network; the server could be a resource
+ such as a CPU, an I/O device, or a communication channel.
+\end_layout
+
+\begin_layout Enumerate
+Time to failure (lifetime) of a component.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Time required to repair a component that has malfunctioned.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark:
+\series default
+ The choice of the exponential distribution to model the stochastic structure
+ of the upper described variables is an assumption and not a given fact!
+ Experimental verification of the distributional assumption will be therefore
+ necessary before to relying on the results of the analysis.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The memoryless property of the exponential distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Le 
+\begin_inset Formula $X\sim Exp(\lambda)$
+\end_inset
+
+ be the lifetime of a component.
+ Suppose we have observed that it has already been operating for 
+\begin_inset Formula $t$
+\end_inset
+
+ hours.
+ 
+\end_layout
+
+\begin_layout Itemize
+What is the distribution of the remaining (residual) lifetime 
+\begin_inset Formula $Y=X-t$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Standard
+Let the conditional probability of 
+\begin_inset Formula $Y\leq y$
+\end_inset
+
+, given that 
+\begin_inset Formula $X>t$
+\end_inset
+
+, be denoted by 
+\begin_inset Formula $G_{Y}(y\rvert t)$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $y\geq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+G_{Y}(y\rvert t) & = & P(Y\leq y\rvert X>t)=\frac{P(\{Y\leq y\}\textnormal{ and }\{X>t\})}{P(X>t)}\\
+ & = & \frac{P(\{X\leq y+t\}\textnormal{ and }\{X>t\})}{P(X>t)}=\frac{P(t<X\leq y+t)}{P(X>t)}\\
+ & = & \frac{exp(-\lambda t)(1-exp(-\lambda y))}{exp(-\lambda t)}=1-exp(-\lambda y).\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The memoryless property of the exponential distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Result:
+\begin_inset Newline newline
+\end_inset
+
+ The conditional distribution 
+\begin_inset Formula $G_{Y}(y\rvert t)$
+\end_inset
+
+ does not depend on 
+\begin_inset Formula $t$
+\end_inset
+
+ and is identical to the distribution of 
+\begin_inset Formula $X$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $Exp(\lambda)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 1cm
+\end_inset
+
+ Interpretation:
+\begin_inset Newline newline
+\end_inset
+
+ The distribution of the remaining life does not depend on how long the
+ component has been operating, i.e.
+ the component does not age (it is as good as new).
+ Therefore, the exponential distribution is not suited to model components
+ or devices that gradually deteriorate.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Let the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ be the lifetime (or time to failure) of a component.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}
+\end_layout
+
+\end_inset
+
+ The 
+\series bold
+reliability
+\series default
+ 
+\begin_inset Formula $R(t)$
+\end_inset
+
+ of the component is the probability that the component survives until some
+ time 
+\begin_inset Formula $t$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula \[
+R(t)=P(X>t)=1-F_{X}(t)\]
+
+\end_inset
+
+ 
+\begin_inset Formula $F_{X}(t)$
+\end_inset
+
+ is often called the 
+\series bold
+unreliability
+\series default
+ of the component.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+ The conditional probability that the component 
+\color red
+does not
+\color inherit
+ survive for an additional interval of duration 
+\begin_inset Formula $x$
+\end_inset
+
+ given that it has survived until time 
+\begin_inset Formula $t$
+\end_inset
+
+ is equal to 
+\begin_inset Formula \[
+G_{Y}(x\rvert t)=\frac{P(t<X\leq t+x)}{P(X>t)}=\frac{F_{X}(t+x)-F_{X}(t)}{R(t)}\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}
+\end_layout
+
+\end_inset
+
+ The instantaneous failure rate 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ is defined to be 
+\begin_inset Formula \[
+h(t)=\lim_{x\rightarrow0}\frac{1}{x}G_{Y}(x\rvert t)=\lim_{x\rightarrow0}\frac{F_{X}(t+x)-F_{X}(t)}{xR(t)}\ ,\]
+
+\end_inset
+
+ so that 
+\begin_inset Formula \[
+h(t)=\frac{f_{X}(t)}{R(t)}.\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+ Alternate terms for 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ are 
+\shape italic
+hazard rate
+\shape default
+, 
+\shape italic
+force of mortality
+\shape default
+, 
+\shape italic
+intensity rate
+\shape default
+, 
+\shape italic
+conditional failure rate
+\shape default
+ or 
+\series bold
+failure rate
+\series default
+.
+\begin_inset Newline newline
+\end_inset
+
+ Interpretation: 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h(t)\Delta t$
+\end_inset
+
+ represents the conditional probability that a component having survived
+ to age 
+\begin_inset Formula $t$
+\end_inset
+
+ will fail in the interval 
+\begin_inset Formula $(t,t+\Delta t]$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%[allowframebreaks]
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $f_{X}(t)\Delta t$
+\end_inset
+
+ is the 
+\shape italic
+unconditional
+\shape default
+ probability while 
+\begin_inset Formula $h(t)\Delta t$
+\end_inset
+
+ is a conditional probability.
+ 
+\end_layout
+
+\begin_layout Standard
+Next theorem shows the connection between reliability and failure rate.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \[
+R(t)=\exp\left(-\int_{0}^{t}h(x)dx\right)\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \[
+\int_{0}^{t}h(x)dx=\int_{0}^{t}\frac{f_{X}(t)}{R(t)}dx=\int_{0}^{t}\frac{-R'(t)}{R(t)}dx=-\ln(R(t))\]
+
+\end_inset
+
+ using the fact that 
+\begin_inset Formula $R'(t)=-f_{X}(t)$
+\end_inset
+
+ and the boundary contition 
+\begin_inset Formula $R(0)=1$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}
+\end_layout
+
+\end_inset
+
+ The cumulative hazard is defined to be 
+\begin_inset Formula \[
+H(t)=\int_{0}^{t}h(x)dx\]
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+ Then, reliability can also be written as 
+\begin_inset Formula $R(t)=\exp(-H(t))$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "DefConditionalReliability"
+
+\end_inset
+
+ The conditional reliability 
+\begin_inset Formula $R_{t}(y)$
+\end_inset
+
+ is the probability that the component survives an additional interval of
+ duration 
+\begin_inset Formula $y$
+\end_inset
+
+ given that it has survived until time 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ 
+\begin_inset Formula \begin{eqnarray}
+R_{t}(y)=\frac{R(t+y)}{R(t)}\label{conditionalReliability}\end{eqnarray}
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Assume a component does not age stochastically, i.e.
+ the survival probability over an additional time interval 
+\begin_inset Formula $y$
+\end_inset
+
+ is the same regardless of the age 
+\begin_inset Formula $t$
+\end_inset
+
+ of the component: 
+\begin_inset Formula \begin{eqnarray*}
+R_{t}(y) & = & R_{s}(y)\textnormal{ \ for all }t,s\geq0.\end{eqnarray*}
+
+\end_inset
+
+ For 
+\begin_inset Formula $s=0$
+\end_inset
+
+ 
+\begin_inset Formula \begin{eqnarray*}
+R_{t}(y) & = & R_{0}(y)=\frac{R(y)}{R(0)}=R(y),\end{eqnarray*}
+
+\end_inset
+
+ so that 
+\begin_inset Formula \begin{eqnarray*}
+R(t+y) & = & R(t)R(y).\end{eqnarray*}
+
+\end_inset
+
+ In particular we obtain 
+\begin_inset Formula \begin{eqnarray*}
+\frac{R(t+y)-R(y)}{t} & = & \frac{(R(t)-1)R(y)}{t}=\frac{(R(t)-R(0))R(y)}{t}.\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Taking the limit as 
+\begin_inset Formula $t\rightarrow0$
+\end_inset
+
+ 
+\begin_inset Formula \begin{eqnarray*}
+R'(y) & = & R'(0)R(y)\\
+R(y) & = & \exp(yR'(0))=\exp(-\lambda y)\end{eqnarray*}
+
+\end_inset
+
+ which shows that the lifetime 
+\begin_inset Formula $X\sim Exp(\lambda)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+ If a component has exponential lifetime distribution it follows that 
+\end_layout
+
+\begin_layout Enumerate
+A replacement policy of used components based on the lifetime of the components
+ is useless.
+ 
+\end_layout
+
+\begin_layout Enumerate
+In estimating mean life and reliability the age of the observed components
+ are of no concern.
+ The number of hours of observed live and the number of observed failures
+ are of interest.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definition}
+\end_layout
+
+\end_inset
+
+ Increasing (decreasing) failure rate distribution
+\begin_inset Newline newline
+\end_inset
+
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be the lifetime of a component and 
+\begin_inset Formula $F_{X}(t)$
+\end_inset
+
+ the corresponding distribution function.
+ If its failure rate 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ is an increasing (decreasing) function of 
+\begin_inset Formula $t$
+\end_inset
+
+ for 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+ then 
+\begin_inset Formula $F_{X}$
+\end_inset
+
+ is an Increasing (Decreasing) Failure Rate distribution: IFR (DFR) distribution.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definition}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The behavior of the failure rate 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ as a function of age is known as the 
+\shape italic
+mortality curve
+\shape default
+, 
+\shape italic
+hazard function
+\shape default
+, 
+\shape italic
+life characteristic
+\shape default
+ or 
+\shape italic
+lambda characteristic
+\shape default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename Figura3_6.png
+	width 110pt
+	keepAspectRatio
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% Figura3.6: 336x256 pixel, 90dpi, 9.48x7.23 cm, bb=0 0 269 205
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypoexponential Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The hypoexponential distribution is used to model processes that can be
+ divided into sequential phases such that the time the process spends in
+ each phase is independent and exponentially distributed.
+ 
+\end_layout
+
+\begin_layout Itemize
+Service times for input-output operations in a computer system often follow
+ this distribution.
+ 
+\end_layout
+
+\begin_layout Standard
+A two stage hypoexponential random variable 
+\begin_inset Formula $X\sim Hypo(\lambda_{1},\lambda_{2})$
+\end_inset
+
+ has pdf and distribution function equal to 
+\begin_inset Formula \begin{eqnarray*}
+f(t) & = & \frac{\lambda_{1}\lambda_{2}}{\lambda_{2}-\lambda_{1}}(\exp(-\lambda_{1}t)-\exp(\lambda_{2}t)),\ \ t>0\\
+F(t) & = & 1-\frac{\lambda_{2}}{\lambda_{2}-\lambda_{1}}\exp(-\lambda_{1}t)+\frac{\lambda_{1}}{\lambda_{2}-\lambda_{1}}\exp(-\lambda_{2}t)\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Erlang Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ When 
+\begin_inset Formula $r$
+\end_inset
+
+ sequential phases have identical exponential distribution the resulting
+ density is known as 
+\begin_inset Formula $r-$
+\end_inset
+
+stage Erlang and is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+f(t) & = & \frac{\lambda^{r}t^{r-1}\exp(-\lambda t)}{(r-1)!}\textnormal{ with }t>0,\ \lambda>0,\ r=1,2,\dots\\
+F(t) & = & 1-\sum_{k=0}^{r-1}\frac{(\lambda t)^{k}}{k!}\exp(-\lambda t)\textnormal{ with }t\geq0,\ \lambda>0,\ r=1,2,\dots\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hyperexponential Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ Suppose that a process consists of alternate phases, i.e.
+ during any single experiment the process experiences one and only one of
+ the many alternate phases, and thes phases have exponential distributions.
+ The overall distribution is then hyperexponential with density and distribution
+ functions given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+f(t) & = & \sum_{i=1}^{k}\alpha_{i}\lambda_{i}\exp(-\lambda_{i}t)\textnormal{ with }t>0,\ \lambda_{i}>0,\ \sum_{i=1}^{k}\alpha_{i}=1\\
+F(t) & = & \sum_{i}\alpha_{i}(1-\exp(\lambda_{i}t))\ \ t\geq0\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Weibull Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The Weibull distribution is the most widely used parametric family of failure
+ distributions.
+ It has been used to describe 
+\end_layout
+
+\begin_layout Itemize
+fatigue failure 
+\end_layout
+
+\begin_layout Itemize
+electronic component failure 
+\end_layout
+
+\begin_layout Itemize
+ballbearing failure 
+\end_layout
+
+\begin_layout Standard
+The reason is that by a proper choice of the shape parameter 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ we can obtain an IFR, DFR or constant failure rate distribution.
+ The corresponding density and distribution functions are given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+f(t) & = & \lambda\alpha t^{\alpha-1}\exp(-\lambda t^{\alpha})\\
+F(t) & = & 1-\exp(-\lambda t^{\alpha})\end{eqnarray*}
+
+\end_inset
+
+ where 
+\begin_inset Formula $t\geq0$
+\end_inset
+
+, 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha>0$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Pareto Distribution
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ The Pareto (also knonw as double-exponential, hyperbolic or power-law)
+ distribution has been used to model 
+\end_layout
+
+\begin_layout Itemize
+the amount of CPU time consumed by an arbitrary process 
+\end_layout
+
+\begin_layout Itemize
+the Web file size on the Internet servers 
+\end_layout
+
+\begin_layout Itemize
+the thinking time of the web browser 
+\end_layout
+
+\begin_layout Itemize
+the number of data bytes in FTP bursts 
+\end_layout
+
+\begin_layout Itemize
+the access frequency of Web traffic 
+\end_layout
+
+\begin_layout Standard
+The density and distributions functions are given by 
+\begin_inset Formula \begin{eqnarray*}
+f(x) & = & \alpha k^{\alpha}x^{-\alpha-1}\ \ x\geq k,\ k>0,\ \alpha>0\\
+F(x) & = & \left\{ \begin{array}{ll}
+1-\left(\frac{k}{x}\right)^{\alpha} & \ x\geq k\\
+0 & x<k\end{array}\right.\end{eqnarray*}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
 \end_layout
 
 \end_inset
