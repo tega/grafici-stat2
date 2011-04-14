@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -141,6 +141,7 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 section{Some special distributions with applications}
 \end_layout
@@ -152,6 +153,7 @@ section{Some special distributions with applications}
 status open
 
 \begin_layout Plain Layout
+
  
 \backslash
 begin{frame}{Some special distributions with applications}{Exponential distribut
@@ -171,6 +173,7 @@ Time between two successive job arrivals to a file server (often called
 status open
 
 \begin_layout Plain Layout
+
  
 \backslash
 textbf{interarrival time}
@@ -1195,7 +1198,7 @@ R_{t}(y) & = & R_{s}(y)\textnormal{ \ for all }t,s\geq0.\end{eqnarray*}
 
 \end_inset
 
- For 
+Thus, for 
 \begin_inset Formula $s=0$
 \end_inset
 
@@ -1205,7 +1208,29 @@ R_{t}(y) & = & R_{0}(y)=\frac{R(y)}{R(0)}=R(y),\end{eqnarray*}
 
 \end_inset
 
- so that 
+ so that from
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ 
+\begin_inset Formula $R_{t}(y)=R(t+y)/R(t)$
+\end_inset
+
+ we have
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ 
 \begin_inset Formula \begin{eqnarray*}
 R(t+y) & = & R(t)R(y).\end{eqnarray*}
 
@@ -1572,6 +1597,176 @@ status collapsed
 
 \begin_layout Plain Layout
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The reliability and failure rate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The failure rate of a certain component is 
+\begin_inset Formula $h(t)=\lambda_{0}t$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda_{0}>0$
+\end_inset
+
+ is a given constant.
+ Determine the reliability, 
+\begin_inset Formula $R(t)$
+\end_inset
+
+, of the component.
+ Repeat for 
+\begin_inset Formula $h(t)=\lambda_{0}t^{1/2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The failure rate of a computer system for onboard control of a space vehicle
+ is estimated to be the following function of time:
+\begin_inset Formula \[
+h(t)=\alpha\mu t^{\alpha-1}+\beta\gamma t^{\beta-1}.\]
+
+\end_inset
+
+Derive an expression for the reliability 
+\begin_inset Formula $R(t)$
+\end_inset
+
+ of the system.
+ Plot 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $R(t)$
+\end_inset
+
+ as functions of time with parameter values 
+\begin_inset Formula $\alpha=\frac{1}{4}$
+\end_inset
+
+, 
+\begin_inset Formula $\beta=\frac{1}{7}$
+\end_inset
+
+, 
+\begin_inset Formula $\mu=0.0004$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma=0.0007$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
 \end_layout
 
 \end_inset
@@ -2106,6 +2301,129 @@ end{frame}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Some special distributions with applications
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Show that the failure rate 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ of the hypoexponential distribution has the property 
+\begin_inset Formula \[
+\underset{t\rightarrow+\infty}{lim}h(t)=min\{\lambda_{1},\lambda_{2}\}.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Show that a two-stage Erlang pdf is the limiting case of two-stage hypoexponenti
+al pdf.
+ In other words, show that 
+\begin_inset Formula \[
+\underset{t\rightarrow+\infty}{lim}\frac{\lambda_{1}\lambda_{2}}{\lambda_{2}-\lambda_{1}}(e^{-\lambda_{1}t}-e^{-\lambda_{2}t})=\lambda_{2}^{2}te^{-\lambda_{2}t}.\]
+
+\end_inset
+
+(Hint: Use l'Hôpital's rule.)
+\end_layout
+
+\begin_layout Enumerate
+The CPU time requirement of a typical program measured in minutes is found
+ to follow a three-stage Erlang distribution with 
+\begin_inset Formula $\lambda=0.5$
+\end_inset
+
+.
+ What is the probability that the CPU demand of a program will exceed 1
+ minute?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout BeginFrame
 Functions of random variables
 \end_layout
@@ -2428,7 +2746,7 @@ Let
 \end_inset
 
  and define 
-\begin_inset Formula $Y=\lambda^{-1}ln(1-X)$
+\begin_inset Formula $Y=-\lambda^{-1}ln(1-X)$
 \end_inset
 
  where 
