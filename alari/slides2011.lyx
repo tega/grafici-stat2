@@ -1,4 +1,4 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -23,7 +23,7 @@
 \font_roman times
 \font_sans default
 \font_typewriter default
-\font_default_family default
+\font_default_family rmdefault
 \font_sc false
 \font_osf false
 \font_sf_scale 100
@@ -408,7 +408,11 @@ status collapsed
 
 \end_inset
 
- Result:
+ 
+\series bold
+Result:
+\series default
+
 \begin_inset Newline newline
 \end_inset
 
@@ -437,7 +441,11 @@ status collapsed
 \begin_inset VSpace 1cm
 \end_inset
 
- Interpretation:
+ 
+\series bold
+Interpretation:
+\series default
+
 \begin_inset Newline newline
 \end_inset
 
@@ -918,12 +926,12 @@ begin{proof}
 
  
 \begin_inset Formula \[
-\int_{0}^{t}h(x)dx=\int_{0}^{t}\frac{f_{X}(t)}{R(t)}dx=\int_{0}^{t}\frac{-R'(t)}{R(t)}dx=-\ln(R(t))\]
+\int_{0}^{t}h(x)dx=\int_{0}^{t}\frac{f_{X}(x)}{R(x)}dx=\int_{0}^{t}\frac{-R'(x)}{R(x)}dx=-\ln(R(t))\]
 
 \end_inset
 
  using the fact that 
-\begin_inset Formula $R'(t)=-f_{X}(t)$
+\begin_inset Formula $R'(x)=-f_{X}(x)$
 \end_inset
 
  and the boundary contition 
@@ -2044,7 +2052,7 @@ status collapsed
 
  Suppose that a process consists of alternate phases, i.e.
  during any single experiment the process experiences one and only one of
- the many alternate phases, and thes phases have exponential distributions.
+ the many alternate phases, and these phases have exponential distributions.
  The overall distribution is then hyperexponential with density and distribution
  functions given by
 \end_layout
@@ -2863,7 +2871,7 @@ differentiable
 \emph on
 monotone
 \emph default
- real valued funtion with domain 
+ real valued function with domain 
 \begin_inset Formula $I$
 \end_inset
 
@@ -2947,14 +2955,8 @@ f_{Y}(y)=\begin{cases}
 \begin_inset Formula $X$
 \end_inset
 
- By Theorem 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "the:transform theorem"
-
-\end_inset
-
- we have that ( where 
+.
+ By the previous Theorem we have that (
 \begin_inset Formula $I$
 \end_inset
 
@@ -2998,7 +3000,13 @@ begin{esercizio}
 
 \end_inset
 
-In the previous Example assume 
+
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+In the second part of the previous Example assume that 
 \begin_inset Formula $X\thicksim N(\mu,sigma^{2})$
 \end_inset
 
@@ -3008,6 +3016,62 @@ In the previous Example assume
 
 .
  What do you observe?
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+Let as before 
+\begin_inset Formula $X$
+\end_inset
+
+ be 
+\begin_inset Formula $N(\mu,sigma^{2})$
+\end_inset
+
+ and assume 
+\begin_inset Formula $Y=e^{X}$
+\end_inset
+
+.
+ Derive the density and distribution function of 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+Show that if 
+\begin_inset Formula $X$
+\end_inset
+
+ has the 
+\begin_inset Formula $k-$
+\end_inset
+
+stage Erlang distribution with parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, then 
+\begin_inset Formula $Y=2\lambda X$
+\end_inset
+
+ has the 
+\begin_inset Formula $chi-$
+\end_inset
+
+square distribution with 
+\begin_inset Formula $2k$
+\end_inset
+
+ degrees of freedom.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -6181,7 +6245,76 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-examle 4.9
+
+\series bold
+Remark:
+\series default
+ Zero covariance does not imply that the two random variables are independent!
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be uniformly distributed over the interval 
+\begin_inset Formula $(-1,1)$
+\end_inset
+
+ and let 
+\begin_inset Formula $Y=X^{2}$
+\end_inset
+
+ so that 
+\begin_inset Formula $Y$
+\end_inset
+
+ is completely dependent on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Noting that for all odd values of 
+\begin_inset Formula $k>0$
+\end_inset
+
+, the 
+\begin_inset Formula $k-$
+\end_inset
+
+th moment 
+\begin_inset Formula $E[X^{k}]=0$
+\end_inset
+
+, we have (see part 2 of next Exercise for the equality 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $Cov(X,Y)=E[XY]-E[X]E[Y]$
+\end_inset
+
+)
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+
+\begin_inset Formula \[
+Cov(X,Y)=E[XY]-E[X]E[Y]=E[X^{3}]-0E[Y]=0.\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
