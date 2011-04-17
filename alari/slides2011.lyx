@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -3115,6 +3115,443 @@ status collapsed
 
 \end_inset
 
+Jointly distributed random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/jointlyDistributedRandomVariables.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Jointly distributed random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/jointlyDistributedRandomVariables1.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Jointly distributed random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/jointlyDistributedRandomVariables2.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Jointly distributed random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/jointlyDistributedRandomVariables3.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Jointly distributed random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/jointlyDistributedRandomVariables4.png
+	scale 33
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Jointly distributed random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/jointlyDistributedRandomVariables5.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Jointly distributed random variables
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
 Simulation of random variables
 \begin_inset ERT
 status collapsed
@@ -5438,9 +5875,9 @@ status collapsed
 
 \end_inset
 
-Moments
+Expectation
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -5458,7 +5895,7 @@ Let
 \end_inset
 
  be a random variable, and define 
-\begin_inset Formula $Y=\phi(X).$
+\begin_inset Formula $Y=g(X).$
 \end_inset
 
  Suppose we want to compute 
@@ -5493,48 +5930,147 @@ Let
 .
  An easier method is to use the following result
 \begin_inset Formula \[
-E[Y]=E[\phi(X)]=\begin{cases}
-\sum_{i}\phi(x_{i})p_{X}(x_{i}), & \mbox{if }X\mbox{ is descrete,}\\
-\int_{-\infty}^{\infty}\phi(x)f_{X}(x)dx, & \mbox{if }X\mbox{ is continuous,}\end{cases}\]
+E[Y]=E[g(X)]=\begin{cases}
+\sum_{i}g(x_{i})p_{X}(x_{i}), & \mbox{if }X\mbox{ is descrete,}\\
+\int_{-\infty}^{\infty}g(x)f_{X}(x)dx, & \mbox{if }X\mbox{ is continuous,}\end{cases}\]
 
 \end_inset
 
-privided the sum or the integral is absolutely convergent.
+privided the sum or the integral is absolutely convergent, i.e.
+\begin_inset Formula \[
+\sum_{i}\mid g(x_{i})\mid p_{X}(x_{i})<\infty\mbox{ or }\int_{-\infty}^{\infty}\mid g(x)\mid f_{X}(x)dx<\infty.\]
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Definition
-A special case is the power function 
-\begin_inset Formula $\phi(X)=X^{k}$
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
 \end_inset
 
-, 
-\begin_inset Formula $k=1,2,3,...$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
 \end_inset
 
- .
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
  
-\begin_inset Formula $E(X^{k})$
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/propertyOfExpectation.png
+	scale 35
+
 \end_inset
 
- is known to be the 
-\begin_inset Formula $k-$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
 \end_inset
 
-th moment of the random variable 
-\begin_inset Formula $X$
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
 \end_inset
 
-.
- The first moment, i.e.
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Expectation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
  
-\begin_inset Formula $k=1$
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/property7Expectation.png
+	scale 35
+
 \end_inset
 
-, is the ordinary expectation of 
-\begin_inset Formula $X$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
@@ -5591,6 +6127,41 @@ status collapsed
  
 \end_layout
 
+\begin_layout Definition
+A special case is the power function 
+\begin_inset Formula $g(X)=X^{k}$
+\end_inset
+
+, 
+\begin_inset Formula $k=1,2,3,...$
+\end_inset
+
+ .
+ 
+\begin_inset Formula $E(X^{k})$
+\end_inset
+
+ is known to be the 
+\begin_inset Formula $k-$
+\end_inset
+
+th moment of the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ The first moment, i.e.
+ 
+\begin_inset Formula $k=1$
+\end_inset
+
+, is the ordinary expectation of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Standard
 Sometimes it is usefull to center the origin of measurement, i.e.
  to work with powers of 
@@ -5621,6 +6192,60 @@ th central moment of the random variable
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Standard
@@ -5666,6 +6291,174 @@ The variance of a random variable
 
 \end_layout
 
+\begin_layout Itemize
+The variance is a sum of squares and therefore is a nonnegative number.
+ 
+\end_layout
+
+\begin_layout Itemize
+The square root of the variance is denoted by 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ and is called the standard deviation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/figura small variance.png
+	width 6cm
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/figura large variance.png
+	width 6cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Small and large variance.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/proprietaVarianza.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -5717,47 +6510,104 @@ status collapsed
 
 \end_inset
 
- 
-\end_layout
 
-\begin_layout Itemize
-The variance is a sum of squares and therefore is a nonnegative number.
- 
-\end_layout
-
-\begin_layout Itemize
-The square root of the variance is denoted by 
-\begin_inset Formula $\sigma$
-\end_inset
-
- and is called the standard deviation.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
+We define two special measures based on 
+\begin_inset Formula $\mu_{3}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mu_{4}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/skewness-kurtosis.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-\begin_inset Graphics
-	filename /home/claudio/eclipse/grafici-stat2/alari/figura small variance.png
-	width 6cm
+
+
+\backslash
+end{frame}
+\end_layout
 
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Graphics
-	filename /home/claudio/eclipse/grafici-stat2/alari/figura large variance.png
-	width 6cm
+	filename /home/claudio/eclipse/grafici-stat2/alari/expectationExamplesExercises.png
+	scale 35
 
 \end_inset
 
 
-\begin_inset Caption
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
-Small and large variance.
+
+
+\backslash
+end{frame}
 \end_layout
 
 \end_inset
@@ -5765,8 +6615,652 @@ Small and large variance.
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
 
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/expectationExamplesExercises1.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/expectationExamplesExercises2.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/expectationExamplesExercises3.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/expectationExamplesExercises4.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example: Mean and Variance of the normal distribution.
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let we consider 
+\begin_inset Formula $X\thicksim N(\mu,\sigma^{2}).$
+\end_inset
+
+ We will show that 
+\begin_inset Formula $E[X]=\mu$
+\end_inset
+
+ and 
+\begin_inset Formula $Var(X)=\sigma^{2}.$
+\end_inset
+
+ In fact 
+\begin_inset Formula \begin{eqnarray*}
+E[X] & = & \int_{-\infty}^{\infty}\frac{x}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}}dx=\int_{-\infty}^{\infty}\frac{\sigma y+\mu}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}y^{2}}\sigma dy\\
+ & = & \frac{\sigma}{\sqrt{2\pi}}\int_{-\infty}^{\infty}ye^{-\frac{1}{2}y^{2}}dy+\mu\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y^{2}}dy\\
+ & = & \frac{\sigma}{\sqrt{2\pi}}\left(-e^{-\frac{1}{2}y^{2}}\right)\mid_{-\infty}^{\infty}+\mu\cdot1=\mu\end{eqnarray*}
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/expectationExamplesExercises5.png
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus, 
+\begin_inset Formula $Var(X)=\sigma^{2}+\mu^{2}-\mu^{2}=\sigma^{2}.$
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exercise:
+\series default
+ Let 
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+.
+ Find the skewness and kurtosis of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ In particular, compute these values when 
+\begin_inset Formula $\mu=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exercise:
+\series default
+ Let 
+\begin_inset Formula $Y=aX^{2}+b$
+\end_inset
+
+ for 
+\begin_inset Formula $a$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+ two constants.
+ Compute the mean and variance of 
+\begin_inset Formula $Y$
+\end_inset
+
+ for the case 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X\sim N(0,1)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $X$
+\end_inset
+
+ exponentially distributed with parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+A particular container of one brand of a certain food is labeled as containing
+ 500 grams of food.
+ Suppose it is known that the weight of the food in a container selected
+ at random is distributed 
+\begin_inset Formula $N(500,\:25)$
+\end_inset
+
+.
+ A container is considered to be underweight if its net food weight is less
+ than 
+\begin_inset Formula $98$
+\end_inset
+
+% of the label claim, in this case less than 
+\begin_inset Formula $490$
+\end_inset
+
+ grams.
+ If 
+\begin_inset Formula $1000$
+\end_inset
+
+ containers are chosen at random, how many should we expect to be underweight?
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $X\sim N(\mu,\sigma^{2})$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $Y=exp(X)$
+\end_inset
+
+.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ is called a lognormal random variable.
+ Find 
+\begin_inset Formula $E[Y]$
+\end_inset
+
+ and 
+\begin_inset Formula $Var(Y)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
 \end_layout
 
 \end_inset
