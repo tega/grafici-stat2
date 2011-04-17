@@ -10099,7 +10099,7 @@ The system has one component operating and
 
 \begin_layout Itemize
 The failure rate of an operating component is 
-\begin_inset Formula $Exp(\lambda)$
+\begin_inset Formula $\lambda$
 \end_inset
 
 .
@@ -10120,7 +10120,10 @@ Define
 \end_inset
 
 th component from the point it is put into operation until its failure.
- System lifetime 
+\end_layout
+
+\begin_layout Standard
+The system lifetime 
 \begin_inset Formula $X$
 \end_inset
 
@@ -10129,11 +10132,607 @@ th component from the point it is put into operation until its failure.
 
 \begin_layout Standard
 \begin_inset Formula \[
-X=\sum_{i=1}^{n}X_{i}.\]
+X=\sum_{i=1}^{n}X_{i},\]
 
 \end_inset
 
 
+\begin_inset Formula $X$
+\end_inset
+
+ has an 
+\begin_inset Formula $n-$
+\end_inset
+
+stage Erlang distribution and 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+E[X]=\frac{n}{\lambda}\mbox{ and }Var[X]=\frac{n}{\lambda^{2}}.\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(Chebyshev) Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable with finite variance 
+\begin_inset Formula $\sigma^{2}<\infty$
+\end_inset
+
+ and expected value 
+\begin_inset Formula $\mu$
+\end_inset
+
+.
+ The, for all 
+\begin_inset Formula $t>0$
+\end_inset
+
+, the following inequality holds
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula \[
+P\left(\mid X-\mu\mid\geq t\right)\leq\frac{\sigma^{2}}{t^{2}}.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(Convergence in probability) Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be a sequence of random variables.
+ We say that the sequence converges in probability to 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+, write 
+\begin_inset Formula $X_{n}\underset{p}{\rightarrow}c$
+\end_inset
+
+ or 
+\begin_inset Formula $p\lim X_{n}=c$
+\end_inset
+
+, if, for all 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula \[
+\lim_{n\rightarrow\infty}P\left(\mid X_{n}-c\mid\geq\epsilon\right)=0.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be a sequence of random variables with common expectation 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and finite variance 
+\begin_inset Formula $\sigma_{n}^{2}<\infty$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\sigma_{n}^{2}=0$
+\end_inset
+
+, then 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula \[
+X_{n}\underset{p}{\rightarrow}\mu.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Apply Chebyshev inequality.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be an 
+\begin_inset Formula $i.i.d.\sim(\mu,\sigma^{2})$
+\end_inset
+
+ (independent and identically distributed) sequence of random variables.
+ Define the sequence 
+\begin_inset Formula $\overline{X}_{n}=\frac{1}{n}\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+.
+ From the linearity of the expectation and the properties of the variance
+ we know that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\bar{X}_{n}\sim(\mu,\frac{\sigma^{2}}{n})$
+\end_inset
+
+.
+ The sequence 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+
+\begin_inset Formula $\left\{ \bar{X}_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ converges in probability to 
+\begin_inset Formula $\mu$
+\end_inset
+
+: 
+\begin_inset Formula $p\lim\bar{X}_{n}=\mu$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The result in the previous Example is also known as the 
+\series bold
+weak law of large numbers
+\series default
+ (WLLN).
+ In order for the WLLN to apply the existence of the second moment (the
+ variance) is not required.
+ The WLLN holds just under the assumption that the 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+ sequence have finite expected value 
+\begin_inset Formula $\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Consider two sequences 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\{ Y_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ of random variables converging in probability to 
+\begin_inset Formula $a<\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $b<\infty$
+\end_inset
+
+, respectively.
+ Then
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\lim\left(X_{n}+Y_{n}\right)=p\lim X_{n}+p\lim Y_{n}=a+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\lim\left(X_{n}\cdot Y_{n}\right)=p\lim X_{n}\cdot p\lim Y_{n}=a\cdot b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $b\ne0$
+\end_inset
+
+, 
+\begin_inset Formula \[
+p\lim\left(\frac{X_{n}}{Y_{n}}\right)=\frac{p\lim X_{n}}{p\lim Y_{n}}=\frac{a}{b}.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Function 
+\begin_inset Formula $g$
+\end_inset
+
+ continuous in 
+\begin_inset Formula $a:$
+\end_inset
+
+ 
+\begin_inset Formula $p\lim g(X_{n})=g\left(p\lim X_{n}\right)=g(a).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The Central Limit Theorem (CLT).
+ Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be independent random variables with a finite mean 
+\begin_inset Formula $E[X_{n}]=\mu_{n}$
+\end_inset
+
+ and a finite variance 
+\begin_inset Formula $Var(X_{n})=\sigma_{n}^{2}$
+\end_inset
+
+.
+ Define the normalized random variable
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula \[
+Z_{n}=\frac{\sum_{i=1}^{n}X_{i}-\sum_{i=1}^{n}\mu_{i}}{\sqrt{\sum_{i=1}^{n}\sigma_{i}^{2}}}\]
+
+\end_inset
+
+ so that 
+\begin_inset Formula $E[Z_{n}]=0$
+\end_inset
+
+ and 
+\begin_inset Formula $Var(Z_{n})=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then under regularity conditions the limiting distribution of 
+\begin_inset Formula $Z_{n}$
+\end_inset
+
+ is standard normal, denoted 
+\begin_inset Formula $Z_{n}\rightarrow N(0,1),$
+\end_inset
+
+ i.e.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula \[
+\lim_{n\rightarrow\infty}F_{Z_{n}}(t)=\lim_{n\rightarrow\infty}P(Z_{n}\leq t)=\int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-y^{2}/2}dy.\]
+
+\end_inset
+
+Remark: the special condition 
+\begin_inset Formula $Var(X_{n})=\sigma^{2}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+ is sufficient for the CTL to apply.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exercises ...
 \end_layout
 
 \begin_layout Standard
