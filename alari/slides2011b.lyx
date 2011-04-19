@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -1643,7 +1643,7 @@ f_{Y}(y)=\sum_{i=1}^{r}f(i,y)=\sum_{i=1}^{r}\alpha_{i}\lambda_{i}e^{-\lambda_{i}
 \align center
 \begin_inset Graphics
 	filename /home/claudio/eclipse/grafici-stat2/alari/mixtureDistribution.png
-	scale 60
+	scale 50
 
 \end_inset
 
