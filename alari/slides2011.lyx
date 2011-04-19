@@ -7226,7 +7226,7 @@ Let
 E[Y] & = & E[\Phi(X)]\\
  & = & \begin{cases}
 \sum_{x_{1}}\ldots\sum_{x_{n}}\Phi(x_{1},x_{2},...,x_{n})p(x_{1},x_{2},...,x_{n}), & \mbox{descrete case}\\
-\int_{\mathbb{R}}\ldots\int_{\mathbb{R}}\Phi(x_{1},x_{2},...,x_{n})p(x_{1},x_{2},...,x_{n})dx_{1}\ldots dx_{n}, & \mbox{contin. case}\end{cases}\end{eqnarray*}
+\int_{\mathbb{R}}\ldots\int_{\mathbb{R}}\Phi(x_{1},x_{2},...,x_{n})f(x_{1},x_{2},...,x_{n})dx_{1}\ldots dx_{n}, & \mbox{contin. case}\end{cases}\end{eqnarray*}
 
 \end_inset
 

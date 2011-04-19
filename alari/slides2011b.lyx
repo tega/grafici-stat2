@@ -1315,7 +1315,7 @@ status collapsed
 
 Conditional Distribution and Expectation
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1378,6 +1378,414 @@ status open
 \backslash
 end{esercizio}
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Mixture distributions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Consider a file server whose workload may be divided into 
+\begin_inset Formula $r$
+\end_inset
+
+ distinct classes.
+\end_layout
+
+\begin_layout Itemize
+For a job of class 
+\begin_inset Formula $i$
+\end_inset
+
+ (
+\begin_inset Formula $1\leq i\leq r$
+\end_inset
+
+) the CPU time is exponentially distributed with parameter 
+\begin_inset Formula $\lambda_{i}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ denote the service time of a job and let 
+\begin_inset Formula $X$
+\end_inset
+
+ be the job class.
+ Then
+\begin_inset Formula \[
+f_{Y\mid X}(y\mid i)=\lambda_{i}e^{-\lambda_{i}y},\qquad y>0.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Assume that the probability 
+\begin_inset Formula $p_{X}(i)$
+\end_inset
+
+ that a randomly chosen job belongs to class 
+\begin_inset Formula $i$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\alpha_{i}>0$
+\end_inset
+
+.
+ It follows 
+\begin_inset Formula $\sum_{i=1}^{r}\alpha_{i}=1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The joint density of 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+f(i,y)=f_{Y\mid X}(y\mid i)p_{X}(i)=\alpha_{i}\lambda_{i}e^{-\lambda_{i}y},\qquad y>0.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Mixture distributions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The marginal density of 
+\begin_inset Formula $Y$
+\end_inset
+
+ is then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+f_{Y}(y)=\sum_{i=1}^{r}f(i,y)=\sum_{i=1}^{r}\alpha_{i}\lambda_{i}e^{-\lambda_{i}y},\qquad y>0,\mbox{ i.e.}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename /home/claudio/eclipse/grafici-stat2/alari/mixtureDistribution.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y$
+\end_inset
+
+ has an 
+\begin_inset Formula $r-$
+\end_inset
+
+stage hyperexponential distribution!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Mixture distributions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general the conditional distribution of 
+\begin_inset Formula $Y$
+\end_inset
+
+ does not have to be exponential! Denoting 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $f_{Y\mid X}(y\mid i)=f_{Y_{i}}(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{Y\mid X}(y\mid i)=F_{i}(y)$
+\end_inset
+
+ then the unconditional pdf of 
+\begin_inset Formula $Y$
+\end_inset
+
+ is 
+\begin_inset Formula \[
+f_{Y}(y)=\sum_{i=1}^{r}\alpha_{i}f_{i}(y)\]
+
+\end_inset
+
+ and the unconditional CDF of 
+\begin_inset Formula $Y$
+\end_inset
+
+ is
+\begin_inset Formula \[
+F_{Y}(y)=\sum_{i=1}^{r}\alpha_{i}F_{i}(y).\]
+
+\end_inset
+
+Applying the definition of the mean and higher moments we obtain
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+E[Y] & = & \sum_{i=1}^{r}\alpha_{i}E[Y_{i}],\\
+E[Y^{k}] & = & \sum_{i=1}^{r}\alpha_{i}E[Y_{i}^{k}].\end{eqnarray*}
 
 \end_inset
 
@@ -1522,6 +1930,199 @@ E[Y\mid X=x]=\sum_{y}yP(Y=y\mid X=x)=\sum_{y}yp_{Y\mid X}(y\mid x).\]
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similar arguments hold when 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are discrete.
+ The conditional expectation is then defined as
+\begin_inset Formula \[
+E[Y\mid X=x]=\sum_{y}yP(Y=y\mid X=x)=\sum_{y}yp_{Y\mid X}(y\mid x).\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The quantity 
+\begin_inset Formula \[
+m(x)=E[Y\mid x]\]
+
+\end_inset
+
+considered as a function of 
+\begin_inset Formula $x$
+\end_inset
+
+ is known as the 
+\emph on
+regression function
+\emph default
+ of 
+\begin_inset Formula $Y$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The conditional expectation of a function 
+\begin_inset Formula $\phi(Y)$
+\end_inset
+
+ is defined as 
+\begin_inset Formula \[
+E[\phi(Y)\mid X=x]=\begin{cases}
+\int_{-\infty}^{\infty}\phi(y)f_{Y\mid X}(y\mid x)dy, & \mbox{if }Y\mbox{ is continuous,}\\
+\sum_{i}\phi(y_{i})p_{Y\mid X}(y_{i}\mid x), & \mbox{if }Y\mbox{ is discrete.}\end{cases}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+We may take expectation of the regression function to obtain the unconditional
+ expectation of 
+\begin_inset Formula $\phi(Y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula \[
+E[\phi(Y)]=\begin{cases}
+\sum_{x}E[\phi(Y)\mid X=x]p_{X}(x), & \mbox{if }X\mbox{ is discrete,}\\
+\int_{-\infty}^{\infty}E[\phi(Y)\mid X=x]f_{X}(x)dx, & \mbox{\mbox{if }\ensuremath{X}\mbox{ is continuous}.}\end{cases}\]
+
+\end_inset
+
+This last formula is known as the 
+\series bold
+theorem of total expectation
+\series default
+.
 \end_layout
 
 \begin_layout Standard
