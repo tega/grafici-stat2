@@ -1,4 +1,4 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -8955,7 +8955,7 @@ f_{X}(x)=\lambda\exp(-\lambda x),\ x>0.\]
 
  
 \begin_inset Formula \begin{align*}
-L_{X}(s) & =\int_{0}^{\infty}exp(-sx)exp(-\lambda x)dx\\
+L_{X}(s) & =\int_{0}^{\infty}exp(-sx)\lambda exp(-\lambda x)dx\\
  & =\frac{\lambda}{s+\lambda}\int_{0}^{\infty}(\lambda+s)exp(-(\lambda+s)x)dx\\
  & =\frac{\lambda}{s+\lambda}.\end{align*}
 
@@ -9037,8 +9037,7 @@ status collapsed
  Example (continued): 
 \begin_inset Formula \begin{align*}
 E\left[X\right] & =(-1)\frac{\partial L_{X}}{\partial s}\left\vert _{s=0}\right.=(-1)\frac{-\lambda}{(\lambda+s)^{2}}\left\vert _{s=0}\right.=\frac{1}{\lambda}.\\
-E\left[X^{2}\right] & =\frac{\partial^{2}L_{X}}{\partial s^{2}}\left\vert _{s=0}\right.=\frac{2\lambda}{(\lambda+s)^{3}}\left\vert _{s=0}\right.=\frac{2}{\lambda^{2}}.\\
-\end{align*}
+E\left[X^{2}\right] & =\frac{\partial^{2}L_{X}}{\partial s^{2}}\left\vert _{s=0}\right.=\frac{2\lambda}{(\lambda+s)^{3}}\left\vert _{s=0}\right.=\frac{2}{\lambda^{2}}.\end{align*}
 
 \end_inset
 
