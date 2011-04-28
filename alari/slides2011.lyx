@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -143,12 +143,31 @@ status open
 
 
 \backslash
-section{Some special distributions with applications}
+section{Continuous random variables}
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Exponential distribution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -156,8 +175,7 @@ status open
 
  
 \backslash
-begin{frame}{Some special distributions with applications}{Exponential distribut
-ion}
+begin{frame}{Continuous random variables}{Exponential distribution}
 \end_layout
 
 \end_inset
@@ -252,7 +270,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -375,7 +393,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -474,6 +492,22 @@ end{frame}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Reliability and failure rate}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -496,7 +530,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -647,7 +681,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -810,7 +844,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -995,7 +1029,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -1158,7 +1192,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -1290,7 +1324,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -1399,7 +1433,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -1528,7 +1562,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -1652,7 +1686,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -1800,6 +1834,38 @@ end{frame}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Important distributions}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsubsection{Hypoexponential Distribution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -1822,7 +1888,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -1900,6 +1966,22 @@ end{frame}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsubsection{Erlang Distribution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -1922,7 +2004,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -1946,7 +2028,7 @@ status collapsed
 
 Erlang Distribution
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1995,6 +2077,22 @@ end{frame}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsubsection{Hyperexponential Distribution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -2017,7 +2115,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -2085,6 +2183,22 @@ end{frame}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsubsection{Weibull Distribution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -2107,7 +2221,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -2204,6 +2318,22 @@ end{frame}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsubsection{Pareto Distribution}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -2226,7 +2356,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -2333,7 +2463,7 @@ status collapsed
 
 \end_inset
 
-Some special distributions with applications
+Continuous random variables
 \begin_inset ERT
 status collapsed
 
@@ -2425,6 +2555,22 @@ status collapsed
 
 \backslash
 end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Functions of random variables}
 \end_layout
 
 \end_inset
@@ -3099,6 +3245,22 @@ status open
 
 
 \backslash
+section{Jointly distributed random variables}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 begin{frame}
 \end_layout
 
@@ -3340,6 +3502,22 @@ status open
 
 \backslash
 end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Simulation of random variables}
 \end_layout
 
 \end_inset
@@ -5493,6 +5671,22 @@ status open
 
 
 \backslash
+subsection{Expectation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 begin{frame}
 \end_layout
 
@@ -5901,6 +6095,22 @@ status open
 
 \backslash
 end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Moments}
 \end_layout
 
 \end_inset
@@ -7946,6 +8156,22 @@ end{frame}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Transform methods}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -9509,7 +9735,23 @@ end{frame}
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Mean time to failure}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
