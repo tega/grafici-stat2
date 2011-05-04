@@ -3230,19 +3230,18 @@ The Normal family is parametrized by two parameters
 
 \begin_layout Example
 The Logistic distribution is defined by the following distribution function
- where 
-\begin_inset Formula $\theta=(\mu,\sigma):$
-\end_inset
-
-
 \begin_inset Formula 
 \[
-\mathcal{P}=\left\{ F_{\theta}(x)=\frac{1}{1+\exp^{-(x-\mu)/\beta}}\;\mid\mu\in\mathbb{R},\:\sigma>0\right\} .
+P=\left\{ \frac{1}{1+\exp^{-(x-\mu)/\beta}}\right\} 
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+kkl
 \end_layout
 
 \begin_layout Standard
