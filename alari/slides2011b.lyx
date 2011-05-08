@@ -5091,7 +5091,7 @@ begin{frame}
 
 
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -5280,7 +5280,27 @@ least-squares estimator
 \noun off
 \color none
 .
- 
+\end_layout
+
+\begin_layout Standard
+The solution of the minimization problem is obtained by differentiating
+ with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ the quadratic form 
+\begin_inset Formula $\left(y-X\theta\right)'\left(y-X\theta\right)$
+\end_inset
+
+ and solving the first order conditions 
+\begin_inset Formula 
+\[
+X'X\theta=X'y.
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5314,7 +5334,7 @@ begin{frame}
 
 
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -5323,7 +5343,7 @@ status collapsed
 
 \end_inset
 
-Unbiased estimator
+Method of least squares
 \begin_inset ERT
 status collapsed
 
@@ -5331,6 +5351,730 @@ status collapsed
 
 }
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Any solution of the system of equations 
+\begin_inset Formula $X'X\theta=X'y$
+\end_inset
+
+ is a least-square estimate.
+ If rank 
+\begin_inset Formula $X=K$
+\end_inset
+
+, then 
+\begin_inset Formula $X'X$
+\end_inset
+
+ is non-singular and the unique least-square estimate is 
+\begin_inset Formula 
+\[
+\hat{\theta}(y)=(X'X)^{-1}X'y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If rank 
+\begin_inset Formula $X<K$
+\end_inset
+
+, then 
+\begin_inset Formula $X'X$
+\end_inset
+
+ is singular and there is a family of least-square estimates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume the following regression model
+\begin_inset Formula 
+\[
+y_{i}=\theta+\epsilon_{i}\quad i=1,\ldots,n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Express the model in matrix form and give the dimension and the content
+ of the matrix 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $\hat{\theta}(y)=(X'X)^{-1}X'y=\bar{y}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Method of least squares
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume the following regression model
+\begin_inset Formula 
+\[
+y_{i}=\theta_{1}+\theta_{2}x_{i}+\epsilon_{i}\quad i=1,\ldots,n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Express the model in matrix form and give the dimension and the content
+ of the matrix 
+\begin_inset Formula $X$
+\end_inset
+
+ in terms of the constant 
+\begin_inset Formula $1$
+\end_inset
+
+ and the explanatory variable 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,...,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $\hat{\theta}_{1}=\bar{y}-\hat{\theta}_{2}\bar{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\theta}_{2}=\frac{\sum_{i}(x_{i}-\bar{x})y_{i}}{\sum_{i}(x_{i}-\bar{x})^{2}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Maximum likelihood estimation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose that each night a certain lion has three possible states of activity:
+\end_layout
+
+\begin_layout Enumerate
+very active, denoted by 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+moderately active, denoted by 
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+lethargic, denoted by 
+\begin_inset Formula $\theta_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Each night this lion eats 
+\begin_inset Formula $i$
+\end_inset
+
+ people with probability 
+\begin_inset Formula $p(i|\theta),\:\theta\in\Theta$
+\end_inset
+
+ where 
+\begin_inset Formula $\Theta=\{\theta_{j},\; j=1,2,3\}$
+\end_inset
+
+.
+ The numerical values are given in the following table:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p(i|\theta_{1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.90
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p(i|\theta_{2})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p(i|\theta_{3})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.90
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.08
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question:
+\series default
+ If we know that 
+\begin_inset Formula $X=i_{0}$
+\end_inset
+
+ people were eaten last night, how should we estimate the lion's activity
+ state?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Answer:
+\series default
+ take as the estimate of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ that 
+\begin_inset Formula $\theta_{j}\in\Theta$
+\end_inset
+
+ for which the probability 
+\begin_inset Formula $p(i_{0}|\theta)$
+\end_inset
+
+ is largest! In this example we have 
+\begin_inset Formula $\hat{\theta}(i_{0}=0)=\theta_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\theta}(i_{0}=1)=\theta_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\theta}(i_{0}=2)=\theta_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\theta}(i_{0}=3)=\theta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+Suppose that we know for sure that 
+\begin_inset Formula $\theta\in\Theta'=\{\theta_{1},\theta_{2}\}$
+\end_inset
+
+.
+ The estimate is no longer unique since it can be either 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ or 
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X_{1},...,\; X_{n}$
+\end_inset
+
+be 
+\begin_inset Formula $n$
+\end_inset
+
+ random variables with distribution function 
+\begin_inset Formula $F(x_{1},...,x_{n}|\theta)$
+\end_inset
+
+ where 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+ is unknown.
+ The 
+\emph on
+likelihood function
+\emph default
+ is 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+L(\theta)=\left\{ \begin{array}{cc}
+f_{X_{1},...,X_{n}}(x_{1},...,x_{n}|\theta), & \mbox{if \ensuremath{F} has a density function \ensuremath{f},}\\
+p_{X_{1},...,X_{n}}(x_{1},...,x_{n}|\theta), & \mbox{if \ensuremath{F} has a prob. function \ensuremath{p} . }
+\end{array}\right.
+\]
 
 \end_inset
 
