@@ -16,6 +16,8 @@
 
 \newcounter{esr}
 \newtheorem{esercizio}[esr]{Exercise}
+\newcounter{osservcounter}
+\newtheorem{osservazione}[osservcounter]{Remark}
 \end_preamble
 \use_default_options false
 \maintain_unincluded_children false
@@ -3050,6 +3052,22 @@ section{Statistical inference}
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Parameter Estimation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
@@ -3107,7 +3125,7 @@ the statistical distribution function
 \begin_inset Formula $F$
 \end_inset
 
- of a given population of individuals, users, devices, ...
+ of a given attribute of a population of individuals, users, devices, ...
  .
 \end_layout
 
@@ -3192,7 +3210,9 @@ status collapsed
 \end_layout
 
 \begin_layout Example
-The Poisson family of distributions is parametrized by a single parameter
+We assume that the number of e-mails per minute arriving to an e-mail server
+ follows a Poisson distribution.
+ The Poisson family of distributions is parametrized by a single parameter
  
 \begin_inset Formula $\lambda>0$
 \end_inset
@@ -3208,12 +3228,16 @@ The Poisson family of distributions is parametrized by a single parameter
 
 \end_layout
 
-\begin_layout Example
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
 
 \end_layout
 
 \begin_layout Example
-The Normal family is parametrized by two parameters 
+The delivery time of the Google search engine is normal distributed.
+ The Normal family is parametrized by two parameters 
 \begin_inset Formula $\theta=(\mu,\sigma)$
 \end_inset
 
@@ -3228,21 +3252,706 @@ The Normal family is parametrized by two parameters
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Parameter estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Example
-The Logistic distribution is defined by the following distribution function
- where 
-\begin_inset Formula $\theta=(\mu,\sigma):$
+In the previous Example, instead of assuming the Normal distribution, we
+ use the Logistic distribution, that is defined by the following distribution
+ function (in this case 
+\begin_inset Formula $\theta=(\mu,\beta)):$
 \end_inset
 
 
 \begin_inset Formula 
 \[
-\mathcal{P}=\left\{ F_{\theta}(x)=\frac{1}{1+\exp^{-(x-\mu)/\beta}}\;\mid\mu\in\mathbb{R},\:\sigma>0\right\} .
+\mathcal{P}=\left\{ F_{\theta}(x)=\frac{1}{1+\exp^{-(x-\mu)/\beta}}\;\mid\mu\in\mathbb{R},\:\beta>0\right\} .
 \]
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+We are interested in the percentage of female students at USI.
+ The distribution of the gender attribute of the USI population is Bernoulli
+ distributed with parameter 
+\begin_inset Formula $\theta\in[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In all previous examples the 
+\begin_inset Quotes eld
+\end_inset
+
+true
+\begin_inset Quotes erd
+\end_inset
+
+ vector 
+\begin_inset Formula $\theta$
+\end_inset
+
+ of parameters identifying the correct distribution within the corresponding
+ family is 
+\emph on
+unknown
+\emph default
+ and must be estimated by means of a sample (a random drawn subset of the
+ population).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Parameter estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parametric estimation theory deals with the problem of approximating the
+ unknown parameters by means of the information collected from the sample.
+\end_layout
+
+\begin_layout Example
+In order to estimate the percentage of female students we randomly select
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ students (sampling with replacement).
+ In this way we obtain 
+\begin_inset Formula $n$
+\end_inset
+
+ independent realizations of Bernoulli distributed random variables 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+P(X_{i}="female")=\theta.
+\]
+
+\end_inset
+
+Identifying with 1 the female gender, the sample space is composed by 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ points 
+\begin_inset Formula $x=(x_{1},...,x_{n})$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{i}\in\{0,1\}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{\theta}(x)=\theta^{m(x)}(1-\theta)^{n-m(x)}$
+\end_inset
+
+ with 
+\begin_inset Formula $m(x)=\sum_{i=1}^{n}x_{i}$
+\end_inset
+
+.
+ Given a sample 
+\begin_inset Formula $x$
+\end_inset
+
+ it seems reasonable to estimate 
+\begin_inset Formula $\theta$
+\end_inset
+
+ by the proportion of successes i.e.
+ 
+\begin_inset Formula $m(x)/n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The set of random variables 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+ is said to constitute a 
+\emph on
+random sample
+\emph default
+ of size 
+\begin_inset Formula $n$
+\end_inset
+
+ from the population with the distribution function 
+\begin_inset Formula $F(x)$
+\end_inset
+
+, provided that they are 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+, i.e.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+mutually independent
+\end_layout
+
+\begin_layout Itemize
+identically distributed
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+with distribution function 
+\begin_inset Formula $F_{X_{i}}(x)=F(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ and all 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The basic situation in point estimation is as follows.
+\end_layout
+
+\begin_layout Itemize
+We observe a realization of random variables 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The joint distribution function of 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+ depends on an unknown parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+ that is known to be in some given set 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The problem of estimating 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is a problem of point estimation.
+\end_layout
+
+\begin_layout Itemize
+We estimate 
+\begin_inset Formula $\theta$
+\end_inset
+
+ by some function of the observations 
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Any function of the random variables that are being observed, say 
+\begin_inset Formula $\hat{\Theta}_{n}(X_{1},...,X_{n}),$
+\end_inset
+
+ is called a 
+\emph on
+statistic
+\emph default
+.
+ It is also called an 
+\emph on
+estimator of
+\emph default
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ are random variables, 
+\begin_inset Formula $\hat{\Theta}_{n}$
+\end_inset
+
+ is a random variable too.
+ A particular realization of the estimator, say 
+\begin_inset Formula $\hat{\Theta}_{n}(x_{1},...,x_{n}),$
+\end_inset
+
+ is called an 
+\emph on
+estimate of 
+\emph default
+
+\begin_inset Formula $\theta$
+\end_inset
+
+ and denoted by 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{osservazione}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The function 
+\begin_inset Formula $\hat{\Theta}_{n}$
+\end_inset
+
+ must be known, that is, it does not have to depend on unknown parameters:
+ 
+\begin_inset Formula $\hat{\Theta}_{n}=\overline{X}_{n}$
+\end_inset
+
+ is a statistics, 
+\begin_inset Formula $\hat{\Theta}_{n}=\overline{X}_{n}-\mu$
+\end_inset
+
+ is not a statistics if 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is unknown.
+\end_layout
+
+\begin_layout Itemize
+The distribution of the estimator 
+\begin_inset Formula $\hat{\Theta}_{n}$
+\end_inset
+
+ is called the sampling distribution.
+\end_layout
+
+\begin_layout Itemize
+Since the joint distribution of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ depends on 
+\begin_inset Formula $\theta$
+\end_inset
+
+, the sampling distribution will depends on 
+\begin_inset Formula $\theta$
+\end_inset
+
+ too.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{osservazione}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Let 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ be an 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+ sequence of 
+\begin_inset Formula $N(\mu,1)$
+\end_inset
+
+ distributed random variables.
+ From the properties of the Normal distribution we know that the sample
+ distribution of 
+\begin_inset Formula $\hat{\Theta}_{n}=\overline{X}_{n}$
+\end_inset
+
+ is 
+\begin_inset Formula $N(\mu,\frac{1}{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In many cases the sampling distribution is an unknown function of 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -3297,6 +4006,49 @@ status collapsed
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+We would like our estimator of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ to be exactly 
+\begin_inset Formula $\theta$
+\end_inset
+
+ on average.
+ This leads to the following definition:
+\end_layout
+
+\begin_layout Definition
+We say that 
+\begin_inset Formula $\hat{\Theta}_{n}(X_{1},...,X_{n})$
+\end_inset
+
+ is an unbiased estimator of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ if 
+\begin_inset Formula 
+\[
+E_{\theta}\left[\hat{\Theta}_{n}(X_{1},...,X_{n})\right]=\theta\mbox{ for all }\theta\in\Theta
+\]
+
+\end_inset
+
+where the subscript 
+\begin_inset Formula $\theta$
+\end_inset
+
+ on the expectation operator indicates which distribution function is to
+ be used in the evaluation (see the previous remark on the dependence of
+ the sampling distribution on the parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
