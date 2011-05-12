@@ -1006,11 +1006,98 @@ unknown. The \emph{likelihood function} is
 
 \[
 L(\theta)=\left\{ \begin{array}{cc}
-f_{X_{1},...,X_{n}}(x_{1},...,x_{n}|\theta), & \mbox{if \ensuremath{F}has a density function \ensuremath{f},}\\
-p_{X_{1},...,X_{n}}(x_{1},...,x_{n}|\theta), & \mbox{if \ensuremath{F}has a prob. function \ensuremath{p}. }
+f_{X_{1},...,X_{n}}(x_{1},...,x_{n}|\theta), & \mbox{if \ensuremath{F} has a density function \ensuremath{f},}\\
+p_{X_{1},...,X_{n}}(x_{1},...,x_{n}|\theta), & \mbox{if \ensuremath{F} has a prob. function \ensuremath{p}. }
 \end{array}\right.
 \]
-
+Any $\hat{\theta}=\hat{\Theta}(X_{1},...,X_{n})\in\Theta$ such that
+\[
+L(\hat{\theta})=sup\{L(\theta):\theta\in\Theta\}
+\]
+is called \emph{maximum-likelihood estimator} (MLE) of $\theta$.
 \end{definition}%{}
+\end{frame}
+
+\begin{frame}{Maximum likelihood estimation}
+
+\textbf{Remark:} Those $\hat{\theta}$'s that maximize the likelihood
+function $L(\theta)$ are precisely those that maximize the \emph{log-likelihood
+function} $\log L(\theta).$ It turns out that maximization of the
+log-likelihood function is often easier.
+
+\begin{center}
+\includegraphics[width=12.5cm]{\string"example1 maximumLikelihood\string".eps}
+\par\end{center}
+
+\end{frame}
+
+\begin{frame}{Maximum likelihood estimation}
+
+\begin{center}
+\includegraphics[width=12.4cm]{\string"example2 maximumLikelihood\string".eps}
+\par\end{center}
+
+\begin{center}
+\includegraphics[width=12.4cm]{\string"example3 maximumLikelihood\string".eps}
+\par\end{center}
+
+\end{frame} 
+
+\begin{frame}{Maximum likelihood estimation}
+
+\begin{center}
+\includegraphics[width=12.5cm]{\string"example4 maximumLikelihood\string".eps}
+\par\end{center}
+
+\begin{center}
+\includegraphics[width=12.5cm]{\string"example5 maximumLikelihood\string".eps}
+\par\end{center}
+
+\end{frame} 
+
+\begin{frame}{Maximum likelihood estimation}
+
+\begin{center}
+\includegraphics[width=12.3cm]{\string"example6 maximumLikelihood\string".eps}
+\par\end{center}
+
+\end{frame} 
+
+\begin{frame}{Maximum likelihood estimation}
+
+\begin{center}
+\includegraphics[width=12.3cm]{\string"example7 maximumLikelihood\string".eps}
+\par\end{center}
+
+\begin{center}
+\includegraphics[width=12.3cm]{\string"example8 maximumLikelihood\string".eps}
+\par\end{center}
+
+\end{frame} 
+
+\subsection{The method of moments}
+
+\begin{frame}{The method of moments}
+
+\begin{center}
+\includegraphics[width=12.5cm]{mme1}
+\par\end{center}
+
+\end{frame} 
+
+\begin{frame}{The method of moments}
+
+\begin{center}
+\includegraphics[width=12.3cm]{mme2}
+\par\end{center}
+
+\end{frame} 
+
+\begin{frame}{The method of moments}
+
+\begin{center}
+\includegraphics[height=8cm]{mme3}
+\par\end{center}
+
 \end{frame} 
 \end{document}
