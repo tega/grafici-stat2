@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 #LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
+=======
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+>>>>>>> 3f2d46bade15875a9767d6c78cac9a9f6724ce40
 \begin_document
 \begin_header
 \textclass beamer
@@ -18,18 +23,26 @@
 \newtheorem{esercizio}[esr]{Exercise}
 \end_preamble
 \use_default_options false
+\maintain_unincluded_children false
 \language english
+\language_package default
 \inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family rmdefault
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -37,21 +50,31 @@
 \use_geometry true
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 2
 \tocdepth 2
 \paragraph_separation indent
-\defskip medskip
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -113,7 +136,7 @@ Not really informative to the audience, more for people (including yourself)
 \end_inset
 
 
-\begin_inset OptArg
+\begin_inset Argument
 status open
 
 \begin_layout Plain Layout
@@ -346,10 +369,12 @@ Let the conditional probability of
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 G_{Y}(y\rvert t) & = & P(Y\leq y\rvert X>t)=\frac{P(\{Y\leq y\}\textnormal{ and }\{X>t\})}{P(X>t)}\\
  & = & \frac{P(\{X\leq y+t\}\textnormal{ and }\{X>t\})}{P(X>t)}=\frac{P(t<X\leq y+t)}{P(X>t)}\\
- & = & \frac{exp(-\lambda t)(1-exp(-\lambda y))}{exp(-\lambda t)}=1-exp(-\lambda y).\end{eqnarray*}
+ & = & \frac{exp(-\lambda t)(1-exp(-\lambda y))}{exp(-\lambda t)}=1-exp(-\lambda y).
+\end{eqnarray*}
 
 \end_inset
 
@@ -596,8 +621,10 @@ reliability
 
 , i.e.
  
-\begin_inset Formula \[
-R(t)=P(X>t)=1-F_{X}(t)\]
+\begin_inset Formula 
+\[
+R(t)=P(X>t)=1-F_{X}(t)
+\]
 
 \end_inset
 
@@ -636,8 +663,10 @@ does not
 \end_inset
 
  is equal to 
-\begin_inset Formula \[
-G_{Y}(x\rvert t)=\frac{P(t<X\leq t+x)}{P(X>t)}=\frac{F_{X}(t+x)-F_{X}(t)}{R(t)}\]
+\begin_inset Formula 
+\[
+G_{Y}(x\rvert t)=\frac{P(t<X\leq t+x)}{P(X>t)}=\frac{F_{X}(t+x)-F_{X}(t)}{R(t)}
+\]
 
 \end_inset
 
@@ -732,14 +761,18 @@ begin{definition}
 \end_inset
 
  is defined to be 
-\begin_inset Formula \[
-h(t)=\lim_{x\rightarrow0}\frac{1}{x}G_{Y}(x\rvert t)=\lim_{x\rightarrow0}\frac{F_{X}(t+x)-F_{X}(t)}{xR(t)}\ ,\]
+\begin_inset Formula 
+\[
+h(t)=\lim_{x\rightarrow0}\frac{1}{x}G_{Y}(x\rvert t)=\lim_{x\rightarrow0}\frac{F_{X}(t+x)-F_{X}(t)}{xR(t)}\ ,
+\]
 
 \end_inset
 
  so that 
-\begin_inset Formula \[
-h(t)=\frac{f_{X}(t)}{R(t)}.\]
+\begin_inset Formula 
+\[
+h(t)=\frac{f_{X}(t)}{R(t)}.
+\]
 
 \end_inset
 
@@ -927,8 +960,10 @@ begin{theorem}
 \end_inset
 
  
-\begin_inset Formula \[
-R(t)=\exp\left(-\int_{0}^{t}h(x)dx\right)\]
+\begin_inset Formula 
+\[
+R(t)=\exp\left(-\int_{0}^{t}h(x)dx\right)
+\]
 
 \end_inset
 
@@ -959,8 +994,10 @@ begin{proof}
 \end_inset
 
  
-\begin_inset Formula \[
-\int_{0}^{t}h(x)dx=\int_{0}^{t}\frac{f_{X}(x)}{R(x)}dx=\int_{0}^{t}\frac{-R'(x)}{R(x)}dx=-\ln(R(t))\]
+\begin_inset Formula 
+\[
+\int_{0}^{t}h(x)dx=\int_{0}^{t}\frac{f_{X}(x)}{R(x)}dx=\int_{0}^{t}\frac{-R'(x)}{R(x)}dx=-\ln(R(t))
+\]
 
 \end_inset
 
@@ -1076,8 +1113,10 @@ begin{definition}
 \end_inset
 
  The cumulative hazard is defined to be 
-\begin_inset Formula \[
-H(t)=\int_{0}^{t}h(x)dx\]
+\begin_inset Formula 
+\[
+H(t)=\int_{0}^{t}h(x)dx
+\]
 
 \end_inset
 
@@ -1134,8 +1173,10 @@ name "DefConditionalReliability"
 
 .
  
-\begin_inset Formula \begin{eqnarray}
-R_{t}(y)=\frac{R(t+y)}{R(t)}\label{conditionalReliability}\end{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
+R_{t}(y)=\frac{R(t+y)}{R(t)}\label{conditionalReliability}
+\end{eqnarray}
 
 \end_inset
 
@@ -1235,8 +1276,10 @@ status collapsed
 \end_inset
 
  of the component: 
-\begin_inset Formula \begin{eqnarray*}
-R_{t}(y) & = & R_{s}(y)\textnormal{ \ for all }t,s\geq0.\end{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{t}(y) & = & R_{s}(y)\textnormal{ \ for all }t,s\geq0.
+\end{eqnarray*}
 
 \end_inset
 
@@ -1245,8 +1288,10 @@ Thus, for
 \end_inset
 
  
-\begin_inset Formula \begin{eqnarray*}
-R_{t}(y) & = & R_{0}(y)=\frac{R(y)}{R(0)}=R(y),\end{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{t}(y) & = & R_{0}(y)=\frac{R(y)}{R(0)}=R(y),
+\end{eqnarray*}
 
 \end_inset
 
@@ -1273,14 +1318,18 @@ R_{t}(y) & = & R_{0}(y)=\frac{R(y)}{R(0)}=R(y),\end{eqnarray*}
 \noun default
 \color inherit
  
-\begin_inset Formula \begin{eqnarray*}
-R(t+y) & = & R(t)R(y).\end{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
+R(t+y) & = & R(t)R(y).
+\end{eqnarray*}
 
 \end_inset
 
  In particular we obtain 
-\begin_inset Formula \begin{eqnarray*}
-\frac{R(t+y)-R(y)}{t} & = & \frac{(R(t)-1)R(y)}{t}=\frac{(R(t)-R(0))R(y)}{t}.\end{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
+\frac{R(t+y)-R(y)}{t} & = & \frac{(R(t)-1)R(y)}{t}=\frac{(R(t)-R(0))R(y)}{t}.
+\end{eqnarray*}
 
 \end_inset
 
@@ -1362,9 +1411,11 @@ status collapsed
 \end_inset
 
  
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 R'(y) & = & R'(0)R(y)\\
-R(y) & = & \exp(yR'(0))=\exp(-\lambda y)\end{eqnarray*}
+R(y) & = & \exp(yR'(0))=\exp(-\lambda y)
+\end{eqnarray*}
 
 \end_inset
 
@@ -1763,8 +1814,10 @@ The failure rate of a certain component is
 \begin_layout Enumerate
 The failure rate of a computer system for onboard control of a space vehicle
  is estimated to be the following function of time:
-\begin_inset Formula \[
-h(t)=\alpha\mu t^{\alpha-1}+\beta\gamma t^{\beta-1}.\]
+\begin_inset Formula 
+\[
+h(t)=\alpha\mu t^{\alpha-1}+\beta\gamma t^{\beta-1}.
+\]
 
 \end_inset
 
@@ -1939,9 +1992,11 @@ A two stage hypoexponential random variable
 \end_inset
 
  has pdf and distribution function equal to 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 f(t) & = & \frac{\lambda_{1}\lambda_{2}}{\lambda_{2}-\lambda_{1}}(\exp(-\lambda_{1}t)-\exp(\lambda_{2}t)),\ \ t>0\\
-F(t) & = & 1-\frac{\lambda_{2}}{\lambda_{2}-\lambda_{1}}\exp(-\lambda_{1}t)+\frac{\lambda_{1}}{\lambda_{2}-\lambda_{1}}\exp(-\lambda_{2}t)\end{eqnarray*}
+F(t) & = & 1-\frac{\lambda_{2}}{\lambda_{2}-\lambda_{1}}\exp(-\lambda_{1}t)+\frac{\lambda_{1}}{\lambda_{2}-\lambda_{1}}\exp(-\lambda_{2}t)
+\end{eqnarray*}
 
 \end_inset
 
@@ -2050,9 +2105,11 @@ stage Erlang and is given by
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 f(t) & = & \frac{\lambda^{r}t^{r-1}\exp(-\lambda t)}{(r-1)!}\textnormal{ with }t>0,\ \lambda>0,\ r=1,2,\dots\\
-F(t) & = & 1-\sum_{k=0}^{r-1}\frac{(\lambda t)^{k}}{k!}\exp(-\lambda t)\textnormal{ with }t\geq0,\ \lambda>0,\ r=1,2,\dots\end{eqnarray*}
+F(t) & = & 1-\sum_{k=0}^{r-1}\frac{(\lambda t)^{k}}{k!}\exp(-\lambda t)\textnormal{ with }t\geq0,\ \lambda>0,\ r=1,2,\dots
+\end{eqnarray*}
 
 \end_inset
 
@@ -2156,9 +2213,11 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 f(t) & = & \sum_{i=1}^{k}\alpha_{i}\lambda_{i}\exp(-\lambda_{i}t)\textnormal{ with }t>0,\ \lambda_{i}>0,\ \sum_{i=1}^{k}\alpha_{i}=1\\
-F(t) & = & \sum_{i}\alpha_{i}(1-\exp(\lambda_{i}t))\ \ t\geq0\end{eqnarray*}
+F(t) & = & \sum_{i}\alpha_{i}(1-\exp(\lambda_{i}t))\ \ t\geq0
+\end{eqnarray*}
 
 \end_inset
 
@@ -2281,9 +2340,11 @@ The reason is that by a proper choice of the shape parameter
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 f(t) & = & \lambda\alpha t^{\alpha-1}\exp(-\lambda t^{\alpha})\\
-F(t) & = & 1-\exp(-\lambda t^{\alpha})\end{eqnarray*}
+F(t) & = & 1-\exp(-\lambda t^{\alpha})
+\end{eqnarray*}
 
 \end_inset
 
@@ -2415,11 +2476,14 @@ the access frequency of Web traffic
 
 \begin_layout Standard
 The density and distributions functions are given by 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 f(x) & = & \alpha k^{\alpha}x^{-\alpha-1}\ \ x\geq k,\ k>0,\ \alpha>0\\
 F(x) & = & \left\{ \begin{array}{ll}
 1-\left(\frac{k}{x}\right)^{\alpha} & \ x\geq k\\
-0 & x<k\end{array}\right.\end{eqnarray*}
+0 & x<k
+\end{array}\right.
+\end{eqnarray*}
 
 \end_inset
 
@@ -2499,8 +2563,10 @@ Show that the failure rate
 \end_inset
 
  of the hypoexponential distribution has the property 
-\begin_inset Formula \[
-\underset{t\rightarrow+\infty}{lim}h(t)=min\{\lambda_{1},\lambda_{2}\}.\]
+\begin_inset Formula 
+\[
+\underset{t\rightarrow+\infty}{lim}h(t)=min\{\lambda_{1},\lambda_{2}\}.
+\]
 
 \end_inset
 
@@ -2511,8 +2577,15 @@ Show that the failure rate
 Show that a two-stage Erlang pdf is the limiting case of two-stage hypoexponenti
 al pdf.
  In other words, show that 
+<<<<<<< HEAD
 \begin_inset Formula \[
 \underset{\lambda_{1}\rightarrow\lambda_{2}}{lim}\frac{\lambda_{1}\lambda_{2}}{\lambda_{2}-\lambda_{1}}(e^{-\lambda_{1}t}-e^{-\lambda_{2}t})=\lambda_{2}^{2}te^{-\lambda_{2}t}.\]
+=======
+\begin_inset Formula 
+\[
+\underset{\lambda_{1}\rightarrow\lambda_{2}}{lim}\frac{\lambda_{1}\lambda_{2}}{\lambda_{2}-\lambda_{1}}(e^{-\lambda_{1}t}-e^{-\lambda_{2}t})=\lambda_{2}^{2}te^{-\lambda_{2}t}.
+\]
+>>>>>>> 3f2d46bade15875a9767d6c78cac9a9f6724ce40
 
 \end_inset
 
@@ -2596,8 +2669,10 @@ Let
 \end_inset
 
  a function and 
-\begin_inset Formula \[
-Y=\Psi(X).\]
+\begin_inset Formula 
+\[
+Y=\Psi(X).
+\]
 
 \end_inset
 
@@ -2708,11 +2783,13 @@ To derive
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 F_{Y}(y) & = & P(Y\leq y)=P(Y\in C)\\
  & = & P(\Psi(X)\in C)\\
  & = & P(\Psi^{-1}(C))\\
- & = & P_{X}(B)\end{eqnarray*}
+ & = & P_{X}(B)
+\end{eqnarray*}
 
 \end_inset
 
@@ -2725,8 +2802,10 @@ where the set
 \end_inset
 
 , i.e.
-\begin_inset Formula \[
-B=\Psi^{-1}(C)=\{x\in\mathbb{R\mid}\Psi(x)\in C\}.\]
+\begin_inset Formula 
+\[
+B=\Psi^{-1}(C)=\{x\in\mathbb{R\mid}\Psi(x)\in C\}.
+\]
 
 \end_inset
 
@@ -2868,10 +2947,13 @@ Because
 \end_inset
 
 :
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 f_{Y}(y)=\begin{cases}
 \frac{1}{2\sqrt{y}}\left[f_{X}(\sqrt{y})+f_{X}(-\sqrt{y})\right], & y>0,\\
-0, & \mbox{otherwise.}\end{cases}\]
+0, & \mbox{otherwise.}
+\end{cases}
+\]
 
 \end_inset
 
@@ -3027,10 +3109,13 @@ monotone
 \end_inset
 
  is a continuous random variable with density function
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 f_{Y}(y)=\begin{cases}
 f_{X}\left[\Phi^{-1}(y)\right]\left[\mid\frac{\partial}{\partial y}\left(\Phi^{-1}\right)(y)\mid\right], & y\in\Phi(I),\\
-0, & \mbox{otherwise.}\end{cases}\]
+0, & \mbox{otherwise.}
+\end{cases}
+\]
 
 \end_inset
 
@@ -3077,10 +3162,13 @@ Functions of random variables
 \end_inset
 
  has density given by 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 f_{Y}(y)=\begin{cases}
 1, & 0<y<1,\\
-0, & \mbox{otherwise}.\end{cases}\]
+0, & \mbox{otherwise}.
+\end{cases}
+\]
 
 \end_inset
 
@@ -3111,10 +3199,13 @@ f_{Y}(y)=\begin{cases}
 \end_inset
 
 ) 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 f_{Y}(y)=\begin{cases}
 \frac{1}{\mid a\mid}f_{X}\left(\frac{y-b}{a}\right), & y\in aI+b,\\
-0, & \mbox{otherwise.}\end{cases}\]
+0, & \mbox{otherwise.}
+\end{cases}
+\]
 
 \end_inset
 
@@ -3606,8 +3697,10 @@ The output
 \end_inset
 
 : 
-\begin_inset Formula \[
-Y=g(X).\]
+\begin_inset Formula 
+\[
+Y=g(X).
+\]
 
 \end_inset
 
@@ -3885,8 +3978,10 @@ status collapsed
 
  For a general distribution function not necessarily strictly increasing
  define 
-\begin_inset Formula \[
-F_{X}^{-1}(p)=\inf\{x:p\leq F_{X}(x)\}\ \ 0<p<1.\]
+\begin_inset Formula 
+\[
+F_{X}^{-1}(p)=\inf\{x:p\leq F_{X}(x)\}\ \ 0<p<1.
+\]
 
 \end_inset
 
@@ -4064,14 +4159,18 @@ begin{proof}
 \end_inset
 
  By definition 
-\begin_inset Formula \[
-F_{Y}(c):=P(Y\leq c)=P(F_{X}^{-1}(U)\leq c).\]
+\begin_inset Formula 
+\[
+F_{Y}(c):=P(Y\leq c)=P(F_{X}^{-1}(U)\leq c).
+\]
 
 \end_inset
 
  But the last equality is equivalent to (see previous slide) 
-\begin_inset Formula \[
-P(U\leq F_{X}(c))=F_{X}(c).\]
+\begin_inset Formula 
+\[
+P(U\leq F_{X}(c))=F_{X}(c).
+\]
 
 \end_inset
 
@@ -4428,8 +4527,10 @@ Compute
 \end_inset
 
  as follows 
-\begin_inset Formula \[
-Y=x_{j}\textnormal{\hspace{0.5cm} if \hspace{0.1cm}}\sum_{i=1}^{j-1}p_{i}<U\leq\sum_{i=1}^{j}p_{i}.\]
+\begin_inset Formula 
+\[
+Y=x_{j}\textnormal{\hspace{0.5cm} if \hspace{0.1cm}}\sum_{i=1}^{j-1}p_{i}<U\leq\sum_{i=1}^{j}p_{i}.
+\]
 
 \end_inset
 
@@ -4530,7 +4631,7 @@ Let
  have the following mass function 
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="4">
-<features>
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -4699,8 +4800,10 @@ This algorithm is correct but inefficient.
 
 , ..., respectively.
  The expected number of comparisons is 
-\begin_inset Formula \[
-p_{1}+2p_{2}+3p_{3}+4p_{4}=2.9.\]
+\begin_inset Formula 
+\[
+p_{1}+2p_{2}+3p_{3}+4p_{4}=2.9.
+\]
 
 \end_inset
 
@@ -4864,8 +4967,10 @@ if
 \end_inset
 
  The expected number of comparisons is now equal to 
-\begin_inset Formula \[
-p_{3}+2p_{4}+3p_{2}+4p_{1}=2.\]
+\begin_inset Formula 
+\[
+p_{3}+2p_{4}+3p_{2}+4p_{1}=2.
+\]
 
 \end_inset
 
@@ -4944,10 +5049,13 @@ status collapsed
 
  The Laplace distribution is a continuous distribution with density function
  
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 f(x;\mu,b)=\left\{ \begin{array}{ll}
 \frac{1}{2b}\exp(-\frac{\mu-x}{b}) & \textnormal{if }x<\mu\\
-\frac{1}{2b}\exp(-\frac{x-\mu}{b}) & \textnormal{if }x\geq\mu\end{array}\right.\]
+\frac{1}{2b}\exp(-\frac{x-\mu}{b}) & \textnormal{if }x\geq\mu
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -5135,14 +5243,18 @@ begin{Theorem}
 \end_inset
 
  is then equal to 
-\begin_inset Formula \[
-f_{Y}(y)=f_{X}(g^{-1}(y))\ \rvert J(g^{-1}(y))\rvert\]
+\begin_inset Formula 
+\[
+f_{Y}(y)=f_{X}(g^{-1}(y))\ \rvert J(g^{-1}(y))\rvert
+\]
 
 \end_inset
 
  where 
-\begin_inset Formula \[
-J(g^{-1}(y))=\det(M_{J})=\det\left[\frac{\partial x_{i}(y)}{\partial y_{j}}\right]_{i=1,n;\ j=1,n}\]
+\begin_inset Formula 
+\[
+J(g^{-1}(y))=\det(M_{J})=\det\left[\frac{\partial x_{i}(y)}{\partial y_{j}}\right]_{i=1,n;\ j=1,n}
+\]
 
 \end_inset
 
@@ -5245,8 +5357,10 @@ Let
 \end_inset
 
  random vector and consider the affine transformation 
-\begin_inset Formula \[
-Y=b+A\ X\]
+\begin_inset Formula 
+\[
+Y=b+A\ X
+\]
 
 \end_inset
 
@@ -5268,8 +5382,10 @@ Y=b+A\ X\]
 
  invertible matrix.
  We then have 
-\begin_inset Formula \[
-X=A^{-1}(Y-b);\ M_{J}=A^{-1}\]
+\begin_inset Formula 
+\[
+X=A^{-1}(Y-b);\ M_{J}=A^{-1}
+\]
 
 \end_inset
 
@@ -5278,14 +5394,18 @@ X=A^{-1}(Y-b);\ M_{J}=A^{-1}\]
 \end_inset
 
  is equal to 
-\begin_inset Formula \[
-\frac{1}{\sqrt{2\pi det(\Sigma)}}\exp(-\frac{1}{2}(A^{-1}(Y-b)-\mu)'\Sigma^{-1}(A^{-1}(Y-b)-\mu))\rvert det(A^{-1})\rvert\]
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{2\pi det(\Sigma)}}\exp(-\frac{1}{2}(A^{-1}(Y-b)-\mu)'\Sigma^{-1}(A^{-1}(Y-b)-\mu))\rvert det(A^{-1})\rvert
+\]
 
 \end_inset
 
  
-\begin_inset Formula \[
-\frac{1}{\sqrt{2\pi det(A\Sigma A')}}\exp(-\frac{1}{2}(Y-b-A\mu)'(A\Sigma A')^{-1}(Y-b-A\mu))\]
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{2\pi det(A\Sigma A')}}\exp(-\frac{1}{2}(Y-b-A\mu)'(A\Sigma A')^{-1}(Y-b-A\mu))
+\]
 
 \end_inset
 
@@ -5402,7 +5522,7 @@ Looking at the density function of
 \begin_inset Formula $Y\sim N(\tilde{\mu},\tilde{\Sigma})$
 \end_inset
 
- whith 
+ with 
 \begin_inset Formula $\tilde{\mu}=b+A\mu$
 \end_inset
 
@@ -5445,8 +5565,10 @@ begin{esercizio}
 \end_inset
 
  with 
-\begin_inset Formula \[
-Y_{1}=\sqrt{-2\ln(U_{1})}\cos(2\pi U_{2})\textnormal{ and }Y_{2}=\sqrt{-2\ln(U_{1})}\sin(2\pi U_{2})\]
+\begin_inset Formula 
+\[
+Y_{1}=\sqrt{-2\ln(U_{1})}\cos(2\pi U_{2})\textnormal{ and }Y_{2}=\sqrt{-2\ln(U_{1})}\sin(2\pi U_{2})
+\]
 
 \end_inset
 
@@ -5578,8 +5700,10 @@ The joint density of the random variables
 \end_inset
 
  is 
-\begin_inset Formula \[
-f(x_{1},x_{2})=2\exp(−x_{1})\exp(−x_{2}),\textnormal{ for }0<x_{1}<x_{2}<\infty\]
+\begin_inset Formula 
+\[
+f(x_{1},x_{2})=2\exp(−x_{1})\exp(−x_{2}),\textnormal{ for }0<x_{1}<x_{2}<\infty
+\]
 
 \end_inset
 
@@ -5593,8 +5717,10 @@ f(x_{1},x_{2})=2\exp(−x_{1})\exp(−x_{2}),\textnormal{ for }0<x_{1}<x_{2}<\in
 \end_inset
 
  We define the transformation 
-\begin_inset Formula \[
-Y_{1}=2X_{1},Y_{2}=X_{2}-X_{1}.\]
+\begin_inset Formula 
+\[
+Y_{1}=2X_{1},Y_{2}=X_{2}-X_{1}.
+\]
 
 \end_inset
 
@@ -5727,10 +5853,13 @@ The expectation,
 \end_inset
 
  is defined by 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 E\left[X\right]=\begin{cases}
 \sum_{i}x_{i}p(x_{i}), & \mbox{if }X\mbox{ is discrete,}\\
-\int_{-\infty}^{\infty}xf(x)dx, & \mbox{if }X\mbox{ is continuous,}\end{cases}\]
+\int_{-\infty}^{\infty}xf(x)dx, & \mbox{if }X\mbox{ is continuous,}
+\end{cases}
+\]
 
 \end_inset
 
@@ -5770,8 +5899,10 @@ Assume
 
 .
  Then
-\begin_inset Formula \begin{multline*}
-E\left[X\right]=\sum_{i}x_{i}p(x_{i})=0\cdot\frac{1}{32}+1\cdot\frac{5}{32}+2\cdot\frac{10}{32}+3\cdot\frac{10}{32}+4\cdot\frac{5}{32}+5\cdot\frac{1}{32}=2.5\end{multline*}
+\begin_inset Formula 
+\begin{multline*}
+E\left[X\right]=\sum_{i}x_{i}p(x_{i})=0\cdot\frac{1}{32}+1\cdot\frac{5}{32}+2\cdot\frac{10}{32}+3\cdot\frac{10}{32}+4\cdot\frac{5}{32}+5\cdot\frac{1}{32}=2.5
+\end{multline*}
 
 \end_inset
 
@@ -5942,16 +6073,21 @@ Let
 
 .
  An easier method is to use the following result
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 E[Y]=E[g(X)]=\begin{cases}
 \sum_{i}g(x_{i})p_{X}(x_{i}), & \mbox{if }X\mbox{ is descrete,}\\
-\int_{-\infty}^{\infty}g(x)f_{X}(x)dx, & \mbox{if }X\mbox{ is continuous,}\end{cases}\]
+\int_{-\infty}^{\infty}g(x)f_{X}(x)dx, & \mbox{if }X\mbox{ is continuous,}
+\end{cases}
+\]
 
 \end_inset
 
 privided the sum or the integral is absolutely convergent, i.e.
-\begin_inset Formula \[
-\sum_{i}\mid g(x_{i})\mid p_{X}(x_{i})<\infty\mbox{ or }\int_{-\infty}^{\infty}\mid g(x)\mid f_{X}(x)dx<\infty.\]
+\begin_inset Formula 
+\[
+\sum_{i}\mid g(x_{i})\mid p_{X}(x_{i})<\infty\mbox{ or }\int_{-\infty}^{\infty}\mid g(x)\mid f_{X}(x)dx<\infty.
+\]
 
 \end_inset
 
@@ -6215,8 +6351,10 @@ th central moment of the random variable
 \end_inset
 
 , is defined as 
-\begin_inset Formula \[
-\mu_{k}=E[(X-E[X])^{k}].\]
+\begin_inset Formula 
+\[
+\mu_{k}=E[(X-E[X])^{k}].
+\]
 
 \end_inset
 
@@ -6310,10 +6448,13 @@ The variance of a random variable
 \end_inset
 
  is 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \sigma^{2}=\begin{cases}
 \sum_{i}(x_{i}-E[X])^{2}p(x_{i}), & \mbox{discrete case,}\\
-\int_{-\infty}^{\infty}(x-E[X])^{2}f(x)dx, & \mbox{continuous case.}\end{cases}\]
+\int_{-\infty}^{\infty}(x-E[X])^{2}f(x)dx, & \mbox{continuous case.}
+\end{cases}
+\]
 
 \end_inset
 
@@ -7088,10 +7229,12 @@ Let we consider
 \end_inset
 
  In fact 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E[X] & = & \int_{-\infty}^{\infty}\frac{x}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}}dx=\int_{-\infty}^{\infty}\frac{\sigma y+\mu}{\sqrt{2\pi}\sigma}e^{-\frac{1}{2}y^{2}}\sigma dy\\
  & = & \frac{\sigma}{\sqrt{2\pi}}\int_{-\infty}^{\infty}ye^{-\frac{1}{2}y^{2}}dy+\mu\int_{-\infty}^{\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}y^{2}}dy\\
- & = & \frac{\sigma}{\sqrt{2\pi}}\left(-e^{-\frac{1}{2}y^{2}}\right)\mid_{-\infty}^{\infty}+\mu\cdot1=\mu\end{eqnarray*}
+ & = & \frac{\sigma}{\sqrt{2\pi}}\left(-e^{-\frac{1}{2}y^{2}}\right)\mid_{-\infty}^{\infty}+\mu\cdot1=\mu
+\end{eqnarray*}
 
 \end_inset
 
@@ -7432,11 +7575,14 @@ Let
 
 .
  Then 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E[Y] & = & E[\Phi(X)]\\
  & = & \begin{cases}
 \sum_{x_{1}}\ldots\sum_{x_{n}}\Phi(x_{1},x_{2},...,x_{n})p(x_{1},x_{2},...,x_{n}), & \mbox{descrete case}\\
-\int_{\mathbb{R}}\ldots\int_{\mathbb{R}}\Phi(x_{1},x_{2},...,x_{n})f(x_{1},x_{2},...,x_{n})dx_{1}\ldots dx_{n}, & \mbox{contin. case}\end{cases}\end{eqnarray*}
+\int_{\mathbb{R}}\ldots\int_{\mathbb{R}}\Phi(x_{1},x_{2},...,x_{n})f(x_{1},x_{2},...,x_{n})dx_{1}\ldots dx_{n}, & \mbox{contin. case}
+\end{cases}
+\end{eqnarray*}
 
 \end_inset
 
@@ -7544,8 +7690,10 @@ If function
 \end_inset
 
  is linear, we than obtain that 
-\begin_inset Formula \[
-E[Y]=E[\Phi(X)]=E[\sum_{i=1}^{n}a_{i}X_{i}]=\sum_{i=1}^{n}a_{i}E[X_{i}].\]
+\begin_inset Formula 
+\[
+E[Y]=E[\Phi(X)]=E[\sum_{i=1}^{n}a_{i}X_{i}]=\sum_{i=1}^{n}a_{i}E[X_{i}].
+\]
 
 \end_inset
 
@@ -7655,8 +7803,10 @@ Let
 \end_inset
 
  is defined to be
-\begin_inset Formula \[
-Cov(X,Y)=E[(X-E[X])(Y-E(Y)].\]
+\begin_inset Formula 
+\[
+Cov(X,Y)=E[(X-E[X])(Y-E(Y)].
+\]
 
 \end_inset
 
@@ -7849,8 +7999,10 @@ th moment
 \noun default
 \color inherit
 
-\begin_inset Formula \[
-Cov(X,Y)=E[XY]-E[X]E[Y]=E[X^{3}]-0E[Y]=0.\]
+\begin_inset Formula 
+\[
+Cov(X,Y)=E[XY]-E[X]E[Y]=E[X^{3}]-0E[Y]=0.
+\]
 
 \end_inset
 
@@ -8109,8 +8261,10 @@ Correlation:
 \end_inset
 
  is defined by
-\begin_inset Formula \[
-\rho(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var(X)\: Var(Y)}}\]
+\begin_inset Formula 
+\[
+\rho(X,Y)=\frac{Cov(X,Y)}{\sqrt{Var(X)\: Var(Y)}}
+\]
 
 \end_inset
 
@@ -8268,8 +8422,10 @@ begin{definition}
 \end_inset
 
  is defined by 
-\begin_inset Formula \[
-M(\theta)=E\left[\exp(X\theta)\right]\]
+\begin_inset Formula 
+\[
+M(\theta)=E\left[\exp(X\theta)\right]
+\]
 
 \end_inset
 
@@ -8389,8 +8545,10 @@ begin{definition}
 \end_inset
 
  is given by 
-\begin_inset Formula \[
-N_{X}(\tau)=N(\tau)=E\left[\exp(iX\tau)\right]=M_{X}(i\tau)\textnormal{ where }i=\sqrt{-1}.\]
+\begin_inset Formula 
+\[
+N_{X}(\tau)=N(\tau)=E\left[\exp(iX\tau)\right]=M_{X}(i\tau)\textnormal{ where }i=\sqrt{-1}.
+\]
 
 \end_inset
 
@@ -8445,8 +8603,10 @@ begin{definition}
 \end_inset
 
  is 
-\begin_inset Formula \[
-L_{X}(s)=L(s)=M_{X}(-s)=\int_{0}^{\infty}\exp(-sx)f(x)dx.\]
+\begin_inset Formula 
+\[
+L_{X}(s)=L(s)=M_{X}(-s)=\int_{0}^{\infty}\exp(-sx)f(x)dx.
+\]
 
 \end_inset
 
@@ -8566,8 +8726,10 @@ begin{definition}
 \end_inset
 
  is defined as 
-\begin_inset Formula \[
-G_{X}(z)=G(z)=E\left[z^{X}\right]=M_{X}(ln(z))=\sum_{i=0}^{\infty}p_{X}(i)z^{i}.\]
+\begin_inset Formula 
+\[
+G_{X}(z)=G(z)=E\left[z^{X}\right]=M_{X}(ln(z))=\sum_{i=0}^{\infty}p_{X}(i)z^{i}.
+\]
 
 \end_inset
 
@@ -8604,8 +8766,10 @@ begin{Theorem}
 
 .
  Then 
-\begin_inset Formula \[
-M_{Y}(\theta)=\exp(b\theta)M_{X}(a\theta)\]
+\begin_inset Formula 
+\[
+M_{Y}(\theta)=\exp(b\theta)M_{X}(a\theta)
+\]
 
 \end_inset
 
@@ -8731,8 +8895,10 @@ begin{Theorem}
 \end_inset
 
  exists, and 
-\begin_inset Formula \[
-M_{Y}(\theta)=\prod_{i=1}^{n}M_{X_{i}}(\theta).\]
+\begin_inset Formula 
+\[
+M_{Y}(\theta)=\prod_{i=1}^{n}M_{X_{i}}(\theta).
+\]
 
 \end_inset
 
@@ -8893,8 +9059,10 @@ begin{theorem}
 
  be a random variable such that all moments exist.
  Then 
-\begin_inset Formula \[
-E\left[X^{k}\right]=\frac{\partial^{k}M_{X}}{\partial\theta^{k}}\left\vert _{\theta=0}\right.\,\ \ k=1,2,\dots\]
+\begin_inset Formula 
+\[
+E\left[X^{k}\right]=\frac{\partial^{k}M_{X}}{\partial\theta^{k}}\left\vert _{\theta=0}\right.\,\ \ k=1,2,\dots
+\]
 
 \end_inset
 
@@ -8931,14 +9099,18 @@ begin{proof}
 \end_inset
 
  
-\begin_inset Formula \[
-\exp(X\theta)=1+X\theta+\frac{X^{2}\theta^{2}}{2!}+\dots+\frac{X^{k}\theta^{k}}{k!}+\dots\]
+\begin_inset Formula 
+\[
+\exp(X\theta)=1+X\theta+\frac{X^{2}\theta^{2}}{2!}+\dots+\frac{X^{k}\theta^{k}}{k!}+\dots
+\]
 
 \end_inset
 
  Taking expectation on both sides 
-\begin_inset Formula \[
-M_{X}(\theta)=E\left[\exp(X\theta)\right]=1+E\left[X\right]\theta+\frac{E\left[X^{2}\right]\theta^{2}}{2!}+\dots+\frac{E\left[X^{k}\right]\theta^{k}}{k!}+\dots\]
+\begin_inset Formula 
+\[
+M_{X}(\theta)=E\left[\exp(X\theta)\right]=1+E\left[X\right]\theta+\frac{E\left[X^{2}\right]\theta^{2}}{2!}+\dots+\frac{E\left[X^{k}\right]\theta^{k}}{k!}+\dots
+\]
 
 \end_inset
 
@@ -9045,20 +9217,26 @@ status collapsed
 \end_inset
 
  are 
-\begin_inset Formula \[
-E\left[X^{k}\right]=(-i)^{k}\frac{\partial^{k}N_{X}}{\partial\tau^{k}}\left\vert _{\tau=0}\right.\,\ \ k=0,1,\dots\]
+\begin_inset Formula 
+\[
+E\left[X^{k}\right]=(-i)^{k}\frac{\partial^{k}N_{X}}{\partial\tau^{k}}\left\vert _{\tau=0}\right.\,\ \ k=0,1,\dots
+\]
 
 \end_inset
 
  
-\begin_inset Formula \[
-E\left[X^{k}\right]=(-1)^{k}\frac{\partial^{k}L_{X}}{\partial s^{k}}\left\vert _{s=0}\right.\,\ \ k=0,1,\dots\]
+\begin_inset Formula 
+\[
+E\left[X^{k}\right]=(-1)^{k}\frac{\partial^{k}L_{X}}{\partial s^{k}}\left\vert _{s=0}\right.\,\ \ k=0,1,\dots
+\]
 
 \end_inset
 
  
-\begin_inset Formula \[
-E\left[\frac{X!}{(X-k)!}\right]=\lim_{\tilde{z}\uparrow1}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=\tilde{z}}\right.\,\ \ k=0,1,\dots\]
+\begin_inset Formula 
+\[
+E\left[\frac{X!}{(X-k)!}\right]=\lim_{\tilde{z}\uparrow1}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=\tilde{z}}\right.\,\ \ k=0,1,\dots
+\]
 
 \end_inset
 
@@ -9159,8 +9337,10 @@ status collapsed
 \end_inset
 
 : 
-\begin_inset Formula \[
-p_{k}=P(X=k)=\frac{1}{k!}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=0}\right.\]
+\begin_inset Formula 
+\[
+p_{k}=P(X=k)=\frac{1}{k!}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=0}\right.
+\]
 
 \end_inset
 
@@ -9174,16 +9354,20 @@ p_{k}=P(X=k)=\frac{1}{k!}\frac{\partial^{k}G_{X}}{\partial z^{k}}\left\vert _{z=
 
 .
  Then 
-\begin_inset Formula \[
-f_{X}(x)=\lambda\exp(-\lambda x),\ x>0.\]
+\begin_inset Formula 
+\[
+f_{X}(x)=\lambda\exp(-\lambda x),\ x>0.
+\]
 
 \end_inset
 
  
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 L_{X}(s) & =\int_{0}^{\infty}exp(-sx)\lambda exp(-\lambda x)dx\\
  & =\frac{\lambda}{s+\lambda}\int_{0}^{\infty}(\lambda+s)exp(-(\lambda+s)x)dx\\
- & =\frac{\lambda}{s+\lambda}.\end{align*}
+ & =\frac{\lambda}{s+\lambda}.
+\end{align*}
 
 \end_inset
 
@@ -9261,9 +9445,11 @@ status collapsed
 \end_inset
 
  Example (continued): 
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 E\left[X\right] & =(-1)\frac{\partial L_{X}}{\partial s}\left\vert _{s=0}\right.=(-1)\frac{-\lambda}{(\lambda+s)^{2}}\left\vert _{s=0}\right.=\frac{1}{\lambda}.\\
-E\left[X^{2}\right] & =\frac{\partial^{2}L_{X}}{\partial s^{2}}\left\vert _{s=0}\right.=\frac{2\lambda}{(\lambda+s)^{3}}\left\vert _{s=0}\right.=\frac{2}{\lambda^{2}}.\end{align*}
+E\left[X^{2}\right] & =\frac{\partial^{2}L_{X}}{\partial s^{2}}\left\vert _{s=0}\right.=\frac{2\lambda}{(\lambda+s)^{3}}\left\vert _{s=0}\right.=\frac{2}{\lambda^{2}}.
+\end{align*}
 
 \end_inset
 
@@ -9290,11 +9476,14 @@ E\left[X^{2}\right] & =\frac{\partial^{2}L_{X}}{\partial s^{2}}\left\vert _{s=0}
 \end_inset
 
  is by definition 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 G_{X}(z) & = & E(z^{X})=\sum_{k=0}^{n}z^{k}\left(\begin{array}{c}
 n\\
-k\end{array}\right)p^{k}(1-p)^{n-k}\\
- & = & (pz+1-p)^{n}\end{eqnarray*}
+k
+\end{array}\right)p^{k}(1-p)^{n-k}\\
+ & = & (pz+1-p)^{n}
+\end{eqnarray*}
 
 \end_inset
 
@@ -9815,8 +10004,10 @@ The expected life or the mean time to failure (MTTF) of the component is
 \end_layout
 
 \begin_layout Definition
-\begin_inset Formula \[
-E[X]=\int_{0}^{\infty}tf(t)dt=-\int_{0}^{\infty}tR'(t)dt.\]
+\begin_inset Formula 
+\[
+E[X]=\int_{0}^{\infty}tf(t)dt=-\int_{0}^{\infty}tR'(t)dt.
+\]
 
 \end_inset
 
@@ -9825,8 +10016,10 @@ Because of Property
 \end_inset
 
  of the Expectation
-\begin_inset Formula \[
-E[X]=\int_{0}^{\infty}(1-F(t))dt-\int_{-\infty}^{0}F(t)dt\]
+\begin_inset Formula 
+\[
+E[X]=\int_{0}^{\infty}(1-F(t))dt-\int_{-\infty}^{0}F(t)dt
+\]
 
 \end_inset
 
@@ -9834,8 +10027,10 @@ we obtain the alternative expression
 \end_layout
 
 \begin_layout Definition
-\begin_inset Formula \[
-E[X]=\int_{0}^{\infty}R(t)dt.\]
+\begin_inset Formula 
+\[
+E[X]=\int_{0}^{\infty}R(t)dt.
+\]
 
 \end_inset
 
@@ -9902,10 +10097,12 @@ More generally, using partial integration, we derive the following general
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E[X^{k}] & = & \int_{0}^{\infty}t^{k}f(t)dt\\
  & = & -\int_{0}^{\infty}t^{k}R'(t)dt\\
- & = & -t^{k}R(t)\mid_{0}^{\infty}+\int_{0}^{\infty}kt^{k-1}R(t)dt.\end{eqnarray*}
+ & = & -t^{k}R(t)\mid_{0}^{\infty}+\int_{0}^{\infty}kt^{k-1}R(t)dt.
+\end{eqnarray*}
 
 \end_inset
 
@@ -9917,8 +10114,10 @@ Because
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-E[X^{k}]=\int_{0}^{\infty}kt^{k-1}R(t)dt.\]
+\begin_inset Formula 
+\[
+E[X^{k}]=\int_{0}^{\infty}kt^{k-1}R(t)dt.
+\]
 
 \end_inset
 
@@ -9930,8 +10129,10 @@ In particular
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-Var(X)=\int_{0}^{\infty}2tR(t)dt-\left[\int_{0}^{\infty}R(t)dt\right]^{2}.\]
+\begin_inset Formula 
+\[
+Var(X)=\int_{0}^{\infty}2tR(t)dt-\left[\int_{0}^{\infty}R(t)dt\right]^{2}.
+\]
 
 \end_inset
 
@@ -9998,8 +10199,10 @@ The system reliability of a series system with
 \end_inset
 
  independent components is 
-\begin_inset Formula \[
-R(t)=\prod_{i=1}^{n}R_{i}(t)\]
+\begin_inset Formula 
+\[
+R(t)=\prod_{i=1}^{n}R_{i}(t)
+\]
 
 \end_inset
 
@@ -10033,8 +10236,10 @@ th component.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-R_{X}(t)=\prod_{j=1}^{n}R_{X_{j}}(t)\leq R_{X_{i}}(t)\:\forall\, i\]
+\begin_inset Formula 
+\[
+R_{X}(t)=\prod_{j=1}^{n}R_{X_{j}}(t)\leq R_{X_{i}}(t)\:\forall\, i
+\]
 
 \end_inset
 
@@ -10042,10 +10247,12 @@ so that
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E[X] & = & \int_{0}^{\infty}R_{X}(t)dt\leq\int_{0}^{\infty}R_{X_{i}}(t)dt\:\forall\, i\\
  & \leq & E[X_{i}]\:\forall\, i\\
- & \leq & \min_{i}\{E[X_{i}]\}\end{eqnarray*}
+ & \leq & \min_{i}\{E[X_{i}]\}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10115,8 +10322,10 @@ Because
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-F_{X}(t)=\prod_{i=1}^{n}F_{X_{i}}(t)=\prod_{i=1}^{n}\left[1-R_{X_{i}}(t)\right].\]
+\begin_inset Formula 
+\[
+F_{X}(t)=\prod_{i=1}^{n}F_{X_{i}}(t)=\prod_{i=1}^{n}\left[1-R_{X_{i}}(t)\right].
+\]
 
 \end_inset
 
@@ -10129,8 +10338,10 @@ The system reliability of a parallel system with
 \end_inset
 
  independent components is 
-\begin_inset Formula \[
-R_{X}(t)=1-F_{X}(t)=1-\prod_{i=1}^{n}\left[1-R_{X_{i}}(t)\right]\geq1-\left[1-R_{X_{i}}(t)\right]\:\forall\, i.\]
+\begin_inset Formula 
+\[
+R_{X}(t)=1-F_{X}(t)=1-\prod_{i=1}^{n}\left[1-R_{X_{i}}(t)\right]\geq1-\left[1-R_{X_{i}}(t)\right]\:\forall\, i.
+\]
 
 \end_inset
 
@@ -10140,8 +10351,10 @@ This implies that the reliability of a parallel redundant system is larger
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
-E[X] & = & \int_{0}^{\infty}R_{X}(t)dt\geq\max_{i}\{E[X_{i}]\}.\end{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
+E[X] & = & \int_{0}^{\infty}R_{X}(t)dt\geq\max_{i}\{E[X_{i}]\}.
+\end{eqnarray*}
 
 \end_inset
 
@@ -10244,8 +10457,10 @@ The system lifetime
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-X=\sum_{i=1}^{n}X_{i},\]
+\begin_inset Formula 
+\[
+X=\sum_{i=1}^{n}X_{i},
+\]
 
 \end_inset
 
@@ -10261,8 +10476,10 @@ stage Erlang distribution and
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-E[X]=\frac{n}{\lambda}\mbox{ and }Var[X]=\frac{n}{\lambda^{2}}.\]
+\begin_inset Formula 
+\[
+E[X]=\frac{n}{\lambda}\mbox{ and }Var[X]=\frac{n}{\lambda^{2}}.
+\]
 
 \end_inset
 
