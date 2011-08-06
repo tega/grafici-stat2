@@ -1,0 +1,340 @@
+%% LyX 2.0.0rc3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt,a4paper,english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\special{papersize=\the\paperwidth,\the\paperheight}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\@ifundefined{definecolor}
+ {\usepackage{color}}{}
+\usepackage{graphics}\usepackage{hypernat}\usepackage{lscape}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2606}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Wednesday, October 14, 2009 09:57:04}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+%\numberwithin{equation}{section} 
+\RequirePackage[OT1]{fontenc}
+\RequirePackage[colorlinks]{hyperref} \RequirePackage{hypernat}
+\RequirePackage[colorlinks]{hyperref} \setlength{\textwidth}{15.5cm}
+\setlength{\textheight}{21.5cm} \setlength{\oddsidemargin}{0.1cm}
+\setlength{\topmargin}{1mm}
+\newenvironment{proof}[1][Proof]{\textbf{#1.}}{\rule{0.5em}{0.5em}}
+\linespread{1.3}
+\def\Red{\special{color cmyk 0 1. 1. 0}}
+\def\MagentaSpecial{\special{color cmyk 0 1. 0.5 0.12}}
+\def\White{\special{color cmyk 0 0 0 0}}
+\def\Cyan{\special{color cmyk 1. 0 0 0}}
+\def\ProcessBlue{\special{color cmyk 0.96 0 0 0}}
+\def\SkyBlue{\special{color cmyk 0.62 0 0.12 0}}
+\def\Turquoise{\special{color cmyk 0.85 0 0.20 0}}
+\def\TealBlue{\special{color cmyk 0.86 0 0.34 0.02}}
+\def\Black{\special{color cmyk 0 0 0 1.}}
+\def\Violet{\special{color cmyk 0.79 0.88 0 0}}
+\def\RoyalPurple{\special{color cmyk 0.75 0.90 0 0}}
+\def\BlueViolet{\special{color cmyk 0.86 0.91 0 0.04}}
+\def\Periwinkle{\special{color cmyk 0.57 0.55 0 0}}
+\def\CadetBlue{\special{color cmyk 0.62 0.57 0.23 0}}
+\def\CornflowerBlue{\special{color cmyk 0.65 0.13 0 0}}
+\def\MidnightBlue{\special{color cmyk 0.98 0.13 0 0.43}}
+\def\NavyBlue{\special{color cmyk 0.94 0.54 0 0}}
+\def\RoyalBlue{\special{color cmyk 1. 0.50 0 0}}
+\def\Blue{\special{color cmyk 1. 1. 0 0}}
+\def\Green{\special{color cmyk 0.8 0 0.25 0.5}}
+\def\Greennew{\special{color cmyk 0.7 0 0.8 0.3}}
+\def\red#1{\Red#1\Black}
+\newcommand{\blue}[1]{\Blue#1\Black}
+\newcommand{\magentas}[1]{\MagentaSpecial#1\Black}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\noindent \textsc{\small university of lugano}\hfill{}\textsc{\small faculty
+of informatics}\\
+\textsc{\small Prof. Claudio Ortelli}{\small \hfill{}}\textsc{\small SS
+2011}{\small \par}
+
+\noindent \textsc{\small Prof. Davide La Vecchia}{\small \hfill{}}\vspace{0.2cm}
+
+
+\begin{center}
+\textbf{\large Statistics}{\large{} }
+\par\end{center}{\large \par}
+
+\vspace{0.1cm}
+
+
+ALaRI\ Exam \hfill{}27 June 2011
+
+\vspace{-0.3cm}
+ \hrulefill{}
+
+\vspace{0.3cm}
+
+
+\hspace{5cm}
+
+\hspace{5cm}$\bullet$ Duration: 2 hours and 30 minutes
+
+\hspace{5cm}$\bullet$ Open book exam
+
+\hspace{5cm}$\bullet$ Solve all exercises
+
+\vspace{0.3cm}
+
+
+
+\section{Exercise 1 (20 pts)}
+\begin{itemize}
+\item [1.1] (\textbf{10 pts}) \textbf{Binomial Distribution:} Let $X$
+be a random variable having a Binomial distribution, with parameters
+$n$ and $p$.
+
+
+(i) For $n=10$ and $p=0.2$, compute, $\mu_{X}:=E(X)$, $\sigma_{X}=\sqrt{Var(X)}$
+and $P(X<\mu_{X}-2\sigma_{X})$;
+
+
+(ii) Let us keep $n=10$ and let $p$ be any real in $[0,1]$. Find
+the value of $p$ such that $\sigma_{X}^{2}$ is maximized. 
+
+\item [1.2] (\textbf{9 pts}) \textbf{Poisson Distribution:} Let $X$ be
+a random variable having a Poisson distribution such that $P(X=0)=P(X=1)$.
+
+
+(i) Find $\mu_{X}:=E(X)$ and $\sigma_{X}=\sqrt{Var(X)}$; (ii) Find
+an upper bound for $P(|X-\mu_{X}|\geq2\sigma_{X})$ and comment briefly
+the result.
+
+\item [1.3] (\textbf{1 pts}) \textbf{Gamma/Chi-square Distribution:} Let
+$X$ be a random variable having a Gamma distribution $\Gamma(\alpha;\lambda)$,
+for $\alpha=2$ and $\lambda=2$. Compute $P(X<11.1433)$. \textbf{Remark}:
+\textit{In fact, a random variable having a $\Gamma$-distribution
+$\Gamma(\alpha;\lambda)$, with $\lambda=2$ has a $\chi^{2}$-distribution,
+with $2\alpha$ degrees-of-freedom. Thus, apply the table of the $\chi^{2}$
+to solve the exercise.}
+\end{itemize}
+
+\section{Exercise 2 (80 pts)}
+
+Let $X$ be a positive random variable, measuring the time (in years)
+that a student at ALaRI needs in order to pass the exam of Statistics.
+Let us assume that $X$ has an exponential distribution: 
+\begin{equation}
+f(x;\lambda)=\lambda\exp^{-\lambda x},\label{exp}
+\end{equation}
+ for $\lambda\in\mathbb{R}^{+}$ and $x\geq0$.
+\begin{itemize}
+\item [2.1] \textbf{(5 pts)} Compute, as a function of $\lambda$:
+
+\begin{itemize}
+\item [2.1.1] (i) $P(X>1.2)$;
+
+
+(ii) $P(1.5\leq X\leq3)$;
+
+
+(iii) $P(1.5<X<3)$;
+
+
+(iv) $P(X\leq0.5)$;
+
+
+(v) $P(X=3.55)$;
+
+
+(vi) $P(X\geq2.5\vert X>2)$;
+
+\item [2.1.2] Find $x_{\alpha}$ such that $F_{X}(x_{\alpha})=\alpha$,
+for any given value of $\alpha\in[0,1]$.
+\end{itemize}
+\item [2.2] \textbf{(10 pts)} Estimation:
+
+\begin{itemize}
+\item [2.2.1] Compute the Maximum Likelihood Estimator (MLE) of $\lambda$
+and $\frac{1}{\lambda}$;
+\item [2.2.2] Derive analytically the expression for $Var(X)$. Then,
+provide the MLE for $Var(X)$. Justify your answer.
+\item [2.2.3] Provide the MLE of the tail area: $P(X>10)$. Justify your
+answer.
+\end{itemize}
+\item [2.3] \textbf{(35 pts)} Now let us consider the random variable
+\begin{equation}
+S_{n}:=\sum_{i=1}^{n}X_{i},\label{Sn}
+\end{equation}
+ which is defined as the sum of $n$ i.i.d. random variables, each
+having an exponential density as in Eq.(\ref{exp}), for $n$ fix.
+
+\begin{itemize}
+\item [2.3.1] What is the exact distribution (expressed as a function
+of $\lambda$) of $S_{n}$? (Hint: apply the Laplace transform of
+$X_{i}$).
+\item [2.3.2] Provide the MLE of $P(S_{n}\geq s)$, for $s>0$. Justify
+your answer.
+\item [2.3.3] Using the results in 2.3.1, explain carefully how one can
+define a test with level $\alpha=5\%$, for: 
+\begin{eqnarray}
+H_{0}:\lambda=\lambda_{0} & vs & H_{1}:\lambda>\lambda_{0}.\label{test}
+\end{eqnarray}
+ We assume that the value $\lambda_{0}$ is larger than zero. (Hint:
+find the distribution of $S_{n}$ under $H_{0}$).
+\item [2.3.4] Assume that we are given a sample of $x_{1},x_{2},...,x_{n}$
+observations of $X$. For $n=50$, we obtain $s=\sum_{i=1}^{50}x_{i}=100$.
+According to the test defined in the previous point 2.3.3, do you
+accept the null hypothesis $H_{0}$ in (\ref{test}), for $\lambda_{0}=0.5$?
+\end{itemize}
+\item [2.4] \textbf{(30 pts)} Now let us consider the new random variable:
+\begin{equation}
+\bar{X}_{n}:=\frac{1}{n}S_{n}.\label{Xn}
+\end{equation}
+
+
+\begin{itemize}
+\item [2.4.1] Provide the expression for $E(\bar{X}_{n})$ and $Var(\bar{X}_{n})$;
+\item [2.4.2] Consider also the random variable: 
+\begin{equation}
+Z_{n}:=\frac{\bar{X}_{n}-E(\bar{X}_{n})}{\sqrt{Var(\bar{X}_{n})}}.
+\end{equation}
+ (i) What is the distribution of $Z_{n}$, for $n$ large?
+
+
+(ii) Define $Y:=Z_{n}^{2}$. What is the distribution of $Y$, when
+$n$ is large?
+
+
+(iii) Explain how one can compute: $P(Z_{n}>z)$ and $P(Y>z^{2})$,
+for $z\in\mathbb{R}^{+}$ and $n$ large.
+
+\item [2.4.3] For $n=1000$, provide an approximation to the distribution
+(expressed as a function of $\lambda$) of $S_{n}=n\bar{X}_{n}$;
+see Eq.(\ref{Xn}). Compare this result to the exact distribution
+of $S_{n}$, as derived in the question 2.3.1, and comment this finding.
+\end{itemize}
+\end{itemize}
+
+\section{Exercise 3 (40 pts)}
+
+Suppose we have a random sample $X_{1}$, ...,$X_{n}$ from an exponential
+distribution with unknown parameter $\lambda$, i.e. $X_{i}$ are
+$i.i.d.$ $\sim$ $Exp(\lambda)$. Suppose we want to estimate $\frac{1}{\lambda}$.
+Let us define $M_{n}=\min(X_{1},...,X_{n})$.
+\begin{itemize}
+\item [3.1] \textbf{(8 pts)} Show that the estimator $T_{1}=\bar{X}_{n}=(X_{1}+...+X_{n})/n$
+is an unbiased estimator of $1/\lambda$.
+\item [3.2] \textbf{(8 pts)} Derive and explain in details the following
+formula: $P(M_{n}\leq x)=1-\prod_{i=1}^{n}\left(1-P(X_{i}\leq x)\right)$.
+\item [3.3] \textbf{(8 pts)} Show that $M_{n}\sim Exp(n\lambda$). Give
+detailed explanation.
+\item [3.4] \textbf{(8 pts)} Show that $T_{2}=nM_{n}$ is an unbiased
+estimator of $1/\lambda$.
+\item [3.5] \textbf{(8 pts)} Which of the estimators $T_{1}$ and $T_{2}$
+would you choose for estimating the mean $1/\lambda$? Substantiate
+your answer. 
+\end{itemize}
+
+\section{Exercise 4 (30 pts)}
+
+Someone is proposing two unbiased estimators $U$ and $V$, with the
+same variance $Var(U)=Var(V)$. It therefore appears that we would
+not prefer one estimator over the other. However, we could go for
+a third estimator, namely $W=(U+V)/2$.
+\begin{itemize}
+\item [4.1] \textbf{(5 pts)} Show that $W$ is unbiased.
+\end{itemize}
+To judge the quality of $W$ we want to compute its variance. Lacking
+information on the joint probability distribution of $U$ and $V$,
+this is impossible. However, we should prefer $W$ in any case! To
+see this, 
+\begin{itemize}
+\item [4.2] \textbf{(15 pts)} Show by means of the variance-of-the-sum
+rule that the relative efficiency of $U$ with respect to $W$, is
+equal to 
+\[
+\frac{Var\left((U+V)/2\right)}{Var(U)}=\frac{1}{2}+\frac{1}{2}\rho(U,V).
+\]
+Here $\rho(U,V)=\frac{Cov(U,V)}{\sqrt{Var(U)\, Var(V)}}$ is the correlation
+coefficient.
+\item [4.3] \textbf{(10 pts)} Why does this result imply that we should
+use $W$ instead of $U$ (or $V$ )? 
+\end{itemize}
+
+\section{Exercise 5 (30 pts)}
+
+We model the delivery time $y$ of a given web service as a linear
+regression model (without intercept) where the deterministic variable
+$x$ denotes the size in megabytes of the input:
+
+\[
+y_{i}=\theta x_{i}+\epsilon_{i}\quad\mbox{ for }i=1,2,...,n.
+\]
+As usual, the $\epsilon_{i}$ here are independent random variables
+with $E[\epsilon_{i}]=0$, and $Var(\epsilon_{i})=\sigma^{2}$ . We
+consider three estimators for the slope $\theta$ of the line $y=\theta x$: 
+\begin{enumerate}
+\item the least squares estimator 
+\[
+T_{1}=\frac{\sum_{i=1}^{n}x_{i}y_{i}}{\sum_{i=1}^{n}x_{i}^{2}};
+\]
+
+\item the average slope estimator 
+\[
+T_{2}=\frac{1}{n}\sum_{i=1}^{n}\frac{y_{i}}{x_{i}};
+\]
+ 
+\item the slope of the averages estimator 
+\[
+T_{3}=\frac{\sum_{i=1}^{n}y_{i}}{\sum_{i=1}^{n}x_{i}}.
+\]
+ \end{enumerate}
+\begin{itemize}
+\item [5.1] \textbf{(8 pts)} Show that all estimators are linear estimators,
+i.e. they can be written as 
+\[
+\sum_{i=1}^{n}a_{i}y_{i}.
+\]
+Determine the weights $a_{i}$ for all three estimators.
+\item [5.2] \textbf{(7 pts)} Which one of the three estimators are unbiased
+estimators of $\theta$? Show the calculations.
+\item [5.3] \textbf{(10 pts)} Compute the variance of each estimator.
+\item [5.4] \textbf{(5 pts)} Which estimator is to be preferred? Why?\end{itemize}
+
+\end{document}

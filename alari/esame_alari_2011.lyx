@@ -1,0 +1,1912 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\@ifundefined{definecolor}
+ {\usepackage{color}}{}
+\usepackage{graphics}\usepackage{hypernat}\usepackage{lscape}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2606}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Wednesday, October 14, 2009 09:57:04}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+%\numberwithin{equation}{section} 
+\RequirePackage[OT1]{fontenc}
+\RequirePackage[colorlinks]{hyperref} \RequirePackage{hypernat}
+\RequirePackage[colorlinks]{hyperref} \setlength{\textwidth}{15.5cm}
+\setlength{\textheight}{21.5cm} \setlength{\oddsidemargin}{0.1cm}
+\setlength{\topmargin}{1mm}
+\newenvironment{proof}[1][Proof]{\textbf{#1.}}{\rule{0.5em}{0.5em}}
+\linespread{1.3}
+\def\Red{\special{color cmyk 0 1. 1. 0}}
+\def\MagentaSpecial{\special{color cmyk 0 1. 0.5 0.12}}
+\def\White{\special{color cmyk 0 0 0 0}}
+\def\Cyan{\special{color cmyk 1. 0 0 0}}
+\def\ProcessBlue{\special{color cmyk 0.96 0 0 0}}
+\def\SkyBlue{\special{color cmyk 0.62 0 0.12 0}}
+\def\Turquoise{\special{color cmyk 0.85 0 0.20 0}}
+\def\TealBlue{\special{color cmyk 0.86 0 0.34 0.02}}
+\def\Black{\special{color cmyk 0 0 0 1.}}
+\def\Violet{\special{color cmyk 0.79 0.88 0 0}}
+\def\RoyalPurple{\special{color cmyk 0.75 0.90 0 0}}
+\def\BlueViolet{\special{color cmyk 0.86 0.91 0 0.04}}
+\def\Periwinkle{\special{color cmyk 0.57 0.55 0 0}}
+\def\CadetBlue{\special{color cmyk 0.62 0.57 0.23 0}}
+\def\CornflowerBlue{\special{color cmyk 0.65 0.13 0 0}}
+\def\MidnightBlue{\special{color cmyk 0.98 0.13 0 0.43}}
+\def\NavyBlue{\special{color cmyk 0.94 0.54 0 0}}
+\def\RoyalBlue{\special{color cmyk 1. 0.50 0 0}}
+\def\Blue{\special{color cmyk 1. 1. 0 0}}
+\def\Green{\special{color cmyk 0.8 0 0.25 0.5}}
+\def\Greennew{\special{color cmyk 0.7 0 0.8 0.3}}
+\def\red#1{\Red#1\Black}
+\newcommand{\blue}[1]{\Blue#1\Black}
+\newcommand{\magentas}[1]{\MagentaSpecial#1\Black}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+
+\shape smallcaps
+\size small
+university of lugano
+\shape default
+\size default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\shape smallcaps
+\size small
+faculty of informatics
+\shape default
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\shape smallcaps
+\size small
+Prof.
+ Claudio Ortelli
+\shape default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\shape smallcaps
+SS 2011
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\shape smallcaps
+\size small
+Prof.
+ Davide La Vecchia
+\shape default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\size default
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+Statistics
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ALaRI
+\begin_inset space \space{}
+\end_inset
+
+Exam 
+\begin_inset space \hfill{}
+\end_inset
+
+27 June 2011
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.3cm
+\end_inset
+
+ 
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\begin_inset Formula $\bullet$
+\end_inset
+
+ Duration: 2 hours and 30 minutes
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\begin_inset Formula $\bullet$
+\end_inset
+
+ Open book exam
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\begin_inset Formula $\bullet$
+\end_inset
+
+ Solve all exercises
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Exercise 1 
+\series bold
+(20 pts)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+1.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ (
+\series bold
+10 pts
+\series default
+) 
+\series bold
+Binomial Distribution:
+\series default
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable having a Binomial distribution, with parameters 
+\begin_inset Formula $n$
+\end_inset
+
+ and 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(i) For 
+\begin_inset Formula $n=10$
+\end_inset
+
+ and 
+\begin_inset Formula $p=0.2$
+\end_inset
+
+, compute, 
+\begin_inset Formula $\mu_{X}:=E(X)$
+\end_inset
+
+, 
+\begin_inset Formula $\sigma_{X}=\sqrt{Var(X)}$
+\end_inset
+
+ and 
+\begin_inset Formula $P(X<\mu_{X}-2\sigma_{X})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+(ii) Let us keep 
+\begin_inset Formula $n=10$
+\end_inset
+
+ and let 
+\begin_inset Formula $p$
+\end_inset
+
+ be any real in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+.
+ Find the value of 
+\begin_inset Formula $p$
+\end_inset
+
+ such that 
+\begin_inset Formula $\sigma_{X}^{2}$
+\end_inset
+
+ is maximized.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+1.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ (
+\series bold
+9 pts
+\series default
+) 
+\series bold
+Poisson Distribution:
+\series default
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable having a Poisson distribution such that 
+\begin_inset Formula $P(X=0)=P(X=1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(i) Find 
+\begin_inset Formula $\mu_{X}:=E(X)$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma_{X}=\sqrt{Var(X)}$
+\end_inset
+
+; (ii) Find an upper bound for 
+\begin_inset Formula $P(|X-\mu_{X}|\geq2\sigma_{X})$
+\end_inset
+
+ and comment briefly the result.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+1.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ (
+\series bold
+1 pts
+\series default
+) 
+\series bold
+Gamma/Chi-square Distribution:
+\series default
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable having a Gamma distribution 
+\begin_inset Formula $\Gamma(\alpha;\lambda)$
+\end_inset
+
+, for 
+\begin_inset Formula $\alpha=2$
+\end_inset
+
+ and 
+\begin_inset Formula $\lambda=2$
+\end_inset
+
+.
+ Compute 
+\begin_inset Formula $P(X<11.1433)$
+\end_inset
+
+.
+ 
+\series bold
+Remark
+\series default
+: 
+\shape italic
+In fact, a random variable having a 
+\begin_inset Formula $\Gamma$
+\end_inset
+
+-distribution 
+\begin_inset Formula $\Gamma(\alpha;\lambda)$
+\end_inset
+
+, with 
+\begin_inset Formula $\lambda=2$
+\end_inset
+
+ has a 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+-distribution, with 
+\begin_inset Formula $2\alpha$
+\end_inset
+
+ degrees-of-freedom.
+ Thus, apply the table of the 
+\begin_inset Formula $\chi^{2}$
+\end_inset
+
+ to solve the exercise.
+\end_layout
+
+\begin_layout Section
+Exercise 2 
+\series bold
+(80 pts)
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a positive random variable, measuring the time (in years) that a student
+ at ALaRI needs in order to pass the exam of Statistics.
+ Let us assume that 
+\begin_inset Formula $X$
+\end_inset
+
+ has an exponential distribution: 
+\begin_inset Formula 
+\begin{equation}
+f(x;\lambda)=\lambda\exp^{-\lambda x},\label{exp}
+\end{equation}
+
+\end_inset
+
+ for 
+\begin_inset Formula $\lambda\in\mathbb{R}^{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $x\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(5 pts)
+\series default
+ Compute, as a function of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.1.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ (i) 
+\begin_inset Formula $P(X>1.2)$
+\end_inset
+
+;
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(ii) 
+\begin_inset Formula $P(1.5\leq X\leq3)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+(iii) 
+\begin_inset Formula $P(1.5<X<3)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+(iv) 
+\begin_inset Formula $P(X\leq0.5)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+(v) 
+\begin_inset Formula $P(X=3.55)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+(vi) 
+\begin_inset Formula $P(X\geq2.5\vert X>2)$
+\end_inset
+
+;
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.1.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Find 
+\begin_inset Formula $x_{\alpha}$
+\end_inset
+
+ such that 
+\begin_inset Formula $F_{X}(x_{\alpha})=\alpha$
+\end_inset
+
+, for any given value of 
+\begin_inset Formula $\alpha\in[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(10 pts)
+\series default
+ Estimation:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.2.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Compute the Maximum Likelihood Estimator (MLE) of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{1}{\lambda}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.2.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Derive analytically the expression for 
+\begin_inset Formula $Var(X)$
+\end_inset
+
+.
+ Then, provide the MLE for 
+\begin_inset Formula $Var(X)$
+\end_inset
+
+.
+ Justify your answer.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.2.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Provide the MLE of the tail area: 
+\begin_inset Formula $P(X>10)$
+\end_inset
+
+.
+ Justify your answer.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(35 pts)
+\series default
+ Now let us consider the random variable 
+\begin_inset Formula 
+\begin{equation}
+S_{n}:=\sum_{i=1}^{n}X_{i},\label{Sn}
+\end{equation}
+
+\end_inset
+
+ which is defined as the sum of 
+\begin_inset Formula $n$
+\end_inset
+
+ i.i.d.
+ random variables, each having an exponential density as in Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "exp"
+
+\end_inset
+
+), for 
+\begin_inset Formula $n$
+\end_inset
+
+ fix.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.3.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ What is the exact distribution (expressed as a function of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+) of 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+? (Hint: apply the Laplace transform of 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.3.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Provide the MLE of 
+\begin_inset Formula $P(S_{n}\geq s)$
+\end_inset
+
+, for 
+\begin_inset Formula $s>0$
+\end_inset
+
+.
+ Justify your answer.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.3.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Using the results in 2.3.1, explain carefully how one can define a test with
+ level 
+\begin_inset Formula $\alpha=5\%$
+\end_inset
+
+, for: 
+\begin_inset Formula 
+\begin{eqnarray}
+H_{0}:\lambda=\lambda_{0} & vs & H_{1}:\lambda>\lambda_{0}.\label{test}
+\end{eqnarray}
+
+\end_inset
+
+ We assume that the value 
+\begin_inset Formula $\lambda_{0}$
+\end_inset
+
+ is larger than zero.
+ (Hint: find the distribution of 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ under 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.3.4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Assume that we are given a sample of 
+\begin_inset Formula $x_{1},x_{2},...,x_{n}$
+\end_inset
+
+ observations of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ For 
+\begin_inset Formula $n=50$
+\end_inset
+
+, we obtain 
+\begin_inset Formula $s=\sum_{i=1}^{50}x_{i}=100$
+\end_inset
+
+.
+ According to the test defined in the previous point 2.3.3, do you accept
+ the null hypothesis 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ in (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "test"
+
+\end_inset
+
+), for 
+\begin_inset Formula $\lambda_{0}=0.5$
+\end_inset
+
+?
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(30 pts)
+\series default
+ Now let us consider the new random variable: 
+\begin_inset Formula 
+\begin{equation}
+\bar{X}_{n}:=\frac{1}{n}S_{n}.\label{Xn}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.4.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Provide the expression for 
+\begin_inset Formula $E(\bar{X}_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $Var(\bar{X}_{n})$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.4.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Consider also the random variable: 
+\begin_inset Formula 
+\begin{equation}
+Z_{n}:=\frac{\bar{X}_{n}-E(\bar{X}_{n})}{\sqrt{Var(\bar{X}_{n})}}.
+\end{equation}
+
+\end_inset
+
+ (i) What is the distribution of 
+\begin_inset Formula $Z_{n}$
+\end_inset
+
+, for 
+\begin_inset Formula $n$
+\end_inset
+
+ large?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+(ii) Define 
+\begin_inset Formula $Y:=Z_{n}^{2}$
+\end_inset
+
+.
+ What is the distribution of 
+\begin_inset Formula $Y$
+\end_inset
+
+, when 
+\begin_inset Formula $n$
+\end_inset
+
+ is large?
+\end_layout
+
+\begin_layout Standard
+(iii) Explain how one can compute: 
+\begin_inset Formula $P(Z_{n}>z)$
+\end_inset
+
+ and 
+\begin_inset Formula $P(Y>z^{2})$
+\end_inset
+
+, for 
+\begin_inset Formula $z\in\mathbb{R}^{+}$
+\end_inset
+
+ and 
+\begin_inset Formula $n$
+\end_inset
+
+ large.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.4.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ For 
+\begin_inset Formula $n=1000$
+\end_inset
+
+, provide an approximation to the distribution (expressed as a function
+ of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+) of 
+\begin_inset Formula $S_{n}=n\bar{X}_{n}$
+\end_inset
+
+; see Eq.(
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Xn"
+
+\end_inset
+
+).
+ Compare this result to the exact distribution of 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+, as derived in the question 2.3.1, and comment this finding.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Exercise 3
+\series bold
+ (40 pts)
+\end_layout
+
+\begin_layout Standard
+Suppose we have a random sample 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, ...,
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ from an exponential distribution with unknown parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ are 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+ 
+\begin_inset Formula $\sim$
+\end_inset
+
+ 
+\begin_inset Formula $Exp(\lambda)$
+\end_inset
+
+.
+ Suppose we want to estimate 
+\begin_inset Formula $\frac{1}{\lambda}$
+\end_inset
+
+.
+ Let us define 
+\begin_inset Formula $M_{n}=\min(X_{1},...,X_{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+3.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(8 pts)
+\series default
+ Show that the estimator 
+\begin_inset Formula $T_{1}=\bar{X}_{n}=(X_{1}+...+X_{n})/n$
+\end_inset
+
+ is an unbiased estimator of 
+\begin_inset Formula $1/\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+3.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(8 pts)
+\series default
+ Derive and explain in details the following formula: 
+\begin_inset Formula $P(M_{n}\leq x)=1-\prod_{i=1}^{n}\left(1-P(X_{i}\leq x)\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+3.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(8 pts)
+\series default
+ Show that 
+\begin_inset Formula $M_{n}\sim Exp(n\lambda$
+\end_inset
+
+).
+ Give detailed explanation.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+3.4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(8 pts)
+\series default
+ Show that 
+\begin_inset Formula $T_{2}=nM_{n}$
+\end_inset
+
+ is an unbiased estimator of 
+\begin_inset Formula $1/\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+3.5
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(8 pts)
+\series default
+ Which of the estimators 
+\begin_inset Formula $T_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $T_{2}$
+\end_inset
+
+ would you choose for estimating the mean 
+\begin_inset Formula $1/\lambda$
+\end_inset
+
+? Substantiate your answer.
+ 
+\end_layout
+
+\begin_layout Section
+Exercise 4 
+\series bold
+(30 pts)
+\end_layout
+
+\begin_layout Standard
+Someone is proposing two unbiased estimators 
+\begin_inset Formula $U$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+, with the same variance 
+\begin_inset Formula $Var(U)=Var(V)$
+\end_inset
+
+.
+ It therefore appears that we would not prefer one estimator over the other.
+ However, we could go for a third estimator, namely 
+\begin_inset Formula $W=(U+V)/2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+4.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(5 pts)
+\series default
+ Show that 
+\begin_inset Formula $W$
+\end_inset
+
+ is unbiased.
+\end_layout
+
+\begin_layout Standard
+To judge the quality of 
+\begin_inset Formula $W$
+\end_inset
+
+ we want to compute its variance.
+ Lacking information on the joint probability distribution of 
+\begin_inset Formula $U$
+\end_inset
+
+ and 
+\begin_inset Formula $V$
+\end_inset
+
+, this is impossible.
+ However, we should prefer 
+\begin_inset Formula $W$
+\end_inset
+
+ in any case! To see this, 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+4.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(15 pts)
+\series default
+ Show by means of the variance-of-the-sum rule that the relative efficiency
+ of 
+\begin_inset Formula $U$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $W$
+\end_inset
+
+, is equal to 
+\begin_inset Formula 
+\[
+\frac{Var\left((U+V)/2\right)}{Var(U)}=\frac{1}{2}+\frac{1}{2}\rho(U,V).
+\]
+
+\end_inset
+
+Here 
+\begin_inset Formula $\rho(U,V)=\frac{Cov(U,V)}{\sqrt{Var(U)\, Var(V)}}$
+\end_inset
+
+ is the correlation coefficient.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+4.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(10 pts)
+\series default
+ Why does this result imply that we should use 
+\begin_inset Formula $W$
+\end_inset
+
+ instead of 
+\begin_inset Formula $U$
+\end_inset
+
+ (or 
+\begin_inset Formula $V$
+\end_inset
+
+ )? 
+\end_layout
+
+\begin_layout Section
+Exercise 5 
+\series bold
+(30 pts)
+\end_layout
+
+\begin_layout Standard
+We model the delivery time 
+\begin_inset Formula $y$
+\end_inset
+
+ of a given web service as a linear regression model (without intercept)
+ where the deterministic variable 
+\begin_inset Formula $x$
+\end_inset
+
+ denotes the size in megabytes of the input:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{i}=\theta x_{i}+\epsilon_{i}\quad\mbox{ for }i=1,2,...,n.
+\]
+
+\end_inset
+
+As usual, the 
+\begin_inset Formula $\epsilon_{i}$
+\end_inset
+
+ here are independent random variables with 
+\begin_inset Formula $E[\epsilon_{i}]=0$
+\end_inset
+
+, and 
+\begin_inset Formula $Var(\epsilon_{i})=\sigma^{2}$
+\end_inset
+
+ .
+ We consider three estimators for the slope 
+\begin_inset Formula $\theta$
+\end_inset
+
+ of the line 
+\begin_inset Formula $y=\theta x$
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Enumerate
+the least squares estimator 
+\begin_inset Formula 
+\[
+T_{1}=\frac{\sum_{i=1}^{n}x_{i}y_{i}}{\sum_{i=1}^{n}x_{i}^{2}};
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+the average slope estimator 
+\begin_inset Formula 
+\[
+T_{2}=\frac{1}{n}\sum_{i=1}^{n}\frac{y_{i}}{x_{i}};
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+the slope of the averages estimator 
+\begin_inset Formula 
+\[
+T_{3}=\frac{\sum_{i=1}^{n}y_{i}}{\sum_{i=1}^{n}x_{i}}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+5.1
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(8 pts)
+\series default
+ Show that all estimators are linear estimators, i.e.
+ they can be written as 
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}a_{i}y_{i}.
+\]
+
+\end_inset
+
+Determine the weights 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ for all three estimators.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+5.2
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(7 pts)
+\series default
+ Which one of the three estimators are unbiased estimators of 
+\begin_inset Formula $\theta$
+\end_inset
+
+? Show the calculations.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+5.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(10 pts)
+\series default
+ Compute the variance of each estimator.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+5.4
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+(5 pts)
+\series default
+ Which estimator is to be preferred? Why?
+\end_layout
+
+\end_body
+\end_document

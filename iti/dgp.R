@@ -4,8 +4,8 @@
 ###############################################################################
 
 setwd("/home/claudio/eclipse/grafici-stat2/iti")
-n <- 5 # numero di osservazioni
-m <- 100  # numero di ripetizioni nel calcolo della binding function
+n <- 50 # numero di osservazioni
+m <- 1000  # numero di ripetizioni nel calcolo della binding function
 K <- 3 # numero di variabili esplicative modello ausiliario
 
 # simula la x e per il modello ausiliario la z
@@ -67,14 +67,65 @@ psi <- function(rho) {
 	# questa funzione restituisce una lista di lunghezza n
 	# coi vettori Kx1 della moment condition Psi(X_i,rho), 
 	# i=1,...,n
-	
+
 	bf <- empiricalBindingFunction(rho)
-	
+	XX.l <- lapply(XX.l,function(x,bf){return(as.vector(x%*%bf))},bf)
+	psi.l <- lapply(1:length(XX.l),function(i,x,y){return(x[[i]]-y[[i]])},XX.l,Xy.l)
+	psi.m <- matrix(unlist(psi.l),nrow=length(psi.l),byrow=TRUE)
+	colnames(psi.m) <- names(bf)
+	return(psi.m)
 }
 
-K_t <- function(rho,t) {
+
+objective <- function(rho,t) {
+	psi.m <- psi(rho)
+	tPsi.v <- exp(as.vector(psi.m%*%t))
+	denumerator <- sum(tPsi.v)
 	
+	K_t <- function(rho,t) { # the derivative of K as in Imbens, Spady and Johnson
+		pi.v <- tPsi.v/denumerator
+		weightedPsi.m <- pi.v * psi.m
+		result <- apply(weightedPsi.m,2,sum)
+	}
+	Kt <- K_t(rho,t)
+	K <- log(denumerator/n)
+	obj <- K - 0.5 * 1000000*sum(Kt^2)
 }
 
+objfunc <- function(x) {
+	rho = x[1]
+	t = x[2:(K+1)]
+	return(-objective(rho,t))
+}
 
-a <- empiricalBindingFunction(rho=2.5)
+#initial values
+initPar = c(3,rep(1,K))
+optim(par=initPar,fn=objfunc)
+
+
+# Load the R MPI package if it is not already loaded. 
+if (!is.loaded("mpi_initialize")) { 
+	library("Rmpi") 
+} 
+# Spawn as many slaves as possible 
+mpi.spawn.Rslaves() 
+
+# In case R exits unexpectedly, have it automatically clean up 
+# resources taken up by Rmpi (slaves, memory, etc...) 
+.Last <- function(){ 
+	if (is.loaded("mpi_initialize")){ 
+		if (mpi.comm.size(1) > 0){ 
+			print("Please use mpi.close.Rslaves() to close slaves.") 
+			mpi.close.Rslaves() 
+		} 
+		print("Please use mpi.quit() to quit R") 
+		.Call("mpi_finalize") 
+	} 
+} 
+
+# Tell all slaves to return a message identifying themselves 
+mpi.remote.exec(paste("I am",mpi.comm.rank(),"of",mpi.comm.size())) 
+
+# Tell all slaves to close down, and exit the program 
+mpi.close.Rslaves() 
+mpi.quit() 
