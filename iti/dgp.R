@@ -3,6 +3,7 @@
 # Author: claudio
 ###############################################################################
 
+library("multicore")
 setwd("/home/claudio/eclipse/grafici-stat2/iti")
 n <- 50 # numero di osservazioni
 m <- 1000  # numero di ripetizioni nel calcolo della binding function
@@ -15,7 +16,7 @@ z <- x^2
 # calcola il vettore del prodotto X_i*y_i per il calcolo delle moment conditions
 dati <- matrix(c(rep(1,n),x,z),ncol=n,byrow=TRUE)
 XX.l <- apply(dati,2,function(x){return(x%*%t(x))})
-XX.l <- lapply(1:n,function(i,X,K){return(matrix(X[,i],ncol=K))},XX.l,K)
+XX.l <- mclapply(1:n,function(i,X,K){return(matrix(X[,i],ncol=K))},XX.l,K)
 
 # simula gli errori
 epsilon <- rnorm(n)
@@ -26,7 +27,7 @@ X <- exp(x)
 y <- rho * X + epsilon
 
 # calcola il vettore del prodotto X_i*y_i per il calcolo delle moment conditions
-Xy.l <- lapply(1:n,function(i,dati,y){return(dati[,i]*y[i])},dati,y)
+Xy.l <- mclapply(1:n,function(i,dati,y){return(dati[,i]*y[i])},dati,y)
 
 # stima theta
 estimateTheta <- function(y,x,z) {
@@ -48,7 +49,7 @@ campiona <- function(n) {
 	return(sampled)
 }
 
-sampledIntegers.l <- lapply(rep(n,m),campiona)
+sampledIntegers.l <- mclapply(rep(n,m),campiona)
 
 campionaErrori <- function(v,erroriStimati) {
 	return(erroriStimati[v])
@@ -57,8 +58,8 @@ campionaErrori <- function(v,erroriStimati) {
 empiricalBindingFunction <- function(rho) {
 
 	erroriStimati <- dgpErroriStimati(rhoHat=rho,y,X)
-	campione.l <- lapply(sampledIntegers.l,campionaErrori,erroriStimati)
-	simulaDGP.l <- lapply(campione.l,simulaDGP,rho,X)
+	campione.l <- mclapply(sampledIntegers.l,campionaErrori,erroriStimati)
+	simulaDGP.l <- mclapply(campione.l,simulaDGP,rho,X)
 	estimateTheta.m <- sapply(simulaDGP.l,estimateTheta,x,z)
 	result <- apply(estimateTheta.m,1,mean)
 }
@@ -69,8 +70,8 @@ psi <- function(rho) {
 	# i=1,...,n
 
 	bf <- empiricalBindingFunction(rho)
-	XX.l <- lapply(XX.l,function(x,bf){return(as.vector(x%*%bf))},bf)
-	psi.l <- lapply(1:length(XX.l),function(i,x,y){return(x[[i]]-y[[i]])},XX.l,Xy.l)
+	XX.l <- mclapply(XX.l,function(x,bf){return(as.vector(x%*%bf))},bf)
+	psi.l <- mclapply(1:length(XX.l),function(i,x,y){return(x[[i]]-y[[i]])},XX.l,Xy.l)
 	psi.m <- matrix(unlist(psi.l),nrow=length(psi.l),byrow=TRUE)
 	colnames(psi.m) <- names(bf)
 	return(psi.m)
