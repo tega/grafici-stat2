@@ -928,18 +928,19 @@ P(E)=\frac{\#\text{ esiti in }E}{\#\text{ esiti in }\Omega}=\frac{\#\text{ esiti
 
 \end_inset
 
-Ci preme sottolineare che la formula (
+Osservazioni:
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+La formula (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "formula esiti equiprobabili"
 
 \end_inset
 
-) ha validità limitata.
- Essa è applicabile solo al caso di uno spazio campionario finito i cui
- esiti sono equiprobabili.
- Osserviamo inoltre che la suddetta regola consente di assegnare una probabilità
- ad uno qualsiasi dei 
+) consente di assegnare una probabilità ad uno qualsiasi dei 
 \begin_inset Formula $2^{6}=64$
 \end_inset
 
@@ -970,7 +971,24 @@ Il numero di eventi diversi fra loro di uno spazio campionario finito
 \end_inset
 
 .
- Quando lo spazio campionario 
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+La formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "formula esiti equiprobabili"
+
+\end_inset
+
+) ha validità limitata: essa è applicabile solo al caso di uno spazio campionari
+o finito i cui esiti sono equiprobabili.
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Quando lo spazio campionario 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -981,6 +999,31 @@ Il numero di eventi diversi fra loro di uno spazio campionario finito
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+Quando gli esiti non sono equiprobabili la formula (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "formula esiti equiprobabili"
+
+\end_inset
+
+) è inutilizzabile.
+ Ad esempio, nell'esperimento aleatorio definito dal lancio di un dado la
+ probabilità dell'evento 
+\begin_inset Formula $E=\{\mbox{l'esito è un numero pari}\}$
+\end_inset
+
+ non è calcolabile tramite la formula 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "formula esiti equiprobabili"
+
+\end_inset
+
+se il dado è truccato! 
 \end_layout
 
 \begin_layout Standard
@@ -1169,7 +1212,7 @@ Se
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- fra loro incompatibili (cioè 
+ fra loro incompatibili, cioè 
 \begin_inset Formula $E_{i}\cap E_{j}=\varnothing$
 \end_inset
 
@@ -1177,10 +1220,10 @@ Se
 \begin_inset Formula $i\neq j$
 \end_inset
 
-) allora 
+, allora 
 \begin_inset Formula 
 \[
-P\left(E_{1}\cup E_{2}\cup~\ldots\right)=\sum_{i=1}^{\infty}P\left(E_{i}\right).
+P\left(E_{1}\cup E_{2}\cup\ldots\right)=\sum_{i=1}^{\infty}P\left(E_{i}\right).
 \]
 
 \end_inset
@@ -1213,11 +1256,7 @@ reference "def legge di probabilita"
 
 \end_inset
 
- è importante notare una cosa:
-\begin_inset space \space{}
-\end_inset
-
-gli argomenti da inserire in 
+ è importante notare una cosa: gli argomenti da inserire in 
 \begin_inset Formula $P$
 \end_inset
 
@@ -1242,10 +1281,7 @@ gli argomenti da inserire in
 \begin_layout Standard
 \noindent
 Per concludere: un esperimento aleatorio è caratterizzato da tre oggetti:
-\begin_inset space \space{}
-\end_inset
-
-uno spazio di probabilità 
+ uno spazio di probabilità 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -1270,8 +1306,279 @@ spazio di probabilità
 \end_layout
 
 \begin_layout Standard
-Fare esempio dado normale e truccato, due spazi di probabilità diversi in
- quanto P è diversa
+\noindent
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+ Lancio di un dado non truccato.
+ Abbiamo visto in precedenza che 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\Omega=\{1,2,3,4,5,6\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ è l'insieme che contiene i 
+\begin_inset Formula $2^{6}=64$
+\end_inset
+
+ possibili sottoinsiemi (eventi) di 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Il loro elenco è lasciato come esercizio.
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $P$
+\end_inset
+
+ è la misura o legge di probabilità definita su 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+.
+ Per qualsiasi elemento (evento) 
+\begin_inset Formula $E$
+\end_inset
+
+ di 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ avremo 
+\begin_inset Formula 
+\[
+P(E)=\frac{\#\mbox{ esiti in }E}{6}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La tripla 
+\begin_inset Formula $(\Omega,\mathcal{E},P)$
+\end_inset
+
+ è lo spazio di probabilità definito dall'esperimento aleatorio 
+\begin_inset Quotes eld
+\end_inset
+
+lancio di un dato non truccato
+\begin_inset Quotes erd
+\end_inset
+
+.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+ Lancio di un dado truccato.
+ Gli esiti dell'esperimento non cambiano rispetto al lancio di un dado non
+ truccato.
+ Avremo quindi 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\Omega=\{1,2,3,4,5,6\}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Anche gli eventi rimangono immutati.
+ Come in precedenza varrà che 
+\end_layout
+
+\begin_layout Itemize
+\noindent
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ è l'insieme che contiene i 
+\begin_inset Formula $2^{6}=64$
+\end_inset
+
+ possibili sottoinsiemi (eventi) di 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La legge di probabilità di questo esperimento aleatorio, notata 
+\begin_inset Formula $\tilde{P}$
+\end_inset
+
+, è diversa dalla precedente.
+ Infatti, mentre in precedenza un qualsiasi evento elementare quale ad esempio
+ 
+\begin_inset Formula $E=\{1\}$
+\end_inset
+
+ aveva probabilità uguale a 
+\begin_inset Formula $\frac{1}{6}$
+\end_inset
+
+, ora a causa della 
+\begin_inset Quotes eld
+\end_inset
+
+manomissione
+\begin_inset Quotes erd
+\end_inset
+
+ del dado i sei eventi elementari 
+\begin_inset Formula $E_{i}=\{i\}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\dots,6$
+\end_inset
+
+ avranno probabilità 
+\begin_inset Formula $\tilde{p}_{i}$
+\end_inset
+
+ delle quali almeno due saranno diverse da 
+\begin_inset Formula $\frac{1}{6}$
+\end_inset
+
+.
+ Dato un qualsiasi evento 
+\begin_inset Formula $E$
+\end_inset
+
+ di 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+, la sua probabilità sarà calcolata come la somma delle probabilità dei
+ singoli esiti in esso contenuti.
+ Per capire ciò, prendiamo l'evento 
+\begin_inset Formula $E=\{$
+\end_inset
+
+osservo un numero pari
+\begin_inset Formula $\}=\{2,4,6\}.$
+\end_inset
+
+ Notiamo che 
+\begin_inset Formula $E=E_{2}\cup E_{4}\cup E_{6}$
+\end_inset
+
+.
+ Ma i tre eventi elementari sono disgiunti e quindi per la proprietà 3 di
+ una legge di probabilità avremo che 
+\begin_inset Formula 
+\[
+\tilde{P}(E)=\tilde{P}(E_{2})+\tilde{P}(E_{4})+\tilde{P}(E_{6})=\tilde{p}_{2}+\tilde{p}_{4}+\tilde{p}_{6}.
+\]
+
+\end_inset
+
+Per un qualsiasi evento 
+\begin_inset Formula $E$
+\end_inset
+
+ avremo quindi che 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Formula 
+\[
+\tilde{P}(E)=\sum_{i\in E}\tilde{P}(\{i\})=\sum_{i\in E}\tilde{p}_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La tripla 
+\begin_inset Formula $(\Omega,\mathcal{E},\tilde{P})$
+\end_inset
+
+ è lo spazio di probabilità 
+\begin_inset Quotes eld
+\end_inset
+
+lancio di un dato truccato
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Rispetto all'esempio precedente i primi due termini della tripla sono identici,
+ è cambiata unicamente la legge di probabilità.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1306,7 +1613,20 @@ Per qualsiasi esperimento aleatorio è possibile definire lo spazio campionario
 \end_inset
 
 .
- Questo significa che gli esiti dell'esperimento saranno dei numeri.
+ Questo significa che gli esiti dell'esperimento saranno dei numeri
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Non tutti gli esperimenti aleatori soddisfano questa condizione.
+ Pensate all'esperimento aleatorio di osservare il colore della prima autovettur
+a che circola su una determinata tratta stradale a partire da un certo orario.
+ L'esito non è numerico ma è un colore.
+\end_layout
+
+\end_inset
+
+.
  L'esempio del lancio di un dado soddisfa questa condizione.
  In tal caso è possibile definire la funzione di ripartizione della legge
  di probabilità 
@@ -1747,8 +2067,14 @@ si statistica è la definizione di una popolazione obiettivo (o popolazione
  di studenti che lo scorso anno ha seguito il corso di Statistica II.
  Quali caratteristiche sotto esame scegliamo il sesso e il numero di scarpe
  di ciascun studente.
- Riportiamo qui di seguito il grafico delle frequenze relative per le due
- caratteristiche.
+ La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Frequenze-relative-popolazione studenti"
+
+\end_inset
+
+ riporta il grafico delle frequenze relative per le due caratteristiche.
 \end_layout
 
 \begin_layout Standard
@@ -1776,6 +2102,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Frequenze-relative-popolazione studenti"
+
+\end_inset
+
 Frequenze relative popolazione studenti Statistica II - 2009
 \end_layout
 
@@ -1797,7 +2129,7 @@ sem\SpecialChar \-
 pio non abbiamo definito delle classi di valore:
  tutti i numeri di scarpe osservati figurano nell'istogramma.
  Tuttavia se avessimo studiato un'altra caratteristica quale ad esempio
- il peso o la l'altezza ecco che molto probabilmente avremmo costruito delle
+ il peso o l'altezza ecco che molto probabilmente avremmo costruito delle
  classi in cui inserire ciascun individuo della popolazione.
  La costruzione di classi può però costituire un problema.
  Innanzi tutto è necessario trovare una regola che a partire dalle singole
@@ -2072,15 +2404,19 @@ end{remark}
 
 \begin_layout Standard
 \noindent
-Il grafico sottostante esplicita quanto affermato mostrando la funzione
- di densità dalle distribuzione Normale per due diversi valori di 
+La Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:graficoConfrontoDueNormali"
+
+\end_inset
+
+ esplicita quanto affermato mostrando la funzione di densità della distribuzione
+ Normale per due diversi valori di 
 \begin_inset Formula $(\mu,\sigma^{2})$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
@@ -2098,6 +2434,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:graficoConfrontoDueNormali"
+
+\end_inset
+
 Due funzioni di densità della famiglia parametrica Normale
 \end_layout
 
@@ -2106,25 +2448,9 @@ Due funzioni di densità della famiglia parametrica Normale
 
 \end_layout
 
-\begin_layout Plain Layout
-\align center
-\begin_inset CommandInset label
-LatexCommand label
-name "Flo:graficoConfrontoDueNormali"
-
 \end_inset
 
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-Nella Figura 
+ Nella Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Flo:graficoConfrontoDueNormali"
@@ -3659,11 +3985,8 @@ Come si dovrà costruire il campione da intervistare?
 
 \begin_layout Itemize
 Sulla base di quali criteri dovranno essere selezionate le persone (o unità)
- da intervistare:
-\begin_inset space \space{}
-\end_inset
-
-l'età, il reddito, la provenienza geografica, il sesso? 
+ da intervistare: l'età, il reddito, la provenienza geografica, il sesso?
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -3728,10 +4051,16 @@ Una volta effettuato il campionamento si potrà stimare
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset VSpace medskip
 \end_inset
 
- La stima per intervallo affronta il problema di stima in maniera diversa.
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La stima per intervallo affronta il problema di stima in maniera diversa.
  Essa infatti fornisce un intervallo di valori nel quale noi confidiamo
  che 
 \begin_inset Formula $p$
@@ -3892,7 +4221,12 @@ Ci troviamo qui confrontati col terzo tema dell'inferenza statistica: la
 \begin_inset VSpace medskip
 \end_inset
 
- Sappiamo che tanto più la campagna pubblicitaria sarà efficace, tanto più
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Sappiamo che tanto più la campagna pubblicitaria sarà efficace, tanto più
  aumenterà il grado di visibilità.
  Il manager dell'azienda non è soddisfatto del modo come Pino ha condotto
  la campagna pubblicitaria e desidera verificarne immediatamente l'efficacia.
@@ -3948,7 +4282,7 @@ p_{new}=p & p_{new}\geq p\\
 \begin_inset Formula $5\%$
 \end_inset
 
- rispetto alla precedente stima potrebbe essere semplicemente dovuta al
+ rispetto alla precedente stima potrebbe essere semplicemente dovuto al
  caso.
  Pino vi chiede allora di quantificare sulla base dei dati a disposizione
  il livello di evidenza per cui l'ipotesi 
@@ -8444,11 +8778,7 @@ La famiglia parametrica
 \begin_inset Formula $\mathcal{P}$
 \end_inset
 
-
-\begin_inset space \space{}
-\end_inset
-
-è uguale a 
+ è uguale a 
 \begin_inset Formula 
 \[
 \mathcal{P}=\left\{ \begin{array}{l}
@@ -8756,8 +9086,8 @@ teoria economica,
 \end_layout
 
 \begin_layout Itemize
-analisi esplorativa (si veda l'articolo distribuito riguardante il premio
- Nobel 2003 per l'economia Robert F.
+analisi esplorativa (si veda ad esempio la motivazione al premio Nobel 2003
+ per l'economia Robert F.
  Engle).
  
 \end_layout
