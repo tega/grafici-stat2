@@ -3623,11 +3623,7 @@ Pino, il responsabile del settore marketing di una grossa azienda, desidera
 \end_inset
 
  di consumatori che conoscono (ma non necessariamente acquistano o hanno
- acquistato in passato)
-\begin_inset space \space{}
-\end_inset
-
-il prodotto in questione.
+ acquistato in passato) il prodotto in questione.
  Essa valuta il livello attuale di 
 \begin_inset Formula $p$
 \end_inset
@@ -3637,7 +3633,7 @@ il prodotto in questione.
 \[
 \begin{tabular}{ccc}
  \ensuremath{p<30\%} &  \ensuremath{30\%\leq p<60\%} &  \ensuremath{60\%\leq p}\\
-insufficiente  &  discreto  &  buono
+insufficiente  &  discreto  &  buono 
 \end{tabular}
 \]
 
@@ -11562,7 +11558,7 @@ e
   &  \ensuremath{1Y_{1}} &  \ensuremath{-2Y_{2}}\\
 \hline \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{2\cdot1\cdot c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot(-2)\cdot c_{12}}} \\
 \multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot(-2)\cdot c_{22}}} \\
-\multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot1\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-2)\cdot c_{32}}}
+\multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot1\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-2)\cdot c_{32}}} 
 \end{tabular}
 \]
 
@@ -11686,7 +11682,7 @@ Costruiamo la tabella delle covarianze fra
   &  \ensuremath{X_{1}} &  \ensuremath{X_{2}} &  \ensuremath{X_{3}}\\
 \hline \multicolumn{1}{r|}{\ensuremath{X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{c_{12}}}  &  \multicolumn{1}{r}{\ensuremath{c_{13}}} \\
 \multicolumn{1}{r|}{\ensuremath{X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{c_{22}}}  &  \multicolumn{1}{r}{\ensuremath{c_{23}}} \\
-\multicolumn{1}{r|}{\ensuremath{X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{c_{33}}}
+\multicolumn{1}{r|}{\ensuremath{X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{c_{33}}} 
 \end{tabular}
 \]
 
@@ -11801,7 +11797,7 @@ Per il calcolo della varianza procediamo come per il calcolo della covarianza
   &  \ensuremath{2X_{1}} &  \ensuremath{-3X_{2}} &  \ensuremath{1X_{3}}\\
 \hline \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{2^{2}\cdot c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot(-3)\cdot c_{12}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot1\cdot c_{13}}} \\
 \multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{(-3)\cdot2\cdot c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{(-3)^{2}\cdot c_{22}}}  &  \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{23}}} \\
-\multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot2\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-3)\cdot c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{1^{2}\cdot c_{33}}}
+\multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot2\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-3)\cdot c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{1^{2}\cdot c_{33}}} 
 \end{tabular}
 \]
 
@@ -13192,11 +13188,8 @@ E(\overline{X}_{n}) & = & E\left(\frac{1}{n}\sum_{j=1}^{N}a_{j}T_{j}\right)=\fra
 
  Quando il campionamento è effettuato senza reinserimento la media campionaria
  è uno stimatore corretto del valore atteso della popolazione.
- Questo risultato è
-\begin_inset space \space{}
-\end_inset
-
-identico a quello ottenuto nel caso di campionamento con reinse\SpecialChar \-
+ Questo risultato è identico a quello ottenuto nel caso di campionamento
+ con reinse\SpecialChar \-
 ri\SpecialChar \-
 men\SpecialChar \-
 to.
@@ -28464,17 +28457,17 @@ Per quanto riguarda invece gli errori abbiamo due tipi di errori evidenziati
  \cline{2-3}  &  \ensuremath{H_{0}}\:\ vera  &  \ensuremath{H_{0}}\:\ falsa \\
 \hline \multicolumn{1}{|l|}{Rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
-\multicolumn{1}{c}{\ensuremath{\alpha}}
+\multicolumn{1}{c}{\ensuremath{\alpha}} 
 \end{tabular}  &  \begin{tabular}{l}
  decisione corretta \\
-\multicolumn{1}{c}{\ensuremath{\beta}}
+\multicolumn{1}{c}{\ensuremath{\beta}} 
 \end{tabular} \\
 \hline \multicolumn{1}{|l|}{Non rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
  decisione corretta \\
-\multicolumn{1}{c}{\ensuremath{1-\alpha}}
+\multicolumn{1}{c}{\ensuremath{1-\alpha}} 
 \end{tabular}  &  \multicolumn{1}{|l|}{\begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
-\multicolumn{1}{c}{\ensuremath{1-\beta}}
+\multicolumn{1}{c}{\ensuremath{1-\beta}} 
 \end{tabular}} 
 \\\hline \end{tabular}
 \]
