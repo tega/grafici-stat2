@@ -1,0 +1,1096 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\@ifundefined{definecolor}
+ {\usepackage{color}}{}
+\usepackage{graphics}\usepackage{hypernat}\usepackage{lscape}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2606}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=BibTeX}
+%TCIDATA{LastRevised=Wednesday, October 14, 2009 09:57:04}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=article.cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+%\numberwithin{equation}{section} 
+\RequirePackage[OT1]{fontenc}
+\RequirePackage[colorlinks]{hyperref} \RequirePackage{hypernat}
+\RequirePackage[colorlinks]{hyperref} \setlength{\textwidth}{15.5cm}
+\setlength{\textheight}{21.5cm} \setlength{\oddsidemargin}{0.1cm}
+\setlength{\topmargin}{1mm}
+\newenvironment{proof}[1][Proof]{\textbf{#1.}}{\rule{0.5em}{0.5em}}
+\linespread{1.3}
+\def\Red{\special{color cmyk 0 1. 1. 0}}
+\def\MagentaSpecial{\special{color cmyk 0 1. 0.5 0.12}}
+\def\White{\special{color cmyk 0 0 0 0}}
+\def\Cyan{\special{color cmyk 1. 0 0 0}}
+\def\ProcessBlue{\special{color cmyk 0.96 0 0 0}}
+\def\SkyBlue{\special{color cmyk 0.62 0 0.12 0}}
+\def\Turquoise{\special{color cmyk 0.85 0 0.20 0}}
+\def\TealBlue{\special{color cmyk 0.86 0 0.34 0.02}}
+\def\Black{\special{color cmyk 0 0 0 1.}}
+\def\Violet{\special{color cmyk 0.79 0.88 0 0}}
+\def\RoyalPurple{\special{color cmyk 0.75 0.90 0 0}}
+\def\BlueViolet{\special{color cmyk 0.86 0.91 0 0.04}}
+\def\Periwinkle{\special{color cmyk 0.57 0.55 0 0}}
+\def\CadetBlue{\special{color cmyk 0.62 0.57 0.23 0}}
+\def\CornflowerBlue{\special{color cmyk 0.65 0.13 0 0}}
+\def\MidnightBlue{\special{color cmyk 0.98 0.13 0 0.43}}
+\def\NavyBlue{\special{color cmyk 0.94 0.54 0 0}}
+\def\RoyalBlue{\special{color cmyk 1. 0.50 0 0}}
+\def\Blue{\special{color cmyk 1. 1. 0 0}}
+\def\Green{\special{color cmyk 0.8 0 0.25 0.5}}
+\def\Greennew{\special{color cmyk 0.7 0 0.8 0.3}}
+\def\red#1{\Red#1\Black}
+\newcommand{\blue}[1]{\Blue#1\Black}
+\newcommand{\magentas}[1]{\MagentaSpecial#1\Black}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+
+\shape smallcaps
+\size small
+university of lugano
+\shape default
+\size default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\shape smallcaps
+\size small
+faculty of informatics
+\shape default
+\size default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\shape smallcaps
+\size small
+Prof.
+ Claudio Ortelli
+\shape default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\shape smallcaps
+SS 2011
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\shape smallcaps
+\size small
+Prof.
+ Davide La Vecchia
+\shape default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\size default
+
+\begin_inset VSpace 0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+Statistics
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ALaRI Exam 
+\begin_inset space \hfill{}
+\end_inset
+
+15 September 2011
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.3cm
+\end_inset
+
+ 
+\begin_inset space \hrulefill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\begin_inset Formula $\bullet$
+\end_inset
+
+ Duration: 2 hours and 30 minutes
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\begin_inset Formula $\bullet$
+\end_inset
+
+ Open book exam
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hspace{}
+\length 5cm
+\end_inset
+
+
+\begin_inset Formula $\bullet$
+\end_inset
+
+ Solve all exercises
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Exercise 1
+\end_layout
+
+\begin_layout Standard
+Suppose that for a certain device the instantaneous failure rate has the
+ form
+\begin_inset Formula 
+\[
+h(t)=a+bt+c\, sin(2\pi t).
+\]
+
+\end_inset
+
+ where 
+\begin_inset Formula $t$
+\end_inset
+
+ denotes the time in years and 
+\begin_inset Formula $a$
+\end_inset
+
+, 
+\begin_inset Formula $b$
+\end_inset
+
+ and 
+\begin_inset Formula $c$
+\end_inset
+
+ are given parameters such that 
+\begin_inset Formula $h\geq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+What is the interpretation of 
+\begin_inset Formula $h(t)$
+\end_inset
+
+ in general? Discuss this particular failure rate and give examples of devices
+ which potentially could possess this kind of failure rate.
+\end_layout
+
+\begin_layout Enumerate
+Derive the corresponding lifetime distribution function 
+\begin_inset Formula $F_{X}(t)$
+\end_inset
+
+.
+ Is it an increasing or decreasing failure rate distribution? Motivate your
+ answer.
+\end_layout
+
+\begin_layout Section*
+Exercise 2
+\end_layout
+
+\begin_layout Standard
+We assume that the lifetime 
+\begin_inset Formula $X$
+\end_inset
+
+ of a particular device has a Gamma distribution.
+ Recall that the Gamma distribution has density function given by
+\begin_inset Formula 
+\[
+f(t)=\frac{t^{k-1}e^{-t/\lambda}}{(k-1)!\lambda^{k}},\mbox{ }t\geq0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the expectations 
+\begin_inset Formula $E(X)$
+\end_inset
+
+ and 
+\begin_inset Formula $E(X^{2}).$
+\end_inset
+
+ Show the computations!
+\end_layout
+
+\begin_layout Enumerate
+Derive the variance of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The results of 10 independent realizations of 
+\begin_inset Formula $X$
+\end_inset
+
+ are summarized in the following table:
+\lang italian
+
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+
+\lang italian
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="11">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+\begin_inset Formula $i$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+4 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+8 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+17.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+13.8 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+8.7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+11.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+8.7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+8 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+4.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+8.7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang italian
+8.2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\lang italian
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Independent realizations of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\lang english
+ For 
+\begin_inset Formula $k=4$
+\end_inset
+
+ compute the method of moments estimate of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ using 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+the first moment of 
+\begin_inset Formula $X$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\hat{\lambda}_{1}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+the second centered moment (the variance) of 
+\begin_inset Formula $X$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\hat{\lambda}_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Exercise 3
+\end_layout
+
+\begin_layout Standard
+For the same problem as in Exercise 2 
+\end_layout
+
+\begin_layout Enumerate
+derive the Maximum-Likelihood estimator of 
+\begin_inset Formula $\lambda$
+\end_inset
+
+, denoted 
+\begin_inset Formula $\hat{\lambda}_{ml}$
+\end_inset
+
+ when 
+\begin_inset Formula $k$
+\end_inset
+
+ is known.
+\end_layout
+
+\begin_layout Enumerate
+derive the variance of the Maximum-Likelihood estimator and show that the
+ variance of 
+\begin_inset Formula $\hat{\lambda}_{ml}$
+\end_inset
+
+ depends on the parameter 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute the Maximum-Likelihood estimate.
+\end_layout
+
+\begin_layout Enumerate
+How would you estimate the variance of 
+\begin_inset Formula $\hat{\lambda}_{ml}$
+\end_inset
+
+ once you have the estimate of point 3?
+\end_layout
+
+\begin_layout Enumerate
+An important theorem in Maximum-Likelihood estimation theory says that the
+ quantity 
+\begin_inset Formula 
+\[
+\sqrt{n}(\hat{\lambda}_{ml}-\lambda)
+\]
+
+\end_inset
+
+for large 
+\begin_inset Formula $n$
+\end_inset
+
+ is distributed according to the normal distribution 
+\begin_inset Formula $N(0,1/I(\lambda))$
+\end_inset
+
+ where the quantity 
+\begin_inset Formula $I(\lambda)$
+\end_inset
+
+ is called the Fisher information and is equal to
+\begin_inset Formula 
+\begin{equation}
+I(\lambda)=E\left[\left(\frac{\partial}{\partial\lambda}log(f(X;\lambda))\right)^{2}\right].
+\end{equation}
+
+\end_inset
+
+Under regularity conditions on the underlying density function the Fisher
+ information can be computed by applying the following alternative formula
+\begin_inset Formula 
+\begin{equation}
+I(\lambda)=-E\left[\frac{\partial^{2}}{\partial\lambda^{2}}log(f(X;\lambda))\right]
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Compute 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\frac{\partial^{2}}{\partial\lambda^{2}}log(f(X;\lambda))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Compute its expectation and verify that 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+for the Gamma distribution the equality between (1) and (2) holds;
+\end_layout
+
+\begin_layout Enumerate
+the variance of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sqrt{n}(\hat{\lambda}_{ml}-\lambda)$
+\end_inset
+
+ corresponds (after the appropriate transformations) to the variance calculated
+ in points 2 and 4.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Suppose that the estimate of 
+\begin_inset Formula $I(\lambda)$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $0.64$
+\end_inset
+
+ and that we want to test the null hypothesis 
+\begin_inset Formula $H_{0}:\lambda=2.5$
+\end_inset
+
+ versus the alternative 
+\begin_inset Formula $H_{A}:\lambda\neq2.5$
+\end_inset
+
+ at a 
+\begin_inset Formula $5\%$
+\end_inset
+
+ significance level.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Is 
+\begin_inset Formula $H_{0}$
+\end_inset
+
+ a simple or composite hypothesis? And 
+\begin_inset Formula $H_{A}$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+Perform the test and explain the conclusions.
+ Is the null hypothesis rejected?
+\end_layout
+
+\end_deeper
+\begin_layout Section*
+Exercise 4
+\end_layout
+
+\begin_layout Standard
+We define 
+\begin_inset Formula $X$
+\end_inset
+
+ as the number of Bernoulli trials needed by a client to access in write
+ mode a particular database table (the table may be locked by another client).
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ is distributed according to the geometric distribution
+\begin_inset Formula 
+\[
+P(X=k)=(1-p)^{k-1}p,\: k=1,2,\dots
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $p$
+\end_inset
+
+ denotes the probability of success in one trial.
+\end_layout
+
+\begin_layout Enumerate
+Compute the 
+\begin_inset Formula $z-$
+\end_inset
+
+transform 
+\begin_inset Formula $G_{X}(z)$
+\end_inset
+
+ of the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Similarly to the exponential distribution, the geometric distribution is
+ 
+\shape italic
+memoryless.
+ Given that the first success has not yet occurred, the conditional probability
+ distribution of the number 
+\begin_inset Formula $h$
+\end_inset
+
+ of additional trials required to obtain the first success does not depend
+ on the number of observed failures.
+ In other words, show that the conditional distribution 
+\begin_inset Formula 
+\[
+P(X=n+h\mid X>n)=(1-p)^{h-1}p.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Show that if 
+\begin_inset Formula $X_{1},\dots,X_{n}$
+\end_inset
+
+ are independent, geometrically distributed random variables with parameter
+ 
+\begin_inset Formula $p$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+X_{min}=min(X_{1},\dots,X_{n})
+\]
+
+\end_inset
+
+ is also geometrically distributed with parameter 
+\begin_inset Formula $p_{min}$
+\end_inset
+
+.
+ Derive explicitly the relation between 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{min}.$
+\end_inset
+
+ In particular
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Explain the following inequality
+\begin_inset Formula 
+\[
+P(X_{min}>k)=\prod_{i=1}^{n}P(X_{i}>k).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute explicitly as a function of 
+\begin_inset Formula $p$
+\end_inset
+
+ the probabilities
+\begin_inset Formula 
+\[
+P(X_{i}\leq k)\mbox{ and }P(X_{i}>k).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the probability 
+\begin_inset Formula 
+\[
+P(X_{min}>k)
+\]
+
+\end_inset
+
+as a function of 
+\begin_inset Formula $p$
+\end_inset
+
+ and show that 
+\begin_inset Formula $X_{min}$
+\end_inset
+
+ is geometrically distributed with probability of success 
+\begin_inset Formula $p_{min}$
+\end_inset
+
+.
+ Derive explicitly 
+\begin_inset Formula $p_{min}$
+\end_inset
+
+ as a function of 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Show the computations!
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
