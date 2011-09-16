@@ -860,12 +860,15 @@ begin{esempio}
 \end_inset
 
  Lancio indipendente di due dadi.
- 
-\begin_inset Formula $\Omega=\{(1,1),(1,2),...,(1,6),...,(6,1),...,(6,6)\}$
+ In questo caso avremo 
+\begin_inset Formula 
+\[
+\Omega=\{(1,1),(1,2),...,(1,6),...,(6,1),...,(6,6)\}.
+\]
+
 \end_inset
 
-.
- 
+Un possibile evento: 
 \begin_inset Formula $E=\{$
 \end_inset
 
@@ -1023,7 +1026,7 @@ reference "formula esiti equiprobabili"
 
 \end_inset
 
-se il dado è truccato! 
+ quando il dado è truccato! 
 \end_layout
 
 \begin_layout Standard
@@ -1555,7 +1558,7 @@ La tripla
 \begin_inset Formula $(\Omega,\mathcal{E},\tilde{P})$
 \end_inset
 
- è lo spazio di probabilità 
+ è lo spazio di probabilità che corrisponde al 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1586,8 +1589,8 @@ Funzione di ripartizione e di densità
 \end_layout
 
 \begin_layout Standard
-Per qualsiasi esperimento aleatorio è possibile definire lo spazio campionario
- 
+Abbiamo visto che per ottenere un esperimento aleatorio è necessario definire
+ lo spazio campionario 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -1595,7 +1598,7 @@ Per qualsiasi esperimento aleatorio è possibile definire lo spazio campionario
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- sul quale è definta una legge di probabilità 
+ sul quale sarà definta la legge di probabilità 
 \begin_inset Formula $P$
 \end_inset
 
@@ -1622,12 +1625,17 @@ Non tutti gli esperimenti aleatori soddisfano questa condizione.
  Pensate all'esperimento aleatorio di osservare il colore della prima autovettur
 a che circola su una determinata tratta stradale a partire da un certo orario.
  L'esito non è numerico ma è un colore.
+ Per contro, l'esempio del lancio di un dado soddisfa questa condizione
+ in quanto lo spazio campionario 
+\begin_inset Formula $\Omega=\{1,2,3,4,5,6\}\subset\mathbb{R}$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
 
 .
- L'esempio del lancio di un dado soddisfa questa condizione.
  In tal caso è possibile definire la funzione di ripartizione della legge
  di probabilità 
 \begin_inset Formula $P$
@@ -1699,7 +1707,7 @@ La funzione di ripartizione
 \begin_inset Formula $E=(-\infty,x]$
 \end_inset
 
- di osservare un esito inferiore o al massimo uguale ad 
+ di osservare un esito inferiore o al massimo uguale al valore 
 \begin_inset Formula $x$
 \end_inset
 
@@ -2347,17 +2355,11 @@ name "famiglie parametriche di distribuzioni"
 \end_layout
 
 \begin_layout Standard
-Nel corso di Statistica I
-\begin_inset space \space{}
-\end_inset
-
-avete studiato alcune particolari distribuzioni di probabilità con le relative
- funzioni di ripartizione, di densità o di probabilità.
- La distribuzione Normale (caso continuo)
-\begin_inset space \space{}
-\end_inset
-
-e la distribuzione di Poisson (caso discreto) sono due esempi a voi noti.
+Nel corso di Statistica I sono state presentate alcune particolari distribuzioni
+ di probabilità con le relative funzioni di ripartizione, di densità o di
+ probabilità.
+ La distribuzione Normale (caso continuo) e la distribuzione di Poisson
+ (caso discreto) sono due esempi a voi noti.
  Per quanto riguarda la distribuzione Normale, essa è caratterizzata da
  due 
 \begin_inset Formula $\emph{parametri}$
@@ -2383,9 +2385,16 @@ begin{remark}
  Attenzione a non generalizzare questa caratteristica della distribuzione
  Normale.
  Durante questo corso incontreremo diverse nuove distribuzioni di probabilità.
- Come nel caso della distribuzione Normale o di Poisson la loro forma dipenderà
- da uno o più parametri la cui interpretazione varierà da distribuzione
- a distribuzione.
+ Come nel caso della distribuzione Normale o di Poisson la loro 
+\begin_inset Quotes eld
+\end_inset
+
+forma
+\begin_inset Quotes erd
+\end_inset
+
+ dipenderà da uno o più parametri la cui interpretazione varierà da distribuzion
+e a distribuzione.
  
 \begin_inset ERT
 status collapsed
@@ -2482,11 +2491,8 @@ reference "Flo:graficoConfrontoDueNormali"
 .
  In generale si parlerà di famiglia parametrica di distribuzioni per indicare
  un preciso insieme di distribuzioni la cui funzione di probabilità, funzione
- di ripartizione o funzione di densità è identica
-\begin_inset space \space{}
-\end_inset
-
-a meno di un numero finito di parametri.
+ di ripartizione o funzione di densità è identica a meno di un numero finito
+ di parametri.
  I parametri assumono valori in 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
@@ -2560,7 +2566,7 @@ Ricordiamo che per qualsiasi sottoinsieme
 \end_inset
 
  
-\begin_inset Formula $\mathbb{R\rightarrow\{}0,1\mathbb{\}}$
+\begin_inset Formula $\mathbb{R\rightarrow}\{0,1\}$
 \end_inset
 
  è definita nel seguente modo 
@@ -2574,7 +2580,11 @@ I_{A}(x)=\left\{ \begin{array}{cl}
 
 \end_inset
 
- Prendendo quale esempio la distribuzione discreta uniforme, l'insieme 
+Prendendo quale esempio la distribuzione 
+\emph on
+discreta
+\emph default
+ uniforme, l'insieme 
 \begin_inset Formula $A$
 \end_inset
 
