@@ -1038,19 +1038,243 @@ reference "formula esiti equiprobabili"
 
 \begin_layout Standard
 \noindent
+La definizione formale dell'insieme degli eventi 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ è la seguente:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{definizione}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "def insieme degli eventi"
+
+\end_inset
+
+L'insieme degli eventi 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ è un insieme i cui elementi sono sottoinsiemi di 
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Gli elementi 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ sono chiamati 
+\emph on
+eventi
+\emph default
+.
+ Devono valere le seguenti proprietà:
+\end_layout
+
+\begin_layout Enumerate
+Lo spazio campionario è elemento di 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+, cioè 
+\begin_inset Formula $\Omega\in\mathcal{E}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Dato un qualsiasi elemento 
+\begin_inset Formula $E$
+\end_inset
+
+ di 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ allora anche il suo complemento deve appartenere a 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Se 
+\begin_inset Formula $E_{1},E_{2},\ldots$
+\end_inset
+
+ è una successione di elementi qualsiasi di 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+, allora anche la loro unione deve appartenere ad 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+E_{i}\in\mathcal{E}\:\forall i\in\{1,2,\dots\}\:\Rightarrow\bigcup_{i=1}^{\infty}E_{i}\in\mathcal{E}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{definizione}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+ Lancio un dado.
+ Lo spazio campionario è 
+\begin_inset Formula $\Omega=\{1,2,3,4,5,6\}$
+\end_inset
+
+.
+ I seguenti insiemi sono tutti esempi validi di insieme degli eventi
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{E}=\left\{ \Omega,\emptyset\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{E}=\left\{ \Omega,\emptyset,\{1\},\{2,3,4,5,6\}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{E}=\left\{ \Omega,\emptyset,\{1,3,5\},\{2,4,6\}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{E}=\left\{ \Omega,\emptyset,\{1,2,3\},\{4,5\},\{6\},\{4,5,6\},\{1,2,3,6\},\{1,2,3,4,5\}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+I seguenti insiemi non sono esempi validi di insiemi degli eventi (perché?):
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{E}=\left\{ \Omega,\emptyset,\{1\},\{2,3\},\{1,2,3\},\{2,3,4,5,6\}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{E}=\left\{ \Omega,\emptyset,\{1\},\{2\},\{3\},\{4\},\{5\},\{6\}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathcal{E}=\left\{ \Omega,\emptyset,\{1\},\{1,2\},\{1,2,3\},\{1,2,3,4\},\{1,2,3,4,5\}\right\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
 Lasciando i dettagli tecnici ai matematici indicheremo semplicemente con
  
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- l'insieme degli eventi di cui desideriamo calcolare la probabilità.
- Senza preoccuparci troppo della struttura dell'insieme di eventi 
+ l'insieme degli eventi e senza preoccuparci oltre misura della sua struttura
+ daremo per scontato che 
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- ipotizzeremo che gli eventi in esso contenuti siano sempre misurabili,
- nel senso che sia sempre possibile assegnare loro una probabilità in maniera
- 
+ soddisfa le condizioni enunciate nella Definizione 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "def insieme degli eventi"
+
+\end_inset
+
+.
+ Se tale condizioni sono verificate diremo che l'insieme degli eventi 
+\begin_inset Formula $\mathcal{E}$
+\end_inset
+
+ è misurabile, nel senso che è possibile assegnare una probabilità a ciascun
+ evento in maniera 
 \begin_inset Quotes eld
 \end_inset
 
@@ -1059,7 +1283,11 @@ consistente”.
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- contiene dei sottoinsiemi di 
+ contiene dei 
+\emph on
+sottoinsiemi
+\emph default
+ di 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -1087,6 +1315,7 @@ reference "fig:eventi e esiti"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
 status open
@@ -1120,10 +1349,6 @@ name "fig:eventi e esiti"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1284,7 +1509,7 @@ reference "def legge di probabilita"
 \begin_layout Standard
 \noindent
 Per concludere: un esperimento aleatorio è caratterizzato da tre oggetti:
- uno spazio di probabilità 
+ lo spazio campionario 
 \begin_inset Formula $\Omega$
 \end_inset
 
@@ -1292,7 +1517,7 @@ Per concludere: un esperimento aleatorio è caratterizzato da tre oggetti:
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- ed una legge di probabilità 
+ e la legge di probabilità 
 \begin_inset Formula $P$
 \end_inset
 
@@ -2083,16 +2308,14 @@ reference "fig:Frequenze-relative-popolazione studenti"
 \end_inset
 
  riporta il grafico delle frequenze relative per le due caratteristiche.
-\end_layout
-
-\begin_layout Standard
-\align center
 \begin_inset Float figure
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
 \begin_inset Graphics
 	filename codiceR/grafici/numeroScarpeUomoDonnaFreqRelative.pdf
 	scale 40
@@ -2210,7 +2433,7 @@ end{definizione}
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -3929,6 +4152,7 @@ A causa dell'incompleta informazione e alla natura aleatoria di molti fenomeni
 
 \end_deeper
 \begin_layout Standard
+\noindent
 \begin_inset ERT
 status collapsed
 
@@ -3975,17 +4199,19 @@ insufficiente  &  discreto  &  buono
 
 \end_inset
 
- La quantità in esame è dunque 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+La quantità in esame è dunque 
 \begin_inset Formula $p$
 \end_inset
 
 .
  Poiché è praticamente impossibile (e troppo oneroso) intervistare tutta
  la popolazione dei consumatori sarà necessario selezionare ed intervistare
-\begin_inset space \space{}
-\end_inset
-
-un sottoinsieme di tale popolazione che chiameremo campione.
+ un sottoinsieme di tale popolazione che chiameremo campione.
  
 \end_layout
 
@@ -4173,17 +4399,10 @@ reference "esempio pino1"
 \begin_inset Quotes eld
 \end_inset
 
-sfortuna”
-\begin_inset space \space{}
-\end_inset
-
-nella scelta del campione la nostra stima risulti inferiore a questa soglia.
- Il grado di visibilità è realmente insufficiente?
-\begin_inset space \space{}
-\end_inset
-
-Ci troviamo qui confrontati col terzo tema dell'inferenza statistica: la
- verifica d'ipotesi.
+sfortuna” nella scelta del campione la nostra stima risulti inferiore a
+ questa soglia.
+ Il grado di visibilità è realmente insufficiente? Ci troviamo qui confrontati
+ col terzo tema dell'inferenza statistica: la verifica d'ipotesi.
  Valori di 
 \begin_inset Formula $\widehat{p}$
 \end_inset
@@ -5906,7 +6125,7 @@ Avendo definito lo spazio campionario di un esperimento statistico dovremo
 \begin_layout Standard
 \align center
 \begin_inset Float figure
-placement h
+placement H
 wide false
 sideways false
 status open
@@ -6239,8 +6458,8 @@ Il modello parametrico della legge di probabilità
 \begin_inset Formula $Q$
 \end_inset
 
- sarà semplicemente (indichiamo con 
-\begin_inset Formula $g$
+ sarà semplicemente (indicheremo con 
+\begin_inset Formula $f(x_{1},x_{2},x_{3})$
 \end_inset
 
  la funzione di densità di 
@@ -6250,8 +6469,8 @@ Il modello parametrico della legge di probabilità
 )
 \begin_inset Formula 
 \begin{eqnarray*}
-\mathcal{P} & = & \left\{ g(x_{1},x_{2},x_{3};\lambda)=f\left(x_{1};\lambda\right)\ f\left(x_{2};\lambda\right)\ f\left(x_{3};\lambda\right):\ \lambda>0\right\} \\
- & = & \left\{ g(x_{1},x_{2},x_{3};\lambda)=\lambda^{3}e^{-\lambda(x_{1}+x_{2}+x_{3})}I_{(0,\infty)}(x_{1})I_{(0,\infty)}(x_{2})I_{(0,\infty)}(x_{3}):\ \lambda>0\right\} .
+\mathcal{P} & = & \left\{ f(x_{1},x_{2},x_{3};\lambda)=f\left(x_{1};\lambda\right)\ f\left(x_{2};\lambda\right)\ f\left(x_{3};\lambda\right):\ \lambda>0\right\} \\
+ & = & \left\{ f(x_{1},x_{2},x_{3};\lambda)=\lambda^{3}e^{-\lambda(x_{1}+x_{2}+x_{3})}I_{(0,\infty)}(x_{1})I_{(0,\infty)}(x_{2})I_{(0,\infty)}(x_{3}):\ \lambda>0\right\} .
 \end{eqnarray*}
 
 \end_inset
@@ -6287,9 +6506,8 @@ Talvolta succede che ciò a cui siamo veramente interessati non sia l'esito
  di un esperimento aleatorio ma una sua particolare funzione.
  Pensate ad esempio ad una compagnia aerea.
  Supponiamo che il ritardo di un volo di linea sia una variabile aleatoria.
- Alla compagnia probabilmente interessa soprattutto sapere i costi che un
- ritardo può generare in funzione della sua gravità piuttosto che l'ammontare
- in minuti del ritardo.
+ Alla compagnia interessa soprattutto conoscere i costi che un certo ritardo
+ può generare piuttosto che l'ammontare in minuti del ritardo.
  I costi saranno quindi una certa funzione dei minuti di ritardo.
  Generalizzando al caso astratto, introduciamo la seguente definizione.
 \end_layout
@@ -6567,6 +6785,146 @@ status open
 
 
 \backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+Il numero di ore che un traghetto impiega per andare da Genova ad Olbia
+ è una variabile aleatoria in quanto il tempo di percorrenza è influenzato
+ da diversi fattori in parte non prevedibili quali ad esempio le condizioni
+ del mare, l'intensità e direzione del vento, il numero di passeggeri e
+ così via.
+ Indicando con 
+\begin_inset Formula $x$
+\end_inset
+
+ il tempo impiegato dal traghetto per la traversata, la funzione di costo
+ è data da
+\begin_inset Formula 
+\[
+g(x)=\begin{cases}
+10+10x, & \mbox{se }0<x\leq9\\
+100+20(x-9), & \mbox{se }9<x\leq10\\
+120+40(x-10), & \mbox{se }x>10
+\end{cases}.
+\]
+
+\end_inset
+
+Con quale probabilità si osserveranno dei costi compresi nell'intervallo
+ 
+\begin_inset Formula $E'=[110-130]$
+\end_inset
+
+? Per rispondere a questa domanda occorre calcolare la preimmagine dell'evento
+ 
+\begin_inset Formula $E'$
+\end_inset
+
+ utilizzando la funzione dei costi 
+\begin_inset Formula $g(x)$
+\end_inset
+
+: 
+\begin_inset Formula $E=g^{-1}(E')$
+\end_inset
+
+.
+ È possibile aiutarsi col grafico della funzione, vedi Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:costi traversata"
+
+\end_inset
+
+.
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename codiceR/grafici/costi_traversata.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Funzione dei costi
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:costi traversata"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Dopo che l'evento 
+\begin_inset Formula $E$
+\end_inset
+
+ è stato identificato è possibile calcolare la probabilità che si realizzi
+ utilizzando la legge di probabilità 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Tale probabilità corrisponde dunque alla probabilità di osservare dei costi
+ come specificato da 
+\begin_inset Formula $E'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 begin{definizione}
 \end_layout
 
@@ -6607,6 +6965,7 @@ end{definizione}
 
 \begin_layout Standard
 \begin_inset Float figure
+placement h
 wide false
 sideways false
 status open
@@ -6783,9 +7142,46 @@ begin{esempio}
 
 \end_inset
 
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Esempio scommessa lancio dado"
+
+\end_inset
+
 Consideriamo l'esperimento aleatorio di lanciare una volta un dado e di
- fare una scommessa sul possibile esito.
- Supponiamo che la vincita o la perdita in franchi, notata 
+ fare una scommessa sul possibile esito 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $\omega$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang italian
+ dell'esperimento.
+ Supponiamo dunque che la vincita o la perdita in franchi, notata 
 \begin_inset Formula $X$
 \end_inset
 
@@ -6793,11 +7189,7 @@ Consideriamo l'esperimento aleatorio di lanciare una volta un dado e di
 \begin_inset Formula $X(\omega)=\omega-2$
 \end_inset
 
- dove 
-\begin_inset Formula $\omega$
-\end_inset
-
- rappresenta l'esito del lancio.
+.
  Siamo interessati all'evento 
 \family roman
 \series medium
@@ -6823,7 +7215,7 @@ Consideriamo l'esperimento aleatorio di lanciare una volta un dado e di
 \color inherit
 \lang italian
  di guadagnare almeno 3 franchi.
- Il nostro esperimento è formalizzato da 
+ Il nostro esperimento aleatorio è formalizzato da 
 \begin_inset Formula $\Omega=\{1,2,3,4,5,6\}$
 \end_inset
 
@@ -6899,7 +7291,7 @@ reference "Flo:preimmagine"
 
  si realizza.
  Nel nostro esempio vinceremo almeno 3 franchi se il lancio del dado risulterà
- in un numero superiore o alla peggio uguale a 5.
+ essere un numero superiore o alla peggio uguale a 5.
  L'evento 
 \begin_inset Formula $E$
 \end_inset
@@ -7071,13 +7463,6 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset VSpace medskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status collapsed
 
@@ -7087,6 +7472,13 @@ status collapsed
 \backslash
 begin{esempio}
 \end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "esperimento lancio 3 volte moneta"
 
 \end_inset
 
@@ -7140,11 +7532,7 @@ Q(\left\{ \omega_{i}\right\} )=p^{\#c}(1-p)^{\#t}
 \begin_inset Formula $\#c$
 \end_inset
 
-”
-\begin_inset space \space{}
-\end_inset
-
-indica il numero di 
+” indica il numero di 
 \begin_inset Quotes eld
 \end_inset
 
@@ -7152,11 +7540,7 @@ indica il numero di
 \begin_inset Formula $c$
 \end_inset
 
-”
-\begin_inset space \space{}
-\end_inset
-
-in 
+” in 
 \begin_inset Formula $\omega_{i}$
 \end_inset
 
@@ -7197,8 +7581,8 @@ Su questo spazio definiamo ora la
 \begin_inset Quotes eld
 \end_inset
 
-il numero di croci ottenute diviso 2” che in pratica consiste nel contare
- il numero di 
+il numero di croci ottenute” che in pratica consiste nel contare il numero
+ di 
 \begin_inset Quotes eld
 \end_inset
 
@@ -7210,13 +7594,13 @@ il numero di croci ottenute diviso 2” che in pratica consiste nel contare
 \begin_inset Formula $\omega$
 \end_inset
 
- e dividere per 2.
+.
  Vale dunque 
 \begin_inset Formula 
 \[
 \begin{array}{cccc}
-X(\omega_{1})=0 & ,\: X(\omega_{2})=\frac{1}{2} & ,\: X(\omega_{3})=\frac{1}{2} & ,\: X(\omega_{4})=\frac{1}{2}\\
-X(\omega_{5})=1 & ,\: X(\omega_{6})=1 & ,\: X(\omega_{7})=1 & ,\: X(\omega_{8})=\frac{3}{2}
+X(\omega_{1})=0 & ,\: X(\omega_{2})=1 & ,\: X(\omega_{3})=1 & ,\: X(\omega_{4})=1\\
+X(\omega_{5})=2 & ,\: X(\omega_{6})=2 & ,\: X(\omega_{7})=2 & ,\: X(\omega_{8})=3
 \end{array}.
 \]
 
@@ -7231,7 +7615,7 @@ X(\omega_{5})=1 & ,\: X(\omega_{6})=1 & ,\: X(\omega_{7})=1 & ,\: X(\omega_{8})=
 \end_inset
 
  assumerà così i valori 
-\begin_inset Formula $0,\frac{1}{2},1,\frac{3}{2}$
+\begin_inset Formula $0,1,2,3$
 \end_inset
 
 .
@@ -7254,13 +7638,13 @@ X(\omega_{5})=1 & ,\: X(\omega_{6})=1 & ,\: X(\omega_{7})=1 & ,\: X(\omega_{8})=
 , quindi 
 \begin_inset Formula 
 \[
-P_{X}(\left\{ 0\right\} )=P(X=0)=P(\left\{ \omega_{1}\right\} ).
+P_{X}(\left\{ 0\right\} )=P(X=0)=P\left(\left\{ \omega_{1}\right\} \right).
 \]
 
 \end_inset
 
 In maniera analoga, dato l'evento 
-\begin_inset Formula $E'=[\frac{1}{2},1]\subset\mathbb{R}$
+\begin_inset Formula $E'=\left[1,2\right]\subset\mathbb{R}$
 \end_inset
 
  diremo che 
@@ -7276,7 +7660,7 @@ In maniera analoga, dato l'evento
 \end_inset
 
  denota la realizzazione su 
-\begin_inset Formula $\Omega$
+\begin_inset Formula $\Omega^{3}$
 \end_inset
 
 .
@@ -7293,7 +7677,7 @@ P_{X}(E')=P(X^{-1}(E'))=P(\left\{ \omega_{2},\omega_{3},\omega_{4},\omega_{5},\o
 \end_inset
 
 La probabilità dell'evento 
-\begin_inset Formula $E'=\{0,\frac{3}{2}\}$
+\begin_inset Formula $E'=\{0,3\}$
 \end_inset
 
  è uguale a 
@@ -7301,7 +7685,7 @@ La probabilità dell'evento
 \end_inset
 
  e la probabilità di 
-\begin_inset Formula $P_{X}\left([0,1)\right)$
+\begin_inset Formula $P_{X}\left([0,2)\right)$
 \end_inset
 
  è semplicemente uguale a 
@@ -7361,15 +7745,18 @@ La tripla
 \begin_inset Formula $Bin(3,p)$
 \end_inset
 
- con supporto 
-\begin_inset Formula $\{0,\frac{1}{2},1,\frac{3}{2}\}$
+ la cui famiglia parametrica è data da
+\begin_inset Formula 
+\[
+\mathcal{P}=\left\{ f(x;p)=\left(\begin{array}{c}
+3\\
+x
+\end{array}\right)p^{x}(1-p)^{3-x}:\ x\in\{0,1,2,3\}\mbox{ e }p\in[0,1]\right\} .
+\]
+
 \end_inset
 
- anziché 
-\begin_inset Formula $\{0,1,2,3\}$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
@@ -7511,7 +7898,7 @@ Se la legge di probabilità
 
  appartiene ad una famiglia parametrica di distribuzioni con funzione di
  densità 
-\begin_inset Formula $f_{X}(\cdot;\theta)$
+\begin_inset Formula $f(\cdot;\theta)$
 \end_inset
 
 , varrà per lo stesso discorso fatto in precedenza che la distribuzione
@@ -7522,7 +7909,7 @@ Se la legge di probabilità
  apparterrà alla famiglia 
 \begin_inset Formula 
 \[
-\mathcal{P}=\left\{ g(x_{1},...,x_{n};\theta)=\overset{n}{\underset{i=1}{\Pi}}f_{X_{i}}\left(x_{i};\theta\right):\ \theta\in\Theta\right\} .
+\mathcal{P}=\left\{ f(x_{1},...,x_{n};\theta)=\overset{n}{\underset{i=1}{\prod}}f\left(x_{i};\theta\right):\ \theta\in\Theta\right\} .
 \]
 
 \end_inset
@@ -7532,7 +7919,8 @@ Se la legge di probabilità
 
 \begin_layout Standard
 \noindent
-Come in precedenza la densità di 
+Come in precedenza la funzione di densità (o probabilità nel caso discreto)
+ di 
 \begin_inset Formula $Q_{X_{1,...,}X_{n}}$
 \end_inset
 
@@ -7541,7 +7929,7 @@ Come in precedenza la densità di
 \end_inset
 
  funzioni di densità 
-\begin_inset Formula $f_{X_{i}}(\cdot;\theta)$
+\begin_inset Formula $f(x_{i};\theta)$
 \end_inset
 
 .
@@ -7553,15 +7941,106 @@ Come in precedenza la densità di
 \begin_inset Formula $X_{1},X_{2},...,X_{n}$
 \end_inset
 
- sono identicamente distribuite, la forma delle funzione di densità 
-\begin_inset Formula $f_{X_{i}}\left(x_{i};\theta\right)$
+ sono identicamente distribuite, la forma delle funzioni di densità 
+\begin_inset Formula $f\left(x_{i};\theta\right)$
 \end_inset
 
- è la stessa per ogni 
+ è la stessa per ogni variabile 
 \begin_inset Formula $i$
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Continuazione Esempio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "esperimento lancio 3 volte moneta"
+
+\end_inset
+
+) Disponiamo di osservazioni indipendenti di 
+\begin_inset Formula $n$
+\end_inset
+
+ giocate, notate rispettivamente 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\dots$
+\end_inset
+
+, 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+.
+ La loro distribuzione congiunta avrà quale funzione di probabilità (ci
+ troviamo di fronte a variabili aleatorie discrete)
+\begin_inset Formula 
+\[
+\mathcal{P}=\left\{ f(x_{1},...,x_{n};p)=\prod_{i=1}^{n}\left(\begin{array}{c}
+3\\
+x_{i}
+\end{array}\right)p^{x_{i}}(1-p)^{3-x_{i}}:\ x_{i}\in\{0,1,2,3\}\mbox{ e }p\in[0,1]\right\} .
+\]
+
+\end_inset
+
+Utilizzando le proprietà delle potenze la funzione 
+\begin_inset Formula $f$
+\end_inset
+
+ può essere riscritta come
+\begin_inset Formula 
+\[
+f(x_{1},...,x_{n};p)=p^{\sum_{j=1}^{n}x_{j}}(1-p)^{3n-\sum_{j=1}^{n}x_{j}}\prod_{i=1}^{n}\left(\begin{array}{c}
+3\\
+x_{i}
+\end{array}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7820,13 +8299,14 @@ Osservato l'esperimento, il ricercatore avrà a disposizione le realizzazioni
 \end_inset
 
  che sono dei numeri.
- Le realizzazioni saranno disposte in modo ordinato in una lista 
+ Le realizzazioni saranno disposte in modo ordinato in una lista notata
+ 
 \begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
  che chiameremo vettore.
  La notazione maiuscola denota la variabile aleatoria (funzione!) mentre
- la notazione minuscola ne indica il valore realizzato.
+ la notazione minuscola ne indica il particolare valore realizzato.
  Ad esempio 
 \begin_inset Formula $x_{1}=X_{1}(\omega)$
 \end_inset
@@ -7981,11 +8461,7 @@ Il concetto di distribuzione di una
 \begin_inset Formula $V.A.$
 \end_inset
 
- (caso multivariato)
-\begin_inset space \space{}
-\end_inset
-
-ci accompagnerà per tutta la durata di questo corso.
+ (caso multivariato) ci accompagnerà per tutta la durata di questo corso.
  Abbiamo visto nei paragrafi precedenti il concetto di esperimento statistico
  e di 
 \begin_inset Formula $n$
@@ -9079,12 +9555,8 @@ Talvolta l'analisi esplorativa dei dati ci aiuta nella comprensione del
 \begin_inset VSpace 0.5cm
 \end_inset
 
- Concludendo:
-\begin_inset space \space{}
-\end_inset
-
-le informazioni utilizzate nella specificazione dei modelli fanno capo alla
- 
+ Concludendo:  le informazioni utilizzate nella specificazione dei modelli
+ fanno capo alla 
 \end_layout
 
 \begin_layout Itemize
