@@ -2073,31 +2073,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename codiceR/grafici/funzioneRipartizioneUniformeDiscreta.pdf
 	scale 40
@@ -2163,31 +2141,9 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\noindent
+\align center
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{}
-\end_layout
-
-\end_inset
-
-
 \begin_inset Graphics
 	filename codiceR/grafici/funzioneRipartizioneUniformeContinua.pdf
 	scale 40
@@ -7508,7 +7464,7 @@ name "esperimento lancio 3 volte moneta"
 \begin_inset Formula 
 \[
 \begin{array}{cccc}
-\omega_{1}=(t,t,t) & \omega_{2}=(c,t,t) & \omega_{3}=(c,t,c) & \omega_{4}=(t,t,c)\\
+\omega_{1}=(t,t,t) & \omega_{2}=(c,t,t) & \omega_{3}=(t,c,t) & \omega_{4}=(t,t,c)\\
 \omega_{5}=(t,c,c) & \omega_{6}=(c,t,c) & \omega_{7}=(t,c,c) & \omega_{8}=(c,c,c)
 \end{array}.
 \]
