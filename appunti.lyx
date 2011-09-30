@@ -39,7 +39,8 @@
 
 \graphics default
 \default_output_format default
-\output_sync 0
+\output_sync 1
+\output_sync_macro "\usepackage[active]{srcltx}"
 \bibtex_command default
 \index_command default
 \paperfontsize 12
@@ -9847,12 +9848,12 @@ dove
 \begin_inset Formula $E$
 \end_inset
 
- corrisponde agli indici delle schede con automobili di colore nero.
+ corrisponde agli indici delle schede delle automobili di colore nero.
  Il numero di esiti in 
 \begin_inset Formula $E$
 \end_inset
 
- è 
+ è evidentemente 
 \begin_inset Formula $N_{1}$
 \end_inset
 
@@ -10351,7 +10352,7 @@ Quando la distribuzione statistica
 \begin_inset Formula $n$
 \end_inset
 
--campione di un esperimento statistico 
+-campione di un esperimento aleatorio 
 \begin_inset Formula $(\mathbb{R},\mathcal{E},P_{X})$
 \end_inset
 
@@ -10642,7 +10643,18 @@ La nuova legge di probabilità
 \begin_inset Formula $Q$
 \end_inset
 
- è dunque diversa dalla legge di probabilità vista nel caso di un'estrazione
+ è data da 
+\begin_inset Formula 
+\[
+Q(\omega)=\begin{cases}
+0 & \mbox{se }\omega\mbox{ contiene almeno due valori uguali},\\
+\frac{(N-n)!}{N!} & \mbox{se i valori in }\omega\mbox{ sono tutti diversi fra loro.}
+\end{cases}
+\]
+
+\end_inset
+
+ed è dunque diversa dalla legge di probabilità vista nel caso di un'estrazione
  con reinserimento (confronta la 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -10707,9 +10719,13 @@ Il nome delle variabili aleatorie è lo stesso ma la loro distribuzione è
 \end_inset
 
 .
- Facciamo un esempio prendendo quale popolazione obiettivo il colore delle
- automobili immatricolate.
- Supponiamo che nella popolazione obiettivo ci siano 
+ Per mostrare la dipendenza facciamo un esempio prendendo quale popolazione
+ obiettivo il colore delle automobili immatricolate.
+ Supponiamo che nella popolazione obiettivo di numerosità 
+\begin_inset Formula $N$
+\end_inset
+
+ ci siano 
 \begin_inset Formula $k$
 \end_inset
 
@@ -10775,24 +10791,33 @@ o essere uguali fra loro e uguali a
 \end_inset
 
  costruite tramite selezione senza reinserimento.
- Sebbene utili ai fini dell'inferenza statistica, esse non sono 
-\begin_inset Formula $i.i.d.$
-\end_inset
-
- e non costituiscono un 
-\begin_inset Formula $n$
-\end_inset
-
--campione di un esperimento statistico 
-\begin_inset Formula $(\mathbb{R},\mathcal{E},\mathcal{P})$
-\end_inset
-
-.
  La tripla 
 \begin_inset Formula $(\mathbb{R}^{n},\overset{n}{\underset{i=1}{\otimes}}\mathcal{E}_{i},Q_{X_{1},...,X_{n}})$
 \end_inset
 
- è uno spazio di probabilità ma non costituisce un esperimento statistico.
+ è uno spazio di probabilità ma, sebbene utile ai fini dell'inferenza statistica
+, non costituisce un esperimento statistico.
+ Le 
+\begin_inset Formula $n$
+\end_inset
+
+ 
+\begin_inset Formula $V.A.$
+\end_inset
+
+ 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ non sono 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+ e pertanto non costituiscono un 
+\begin_inset Formula $n$
+\end_inset
+
+-campione.
  Per quanto riguarda questo corso utilizzeremo quindi il termine 
 \begin_inset Formula $n$
 \end_inset
@@ -11670,7 +11695,7 @@ X=\sum_{i=1}^{n}a_{i}X_{i}\text{ e }Y=\sum_{j=1}^{m}b_{j}Y_{j}\text{,}\label{X e
 \begin_inset space \space{}
 \end_inset
 
-fra la variabile aleatoria 
+fra le variabili aleatorie 
 \begin_inset Formula $X_{i}$
 \end_inset
 
@@ -12131,10 +12156,9 @@ end{esempio}
 
 \begin_layout Standard
 \noindent
-Ora, si può dimostrare (si veda l'appendice) che la covarianza è un operatore
- bilineare.
- Da ciò risulta che la covarianza si comporta in maniera simile al valore
- atteso quando noi 
+La covarianza è un operatore bilineare.
+ Questo significa che essa si comporta in maniera simile al valore atteso
+ quando noi 
 \begin_inset Quotes eld
 \end_inset
 
@@ -12935,11 +12959,8 @@ dove
 \begin_inset Formula $K$
 \end_inset
 
- è il numero dei diversi volori di 
-\begin_inset Formula $X$
-\end_inset
-
- osservabili nella popolazione e 
+ rappresenta il numero dei diversi valori osservabili della caratteristica
+ in esame e 
 \family roman
 \series medium
 \shape up
@@ -12963,8 +12984,8 @@ dove
 \noun default
 \color inherit
 \lang italian
- rappresenta la frazione di unità della popolazione (la frequenza dunque)
- aventi un valore della caratteristica uguale a 
+ rappresenta la frazione di unità della popolazione (la frequenza relativa
+ dunque) aventi un valore della caratteristica uguale a 
 \begin_inset Formula $x_{k}$
 \end_inset
 
@@ -12978,7 +12999,7 @@ dove
 \begin_inset Formula $a_{j}$
 \end_inset
 
- il valore della caratteristica studiata della 
+ il valore della caratteristica della 
 \begin_inset Formula $j$
 \end_inset
 
@@ -12992,8 +13013,9 @@ dove
 \begin_inset Formula $j$
 \end_inset
 
--esimo individuo alla data in cui è eseguito lo studio.
- Il parametro sconosciuto da stimare è dunque uguale a 
+-esimo individuo.
+ Un possibile parametro sconosciuto al quale potremmo essere interessati
+ potrebbe essere il valore medio della popolazione 
 \begin_inset Formula 
 \[
 \mu=\sum_{k=1}^{K}x_{k}p_{k}=\sum_{j=1}^{N}a_{j}\frac{1}{N}
@@ -13001,7 +13023,7 @@ dove
 
 \end_inset
 
- mentre la varianza della distribuzione del reddito è
+oppure la varianza della distribuzione del reddito 
 \begin_inset Formula 
 \[
 \sigma^{2}=\sum_{k=1}^{K}\left(x_{k}-\mu\right)^{2}p_{k}=\sum_{j=1}^{N}\left(a_{j}-\mu\right)^{2}\frac{1}{N}\ .
@@ -13017,13 +13039,11 @@ dove
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
- sono quantità che potrebbero essere calcolate se avessimo a disposizione
+ sono due quantità che potrebbero essere calcolate se avessimo a disposizione
  i dati sull'intera popolazione.
- In realtà entrambe queste quantità sono sconosciute e pertanto dovranno
- essere stimate.
- Poiché non desideriamo stimare la distribuzione della popolazione ma solo
- il primo momento e la varianza, per questa volta eviteremo di specificare
- una famiglia parametrica di distribuzioni.
+ Assumiamo di non essere interessati all'intera distribuzione della popolazione
+ ma unicamente al primo momento ed alla varianza: per questa volta eviteremo
+ di specificare una famiglia parametrica di distribuzioni.
 \end_layout
 
 \begin_layout Standard
@@ -13223,8 +13243,8 @@ Da ultimo sottolineamo nuovamente che
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- è una variabile aleatoria la cui distribuzione dipende indirettamente dalla
- distribuzione della popolazione campione.
+ è una variabile aleatoria la cui distribuzione dipende dalla distribuzione
+ della popolazione campione.
  Purtroppo vale la seguente osservazione.
  Anche qualora la distribuzione della popolazione obiettivo fosse conosciuta,
  la distribuzione della media 
@@ -13434,15 +13454,11 @@ Definite a parole le tre variabili aleatorie
 \begin_layout Enumerate
 \noindent
 Considerate gli esiti 
-\begin_inset Formula $\omega_{1}=(1,2,5)$
+\begin_inset Formula $\omega_{a}=(3,2,5)$
 \end_inset
 
 , 
-\begin_inset Formula $\omega_{2}=(5,2,1)$
-\end_inset
-
- e 
-\begin_inset Formula $\omega_{3}=(1,1,1)$
+\begin_inset Formula $\omega_{b}=(4,2,1)$
 \end_inset
 
  e calcolate per ciascuna delle tre variabili 
@@ -13454,43 +13470,68 @@ Considerate gli esiti
 \end_inset
 
 , 
-\begin_inset Formula $i=1,2,3.$
+\begin_inset Formula $i=a,b.$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Enumerate
-Mostrate che 
+Mostrate che in 
+\begin_inset Formula $\omega_{a}$
+\end_inset
+
+ vale 
 \begin_inset Formula $X_{1}=$
 \end_inset
 
 
-\begin_inset Formula $U_{11}$
+\begin_inset Formula $a_{1}U_{11}$
 \end_inset
 
 +
-\begin_inset Formula $U_{12}$
+\begin_inset Formula $a_{2}U_{12}$
 \end_inset
 
 +
-\begin_inset Formula $U_{13}$
+\begin_inset Formula $a_{3}U_{13}$
 \end_inset
 
- per 
-\begin_inset Formula $\omega_{1}$
-\end_inset
-
- e 
-\begin_inset Formula $\omega_{2}$
++
+\begin_inset Formula $a_{5}U_{15}$
 \end_inset
 
 .
- Vale anche per 
-\begin_inset Formula $\omega_{3}$
+ 
+\end_layout
+
+\begin_layout Enumerate
+Mostrate che in 
+\begin_inset Formula $\omega_{b}$
 \end_inset
 
-?
+ non vale 
+\begin_inset Formula $X_{1}=$
+\end_inset
+
+
+\begin_inset Formula $a_{1}U_{11}$
+\end_inset
+
++
+\begin_inset Formula $a_{2}U_{12}$
+\end_inset
+
++
+\begin_inset Formula $a_{3}U_{13}$
+\end_inset
+
++
+\begin_inset Formula $a_{5}U_{15}$
+\end_inset
+
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -13654,14 +13695,15 @@ E(T_{j})=0\ P(T_{j}=0)+1\ P(T_{j}=1)=P(T_{j}=1)
 \end_inset
 
 -esimo individuo venga sorteggiato.
- Poiché gli esiti sono tutti equiprobabili, è possibile calcolare 
+ Poiché gli esiti con probabilità non nulla sono tutti equiprobabili, è
+ possibile calcolare 
 \begin_inset Formula $P(T_{j}=1)$
 \end_inset
 
  semplicemente come
 \begin_inset Formula 
 \[
-P(T_{i}=1)=\frac{\#\text{ esiti favorevoli}}{\#\text{ esiti possibili}}\text{.}
+P(T_{j}=1)=\frac{\#\text{ esiti favorevoli}}{\#\text{ esiti possibili}}\text{.}
 \]
 
 \end_inset
@@ -13686,8 +13728,15 @@ D_{N}^{n}=\frac{N!}{(N-n)!}\text{.}
 
 \begin_layout Standard
 \noindent
-Il numero degli esiti favorevoli è uguale al numero di esiti con probabilità
- positiva
+Per l'individuo 
+\begin_inset Formula $j$
+\end_inset
+
+, il numero degli esiti favorevoli è uguale al numero di esiti 
+\begin_inset Formula $\omega$
+\end_inset
+
+ che hanno probabilità positiva
 \begin_inset Foot
 status collapsed
 
@@ -13700,13 +13749,14 @@ Ricordiamo che gli elementi
 \begin_inset Formula $\Omega^{n}$
 \end_inset
 
- in cui un numero si ripete più volte non vanno tenuti in considerazione
- in quanto non si realizzeranno mai (estrazione senza ripetizione!).
+ in cui un numero appare due o più volte non vanno tenuti in considerazione
+ in quanto non si realizzeranno mai (questa è un'estrazione senza reinserimento!
+).
 \end_layout
 
 \end_inset
 
- contenenti il numero 
+ e che contengono il numero 
 \begin_inset Formula $j$
 \end_inset
 
@@ -13716,7 +13766,7 @@ Ricordiamo che gli elementi
 \begin_inset Formula $N$
 \end_inset
 
- numeri 
+ individui 
 \begin_inset Formula $1,...,N$
 \end_inset
 
@@ -13724,7 +13774,7 @@ Ricordiamo che gli elementi
 \begin_inset Formula $n$
 \end_inset
 
- scatole, sapendo che una scatola sarà occupata dal numero 
+ scatole, sapendo che una scatola sarà occupata dall'individuo 
 \begin_inset Formula $j$
 \end_inset
 
