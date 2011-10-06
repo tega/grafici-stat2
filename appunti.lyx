@@ -11,11 +11,12 @@
 
 \newcounter{ese}\newcounter{esr}\newcounter{def}\newcounter{domand}\theoremstyle{remark}\newcounter{theor}\newcounter{theorem}\newtheorem{esempio}[ese]{Esempio}\newtheorem{esercizio}[esr]{Esercizio}\newtheorem{definizione}[def]{Definizione}\newtheorem{remark}{Osservazione}\newtheorem{theorem}[theor]{Teorema}\newtheorem{domanda}[domand]{Domanda}
 
-
-
-\makeatother
-
-\usepackage{babel}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage{pdfsync}
+\else
+\usepackage[active]{srcltx}
+\fi
 
 \makeatother
 
@@ -16305,11 +16306,11 @@ V(\overline{X}_{n})-V(\overline{X}_{str,n}) & \simeq & \frac{1-f}{n}\left(\sigma
 Da quest'ultima disuguaglianza deduciamo che la varianza della media calcolata
  utilizzando un campione stratificato proporzionale è in genere inferiore
  a quella di un campione casuale semplice di uguale numerosità.
- Il guadagno risultante dal processo di stratificazione della popolazione
+ Il guadagno risultante dal processo di stratificazione della popolazione,
  rappresentato dalla quantità 
 \begin_inset Formula 
 \[
-\frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}
+\frac{1-f}{n}\sum_{h=1}^{H}\pi_{h}\left(\mu_{h}-\mu\right)^{2}\:,
 \]
 
 \end_inset
@@ -16904,7 +16905,7 @@ V(\overline{X}_{n}) & = & \frac{\sigma^{2}}{n}\ .
 \end_inset
 
 .
- Inoltre abbiamo che 
+ Asintoticamente abbiamo che 
 \begin_inset Formula 
 \[
 \lim_{n\rightarrow\infty}V(\overline{X}_{n})=0\ \text{.}
@@ -16920,7 +16921,7 @@ V(\overline{X}_{n}) & = & \frac{\sigma^{2}}{n}\ .
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- saranno molto concentrate attorno a 
+ saranno molto concentrate attorno al valore atteso 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -17223,7 +17224,7 @@ Nel corso di Statistica I avete studiato che ad ogni variabile aleatoria
 \end_inset
 
  è associata una funzione di ripartizione 
-\begin_inset Formula $F_{X}:\mathbb{R}\rightarrow\lbrack0,1]$
+\begin_inset Formula $F_{X}:\mathbb{R}\rightarrow[0,1]$
 \end_inset
 
  definita per qualsiasi numero 
@@ -17501,7 +17502,7 @@ sottrarre a
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- il suo valore atteso 
+ il suo valore atteso che in questo caso è 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -17509,7 +17510,7 @@ sottrarre a
 \end_layout
 
 \begin_layout Enumerate
-dividere per la sua deviazione standard
+dividere per la sua deviazione standard 
 \begin_inset Formula $\sqrt{\frac{\sigma^{2}}{n}}$
 \end_inset
 
@@ -17570,7 +17571,9 @@ reference "esempio sequenza normale"
 
 .
  Ancora una volta, grazie alla proprietà della distribuzione Normale, dopo
- la standardizzazione le variabili aleatorie 
+ la standardiz\SpecialChar \-
+za\SpecialChar \-
+zione le variabili aleatorie 
 \begin_inset Formula $Y_{n}$
 \end_inset
 
@@ -17655,7 +17658,11 @@ reference "esempio somme di normali"
 \begin_inset Formula $Y_{n}\sim(0,1)$
 \end_inset
 
-.
+ per ogni 
+\begin_inset Formula $n=1,2,...$
+\end_inset
+
+ .
  Cosa si potrà affermare sulla distribuzione di 
 \begin_inset Formula $Y_{n}$
 \end_inset
@@ -17815,7 +17822,14 @@ In pratica
 \begin_inset Formula $\frac{1}{\sqrt{n}}$
 \end_inset
 
-.
+, come appare nell'uguaglianza (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "TLC somma degli epsilon"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -17901,11 +17915,7 @@ reference "TLC somma degli epsilon"
 \begin_inset Formula $X_{1},X_{2},...$
 \end_inset
 
- ,
-\begin_inset space \space{}
-\end_inset
-
-per valori di 
+ , per valori di 
 \begin_inset Formula $n$
 \end_inset
 
@@ -18088,7 +18098,11 @@ P(|Z|\leq1.96)=0.95\ \text{.}\label{equazione livello confidenza}
 
 \end_inset
 
- Ora, poiché 
+ Ora, poiché per 
+\begin_inset Formula $n$
+\end_inset
+
+ sufficientemente grande 
 \begin_inset Formula $Z$
 \end_inset
 
@@ -18106,7 +18120,7 @@ Ricordiamo che l'uguaglianza è vera solo al limite.
 
 \end_inset
 
- vale che 
+, possiamo scrivere 
 \begin_inset Formula 
 \[
 P(|Z|\leq1.96)=P(|\frac{\overline{X}_{n}-\mu}{\sqrt{V(\overline{X}_{n})}}|\leq1.96)
@@ -18356,7 +18370,7 @@ reference "intervallo aleatorio"
 
 \begin_layout Standard
 \noindent
-Osserviamo la sottile differenza fra la (
+Esiste una sottile ma importante differenza fra la (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "intervallo interpretazione 1b"
@@ -18426,7 +18440,7 @@ reference "intervallo interpretazione 2b"
 
 , ed in seguito la realizzazione dell'intervallo aleatorio ovvero l'intervallo
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Sappiamo che quando le osservazioni sono i.i.d.
@@ -18623,7 +18637,7 @@ reference "realizzazione intervallo aleatorio"
 \end_inset
 
  sono i valori comunemente utilizzati.
- Fissato dunque il livello 
+ Fissato dunque il livello di confidenza 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -18644,7 +18658,7 @@ in funzione di
 \begin_inset Formula $\alpha$
 \end_inset
 
- di significatività indicati in precedenza corrispondono agli 
+ di confidenza indicati in precedenza corrispondono agli 
 \begin_inset Formula $(\frac{1+\alpha}{2})$
 \end_inset
 
@@ -18715,11 +18729,26 @@ begin{esercizio}
 \end_inset
 
 Descrivete come varia l'ampiezza dell'intervallo di confidenza al variare
- del livello di significatività 
+ 
+\end_layout
+
+\begin_layout Itemize
+del livello di significatività 
 \begin_inset Formula $\alpha$
 \end_inset
 
-.
+;
+\end_layout
+
+\begin_layout Itemize
+della numerosità 
+\begin_inset Formula $n$
+\end_inset
+
+ del campione.
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -18745,7 +18774,7 @@ Nel capitolo introduttivo è stato detto che lo scopo dell'induzione statistica
  o più caratteristiche di una popolazione obiettivo partendo da un insieme
  limitato di osservazioni (campione).
  È stato inoltre osservato come la validità di tali conclusioni non sia
- assoluta, ma soggetta a continua verifica.
+ assoluta e definitiva, ma soggetta a continua verifica.
  Con l'arrivo di ulteriori informazioni sarà necessario confermare alla
  luce della nuova evidenza empirica quanto inferito precedentemente.
  L'inferenza statistica si occupa quindi di due importanti problemi: la
@@ -18912,11 +18941,7 @@ Se il giusto valore del parametro
 \end_inset
 
 .
- Avremo a questo punto due possibilità:
-\begin_inset space \space{}
-\end_inset
-
-eseguire una stima puntuale di 
+ Avremo a questo punto due possibilità: eseguire una stima puntuale di 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -19183,11 +19208,7 @@ Questo secondo approccio per stimare il parametro sconosciuto è chiamato
 \begin_inset Formula $\theta\in\Theta$
 \end_inset
 
- tale per cui
-\begin_inset space \space{}
-\end_inset
-
-
+ tale per cui 
 \begin_inset Formula $f(x;\theta)$
 \end_inset
 
@@ -19240,7 +19261,7 @@ Le variabili aleatorie
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- e dunque 
+ e dunque a tutti gli effetti delle 
 \begin_inset Formula $V.A.$
 \end_inset
 
@@ -19820,8 +19841,8 @@ M_{r}^{c}=\sum_{i=0}^{r}\left(-1\right)^{i}\ C_{r}^{i}\ \mu^{i}\ M_{r-i}
 \end_inset
 
  è il coefficiente binomiale.
- La dimostrazione della precedente uguaglianza segue direttamente dal fatto
- che 
+ La dimostrazione della precedente uguaglianza segue direttamente dalla
+ linearità del valore atteso e dal fatto che 
 \begin_inset Formula 
 \[
 (a+b)^{n}=\sum_{i=0}^{n}C_{r}^{i}\ a^{i}\ b^{n-i}.
@@ -19894,12 +19915,12 @@ Sia
 \begin_inset Formula $M_{1}$
 \end_inset
 
- è semplicemente il valore atteso di 
-\begin_inset Formula $X$
+ è semplicemente 
+\begin_inset Formula $\mu$
 \end_inset
 
- che solitamente notiamo con 
-\begin_inset Formula $\mu$
+, il valore atteso di 
+\begin_inset Formula $X$
 \end_inset
 
 :
@@ -19934,12 +19955,16 @@ M_{3}=\sum_{x=0}^{\infty}x^{3}\frac{\theta^{x}e^{-\theta}}{x!}=\theta+3\theta^{2
 
 \end_inset
 
- Come potete ancora una volta constatare sia 
+ Come potete ancora una volta constatare i momenti 
 \begin_inset Formula $M_{1}$
 \end_inset
 
- che 
+, 
 \begin_inset Formula $M_{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $M_{3}$
 \end_inset
 
  sono particolari funzioni del parametro 
@@ -20876,7 +20901,7 @@ nel punto
 \color none
 \lang english
 
-\begin_inset Formula $M_{r,n}$
+\begin_inset Formula $m_{r,n}$
 \end_inset
 
 
@@ -20904,7 +20929,7 @@ reference "approx momento"
 ) otteniamo
 \begin_inset Formula 
 \begin{equation}
-\widehat{\theta}=M_{r}^{-1}(M_{r,n})\simeq M_{r}^{-1}\left(M_{r}(\theta_{0})\right)=\theta_{0}\text{.}
+\widehat{\theta}=M_{r}^{-1}(m_{r,n})\simeq M_{r}^{-1}\left(M_{r}(\theta_{0})\right)=\theta_{0}\text{.}
 \end{equation}
 
 \end_inset
@@ -20915,7 +20940,7 @@ reference "approx momento"
 \begin_layout Standard
 \noindent
 La quantità 
-\begin_inset Formula $M_{r}^{-1}(M_{r,n})$
+\begin_inset Formula $M_{r}^{-1}(m_{r,n})$
 \end_inset
 
  è calcolabile a condizione che la funzione inversa 
@@ -20924,7 +20949,7 @@ La quantità
 
  esista (l'equazione abbia un'unica soluzione).
  
-\begin_inset Formula $M_{r}^{-1}(M_{r,n})$
+\begin_inset Formula $M_{r}^{-1}(m_{r,n})$
 \end_inset
 
  rappresenta un'approssimazione (stima) del vero parametro 
@@ -21066,7 +21091,7 @@ Supponiamo che
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- sia un campione casuale da una distribuzione Normale 
+ sia un campione casuale estratto da una distribuzione Normale 
 \begin_inset Formula $N\left(\mu_{0},\sigma_{0}^{2}\right)$
 \end_inset
 
@@ -21302,11 +21327,8 @@ L'idea alla base del metodo di stima di massima verosimiglianza è molto
  Il seguente esempio preso da A.
  Mood, F.
  Graybill e D.
- Boes (Introduzione alla statistica,
-\begin_inset space \space{}
-\end_inset
-
-McGraw-Hill, ISBN 88-386-0661-7) ne illustra l'idea.
+ Boes (Introduzione alla statistica, McGraw-Hill, ISBN 88-386-0661-7) ne
+ illustra l'idea.
 \end_layout
 
 \begin_layout Standard
@@ -21318,14 +21340,14 @@ McGraw-Hill, ISBN 88-386-0661-7) ne illustra l'idea.
 
 \begin_layout Standard
 \noindent
-Supponiamo che un'urna contenga un certo numero di palle nere e un certo
- numero di palle bianche, e supponiamo che si sappia che il rapporto fra
+Supponiamo che un'urna contenga un certo numero di palline nere e un certo
+ numero di palline bianche, e supponiamo che si sappia che il rapporto fra
  i due numeri è di 
 \begin_inset Formula $3/1$
 \end_inset
 
-, ma che non si sappia se le palle più numerose siano le nere o le bianche.
- In altre parole, la probabilità di estrarre una palla nera è 
+, ma che non si sappia se le palline più numerose siano le nere o le bianche.
+ In altre parole, la probabilità di estrarre una pallina nera è 
 \begin_inset Formula $1/4$
 \end_inset
 
@@ -21334,15 +21356,19 @@ Supponiamo che un'urna contenga un certo numero di palle nere e un certo
 \end_inset
 
 .
- Se si estraggono dall'urna con reimmissione 
+ Se si estraggono dall'urna 
+\emph on
+con reimmissione
+\emph default
+ 
 \begin_inset Formula $n$
 \end_inset
 
- palle, la distribuzione di 
+ palline, la distribuzione di 
 \begin_inset Formula $X$
 \end_inset
 
-, la variabile aleatoria che denota il numero di palle nere presenti nel
+, la variabile aleatoria che denota il numero di palline nere presenti nel
  campione, è data dalla distribuzione binomiale
 \begin_inset Formula 
 \[
@@ -21359,7 +21385,7 @@ f(x;p)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,
 \begin_inset Formula $p$
 \end_inset
 
- è la probabilità di estrarre una palla nera.
+ è la probabilità di estrarre una pallina nera.
  In questo caso 
 \begin_inset Formula $p=1/4$
 \end_inset
@@ -21369,7 +21395,7 @@ f(x;p)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,
 \end_inset
 
 .
- Estrarremo con reimmissione un campione di tre palle, cioè 
+ Estrarremo con reimmissione un campione di tre palline, cioè 
 \begin_inset Formula $n=3$
 \end_inset
 
@@ -21480,8 +21506,8 @@ massima probabilità
 \begin_inset Formula 
 \[
 \widehat{p}=\widehat{p}(x)=\left\{ \begin{array}{cc}
-0.25 & \text{quando osserviamo che }x=0,1\\
-0.75 & \text{quando osserviamo che }x=2,3
+0.25 & \text{quando osserviamo }x=0,1\\
+0.75 & \text{quando osserviamo }x=2,3
 \end{array}\right..
 \]
 
@@ -21491,7 +21517,7 @@ Lo stimatore
 \begin_inset Quotes eld
 \end_inset
 
-decide” così il valore di 
+decide” il valore di 
 \begin_inset Formula $p$
 \end_inset
 
@@ -21722,8 +21748,8 @@ reference "fig:Funzione-di-verosimiglianza"
 
 \end_inset
 
-) mostra quindi che il valore stimato del parametro sconosciuto massimizza,
- per dato valore osservato di 
+) mostra quindi che il valore stimato del parametro sconosciuto è stato
+ ottenuto massimizzando, per il dato valore osservato 
 \begin_inset Formula $x$
 \end_inset
 
@@ -21754,9 +21780,13 @@ tà
 \noun default
 \color inherit
 \lang italian
+ rispetto al parametro 
+\begin_inset Formula $p$
+\end_inset
+
 .
- La definizione di stimatore di massima verosimiglianza necessita dapprima
- la definizione di funzione di ve\SpecialChar \-
+ La definizione generale di stimatore di massima verosimiglianza necessita
+ dapprima la definizione di funzione di ve\SpecialChar \-
 ro\SpecialChar \-
 si\SpecialChar \-
 mi\SpecialChar \-
@@ -21911,7 +21941,7 @@ verosimiglianza” che le variabili aleatorie
 \end_inset
 
  assumano il particolare valore osservato 
-\begin_inset Formula $x_{1},...,x_{n}$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
 .
@@ -21919,13 +21949,14 @@ verosimiglianza” che le variabili aleatorie
 \emph on
 verosimiglianza
 \emph default
- è dunque il valore della funzione di densità congiunta valutata in 
-\begin_inset Formula $x_{1},...,x_{n}$
+ è dunque il valore della funzione di densità congiunta valutata nell'esito
+ 
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
 ; per variabili aleatorie discrete essa corrisponde a una probabilità.
  Osservati 
-\begin_inset Formula $x_{1},...,x_{n}$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
  la funzione di verosimiglianza dipende unicamente da 
@@ -21965,12 +21996,12 @@ re di
 \end_inset
 
  dipende ovviamente dai valori osservati 
-\begin_inset Formula $x_{1},...,x_{n}$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
 .
  Differenti valori di 
-\begin_inset Formula $x_{1},...,x_{n}$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
  daranno generalmente luogo a stime diverse.
@@ -22014,7 +22045,7 @@ re di
 \color none
 \lang english
 
-\begin_inset Formula $x_{1},...,x_{n}$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
 
@@ -22044,8 +22075,11 @@ re di
 \begin_inset Formula $T_{mv}(X_{1},...,X_{n})$
 \end_inset
 
- definisce una statistica che prende il nome di stimatore di massima verosimigli
-anza.
+ definisce una statistica che prende il nome di 
+\emph on
+stimatore di massima verosimiglianza
+\emph default
+.
 \begin_inset VSpace bigskip
 \end_inset
 
@@ -22083,15 +22117,15 @@ la funzione di verosimiglianza delle variabili casuali
 \begin_inset Formula $\widehat{\theta}$
 \end_inset
 
- [dove 
+ (dove 
 \begin_inset Formula $\widehat{\theta}=T_{mv}(x_{1},...,x_{n})$
 \end_inset
 
  è una funzione delle osservazioni 
-\begin_inset Formula $x_{1},...,x_{n}$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
-] è il valore di 
+) è il valore di 
 \begin_inset Formula $\theta$
 \end_inset
 
@@ -22129,7 +22163,7 @@ stima
 \end_inset
 
  sulla base della realizzazione 
-\begin_inset Formula $x_{1},...,x_{n}$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
  dell'
@@ -22233,7 +22267,7 @@ condizioni di regolarità
 \begin_layout Standard
 \noindent
 Ricordiamo che il logaritmo naturale 
-\begin_inset Formula $\ln()$
+\begin_inset Formula $ln()$
 \end_inset
 
  è una funzione monotona crescente (cf.
@@ -22292,14 +22326,18 @@ Questo significa che gli estremi della funzione di verosimiglianza
 \end_inset
 
  e della cosiddetta 
-\begin_inset Formula $\log$
+\begin_inset Formula $log$
 \end_inset
 
--verosimiglianza, definita come 
+
+\emph on
+-verosimiglianza
+\emph default
+ 
 \begin_inset Formula $ln(L(\theta))$
 \end_inset
 
-, sono gli stessi.
+ sono gli stessi.
  
 \begin_inset Float figure
 wide false
@@ -22347,17 +22385,16 @@ Generica funzione
 \end_inset
 
 Pertanto è indifferente ai fini della massimizzazione della funzione di
- verosimiglianza massimizzare la stessa 
+ verosimiglianza massimizzare 
 \begin_inset Formula $L(\theta)$
 \end_inset
 
  oppure il suo logaritmo 
-\begin_inset Formula $\ln L(\theta)$
+\begin_inset Formula $ln(L(\theta))$
 \end_inset
 
 .
- I punti di massimo e minimo delle due funzioni sono identici (si veda a
- tal riguardo la Figura 
+ I punti di massimo e minimo delle due funzioni sono identici (Figura 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Generica-funzione-g"
@@ -22431,10 +22468,10 @@ Qualora invece decidessimo di massimizzare il logaritmo naturale di
 \begin_inset Formula 
 \[
 \left\{ \begin{array}{c}
-\frac{\partial}{\partial\theta_{1}}\ln L(\theta_{1},\theta_{2},...,\theta_{k})=0\\
-\frac{\partial}{\partial\theta_{2}}\ln L(\theta_{1},\theta_{2},...,\theta_{k})=0\\
+\frac{\partial}{\partial\theta_{1}}ln\left(L(\theta_{1},\theta_{2},...,\theta_{k})\right)=0\\
+\frac{\partial}{\partial\theta_{2}}ln\left(L(\theta_{1},\theta_{2},...,\theta_{k})\right)=0\\
 \vdots\\
-\frac{\partial}{\partial\theta_{k}}\ln L(\theta_{1},\theta_{2},...,\theta_{k})=0
+\frac{\partial}{\partial\theta_{k}}ln\left(L(\theta_{1},\theta_{2},...,\theta_{k})\right)=0
 \end{array}\right.
 \]
 
@@ -22516,25 +22553,17 @@ X=\left\{ \begin{array}{cl}
  è data da
 \begin_inset Formula 
 \[
-\mathcal{P}=\left\{ f(x;p),\ p\in\left[0,1\right]\right\} \text{,}
-\]
-
-\end_inset
-
- con 
-\begin_inset Formula 
-\[
-f(x;p)=\left\{ \begin{array}{cl}
+\mathcal{P}=\left\{ f(x;p)=\left\{ \begin{array}{cl}
 p & \text{se }x=1,\\
-q & \text{se }x=0,\\
+1-p & \text{se }x=0,\\
 0 & \text{altrimenti.}
-\end{array}\right.
+\end{array}\right.,\ p\in\left[0,1\right]\right\} .
 \]
 
 \end_inset
 
  Le realizzazioni campionarie 
-\begin_inset Formula $x_{1},...,x_{n}$
+\begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
  di 
@@ -22569,7 +22598,11 @@ f(x_{1};p)=p^{x_{1}}q^{1-x_{1}}.\label{densita bernoulli}
 
 \end_inset
 
- Infatti, se 
+ Infatti, definendo 
+\begin_inset Formula $q=1-p$
+\end_inset
+
+, se 
 \begin_inset Formula $x_{1}=1$
 \end_inset
 
@@ -22638,7 +22671,7 @@ status collapsed
 -verosimiglianza è uguale a
 \begin_inset Formula 
 \[
-\ln L(p)=y\ln p+(n-y)\ln q\text{.}
+ln\left(L(p)\right)=yln(p)+(n-y)ln(q)\text{.}
 \]
 
 \end_inset
@@ -22654,7 +22687,7 @@ status collapsed
  poniamo la sua derivata prima uguale a zero:
 \begin_inset Formula 
 \[
-\frac{\partial\ln L(p)}{\partial p}=\frac{y}{p}-\frac{n-y}{1-p}\overset{!}{=}0.
+\frac{\partial ln\left(L(p)\right)}{\partial p}=\frac{y}{p}-\frac{n-y}{1-p}\overset{!}{=}0.
 \]
 
 \end_inset
@@ -22675,7 +22708,7 @@ status collapsed
  punto di massimo:
 \begin_inset Formula 
 \begin{eqnarray*}
-\frac{\partial^{2}\ln L(p)}{\partial p^{2}} & = & -\frac{y}{p^{2}}-\frac{n-y}{\left(1-p\right)^{2}}\\
+\frac{\partial^{2}ln\left(L(p)\right)}{\partial p^{2}} & = & -\frac{y}{p^{2}}-\frac{n-y}{\left(1-p\right)^{2}}\\
  & = & ...\\
  & = & \frac{-p^{2}+2\overline{x}p-\overline{x}}{np^{2}\left(1-p\right)^{2}}
 \end{eqnarray*}
@@ -22845,7 +22878,7 @@ reference "massimo vero bernoulli"
 -verosimiglianza si ottiene un'espressione più accessibile
 \begin_inset Formula 
 \begin{eqnarray*}
-\ln L(\mu,\sigma^{2}) & = & -2\ln(2\pi)-2\ln(\sigma^{2})+\\
+ln\left(L(\mu,\sigma^{2})\right) & = & -2\ln(2\pi)-2\ln(\sigma^{2})+\\
  &  & -\frac{1}{2\sigma^{2}}\left[\left(3-\mu\right)^{2}+\left(-3-\mu\right)^{2}+\left(5-\mu\right)^{2}+\left(-2-\mu\right)^{2}\right].
 \end{eqnarray*}
 
@@ -22977,17 +23010,17 @@ Proprietà degli stimatori puntuali
 \begin_layout Standard
 Nei paragrafi precedenti abbiamo derivato due stimatori puntuali utilizzando
  il metodo dei momenti ed il metodo di massima verosimiglianza.
- Ovviamente non sono questi gli unici metodi di stima.
- Lo stimatore dei minimi quadrati la cui presentazione è rimandata al corso
- di Introduzione all'Econometria potrebbe essere un ulteriore esempio.
+ Essi non sono questi gli unici metodi di stima.
+ Lo stimatore dei minimi quadrati, la cui presentazione è rimandata al corso
+ di Introduzione all'Econometria, potrebbe essere un ulteriore esempio.
  Vista l'abbondanza di stimatori la domanda che vogliamo affrontare in questo
  paragrafo è la seguente: 
 \begin_inset Quotes eld
 \end_inset
 
 Dati due stimatori esiste un modo per decidere quale dei due sia il migliore?”.
- Per decidere questo è necessario chiarire in che senso uno stimatore può
- essere migliore di un altro.
+ Per decidere questo è necessario chiarire in che senso uno stimatore è
+ migliore di un altro.
  A tal fine definiremo alcune proprietà che uno stimatore può possedere
  oppure no.
  Esse ci aiuteranno a decidere se e in che misura uno stimatore è migliore
@@ -23528,7 +23561,7 @@ Tornando ai due stimatori
 
 .
  Poiché 
-\begin_inset Formula $\widehat{\mu}_{1}$
+\begin_inset Formula $\widehat{\mu}_{2}$
 \end_inset
 
  è uno stimatore corretto vale che 
@@ -23539,11 +23572,11 @@ EQM_{\widehat{\mu}_{2}}=V(\widehat{\mu}_{2})=\frac{1}{3}.
 
 \end_inset
 
- Per quanto riguarda invece 
+ Per quanto riguarda 
 \begin_inset Formula $\widehat{\mu}_{5}$
 \end_inset
 
- 
+ abbiamo che 
 \begin_inset Formula 
 \[
 EQM_{\widehat{\mu}_{5}}=V(\widehat{\mu}_{5})+\left(-\frac{2}{3}\mu\right)^{2}=\frac{1}{27}+\frac{4}{9}\mu^{2}.
@@ -23551,7 +23584,7 @@ EQM_{\widehat{\mu}_{5}}=V(\widehat{\mu}_{5})+\left(-\frac{2}{3}\mu\right)^{2}=\f
 
 \end_inset
 
-Avremo quindi che lo stimatore 
+Lo stimatore 
 \begin_inset Formula $\widehat{\mu}_{5}$
 \end_inset
 
@@ -23583,7 +23616,7 @@ Avremo quindi che lo stimatore
 \begin_inset Formula $\widehat{\mu}_{2}$
 \end_inset
 
- in media quadratica per valori di 
+ in media quadratica per valori del parametro 
 \begin_inset Formula $\mu$
 \end_inset
 
@@ -23934,8 +23967,7 @@ tà tende a concentrarsi sempre più attorno al vero valore
 \noindent
 Potremmo chiederci quale sia la relazione tra la consistenza di uno stimatore
  e la sua varianza.
- Per introdurre e prima di affrontare questa discussione presentiamo la
- presente definizione.
+ Per introdurre questa discussione presentiamo la presente definizione.
 \end_layout
 
 \begin_layout Standard
@@ -24157,11 +24189,15 @@ reference "teo limite centrale"
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
- delle variabili aleatorie 
+ delle 
+\begin_inset Formula $n$
+\end_inset
+
+ variabili aleatorie 
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- se opportunamente standardizzata converge per 
+ opportunamente standardizzata converge per 
 \begin_inset Formula $n\rightarrow\infty$
 \end_inset
 
@@ -24339,7 +24375,7 @@ Distribuzione asintotica dello stimatore di massima verosimiglianza.
  con 
 \begin_inset Formula 
 \[
-\sum\limits _{i=1}^{n}\frac{\partial\ln f(x_{i};\theta)}{\partial\theta}\mid_{\theta=\widehat{\theta}_{n}}=0.
+\sum\limits _{i=1}^{n}\frac{\partial ln\left(f(x_{i};\theta)\right)}{\partial\theta}\mid_{\theta=\widehat{\theta}_{n}}=0.
 \]
 
 \end_inset
@@ -24377,7 +24413,7 @@ Lo stimatore di massima verosimiglianza è consistente per il parametro
 \end_inset
 
  dove 
-\begin_inset Formula $I(\theta):=E\left[\left(\frac{\partial\ln f(X;\theta)}{\partial\theta}\right)^{2}\right]$
+\begin_inset Formula $I(\theta):=E\left[\left(\frac{\partial ln\left(f(X;\theta)\right)}{\partial\theta}\right)^{2}\right]$
 \end_inset
 
  è chiamata l'informazione di Fisher.
@@ -24392,7 +24428,7 @@ Alternativamente
  può essere calcolata nel seguente modo
 \begin_inset Formula 
 \[
-I(\theta)=-E\left(\frac{\partial^{2}\ln f(X;\theta)}{\partial\theta^{2}}\right).
+I(\theta)=-E\left(\frac{\partial^{2}ln\left(f(X;\theta)\right)}{\partial\theta^{2}}\right).
 \]
 
 \end_inset
@@ -24434,7 +24470,7 @@ begin{remark}
 \end_inset
 
  la funzione 
-\begin_inset Formula $\ln f(x;\theta)$
+\begin_inset Formula $ln\left(f(x;\theta)\right)$
 \end_inset
 
  è derivata rispetto a 
@@ -24447,7 +24483,7 @@ begin{remark}
 
  è considerata costante!).
  La stessa cosa vale per la derivata seconda 
-\begin_inset Formula $\partial^{2}\ln f(x;\theta)/\partial\theta^{2}$
+\begin_inset Formula $\partial^{2}ln\left(f(x;\theta)\right)/\partial\theta^{2}$
 \end_inset
 
 .
@@ -24473,7 +24509,7 @@ Quest'ultimo teorema è particolarmente importante in quanto stabilisce che
  lo stimatore di massima verosimiglianza è 
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 \noindent
 uno stimatore consistente di 
 \begin_inset Formula $\theta$
@@ -24482,14 +24518,14 @@ uno stimatore consistente di
 ;
 \end_layout
 
-\begin_layout Enumerate
+\begin_layout Itemize
 \noindent
 distribuito asintoticamente secondo la legge Normale.
 \end_layout
 
 \begin_layout Standard
 \noindent
-Dunque, come nel caso della media campionaria 
+Come nel caso della media campionaria 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
 
@@ -24507,7 +24543,7 @@ Dunque, come nel caso della media campionaria
 informazione di Fisher
 \emph default
 : il valore atteso del quadrato di 
-\begin_inset Formula $\frac{\partial\ln f(X;\theta)}{\partial\theta}$
+\begin_inset Formula $\frac{\partial ln\left(f(X;\theta)\right)}{\partial\theta}$
 \end_inset
 
 .
@@ -24517,7 +24553,7 @@ informazione di Fisher
 
 , è altresì calcolabile per mezzo del valore atteso della seconda derivata
  di 
-\begin_inset Formula $\ln f(X;\theta)$
+\begin_inset Formula $ln\left(f(X;\theta)\right)$
 \end_inset
 
 .
@@ -24614,10 +24650,10 @@ reference "distr asintotic ml"
 
 \end_inset
 
- è corretto, devono valere le seguenti uguaglianze:
+ è corretto, devono valere le seguenti tre uguaglianze:
 \begin_inset Formula 
 \begin{equation}
-\sigma^{2}=E\left[\left(\frac{\partial\ln f(X;\mu)}{\partial\mu}\right)^{2}\right]^{-1}=-\left[E\left(\frac{\partial^{2}\ln f(X;\mu)}{\partial\mu^{2}}\right)\right]^{-1}.\label{verifica uguaglianza fisher}
+\sigma^{2}=E\left[\left(\frac{\partial ln\left(f(X;\mu)\right)}{\partial\mu}\right)^{2}\right]^{-1}=-\left[E\left(\frac{\partial^{2}ln\left(f(X;\mu)\right)}{\partial\mu^{2}}\right)\right]^{-1}.\label{verifica uguaglianza fisher}
 \end{equation}
 
 \end_inset
@@ -24672,11 +24708,11 @@ reference "verifica uguaglianza fisher"
 
 \begin_layout Enumerate
 Calcolate la derivata 
-\begin_inset Formula $\frac{\partial\ln f(x;\mu)}{\partial\mu}$
+\begin_inset Formula $\frac{\partial ln\left(f(X;\mu)\right)}{\partial\mu}$
 \end_inset
 
 , il suo quadrato ed infine il valore atteso del suo quadrato, notato 
-\begin_inset Formula $E\left[\left(\frac{\partial\ln f(X;\mu)}{\partial\mu}\right)^{2}\right]$
+\begin_inset Formula $E\left[\left(\frac{\partial ln\left(f(X;\mu)\right)}{\partial\mu}\right)^{2}\right]$
 \end_inset
 
 .
@@ -24685,7 +24721,7 @@ Calcolate la derivata
 
 \begin_layout Enumerate
 Calcolate la derivata seconda 
-\begin_inset Formula $\partial^{2}\ln f(x;\mu)/\partial\mu^{2}$
+\begin_inset Formula $\partial^{2}ln\left(f(X;\mu)\right)/\partial\mu^{2}$
 \end_inset
 
  ed in seguito il suo valore atteso.
@@ -24765,11 +24801,11 @@ Disuguaglianza di Cramèr-Rao.
 \begin_inset Formula $X_{1},...,X_{n}$
 \end_inset
 
- un campione 
-\begin_inset Formula $i.i.d.$
+ un 
+\begin_inset Formula $n$
 \end_inset
 
- estratto da una popolazione 
+-campione estratto da una popolazione 
 \begin_inset Formula $X$
 \end_inset
 
@@ -25043,7 +25079,11 @@ begin{theorem}
 \begin_inset Formula $i.i.d.$
 \end_inset
 
- estratto da una popolazione 
+ (un 
+\begin_inset Formula $n$
+\end_inset
+
+-campione) estratto da una popolazione 
 \begin_inset Formula $X$
 \end_inset
 
@@ -25151,7 +25191,7 @@ reference "esempio pino1"
 \noindent
 La costruzione di un test statistico richiede la definizione della famiglia
  parametrica 
-\begin_inset Formula $\mathcal{F}$
+\begin_inset Formula $\mathcal{P}$
 \end_inset
 
  di densità che si intende utilizzare.
@@ -25498,7 +25538,11 @@ Supponiamo che il latte non sia annacquato: in tal caso il valore di
 \begin_inset Formula $\mu$
 \end_inset
 
- sarebbe conosciuto ed uguale a quello calcolato dal Laboratorio cantonale.
+ sarebbe conosciuto ed uguale a 
+\begin_inset Formula $-0.545$
+\end_inset
+
+.
  Sia la distribuzione di 
 \begin_inset Formula $X$
 \end_inset
@@ -25931,9 +25975,9 @@ reference "esempio caseificio p1"
 \begin_inset Formula $H_{0}$
 \end_inset
 
- è sufficiente guardare ad un unico valore anziché all'intero campione.
- Nel nostro caso ad esempio, calcoliamo la media delle cinque osservazioni,
- 
+ è sufficiente guardare ad un unico valore anziché all'intero campione,
+ che in questo esempio ha dimensione 5.
+ Calcoliamo la media delle cinque osservazioni: 
 \begin_inset Formula $\overline{x}=-0.536$
 \end_inset
 
@@ -25947,7 +25991,7 @@ reference "esempio caseificio p1"
 \begin_inset Formula $H_{0}$
 \end_inset
 
- la distribuzione di 
+ la distribuzione della statistica 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
@@ -26132,7 +26176,11 @@ begin{definizione}
 \emph on
 probabilità
 \emph default
- sotto 
+ 
+\emph on
+sotto
+\emph default
+ 
 \begin_inset Formula $H_{0}$
 \end_inset
 
@@ -26140,7 +26188,11 @@ probabilità
 \begin_inset Formula $S$
 \end_inset
 
- almeno estremo quanto il valore osservato è detta 
+ almeno 
+\emph on
+tanto estremo
+\emph default
+ quanto il valore osservato è detta 
 \begin_inset Formula $p$
 \end_inset
 
@@ -26226,7 +26278,11 @@ più distante
 \begin_inset Formula $H_{0}$
 \end_inset
 
- - in direzione dell'ipotesi alternativa.
+ - in direzione dell'
+\emph on
+ipotesi alternativa
+\emph default
+.
  Il test statistico parlerà tanto più a favore dell'ipotesi nulla tanto
  più elevato sarà il 
 \begin_inset Formula $p$
@@ -27359,15 +27415,11 @@ begin{definizione}
 \begin_inset Formula $R\subset\Omega^{n}$
 \end_inset
 
- delle realizzazioni 
+ degli esiti 
 \begin_inset Formula $(x_{1},...,x_{n})$
 \end_inset
 
- di 
-\begin_inset Formula $(X_{1},...,X_{n})$
-\end_inset
-
- per cui 
+ dello spazio campionario per cui 
 \begin_inset Formula $S\geq k_{\alpha}$
 \end_inset
 
@@ -27656,9 +27708,8 @@ Per quanto riguarda i punti 1-5 non vi è alcuna differenza con la specificazion
 
 \begin_layout Standard
 \noindent
-Ma cos'è la regione critica? Diciamo che tendenzialmente rigetteremo l'ipotesi
- nulla se osserveremo dei valori della statistica estremi in direzione dell'ipot
-esi alternativa.
+Ma cos'è la regione critica? Rigetteremo l'ipotesi nulla se osserveremo
+ dei valori della statistica estremi in direzione dell'ipotesi alternativa.
  Essendo questo un test bilaterale (il valore atteso del diametro delle
  sfere potrebbe essere maggiore o minore rispetto al valore indicato nell'ipotes
 i nulla), dobbiamo considerare valori estremi della statistica in ambo le
@@ -27907,11 +27958,11 @@ Anche nel caso di un'ipotesi bilaterale possiamo definire una regione critica
 \begin_inset Formula $R$
 \end_inset
 
- includendo in essa tutte quelle realizzazioni 
+ includendo in essa gli esiti (tutte quelle realizzazioni 
 \begin_inset Formula $\left(x_{1},...,x_{25}\right)$
 \end_inset
 
- tali per cui una delle due disuguaglianze della (
+) per cui una delle due disuguaglianze della (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "disequazione test bilaterale"
@@ -27939,12 +27990,8 @@ begin{definizione}
 \begin_inset Formula $R$
 \end_inset
 
- delle possibili realizzazioni 
-\begin_inset Formula $(x_{1},...,x_{n})$
-\end_inset
-
- di 
-\begin_inset Formula $(X_{1},...,X_{n})$
+ degli esiti 
+\begin_inset Formula $(x_{1},...,x_{n})\in\Omega^{n}$
 \end_inset
 
  per cui 
@@ -27959,7 +28006,7 @@ begin{definizione}
  del test
 \begin_inset Formula 
 \[
-R:=\left\{ (x_{1},...,x_{n})\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{ oppure }S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} 
+R:=\left\{ (x_{1},...,x_{n})\in\Omega^{2}\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{ oppure }S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} 
 \]
 
 \end_inset
@@ -28110,7 +28157,7 @@ status open
 \noindent
 \align left
 \begin_inset space \hspace{}
-\length -1.3cm
+\length -1.4cm
 \end_inset
 
 
