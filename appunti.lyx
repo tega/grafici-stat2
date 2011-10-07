@@ -28157,12 +28157,13 @@ status open
 \noindent
 \align left
 \begin_inset space \hspace{}
-\length -1.4cm
+\length -0.4cm
 \end_inset
 
 
 \begin_inset Graphics
 	filename codiceR/grafici/testBilaterale.pdf
+	scale 90
 
 \end_inset
 
@@ -28223,8 +28224,8 @@ begin{remark}
 \begin_inset Formula $R$
 \end_inset
 
- è un sottoinsieme delle possibili realizzazioni campionarie del nostro
- esperimento statisico: 
+ è un sottoinsieme dello spazio campionario del nostro esperimento statisico:
+ 
 \begin_inset Formula $R\subset\Omega^{n}$
 \end_inset
 
@@ -28393,12 +28394,105 @@ Dunque nei due casi visti
 \end_inset
 
 .
+ Grazie ad essa è stato possibile definire la regione critica 
+\begin_inset Formula $R$
+\end_inset
+
+, ovvero l'evento che definisce il rifiuto dell'ipotesi nulla.
+ Se l'esito dell'esperimento statistico sarà contenuto in 
+\begin_inset Formula $R$
+\end_inset
+
+, ovvero se 
+\begin_inset Formula 
+\[
+(x_{1},x_{2},...,x_{n})\in R
+\]
+
+\end_inset
+
+allora l'ipotesi nulla verrà rifiutata altrimenti verrà mantenuta.
  Cosa succederebbe se, anziché la media 
 \begin_inset Formula $\overline{X}$
 \end_inset
 
-, utilizzassimo un'altra statistica? Vogliamo considerare questa possibilità
- per l'Esempio 
+, utilizzassimo un'altra statistica? Vedremo che cambiando la statistica
+ si va a modificare la regione critica 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Eseguendo gli stessi passi studiati con la media 
+\begin_inset Formula $\bar{X}$
+\end_inset
+
+, ovvero
+\end_layout
+
+\begin_layout Enumerate
+definire l'ipotesi nulla e ricavare la distribuzione della nuova statistica
+ 
+\begin_inset Formula $S$
+\end_inset
+
+ sotto l'ipotesi nulla (passo 1);
+\end_layout
+
+\begin_layout Enumerate
+definire l'ipotesi alternativa, cioé la direzione contro l'ipotesi nulla
+ e la tipologia del test (unilaterale o bilaterale) (passo 2);
+\end_layout
+
+\begin_layout Enumerate
+scegliere il livello 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ di significatività desiderato (passo 3);
+\end_layout
+
+\begin_layout Enumerate
+calcolare il nuovo 
+\begin_inset Formula $p$
+\end_inset
+
+-value e confrontarlo con il livello 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ di significatività prescelto (passo 4), oppure
+\end_layout
+
+\begin_layout Enumerate
+calcolare le nuove soglie critiche 
+\begin_inset Formula $k_{\alpha}$
+\end_inset
+
+(test unilaterale) o 
+\begin_inset Formula $k_{s,\alpha}$
+\end_inset
+
+ e 
+\begin_inset Formula $k_{d,\alpha}$
+\end_inset
+
+ (test bilaterale) ed il nuovo evento critico 
+\begin_inset Formula $E'$
+\end_inset
+
+ corrispondente (passo 5),
+\end_layout
+
+\begin_layout Standard
+otterremo una nuova regione critica definita come in precedenza da 
+\begin_inset Formula 
+\[
+R=S^{-1}(E').
+\]
+
+\end_inset
+
+Vogliamo considerare questa possibilità per l'Esempio 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "esempio caseificio p1"
@@ -28436,7 +28530,7 @@ La media dei cinque valori è uguale a
 
 \end_inset
 
- La realizzazione di 
+La realizzazione di 
 \begin_inset Formula $S$
 \end_inset
 
@@ -28540,7 +28634,7 @@ status open
 
 liamo
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Al fine di distinguere fra la funzione di ripartizione (densità) della statistic
@@ -28548,9 +28642,8 @@ a
 \begin_inset Formula $S$
 \end_inset
 
- e la funzione di ripartizione (densità) delle V.A.
- 
-\begin_inset Formula $X_{i}$
+ e la funzione di ripartizione (densità) delle variabile aleatoria 
+\begin_inset Formula $X$
 \end_inset
 
 , aggiungeremo la lettera 
@@ -28558,7 +28651,7 @@ a
 \end_inset
 
  o 
-\begin_inset Formula $X_{i}$
+\begin_inset Formula $X$
 \end_inset
 
  al piede di 
@@ -28578,11 +28671,11 @@ a
 \begin_inset Formula $F_{S}(s)$
 \end_inset
 
-, la distribuzione di 
+, la distribuzione della statistica 
 \begin_inset Formula $S$
 \end_inset
 
-, cioè del minimo fra 
+ (passo 1), cioè del minimo fra 
 \begin_inset Formula $(X_{1},...,X_{5})$
 \end_inset
 
@@ -28841,13 +28934,9 @@ Formulazione del test
 \end_layout
 
 \begin_layout Standard
-Riprendiamo qui di seguito la situazione punto per punto: 
-\end_layout
-
-\begin_layout Enumerate
-Vogliamo testare l'ipotesi riguardante la composizione del latte acquistato
+Desideriamo testare l'ipotesi riguardante la composizione del latte acquistato
  da un certo fornitore sospettato di aggiungere acqua al suo latte.
- 
+ I passi necessari al test sono
 \end_layout
 
 \begin_layout Enumerate
@@ -28863,56 +28952,7 @@ H_{0}:\:\mu=-0.545\text{.}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Enumerate
-L'ipotesi alternativa è che il fornitore abbia aggiunto acqua
-\begin_inset Formula 
-\[
-H_{A}:\:\mu>-0.545\text{.}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Fino a questo punto nulla è mutato.
- La novità consiste nell'utilizzare la statistica 
-\begin_inset Formula $S=min(X_{1},\ldots,X_{5})$
-\end_inset
-
- anziché 
-\begin_inset Formula $S=\overline{X}$
-\end_inset
-
-.
- Grazie al paragrafo 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "distribuzione del minimo"
-
-\end_inset
-
- conosciamo la distribuzione di 
-\begin_inset Formula $S$
-\end_inset
-
-.
- Il nuovo punto 
-\begin_inset Formula $4$
-\end_inset
-
-.
- diventa
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Abbiamo deciso di utilizzare 
+Utilizziamo 
 \begin_inset Formula $S=min(X_{1},\ldots,X_{5})$
 \end_inset
 
@@ -28979,6 +29019,45 @@ F_{X}(s)=\int\limits _{-\infty}^{s}f_{X}(x)dx
 \end_layout
 
 \begin_layout Enumerate
+L'ipotesi alternativa è che il fornitore abbia aggiunto acqua
+\begin_inset Formula 
+\[
+H_{A}:\:\mu>-0.545\text{.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Fino a questo punto nulla è mutato.
+ La novità consiste nell'utilizzare la statistica 
+\begin_inset Formula $S=min(X_{1},\ldots,X_{5})$
+\end_inset
+
+ anziché 
+\begin_inset Formula $S=\overline{X}$
+\end_inset
+
+.
+ Grazie al paragrafo 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "distribuzione del minimo"
+
+\end_inset
+
+ ora conosciamo la distribuzione di 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Come con la media campionaria 
 \begin_inset Formula $\overline{X}$
 \end_inset
@@ -28992,7 +29071,7 @@ tà
 \end_inset
 
 .
- 
+ La scelta del livello di significatività è soggettiva e spetta al ricercatore.
 \end_layout
 
 \begin_layout Enumerate
@@ -29001,11 +29080,7 @@ Calcolo del
 \end_inset
 
 -value.
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-In questo caso il 
+ In questo caso il 
 \begin_inset Formula $p$
 \end_inset
 
@@ -29070,35 +29145,9 @@ Ricordiamo che in precedenza per la media campionaria
  e per tale motivo rifiutiamo l'ipotesi nulla.
 \end_layout
 
-\end_deeper
 \begin_layout Enumerate
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-[
-\end_layout
-
-\end_inset
-
-6 bis.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-]
-\end_layout
-
-\end_inset
-
- Calcolo della regione critica.
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Essendo questo un test d'ipotesi unilaterale destro, la regione critica
+Calcolo della regione critica.
+ Essendo questo un test d'ipotesi unilaterale destro, la regione critica
  è definita tramite l'
 \begin_inset Formula $1-\alpha$
 \end_inset
@@ -29107,7 +29156,7 @@ Essendo questo un test d'ipotesi unilaterale destro, la regione critica
 \begin_inset Formula $S$
 \end_inset
 
-, notato 
+, che notiamo 
 \begin_inset Formula $k_{\alpha}$
 \end_inset
 
@@ -29122,33 +29171,7 @@ k_{5\%} & = & -0.546\notag
 
 \end_inset
 
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-[
-\end_layout
-
-\end_inset
-
-7.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-]
-\end_layout
-
-\end_inset
-
- Per valori della statistica 
+Per valori della statistica 
 \begin_inset Formula $S$
 \end_inset
 
@@ -29183,7 +29206,7 @@ R=\left\{ (x_{1},...,x_{5})\mid\min(x_{1},...,x_{5})\geq k_{5\%}=-0.546\right\} 
 \begin_layout Standard
 \noindent
 Il valore realizzato 
-\begin_inset Formula $x_{\min}=-0.542$
+\begin_inset Formula $s=-0.542$
 \end_inset
 
  è effettivamente maggiore di 
