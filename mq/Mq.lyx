@@ -1,5 +1,5 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass report
@@ -17,18 +17,26 @@
 \newtheorem{theorem}[theor]{Teorema}
 \end_preamble
 \use_default_options false
+\maintain_unincluded_children false
 \language italian
+\language_package default
 \inputencoding auto
+\fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -36,21 +44,31 @@
 \use_geometry false
 \use_amsmath 2
 \use_esint 1
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Indice
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 1
 \paragraph_separation indent
-\defskip medskip
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -68,7 +86,7 @@ Semestre Estivo
 \begin_inset Newline newline
 \end_inset
 
- 2011
+ 2012
 \end_layout
 
 \begin_layout Standard
@@ -110,8 +128,10 @@ Il problema
 
 \begin_layout Standard
 Nel quadro della regressione classica
-\begin_inset Formula \[
-y=X\beta+\varepsilon\]
+\begin_inset Formula 
+\[
+y=X\beta+\varepsilon
+\]
 
 \end_inset
 
@@ -129,9 +149,11 @@ ti in 2 gruppi:
 
 \begin_layout Itemize
 la matrice delle variabili esplicative
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 X=\left[\begin{tabular}{l|l}
- \ensuremath{\underset{\left(n\times K_{1}\right)}{X_{1}}} &  \ensuremath{\underset{\left(n\times K_{2}\right)}{X_{2}}}\end{tabular}\right]\]
+ \ensuremath{\underset{\left(n\times K_{1}\right)}{X_{1}}} &  \ensuremath{\underset{\left(n\times K_{2}\right)}{X_{2}}}\end{tabular}\right]
+\]
 
 \end_inset
 
@@ -140,12 +162,16 @@ X=\left[\begin{tabular}{l|l}
 
 \begin_layout Itemize
 il vettore dei coefficienti
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \beta=\left[\begin{array}{c}
 \beta_{1}\\
-\beta_{2}\end{array}\right]\begin{array}{c}
+\beta_{2}
+\end{array}\right]\begin{array}{c}
 \left(K_{1}\times1\right)\\
-\left(K_{2}\times1\right)\end{array}\]
+\left(K_{2}\times1\right)
+\end{array}
+\]
 
 \end_inset
 
@@ -159,8 +185,10 @@ Naturalmente, lo stimatore di
 \end_inset
 
  è lo stimatore abituale dei m.q.
-\begin_inset Formula \[
-\widehat{\beta}=\left(X^{\prime}X\right)^{-1}X^{\prime}y.\]
+\begin_inset Formula 
+\[
+\widehat{\beta}=\left(X^{\prime}X\right)^{-1}X^{\prime}y.
+\]
 
 \end_inset
 
@@ -195,35 +223,47 @@ Sappiamo che
 \end_inset
 
  è la soluzione del sistema
-\begin_inset Formula \[
-X^{\prime}X\ \widehat{\beta}=X^{\prime}y.\]
+\begin_inset Formula 
+\[
+X^{\prime}X\ \widehat{\beta}=X^{\prime}y.
+\]
 
 \end_inset
 
 In forma scomposta possiamo riscrivere il precedente sistema come
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \left[\begin{array}{c}
 X_{1}^{\prime}\\
-X_{2}^{\prime}\end{array}\right]\left[\begin{array}{cc}
+X_{2}^{\prime}
+\end{array}\right]\left[\begin{array}{cc}
 X_{1} & X_{2}\end{array}\right]\left[\begin{array}{c}
 \widehat{\beta}_{1}\\
-\widehat{\beta}_{2}\end{array}\right] & = & \left[\begin{array}{c}
+\widehat{\beta}_{2}
+\end{array}\right] & = & \left[\begin{array}{c}
 X_{1}^{\prime}\\
-X_{2}^{\prime}\end{array}\right]y\\
+X_{2}^{\prime}
+\end{array}\right]y\\
 \left[\begin{array}{cc}
 X_{1}^{\prime}X_{1} & X_{1}^{\prime}X_{2}\\
-X_{2}^{\prime}X_{1} & X_{2}^{\prime}X_{2}\end{array}\right]\left[\begin{array}{c}
+X_{2}^{\prime}X_{1} & X_{2}^{\prime}X_{2}
+\end{array}\right]\left[\begin{array}{c}
 \widehat{\beta}_{1}\\
-\widehat{\beta}_{2}\end{array}\right] & = & \left[\begin{array}{c}
+\widehat{\beta}_{2}
+\end{array}\right] & = & \left[\begin{array}{c}
 X_{1}^{\prime}y\\
-X_{2}^{\prime}y\end{array}\right]\end{eqnarray*}
+X_{2}^{\prime}y
+\end{array}\right]
+\end{eqnarray*}
 
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 X_{1}^{\prime}X_{1}\widehat{\beta}_{1}+X_{1}^{\prime}X_{2}\widehat{\beta}_{2} & = & X_{1}^{\prime}y\label{sistema 1}\\
-X_{2}^{\prime}X_{1}\widehat{\beta}_{1}+X_{2}^{\prime}X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}y\label{sistema 2}\end{eqnarray}
+X_{2}^{\prime}X_{1}\widehat{\beta}_{1}+X_{2}^{\prime}X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}y\label{sistema 2}
+\end{eqnarray}
 
 \end_inset
 
@@ -249,8 +289,10 @@ Poiché per ipotesi
 
  devono essere necessariamente linearmenti indipendenti.
  Ciò significa che la matrice quadrata
-\begin_inset Formula \[
-\underset{\left(K_{1}\times K_{1}\right)}{X_{1}^{\prime}X_{1}}\]
+\begin_inset Formula 
+\[
+\underset{\left(K_{1}\times K_{1}\right)}{X_{1}^{\prime}X_{1}}
+\]
 
 \end_inset
 
@@ -267,8 +309,10 @@ reference "sistema 1"
 \end_inset
 
  otteniamo:
-\begin_inset Formula \begin{equation}
-\widehat{\beta}_{1}=\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_{2}\widehat{\beta}_{2}\right)\label{sistema 3}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\widehat{\beta}_{1}=\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_{2}\widehat{\beta}_{2}\right)\label{sistema 3}
+\end{equation}
 
 \end_inset
 
@@ -287,16 +331,20 @@ reference "sistema 2"
 \end_inset
 
 ):
-\begin_inset Formula \[
-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_{2}\widehat{\beta}_{2}\right)+X_{2}^{\prime}X_{2}\widehat{\beta}_{2}=X_{2}^{\prime}y\]
+\begin_inset Formula 
+\[
+X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_{2}\widehat{\beta}_{2}\right)+X_{2}^{\prime}X_{2}\widehat{\beta}_{2}=X_{2}^{\prime}y
+\]
 
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \left(X_{2}^{\prime}X_{2}-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}\right)\widehat{\beta}_{2} & = & X_{2}^{\prime}y-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y\notag\\
 X_{2}^{\prime}\left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)y\notag\\
-X_{2}^{\prime}\ M_{1}\ X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\ M_{1}\; y.\label{sistema 3bis}\end{eqnarray}
+X_{2}^{\prime}\ M_{1}\ X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\ M_{1}\; y.\label{sistema 3bis}
+\end{eqnarray}
 
 \end_inset
 
@@ -312,8 +360,10 @@ Osservazioni sulla matrice
 \end_inset
 
  è della stessa forma e proprietà che la matrice
-\begin_inset Formula \[
-M=I-X\left(X^{\prime}X\right)^{-1}X^{\prime}\]
+\begin_inset Formula 
+\[
+M=I-X\left(X^{\prime}X\right)^{-1}X^{\prime}
+\]
 
 \end_inset
 
@@ -335,11 +385,14 @@ soltanto che essa è formata a partire da
 \end_inset
 
  si dimostra facilmente che
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \begin{tabular}{l}
  \ensuremath{\bullet\ M_{1}^{\prime}=M_{1}}e \ensuremath{M_{1}M_{1}=M_{1}\text{ (è simmetrica e idempotente)}}\\
 \ensuremath{\bullet\ rg(M_{1})=tr(M_{1})=n-K_{1}}\\
-\ensuremath{\bullet\ M_{1}X_{1}=0}\end{tabular}\]
+\ensuremath{\bullet\ M_{1}X_{1}=0}
+\end{tabular}
+\]
 
 \end_inset
 
@@ -357,8 +410,10 @@ Quando la matrice
 \end_inset
 
 , la matrice
-\begin_inset Formula \[
-\underset{\left(K_{2}\times K_{2}\right)}{X_{2}^{\prime}M_{1}X_{2}}\]
+\begin_inset Formula 
+\[
+\underset{\left(K_{2}\times K_{2}\right)}{X_{2}^{\prime}M_{1}X_{2}}
+\]
 
 \end_inset
 
@@ -381,8 +436,10 @@ Dimostrazione: Supponiamo che
 \end_inset
 
  diverso dal vettore nullo tale per cui 
-\begin_inset Formula \[
-X_{2}^{\prime}M_{1}X_{2}z=0.\]
+\begin_inset Formula 
+\[
+X_{2}^{\prime}M_{1}X_{2}z=0.
+\]
 
 \end_inset
 
@@ -395,9 +452,11 @@ Premoltiplicando la seguente uguaglianza per
 \end_inset
 
 , otteniamo la seguente forma quadratica
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \underset{\widetilde{z}^{\prime}}{\underbrace{z^{\prime}X_{2}^{\prime}M_{1}}}\underset{\widetilde{z}}{\ \underbrace{M_{1}X_{2}z}} & = & 0\\
-\widetilde{z}^{\prime}\widetilde{z} & = & 0\end{eqnarray*}
+\widetilde{z}^{\prime}\widetilde{z} & = & 0
+\end{eqnarray*}
 
 \end_inset
 
@@ -410,13 +469,16 @@ Ma
 \end_inset
 
 , ovvero
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 X_{2}z-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}z & = & 0\\
 \left[\begin{array}{cc}
 X_{1} & X_{2}\end{array}\right]\underset{y^{\ast}\neq0}{\underbrace{\left[\begin{array}{c}
 -\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}z\\
-z\end{array}\right]}} & = & 0\\
-X\ y^{\ast} & = & 0\end{eqnarray*}
+z
+\end{array}\right]}} & = & 0\\
+X\ y^{\ast} & = & 0
+\end{eqnarray*}
 
 \end_inset
 
@@ -460,16 +522,20 @@ reference "sistema 3bis"
 \end_inset
 
 ) abbiamo
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 X_{2}^{\prime}M_{1}X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}M_{1}y.\notag\\
-\widehat{\beta}_{2} & = & \left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y\label{sistema 4}\end{eqnarray}
+\widehat{\beta}_{2} & = & \left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y\label{sistema 4}
+\end{eqnarray}
 
 \end_inset
 
 Inoltre:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 V(\widehat{\beta}_{2}) & = & \left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}\underset{\sigma^{2}I}{\underbrace{V(y)}}M_{1}X_{2}\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}\\
- & = & \sigma^{2}\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}\end{eqnarray*}
+ & = & \sigma^{2}\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -495,10 +561,13 @@ Si tratta quest'ultimo del blocco in posizione
 \end_inset
 
 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 V(\widehat{\beta})=\sigma^{2}\left(X^{\prime}X\right)^{-1}=\left[\begin{array}{cc}
 V(\widehat{\beta}_{1}) & \ldots\\
-\ldots & V(\widehat{\beta}_{2})\end{array}\right].\]
+\ldots & V(\widehat{\beta}_{2})
+\end{array}\right].
+\]
 
 \end_inset
 
@@ -507,8 +576,10 @@ Punto sulla situazione:
 
 \begin_layout Itemize
 È possibile riscrivere il modello di regressione
-\begin_inset Formula \[
-y=X\beta+\varepsilon\]
+\begin_inset Formula 
+\[
+y=X\beta+\varepsilon
+\]
 
 \end_inset
 
@@ -518,8 +589,10 @@ y=X\beta+\varepsilon\]
 \begin_deeper
 \begin_layout Standard
 a blocchi rispetto alle variabili esplicative di nostro interesse:
-\begin_inset Formula \[
-y=X_{1}\beta_{1}+X_{2}\beta_{2}+\varepsilon\]
+\begin_inset Formula 
+\[
+y=X_{1}\beta_{1}+X_{2}\beta_{2}+\varepsilon
+\]
 
 \end_inset
 
@@ -542,8 +615,10 @@ y=X_{1}\beta_{1}+X_{2}\beta_{2}+\varepsilon\]
 \end_inset
 
  come
-\begin_inset Formula \[
-\widehat{\beta}_{2}=\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y\]
+\begin_inset Formula 
+\[
+\widehat{\beta}_{2}=\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y
+\]
 
 \end_inset
 
@@ -580,8 +655,10 @@ Si modifica
 \end_inset
 
 (trasforma) il modello di partenza
-\begin_inset Formula \[
-y=X_{1}\beta_{1}+X_{2}\beta_{2}+\varepsilon\]
+\begin_inset Formula 
+\[
+y=X_{1}\beta_{1}+X_{2}\beta_{2}+\varepsilon
+\]
 
 \end_inset
 
@@ -595,10 +672,12 @@ premoltiplicando per
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 M_{1}y & = & \underset{=0}{\underbrace{M_{1}X_{1}}}\beta_{1}+M_{1}X_{2}\beta_{2}+M_{1}\varepsilon\notag\\
 \underset{\left(n\times n\right)\left(n\times1\right)}{M_{1}y} & = & \underset{\left(n\times n\right)\left(n\times K_{2}\right)}{M_{1}X_{2}}\beta_{2}+M_{1}\varepsilon\notag\\
-\widetilde{y} & = & \widetilde{X}_{2}\beta_{2}+\widetilde{\varepsilon}\label{sistema 5}\end{eqnarray}
+\widetilde{y} & = & \widetilde{X}_{2}\beta_{2}+\widetilde{\varepsilon}\label{sistema 5}
+\end{eqnarray}
 
 \end_inset
 
@@ -608,10 +687,12 @@ M_{1}y & = & \underset{=0}{\underbrace{M_{1}X_{1}}}\beta_{1}+M_{1}X_{2}\beta_{2}
 \end_deeper
 \begin_layout Enumerate
 Si applicano i minimi quadrati sul modello trasformato
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta}_{2} & = & \left(\widetilde{X}_{2}^{\prime}\widetilde{X}_{2}\right)^{-1}\widetilde{X}_{2}^{\prime}\widetilde{y}\\
  & = & \left(X_{2}^{\prime}M_{1}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}M_{1}y\\
- & = & \left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y\end{eqnarray*}
+ & = & \left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y
+\end{eqnarray*}
 
 \end_inset
 
@@ -633,14 +714,18 @@ reference "sistema 4"
 \begin_layout Standard
 \noindent
 Analizziamo i residui stimati di questa regressione:
-\begin_inset Formula \[
-\widehat{\widetilde{\varepsilon}}=\widetilde{y}-\widetilde{X}_{2}\widehat{\beta}_{2}.\]
+\begin_inset Formula 
+\[
+\widehat{\widetilde{\varepsilon}}=\widetilde{y}-\widetilde{X}_{2}\widehat{\beta}_{2}.
+\]
 
 \end_inset
 
 Questi residui sono identici ai residui
-\begin_inset Formula \[
-\widehat{\varepsilon}=y-X\widehat{\beta}\]
+\begin_inset Formula 
+\[
+\widehat{\varepsilon}=y-X\widehat{\beta}
+\]
 
 \end_inset
 
@@ -650,11 +735,13 @@ della regressione del modello di partenza
 
 .
  Infatti,
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\varepsilon} & = & y-X\widehat{\beta}=y-X_{1}\widehat{\beta}_{1}-X_{2}\widehat{\beta}_{2}\\
  & = & y-X_{1}\underset{=\widehat{\beta}_{1}\text{, cf. formula (\ref{sistema 3})}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_{2}\widehat{\beta}_{2}\right)}}-X_{2}\widehat{\beta}_{2}\\
  & = & \left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)\left(y-X_{2}\widehat{\beta}_{2}\right)\\
- & = & M_{1}\left(y-X_{2}\widehat{\beta}_{2}\right)=\widetilde{y}-\widetilde{X}_{2}\widehat{\beta}_{2}=\widehat{\widetilde{\varepsilon}}\end{eqnarray*}
+ & = & M_{1}\left(y-X_{2}\widehat{\beta}_{2}\right)=\widetilde{y}-\widetilde{X}_{2}\widehat{\beta}_{2}=\widehat{\widetilde{\varepsilon}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -713,8 +800,10 @@ reference "sistema 5"
 
 ).
  Il programma calcolerà 
-\begin_inset Formula \[
-\widetilde{SS}=\widehat{\widetilde{\varepsilon}}^{\prime}\widehat{\widetilde{\varepsilon}}\]
+\begin_inset Formula 
+\[
+\widetilde{SS}=\widehat{\widetilde{\varepsilon}}^{\prime}\widehat{\widetilde{\varepsilon}}
+\]
 
 \end_inset
 
@@ -723,8 +812,10 @@ che come notato corrisponde al giusto
 \end_inset
 
 ,
-\begin_inset Formula \[
-\widehat{\beta}_{2}=\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y\]
+\begin_inset Formula 
+\[
+\widehat{\beta}_{2}=\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y
+\]
 
 \end_inset
 
@@ -738,35 +829,45 @@ che corrisponde al giusto
 \end_inset
 
  il programma darà
-\begin_inset Formula \[
-\widehat{\sigma}_{falso}^{2}=\frac{\widetilde{SS}}{n-K_{2}}\]
+\begin_inset Formula 
+\[
+\widehat{\sigma}_{falso}^{2}=\frac{\widetilde{SS}}{n-K_{2}}
+\]
 
 \end_inset
 
 mentre il vero (giusto) stimatore è:
-\begin_inset Formula \[
-\widehat{\sigma}_{vero}^{2}=\frac{SS}{n-K}=\frac{\widetilde{SS}}{n-K_{1}-K_{2}}.\]
+\begin_inset Formula 
+\[
+\widehat{\sigma}_{vero}^{2}=\frac{SS}{n-K}=\frac{\widetilde{SS}}{n-K_{1}-K_{2}}.
+\]
 
 \end_inset
 
 Ne segue che occorre aggiustare l'output del programma in maniera tale da
  correggere i gradi di libertà
-\begin_inset Formula \[
-\widehat{\sigma}^{2}=\widehat{\sigma}_{vero}^{2}=\frac{\widetilde{SS}}{n-K_{1}-K_{2}}=\frac{n-K_{2}}{n-K}\widehat{\sigma}_{falso}^{2}.\]
+\begin_inset Formula 
+\[
+\widehat{\sigma}^{2}=\widehat{\sigma}_{vero}^{2}=\frac{\widetilde{SS}}{n-K_{1}-K_{2}}=\frac{n-K_{2}}{n-K}\widehat{\sigma}_{falso}^{2}.
+\]
 
 \end_inset
 
 In maniera analoga,
-\begin_inset Formula \[
-\widehat{V}_{falso}(\widehat{\beta}_{2})=\widehat{\sigma}_{falso}^{2}\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}\]
+\begin_inset Formula 
+\[
+\widehat{V}_{falso}(\widehat{\beta}_{2})=\widehat{\sigma}_{falso}^{2}\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}
+\]
 
 \end_inset
 
 andrà corretto con
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{V}(\widehat{\beta}_{2}) & = & \widehat{\sigma}_{vero}^{2}\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}\\
  & = & \frac{n-K_{2}}{n-K}\widehat{\sigma}_{falso}^{2}\left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}\\
- & = & \frac{n-K_{2}}{n-K}\widehat{V}_{falso}(\widehat{\beta}_{2})\end{eqnarray*}
+ & = & \frac{n-K_{2}}{n-K}\widehat{V}_{falso}(\widehat{\beta}_{2})
+\end{eqnarray*}
 
 \end_inset
 
@@ -799,8 +900,10 @@ Interpretazione della trasformazione
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\widetilde{y}=M_{1}y=y-\underset{\widehat{\beta}_{1}\text{ della regressione }y=X_{1}\beta_{1}\ +\ \text{errore}}{X_{1}\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y}}\]
+\begin_inset Formula 
+\[
+\widetilde{y}=M_{1}y=y-\underset{\widehat{\beta}_{1}\text{ della regressione }y=X_{1}\beta_{1}\ +\ \text{errore}}{X_{1}\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y}}
+\]
 
 \end_inset
 
@@ -829,8 +932,10 @@ Si ha dunque che
 \end_inset
 
 :
-\begin_inset Formula \[
-y-\text{ "la parte di }y\text{ che è spiegabile da }X_{1}\text{".}\]
+\begin_inset Formula 
+\[
+y-\text{ "la parte di }y\text{ che è spiegabile da }X_{1}\text{".}
+\]
 
 \end_inset
 
@@ -843,9 +948,11 @@ La stessa interpretazione vale per ogni colonna di
 \end_inset
 
 :
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 M_{1}X_{2}=\left[\begin{tabular}{l|l|l|l}
- \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,1}} &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,2}} &  \ensuremath{\ldots} &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,K_{2}}}\end{tabular}\right]\]
+ \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,1}} &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,2}} &  \ensuremath{\ldots} &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,K_{2}}}\end{tabular}\right]
+\]
 
 \end_inset
 
@@ -943,9 +1050,11 @@ reference "sistema 3"
 \end_inset
 
 ))
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta}_{1} & = & \left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_{2}\widehat{\beta}_{2}\right)\\
- & = & \underset{\text{Stimatore di }\widehat{\beta}_{1}\text{\ sul modello parziale}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y}}-\ \ \ \underset{\text{Fattore d'aggiustamento}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}\widehat{\beta}_{2}}}\end{eqnarray*}
+ & = & \underset{\text{Stimatore di }\widehat{\beta}_{1}\text{\ sul modello parziale}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y}}-\ \ \ \underset{\text{Fattore d'aggiustamento}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}\widehat{\beta}_{2}}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -988,15 +1097,20 @@ status open
 
 ) i due stimatori sono identici.
  Infatti 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta} & = & \left(X^{\prime}X\right)^{-1}X^{\prime}y=\underset{\text{Matrice blocco diag. se }X_{1}^{\prime}X_{2}=0}{\underbrace{\left[\begin{array}{cc}
 X_{1}^{\prime}X_{1} & X_{1}^{\prime}X_{2}\\
-X_{2}^{\prime}X_{1} & X_{2}^{\prime}X_{2}\end{array}\right]^{-1}}}\left[\begin{array}{c}
+X_{2}^{\prime}X_{1} & X_{2}^{\prime}X_{2}
+\end{array}\right]^{-1}}}\left[\begin{array}{c}
 X_{1}^{\prime}y\\
-X_{2}^{\prime}y\end{array}\right]\\
+X_{2}^{\prime}y
+\end{array}\right]\\
  & = & \left[\begin{array}{c}
 \left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y\\
-\left(X_{2}^{\prime}X_{2}\right)^{-1}X_{2}^{\prime}y\end{array}\right]\leftarrow\text{ stimatori del modello parziale.}\end{eqnarray*}
+\left(X_{2}^{\prime}X_{2}\right)^{-1}X_{2}^{\prime}y
+\end{array}\right]\leftarrow\text{ stimatori del modello parziale.}
+\end{eqnarray*}
 
 \end_inset
 
@@ -1020,8 +1134,10 @@ begin{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-y=X_{1}\widehat{\beta}_{1}+X_{2}\widehat{\beta}_{2}+\varepsilon\]
+\begin_inset Formula 
+\[
+y=X_{1}\widehat{\beta}_{1}+X_{2}\widehat{\beta}_{2}+\varepsilon
+\]
 
 \end_inset
 
@@ -1038,49 +1154,62 @@ dove
 \end_inset
 
 .
-\begin_inset Formula \[
-\widetilde{y}=\widetilde{X}_{2}\widehat{\beta}_{2}+\widetilde{\varepsilon}\]
+\begin_inset Formula 
+\[
+\widetilde{y}=\widetilde{X}_{2}\widehat{\beta}_{2}+\widetilde{\varepsilon}
+\]
 
 \end_inset
 
 con 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widetilde{y} & = & M_{1}y\\
 M_{1} & = & I-S(S^{\prime}S)^{-1}S^{\prime}=I-\frac{1}{n}SS^{\prime}\\
 M_{1}y & = & y-\frac{1}{n}SS^{\prime}y=y-S\overline{y}=\left[\begin{array}{c}
 y_{1}\\
 y_{2}\\
 \vdots\\
-y_{n}\end{array}\right]-\left[\begin{array}{c}
+y_{n}
+\end{array}\right]-\left[\begin{array}{c}
 \overline{y}\\
 \overline{y}\\
 \vdots\\
-\overline{y}\end{array}\right]=\left[\begin{array}{c}
+\overline{y}
+\end{array}\right]=\left[\begin{array}{c}
 y_{1}-\overline{y}\\
 y_{2}-\overline{y}\\
 \vdots\\
-y_{n}-\overline{y}\end{array}\right].\end{eqnarray*}
+y_{n}-\overline{y}
+\end{array}\right].
+\end{eqnarray*}
 
 \end_inset
 
 Si tratta semplicemente del vettore degli scarti alla media.
  Il modello di partenza
-\begin_inset Formula \[
-y_{i}=\beta_{1}+\beta_{2}x_{2i}+\ldots+\beta_{K}x_{Ki}+\varepsilon_{i}\]
+\begin_inset Formula 
+\[
+y_{i}=\beta_{1}+\beta_{2}x_{2i}+\ldots+\beta_{K}x_{Ki}+\varepsilon_{i}
+\]
 
 \end_inset
 
 può essere stimato sul modello trasformato
-\begin_inset Formula \[
-y_{i}-\overline{y}=\beta_{2}\left(x_{2i}-\overline{x}_{2}\right)+\beta_{3}\left(x_{3i}-\overline{x}_{3}\right)+\ldots+\beta_{K}\left(x_{Ki}-\overline{x}_{K}\right)+\widetilde{\varepsilon}_{i}\ .\]
+\begin_inset Formula 
+\[
+y_{i}-\overline{y}=\beta_{2}\left(x_{2i}-\overline{x}_{2}\right)+\beta_{3}\left(x_{3i}-\overline{x}_{3}\right)+\ldots+\beta_{K}\left(x_{Ki}-\overline{x}_{K}\right)+\widetilde{\varepsilon}_{i}\ .
+\]
 
 \end_inset
 
 Inoltre
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \underset{(1\times1)}{\widehat{\beta}_{1}} & = & \left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_{2}\underset{(K-1)\times1}{\widehat{\beta}_{2}}\right)\\
  & = & \frac{1}{n}S^{\prime}(y-X_{2}\widehat{\beta}_{2})\\
- & = & \overline{y}-\overline{x}^{\prime}\widehat{\beta}_{2}\end{eqnarray*}
+ & = & \overline{y}-\overline{x}^{\prime}\widehat{\beta}_{2}
+\end{eqnarray*}
 
 \end_inset
 
@@ -1161,8 +1290,10 @@ abbiamo introdotto e studiato le proprietà del modello di regressione lineare.
 \end_inset
 
 , la formulazione del modello lineare in forma vettoriale è data da 
-\begin_inset Formula \begin{equation}
-\underset{(1\times1)}{y_{i}}=\underset{(1\times K)}{x_{i}^{\prime}}\underset{(K\times1)}{\beta}+\underset{(1\times1)}{\epsilon_{i}}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\underset{(1\times1)}{y_{i}}=\underset{(1\times K)}{x_{i}^{\prime}}\underset{(K\times1)}{\beta}+\underset{(1\times1)}{\epsilon_{i}}
+\end{equation}
 
 \end_inset
 
@@ -1171,8 +1302,10 @@ mentre per l'insieme degli
 \end_inset
 
  individui (periodi) abbiamo 
-\begin_inset Formula \begin{equation}
-\underset{(n\times1)}{y}=\underset{(n\times K)}{X}\underset{(K\times1)}{\beta}+\underset{(n\times1)}{\epsilon}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\underset{(n\times1)}{y}=\underset{(n\times K)}{X}\underset{(K\times1)}{\beta}+\underset{(n\times1)}{\epsilon}
+\end{equation}
 
 \end_inset
 
@@ -1295,8 +1428,10 @@ Il modello e le ipotesi
 
 \begin_layout Standard
 Ci interessiamo al modello di regressione 
-\begin_inset Formula \begin{equation}
-y=X\beta+\epsilon\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y=X\beta+\epsilon
+\end{equation}
 
 \end_inset
 
@@ -1519,10 +1654,13 @@ status open
 
 \begin_layout Standard
 Rispetto alla regressione classica la sola differenza è: 
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 \begin{array}{rcll}
 V(\epsilon) & = & \sigma^{2}I & \text{ regressione classica}\\
-V(\epsilon) & = & \sigma^{2}V & \text{ regressione generalizzata}\end{array}\end{equation}
+V(\epsilon) & = & \sigma^{2}V & \text{ regressione generalizzata}
+\end{array}
+\end{equation}
 
 \end_inset
 
@@ -1554,8 +1692,10 @@ name "esempio_mqg_puri"
 
 \begin_layout Standard
 Studiamo una funzione di risparmio del tipo: 
-\begin_inset Formula \begin{equation}
-S_{i}=a+bR_{i}+\epsilon_{i},\ \ \ i=1,\dots,n\end{equation}
+\begin_inset Formula 
+\begin{equation}
+S_{i}=a+bR_{i}+\epsilon_{i},\ \ \ i=1,\dots,n
+\end{equation}
 
 \end_inset
 
@@ -1639,8 +1779,10 @@ Tipicamente il grafico degli
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{grafico}\]
+\begin_inset Formula 
+\[
+\text{grafico}
+\]
 
 \end_inset
 
@@ -1655,14 +1797,18 @@ Tipicamente il grafico degli
 \noindent
 La varianza dell'errore non è costante: è una funzione crescente del reddito.
  Si può quindi scrivere: 
-\begin_inset Formula \[
-V(\epsilon_{i})=f(R_{i})>0\text{ e }f^{\prime}(R_{i})>0.\]
+\begin_inset Formula 
+\[
+V(\epsilon_{i})=f(R_{i})>0\text{ e }f^{\prime}(R_{i})>0.
+\]
 
 \end_inset
 
  Una specificazione naturale potrebbe quindi essere 
-\begin_inset Formula \[
-V(\epsilon_{i})=\sigma^{2}R_{i}^{2},\]
+\begin_inset Formula 
+\[
+V(\epsilon_{i})=\sigma^{2}R_{i}^{2},
+\]
 
 \end_inset
 
@@ -1684,12 +1830,15 @@ V(\epsilon_{i})=\sigma^{2}R_{i}^{2},\]
 \end_inset
 
  avremmo 
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 \underset{(n\times n)}{V(\epsilon)}=\sigma^{2}\underset{V}{\underbrace{\left[\begin{array}{cccc}
 R_{1}^{2} & 0 & \dots & 0\\
 0 & R_{2}^{2} & \ddots & 0\\
 \vdots & \ddots & \ddots & 0\\
-0 & \dots & 0 & R_{n}^{2}\end{array}\right]}}\end{equation}
+0 & \dots & 0 & R_{n}^{2}
+\end{array}\right]}}
+\end{equation}
 
 \end_inset
 
@@ -1795,9 +1944,11 @@ reference "esempio_mqg_puri"
 \end_inset
 
 ): 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 S_{i} & = & a+bR_{i}+\epsilon_{i}\\
-\underset{\text{(tasso di risparmio)}}{\frac{S_{i}}{R_{i}}} & = & a\frac{1}{R_{i}}+b+\frac{\epsilon_{i}}{R_{i}}\end{eqnarray*}
+\underset{\text{(tasso di risparmio)}}{\frac{S_{i}}{R_{i}}} & = & a\frac{1}{R_{i}}+b+\frac{\epsilon_{i}}{R_{i}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -1891,20 +2042,26 @@ L'esempio formalizzato
 Vogliamo ora riscrivere quanto fatto nel punto precedente in forma matriciale
  per poi coglierne la struttura.
  Chiamiamo dunque 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \begin{array}{cccc}
 y=\underset{(n\times1)}{\left[\begin{array}{c}
 S_{1}\\
 \vdots\\
-S_{n}\end{array}\right]} & X=\underset{(n\times2)}{\left[\begin{array}{cc}
+S_{n}
+\end{array}\right]} & X=\underset{(n\times2)}{\left[\begin{array}{cc}
 1 & R_{1}\\
 \vdots & \vdots\\
-1 & R_{n}\end{array}\right]} & \beta=\underset{(2\times1)}{\left[\begin{array}{c}
+1 & R_{n}
+\end{array}\right]} & \beta=\underset{(2\times1)}{\left[\begin{array}{c}
 a\\
-b\end{array}\right]} & \epsilon=\underset{(n\times1)}{\left[\begin{array}{c}
+b
+\end{array}\right]} & \epsilon=\underset{(n\times1)}{\left[\begin{array}{c}
 \epsilon_{1}\\
 \vdots\\
-\epsilon_{n}\end{array}\right]}\end{array}\]
+\epsilon_{n}
+\end{array}\right]}\end{array}
+\]
 
 \end_inset
 
@@ -1912,8 +2069,10 @@ b\end{array}\right]} & \epsilon=\underset{(n\times1)}{\left[\begin{array}{c}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Rightarrow y=X\beta+\epsilon\]
+\begin_inset Formula 
+\[
+\Rightarrow y=X\beta+\epsilon
+\]
 
 \end_inset
 
@@ -1925,7 +2084,8 @@ Inoltre sappiamo che
 \begin_inset Formula $V(\epsilon)=\sigma^{2}\left[\begin{array}{ccc}
 R_{1}^{2} &  & 0\\
  & \ddots\\
-0 &  & R_{n}^{2}\end{array}\right]=\sigma^{2}V$
+0 &  & R_{n}^{2}
+\end{array}\right]=\sigma^{2}V$
 \end_inset
 
 .
@@ -1968,18 +2128,23 @@ premoltiplicare
 \end_inset
 
 : 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \underset{(n\times1)}{\tilde{y}}\ ,\ \underset{(n\times n)}{P}=\left[\begin{array}{lll}
 \dfrac{1}{R_{1}} &  & 0\\
  & \ddots\\
-0 &  & \dfrac{1}{R_{n}}\end{array}\right]\Rightarrow\tilde{y}=Py.\]
+0 &  & \dfrac{1}{R_{n}}
+\end{array}\right]\Rightarrow\tilde{y}=Py.
+\]
 
 \end_inset
 
 Lo stesso per la parte destra dell'equazione.
  Il modello trasformato è dunque: 
-\begin_inset Formula \[
-\underset{(n\times n)}{P}\underset{(n\times1)}{y}=\underset{(n\times n)}{P}\underset{(n\times2)}{X\beta}+\underset{(n\times n)}{P}\underset{(n\times1)}{\epsilon}\]
+\begin_inset Formula 
+\[
+\underset{(n\times n)}{P}\underset{(n\times1)}{y}=\underset{(n\times n)}{P}\underset{(n\times2)}{X\beta}+\underset{(n\times n)}{P}\underset{(n\times1)}{\epsilon}
+\]
 
 \end_inset
 
@@ -1988,8 +2153,10 @@ La
 \end_inset
 
 esima riga: 
-\begin_inset Formula \[
-\dfrac{S_{i}}{R_{i}}=\left(\dfrac{1}{R_{i}},\dfrac{R_{i}}{R_{i}}\right)\beta+\dfrac{\epsilon_{i}}{R_{i}}\]
+\begin_inset Formula 
+\[
+\dfrac{S_{i}}{R_{i}}=\left(\dfrac{1}{R_{i}},\dfrac{R_{i}}{R_{i}}\right)\beta+\dfrac{\epsilon_{i}}{R_{i}}
+\]
 
 \end_inset
 
@@ -1998,8 +2165,10 @@ Il modello trasformato con la matrice non-singolare
 \end_inset
 
  è: 
-\begin_inset Formula \[
-\tilde{y}=\tilde{X}\beta+\tilde{\epsilon}\]
+\begin_inset Formula 
+\[
+\tilde{y}=\tilde{X}\beta+\tilde{\epsilon}
+\]
 
 \end_inset
 
@@ -2022,18 +2191,23 @@ dove dalle proprietà di
 \end_inset
 
  
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
  & = & \sigma^{2}\left[\begin{array}{lll}
 \dfrac{1}{R_{1}} &  & 0\\
  & \ddots\\
-0 &  & \dfrac{1}{R_{n}}\end{array}\right]\left[\begin{array}{lll}
+0 &  & \dfrac{1}{R_{n}}
+\end{array}\right]\left[\begin{array}{lll}
 R_{1}^{2} &  & 0\\
  & \ddots\\
-0 &  & R_{n}^{2}\end{array}\right]\left[\begin{array}{lll}
+0 &  & R_{n}^{2}
+\end{array}\right]\left[\begin{array}{lll}
 \dfrac{1}{R_{1}} &  & 0\\
  & \ddots\\
-0 &  & \dfrac{1}{R_{n}}\end{array}\right]\\
- & = & \sigma^{2}I_{n},\end{eqnarray*}
+0 &  & \dfrac{1}{R_{n}}
+\end{array}\right]\\
+ & = & \sigma^{2}I_{n},
+\end{eqnarray*}
 
 \end_inset
 
@@ -2065,8 +2239,10 @@ Gli stimatori dei
 \begin_deeper
 \begin_layout Standard
 Il modello iniziale è il seguente 
-\begin_inset Formula \[
-\underset{(n\times1)}{y}=\underset{(n\times K)}{X}\underset{(K\times1)}{\beta}+\underset{(n\times1)}{\epsilon},\]
+\begin_inset Formula 
+\[
+\underset{(n\times1)}{y}=\underset{(n\times K)}{X}\underset{(K\times1)}{\beta}+\underset{(n\times1)}{\epsilon},
+\]
 
 \end_inset
 
@@ -2104,8 +2280,10 @@ Sappiamo che per ogni matrice def.
 \end_inset
 
  tale che 
-\begin_inset Formula \[
-PVP^{\prime}=I.\]
+\begin_inset Formula 
+\[
+PVP^{\prime}=I.
+\]
 
 \end_inset
 
@@ -2118,9 +2296,11 @@ premoltiplicando
 \end_inset
 
  
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \underset{\tilde{y}}{\underbrace{Py}} & = & \underset{\tilde{X}}{\underbrace{PX}}\ \beta+\underset{\tilde{\epsilon}}{\underbrace{P\epsilon}}\notag\\
-\tilde{y} & = & \tilde{X}\beta+\tilde{\epsilon}\label{modello trasformato}\end{eqnarray}
+\tilde{y} & = & \tilde{X}\beta+\tilde{\epsilon}\label{modello trasformato}
+\end{eqnarray}
 
 \end_inset
 
@@ -2169,8 +2349,10 @@ lo stimatore di beta, chiamiamolo
 \end_inset
 
 : 
-\begin_inset Formula \[
-\beta^{\ast}=(\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime}\tilde{y}\]
+\begin_inset Formula 
+\[
+\beta^{\ast}=(\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime}\tilde{y}
+\]
 
 \end_inset
 
@@ -2179,8 +2361,10 @@ lo stimatore di beta, chiamiamolo
 
 \begin_layout Itemize
 la sua vera varianza 
-\begin_inset Formula \[
-V(\beta^{\ast})=\sigma^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}\]
+\begin_inset Formula 
+\[
+V(\beta^{\ast})=\sigma^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}
+\]
 
 \end_inset
 
@@ -2189,8 +2373,10 @@ V(\beta^{\ast})=\sigma^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}\]
 
 \begin_layout Itemize
 il vettore d'errori stimati sul modello trasformato: 
-\begin_inset Formula \[
-\hat{\tilde{\epsilon}}=\tilde{y}-\tilde{X}\beta^{\ast}\]
+\begin_inset Formula 
+\[
+\hat{\tilde{\epsilon}}=\tilde{y}-\tilde{X}\beta^{\ast}
+\]
 
 \end_inset
 
@@ -2199,14 +2385,18 @@ il vettore d'errori stimati sul modello trasformato:
 
 \begin_layout Itemize
 la somma dei quadrati degli errori (del modello trasformato!) 
-\begin_inset Formula \[
-\tilde{SS}={\hat{\tilde{\epsilon}}}^{\prime}\hat{\tilde{\epsilon}}=\tilde{y}^{\prime}\tilde{y}-{\beta^{\ast\prime}}\tilde{X}^{\prime}\tilde{y}=\tilde{y}^{\prime}\tilde{M}\tilde{y}\]
+\begin_inset Formula 
+\[
+\tilde{SS}={\hat{\tilde{\epsilon}}}^{\prime}\hat{\tilde{\epsilon}}=\tilde{y}^{\prime}\tilde{y}-{\beta^{\ast\prime}}\tilde{X}^{\prime}\tilde{y}=\tilde{y}^{\prime}\tilde{M}\tilde{y}
+\]
 
 \end_inset
 
 dove 
-\begin_inset Formula \[
-\tilde{M}=I-\tilde{X}(\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime}.\]
+\begin_inset Formula 
+\[
+\tilde{M}=I-\tilde{X}(\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime}.
+\]
 
 \end_inset
 
@@ -2219,8 +2409,10 @@ la stima corretta di
 \end_inset
 
  
-\begin_inset Formula \[
-\hat{\sigma}^{2}=\dfrac{\tilde{SS}}{n-K}\]
+\begin_inset Formula 
+\[
+\hat{\sigma}^{2}=\dfrac{\tilde{SS}}{n-K}
+\]
 
 \end_inset
 
@@ -2233,8 +2425,10 @@ la stima della matrice di varianza-covarianza di
 \end_inset
 
  
-\begin_inset Formula \[
-\hat{V}(\beta^{\ast})=\hat{\sigma}^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}\]
+\begin_inset Formula 
+\[
+\hat{V}(\beta^{\ast})=\hat{\sigma}^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}
+\]
 
 \end_inset
 
@@ -2265,9 +2459,11 @@ Lo stimatore
 \end_inset
 
  nel seguente modo: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \beta^{\ast} & = & (\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime}\tilde{y}\\
- & = & (X^{\prime}P^{\prime}PX)^{-1}X^{\prime}P^{\prime}Py\end{eqnarray*}
+ & = & (X^{\prime}P^{\prime}PX)^{-1}X^{\prime}P^{\prime}Py
+\end{eqnarray*}
 
 \end_inset
 
@@ -2276,10 +2472,12 @@ Ora, sapendo che
 \end_inset
 
  otteniamo successivamente 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 VP^{\prime} & = & P^{-1}\\
 P^{\prime} & = & V^{-1}P^{-1}\\
-P^{\prime}P & = & V^{-1}\end{eqnarray*}
+P^{\prime}P & = & V^{-1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -2292,8 +2490,10 @@ Dunque per lo stimatore
 
 \begin_layout Itemize
 lo stimatore 
-\begin_inset Formula \begin{equation}
-\beta^{\ast}=(X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}y\label{formula mqg}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\beta^{\ast}=(X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}y\label{formula mqg}
+\end{equation}
 
 \end_inset
 
@@ -2306,8 +2506,10 @@ La vera varianza di
 \end_inset
 
 
-\begin_inset Formula \[
-V(\beta^{\ast})=\sigma^{2}(X^{\prime}V^{-1}X)^{-1}\]
+\begin_inset Formula 
+\[
+V(\beta^{\ast})=\sigma^{2}(X^{\prime}V^{-1}X)^{-1}
+\]
 
 \end_inset
 
@@ -2316,8 +2518,10 @@ V(\beta^{\ast})=\sigma^{2}(X^{\prime}V^{-1}X)^{-1}\]
 
 \begin_layout Itemize
 Il vettore d'errori stimati sul modello di partenza 
-\begin_inset Formula \[
-\hat{\epsilon}=y-X\beta^{\ast}\]
+\begin_inset Formula 
+\[
+\hat{\epsilon}=y-X\beta^{\ast}
+\]
 
 \end_inset
 
@@ -2328,8 +2532,10 @@ Il vettore d'errori stimati sul modello di partenza
 \begin_layout Standard
 La relazione con gli errori stimati sul modello trasformato è la seguente:
  
-\begin_inset Formula \[
-\hat{\tilde{\epsilon}}=\tilde{y}-\tilde{X}\beta^{\ast}=Py-PX\beta^{\ast}=P(y-X\beta^{\ast})=P\hat{\epsilon}\]
+\begin_inset Formula 
+\[
+\hat{\tilde{\epsilon}}=\tilde{y}-\tilde{X}\beta^{\ast}=Py-PX\beta^{\ast}=P(y-X\beta^{\ast})=P\hat{\epsilon}
+\]
 
 \end_inset
 
@@ -2339,8 +2545,10 @@ La relazione con gli errori stimati sul modello trasformato è la seguente:
 \end_deeper
 \begin_layout Itemize
 sul modello trasformato avevamo: 
-\begin_inset Formula \[
-\tilde{SS}={\hat{\tilde{\epsilon}}}^{\prime}\hat{\tilde{\epsilon}}=\hat{\epsilon}^{\prime}P^{\prime}P\hat{\epsilon}=\hat{\epsilon}^{\prime}V^{-1}\hat{\epsilon}\]
+\begin_inset Formula 
+\[
+\tilde{SS}={\hat{\tilde{\epsilon}}}^{\prime}\hat{\tilde{\epsilon}}=\hat{\epsilon}^{\prime}P^{\prime}P\hat{\epsilon}=\hat{\epsilon}^{\prime}V^{-1}\hat{\epsilon}
+\]
 
 \end_inset
 
@@ -2366,8 +2574,10 @@ reference "formula mqg"
 ).
  Esso è così chiamato perché ottenuto minimizzando la somma dei quadrati
  generalizzati 
-\begin_inset Formula \begin{equation}
-\underset{\beta}{min}\ \underset{:=SSG}{\underbrace{(y-X\beta)^{\prime}V^{-1}(y-X\beta)}}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\underset{\beta}{min}\ \underset{:=SSG}{\underbrace{(y-X\beta)^{\prime}V^{-1}(y-X\beta)}}
+\end{equation}
 
 \end_inset
 
@@ -2377,13 +2587,15 @@ la cui soluzione è appunto il nostro
 
 .
  Infatti
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 SSG & = & (y-X\beta)^{\prime}V^{-1}(y-X\beta)\\
  & = & y^{\prime}V^{-1}y-y^{\prime}V^{-1}X\beta-\beta^{\prime}X^{\prime}V^{-1}y+\beta^{\prime}X^{\prime}V^{-1}X\beta\\
  & = & y^{\prime}V^{-1}y-\underset{\text{forma lineare}}{\underbrace{2y^{\prime}V^{-1}X\beta}}+\underset{\text{forma quadratica}}{\underbrace{\beta^{\prime}X^{\prime}V^{-1}X\beta}}\\
 \frac{\partial SSG}{\partial\beta} & = & -2X^{\prime}V^{-1}y+2X^{\prime}V^{-1}X\beta\overset{!}{=}0\\
  &  & \text{da cui risolvendo rispetto a }\beta\\
-\beta^{\ast} & = & (X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}y\end{eqnarray*}
+\beta^{\ast} & = & (X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}y
+\end{eqnarray*}
 
 \end_inset
 
@@ -2401,13 +2613,17 @@ Noi lo abbiamo ricavato utilizzando un'argomentazione diversa.
 \end_inset
 
 : 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \tilde{SS} & = & SSG=y^{\prime}V^{-1}y-{\beta^{\ast\prime}}(X^{\prime}V^{-1}y)\\
-\\\tilde{M} & = & I-\tilde{X}(\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime}\\
+\\
+\tilde{M} & = & I-\tilde{X}(\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime}\\
  & = & I-PX(X^{\prime}V^{-1}X)^{-1}X^{\prime}P^{\prime}\\
-\\\tilde{SS} & = & \tilde{y}^{\prime}\tilde{M}\tilde{y}=y^{\prime}P^{\prime}\tilde{M}Py\\
+\\
+\tilde{SS} & = & \tilde{y}^{\prime}\tilde{M}\tilde{y}=y^{\prime}P^{\prime}\tilde{M}Py\\
  & = & y^{\prime}P^{\prime}Py-y^{\prime}P^{\prime}PX(X^{\prime}V^{-1}X)^{-1}X^{\prime}P^{\prime}Py\\
- & = & y^{\prime}V^{-1}y-y^{\prime}V^{-1}X(X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}y\end{eqnarray*}
+ & = & y^{\prime}V^{-1}y-y^{\prime}V^{-1}X(X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}y
+\end{eqnarray*}
 
 \end_inset
 
@@ -2448,7 +2664,7 @@ name "tab:Spe"
  
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features>
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <row>
@@ -2532,11 +2748,16 @@ name "tab:Spe"
 \begin_layout Plain Layout
 \begin_inset Formula $\begin{array}{rcl}
 \beta^{\ast} & = & (\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime}\tilde{y}\\
-\\V(\beta^{\ast}) & = & \sigma^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}\\
-\\\tilde{SS} & = & {\hat{\tilde{\epsilon}}}^{\prime}\hat{\tilde{\epsilon}}=\tilde{y}^{\prime}\widetilde{M}\tilde{y}\\
+\\
+V(\beta^{\ast}) & = & \sigma^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}\\
+\\
+\tilde{SS} & = & {\hat{\tilde{\epsilon}}}^{\prime}\hat{\tilde{\epsilon}}=\tilde{y}^{\prime}\widetilde{M}\tilde{y}\\
  & = & \tilde{y}^{\prime}(I-\tilde{X}(\tilde{X}^{\prime}\tilde{X})^{-1}\tilde{X}^{\prime})\tilde{y}\\
-\\\hat{\sigma}^{2} & = & \tilde{SS}/(n-K)\\
-\\\widehat{V}(\beta^{\ast}) & = & \widehat{\sigma}^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}\end{array}$
+\\
+\hat{\sigma}^{2} & = & \tilde{SS}/(n-K)\\
+\\
+\widehat{V}(\beta^{\ast}) & = & \widehat{\sigma}^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}
+\end{array}$
 \end_inset
 
  
@@ -2550,11 +2771,16 @@ name "tab:Spe"
 \begin_layout Plain Layout
 \begin_inset Formula $\begin{array}{rcl}
 \beta^{\ast} & = & (X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}y\\
-\\V(\beta^{\ast}) & = & \sigma^{2}(X^{\prime}V^{-1}X)^{-1}\\
-\\SSG & = & \hat{\epsilon}^{\prime}V^{-1}\hat{\epsilon}\\
+\\
+V(\beta^{\ast}) & = & \sigma^{2}(X^{\prime}V^{-1}X)^{-1}\\
+\\
+SSG & = & \hat{\epsilon}^{\prime}V^{-1}\hat{\epsilon}\\
 = & \multicolumn{2}{l}{y^{\prime}(V^{-1}-V^{-1}X(X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1})y}\\
-\\\hat{\sigma}^{2} & = & SSG/(n-K)\\
-\\\widehat{V}(\beta^{\ast}) & = & \widehat{\sigma}^{2}(X^{\prime}V^{-1}X)^{-1}\end{array}$
+\\
+\hat{\sigma}^{2} & = & SSG/(n-K)\\
+\\
+\widehat{V}(\beta^{\ast}) & = & \widehat{\sigma}^{2}(X^{\prime}V^{-1}X)^{-1}
+\end{array}$
 \end_inset
 
  
@@ -2590,8 +2816,10 @@ Proprietà di
 \end_inset
 
  è corretto! Infatti: 
-\begin_inset Formula \[
-\beta^{\ast}=\underset{A}{\underbrace{(X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}}}\ y=Ay\]
+\begin_inset Formula 
+\[
+\beta^{\ast}=\underset{A}{\underbrace{(X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}}}\ y=Ay
+\]
 
 \end_inset
 
@@ -2633,15 +2861,19 @@ Dimostrazione: Condideriamo un qualsiasi altro stimatore lineare
 \end_inset
 
  corretto 
-\begin_inset Formula \[
-V(\beta^{\#})>V(\beta^{\ast})\]
+\begin_inset Formula 
+\[
+V(\beta^{\#})>V(\beta^{\ast})
+\]
 
 \end_inset
 
 Ora: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E(\beta^{\#}) & = & A^{\#}E(y)=A^{\#}X\beta\\
-V(\beta^{\#}) & = & \sigma^{2}A^{\#}V{A^{\#\prime}}\end{eqnarray*}
+V(\beta^{\#}) & = & \sigma^{2}A^{\#}V{A^{\#\prime}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -2660,12 +2892,14 @@ La condizione di correttezza di
 
 .
  Otteniamo: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 V(\beta^{\#}) & = & \sigma^{2}(A+C)V(A^{\prime}+C^{\prime})\\
  & = & \sigma^{2}\underset{V(\beta^{\ast})}{\underbrace{AVA^{\prime}}}+\underset{\text{nulli quando }\beta^{\#}\text{ è corretto}}{\underbrace{\sigma^{2}AVC^{\prime}+\sigma^{2}CVA^{\prime}}}+\underset{\text{def. non neg.}}{\underbrace{\sigma^{2}CVC^{\prime}}}\\
  &  & \text{poiché}\\
 A^{\#}X & = & I\Rightarrow\underset{I}{\underbrace{AX}}+CX=I\Rightarrow CX=0\\
-AVC^{\prime} & = & (X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}VC^{\prime}=(X^{\prime}V^{-1}X)^{-1}\underset{=0}{\underbrace{X^{\prime}C^{\prime}}}=0\end{eqnarray*}
+AVC^{\prime} & = & (X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}VC^{\prime}=(X^{\prime}V^{-1}X)^{-1}\underset{=0}{\underbrace{X^{\prime}C^{\prime}}}=0
+\end{eqnarray*}
 
 \end_inset
 
@@ -2692,16 +2926,20 @@ Stima corretta di
 \end_inset
 
  del modello trasformato, quindi 
-\begin_inset Formula \[
-\hat{\sigma}^{2}=\dfrac{SSG}{n-K}\text{ dove }SSG=\tilde{SS}\]
+\begin_inset Formula 
+\[
+\hat{\sigma}^{2}=\dfrac{SSG}{n-K}\text{ dove }SSG=\tilde{SS}
+\]
 
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 SSG & = & y^{\prime}\underset{Q}{\underbrace{\left[V^{-1}-V^{-1}X(X^{\prime}V^{-1}X)^{-1}X^{\prime}V^{-1}\right]}}y\\
  & = & y^{\prime}Qy\\
-E(SSG) & = & ?\end{eqnarray*}
+E(SSG) & = & ?
+\end{eqnarray*}
 
 \end_inset
 
@@ -2718,11 +2956,14 @@ Sappiamo che
 \end_inset
 
  Quindi 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 SSG & = & y^{\prime}Qy=\epsilon^{\prime}Q\epsilon\text{ è una }FQ\text{ in }\epsilon\sim N(0,\sigma^{2}V)\\
-\\E(SSG) & = & E(\epsilon^{\prime}Q\epsilon)=trQV(\epsilon)=\sigma^{2}trQV\\
+\\
+E(SSG) & = & E(\epsilon^{\prime}Q\epsilon)=trQV(\epsilon)=\sigma^{2}trQV\\
  & = & \sigma^{2}tr(I_{n}-V^{-1}X(X^{\prime}V^{-1}X)^{-1}X^{\prime})\\
- & = & \sigma^{2}tr(I_{n})-\sigma^{2}tr(I_{K})=\sigma^{2}(n-K)\end{eqnarray*}
+ & = & \sigma^{2}tr(I_{n})-\sigma^{2}tr(I_{K})=\sigma^{2}(n-K)
+\end{eqnarray*}
 
 \end_inset
 
@@ -2735,14 +2976,18 @@ Definendo
 \end_inset
 
 :
-\begin_inset Formula \[
-E(\hat{\sigma}^{2})=\sigma^{2}.\]
+\begin_inset Formula 
+\[
+E(\hat{\sigma}^{2})=\sigma^{2}.
+\]
 
 \end_inset
 
 Di conseguenza:
-\begin_inset Formula \[
-\hat{V}(\beta^{\ast})=\hat{\sigma}^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}=\hat{\sigma}^{2}(X^{\prime}V^{-1}X)^{-1}\]
+\begin_inset Formula 
+\[
+\hat{V}(\beta^{\ast})=\hat{\sigma}^{2}(\tilde{X}^{\prime}\tilde{X})^{-1}=\hat{\sigma}^{2}(X^{\prime}V^{-1}X)^{-1}
+\]
 
 \end_inset
 
@@ -2820,8 +3065,10 @@ Se chiamassimo
 \end_inset
 
  allora 
-\begin_inset Formula \begin{equation}
-\dfrac{\beta_{k}^{\ast}-\beta_{k}}{\sqrt{\hat{\sigma}^{2}\tilde{x}^{kk}}}\sim t_{n-K}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\dfrac{\beta_{k}^{\ast}-\beta_{k}}{\sqrt{\hat{\sigma}^{2}\tilde{x}^{kk}}}\sim t_{n-K}
+\end{equation}
 
 \end_inset
 
@@ -2911,8 +3158,10 @@ Nella regressione classica
 \end_inset
 
  e
-\begin_inset Formula \[
-y_{s}^{p}=x_{s}^{\prime}\hat{\beta}\]
+\begin_inset Formula 
+\[
+y_{s}^{p}=x_{s}^{\prime}\hat{\beta}
+\]
 
 \end_inset
 
@@ -2933,8 +3182,10 @@ Nella regressione generalizzata,
 \end_inset
 
  non è correlato con gli errori del campione,
-\begin_inset Formula \[
-y_{s}^{p}=x_{s}^{\prime}\beta^{\ast}\]
+\begin_inset Formula 
+\[
+y_{s}^{p}=x_{s}^{\prime}\beta^{\ast}
+\]
 
 \end_inset
 
@@ -2954,8 +3205,10 @@ Salvo nel caso di eteroschedasticità pura, nella regressione generalizzata
 
 .
  Il miglior previsore lineare è dato da
-\begin_inset Formula \[
-y_{s}^{p}=x_{s}^{\prime}\beta^{\ast}+Cov(\epsilon_{s},\epsilon)V(\epsilon)^{-1}\hat{\epsilon}\]
+\begin_inset Formula 
+\[
+y_{s}^{p}=x_{s}^{\prime}\beta^{\ast}+Cov(\epsilon_{s},\epsilon)V(\epsilon)^{-1}\hat{\epsilon}
+\]
 
 \end_inset
 
@@ -2985,8 +3238,10 @@ Vogliamo analizzare le conseguenze dell'applicazione dei minimi quadrati
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\hat{\beta}=(X^{\prime}X)^{-1}X^{\prime}y.\]
+\begin_inset Formula 
+\[
+\hat{\beta}=(X^{\prime}X)^{-1}X^{\prime}y.
+\]
 
 \end_inset
 
@@ -3037,8 +3292,10 @@ La vera matrice delle varianze covarianze di
 \end_inset
 
  bensì 
-\begin_inset Formula \begin{equation}
-V(\hat{\beta})=V((X^{\prime}X)^{-1}X^{\prime}y)=\sigma^{2}(X^{\prime}X)^{-1}X^{\prime}VX(X^{\prime}X)^{-1}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+V(\hat{\beta})=V((X^{\prime}X)^{-1}X^{\prime}y)=\sigma^{2}(X^{\prime}X)^{-1}X^{\prime}VX(X^{\prime}X)^{-1}
+\end{equation}
 
 \end_inset
 
@@ -3114,28 +3371,36 @@ begin{remark}
 regressione eteroschedastica
 \emph default
 , cioè nella situazione in cui 
-\begin_inset Formula \[
-V(\epsilon_{i})=\sigma_{i}^{2}\text{ e }Cov(\epsilon_{i},\epsilon_{j})=0,\ i\neq j\]
+\begin_inset Formula 
+\[
+V(\epsilon_{i})=\sigma_{i}^{2}\text{ e }Cov(\epsilon_{i},\epsilon_{j})=0,\ i\neq j
+\]
 
 \end_inset
 
 da cui 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 V(\epsilon)=\left[\begin{array}{ccc}
 \sigma_{1}^{2} &  & 0\\
  & \ddots\\
-0 &  & \sigma_{n}^{2}\end{array}\right]=V\ \text{matrice diagonale,}\]
+0 &  & \sigma_{n}^{2}
+\end{array}\right]=V\ \text{matrice diagonale,}
+\]
 
 \end_inset
 
 è tuttavia possibile ottenere dei test approssimativamente esatti utilizzando
  quale stima della matrice delle varianze covarianze 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \hat{V}(\hat{\beta}) & = & (X^{\prime}X)^{-1}X^{\prime}\hat{V}X(X^{\prime}X)^{-1},\\
 \text{ con }\hat{V} & = & \left[\begin{array}{ccc}
 \hat{\epsilon}_{1}^{2} &  & 0\\
  & \ddots\\
-0 &  & \hat{\epsilon}_{n}^{2}\end{array}\right].\end{eqnarray*}
+0 &  & \hat{\epsilon}_{n}^{2}
+\end{array}\right].
+\end{eqnarray*}
 
 \end_inset
 
@@ -3199,8 +3464,10 @@ Caso generale: Si può dimostrare che
 \end_inset
 
  tale che 
-\begin_inset Formula \begin{equation}
-\underset{(n\times n)}{V}\underset{(n\times K)}{X}=\underset{(n\times K)}{X}\underset{(K\times K)}{A}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\underset{(n\times n)}{V}\underset{(n\times K)}{X}=\underset{(n\times K)}{X}\underset{(K\times K)}{A}
+\end{equation}
 
 \end_inset
 
@@ -3312,12 +3579,15 @@ Con un campione di
 \end_inset
 
  osservazioni, abbiamo dunque 
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 \underset{(n\times n)}{V(\epsilon)}=\sigma^{2}\underset{V(\theta)}{\underbrace{\left[\begin{array}{cccc}
 1 & \theta & \dots & \theta\\
 \theta & 1 & \ddots & \vdots\\
 \vdots & \ddots & \ddots & \theta\\
-\theta & \dots & \theta & 1\end{array}\right]}}\end{equation}
+\theta & \dots & \theta & 1
+\end{array}\right]}}
+\end{equation}
 
 \end_inset
 
@@ -3390,8 +3660,10 @@ Quale alternativa ai
 simultaneamente
 \shape default
  tutti i parametri sconosciuti del modello che sono 
-\begin_inset Formula \[
-\underset{(K\times1)}{\beta},\ \underset{(1\times1)}{\sigma^{2}},\ \underset{(m\times1)}{\theta}\]
+\begin_inset Formula 
+\[
+\underset{(K\times1)}{\beta},\ \underset{(1\times1)}{\sigma^{2}},\ \underset{(m\times1)}{\theta}
+\]
 
 \end_inset
 
@@ -3497,23 +3769,30 @@ Assumendo la normalità degli errori
 \end_inset
 
  e si scrive 
-\begin_inset Formula \[
-L(y\mid\beta,\sigma^{2},\theta)=(2\pi\sigma^{2})^{-n/2}det\left[V(\theta)\right]^{-1/2}\exp{(-\frac{1}{2}(y-X\beta)}^{\prime}{\frac{1}{\sigma^{2}}V(\theta)^{-1}(y-X\beta))}\]
+\begin_inset Formula 
+\[
+L(y\mid\beta,\sigma^{2},\theta)=(2\pi\sigma^{2})^{-n/2}det\left[V(\theta)\right]^{-1/2}\exp{(-\frac{1}{2}(y-X\beta)}^{\prime}{\frac{1}{\sigma^{2}}V(\theta)^{-1}(y-X\beta))}
+\]
 
 \end_inset
 
 Gli stimatori di massima verosimiglianza sono soluzioni del programma 
-\begin_inset Formula \[
-\underset{\{\beta,\sigma^{2},\theta\}}{\max}L(y\mid\beta,\sigma^{2},\theta)\]
+\begin_inset Formula 
+\[
+\underset{\{\beta,\sigma^{2},\theta\}}{\max}L(y\mid\beta,\sigma^{2},\theta)
+\]
 
 \end_inset
 
 dal quale si ricavano le condizioni di primo ordine 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{ccc}
 \dfrac{\partial L}{\partial\sigma^{2}} & = & 0\\
 \dfrac{\partial L}{\partial\beta} & = & 0\\
-\dfrac{\partial L}{\partial\theta} & = & 0\end{array}\right.\]
+\dfrac{\partial L}{\partial\theta} & = & 0
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -3575,11 +3854,14 @@ Ipotesi e proprietà
 
 \begin_layout Standard
 La regressione abituale 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{c}
 y_{t}=x_{t}^{\prime}\beta+\epsilon_{t}\ \ \ \ t=1,\dots,n\\
 \epsilon_{t}=\underset{\text{parte regressiva}}{\underbrace{\rho\epsilon_{t-1}}}+\underset{\text{parte residua}}{\underbrace{u_{t}}}\\
-|\rho|<1\text{ e }u_{t}\sim iid(0,\sigma^{2})\end{array}\right.\]
+|\rho|<1\text{ e }u_{t}\sim iid(0,\sigma^{2})
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -3593,10 +3875,12 @@ dove
 
 .
  Vale dunque
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E(u_{t}) & = & 0\ \forall t\\
 E(u_{t}^{2}) & = & \sigma^{2}\ \forall t\\
-Cov(u_{t},u_{s}) & = & 0\ \forall t\neq s\end{eqnarray*}
+Cov(u_{t},u_{s}) & = & 0\ \forall t\neq s
+\end{eqnarray*}
 
 \end_inset
 
@@ -3612,22 +3896,28 @@ Interpretazione ed osservazioni
 
 \begin_layout Enumerate
 Il termine "modello markoviano" non è riferito all'equazione
-\begin_inset Formula \[
-y_{t}=x_{t}^{\prime}\beta+\epsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=x_{t}^{\prime}\beta+\epsilon_{t}
+\]
 
 \end_inset
 
 ma bensì alla struttura autoregressiva del suo termine d'errore 
-\begin_inset Formula \[
-\epsilon_{t}=\rho\epsilon_{t-1}+u_{t}\text{.}\]
+\begin_inset Formula 
+\[
+\epsilon_{t}=\rho\epsilon_{t-1}+u_{t}\text{.}
+\]
 
 \end_inset
 
 Nella seconda parte del corso, quando tratteremo i modelli dinamici, studieremo
  le proprietà dello stimatore dei minimi quadrati sul modello a variabile
  endogena ritardata 
-\begin_inset Formula \[
-y_{t}=\alpha_{1}y_{t-1}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=\alpha_{1}y_{t-1}+\varepsilon_{t}
+\]
 
 \end_inset
 
@@ -3723,8 +4013,10 @@ Salvo il termine
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\text{grafico}\]
+\begin_inset Formula 
+\[
+\text{grafico}
+\]
 
 \end_inset
 
@@ -3767,11 +4059,13 @@ Sostituendo recursivamente otteniamo la rappresenzatione di
 \end_inset
 
 : 
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \epsilon_{t} & = & u_{t}+\underset{\underset{\epsilon_{t-1}=u_{t-1}+\rho\epsilon_{t-2}}{\Uparrow}}{\rho\epsilon_{t-1}}\notag\\
  & = & u_{t}+\rho u_{t-1}+\underset{\underset{\epsilon_{t-2}=u_{t-2}+\rho\epsilon_{t-3}}{\Uparrow}}{\rho^{2}\epsilon_{t-2}}\notag\\
  & \vdots & \notag\\
- & = & \sum_{j=0}^{\infty}\rho^{j}u_{t-j}\ .\label{rappresentazione ma}\end{eqnarray}
+ & = & \sum_{j=0}^{\infty}\rho^{j}u_{t-j}\ .\label{rappresentazione ma}
+\end{eqnarray}
 
 \end_inset
 
@@ -3821,12 +4115,14 @@ Proprietà 3: La covarianza fra
 \end_inset
 
  
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 Cov(\epsilon_{t},\epsilon_{t-1}) & = & E(\epsilon_{t}\epsilon_{t-1})\\
  & = & E([u_{t}+\rho u_{t-1}+\rho u_{t-2}+\dots][u_{t-1}+\rho u_{t-2}+\dots])\\
  & = & \rho E(u_{t-1}^{2})+\rho^{3}E(u_{t-2}^{2})+\rho^{5}E(u_{t-3}^{2})+\dots\\
  & = & \sigma^{2}\rho\ (1+\rho^{2}+\rho^{4}+\dots)\\
- & = & \dfrac{\rho}{1-\rho^{2}}\sigma^{2}.\end{eqnarray*}
+ & = & \dfrac{\rho}{1-\rho^{2}}\sigma^{2}.
+\end{eqnarray*}
 
 \end_inset
 
@@ -3909,22 +4205,28 @@ begin{esempio}
 \end_inset
 
  
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \underset{(3\times3)}{V(\epsilon)}=\sigma^{2}\dfrac{1}{1-\rho^{2}}\left[\begin{array}{ccc}
 1 & \rho & \rho^{2}\\
 \rho & 1 & \rho\\
-\rho^{2} & \rho & 1\end{array}\right]\]
+\rho^{2} & \rho & 1
+\end{array}\right]
+\]
 
 \end_inset
 
 In generale 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 V(\epsilon)=\sigma^{2}\underset{\text{è la matrice }V(\theta)\text{ che qui è }V(\rho)\text{ e che dipende da un solo parametro }\rho.}{\underbrace{\dfrac{1}{1-\rho^{2}}\left[\begin{array}{ccccc}
 1 & \rho & \rho^{2} & \dots & \rho^{n-1}\\
 \rho & 1 & \rho & \ddots & \vdots\\
 \rho^{2} & \rho & 1 & \ddots & \rho^{2}\\
 \vdots & \ddots & \ddots & \ddots & \rho\\
-\rho^{n-1} & \dots & \rho^{2} & \rho & 1\end{array}\right]}}\]
+\rho^{n-1} & \dots & \rho^{2} & \rho & 1
+\end{array}\right]}}
+\]
 
 \end_inset
 
@@ -3933,14 +4235,17 @@ Sappiamo tutto sulla matrice
 \end_inset
 
 :
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \mid V(\rho)\mid & = & \dfrac{1}{1-\rho^{2}}\\
 V(\rho)^{-1} & = & \left[\begin{array}{ccccc}
 1 & -\rho & 0 & \dots & 0\\
 -\rho & 1+\rho^{2} & -\rho & \ddots & \vdots\\
 0 & -\rho & \ddots & \ddots & 0\\
 \vdots & \ddots & \ddots & 1+\rho^{2} & -\rho\\
-0 & \dots & 0 & -\rho & 1\end{array}\right]\end{eqnarray*}
+0 & \dots & 0 & -\rho & 1
+\end{array}\right]
+\end{eqnarray*}
 
 \end_inset
 
@@ -3968,8 +4273,10 @@ Cerchiamo ora la matrice
 
  che trasforma il modello di regressione generalizzata in un modello di
  regressione classica e cioè 
-\begin_inset Formula \[
-P(\rho)V(\rho)P(\rho)^{\prime}=I\]
+\begin_inset Formula 
+\[
+P(\rho)V(\rho)P(\rho)^{\prime}=I
+\]
 
 \end_inset
 
@@ -3983,10 +4290,12 @@ Se io considerassi la trasformazione
 
 .
  Il modello di partenza è come sappiamo 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & = & \beta_{0}+\beta_{1}x_{t}+\epsilon_{t}\\
 \underset{\tilde{y}_{t}}{\underbrace{y_{t}-\rho y_{t-1}}} & = & \underset{\text{costante}}{\underbrace{\beta_{0}(1-\rho)}}+\beta_{1}\underset{\tilde{x}_{t}}{\underbrace{(x_{t}-\rho x_{t-1})}}+u_{t}\\
-\tilde{y}_{t} & = & \tilde{\beta}_{0}+\beta_{1}\tilde{x}_{t}+u_{t}\end{eqnarray*}
+\tilde{y}_{t} & = & \tilde{\beta}_{0}+\beta_{1}\tilde{x}_{t}+u_{t}
+\end{eqnarray*}
 
 \end_inset
 
@@ -4007,8 +4316,10 @@ Problema: per l'osservazione
  Si perde così un'osservazione (grado di libertà).
  La soluzione esatta consiste nel trasformare la prima osservazione nel
  seguente modo: 
-\begin_inset Formula \[
-\sqrt{1-\rho^{2}}y_{1}=\beta_{0}\sqrt{1-\rho^{2}}+\beta_{1}\sqrt{1-\rho^{2}}x_{1}+\text{errore}\]
+\begin_inset Formula 
+\[
+\sqrt{1-\rho^{2}}y_{1}=\beta_{0}\sqrt{1-\rho^{2}}+\beta_{1}\sqrt{1-\rho^{2}}x_{1}+\text{errore}
+\]
 
 \end_inset
 
@@ -4024,9 +4335,13 @@ Come sarà quindi la matrice
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 P(\rho)=\left[\begin{array}{ccccc}
-\\\\\end{array}\right]\]
+\\
+\\
+\end{array}\right]
+\]
 
 \end_inset
 
@@ -4063,8 +4378,10 @@ e la presenza di errori autocorrelati? Sappiamo che quando
 \end_inset
 
 : 
-\begin_inset Formula \[
-\hat{\epsilon}_{t}=y_{t}-x_{t}^{\prime}\hat{\beta}\]
+\begin_inset Formula 
+\[
+\hat{\epsilon}_{t}=y_{t}-x_{t}^{\prime}\hat{\beta}
+\]
 
 \end_inset
 
@@ -4090,8 +4407,10 @@ Si fa il grafico degli errori.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -4115,8 +4434,10 @@ Test formale: Durbin-Watson
 \begin_deeper
 \begin_layout Enumerate
 Si calcola la quantità
-\begin_inset Formula \[
-d=\frac{\sum\limits _{t=2}^{n}\left(\widehat{\epsilon}_{t}-\widehat{\epsilon}_{t-1}\right)^{2}}{\sum\limits _{t=1}^{n}\widehat{\epsilon}_{t}^{2}}.\]
+\begin_inset Formula 
+\[
+d=\frac{\sum\limits _{t=2}^{n}\left(\widehat{\epsilon}_{t}-\widehat{\epsilon}_{t-1}\right)^{2}}{\sum\limits _{t=1}^{n}\widehat{\epsilon}_{t}^{2}}.
+\]
 
 \end_inset
 
@@ -4138,8 +4459,10 @@ Interpretazione di
 \end_inset
 
 :
-\begin_inset Formula \[
-d=\frac{\sum\limits _{t=2}^{n}\widehat{\epsilon}_{t}^{2}+\sum\limits _{t=2}^{n}\widehat{\epsilon}_{t-1}^{2}-2\sum\limits _{t=2}^{n}\widehat{\epsilon}_{t}\widehat{\epsilon}_{t-1}}{\sum\limits _{t=1}^{n}\widehat{\epsilon}_{t}^{2}}\simeq2-2\frac{\frac{1}{n}\sum\limits _{t=2}^{n}\widehat{\epsilon}_{t}\widehat{\epsilon}_{t-1}}{\frac{1}{n}\sum\limits _{t=1}^{n}\widehat{\epsilon}_{t}^{2}}\]
+\begin_inset Formula 
+\[
+d=\frac{\sum\limits _{t=2}^{n}\widehat{\epsilon}_{t}^{2}+\sum\limits _{t=2}^{n}\widehat{\epsilon}_{t-1}^{2}-2\sum\limits _{t=2}^{n}\widehat{\epsilon}_{t}\widehat{\epsilon}_{t-1}}{\sum\limits _{t=1}^{n}\widehat{\epsilon}_{t}^{2}}\simeq2-2\frac{\frac{1}{n}\sum\limits _{t=2}^{n}\widehat{\epsilon}_{t}\widehat{\epsilon}_{t-1}}{\frac{1}{n}\sum\limits _{t=1}^{n}\widehat{\epsilon}_{t}^{2}}
+\]
 
 \end_inset
 
@@ -4200,8 +4523,10 @@ Ecco spiegato perché al crescere di
 \end_inset
 
  sufficientemente grande 
-\begin_inset Formula \begin{equation}
-d\underset{\text{circa}}{\simeq}2(1-\rho).\label{d_circa}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+d\underset{\text{circa}}{\simeq}2(1-\rho).\label{d_circa}
+\end{equation}
 
 \end_inset
 
@@ -4308,8 +4633,10 @@ Quindi, quando
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{grafico}\]
+\begin_inset Formula 
+\[
+\text{grafico}
+\]
 
 \end_inset
 
@@ -4365,7 +4692,8 @@ Idealmente vorremmo trovare la soglia
 \begin_inset Formula $\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \begin{array}{l}
 \text{se }d<d_{L}\text{ sarà sicuramente }d<d^{\ast}\Rightarrow\text{autocorrelazione}\\
 \text{se }d>d_{U}\text{ sarà sicuramente }d>d^{\ast}\Rightarrow\text{assenza di autocorr.}\\
-\text{se }d_{L}<d<d_{U}\Rightarrow\text{non possiamo concludere nulla}\end{array}$
+\text{se }d_{L}<d<d_{U}\Rightarrow\text{non possiamo concludere nulla}
+\end{array}$
 \end_inset
 
 
@@ -4487,8 +4815,10 @@ begin{remark}
 il test non è applicabile quando nel modello appare una variabile endogena
  ritardata.
  Ad esempio:
-\begin_inset Formula \[
-c_{t}=a+bR_{t}+cC_{t-1}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+c_{t}=a+bR_{t}+cC_{t-1}+\varepsilon_{t}
+\]
 
 \end_inset
 
@@ -4571,14 +4901,18 @@ vero modello (DGP)
 \end_inset
 
 
-\begin_inset Formula \[
-C_{t}=a+bR_{t}+cC_{t-1}+\varepsilon_{t},\]
+\begin_inset Formula 
+\[
+C_{t}=a+bR_{t}+cC_{t-1}+\varepsilon_{t},
+\]
 
 \end_inset
 
 modello stimato
-\begin_inset Formula \[
-C_{t}=a+bR_{t}+\varepsilon_{t}\Leftarrow\text{ autocorrelazione}\]
+\begin_inset Formula 
+\[
+C_{t}=a+bR_{t}+\varepsilon_{t}\Leftarrow\text{ autocorrelazione}
+\]
 
 \end_inset
 
@@ -4638,8 +4972,10 @@ Prima tappa: stimiamo utilizzando i
 
 .
  In seguito costruiamo la regressione ausiliaria
-\begin_inset Formula \begin{equation}
-\widehat{\varepsilon}_{t}=\rho\widehat{\varepsilon}_{t-1}+u_{t}\label{regressione_ausiliaria}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\widehat{\varepsilon}_{t}=\rho\widehat{\varepsilon}_{t-1}+u_{t}\label{regressione_ausiliaria}
+\end{equation}
 
 \end_inset
 
@@ -4655,8 +4991,10 @@ reference "regressione_ausiliaria"
 \end_inset
 
 ) otteniamo
-\begin_inset Formula \[
-\widehat{\rho}=\frac{\sum\widehat{\varepsilon}_{t}\widehat{\varepsilon}_{t-1}}{\sum\widehat{\varepsilon}_{t}^{2}}\underset{n\rightarrow\infty}{\longrightarrow}\rho.\]
+\begin_inset Formula 
+\[
+\widehat{\rho}=\frac{\sum\widehat{\varepsilon}_{t}\widehat{\varepsilon}_{t-1}}{\sum\widehat{\varepsilon}_{t}^{2}}\underset{n\rightarrow\infty}{\longrightarrow}\rho.
+\]
 
 \end_inset
 
@@ -4674,8 +5012,10 @@ Seconda tappa:
 \begin_deeper
 \begin_layout Itemize
 Sia con la formula 
-\begin_inset Formula \[
-\beta^{\ast}=(X^{\prime}V(\widehat{\rho})^{-1}X)^{-1}X^{\prime}V(\widehat{\rho})^{-1}y\]
+\begin_inset Formula 
+\[
+\beta^{\ast}=(X^{\prime}V(\widehat{\rho})^{-1}X)^{-1}X^{\prime}V(\widehat{\rho})^{-1}y
+\]
 
 \end_inset
 
@@ -4747,51 +5087,66 @@ Abbiamo delle osservazioni
 \end_inset
 
  è dato dal medesimo modello:
-\begin_inset Formula \[
-y_{n+1}=x_{n+1}^{\prime}\beta+\varepsilon_{n+1}\]
+\begin_inset Formula 
+\[
+y_{n+1}=x_{n+1}^{\prime}\beta+\varepsilon_{n+1}
+\]
 
 \end_inset
 
 con 
-\begin_inset Formula \[
-\varepsilon_{n+1}=\rho\varepsilon_{n}+u_{n+1}.\]
+\begin_inset Formula 
+\[
+\varepsilon_{n+1}=\rho\varepsilon_{n}+u_{n+1}.
+\]
 
 \end_inset
 
 Sappiamo che il previsore lineare ottimale è dato da:
-\begin_inset Formula \[
-y_{n+1}^{p}=x_{n+1}^{\prime}\beta^{\ast}+R^{\prime}V^{-1}\widehat{\varepsilon}\]
+\begin_inset Formula 
+\[
+y_{n+1}^{p}=x_{n+1}^{\prime}\beta^{\ast}+R^{\prime}V^{-1}\widehat{\varepsilon}
+\]
 
 \end_inset
 
 dove 
-\begin_inset Formula \[
-\widehat{\varepsilon}=y-X\beta^{\ast}.\]
+\begin_inset Formula 
+\[
+\widehat{\varepsilon}=y-X\beta^{\ast}.
+\]
 
 \end_inset
 
 Nel nostro caso:
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 V^{-1}=\left[\begin{array}{ccccc}
 1 & -\rho & 0 & \dots & 0\\
 -\rho & 1+\rho^{2} & -\rho & \ddots & \vdots\\
 0 & -\rho & \ddots & \ddots & 0\\
 \vdots & \ddots & \ddots & 1+\rho^{2} & -\rho\\
-0 & \dots & 0 & -\rho & 1\end{array}\right]\]
+0 & \dots & 0 & -\rho & 1
+\end{array}\right]
+\]
 
 \end_inset
 
 e dobbiamo calcolare 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 cov(\varepsilon_{n+1},\varepsilon) & = & E(\varepsilon_{n+1}\varepsilon^{\prime})\\
  & = & E(\varepsilon_{n+1}\varepsilon_{1},\dots,\varepsilon_{n+1}\varepsilon_{n})\\
- & = & \frac{\sigma^{2}}{1-\rho^{2}}\left[\rho^{n},\rho^{n-1},\dots,\rho\right]\end{eqnarray*}
+ & = & \frac{\sigma^{2}}{1-\rho^{2}}\left[\rho^{n},\rho^{n-1},\dots,\rho\right]
+\end{eqnarray*}
 
 \end_inset
 
 Un semplice calcolo mostra che 
-\begin_inset Formula \[
-\underset{(1\times n)}{R^{\prime}}\underset{(n\times n)}{V^{-1}}=\underset{(1\times n)}{[0,0,\dots,\rho]}\]
+\begin_inset Formula 
+\[
+\underset{(1\times n)}{R^{\prime}}\underset{(n\times n)}{V^{-1}}=\underset{(1\times n)}{[0,0,\dots,\rho]}
+\]
 
 \end_inset
 
@@ -4800,8 +5155,10 @@ e quindi
 \end_inset
 
  da cui segue la formula
-\begin_inset Formula \[
-y_{n+1}^{p}=x_{n+1}^{\prime}\beta^{\ast}+\rho\widehat{\varepsilon}_{n}\]
+\begin_inset Formula 
+\[
+y_{n+1}^{p}=x_{n+1}^{\prime}\beta^{\ast}+\rho\widehat{\varepsilon}_{n}
+\]
 
 \end_inset
 
@@ -4814,8 +5171,10 @@ Poiché
 \end_inset
 
  ottenendo in questo modo la formula finale
-\begin_inset Formula \[
-y_{n+1}^{p}=x_{n+1}^{\prime}\beta^{\ast}+\widehat{\rho}\widehat{\varepsilon}_{n}\]
+\begin_inset Formula 
+\[
+y_{n+1}^{p}=x_{n+1}^{\prime}\beta^{\ast}+\widehat{\rho}\widehat{\varepsilon}_{n}
+\]
 
 \end_inset
 
@@ -4837,8 +5196,10 @@ Il modello statistico considerato in questo capitolo si chiama autoregressivo
 \end_inset
 
 
-\begin_inset Formula \[
-\epsilon_{t}=\rho\epsilon_{t-1}+u_{t},\ \ \ \ u_{t}\sim iid(0,\sigma^{2})\]
+\begin_inset Formula 
+\[
+\epsilon_{t}=\rho\epsilon_{t-1}+u_{t},\ \ \ \ u_{t}\sim iid(0,\sigma^{2})
+\]
 
 \end_inset
 
@@ -4856,8 +5217,10 @@ Il modello statistico considerato in questo capitolo si chiama autoregressivo
 \end_inset
 
 del modello autoregressivo
-\begin_inset Formula \[
-\epsilon_{t}=\rho_{1}\epsilon_{t-1}+\rho_{2}\epsilon_{t-2}+\ldots+\rho_{p}\epsilon_{t-p}+u_{t}\]
+\begin_inset Formula 
+\[
+\epsilon_{t}=\rho_{1}\epsilon_{t-1}+\rho_{2}\epsilon_{t-2}+\ldots+\rho_{p}\epsilon_{t-p}+u_{t}
+\]
 
 \end_inset
 
@@ -4868,15 +5231,19 @@ I modelli a media mobile (Moving Average) definiscono un'altra classe di
 \end_inset
 
  è definito da
-\begin_inset Formula \[
-\epsilon_{t}=u_{t}+cu_{t-1}\ .\]
+\begin_inset Formula 
+\[
+\epsilon_{t}=u_{t}+cu_{t-1}\ .
+\]
 
 \end_inset
 
 Anche in questo caso è immediata la sua generalizzazione a ordini superiori:
  
-\begin_inset Formula \[
-MA(q):\epsilon_{t}=u_{t}+c_{1}u_{t-1}+c_{2}u_{t-2}+\ldots+c_{q}u_{t-q}\ .\]
+\begin_inset Formula 
+\[
+MA(q):\epsilon_{t}=u_{t}+c_{1}u_{t-1}+c_{2}u_{t-2}+\ldots+c_{q}u_{t-q}\ .
+\]
 
 \end_inset
 
@@ -4886,8 +5253,10 @@ Infine un processo stocastico generale frequentemente incontrato in economia
 \end_inset
 
 
-\begin_inset Formula \[
-\epsilon_{t}=\underset{\text{parte autoregressiva}}{\underbrace{\rho_{1}\epsilon_{t-1}+\rho_{2}\epsilon_{t-2}+\ldots+\rho_{p}\epsilon_{t-p}}}+\underset{\text{parte media mobile}}{\underbrace{u_{t}+c_{1}u_{t-1}+c_{2}u_{t-2}+\ldots+c_{q}u_{t-q}}}\]
+\begin_inset Formula 
+\[
+\epsilon_{t}=\underset{\text{parte autoregressiva}}{\underbrace{\rho_{1}\epsilon_{t-1}+\rho_{2}\epsilon_{t-2}+\ldots+\rho_{p}\epsilon_{t-p}}}+\underset{\text{parte media mobile}}{\underbrace{u_{t}+c_{1}u_{t-1}+c_{2}u_{t-2}+\ldots+c_{q}u_{t-q}}}
+\]
 
 \end_inset
 
@@ -5011,14 +5380,18 @@ Estraiamo un campione aleatorio da una popolazione di variabili aleatorie
 
  prendiamo la media del campione.
  Quando nel campione c'è una sola osservazione
-\begin_inset Formula \[
-\overline{X}_{1}=X_{1},\]
+\begin_inset Formula 
+\[
+\overline{X}_{1}=X_{1},
+\]
 
 \end_inset
 
 due osservazioni 
-\begin_inset Formula \[
-\overline{X}_{2}=\frac{X_{1}+X_{2}}{2}\]
+\begin_inset Formula 
+\[
+\overline{X}_{2}=\frac{X_{1}+X_{2}}{2}
+\]
 
 \end_inset
 
@@ -5027,8 +5400,10 @@ e così via
 \end_inset
 
  
-\begin_inset Formula \[
-\overline{X}_{n}=\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\ .\]
+\begin_inset Formula 
+\[
+\overline{X}_{n}=\frac{X_{1}+X_{2}+\cdots+X_{n}}{n}\ .
+\]
 
 \end_inset
 
@@ -5158,8 +5533,10 @@ begin{definizione}
 \end_inset
 
  
-\begin_inset Formula \[
-\underset{n\rightarrow\infty}{\lim}Prob\left\{ \left\vert \hat{\theta}_{n}-\theta\right\vert >\varepsilon\right\} \rightarrow0\]
+\begin_inset Formula 
+\[
+\underset{n\rightarrow\infty}{\lim}Prob\left\{ \left\vert \hat{\theta}_{n}-\theta\right\vert >\varepsilon\right\} \rightarrow0
+\]
 
 \end_inset
 
@@ -5225,8 +5602,10 @@ Consideriamo le due successioni
 \end_inset
 
  con 
-\begin_inset Formula \[
-p\lim\widehat{\theta}_{n}=\theta<\infty\hspace{0.5cm}\text{ e }\hspace{0.5cm}p\lim\widehat{\beta}_{n}=\beta<\infty.\]
+\begin_inset Formula 
+\[
+p\lim\widehat{\theta}_{n}=\theta<\infty\hspace{0.5cm}\text{ e }\hspace{0.5cm}p\lim\widehat{\beta}_{n}=\beta<\infty.
+\]
 
 \end_inset
 
@@ -5334,8 +5713,10 @@ status open
 \end_inset
 
 
-\begin_inset Formula \[
-p\lim\left(\frac{\widehat{\theta}_{n}}{\widehat{\beta}_{n}}\right)=\frac{p\lim\widehat{\theta}_{n}}{p\lim\widehat{\beta}_{n}}=\frac{\theta}{\beta}\]
+\begin_inset Formula 
+\[
+p\lim\left(\frac{\widehat{\theta}_{n}}{\widehat{\beta}_{n}}\right)=\frac{p\lim\widehat{\theta}_{n}}{p\lim\widehat{\beta}_{n}}=\frac{\theta}{\beta}
+\]
 
 \end_inset
 
@@ -5374,8 +5755,10 @@ status open
 \end_inset
 
  è una funzione continua:
-\begin_inset Formula \[
-p\lim g\left(\widehat{\theta}_{n}\right)=g\left(p\lim\widehat{\theta}_{n}\right)=g\left(\theta\right)\]
+\begin_inset Formula 
+\[
+p\lim g\left(\widehat{\theta}_{n}\right)=g\left(p\lim\widehat{\theta}_{n}\right)=g\left(\theta\right)
+\]
 
 \end_inset
 
@@ -5417,8 +5800,10 @@ Bias
 \end_inset
 
 definito come
-\begin_inset Formula \[
-B(\widehat{\theta}_{n}):=E(\widehat{\theta}_{n})-\theta=E(\widehat{\theta}_{n}-\theta)\]
+\begin_inset Formula 
+\[
+B(\widehat{\theta}_{n}):=E(\widehat{\theta}_{n})-\theta=E(\widehat{\theta}_{n}-\theta)
+\]
 
 \end_inset
 
@@ -5444,8 +5829,10 @@ Il Bias tenda a zero con
 \end_inset
 
 
-\begin_inset Formula \begin{equation}
-\lim_{n\rightarrow\infty}B(\widehat{\theta}_{n})=0\label{bias_n}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{n\rightarrow\infty}B(\widehat{\theta}_{n})=0\label{bias_n}
+\end{equation}
 
 \end_inset
 
@@ -5458,8 +5845,10 @@ La varianza di
 \end_inset
 
  tenda anch'essa a 0:
-\begin_inset Formula \begin{equation}
-\lim_{n\rightarrow\infty}V(\widehat{\theta}_{n})=0\label{var_n}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{n\rightarrow\infty}V(\widehat{\theta}_{n})=0\label{var_n}
+\end{equation}
 
 \end_inset
 
@@ -5488,8 +5877,10 @@ reference "var_n"
 \end_inset
 
 ) sono equivalenti a
-\begin_inset Formula \begin{equation}
-\lim_{n\rightarrow\infty}E(\widehat{\theta}_{n}-\theta)^{2}=0\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{n\rightarrow\infty}E(\widehat{\theta}_{n}-\theta)^{2}=0
+\end{equation}
 
 \end_inset
 
@@ -5511,11 +5902,13 @@ Dimostriamo che
 
 .
  Abbiamo: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E\left(\widehat{\theta}_{n}-\theta\right)^{2} & = & E\left[\left(\widehat{\theta}_{n}-E(\widehat{\theta}_{n})\right)+\left(E(\widehat{\theta}_{n})-\theta\right)\right]^{2}=\\
  & = & E\left(\widehat{\theta}_{n}-E(\widehat{\theta}_{n})\right)^{2}+B(\widehat{\theta}_{n})^{2}+2B(\widehat{\theta}_{n})E\left(\widehat{\theta}_{n}-E(\widehat{\theta}_{n})\right)=\\
  & = & E\left(\widehat{\theta}_{n}-E(\widehat{\theta}_{n})\right)^{2}+B(\widehat{\theta}_{n})^{2}=\\
- & = & V\left(\widehat{\theta}_{n}\right)+B(\widehat{\theta}_{n})^{2}\end{eqnarray*}
+ & = & V\left(\widehat{\theta}_{n}\right)+B(\widehat{\theta}_{n})^{2}
+\end{eqnarray*}
 
 \end_inset
 
@@ -5531,10 +5924,13 @@ reference "esempio media"
 \end_inset
 
  
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{l}
 E(\overline{X}_{n})=\mu\Rightarrow B(\overline{X}_{n})=0\\
-V(\overline{X}_{n})=\frac{\sigma^{2}}{n}\rightarrow0\text{ quando }n\rightarrow\infty\end{array}\right.\]
+V(\overline{X}_{n})=\frac{\sigma^{2}}{n}\rightarrow0\text{ quando }n\rightarrow\infty
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -5624,10 +6020,12 @@ Proprietà fondamentale
 : I momenti del campione convergono in pobabilità verso i momenti corrispondenti
  della popolazione.
  In particolare
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 p\lim\frac{1}{n}\sum X_{i} & = & E\left(X\right)=\mu\\
 p\lim\frac{1}{n}\sum X_{i}^{2} & = & E\left(X^{2}\right)=\mu_{2}\\
-p\lim\frac{1}{n}\sum\left(X_{i}-\overline{X}\right)^{2} & = & V\left(X\right)=\sigma^{2}\end{eqnarray*}
+p\lim\frac{1}{n}\sum\left(X_{i}-\overline{X}\right)^{2} & = & V\left(X\right)=\sigma^{2}
+\end{eqnarray*}
 
 \end_inset
 
@@ -5657,8 +6055,10 @@ Il seconodo momento incrociato:
 
 \begin_layout Itemize
 Il secondo momento centrato incrociato: 
-\begin_inset Formula \[
-E(X-\mu_{x})(Z-\mu_{Z})=Cov(X,Z)\]
+\begin_inset Formula 
+\[
+E(X-\mu_{x})(Z-\mu_{Z})=Cov(X,Z)
+\]
 
 \end_inset
 
@@ -5705,9 +6105,11 @@ Centrato:
 \begin_layout Standard
 \noindent
 Anche in questo caso vale la proprietà fondamentale,
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 p\lim\frac{1}{n}\sum X_{i}Z_{i} & = & E\left(XZ\right)\\
-p\lim\frac{1}{n}\sum\left(X_{i}-\overline{X}\right)\left(Z_{i}-\overline{Z}\right) & = & Cov\left(X,Z\right)\end{eqnarray*}
+p\lim\frac{1}{n}\sum\left(X_{i}-\overline{X}\right)\left(Z_{i}-\overline{Z}\right) & = & Cov\left(X,Z\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -5737,8 +6139,10 @@ begin{esempio}
 
  indipendenti.
  Calcolare: 
-\begin_inset Formula \[
-p\lim\underset{\text{Covarianza empirica}}{\underbrace{\frac{1}{n}\sum\left(X_{i}-\overline{X}\right)\left(Z_{i}-\overline{Z}\right)}}=0=\underset{\text{vera covarianza}}{\underbrace{Cov\left(X,Z\right)}}\]
+\begin_inset Formula 
+\[
+p\lim\underset{\text{Covarianza empirica}}{\underbrace{\frac{1}{n}\sum\left(X_{i}-\overline{X}\right)\left(Z_{i}-\overline{Z}\right)}}=0=\underset{\text{vera covarianza}}{\underbrace{Cov\left(X,Z\right)}}
+\]
 
 \end_inset
 
@@ -5768,9 +6172,11 @@ Un esempio
 
 \begin_layout Standard
 Ritornando alle medie del campione abbiamo "dimostrato" che, 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \overline{X}_{n} & \rightarrow & \mu\\
-\left(\overline{X}_{n}-\mu\right) & \rightarrow & 0\end{eqnarray*}
+\left(\overline{X}_{n}-\mu\right) & \rightarrow & 0
+\end{eqnarray*}
 
 \end_inset
 
@@ -5780,9 +6186,11 @@ Ciò significa che la distribuzione limite di
 
  è degenerata (tutta la massa di probabilità è centrata su 0).
  Se ammettiamo la normalità della popolazione 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \left(\overline{X}_{n}-\mu\right) & \sim & N(0,\frac{\sigma^{2}}{n})\\
-\sqrt{n}\left(\overline{X}_{n}-\mu\right) & \sim & N\left(0,\sigma^{2}\right)\end{eqnarray*}
+\sqrt{n}\left(\overline{X}_{n}-\mu\right) & \sim & N\left(0,\sigma^{2}\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -5836,8 +6244,10 @@ Se la popolazione non è normale, il teorema del limite centrale ci assicura
 
 .
  Scriveremo: 
-\begin_inset Formula \[
-\sqrt{n}\left(\overline{X}_{n}-\mu\right)\overset{D}{\sim}N\left(0,\sigma^{2}\right)\]
+\begin_inset Formula 
+\[
+\sqrt{n}\left(\overline{X}_{n}-\mu\right)\overset{D}{\sim}N\left(0,\sigma^{2}\right)
+\]
 
 \end_inset
 
@@ -5867,15 +6277,19 @@ Prendendo
 
 .
  Dato il carattere aleatorio del campione si ha che: 
-\begin_inset Formula \[
-\varepsilon_{i}\sim i.i.d.(0,\sigma^{2})\]
+\begin_inset Formula 
+\[
+\varepsilon_{i}\sim i.i.d.(0,\sigma^{2})
+\]
 
 \end_inset
 
 D'altra parte 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \sqrt{n}\left(\overline{X}_{n}-\mu\right) & = & \sqrt{n}\left(\frac{1}{n}\sum X_{i}-\mu\right)=\sqrt{n}\left(\frac{1}{n}\sum\left(X_{i}-\mu\right)\right)\\
- & = & \sqrt{n}\left(\frac{1}{n}\sum\varepsilon_{i}\right)=\frac{1}{\sqrt{n}}\sum\varepsilon_{i}\end{eqnarray*}
+ & = & \sqrt{n}\left(\frac{1}{n}\sum\varepsilon_{i}\right)=\frac{1}{\sqrt{n}}\sum\varepsilon_{i}
+\end{eqnarray*}
 
 \end_inset
 
@@ -5897,8 +6311,10 @@ begin{theorem}
 
  Limite centrale semplice.
  Condizione:
-\begin_inset Formula \[
-\varepsilon_{i}\sim i.i.d.(0,\sigma^{2}).\]
+\begin_inset Formula 
+\[
+\varepsilon_{i}\sim i.i.d.(0,\sigma^{2}).
+\]
 
 \end_inset
 
@@ -5907,8 +6323,10 @@ begin{theorem}
 
 \begin_layout Standard
 Ne segue che 
-\begin_inset Formula \[
-\frac{1}{\sqrt{n}}\sum\varepsilon_{i}\overset{D}{\sim}N\left(0,\sigma^{2}\right).\]
+\begin_inset Formula 
+\[
+\frac{1}{\sqrt{n}}\sum\varepsilon_{i}\overset{D}{\sim}N\left(0,\sigma^{2}\right).
+\]
 
 \end_inset
 
@@ -5931,8 +6349,10 @@ end{theorem}
 \begin_layout Standard
 \noindent
 Consideriamo ora i vettori 
-\begin_inset Formula \[
-\underset{(K\times1)}{v_{i}}\underset{(1\times1)}{\varepsilon_{i}}\]
+\begin_inset Formula 
+\[
+\underset{(K\times1)}{v_{i}}\underset{(1\times1)}{\varepsilon_{i}}
+\]
 
 \end_inset
 
@@ -5942,9 +6362,11 @@ dove i
 
  sono composti da numeri (non aleatori).
  Abbiamo quindi: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E[v_{i}\varepsilon_{i}] & = & v_{i}E[\varepsilon_{i}]=v_{i}\ 0=0\\
-V[v_{i}\varepsilon_{i}] & = & v_{i}V[\varepsilon_{i}]v_{i}^{\prime}=\sigma^{2}\underset{(K\times K)}{v_{i}v_{i}^{\prime}}\end{eqnarray*}
+V[v_{i}\varepsilon_{i}] & = & v_{i}V[\varepsilon_{i}]v_{i}^{\prime}=\sigma^{2}\underset{(K\times K)}{v_{i}v_{i}^{\prime}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -6000,8 +6422,10 @@ end{theorem}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{n\rightarrow\infty}\frac{1}{n}\sum\limits _{i=1}^{n}V(v_{i}\varepsilon_{i})=\lim_{n\rightarrow\infty}\frac{1}{n}\sum\limits _{i=1}^{n}\sigma^{2}v_{i}v_{i}^{\prime}=Q,\text{matrice d.p.}\]
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}\frac{1}{n}\sum\limits _{i=1}^{n}V(v_{i}\varepsilon_{i})=\lim_{n\rightarrow\infty}\frac{1}{n}\sum\limits _{i=1}^{n}\sigma^{2}v_{i}v_{i}^{\prime}=Q,\text{matrice d.p.}
+\]
 
 \end_inset
 
@@ -6010,8 +6434,10 @@ end{theorem}
 
 \begin_layout Standard
 Ne segue che
-\begin_inset Formula \[
-\Longrightarrow\frac{1}{\sqrt{n}}\sum\limits _{i=1}^{n}v_{i}\varepsilon_{i}\overset{D}{\sim}N(0,Q)\]
+\begin_inset Formula 
+\[
+\Longrightarrow\frac{1}{\sqrt{n}}\sum\limits _{i=1}^{n}v_{i}\varepsilon_{i}\overset{D}{\sim}N(0,Q)
+\]
 
 \end_inset
 
@@ -6115,8 +6541,10 @@ la variabile aleatoria
 \end_inset
 
 , e cioè 
-\begin_inset Formula \[
-A_{n}Y_{n}\overset{D}{\sim}N(0,AQA^{\prime})\]
+\begin_inset Formula 
+\[
+A_{n}Y_{n}\overset{D}{\sim}N(0,AQA^{\prime})
+\]
 
 \end_inset
 
@@ -6137,14 +6565,18 @@ In pratica, per uno stimatore
 \end_inset
 
 , si deve verificare dapprima la convergenza: 
-\begin_inset Formula \[
-p\lim\hat{\theta}_{n}=\theta\]
+\begin_inset Formula 
+\[
+p\lim\hat{\theta}_{n}=\theta
+\]
 
 \end_inset
 
 o equivalentemente 
-\begin_inset Formula \[
-p\lim(\hat{\theta}_{n}-\theta)=0\]
+\begin_inset Formula 
+\[
+p\lim(\hat{\theta}_{n}-\theta)=0
+\]
 
 \end_inset
 
@@ -6332,9 +6764,11 @@ status open
 \end_inset
 
  
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{i} & = & x_{i}^{\prime}\beta+\varepsilon_{i}\\
-y & = & X\beta+\varepsilon\end{eqnarray*}
+y & = & X\beta+\varepsilon
+\end{eqnarray*}
 
 \end_inset
 
@@ -6384,8 +6818,10 @@ Non stocastiche
 
 \begin_layout Enumerate
 Nuovo: comportamento asintotico 
-\begin_inset Formula \[
-\lim_{n\rightarrow\infty}\frac{1}{n}\underset{(K\times K)}{X^{\prime}X}=Q,\ \ d.p.\]
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}\frac{1}{n}\underset{(K\times K)}{X^{\prime}X}=Q,\ \ d.p.
+\]
 
 \end_inset
 
@@ -6454,10 +6890,12 @@ status open
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \hat{\beta} & = & (X^{\prime}X^{\prime})^{-1}X^{\prime}Y\\
 E[\hat{\beta}] & = & \beta\\
-V[\hat{\beta}] & = & \sigma^{2}(X^{\prime}X)^{-1}\end{eqnarray*}
+V[\hat{\beta}] & = & \sigma^{2}(X^{\prime}X)^{-1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -6509,8 +6947,10 @@ La varianza:
 \begin_deeper
 \begin_layout Standard
 Segue che :
-\begin_inset Formula \[
-\lim\frac{\sigma^{2}}{n}\ \lim(\frac{X^{\prime}X}{n})^{-1}=\lim\frac{\sigma^{2}}{n}Q^{-1}=0\]
+\begin_inset Formula 
+\[
+\lim\frac{\sigma^{2}}{n}\ \lim(\frac{X^{\prime}X}{n})^{-1}=\lim\frac{\sigma^{2}}{n}Q^{-1}=0
+\]
 
 \end_inset
 
@@ -6546,22 +6986,27 @@ status open
 \end_inset
 
  
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta} & = & \left(X^{\prime}X\right)^{-1}X^{\prime}Y\\
  & = & \beta+\left(X^{\prime}X\right)^{-1}X^{\prime}\varepsilon\\
 p\lim\widehat{\beta} & = & p\lim\beta+p\lim\left(X^{\prime}X\right)^{-1}X^{\prime}\varepsilon\\
  & = & \beta+p\lim\left(\frac{X^{\prime}X}{n}\right)^{-1}p\lim\left(\frac{X^{\prime}\varepsilon}{n}\right)\\
- & = & \beta+Q^{-1}p\lim\left(\frac{X^{\prime}\varepsilon}{n}\right)\end{eqnarray*}
+ & = & \beta+Q^{-1}p\lim\left(\frac{X^{\prime}\varepsilon}{n}\right)
+\end{eqnarray*}
 
 \end_inset
 
 Ora:
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \frac{1}{n}\underset{(K\times1)}{X^{\prime}\varepsilon}=\left[\begin{array}{c}
 \frac{1}{n}\sum X_{i1}\varepsilon_{i}\\
 \frac{1}{n}\sum X_{i2}\varepsilon_{i}\\
 \vdots\\
-\frac{1}{n}\sum X_{iK}\varepsilon_{i}\end{array}\right]\]
+\frac{1}{n}\sum X_{iK}\varepsilon_{i}
+\end{array}\right]
+\]
 
 \end_inset
 
@@ -6587,9 +7032,11 @@ ogni termine è una somma di prodotti incrociati divisi per
 \begin_deeper
 \begin_layout Standard
 Segue che: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 p\lim\frac{1}{n}X^{\prime}\varepsilon & = & 0\\
-p\lim\hat{\beta} & = & \beta,\text{ convergente}\end{eqnarray*}
+p\lim\hat{\beta} & = & \beta,\text{ convergente}
+\end{eqnarray*}
 
 \end_inset
 
@@ -6630,14 +7077,18 @@ Si cerca la distribuzione limite di
 
 .
  Ora: 
-\begin_inset Formula \[
-\hat{\beta}-\beta=(X^{\prime}X)^{-1}X^{\prime}\varepsilon=(\frac{1}{n}X^{\prime}X)^{-1}\frac{1}{n}X^{\prime}\varepsilon\]
+\begin_inset Formula 
+\[
+\hat{\beta}-\beta=(X^{\prime}X)^{-1}X^{\prime}\varepsilon=(\frac{1}{n}X^{\prime}X)^{-1}\frac{1}{n}X^{\prime}\varepsilon
+\]
 
 \end_inset
 
 Ne consegue che, 
-\begin_inset Formula \[
-\sqrt{n}(\hat{\beta}-\beta)=(\frac{1}{n}X^{\prime}X)^{-1}\frac{1}{\sqrt{n}}X^{\prime}\varepsilon.\]
+\begin_inset Formula 
+\[
+\sqrt{n}(\hat{\beta}-\beta)=(\frac{1}{n}X^{\prime}X)^{-1}\frac{1}{\sqrt{n}}X^{\prime}\varepsilon.
+\]
 
 \end_inset
 
@@ -6658,13 +7109,16 @@ Il primo termine,
 
 \begin_layout Itemize
 Il secondo termine può scriversi:
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \frac{1}{\sqrt{n}}X^{\prime}\varepsilon=\frac{1}{\sqrt{n}}\left[\begin{array}{cccc}
 x_{1} & x_{2} & \cdots & x_{n}\end{array}\right]\left[\begin{array}{c}
 \varepsilon_{1}\\
 \varepsilon_{2}\\
 \vdots\\
-\varepsilon_{n}\end{array}\right]=\frac{1}{\sqrt{n}}\sum\limits _{i=1}^{n}x_{i}\varepsilon_{i}\]
+\varepsilon_{n}
+\end{array}\right]=\frac{1}{\sqrt{n}}\sum\limits _{i=1}^{n}x_{i}\varepsilon_{i}
+\]
 
 \end_inset
 
@@ -6687,10 +7141,12 @@ Quest'espressione è proprio quella del teorema 2: verifichiamo le due condizion
 \end_inset
 
  non stocastici, tali che 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \lim\frac{1}{n}\sum V(x_{i}\varepsilon_{i}) & = & \lim\frac{1}{n}\sum x_{i}\sigma^{2}x_{i}^{\prime}=\\
  & = & \sigma^{2}\lim\frac{1}{n}\sum x_{i}x_{i}^{\prime}=\\
- & = & \sigma^{2}\lim\frac{1}{n}X^{\prime}X=\sigma^{2}Q,d.p.\end{eqnarray*}
+ & = & \sigma^{2}\lim\frac{1}{n}X^{\prime}X=\sigma^{2}Q,d.p.
+\end{eqnarray*}
 
 \end_inset
 
@@ -6703,8 +7159,10 @@ Per il teorema 2:
 \end_inset
 
 , e per il teorema del prodotto: 
-\begin_inset Formula \[
-\sqrt{n}(\hat{\beta}-\beta)\overset{D}{\sim}N(0,\sigma^{2}Q^{-1}).\]
+\begin_inset Formula 
+\[
+\sqrt{n}(\hat{\beta}-\beta)\overset{D}{\sim}N(0,\sigma^{2}Q^{-1}).
+\]
 
 \end_inset
 
@@ -6730,8 +7188,10 @@ varianza asintotica
 \end_inset
 
 :
-\begin_inset Formula \[
-VarAs(\hat{\beta})=\frac{\sigma^{2}}{n}Q^{-1}\]
+\begin_inset Formula 
+\[
+VarAs(\hat{\beta})=\frac{\sigma^{2}}{n}Q^{-1}
+\]
 
 \end_inset
 
@@ -6855,10 +7315,12 @@ Le ipotesi
 
 \begin_layout Standard
 Partiamo come al solito dal modello di regressione
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{i} & = & x_{i}^{\prime}\beta+\varepsilon_{i}\text{ \ \ }i=1,...,n\\
  &  & \text{oppure}\\
-y & = & X\beta+\varepsilon\end{eqnarray*}
+y & = & X\beta+\varepsilon
+\end{eqnarray*}
 
 \end_inset
 
@@ -7009,10 +7471,12 @@ status open
 
  non sono convergenti quando le variabili esplicative sono correlate con
  gli errori:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta} & = & \beta+(X^{\prime}X)^{-1}X^{\prime}\varepsilon\\
  & = & \beta+(\frac{1}{n}X^{\prime}X)^{-1}\frac{1}{n}X^{\prime}\varepsilon\\
-p\lim\widehat{\beta} & = & \beta+Q^{-1}C\neq0.\end{eqnarray*}
+p\lim\widehat{\beta} & = & \beta+Q^{-1}C\neq0.
+\end{eqnarray*}
 
 \end_inset
 
@@ -7044,8 +7508,10 @@ status open
 \end_inset
 
 Premoltiplichiamo il modello 
-\begin_inset Formula \[
-y=X\beta+\varepsilon\]
+\begin_inset Formula 
+\[
+y=X\beta+\varepsilon
+\]
 
 \end_inset
 
@@ -7058,8 +7524,10 @@ per la matrice
 \end_inset
 
 
-\begin_inset Formula \begin{equation}
-\frac{1}{n}X^{\prime}y=\frac{1}{n}X^{\prime}X\beta+\frac{1}{n}X^{\prime}\varepsilon\label{esempio_iv_mqo}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{n}X^{\prime}y=\frac{1}{n}X^{\prime}X\beta+\frac{1}{n}X^{\prime}\varepsilon\label{esempio_iv_mqo}
+\end{equation}
 
 \end_inset
 
@@ -7088,8 +7556,10 @@ reference "esempio_iv_mqo"
 \end_inset
 
  otteniamo così lo stimatore dei minimi quadrati ordinari: 
-\begin_inset Formula \[
-\hat{\beta}=(X^{\prime}X)^{-1}X^{\prime}y.\]
+\begin_inset Formula 
+\[
+\hat{\beta}=(X^{\prime}X)^{-1}X^{\prime}y.
+\]
 
 \end_inset
 
@@ -7128,8 +7598,10 @@ Quando, invece,
 \end_inset
 
 , 
-\begin_inset Formula \[
-\frac{1}{n}Z^{\prime}y=\frac{1}{n}Z^{\prime}X\beta+\frac{1}{n}Z^{\prime}\varepsilon\]
+\begin_inset Formula 
+\[
+\frac{1}{n}Z^{\prime}y=\frac{1}{n}Z^{\prime}X\beta+\frac{1}{n}Z^{\prime}\varepsilon
+\]
 
 \end_inset
 
@@ -7142,8 +7614,10 @@ Se allora la matrice
 \end_inset
 
  si ottiene, 
-\begin_inset Formula \begin{equation}
-\hat{\beta}_{vs}=(Z^{\prime}X)^{-1}Z^{\prime}y\label{stimatore vs kxk}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\hat{\beta}_{vs}=(Z^{\prime}X)^{-1}Z^{\prime}y\label{stimatore vs kxk}
+\end{equation}
 
 \end_inset
 
@@ -7185,14 +7659,18 @@ begin{esempio}
 \end_inset
 
  Ritornando all'esempio per la funzione di consumo
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 y=\left[\begin{array}{c}
 C_{1}\\
 \vdots\\
-C_{n}\end{array}\right];\hspace{0.5cm}X=\left[\begin{array}{cc}
+C_{n}
+\end{array}\right];\hspace{0.5cm}X=\left[\begin{array}{cc}
 1 & R_{1}\\
 \vdots & \vdots\\
-1 & R_{n}\end{array}\right],\hspace{0.5cm}p\lim\frac{1}{n}\sum R_{i}\varepsilon_{i}\neq0\]
+1 & R_{n}
+\end{array}\right],\hspace{0.5cm}p\lim\frac{1}{n}\sum R_{i}\varepsilon_{i}\neq0
+\]
 
 \end_inset
 
@@ -7253,11 +7731,14 @@ Dobbiamo trovare invece uno strumento per
 \end_inset
 
  dei due strumenti è data da: 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 Z=\left[\begin{array}{cc}
 1 & I_{1}\\
 \vdots & \vdots\\
-1 & I_{n}\end{array}\right]\]
+1 & I_{n}
+\end{array}\right]
+\]
 
 \end_inset
 
@@ -7267,41 +7748,56 @@ Z=\left[\begin{array}{cc}
 \begin_layout Standard
 \noindent
 Sciogliamo l'espressione 
-\begin_inset Formula \[
-\hat{\beta}_{vs}=(Z^{\prime}X)^{-1}Z^{\prime}y\Longleftrightarrow(Z^{\prime}X){\beta}=Z^{\prime}y\]
+\begin_inset Formula 
+\[
+\hat{\beta}_{vs}=(Z^{\prime}X)^{-1}Z^{\prime}y\Longleftrightarrow(Z^{\prime}X){\beta}=Z^{\prime}y
+\]
 
 \end_inset
 
 Introduciamo i valori nell'espressione: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \left[\begin{array}{ccc}
 1 & \cdots & 1\\
-I_{1} & \cdots & I_{n}\end{array}\right]\left[\begin{array}{cc}
+I_{1} & \cdots & I_{n}
+\end{array}\right]\left[\begin{array}{cc}
 1 & R_{1}\\
 \vdots & \vdots\\
-1 & R_{n}\end{array}\right]\left[\begin{array}{c}
+1 & R_{n}
+\end{array}\right]\left[\begin{array}{c}
 a\\
-b\end{array}\right] & = & \left[\begin{array}{ccc}
+b
+\end{array}\right] & = & \left[\begin{array}{ccc}
 1 & \cdots & 1\\
-I_{1} & \cdots & I_{n}\end{array}\right]\left[\begin{array}{c}
+I_{1} & \cdots & I_{n}
+\end{array}\right]\left[\begin{array}{c}
 C_{1}\\
 \vdots\\
-C_{n}\end{array}\right]\\
+C_{n}
+\end{array}\right]\\
 \left[\begin{array}{cc}
 n & \sum R_{t}\\
-\sum I_{t} & \sum R_{t}I_{t}\end{array}\right]\left[\begin{array}{c}
+\sum I_{t} & \sum R_{t}I_{t}
+\end{array}\right]\left[\begin{array}{c}
 a\\
-b\end{array}\right] & = & \begin{array}{c}
+b
+\end{array}\right] & = & \begin{array}{c}
 \sum C_{t}\\
-\sum I_{t}C_{t}\end{array}\end{eqnarray*}
+\sum I_{t}C_{t}
+\end{array}
+\end{eqnarray*}
 
 \end_inset
 
 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{c}
 na+b\sum R_{t}=\sum C_{t}\\
-a\sum I_{t}+b\sum R_{t}I_{t}=\sum I_{t}C_{t}\end{array}\right.\]
+a\sum I_{t}+b\sum R_{t}I_{t}=\sum I_{t}C_{t}
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -7311,9 +7807,11 @@ Risolviamo il sistema e troviamo lo stimatore di
 
 .
  
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{a}_{vs} & = & \frac{1}{n}\sum C_{t}-\widehat{b}_{vs}\frac{1}{n}\sum R_{t}\\
-\widehat{a}_{vs} & = & \overline{C}-\widehat{b}_{vs}\overline{R}\end{eqnarray*}
+\widehat{a}_{vs} & = & \overline{C}-\widehat{b}_{vs}\overline{R}
+\end{eqnarray*}
 
 \end_inset
 
@@ -7322,15 +7820,19 @@ Troviamo ora lo stimatore per
 \end_inset
 
 .
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \sum I_{t}(\overline{C}-\widehat{b}_{vs}\overline{R})+\sum I_{t}R_{t}\widehat{b}_{vs} & = & \sum C_{t}I_{t}\\
-\underset{m_{IR}}{\underbrace{\left[\sum I_{t}R_{t}-\overline{R}\sum I_{t}\right]}}\widehat{b}_{vs} & = & \underset{m_{IC}}{\underbrace{\sum C_{t}I_{t}-\overline{C}\sum I_{t}}}\end{eqnarray*}
+\underset{m_{IR}}{\underbrace{\left[\sum I_{t}R_{t}-\overline{R}\sum I_{t}\right]}}\widehat{b}_{vs} & = & \underset{m_{IC}}{\underbrace{\sum C_{t}I_{t}-\overline{C}\sum I_{t}}}
+\end{eqnarray*}
 
 \end_inset
 
 
-\begin_inset Formula \[
-\widehat{b}_{vs}=\frac{m_{IC}}{m_{IR}}\neq\widehat{b}=\frac{m_{CR}}{m_{RR}}\]
+\begin_inset Formula 
+\[
+\widehat{b}_{vs}=\frac{m_{IC}}{m_{IR}}\neq\widehat{b}=\frac{m_{CR}}{m_{RR}}
+\]
 
 \end_inset
 
@@ -7404,8 +7906,10 @@ Si ammette l'esistenza di una matrice
 
 \begin_layout Enumerate
 Gli strumenti non sono correlati con gli errori: 
-\begin_inset Formula \[
-p\lim\frac{1}{n}\underset{(m\times1)}{{Z^{\prime}\varepsilon}}=\underset{(m\times1)}{0}\]
+\begin_inset Formula 
+\[
+p\lim\frac{1}{n}\underset{(m\times1)}{{Z^{\prime}\varepsilon}}=\underset{(m\times1)}{0}
+\]
 
 \end_inset
 
@@ -7414,8 +7918,10 @@ p\lim\frac{1}{n}\underset{(m\times1)}{{Z^{\prime}\varepsilon}}=\underset{(m\time
 
 \begin_layout Enumerate
 Gli strumenti sono correlati con le variabili esplicative: 
-\begin_inset Formula \[
-p\lim\frac{1}{n}\underset{(m\times K)}{{Z^{\prime}X}}=\underset{(m\times K)}{Q_{ZX}}\]
+\begin_inset Formula 
+\[
+p\lim\frac{1}{n}\underset{(m\times K)}{{Z^{\prime}X}}=\underset{(m\times K)}{Q_{ZX}}
+\]
 
 \end_inset
 
@@ -7439,8 +7945,10 @@ dove
 \begin_layout Enumerate
 Gli strumenti posseggono dei momenti finiti di ordine 2.
  
-\begin_inset Formula \[
-p\lim\frac{1}{n}\sum{Z^{\prime}Z}=Q_{Z},\hspace{0.5cm}d.p.\]
+\begin_inset Formula 
+\[
+p\lim\frac{1}{n}\sum{Z^{\prime}Z}=Q_{Z},\hspace{0.5cm}d.p.
+\]
 
 \end_inset
 
@@ -7469,10 +7977,13 @@ La costante è indipendente da
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \frac{1}{n}\sum{Z^{\prime}X}=\left[\begin{array}{cc}
 1 & \overline{R}\\
-\overline{I} & \frac{1}{n}\sum R_{t}I_{t}\end{array}\right],\text{ di rango 2}\Longleftrightarrow m_{IR}\neq0\]
+\overline{I} & \frac{1}{n}\sum R_{t}I_{t}
+\end{array}\right],\text{ di rango 2}\Longleftrightarrow m_{IR}\neq0
+\]
 
 \end_inset
 
@@ -7480,10 +7991,13 @@ La costante è indipendente da
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \frac{1}{n}Z^{\prime}Z=\left[\begin{array}{cc}
 1 & \overline{I}\\
-\overline{I} & \frac{1}{n}\sum I_{t}^{2}\end{array}\right],\text{ di rango 2 }(d.p.)\Longleftrightarrow m_{ZZ}\neq0\]
+\overline{I} & \frac{1}{n}\sum I_{t}^{2}
+\end{array}\right],\text{ di rango 2 }(d.p.)\Longleftrightarrow m_{ZZ}\neq0
+\]
 
 \end_inset
 
@@ -7504,9 +8018,11 @@ Si premoltiplica il modello
 \end_inset
 
 : 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 Z^{\prime}y & = & Z^{\prime}X\beta+Z^{\prime}\varepsilon\\
-\underset{(m\times1)}{\tilde{y}} & = & \underset{(m\times K)}{\tilde{X}}\beta+\underset{(m\times1)}{\tilde{\varepsilon}}\end{eqnarray*}
+\underset{(m\times1)}{\tilde{y}} & = & \underset{(m\times K)}{\tilde{X}}\beta+\underset{(m\times1)}{\tilde{\varepsilon}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -7533,10 +8049,12 @@ Questo ha tutti gli aspetti di un modello di regressione con
 
 .
  Infatti 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \tilde{\varepsilon} & = & Z^{\prime}\varepsilon\\
 E\left[\widetilde{\varepsilon}\mid Z\right] & = & 0\\
-V\left[\widetilde{\varepsilon}\mid Z\right] & = & Z^{\prime}V(\varepsilon)Z=\sigma^{2}Z^{\prime}Z\end{eqnarray*}
+V\left[\widetilde{\varepsilon}\mid Z\right] & = & Z^{\prime}V(\varepsilon)Z=\sigma^{2}Z^{\prime}Z
+\end{eqnarray*}
 
 \end_inset
 
@@ -7551,10 +8069,12 @@ Questa varianza è conosciuta.
 \end_inset
 
  puri ci dà: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta}_{vs} & = & \left[\widetilde{X}^{\prime}V^{-1}\widetilde{X}\right]^{-1}\widetilde{X}^{\prime}V^{-1}\widetilde{y}\\
  & = & \left(X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}X\right)^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}y\\
- & = & (X^{\prime}P_{Z}X)^{-1}X^{\prime}P_{Z}y.\end{eqnarray*}
+ & = & (X^{\prime}P_{Z}X)^{-1}X^{\prime}P_{Z}y.
+\end{eqnarray*}
 
 \end_inset
 
@@ -7567,9 +8087,11 @@ Quando
 \end_inset
 
  è quadrata e invertibile per ipotesi:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta}_{vs} & = & (Z^{\prime}X)^{-1}Z^{\prime}Z(X^{\prime}Z)^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}y\\
- & = & (Z^{\prime}X)^{-1}Z^{\prime}y\end{eqnarray*}
+ & = & (Z^{\prime}X)^{-1}Z^{\prime}y
+\end{eqnarray*}
 
 \end_inset
 
@@ -7683,9 +8205,11 @@ Scriviamo, sostituendo
 \end_inset
 
 , il nostro stimatore 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta}_{vs} & = & \left(X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}X\right)^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}(X\beta+\varepsilon)\\
- & = & \beta+\left(X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}X\right)^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}\varepsilon\end{eqnarray*}
+ & = & \beta+\left(X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}X\right)^{-1}X^{\prime}Z(Z^{\prime}Z)^{-1}Z^{\prime}\varepsilon
+\end{eqnarray*}
 
 \end_inset
 
@@ -7702,9 +8226,11 @@ Non essendo lineare in
 
 \begin_layout Itemize
 La convergenza in probabilità 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\beta}_{vs} & = & \beta+\left[\frac{1}{n}X^{\prime}Z(\frac{1}{n}Z^{\prime}Z)^{-1}\frac{1}{n}Z^{\prime}X\right]^{-1}\frac{1}{n}X^{\prime}Z(\frac{1}{n}Z^{\prime}Z)^{-1}\frac{1}{n}Z^{\prime}\varepsilon\\
- & = & \beta+A_{n}\frac{1}{n}Z^{\prime}\varepsilon\end{eqnarray*}
+ & = & \beta+A_{n}\frac{1}{n}Z^{\prime}\varepsilon
+\end{eqnarray*}
 
 \end_inset
 
@@ -7732,8 +8258,10 @@ Ora:
 
 \begin_layout Standard
 Ne segue che: 
-\begin_inset Formula \[
-p\lim\hat{\beta}=\beta\]
+\begin_inset Formula 
+\[
+p\lim\hat{\beta}=\beta
+\]
 
 \end_inset
 
@@ -7743,21 +8271,27 @@ p\lim\hat{\beta}=\beta\]
 \end_deeper
 \begin_layout Itemize
 La normalità asintotica 
-\begin_inset Formula \[
-\sqrt{n}(\widehat{\beta}-\beta)=\underset{p\lim A_{n}=A}{\underbrace{A_{n}}}\underset{N(0,\sigma^{2}Q_{Z})}{\underbrace{\frac{1}{\sqrt{n}}Z^{\prime}\varepsilon}}\]
+\begin_inset Formula 
+\[
+\sqrt{n}(\widehat{\beta}-\beta)=\underset{p\lim A_{n}=A}{\underbrace{A_{n}}}\underset{N(0,\sigma^{2}Q_{Z})}{\underbrace{\frac{1}{\sqrt{n}}Z^{\prime}\varepsilon}}
+\]
 
 \end_inset
 
 Per il teorema 3: 
-\begin_inset Formula \[
-\sqrt{n}(\widehat{\beta}-\beta)\overset{D}{\sim}N(0,\sigma^{2}AQ_{Z}A^{\prime})\]
+\begin_inset Formula 
+\[
+\sqrt{n}(\widehat{\beta}-\beta)\overset{D}{\sim}N(0,\sigma^{2}AQ_{Z}A^{\prime})
+\]
 
 \end_inset
 
 Ora
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 AQ_{Z}A^{\prime} & = & \left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^{-1}Q_{XZ}Q_{Z}^{-1}(Q_{Z})Q_{Z}^{-1}\ldots\\
- & = & \left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^{-1}\end{eqnarray*}
+ & = & \left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^{-1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -7787,21 +8321,27 @@ status open
 \end_inset
 
  
-\begin_inset Formula \[
-VarAs(\hat{\beta}_{vs})=\frac{\sigma^{2}}{n}\left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^{-1}\]
+\begin_inset Formula 
+\[
+VarAs(\hat{\beta}_{vs})=\frac{\sigma^{2}}{n}\left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^{-1}
+\]
 
 \end_inset
 
 Sarà stimata in maniera convergente con: 
-\begin_inset Formula \[
-\widehat{VarAs}(\hat{\beta}_{vs})=\hat{\sigma}^{2}\left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^{-1}\]
+\begin_inset Formula 
+\[
+\widehat{VarAs}(\hat{\beta}_{vs})=\hat{\sigma}^{2}\left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^{-1}
+\]
 
 \end_inset
 
 dove: 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \hat{\sigma}^{2} & = & \frac{1}{n}\hat{\varepsilon}^{\prime}\hat{\varepsilon}\\
-\hat{\varepsilon} & = & y-X\hat{\beta}_{vs}\end{eqnarray*}
+\hat{\varepsilon} & = & y-X\hat{\beta}_{vs}
+\end{eqnarray*}
 
 \end_inset
 
@@ -7830,8 +8370,10 @@ dinamico
  implica una relazione non contemporanea fra la variabile dipendente ed
  una o più variabili esplicative.
  Un semplice esempio potrebbe essere il seguente:
-\begin_inset Formula \begin{equation}
-y_{t}=bx_{t-3}+\varepsilon_{t}.\label{esempio modello dinamico semplice}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y_{t}=bx_{t-3}+\varepsilon_{t}.\label{esempio modello dinamico semplice}
+\end{equation}
 
 \end_inset
 
@@ -7909,8 +8451,10 @@ reference "Capitolo ritardi distribuiti"
  dipendente è influenzata da due o più ritardi della stessa variabile esplicativ
 a.
  Ad esempio il modello precedente potrebbe essere esteso nel seguente modo
-\begin_inset Formula \[
-y_{t}=b_{1}x_{t-1}+b_{2}x_{t-2}+b_{3}x_{t-3}+\varepsilon_{t}.\]
+\begin_inset Formula 
+\[
+y_{t}=b_{1}x_{t-1}+b_{2}x_{t-2}+b_{3}x_{t-3}+\varepsilon_{t}.
+\]
 
 \end_inset
 
@@ -7946,8 +8490,10 @@ Prendiamo una funzione di consumo.
 \end_inset
 
 
-\begin_inset Formula \begin{equation}
-C_{t}=a+bR_{t}+\varepsilon_{t}\label{consumo reddito lungo termine}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+C_{t}=a+bR_{t}+\varepsilon_{t}\label{consumo reddito lungo termine}
+\end{equation}
 
 \end_inset
 
@@ -7982,8 +8528,10 @@ reference "consumo reddito lungo termine"
  e anche se il reddito cambia le abitudini al consumo non reagiscono altrettanto
  velocemente.
  Le formazioni di abitudini sono rappresentate dal consumo passato.
-\begin_inset Formula \[
-C_{t}=a+cR_{t}+dC_{t-1}+\varepsilon_{t}\ .\]
+\begin_inset Formula 
+\[
+C_{t}=a+cR_{t}+dC_{t-1}+\varepsilon_{t}\ .
+\]
 
 \end_inset
 
@@ -8022,8 +8570,10 @@ Come interpretiamo i parametri? Per rispondere a questa domanda poniamoci
 .
  Scriviamo il nostro modello in termini di variazioni, trascurando momentaneamen
 te il termine d'errore:
-\begin_inset Formula \[
-\Delta C_{t}=c\Delta R_{t}+d\Delta C_{t-1}\ .\]
+\begin_inset Formula 
+\[
+\Delta C_{t}=c\Delta R_{t}+d\Delta C_{t-1}\ .
+\]
 
 \end_inset
 
@@ -8032,10 +8582,12 @@ Supponiamo che al tempo
 \end_inset
 
  il reddito aumenti di una unità (una volta per sempre), cioè
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \Delta R_{t} & = & 0\ \text{per}\ t<0\\
 \Delta R_{t} & = & 1\ \text{per}\ t=0\\
-\Delta R_{t} & = & 0\ \text{per}\ t>0\end{eqnarray*}
+\Delta R_{t} & = & 0\ \text{per}\ t>0
+\end{eqnarray*}
 
 \end_inset
 
@@ -8044,8 +8596,10 @@ Studiamo la variazione indotta sul consumo al tempo
 \end_inset
 
  e nei momenti successivi.
-\begin_inset Formula \[
-t=0:\ \ \ \Delta C_{0}=c\underset{1}{\underbrace{\Delta R_{0}}}+d\underset{0}{\underbrace{\Delta C_{-1}}}=c\]
+\begin_inset Formula 
+\[
+t=0:\ \ \ \Delta C_{0}=c\underset{1}{\underbrace{\Delta R_{0}}}+d\underset{0}{\underbrace{\Delta C_{-1}}}=c
+\]
 
 \end_inset
 
@@ -8055,11 +8609,13 @@ t=0:\ \ \ \Delta C_{0}=c\underset{1}{\underbrace{\Delta R_{0}}}+d\underset{0}{\u
 
  è la propensione marginale al consumo di corto periodo, l'effetto immediato.
  
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 t & = & 1:\ \ \ \Delta C_{1}=c\underset{0}{\underbrace{\Delta R_{1}}}+d\underset{c}{\underbrace{\Delta C_{0}}}=dc\\
 t & = & 2:\ \ \ \Delta C_{2}=c\underset{0}{\underbrace{\Delta R_{2}}}+d\underset{dc}{\underbrace{\Delta C_{1}}}=d^{2}c\\
  &  & \vdots\\
-t & = & n:\ \ \ \Delta C_{n}=c\underset{0}{\underbrace{\Delta R_{n}}}+d\underset{d^{n-1}c}{\underbrace{\Delta C_{n-1}}}=d^{n}c\end{eqnarray*}
+t & = & n:\ \ \ \Delta C_{n}=c\underset{0}{\underbrace{\Delta R_{n}}}+d\underset{d^{n-1}c}{\underbrace{\Delta C_{n-1}}}=d^{n}c
+\end{eqnarray*}
 
 \end_inset
 
@@ -8068,9 +8624,11 @@ L'effetto cumulato dopo
 \end_inset
 
  periodi:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \Delta C_{TOT(n)} & = & \Delta C_{0}+\Delta C_{1}+\ldots+\Delta C_{n}\\
- & = & c\left(1+d+d^{2}+\ldots+d^{n}\right)\end{eqnarray*}
+ & = & c\left(1+d+d^{2}+\ldots+d^{n}\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -8095,22 +8653,28 @@ Quando
  Possiamo dedurla anche direttamente dall'equazione di partenza.
  Infatti supponiamo che tutte le variabili del modello siano in valore uguale
  al loro livello d'equilibrio di lungo termine:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 R_{t} & = & R^{\ast}\ \forall t\\
-C_{t} & = & C^{\ast}\ \forall t\end{eqnarray*}
+C_{t} & = & C^{\ast}\ \forall t
+\end{eqnarray*}
 
 \end_inset
 
 da cui
-\begin_inset Formula \[
-C^{\ast}=a+cR^{\ast}+dC^{\ast}\Rightarrow(1-d)C^{\ast}=a+cR^{\ast}\]
+\begin_inset Formula 
+\[
+C^{\ast}=a+cR^{\ast}+dC^{\ast}\Rightarrow(1-d)C^{\ast}=a+cR^{\ast}
+\]
 
 \end_inset
 
 e per finire
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 C^{\ast} & = & \frac{a}{1-d}+\frac{c}{1-d}R^{\ast}\\
- & = & a^{\ast}+c^{\ast}R^{\ast}\end{eqnarray*}
+ & = & a^{\ast}+c^{\ast}R^{\ast}
+\end{eqnarray*}
 
 \end_inset
 
@@ -8146,29 +8710,37 @@ Nell'equazione
 \begin_layout Standard
 \noindent
 In contrasto, la formulazione 
-\begin_inset Formula \[
-C_{t}=a+b_{1}R_{t}+b_{2}R_{t-1}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+C_{t}=a+b_{1}R_{t}+b_{2}R_{t-1}+\varepsilon_{t}
+\]
 
 \end_inset
 
 è pure un modello dinamico ma senza variabile endogena ritardata.
  La variabile ritardata è la variabile esogena
-\begin_inset Formula \[
-\Delta C_{t}=b_{1}\Delta R_{t}+b_{2}\Delta R_{t-1}\]
+\begin_inset Formula 
+\[
+\Delta C_{t}=b_{1}\Delta R_{t}+b_{2}\Delta R_{t-1}
+\]
 
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \Delta R_{0}=1\Rightarrow\Delta C_{0} & = & b_{1}\underset{1}{\underbrace{\Delta R_{0}}}+b_{2}\underset{0}{\underbrace{\Delta R_{-1}}}=b_{1}\\
 \Delta C_{1} & = & b_{1}\underset{0}{\underbrace{\Delta R_{1}}}+b_{2}\underset{1}{\underbrace{\Delta R_{0}}}=b_{2}\\
-\Delta C_{2} & = & b_{1}\underset{0}{\underbrace{\Delta R_{2}}}+b_{2}\underset{0}{\underbrace{\Delta R_{1}}}=0\end{eqnarray*}
+\Delta C_{2} & = & b_{1}\underset{0}{\underbrace{\Delta R_{2}}}+b_{2}\underset{0}{\underbrace{\Delta R_{1}}}=0
+\end{eqnarray*}
 
 \end_inset
 
 da cui deduciamo
-\begin_inset Formula \[
-\Delta C_{TOT}=\Delta C_{0}+\Delta C_{1}=b_{1}+b_{2}\]
+\begin_inset Formula 
+\[
+\Delta C_{TOT}=\Delta C_{0}+\Delta C_{1}=b_{1}+b_{2}
+\]
 
 \end_inset
 
@@ -8198,20 +8770,26 @@ In una data industria il livello desiderato degli stock, notato
 \end_inset
 
 , è dato da 
-\begin_inset Formula \begin{equation}
-S_{t}^{\ast}=a+bV_{t}+\varepsilon_{t}\label{livello stock}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+S_{t}^{\ast}=a+bV_{t}+\varepsilon_{t}\label{livello stock}
+\end{equation}
 
 \end_inset
 
 Gli imprenditori hanno un comportamento d'aggiustamento parziale: colmano
  soltanto una parte della differenza tra il livello attuale e quello desiderato:
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 \underset{\begin{array}{c}
 \text{{\tiny variazione}}\\
 \text{{\tiny(o investimento)}}\\
-\text{{\tiny negli stock}}\end{array}}{\underbrace{S_{t}-S_{t-1}}}=\lambda\underset{\begin{array}{c}
+\text{{\tiny negli stock}}
+\end{array}}{\underbrace{S_{t}-S_{t-1}}}=\lambda\underset{\begin{array}{c}
 \text{{\tiny distanza che ci}}\\
-\text{{\tiny separa dall'obiettivo}}\end{array}}{\underbrace{\left(S_{t}^{\ast}-S_{t-1}\right)}}\text{ \ dove }0<\lambda<1\label{aggiustamento livello stock}\end{equation}
+\text{{\tiny separa dall'obiettivo}}
+\end{array}}{\underbrace{\left(S_{t}^{\ast}-S_{t-1}\right)}}\text{ \ dove }0<\lambda<1\label{aggiustamento livello stock}
+\end{equation}
 
 \end_inset
 
@@ -8268,11 +8846,13 @@ reference "aggiustamento livello stock"
 \end_inset
 
 ):
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \lambda S_{t}^{\ast} & = & S_{t}-(1-\lambda)S_{t-1}\\
 \lambda a+\lambda bV_{t}+\lambda\varepsilon_{t} & = & S_{t}-(1-\lambda)S_{t-1}\\
 S_{t} & = & \lambda a+\lambda bV_{t}+(1-\lambda)S_{t-1}+\lambda\varepsilon_{t}\\
-S_{t} & = & \beta_{1}+\beta_{2}V_{t}+\beta_{3}S_{t-1}+u_{t}\end{eqnarray*}
+S_{t} & = & \beta_{1}+\beta_{2}V_{t}+\beta_{3}S_{t-1}+u_{t}
+\end{eqnarray*}
 
 \end_inset
 
@@ -8315,11 +8895,14 @@ unica
 \end_inset
 
 .
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \begin{array}{ccccccc}
 \beta_{3} & = & (1-\lambda) & \Rightarrow & \lambda & = & 1-\beta_{3}\\
 \beta_{2} & = & \lambda b & \Rightarrow & b & = & \frac{\beta_{2}}{1-\beta_{3}}\\
-\beta_{1} & = & \lambda a & \Rightarrow & a & = & \frac{\beta_{1}}{1-\beta_{3}}\end{array}\]
+\beta_{1} & = & \lambda a & \Rightarrow & a & = & \frac{\beta_{1}}{1-\beta_{3}}
+\end{array}
+\]
 
 \end_inset
 
@@ -8388,16 +8971,20 @@ In una certa industria il volume delle scorte,
 \end_inset
 
 , secondo la relazione
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 S_{t} & = & a+bV_{t+1}^{\ast}+\varepsilon_{t}\label{scorte aspettative adattive}\\
-\varepsilon_{t} & \sim & iid(0,\sigma^{2})\notag\end{eqnarray}
+\varepsilon_{t} & \sim & iid(0,\sigma^{2})\notag
+\end{eqnarray}
 
 \end_inset
 
 Le imprese aggiornano le loro previsioni in funzione degli errori di previsione
  passati
-\begin_inset Formula \begin{equation}
-\underset{\text{aggiornamento previsione}}{\underbrace{V_{t+1}^{\ast}-V_{t}^{\ast}}}=\gamma\underset{\text{errore passato}}{\underbrace{(V_{t}-V_{t}^{\ast})}}\ \ \ \ \ \mid\gamma\mid<1\label{aggiornamento previsione}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\underset{\text{aggiornamento previsione}}{\underbrace{V_{t+1}^{\ast}-V_{t}^{\ast}}}=\gamma\underset{\text{errore passato}}{\underbrace{(V_{t}-V_{t}^{\ast})}}\ \ \ \ \ \mid\gamma\mid<1\label{aggiornamento previsione}
+\end{equation}
 
 \end_inset
 
@@ -8418,8 +9005,10 @@ reference "aggiornamento previsione"
 \end_inset
 
 )
-\begin_inset Formula \[
-V_{t+1}^{\ast}-(1-\gamma)V_{t}^{\ast}=\gamma V_{t}\]
+\begin_inset Formula 
+\[
+V_{t+1}^{\ast}-(1-\gamma)V_{t}^{\ast}=\gamma V_{t}
+\]
 
 \end_inset
 
@@ -8435,10 +9024,13 @@ reference "scorte aspettative adattive"
 \end_inset
 
 )
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{cc}
 S_{t}=a+bV_{t+1}^{\ast}+\varepsilon_{t} & \ \ \ (a)\\
-S_{t-1}=a+bV_{t}^{\ast}+\varepsilon_{t-1} & \ \ \ (b)\end{array}\right.\]
+S_{t-1}=a+bV_{t}^{\ast}+\varepsilon_{t-1} & \ \ \ (b)
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -8450,11 +9042,13 @@ S_{t-1}=a+bV_{t}^{\ast}+\varepsilon_{t-1} & \ \ \ (b)\end{array}\right.\]
 \end_inset
 
 :
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 S_{t}-(1-\gamma)S_{t-1} & = & \gamma a+b(V_{t+1}^{\ast}-(1-\gamma)V_{t}^{\ast})+\varepsilon_{t}-(1-\gamma)\ \varepsilon_{t-1}\\
  & = & \gamma a+b\gamma V_{t}+\varepsilon_{t}-(1-\gamma)\ \varepsilon_{t-1}\\
 S_{t} & = & \gamma a+b\gamma V_{t}+(1-\gamma)S_{t-1}+\varepsilon_{t}-(1-\gamma)\ \varepsilon_{t-1}\\
-S_{t} & = & \beta_{1}+\beta_{2}S_{t-1}+\beta_{3}V_{t}+u_{t}\end{eqnarray*}
+S_{t} & = & \beta_{1}+\beta_{2}S_{t-1}+\beta_{3}V_{t}+u_{t}
+\end{eqnarray*}
 
 \end_inset
 
@@ -8472,11 +9066,14 @@ L'identificazione dei parametri strutturali
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \begin{array}{ccccccc}
 \beta_{3} & = & 1-\gamma & \Rightarrow & \gamma & = & 1-\beta_{3}\\
 \beta_{2} & = & b\gamma & \Rightarrow & b & = & \frac{\beta_{2}}{1-\beta_{3}}\\
-\beta_{1} & = & \gamma a & \Rightarrow & a & = & \frac{\beta_{1}}{1-\beta_{3}}\end{array}\]
+\beta_{1} & = & \gamma a & \Rightarrow & a & = & \frac{\beta_{1}}{1-\beta_{3}}
+\end{array}
+\]
 
 \end_inset
 
@@ -8501,12 +9098,15 @@ L'equazione stimabile è un modello a variabile endogena ritardata con errori
 \end_inset
 
  otteniamo
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E(u_{t}) & =\\
 V(u_{t}) & =\\
 Cov(u_{t},u_{t-1}) & =\\
  & =\\
-\\Cov(u_{t},u_{t-s}) & = & 0\text{ \ \ \ \ \ \ }\forall s>1\end{eqnarray*}
+\\
+Cov(u_{t},u_{t-s}) & = & 0\text{ \ \ \ \ \ \ }\forall s>1
+\end{eqnarray*}
 
 \end_inset
 
@@ -8531,8 +9131,10 @@ La stima dei modelli a variabile endogena ritardata
 
 \begin_layout Standard
 La formulazione generale di questa classe di modelli è la seguente:
-\begin_inset Formula \[
-y_{t}=\underset{p\text{ ritardi della variabile endogena}}{\underbrace{\alpha_{1}y_{t-1}+\alpha_{2}y_{t-2}+\ldots+\alpha_{p}y_{t-p}}}+\underset{K\text{ variabili esogene}}{\underbrace{\beta_{1}x_{1t}+\ldots+\beta_{K}x_{Kt}}}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=\underset{p\text{ ritardi della variabile endogena}}{\underbrace{\alpha_{1}y_{t-1}+\alpha_{2}y_{t-2}+\ldots+\alpha_{p}y_{t-p}}}+\underset{K\text{ variabili esogene}}{\underbrace{\beta_{1}x_{1t}+\ldots+\beta_{K}x_{Kt}}}+\varepsilon_{t}
+\]
 
 \end_inset
 
@@ -8551,8 +9153,10 @@ y_{t}=\underset{p\text{ ritardi della variabile endogena}}{\underbrace{\alpha_{1
 \noindent
 I problemi di stima di un tale modello si possono esaminare studiando il
  modello semplice 
-\begin_inset Formula \[
-y_{t}=\alpha_{1}y_{t-1}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=\alpha_{1}y_{t-1}+\varepsilon_{t}
+\]
 
 \end_inset
 
@@ -8580,16 +9184,20 @@ errori passati
 \emph default
 .
  Infatti
-\begin_inset Formula \begin{equation}
-y_{t}=\alpha_{1}y_{t-1}+\varepsilon_{t}\label{ar1}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y_{t}=\alpha_{1}y_{t-1}+\varepsilon_{t}\label{ar1}
+\end{equation}
 
 \end_inset
 
 per il periodo precedente
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t-1} & = & \alpha_{1}y_{t-2}+\varepsilon_{t-1}\\
 y_{t-2} & = & \alpha_{1}y_{t-3}+\varepsilon_{t-2}\\
- &  & \vdots\end{eqnarray*}
+ &  & \vdots
+\end{eqnarray*}
 
 \end_inset
 
@@ -8683,10 +9291,13 @@ Invece, quando gli errori
 \end_inset
 
  sono correlati, la situazone è la seguente
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left.\begin{array}{ccc}
 \varepsilon_{t} & \text{dipende da} & \varepsilon_{t-1},\varepsilon_{t-2},\ldots\\
-y_{t-1} & \text{dipende da} & \varepsilon_{t-1},\varepsilon_{t-2},\ldots\end{array}\right\} \Rightarrow y_{t-1}\text{ e }\varepsilon_{t}\text{ nella (\ref{ar1}) sono correlati!}\]
+y_{t-1} & \text{dipende da} & \varepsilon_{t-1},\varepsilon_{t-2},\ldots
+\end{array}\right\} \Rightarrow y_{t-1}\text{ e }\varepsilon_{t}\text{ nella (\ref{ar1}) sono correlati!}
+\]
 
 \end_inset
 
@@ -8724,8 +9335,10 @@ Quando gli errori sono indipendenti
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-y_{t}=\alpha y_{t-1}+\varepsilon_{t}\ \ \ \ \ \varepsilon_{t}\sim iid(0,\sigma^{2}).\label{ar1 bis}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y_{t}=\alpha y_{t-1}+\varepsilon_{t}\ \ \ \ \ \varepsilon_{t}\sim iid(0,\sigma^{2}).\label{ar1 bis}
+\end{equation}
 
 \end_inset
 
@@ -8762,8 +9375,10 @@ reference "ar1 bis"
 \end_inset
 
 ) è semplicemente
-\begin_inset Formula \[
-\widehat{\alpha}=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}\text{.}\]
+\begin_inset Formula 
+\[
+\widehat{\alpha}=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}\text{.}
+\]
 
 \end_inset
 
@@ -8782,8 +9397,10 @@ Convergenza
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\widehat{\alpha}=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}=\alpha+\frac{\frac{1}{n}\sum\varepsilon_{t}y_{t-1}}{\frac{1}{n}\sum y_{t-1}^{2}}\]
+\begin_inset Formula 
+\[
+\widehat{\alpha}=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}=\alpha+\frac{\frac{1}{n}\sum\varepsilon_{t}y_{t-1}}{\frac{1}{n}\sum y_{t-1}^{2}}
+\]
 
 \end_inset
 
@@ -8838,20 +9455,26 @@ Distribuzione asintotica
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\sqrt{n}\left(\widehat{\alpha}-\alpha\right)=\underset{p\lim\ldots=\frac{\sigma^{2}}{1-\alpha^{2}}}{\underbrace{\left(\frac{1}{n}\sum y_{t-1}^{2}\right)^{-1}}}\underset{\overset{D}{\longrightarrow}N\left(0,\sigma^{4}/(1-\alpha^{2})\right)}{\underbrace{\frac{1}{\sqrt{n}}\sum\varepsilon_{t}y_{t-1}}}\overset{D}{\longrightarrow}N\left(0,1-\alpha^{2}\right)\]
+\begin_inset Formula 
+\[
+\sqrt{n}\left(\widehat{\alpha}-\alpha\right)=\underset{p\lim\ldots=\frac{\sigma^{2}}{1-\alpha^{2}}}{\underbrace{\left(\frac{1}{n}\sum y_{t-1}^{2}\right)^{-1}}}\underset{\overset{D}{\longrightarrow}N\left(0,\sigma^{4}/(1-\alpha^{2})\right)}{\underbrace{\frac{1}{\sqrt{n}}\sum\varepsilon_{t}y_{t-1}}}\overset{D}{\longrightarrow}N\left(0,1-\alpha^{2}\right)
+\]
 
 \end_inset
 
 La varianza asintotica è dunque
-\begin_inset Formula \[
-VarAs\left(\widehat{\alpha}\right)=\frac{1-\alpha^{2}}{n}\]
+\begin_inset Formula 
+\[
+VarAs\left(\widehat{\alpha}\right)=\frac{1-\alpha^{2}}{n}
+\]
 
 \end_inset
 
 che potrebbe essere stimato con 
-\begin_inset Formula \[
-\widehat{VarAs}\left(\widehat{\alpha}\right)=\frac{1-\widehat{\alpha}^{2}}{n}\]
+\begin_inset Formula 
+\[
+\widehat{VarAs}\left(\widehat{\alpha}\right)=\frac{1-\widehat{\alpha}^{2}}{n}
+\]
 
 \end_inset
 
@@ -8871,11 +9494,13 @@ Se a torto utilizzassimo la formula per la varianza di
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 Var(\widehat{\alpha}) & = & \frac{\widehat{\sigma}^{2}}{\sum y_{t-1}^{2}},\\
 \widehat{\sigma}^{2}=\frac{1}{n-1}\sum\widehat{\varepsilon}_{t}^{2}=\frac{1}{n-1}\sum\left(y_{t}-\widehat{\alpha}y_{t-1}\right)^{2}\\
 Var(\widehat{\alpha}) & \simeq & \frac{\frac{1}{n}\sum\left(y_{t}^{2}-2\widehat{\alpha}y_{t}y_{t-1}+\widehat{\alpha}^{2}y_{t-1}^{2}\right)}{\sum y_{t-1}^{2}}\\
- & = & \frac{1}{n}\frac{\sum y_{t}^{2}-\widehat{\alpha}\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}\simeq\frac{1}{n}\left(1-\widehat{\alpha}^{2}\right)\end{eqnarray*}
+ & = & \frac{1}{n}\frac{\sum y_{t}^{2}-\widehat{\alpha}\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}\simeq\frac{1}{n}\left(1-\widehat{\alpha}^{2}\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -8925,9 +9550,11 @@ Studiamo il comportamento dello stimatore dei
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y_{t} & = & \alpha y_{t-1}+\varepsilon_{t}\label{ar1_errore1}\\
-\varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\label{ar1_errore2}\end{eqnarray}
+\varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\label{ar1_errore2}
+\end{eqnarray}
 
 \end_inset
 
@@ -8955,10 +9582,13 @@ reference "ar1_errore2"
 \end_inset
 
 ) 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{rclr}
 y_{t} & = & \alpha y_{t-1}+\varepsilon_{t} & (a)\\
-y_{t-1} & = & \alpha y_{t-2}+\varepsilon_{t-1} & (b)\end{array}\right.\]
+y_{t-1} & = & \alpha y_{t-2}+\varepsilon_{t-1} & (b)
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -8967,9 +9597,11 @@ y_{t-1} & = & \alpha y_{t-2}+\varepsilon_{t-1} & (b)\end{array}\right.\]
 \end_inset
 
 :
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y_{t}-\rho y_{t-1} & = & \alpha y_{t-1}-\alpha\rho y_{t-2}+\varepsilon_{t}-\rho\varepsilon_{t-1}\notag\\
-y_{t} & = & \underset{\beta_{1}}{\underbrace{(\alpha+\rho)}}y_{t-1}\underset{\beta_{2}}{+\underbrace{-\alpha\rho}}y_{t-2}+u_{t}\label{ar2_con_errore_indipendenti}\end{eqnarray}
+y_{t} & = & \underset{\beta_{1}}{\underbrace{(\alpha+\rho)}}y_{t-1}\underset{\beta_{2}}{+\underbrace{-\alpha\rho}}y_{t-2}+u_{t}\label{ar2_con_errore_indipendenti}
+\end{eqnarray}
 
 \end_inset
 
@@ -9026,12 +9658,16 @@ reference "ar2_con_errore_indipendenti"
 \end_inset
 
  non sono identificabili! Ad esempio
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left.\begin{array}{c}
 \beta_{1}=\alpha+\rho=\frac{3}{4}\\
--\beta_{2}=\alpha\rho=\frac{1}{8}\end{array}\right\} \Rightarrow\text{due soluzioni }\begin{array}{c}
+-\beta_{2}=\alpha\rho=\frac{1}{8}
+\end{array}\right\} \Rightarrow\text{due soluzioni }\begin{array}{c}
 \alpha=0.5,\text{ }\rho=0.25\\
-\alpha=0.25,\text{ }\rho=0.5\end{array}\]
+\alpha=0.25,\text{ }\rho=0.5
+\end{array}
+\]
 
 \end_inset
 
@@ -9103,8 +9739,10 @@ Partiamo dallo stimatore dei
 \end_inset
 
  
-\begin_inset Formula \[
-\widehat{\alpha}=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}\]
+\begin_inset Formula 
+\[
+\widehat{\alpha}=\frac{\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}
+\]
 
 \end_inset
 
@@ -9120,9 +9758,11 @@ reference "ar2_con_errore_indipendenti"
 \end_inset
 
 ), ottenendo in tal modo 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \widehat{\alpha} & = & \frac{\sum\left((\alpha+\rho)y_{t-1}-\alpha\rho y_{t-2}+u_{t}\right)y_{t-1}}{\sum y_{t-1}^{2}}\\
- & = & \alpha+\rho-\alpha\rho\underset{\approx\widehat{\alpha}}{\underbrace{\frac{\sum y_{t-2}y_{t-1}}{\sum y_{t-1}^{2}}}}+\frac{\frac{1}{n}\sum u_{t}y_{t-1}}{\frac{1}{n}\sum y_{t-1}^{2}}\end{eqnarray*}
+ & = & \alpha+\rho-\alpha\rho\underset{\approx\widehat{\alpha}}{\underbrace{\frac{\sum y_{t-2}y_{t-1}}{\sum y_{t-1}^{2}}}}+\frac{\frac{1}{n}\sum u_{t}y_{t-1}}{\frac{1}{n}\sum y_{t-1}^{2}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -9136,22 +9776,28 @@ Poiché
 
 .
  Inoltre, sappiamo che
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 p\lim\frac{1}{n}\sum u_{t}y_{t-1} & = & 0\\
-p\lim\frac{1}{n}\sum y_{t-1}^{2} & = & V(y_{t})\end{eqnarray*}
+p\lim\frac{1}{n}\sum y_{t-1}^{2} & = & V(y_{t})
+\end{eqnarray*}
 
 \end_inset
 
 Quindi 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 p\lim\ \widehat{\alpha} & = & \alpha+\rho-\alpha\rho\ p\lim\widehat{\alpha}+\frac{p\lim\frac{1}{n}\sum u_{t}y_{t-1}}{p\lim\frac{1}{n}\sum y_{t-1}^{2}}\\
- & = & \alpha+\rho-\alpha\rho\ p\lim\widehat{\alpha}\end{eqnarray*}
+ & = & \alpha+\rho-\alpha\rho\ p\lim\widehat{\alpha}
+\end{eqnarray*}
 
 \end_inset
 
 da cui concludiamo che
-\begin_inset Formula \[
-p\lim\ \widehat{\alpha}=\frac{\alpha+\rho}{1+\alpha\rho}=\alpha\ \ +\underset{\text{distorsione asintotica}}{\underbrace{\frac{\rho(1-\alpha^{2})}{1+\alpha\rho}}}\neq\alpha,\text{ \ \ quando }\rho\neq0.\]
+\begin_inset Formula 
+\[
+p\lim\ \widehat{\alpha}=\frac{\alpha+\rho}{1+\alpha\rho}=\alpha\ \ +\underset{\text{distorsione asintotica}}{\underbrace{\frac{\rho(1-\alpha^{2})}{1+\alpha\rho}}}\neq\alpha,\text{ \ \ quando }\rho\neq0.
+\]
 
 \end_inset
 
@@ -9242,9 +9888,11 @@ reference "ar1_errore1"
 \end_inset
 
 ) potrebbe scriversi 
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y_{t}-\rho y_{t-1} & = & \alpha(y_{t-1}-\rho y_{t-2})+u_{t}\label{ar1 modello trasformato}\\
-\widetilde{y}_{t} & = & \alpha\widetilde{y}_{t-1}+u_{t}\label{ar1 modello trasformato1}\end{eqnarray}
+\widetilde{y}_{t} & = & \alpha\widetilde{y}_{t-1}+u_{t}\label{ar1 modello trasformato1}
+\end{eqnarray}
 
 \end_inset
 
@@ -9353,8 +10001,10 @@ reference "ar1_errore1"
 \end_inset
 
 )
-\begin_inset Formula \[
-y_{t}=\alpha y_{t-1}+\varepsilon_{t}.\]
+\begin_inset Formula 
+\[
+y_{t}=\alpha y_{t-1}+\varepsilon_{t}.
+\]
 
 \end_inset
 
@@ -9425,8 +10075,10 @@ reference "ar1_errore1"
 \end_inset
 
  all'equazione 
-\begin_inset Formula \[
-\widehat{\varepsilon}_{t}=\rho\widehat{\varepsilon}_{t-1}+u_{t}.\]
+\begin_inset Formula 
+\[
+\widehat{\varepsilon}_{t}=\rho\widehat{\varepsilon}_{t-1}+u_{t}.
+\]
 
 \end_inset
 
@@ -9519,8 +10171,10 @@ reference "ar1_errore1"
 \end_inset
 
  nel passo [2]:
-\begin_inset Formula \[
-\widehat{\rho}=\frac{\sum\widehat{\varepsilon}_{t}\widehat{\varepsilon}_{t-1}}{\sum\widehat{\varepsilon}_{t}^{2}}.\]
+\begin_inset Formula 
+\[
+\widehat{\rho}=\frac{\sum\widehat{\varepsilon}_{t}\widehat{\varepsilon}_{t-1}}{\sum\widehat{\varepsilon}_{t}^{2}}.
+\]
 
 \end_inset
 
@@ -9539,9 +10193,11 @@ Il test di autocorrelazione
 
 \begin_layout Standard
 Consideriamo il modello generale
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y_{t} & = & \underset{K\text{ variabili esogene}}{x_{t}^{\prime}\beta}+\underset{p\text{ ritardi nella variabile endogena}}{\alpha_{1}y_{t-1}+\ldots+\alpha_{p}y_{t-p}}+\varepsilon_{t}\label{k variabili esogene e p}\\
-\varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\ \ \ u_{t}\sim iid(0,\sigma^{2})\notag\end{eqnarray}
+\varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\ \ \ u_{t}\sim iid(0,\sigma^{2})\notag
+\end{eqnarray}
 
 \end_inset
 
@@ -9621,8 +10277,10 @@ Si stima il modello sotto l'ipotesi nulla
 \end_inset
 
  e costruendo 
-\begin_inset Formula \[
-\widehat{\varepsilon}_{t}=y-x_{t}^{\prime}\widehat{\beta}-\widehat{\alpha}_{1}y_{t-1}-\ldots-\widehat{\alpha}_{p}y_{t-p}.\]
+\begin_inset Formula 
+\[
+\widehat{\varepsilon}_{t}=y-x_{t}^{\prime}\widehat{\beta}-\widehat{\alpha}_{1}y_{t-1}-\ldots-\widehat{\alpha}_{p}y_{t-p}.
+\]
 
 \end_inset
 
@@ -9631,8 +10289,10 @@ Si stima il modello sotto l'ipotesi nulla
 
 \begin_layout Itemize
 Si calcola la quantità
-\begin_inset Formula \[
-h=\widehat{\rho}\sqrt{\frac{n}{1-n\widehat{V}(\widehat{\alpha}_{1})}}\]
+\begin_inset Formula 
+\[
+h=\widehat{\rho}\sqrt{\frac{n}{1-n\widehat{V}(\widehat{\alpha}_{1})}}
+\]
 
 \end_inset
 
@@ -9653,8 +10313,10 @@ dove
 
 \begin_deeper
 \begin_layout Itemize
-\begin_inset Formula \[
-\widehat{\rho}=\frac{\sum\widehat{\varepsilon}_{t}\widehat{\varepsilon}_{t-1}}{\sum\widehat{\varepsilon}_{t-1}^{2}}\]
+\begin_inset Formula 
+\[
+\widehat{\rho}=\frac{\sum\widehat{\varepsilon}_{t}\widehat{\varepsilon}_{t-1}}{\sum\widehat{\varepsilon}_{t-1}^{2}}
+\]
 
 \end_inset
 
@@ -9693,9 +10355,11 @@ Si dimostra che asintoticamente
 \end_inset
 
  di significatività:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 |h| & > & 1.96\Rightarrow\text{ rifiuto }H_{0}\\
-|h| & < & 1.96\Rightarrow\text{ accetto }H_{0}\end{eqnarray*}
+|h| & < & 1.96\Rightarrow\text{ accetto }H_{0}
+\end{eqnarray*}
 
 \end_inset
 
@@ -9719,9 +10383,11 @@ reference "k variabili esogene e p"
 \end_inset
 
  variabili esplicative esogene
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y_{t} & = & x_{t}^{\prime}\beta+\alpha y_{t-1}+\varepsilon_{t}\label{modello stima convergente1}\\
-\varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\ \ \ u_{t}\sim iid(0,\sigma^{2})\label{modello stima convergente2}\end{eqnarray}
+\varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\ \ \ u_{t}\sim iid(0,\sigma^{2})\label{modello stima convergente2}
+\end{eqnarray}
 
 \end_inset
 
@@ -9802,14 +10468,18 @@ Ammettiamo che il modello contenga la costante ed almeno una variabile esogena.
 \end_inset
 
  tramite la regressione ausiliaria
-\begin_inset Formula \begin{equation}
-\widehat{\rho}=\frac{\sum\widehat{\varepsilon}_{t}\widehat{\varepsilon}_{t-1}}{\sum\widehat{\varepsilon}_{t-1}^{2}}\label{stima di rho}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\widehat{\rho}=\frac{\sum\widehat{\varepsilon}_{t}\widehat{\varepsilon}_{t-1}}{\sum\widehat{\varepsilon}_{t-1}^{2}}\label{stima di rho}
+\end{equation}
 
 \end_inset
 
 dell'equazione
-\begin_inset Formula \[
-\widehat{\varepsilon}_{t}=\rho\widehat{\varepsilon}_{t-1}+errore\]
+\begin_inset Formula 
+\[
+\widehat{\varepsilon}_{t}=\rho\widehat{\varepsilon}_{t-1}+errore
+\]
 
 \end_inset
 
@@ -9855,8 +10525,10 @@ reference "come stimare alpha"
 \end_inset
 
 )
-\begin_inset Formula \begin{equation}
-y_{t}-\rho y_{t-1}=(x_{t}^{\prime}-\rho x_{t-1}^{\prime})\beta+\alpha(y_{t-1}-\rho y_{t-2})+u_{t}\label{modello trasformato per efficienza asintotica}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y_{t}-\rho y_{t-1}=(x_{t}^{\prime}-\rho x_{t-1}^{\prime})\beta+\alpha(y_{t-1}-\rho y_{t-2})+u_{t}\label{modello trasformato per efficienza asintotica}
+\end{equation}
 
 \end_inset
 
@@ -9931,8 +10603,10 @@ reference "modello trasformato per efficienza asintotica"
 
 .
  In altre parole il modello trasformato da utilizzare è
-\begin_inset Formula \begin{equation}
-y_{t}-\rho y_{t-1}=(x_{t}^{\prime}-\rho x_{t-1}^{\prime})\beta+\alpha(y_{t-1}-\rho y_{t-2})+d\widehat{\varepsilon}_{t-1}+u_{t}.\label{modello trasformato per efficienza asintotica1}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y_{t}-\rho y_{t-1}=(x_{t}^{\prime}-\rho x_{t-1}^{\prime})\beta+\alpha(y_{t-1}-\rho y_{t-2})+d\widehat{\varepsilon}_{t-1}+u_{t}.\label{modello trasformato per efficienza asintotica1}
+\end{equation}
 
 \end_inset
 
@@ -9952,8 +10626,10 @@ reference "modello trasformato per efficienza asintotica1"
 
 ) si interpreta nel modo seguente.
  Definiamo 
-\begin_inset Formula \[
-\rho=\widehat{\rho}+\underset{d}{\underbrace{(\rho-\widehat{\rho})}}=\widehat{\rho}+d.\]
+\begin_inset Formula 
+\[
+\rho=\widehat{\rho}+\underset{d}{\underbrace{(\rho-\widehat{\rho})}}=\widehat{\rho}+d.
+\]
 
 \end_inset
 
@@ -9965,9 +10641,11 @@ reference "modello trasformato per efficienza asintotica"
 \end_inset
 
 )
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t}-\left(\widehat{\rho}+d\right)y_{t-1} & = & \left[x_{t}^{\prime}-\left(\widehat{\rho}+d\right)x_{t-1}^{\prime}\right]\beta+\left[y_{t-1}-\left(\widehat{\rho}+d\right)y_{t-2}\right]\alpha+u_{t}\\
-y_{t}-\widehat{\rho}y_{t-1} & = & (x_{t}^{\prime}-\widehat{\rho}x_{t-1}^{\prime})\beta+\alpha(y_{t-1}-\widehat{\rho}y_{t-2})+d\underset{\varepsilon_{t-1}}{\underbrace{\left(y_{t-1}-x_{t-1}^{\prime}\beta-\alpha y_{t-2}\right)}}+u_{t}.\end{eqnarray*}
+y_{t}-\widehat{\rho}y_{t-1} & = & (x_{t}^{\prime}-\widehat{\rho}x_{t-1}^{\prime})\beta+\alpha(y_{t-1}-\widehat{\rho}y_{t-2})+d\underset{\varepsilon_{t-1}}{\underbrace{\left(y_{t-1}-x_{t-1}^{\prime}\beta-\alpha y_{t-2}\right)}}+u_{t}.
+\end{eqnarray*}
 
 \end_inset
 
@@ -10079,8 +10757,10 @@ In un modello statico l'influenza esercitata da una variabile è istantanea
  Molto spesso infatti l'influenza di una variabile sull'altra non si esaurisce
  in un solo periodo, ma si realizza progressivamente nel tempo.
  In un modello dinamico
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -10135,8 +10815,10 @@ Formulazione generale
 
 \begin_layout Standard
 \noindent
-\begin_inset Formula \[
-y_{t}=a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots+\varepsilon_{t}
+\]
 
 \end_inset
 
@@ -10205,8 +10887,10 @@ All'inizio, in
 \end_inset
 
  incluso:
-\begin_inset Formula \[
-\Delta y_{t}=\Delta x_{t}=0\text{ \ \ }t=0,-1,...\]
+\begin_inset Formula 
+\[
+\Delta y_{t}=\Delta x_{t}=0\text{ \ \ }t=0,-1,...
+\]
 
 \end_inset
 
@@ -10219,23 +10903,29 @@ Nel periodo
 \end_inset
 
 , vale a dire
-\begin_inset Formula \[
-\Delta x_{1}=1.\]
+\begin_inset Formula 
+\[
+\Delta x_{1}=1.
+\]
 
 \end_inset
 
 In termine di incrementi, l'equazione del modello si scrive
-\begin_inset Formula \[
-\Delta y_{t}=b_{0}\Delta x_{t}+b_{1}\Delta x_{t-1}+b_{2}\Delta x_{t-2}+\ldots\]
+\begin_inset Formula 
+\[
+\Delta y_{t}=b_{0}\Delta x_{t}+b_{1}\Delta x_{t-1}+b_{2}\Delta x_{t-2}+\ldots
+\]
 
 \end_inset
 
 da cui segue che
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \Delta y_{0} & = & 0\\
 \Delta y_{1} & = & b_{0}\underset{=1}{\underbrace{\Delta x_{1}}}+b_{1}\underset{=0}{\underbrace{\Delta x_{0}}}+b_{2}\underset{=0}{\underbrace{\Delta x_{-1}}}+\ldots=b_{0}\\
 \Delta y_{2} & = & b_{0}\underset{=0}{\underbrace{\Delta x_{2}}}+b_{1}\underset{=1}{\underbrace{\Delta x_{1}}}+b_{2}\underset{=0}{\underbrace{\Delta x_{0}}}+...=b_{1}\\
-\Delta y_{3} & = & b_{0}\underset{=0}{\underbrace{\Delta x_{3}}}+b_{1}\underset{=0}{\underbrace{\Delta x_{2}}}+b_{2}\underset{=1}{\underbrace{\Delta x_{1}}}+...=b_{2}\end{eqnarray*}
+\Delta y_{3} & = & b_{0}\underset{=0}{\underbrace{\Delta x_{3}}}+b_{1}\underset{=0}{\underbrace{\Delta x_{2}}}+b_{2}\underset{=1}{\underbrace{\Delta x_{1}}}+...=b_{2}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10277,8 +10967,10 @@ Dopo
 \end_inset
 
  e al limite, l'effetto totale di lungo termine è
-\begin_inset Formula \[
-\Delta_{y_{tot}}=\sum_{i=0}^{\infty}b_{i}=b\]
+\begin_inset Formula 
+\[
+\Delta_{y_{tot}}=\sum_{i=0}^{\infty}b_{i}=b
+\]
 
 \end_inset
 
@@ -10300,9 +10992,11 @@ La relazione d'equilibrio di lungo termine
 \begin_layout Standard
 Per esprimere la relazione d'equilibrio di lungo termine, basta utilizzare
  nella relazione i valori d'equilibrio delle variabili:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & = & y^{\ast}\ \ \ \forall t\text{ in equilibrio di lungo termine}\\
-x_{t} & = & x^{\ast}\ \ \ \forall t\text{ in equilibrio di lungo termine}\end{eqnarray*}
+x_{t} & = & x^{\ast}\ \ \ \forall t\text{ in equilibrio di lungo termine}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10311,14 +11005,18 @@ x_{t} & = & x^{\ast}\ \ \ \forall t\text{ in equilibrio di lungo termine}\end{eq
 
 \begin_layout Standard
 da cui ricaviamo
-\begin_inset Formula \[
-y^{\ast}=a+b_{0}x^{\ast}+b_{1}x^{\ast}+b_{2}x^{\ast}+\ldots=a+\underset{b}{\underbrace{(b_{0}+b_{1}+...)}}x^{\ast}=a+bx^{\ast}\]
+\begin_inset Formula 
+\[
+y^{\ast}=a+b_{0}x^{\ast}+b_{1}x^{\ast}+b_{2}x^{\ast}+\ldots=a+\underset{b}{\underbrace{(b_{0}+b_{1}+...)}}x^{\ast}=a+bx^{\ast}
+\]
 
 \end_inset
 
 e quindi vale pure
-\begin_inset Formula \[
-\frac{dy^{\ast}}{dx^{\ast}}=b.\]
+\begin_inset Formula 
+\[
+\frac{dy^{\ast}}{dx^{\ast}}=b.
+\]
 
 \end_inset
 
@@ -10327,8 +11025,10 @@ Definiamo per ogni
 \end_inset
 
  la proporzione 
-\begin_inset Formula \[
-p_{i}:=\frac{b_{i}}{b}\]
+\begin_inset Formula 
+\[
+p_{i}:=\frac{b_{i}}{b}
+\]
 
 \end_inset
 
@@ -10367,8 +11067,10 @@ Questo ci permette di definire il profilo dei ritardi, cioé il grafico dei
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -10382,8 +11084,10 @@ Questo ci permette di definire il profilo dei ritardi, cioé il grafico dei
 \begin_layout Standard
 \noindent
 È possibile definire il ritardo medio
-\begin_inset Formula \[
-\overline{R}=\sum_{i=0}^{\infty}ip_{i}=\sum_{i=0}^{\infty}i\frac{b_{i}}{b}=\frac{\sum_{i=0}^{\infty}ib_{i}}{\sum_{i=0}^{\infty}b_{i}}\]
+\begin_inset Formula 
+\[
+\overline{R}=\sum_{i=0}^{\infty}ip_{i}=\sum_{i=0}^{\infty}i\frac{b_{i}}{b}=\frac{\sum_{i=0}^{\infty}ib_{i}}{\sum_{i=0}^{\infty}b_{i}}
+\]
 
 \end_inset
 
@@ -10439,8 +11143,10 @@ Il caso generale
 Come detto ipotizziamo che a partire da un certo ritardo tutti i coefficienti
  siano uguali a zero.
  Formalmente ciò equivale a dire che
-\begin_inset Formula \[
-b_{i}=0\ \ \ \ \ \ \ \ i>r\]
+\begin_inset Formula 
+\[
+b_{i}=0\ \ \ \ \ \ \ \ i>r
+\]
 
 \end_inset
 
@@ -10449,8 +11155,10 @@ dove
 \end_inset
 
  è un intero positivo che denota il ritardo massimo diverso da 0
-\begin_inset Formula \[
-y_{t}=a+b_{0}x_{t}+\underset{r\text{ - ritardi}}{\underbrace{b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots+b_{r}x_{t-r}}}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=a+b_{0}x_{t}+\underset{r\text{ - ritardi}}{\underbrace{b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots+b_{r}x_{t-r}}}+\varepsilon_{t}
+\]
 
 \end_inset
 
@@ -10477,8 +11185,10 @@ Ammettiamo che il campione comporti
 \end_inset
 
 ! Il numero di parametri da stimare è:
-\begin_inset Formula \[
-k=1+1+r=r+2\]
+\begin_inset Formula 
+\[
+k=1+1+r=r+2
+\]
 
 \end_inset
 
@@ -10556,8 +11266,10 @@ Un criterio utilizzato frequentemente per la selezione di
 \end_inset
 
  è il criterio di informazione di Akaike
-\begin_inset Formula \[
-AIC:=n^{\ast}\ln\widehat{\sigma}^{2}+2K\]
+\begin_inset Formula 
+\[
+AIC:=n^{\ast}\ln\widehat{\sigma}^{2}+2K
+\]
 
 \end_inset
 
@@ -10613,8 +11325,10 @@ Come in precedenza si ammette un numero
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -10626,12 +11340,14 @@ Come in precedenza si ammette un numero
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 b_{0} & = & h_{0}\\
 b_{1} & = & h_{0}+h_{1}\\
 b_{2} & = & h_{0}+2h_{1}\\
  &  & \vdots\\
-b_{r} & = & h_{0}+rh_{1}\end{eqnarray*}
+b_{r} & = & h_{0}+rh_{1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10652,33 +11368,41 @@ Conoscendo i due valori di
 \end_inset
 
  nel modello di partenza:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & = & a+b_{0}x_{t}+b_{1}x_{t-1}+\ldots+b_{r}x_{t-r}+\varepsilon_{t}\\
  & = & a+h_{0}x_{t}+\left(h_{0}+h_{1}\right)x_{t-1}+\ldots+\left(h_{0}+rh_{1}\right)x_{t-r}+\varepsilon_{t}\\
- & = & a+h_{0}\underset{Z_{1t}}{\underbrace{\left(x_{t}+x_{t-1}+\ldots+x_{t-r}\right)}}+h_{1}\underset{Z_{2t}}{\underbrace{\left(x_{t-1}+2x_{t-2}+\ldots+rx_{t-r}\right)}}+\varepsilon_{t}\end{eqnarray*}
+ & = & a+h_{0}\underset{Z_{1t}}{\underbrace{\left(x_{t}+x_{t-1}+\ldots+x_{t-r}\right)}}+h_{1}\underset{Z_{2t}}{\underbrace{\left(x_{t-1}+2x_{t-2}+\ldots+rx_{t-r}\right)}}+\varepsilon_{t}
+\end{eqnarray*}
 
 \end_inset
 
 La regressione da stimare è dunque
-\begin_inset Formula \[
-y_{t}=a+h_{0}Z_{1t}+h_{1}Z_{2t}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=a+h_{0}Z_{1t}+h_{1}Z_{2t}+\varepsilon_{t}
+\]
 
 \end_inset
 
 Se imponessimo la restrizione 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 b_{r+1} & = & 0\\
  & \Updownarrow\\
 h_{0}+(r+1)h_{1} & = & 0\\
-h_{1} & = & \frac{-h_{0}}{r+1}\end{eqnarray*}
+h_{1} & = & \frac{-h_{0}}{r+1}
+\end{eqnarray*}
 
 \end_inset
 
 otterremmo
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & = & a+h_{0}Z_{1t}-\frac{h_{0}}{r+1}Z_{2t}+\varepsilon_{t}\\
  & = & a+h_{0}\underset{w_{t}}{\underbrace{\left(Z_{1t}-\frac{1}{r+1}Z_{2t}\right)}}+\varepsilon_{t}\\
- & = & a+h_{0}w_{t}+\varepsilon_{t}\end{eqnarray*}
+ & = & a+h_{0}w_{t}+\varepsilon_{t}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10702,8 +11426,10 @@ Nel caso specifico abbiamo generato i coefficienti
 .
  Questo profilo è troppo restrittivo.
  Un profilo che all'inizio aumenta e poi diminuisce
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -10717,14 +11443,18 @@ Nel caso specifico abbiamo generato i coefficienti
 \begin_layout Standard
 \noindent
 può essere approssimato con un polinomio di secondo grado:
-\begin_inset Formula \[
-b_{i}=h_{0}+h_{1}i+h_{2}i^{2}\]
+\begin_inset Formula 
+\[
+b_{i}=h_{0}+h_{1}i+h_{2}i^{2}
+\]
 
 \end_inset
 
 mentre un profilo 
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -10738,8 +11468,10 @@ mentre un profilo
 \begin_layout Standard
 \noindent
 con un polinomio di terzo grado 
-\begin_inset Formula \[
-b_{i}=h_{0}+h_{1}i+h_{2}i^{2}+h_{3}i^{3}\]
+\begin_inset Formula 
+\[
+b_{i}=h_{0}+h_{1}i+h_{2}i^{2}+h_{3}i^{3}
+\]
 
 \end_inset
 
@@ -10753,8 +11485,10 @@ In genere Almon propone di utilizzare un polinomio di grado
 \end_inset
 
 :
-\begin_inset Formula \[
-b_{i}=h_{0}+h_{1}i+\ldots+h_{s}i^{s}\]
+\begin_inset Formula 
+\[
+b_{i}=h_{0}+h_{1}i+\ldots+h_{s}i^{s}
+\]
 
 \end_inset
 
@@ -10770,8 +11504,10 @@ Il modello
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-y_{t}=a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots+\varepsilon_{t}
+\]
 
 \end_inset
 
@@ -10807,8 +11543,10 @@ La progressione geometrica decrescente
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -10833,12 +11571,14 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 b_{0} & = & b_{0}\\
 b_{1} & = & b_{0}c\ \ \ \ \ \ 0<c<1\\
 b_{2} & = & b_{0}c^{2}\\
  &  & \vdots\\
-b_{s} & = & b_{0}c^{s}\end{eqnarray*}
+b_{s} & = & b_{0}c^{s}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10875,8 +11615,10 @@ Introduciamo
 \end_inset
 
  nel modello: 
-\begin_inset Formula \[
-y_{t}=a+b_{0}x_{t}+b_{0}cx_{t-1}+b_{0}c^{2}x_{t-2}+\ldots\]
+\begin_inset Formula 
+\[
+y_{t}=a+b_{0}x_{t}+b_{0}cx_{t-1}+b_{0}c^{2}x_{t-2}+\ldots
+\]
 
 \end_inset
 
@@ -10893,10 +11635,12 @@ dipende da soli 3 parametri:
 \end_inset
 
 .
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t-1} & = & a+b_{0}x_{t-1}+b_{0}cx_{t-2}+b_{0}c^{2}x_{t-3}+\ldots\ \ \ \ \ \\
 \ \mid\cdot c\\
-y_{t}-cy_{t-1} & = & a(1-c)+b_{0}c\end{eqnarray*}
+y_{t}-cy_{t-1} & = & a(1-c)+b_{0}c
+\end{eqnarray*}
 
 \end_inset
 
@@ -10905,8 +11649,10 @@ da cui ricaviamo la trasformazione denominata
 trasformazione di Koyck
 \emph default
 
-\begin_inset Formula \[
-y_{t}=a^{\ast}+b_{0}x_{t}+cy_{t-1}\]
+\begin_inset Formula 
+\[
+y_{t}=a^{\ast}+b_{0}x_{t}+cy_{t-1}
+\]
 
 \end_inset
 
@@ -10976,8 +11722,10 @@ end{esempio}
 È immaginabile che la progressione geometrica decrescente si manifesti non
  già all'inizio ma soltanto a partire da un certo ritardo.
  
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -10989,22 +11737,26 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 b_{0} & = & \text{libero}\\
 b_{1} & = & \text{libero}\\
 b_{2} & = & \text{libero}\\
 b_{3} & = & b_{2}c\\
 b_{4} & = & b_{2}c^{2}\\
- &  & \vdots\end{eqnarray*}
+ &  & \vdots
+\end{eqnarray*}
 
 \end_inset
 
 In una situazione del genere, applicando la tecnica utilizzata precedentemente,
  si ottiene
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & = & a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+b_{2}cx_{t-3}+b_{2}c^{2}x_{t-4}+\ldots\\
 y_{t-1} & = & a+\ \ \ \ \ \ \ b_{0}x_{t-1}+b_{1}x_{t-2}+b_{2}x_{t-3}+b_{2}cx_{t-4}+\ldots\ \ \ \ \mid\cdot c\\
-y_{t}-cy_{t-1} & = & a^{\ast}+b_{0}x_{t}+(b_{1}-cb_{0})x_{t-1}+(b_{2}-cb_{1})x_{t-2}+0+\ldots\end{eqnarray*}
+y_{t}-cy_{t-1} & = & a^{\ast}+b_{0}x_{t}+(b_{1}-cb_{0})x_{t-1}+(b_{2}-cb_{1})x_{t-2}+0+\ldots
+\end{eqnarray*}
 
 \end_inset
 
@@ -11097,8 +11849,10 @@ begin{definizione}
 \end_inset
 
  il valore precedente:
-\begin_inset Formula \[
-Lx_{t}=x_{t-1}\]
+\begin_inset Formula 
+\[
+Lx_{t}=x_{t-1}
+\]
 
 \end_inset
 
@@ -11143,8 +11897,10 @@ end{definizione}
 \begin_layout Standard
 \noindent
 Definiamo ora l'elevamento a potenza:
-\begin_inset Formula \[
-L^{2}x_{t}=L\left(Lx_{t}\right)=L\left(x_{t-1}\right)=x_{t-2}\]
+\begin_inset Formula 
+\[
+L^{2}x_{t}=L\left(Lx_{t}\right)=L\left(x_{t-1}\right)=x_{t-2}
+\]
 
 \end_inset
 
@@ -11153,9 +11909,11 @@ L^{2}x_{t}=L\left(Lx_{t}\right)=L\left(x_{t-1}\right)=x_{t-2}\]
 
 \begin_layout Standard
 Con questo operatore, il modello generale si scrive:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & = & a+b_{0}x_{t}+b_{1}Lx_{t}+b_{2}L^{2}x_{t}+...\\
- & = & a+\underset{B(L)_{\infty}}{\underbrace{\left(b_{0}+b_{1}L+b_{2}L^{2}+...\right)}}x_{t}\end{eqnarray*}
+ & = & a+\underset{B(L)_{\infty}}{\underbrace{\left(b_{0}+b_{1}L+b_{2}L^{2}+...\right)}}x_{t}
+\end{eqnarray*}
 
 \end_inset
 
@@ -11197,8 +11955,10 @@ y_{t} & = & a+b_{0}x_{t}+b_{1}Lx_{t}+b_{2}L^{2}x_{t}+...\\
 \end_inset
 
 
-\begin_inset Formula \[
-\Rightarrow\overline{R}=\frac{B^{\prime}(1)}{B(1)}\]
+\begin_inset Formula 
+\[
+\Rightarrow\overline{R}=\frac{B^{\prime}(1)}{B(1)}
+\]
 
 \end_inset
 
@@ -11211,11 +11971,13 @@ Il modello dinamico di Jorgenson (distribuzione razionale dei ritardi)
 
 \begin_layout Standard
 Riprendiamo il modello generale 
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y_{t} & = & a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots\label{equazione di partenza}\\
  & = & a+b_{0}x_{t}+b_{1}Lx_{t}+b_{2}L^{2}x_{t}+\ldots\notag\\
  & = & a+\left(b_{0}+b_{1}L+b_{2}L^{2}+\ldots\right)x_{t}\notag\\
- & = & a+B(L)_{\infty}x_{t}\notag\end{eqnarray}
+ & = & a+B(L)_{\infty}x_{t}\notag
+\end{eqnarray}
 
 \end_inset
 
@@ -11240,15 +12002,19 @@ Nei due esempi trattati il polinomio infinito
 
  può essere approssimato con precisione a piacere da un rapporto di due
  polinomi finiti.
-\begin_inset Formula \[
-B(L)_{\infty}\simeq\frac{\beta(L)_{s}}{\alpha(L)_{r}},\ \ \ \ s\text{ e }r\text{ finiti}\]
+\begin_inset Formula 
+\[
+B(L)_{\infty}\simeq\frac{\beta(L)_{s}}{\alpha(L)_{r}},\ \ \ \ s\text{ e }r\text{ finiti}
+\]
 
 \end_inset
 
 con
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \beta(L)_{s} & = & \beta_{0}+\beta_{1}L+\beta_{2}L^{2}+\ldots+\beta_{s}L^{s}\\
-\alpha(L)_{r} & = & 1+\alpha_{1}L+\alpha_{2}L^{2}+\ldots+\alpha_{r}L^{r}\end{eqnarray*}
+\alpha(L)_{r} & = & 1+\alpha_{1}L+\alpha_{2}L^{2}+\ldots+\alpha_{r}L^{r}
+\end{eqnarray*}
 
 \end_inset
 
@@ -11262,10 +12028,12 @@ con
 \begin_layout Standard
 \noindent
 Introduciamo l'approssimazione nel modello:
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y_{t} & = & a+\frac{\beta(L)_{s}}{\alpha(L)_{r}}x_{t}\notag\\
 \alpha(L)_{r}y_{t} & = & \alpha(L)_{r}a+\beta(L)_{s}x_{t}\label{formulazone partenza}\\
-\left(1+\alpha_{1}L+\ldots+\alpha_{r}L^{r}\right)y_{t} & = & a^{\ast}+\left(\beta_{0}+\beta_{1}L+\ldots+\beta_{s}L^{s}\right)x_{t}\label{forma canonica}\end{eqnarray}
+\left(1+\alpha_{1}L+\ldots+\alpha_{r}L^{r}\right)y_{t} & = & a^{\ast}+\left(\beta_{0}+\beta_{1}L+\ldots+\beta_{s}L^{s}\right)x_{t}\label{forma canonica}
+\end{eqnarray}
 
 \end_inset
 
@@ -11294,11 +12062,13 @@ la forma canonica
 \end_inset
 
  in quanto 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \alpha(L)_{r}a & = & \left(1+\alpha_{1}L+\ldots+\alpha_{r}L^{r}\right)a\\
 \ \ \ \ \ \text{con }La=a\\
  & = & \left(1+\alpha_{1}+\ldots+\alpha_{r}\right)a\\
- & = & \alpha(1)_{r}a\ .\end{eqnarray*}
+ & = & \alpha(1)_{r}a\ .
+\end{eqnarray*}
 
 \end_inset
 
@@ -11307,9 +12077,11 @@ L'
 equazione stimabile
 \emph default
  di questo modello:
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y_{t} & = & a^{\ast}+\beta_{0}x_{t}+\beta_{1}x_{t-1}+\ldots+\beta_{s}x_{t-s}-\alpha_{1}y_{t-1}-\ldots-\alpha_{r}y_{t-r}+\varepsilon_{t}\notag\\
-y_{t} & = & a^{\ast}+\beta_{0}x_{t}+\beta_{1}x_{t-1}+\ldots+\beta_{s}x_{t-s}+\alpha_{1}^{\ast}y_{t-1}+\ldots+\alpha_{r}^{\ast}y_{t-r}+\varepsilon_{t}\label{equazione_stimabile_jorgenson}\end{eqnarray}
+y_{t} & = & a^{\ast}+\beta_{0}x_{t}+\beta_{1}x_{t-1}+\ldots+\beta_{s}x_{t-s}+\alpha_{1}^{\ast}y_{t-1}+\ldots+\alpha_{r}^{\ast}y_{t-r}+\varepsilon_{t}\label{equazione_stimabile_jorgenson}
+\end{eqnarray}
 
 \end_inset
 
@@ -11377,8 +12149,10 @@ Il profilo dei ritardi (ovvero i coefficienti del polinomio
 \begin_layout Standard
 \noindent
 Per le prime 3 domande utilizziamo la relazione
-\begin_inset Formula \[
-B(L)_{\infty}=\frac{\beta(L)}{\alpha(L)}\]
+\begin_inset Formula 
+\[
+B(L)_{\infty}=\frac{\beta(L)}{\alpha(L)}
+\]
 
 \end_inset
 
@@ -11391,8 +12165,10 @@ L'effetto immediato
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-b_{0}=B(0)_{\infty}=\frac{\beta(0)}{\alpha(0)}=\frac{\beta_{0}}{1}=\beta_{0}\]
+\begin_inset Formula 
+\[
+b_{0}=B(0)_{\infty}=\frac{\beta(0)}{\alpha(0)}=\frac{\beta_{0}}{1}=\beta_{0}
+\]
 
 \end_inset
 
@@ -11406,8 +12182,10 @@ L'effetto di lungo periodo
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-b=b_{0}+b_{1}+b_{2}+\ldots=B(1)_{\infty}=\frac{\beta(1)}{\alpha(1)}=\frac{\beta_{0}+\beta_{1}+\ldots+\beta_{s}}{1+\alpha_{1}+\ldots+\alpha_{r}}=\frac{\beta_{0}+\beta_{1}+\ldots+\beta_{s}}{1-\alpha_{1}^{\ast}-\ldots-\alpha_{r}^{\ast}}\]
+\begin_inset Formula 
+\[
+b=b_{0}+b_{1}+b_{2}+\ldots=B(1)_{\infty}=\frac{\beta(1)}{\alpha(1)}=\frac{\beta_{0}+\beta_{1}+\ldots+\beta_{s}}{1+\alpha_{1}+\ldots+\alpha_{r}}=\frac{\beta_{0}+\beta_{1}+\ldots+\beta_{s}}{1-\alpha_{1}^{\ast}-\ldots-\alpha_{r}^{\ast}}
+\]
 
 \end_inset
 
@@ -11418,28 +12196,36 @@ b=b_{0}+b_{1}+b_{2}+\ldots=B(1)_{\infty}=\frac{\beta(1)}{\alpha(1)}=\frac{\beta_
 \begin_layout Enumerate
 Il ritardo medio.
  Ricordiamo che
-\begin_inset Formula \[
-\overline{R}=\frac{B^{\prime}(1)}{B(1)}\]
+\begin_inset Formula 
+\[
+\overline{R}=\frac{B^{\prime}(1)}{B(1)}
+\]
 
 \end_inset
 
 Ora, 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 B^{\prime}(L) & = & \frac{\beta^{\prime}(L)\alpha(L)-\beta(L)\alpha^{\prime}(L)}{\alpha(L)^{2}}\\
  & = & \frac{\beta^{\prime}(L)}{\alpha(L)}-\frac{\beta(L)}{\alpha(L)^{2}}\alpha^{\prime}(L)\\
- & = & \frac{\beta(L)}{\alpha(L)}\left[\frac{\beta^{\prime}(L)}{\beta(L)}-\frac{\alpha^{\prime}(L)}{\alpha(L)}\right]\end{eqnarray*}
+ & = & \frac{\beta(L)}{\alpha(L)}\left[\frac{\beta^{\prime}(L)}{\beta(L)}-\frac{\alpha^{\prime}(L)}{\alpha(L)}\right]
+\end{eqnarray*}
 
 \end_inset
 
 e quindi essendo 
-\begin_inset Formula \[
-B^{\prime}(1)=\frac{\beta(1)}{\alpha(1)}\left[\frac{\beta^{\prime}(1)}{\beta(1)}-\frac{\alpha^{\prime}(1)}{\alpha(1)}\right]\]
+\begin_inset Formula 
+\[
+B^{\prime}(1)=\frac{\beta(1)}{\alpha(1)}\left[\frac{\beta^{\prime}(1)}{\beta(1)}-\frac{\alpha^{\prime}(1)}{\alpha(1)}\right]
+\]
 
 \end_inset
 
 otteniamo che
-\begin_inset Formula \[
-\overline{R}=\frac{B^{\prime}(1)}{B(1)}=\frac{\beta^{\prime}(1)}{\beta(1)}-\frac{\alpha^{\prime}(1)}{\alpha(1)}\]
+\begin_inset Formula 
+\[
+\overline{R}=\frac{B^{\prime}(1)}{B(1)}=\frac{\beta^{\prime}(1)}{\beta(1)}-\frac{\alpha^{\prime}(1)}{\alpha(1)}
+\]
 
 \end_inset
 
@@ -11460,8 +12246,10 @@ begin{esempio}
 \end_inset
 
  Con dati trimestrali abbiamo stimato la seguente funzione di consumo:
-\begin_inset Formula \[
-C_{t}=160+0.30R_{t}+0.20R_{t-1}+0.14R_{t-2}+0.2C_{t-1}\]
+\begin_inset Formula 
+\[
+C_{t}=160+0.30R_{t}+0.20R_{t-1}+0.14R_{t-2}+0.2C_{t-1}
+\]
 
 \end_inset
 
@@ -11483,9 +12271,11 @@ end{esempio}
 
 \begin_layout Itemize
 La forma canonica
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 C_{t}-0.2C_{t-1} & = & 160+0.30R_{t}+0.20R_{t-1}+0.14R_{t-2}\\
-\underset{\alpha(L)_{1}}{\underbrace{\left(1-0.2L\right)}}C_{t} & = & 160+\underset{\beta(L)_{2}}{\underbrace{\left(0.30+0.20L+0.14L^{2}\right)}}R_{t}\end{eqnarray*}
+\underset{\alpha(L)_{1}}{\underbrace{\left(1-0.2L\right)}}C_{t} & = & 160+\underset{\beta(L)_{2}}{\underbrace{\left(0.30+0.20L+0.14L^{2}\right)}}R_{t}
+\end{eqnarray*}
 
 \end_inset
 
@@ -11558,8 +12348,10 @@ L'effetto dinamico di lungo periodo:
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-b=B(1)_{\infty}=\frac{\beta(1)}{\alpha(1)}=\frac{0.48}{0.64}=0.8\text{ (propensione marginale di L.P.)}\]
+\begin_inset Formula 
+\[
+b=B(1)_{\infty}=\frac{\beta(1)}{\alpha(1)}=\frac{0.48}{0.64}=0.8\text{ (propensione marginale di L.P.)}
+\]
 
 \end_inset
 
@@ -11569,9 +12361,11 @@ b=B(1)_{\infty}=\frac{\beta(1)}{\alpha(1)}=\frac{0.48}{0.64}=0.8\text{ (propensi
 \end_deeper
 \begin_layout Itemize
 Il ritardo medio
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \overline{R} & = & \frac{B^{\prime}(1)}{B(1)}=\frac{\beta^{\prime}(1)}{\beta(1)}-\frac{\alpha^{\prime}(1)}{\alpha(1)}\\
- & = & \frac{0.48}{0.64}+\frac{0.2}{0.8}=1\end{eqnarray*}
+ & = & \frac{0.48}{0.64}+\frac{0.2}{0.8}=1
+\end{eqnarray*}
 
 \end_inset
 
@@ -11590,14 +12384,18 @@ Ammettiamo un punto di partenza d'equilibrio di lungo periodo con tutti
 \end_inset
 
 .
-\begin_inset Formula \[
-\Delta C_{t}=\Delta R_{t}=0\ \ \forall t<0\]
+\begin_inset Formula 
+\[
+\Delta C_{t}=\Delta R_{t}=0\ \ \forall t<0
+\]
 
 \end_inset
 
 Scriviamo la nostra equazione in termini di incrementi:
-\begin_inset Formula \[
-\Delta C_{t}=0.3\Delta R_{t}+0.2\Delta R_{t-1}+0.14\Delta R_{t-2}+0.2\Delta C_{t-1}\]
+\begin_inset Formula 
+\[
+\Delta C_{t}=0.3\Delta R_{t}+0.2\Delta R_{t-1}+0.14\Delta R_{t-2}+0.2\Delta C_{t-1}
+\]
 
 \end_inset
 
@@ -11606,18 +12404,22 @@ In
 \end_inset
 
 , consideriamo un aumento unitario del reddito
-\begin_inset Formula \[
-\Delta R_{0}=1\]
+\begin_inset Formula 
+\[
+\Delta R_{0}=1
+\]
 
 \end_inset
 
 e studiamo il suo influsso sul consumo presente e futuro
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \Delta C_{0} & = & 0.3\underset{1}{\underbrace{\Delta R_{0}}}+0.2\underset{0}{\underbrace{\Delta R_{-1}}}+0.14\underset{0}{\underbrace{\Delta R_{-2}}}+0.2\underset{0}{\underbrace{\Delta C_{-1}}}=0.3=b_{0}\\
 \Delta C_{1} & = & 0.3\underset{0}{\underbrace{\Delta R_{1}}}+0.2\underset{1}{\underbrace{\Delta R_{0}}}+0.14\Delta R_{-1}+0.2\underset{0.3}{\underbrace{\Delta C_{0}}}=0.26=b_{1}\\
 \Delta C_{2} & = & 0.3\underset{0}{\underbrace{\Delta R_{2}}}+0.2\underset{0}{\underbrace{\Delta R_{1}}}+0.14\underset{1}{\underbrace{\Delta R_{0}}}+0.2\underset{0.26}{\underbrace{\Delta C_{1}}}=0.192=b_{2}\\
 \Delta C_{3} & = & 0.2\underset{0.192}{\underbrace{\Delta C_{2}}}=0.0384=b_{3}\\
-\Delta C_{4} & = & 0.2\underset{0.0384}{\underbrace{\Delta C_{3}}}=\ldots\end{eqnarray*}
+\Delta C_{4} & = & 0.2\underset{0.0384}{\underbrace{\Delta C_{3}}}=\ldots
+\end{eqnarray*}
 
 \end_inset
 
@@ -11626,10 +12428,12 @@ e studiamo il suo influsso sul consumo presente e futuro
 
 \begin_layout Standard
 Verifichiamo:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 b & = & b_{0}+b_{1}+b_{2}+\ldots\\
  & = & 0.3+0.26+0.192\left(1+0.2+0.2^{2}+\ldots\right)\\
- & = & 0.56+\frac{0.192}{1-0.2}=0.8\end{eqnarray*}
+ & = & 0.56+\frac{0.192}{1-0.2}=0.8
+\end{eqnarray*}
 
 \end_inset
 
@@ -11638,8 +12442,10 @@ b & = & b_{0}+b_{1}+b_{2}+\ldots\\
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\text{grafico}\]
+\begin_inset Formula 
+\[
+\text{grafico}
+\]
 
 \end_inset
 
@@ -11656,10 +12462,13 @@ L'equazione d'equilibrio di lungo periodo
 
 \begin_layout Standard
 Poniamo 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{c}
 y_{t}=y^{\ast}\\
-x_{t}=x^{\ast}\end{array}\right.\ \ \ \forall t\]
+x_{t}=x^{\ast}
+\end{array}\right.\ \ \ \forall t
+\]
 
 \end_inset
 
@@ -11671,17 +12480,21 @@ reference "formulazone partenza"
 \end_inset
 
 )
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \alpha(L)y_{t} & = & a^{\ast}+\beta(L)x_{t}\\
 \alpha(L)y^{\ast} & = & a^{\ast}+\beta(L)x^{\ast}\\
-\alpha(1)y^{\ast} & = & a^{\ast}+\beta(1)x^{\ast}\end{eqnarray*}
+\alpha(1)y^{\ast} & = & a^{\ast}+\beta(1)x^{\ast}
+\end{eqnarray*}
 
 \end_inset
 
 da cui otteniamo la relazione di lungo periodo
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 y^{\ast} & = & \frac{a^{\ast}}{\alpha(1)}+\frac{\beta(1)}{\alpha(1)}x^{\ast}\notag\\
-y^{\ast} & = & a+bx^{\ast}\label{equazione di lungo periodo}\end{eqnarray}
+y^{\ast} & = & a+bx^{\ast}\label{equazione di lungo periodo}
+\end{eqnarray}
 
 \end_inset
 
@@ -11705,19 +12518,23 @@ reference "equazione di partenza"
 \end_inset
 
 ), ovvero
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & = & a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots\\
 y^{\ast} & = & a+b_{0}x^{\ast}+b_{1}x^{\ast}+b_{2}x^{\ast}+\ldots\\
  & = & a+(b_{0}+b_{1}+b_{2}+\ldots)x^{\ast}\\
- & = & a+bx^{\ast}\end{eqnarray*}
+ & = & a+bx^{\ast}
+\end{eqnarray*}
 
 \end_inset
 
 Nell'esempio:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 C^{\ast} & = & 160+0.3R^{\ast}+0.2R^{\ast}+0.14R^{\ast}+0.2C^{\ast}\\
 C^{\ast} & = & \frac{160}{0.8}+\frac{0.64}{0.8}R^{\ast}\\
-C^{\ast} & = & 200+0.8R^{\ast}\end{eqnarray*}
+C^{\ast} & = & 200+0.8R^{\ast}
+\end{eqnarray*}
 
 \end_inset
 
@@ -11726,8 +12543,10 @@ Se in
 \end_inset
 
  ponessimo
-\begin_inset Formula \begin{equation}
-\varepsilon_{t-1}^{\ast}=C_{t-1}-200-0.8R_{t-1}\label{scarto dall equilibrio}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\varepsilon_{t-1}^{\ast}=C_{t-1}-200-0.8R_{t-1}\label{scarto dall equilibrio}
+\end{equation}
 
 \end_inset
 
@@ -11770,8 +12589,10 @@ La covarianza fra due termini della serie è unicamente funzione della distanza
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -11812,8 +12633,10 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\varepsilon_{t}\sim iid(0,\sigma^{2})\]
+\begin_inset Formula 
+\[
+\varepsilon_{t}\sim iid(0,\sigma^{2})
+\]
 
 \end_inset
 
@@ -11857,11 +12680,14 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{c}
 \varepsilon_{t}=\rho\varepsilon_{t-1}+u_{t}\\
 u_{t}\sim iid(0,\sigma^{2})\\
-|\rho|<1\end{array}\right.\]
+|\rho|<1
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -11949,8 +12775,10 @@ La correlazione fra due termini della serie tende verso uno quando la distanza
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -12010,28 +12838,34 @@ end{esempio}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\varepsilon_{t}=\varepsilon_{t-1}+u_{t}\sim White\ Noise\]
+\begin_inset Formula 
+\[
+\varepsilon_{t}=\varepsilon_{t-1}+u_{t}\sim White\ Noise
+\]
 
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \varepsilon_{0} & = & 0\\
 \varepsilon_{1} & = & 0+u_{1}\\
 \varepsilon_{2} & = & \varepsilon_{1}+u_{2}=u_{1}+u_{2}\\
 \varepsilon_{3} & = & \varepsilon_{2}+u_{3}=u_{1}+u_{2}+u_{3}\\
  &  & \vdots\\
-\varepsilon_{t} & = & u_{1}+u_{2}+u_{3}+\ldots+u_{t}\end{eqnarray*}
+\varepsilon_{t} & = & u_{1}+u_{2}+u_{3}+\ldots+u_{t}
+\end{eqnarray*}
 
 \end_inset
 
 Possiamo allora calcolare valore atteso e varianza:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 E(\varepsilon_{t}) & = & 0\\
 V(\varepsilon_{t}) & = & t\sigma^{2}\\
 Cor(\varepsilon_{t},\varepsilon_{t-s}) & = & \frac{Cov(\varepsilon_{t},\varepsilon_{t-s})}{\sqrt{V(\varepsilon_{t})V(\varepsilon_{t-s})}}=\frac{(t-s)}{\sqrt{t(t-s)}}\\
-\lim_{t\rightarrow\infty}Cor(\varepsilon_{t},\varepsilon_{t-s}) & = & 1\end{eqnarray*}
+\lim_{t\rightarrow\infty}Cor(\varepsilon_{t},\varepsilon_{t-s}) & = & 1
+\end{eqnarray*}
 
 \end_inset
 
@@ -12053,14 +12887,18 @@ Una serie
 \end_inset
 
  non stazionaria è detta integrata di ordine 1, e si scrive
-\begin_inset Formula \[
-\varepsilon_{t}\sim I(1)\]
+\begin_inset Formula 
+\[
+\varepsilon_{t}\sim I(1)
+\]
 
 \end_inset
 
 se la differenza prima 
-\begin_inset Formula \[
-d_{t}:=\varepsilon_{t}-\varepsilon_{t-1}\]
+\begin_inset Formula 
+\[
+d_{t}:=\varepsilon_{t}-\varepsilon_{t-1}
+\]
 
 \end_inset
 
@@ -12074,8 +12912,10 @@ d_{t}:=\varepsilon_{t}-\varepsilon_{t-1}\]
 \end_inset
 
  in quanto 
-\begin_inset Formula \[
-\varepsilon_{t}-\varepsilon_{t-1}=u_{t}\sim WN\]
+\begin_inset Formula 
+\[
+\varepsilon_{t}-\varepsilon_{t-1}=u_{t}\sim WN
+\]
 
 \end_inset
 
@@ -12109,10 +12949,12 @@ Per vedere se una serie è non stazionaria, stimo il modello AR(1):
 \end_inset
 
 : 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\\
 \varepsilon_{t}-\rho\varepsilon_{t-1} & = & u_{t}\\
-(1-\rho L)\varepsilon_{t} & = & u_{t}\end{eqnarray*}
+(1-\rho L)\varepsilon_{t} & = & u_{t}
+\end{eqnarray*}
 
 \end_inset
 
@@ -12133,8 +12975,10 @@ Una riparametrizzazione del modello dinamico classico (Jorgenson)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-y_{t}=\beta_{0}x_{t}+\beta_{1}x_{t-1}+\beta_{2}x_{t-2}+\alpha_{1}^{\ast}y_{t-1}+\alpha_{2}^{\ast}y_{t-2}+\varepsilon_{t}\label{modello Jorgenson}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y_{t}=\beta_{0}x_{t}+\beta_{1}x_{t-1}+\beta_{2}x_{t-2}+\alpha_{1}^{\ast}y_{t-1}+\alpha_{2}^{\ast}y_{t-2}+\varepsilon_{t}\label{modello Jorgenson}
+\end{equation}
 
 \end_inset
 
@@ -12175,18 +13019,23 @@ reference "modello Jorgenson"
 \end_inset
 
 ) adopero i valori stazionari:
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left\{ \begin{array}{c}
 y_{t}=y^{\ast}\\
-x_{t}=x^{\ast}\end{array}\right.\ \ \forall t\]
+x_{t}=x^{\ast}
+\end{array}\right.\ \ \forall t
+\]
 
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y^{\ast} & = & \left(\beta_{0}+\beta_{1}+\beta_{2}\right)x^{\ast}+\left(\alpha_{1}^{\ast}+\alpha_{2}^{\ast}\right)y^{\ast}\\
 y^{\ast} & = & \frac{\beta_{0}+\beta_{1}+\beta_{2}}{1-\alpha_{1}^{\ast}-\alpha_{2}^{\ast}}x^{\ast}\\
-y^{\ast} & = & bx^{\ast}\end{eqnarray*}
+y^{\ast} & = & bx^{\ast}
+\end{eqnarray*}
 
 \end_inset
 
@@ -12218,13 +13067,16 @@ reference "equazione_stimabile_jorgenson"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-y_{t}=a^{\ast}+\underset{p1}{\underbrace{\beta_{0}x_{t}+\beta_{1}x_{t-1}+\ldots+\beta_{s}x_{t-s}}}+\underset{p2}{\underbrace{\alpha_{1}^{\ast}y_{t-1}+\ldots+\alpha_{r}^{\ast}y_{t-r}}}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=a^{\ast}+\underset{p1}{\underbrace{\beta_{0}x_{t}+\beta_{1}x_{t-1}+\ldots+\beta_{s}x_{t-s}}}+\underset{p2}{\underbrace{\alpha_{1}^{\ast}y_{t-1}+\ldots+\alpha_{r}^{\ast}y_{t-r}}}+\varepsilon_{t}
+\]
 
 \end_inset
 
 Consideriamo dapprima la riparametrizzazione della parte 1:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 p1 & = & \beta_{0}x_{t}+\left(\beta_{0}+\beta_{1}+\ldots+\beta_{s}-\beta_{0}-\beta_{2}-\ldots-\beta_{s}\right)x_{t-1}+\\
  &  & +\left(\beta_{2}+\beta_{3}+\ldots+\beta_{s}-\beta_{3}-\ldots-\beta_{s}\right)x_{t-2}\\
  &  & +\left(\beta_{3}+\ldots+\beta_{s}-\beta_{4}-\ldots-\beta_{s}\right)x_{t-3}\\
@@ -12236,20 +13088,24 @@ p1 & = & \beta_{0}x_{t}+\left(\beta_{0}+\beta_{1}+\ldots+\beta_{s}-\beta_{0}-\be
  &  & -\left(\beta_{3}+\ldots+\beta_{s}\right)\Delta x_{t-2}\\
  &  & \vdots\\
  &  & -\left(\beta_{s-1}+\beta_{s}\right)\Delta x_{t-(s-2)}\\
- &  & -\beta_{s}\Delta x_{t-(s-1)}\end{eqnarray*}
+ &  & -\beta_{s}\Delta x_{t-(s-1)}
+\end{eqnarray*}
 
 \end_inset
 
 e ridefinendo i coefficienti delle nuove variabili esplicative otteniamo
  per questa prima parte
-\begin_inset Formula \[
-p1=\delta_{0}\Delta x_{t}+\gamma_{1}x_{t-1}+\delta_{1}\Delta x_{t-1}+\ldots+\delta_{s-1}\Delta x_{t-(s-1)}.\]
+\begin_inset Formula 
+\[
+p1=\delta_{0}\Delta x_{t}+\gamma_{1}x_{t-1}+\delta_{1}\Delta x_{t-1}+\ldots+\delta_{s-1}\Delta x_{t-(s-1)}.
+\]
 
 \end_inset
 
 La riparametrizzazione della parte 2 è quasi identica alla precedente.
  Abbiamo infatti
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 p2 & = & \left(\alpha_{1}^{\ast}+\alpha_{2}^{\ast}+...+\alpha_{r}^{\ast}-\alpha_{2}^{\ast}-\ldots-\alpha_{r}^{\ast}\right)y_{t-1}\\
  &  & +\left(\alpha_{2}^{\ast}+\alpha_{3}^{\ast}+...+\alpha_{r}^{\ast}-\alpha_{3}^{\ast}-\ldots-\alpha_{r}^{\ast}\right)y_{t-2}\\
  &  & +\left(\alpha_{3}^{\ast}+\alpha_{4}^{\ast}+...+\alpha_{r}^{\ast}-\alpha_{4}^{\ast}-\ldots-\alpha_{r}^{\ast}\right)y_{t-3}\\
@@ -12261,7 +13117,8 @@ p2 & = & \left(\alpha_{1}^{\ast}+\alpha_{2}^{\ast}+...+\alpha_{r}^{\ast}-\alpha_
  &  & -(\alpha_{3}^{\ast}+\ldots+\alpha_{r}^{\ast})\Delta y_{t-2}\\
  &  & \vdots\\
  &  & -\left(\alpha_{r-1}^{\ast}+\alpha_{r}^{\ast}\right)\Delta y_{t-(r-2)}\\
- &  & -\alpha_{r}^{\ast}\Delta y_{t-(r-1)}\end{eqnarray*}
+ &  & -\alpha_{r}^{\ast}\Delta y_{t-(r-1)}
+\end{eqnarray*}
 
 \end_inset
 
@@ -12270,14 +13127,18 @@ Anche in questo caso ridefiniamo i coefficienti dei
 \end_inset
 
 
-\begin_inset Formula \[
-p2=\left(\alpha_{1}^{\ast}+\ldots+\alpha_{r}^{\ast}\right)y_{t-1}+q_{1}\Delta y_{t-1}+q_{2}\Delta y_{t-2}+\ldots+q_{r-1}\Delta y_{t-(r-1)}\]
+\begin_inset Formula 
+\[
+p2=\left(\alpha_{1}^{\ast}+\ldots+\alpha_{r}^{\ast}\right)y_{t-1}+q_{1}\Delta y_{t-1}+q_{2}\Delta y_{t-2}+\ldots+q_{r-1}\Delta y_{t-(r-1)}
+\]
 
 \end_inset
 
 Ricapitolando obbiamo che 
-\begin_inset Formula \[
-y_{t}=a^{\ast}+\gamma_{1}x_{t-1}+\left(\alpha_{1}^{\ast}+\ldots+\alpha_{r}^{\ast}\right)y_{t-1}+\sum_{i=0}^{s-1}\delta_{s}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon_{t}\ \]
+\begin_inset Formula 
+\[
+y_{t}=a^{\ast}+\gamma_{1}x_{t-1}+\left(\alpha_{1}^{\ast}+\ldots+\alpha_{r}^{\ast}\right)y_{t-1}+\sum_{i=0}^{s-1}\delta_{s}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon_{t}\ 
+\]
 
 \end_inset
 
@@ -12286,9 +13147,11 @@ e sottraendo da entrambi i lati
 \end_inset
 
  si ottiene la forma finale
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t}-y_{t-1} & = & a^{\ast}+\gamma_{1}x_{t-1}+\underset{\gamma_{2}}{\underbrace{\left(\alpha_{1}^{\ast}+\ldots+\alpha_{r}^{\ast}-1\right)}}y_{t-1}+\sum_{i=0}^{s-1}\delta_{s}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon_{t}\ \\
-\Delta y_{t} & = & a^{\ast}+\gamma_{1}x_{t-1}+\gamma_{2}y_{t-1}+\sum_{i=0}^{s-1}\delta_{s}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon_{t}\end{eqnarray*}
+\Delta y_{t} & = & a^{\ast}+\gamma_{1}x_{t-1}+\gamma_{2}y_{t-1}+\sum_{i=0}^{s-1}\delta_{s}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon_{t}
+\end{eqnarray*}
 
 \end_inset
 
@@ -12305,18 +13168,22 @@ reference "modello Jorgenson"
 \end_inset
 
 ):
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & = & \beta_{0}x_{t}+\left(\beta_{0}+\beta_{1}+\beta_{2}-\beta_{0}-\beta_{2}\right)x_{t-1}+\beta_{2}x_{t-2}+\\
  &  & \left(\alpha_{1}^{\ast}+\alpha_{2}^{\ast}-\alpha_{2}^{\ast}\right)y_{t-1}+\alpha_{2}^{\ast}y_{t-2}+\varepsilon_{t}\\
 y_{t} & = & \underset{\delta_{0}}{\underbrace{\beta_{0}}}\ \underset{\Delta x_{t}}{\underbrace{\left(x_{t}-x_{t-1}\right)}\ +}\underset{=\gamma_{1}}{\underbrace{\left(\beta_{0}+\beta_{1}+\beta_{2}\right)}}x_{t-1}\underset{\delta_{1}}{\underbrace{-\beta_{2}}}\ \underset{\Delta x_{t-1}}{\underbrace{\left(x_{t-1}-x_{t-2}\right)}}+\\
- &  & \left(\alpha_{1}^{\ast}+\alpha_{2}^{\ast}\right)y_{t-1}\underset{q_{1}}{\underbrace{-\alpha_{2}^{\ast}}}\underset{\Delta y_{t-1}}{\underbrace{\left(y_{t-1}-y_{t-2}\right)}}+\varepsilon_{t}\end{eqnarray*}
+ &  & \left(\alpha_{1}^{\ast}+\alpha_{2}^{\ast}\right)y_{t-1}\underset{q_{1}}{\underbrace{-\alpha_{2}^{\ast}}}\underset{\Delta y_{t-1}}{\underbrace{\left(y_{t-1}-y_{t-2}\right)}}+\varepsilon_{t}
+\end{eqnarray*}
 
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \underset{\Delta y_{t}}{\underbrace{y_{t}-y_{t-1}}} & = & \gamma_{1}x_{t-1}+\underset{\gamma_{2}}{\underbrace{\left(\alpha_{1}^{\ast}+\alpha_{2}^{\ast}-1\right)}}y_{t-1}+\delta_{0}\Delta x_{t}+\delta_{1}\Delta x_{t-1}+q_{1}\Delta y_{t-1}+\varepsilon_{t}\label{modello ridefinito}\\
-\Delta y_{t} & = & \gamma_{1}x_{t-1}+\gamma_{2}y_{t-1}+\gamma_{3}\Delta x_{t}+\gamma_{4}\Delta x_{t-1}+\gamma_{5}\Delta y_{t-1}+\varepsilon_{t}\end{eqnarray}
+\Delta y_{t} & = & \gamma_{1}x_{t-1}+\gamma_{2}y_{t-1}+\gamma_{3}\Delta x_{t}+\gamma_{4}\Delta x_{t-1}+\gamma_{5}\Delta y_{t-1}+\varepsilon_{t}
+\end{eqnarray}
 
 \end_inset
 
@@ -12346,9 +13213,11 @@ reference "modello Jorgenson"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y & = & X\beta+\varepsilon\\
-\beta & = & A\gamma+L\end{eqnarray*}
+\beta & = & A\gamma+L
+\end{eqnarray*}
 
 \end_inset
 
@@ -12385,10 +13254,12 @@ reference "modello ridefinito"
 
 ) del modello.
  Infatti
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y & = & X\left(A\gamma+L\right)+\varepsilon\\
 y & = & \underset{W}{\underbrace{XA}}\gamma+\underset{\text{conosciuto}}{\underbrace{XL}}+\varepsilon\\
-\left(y-XL\right) & = & W\gamma+\varepsilon\end{eqnarray*}
+\left(y-XL\right) & = & W\gamma+\varepsilon
+\end{eqnarray*}
 
 \end_inset
 
@@ -12409,18 +13280,22 @@ reference "modello ridefinito"
 \end_inset
 
 .
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 L=\left[\begin{array}{c}
 0\\
 0\\
 0\\
 1\\
-0\end{array}\right];A=\left[\begin{array}{ccccc}
+0
+\end{array}\right];A=\left[\begin{array}{ccccc}
 0 & 1 & 0 & 0 & 0\\
 1 & -1 & 1 & 0 & 0\\
 0 & 0 & -1 & 0 & 0\\
 0 & 0 & 0 & 1 & 1\\
-0 & 0 & 0 & 0 & -1\end{array}\right]\]
+0 & 0 & 0 & 0 & -1
+\end{array}\right]
+\]
 
 \end_inset
 
@@ -12433,8 +13308,10 @@ reference "modello ridefinito"
 
 ) è possibile derivare direttamente il moltiplicatore di lungo termine come
  
-\begin_inset Formula \[
-b=\frac{\gamma_{1}}{-\gamma_{2}}=\frac{\beta_{0}+\beta_{1}+\beta_{2}}{1-\alpha_{1}^{\ast}-\alpha_{2}^{\ast}}=\frac{\beta(1)}{\alpha(1)}\]
+\begin_inset Formula 
+\[
+b=\frac{\gamma_{1}}{-\gamma_{2}}=\frac{\beta_{0}+\beta_{1}+\beta_{2}}{1-\alpha_{1}^{\ast}-\alpha_{2}^{\ast}}=\frac{\beta(1)}{\alpha(1)}
+\]
 
 \end_inset
 
@@ -12451,9 +13328,11 @@ reference "modello ridefinito"
 \end_inset
 
 ) nel seguente modo:
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \Delta y_{t} & = & \gamma_{2}\left(y_{t-1}+\frac{\gamma_{1}}{\gamma_{2}}x_{t-1}\right)+\sum_{i=0}^{1}\delta_{i}\Delta x_{t-i}+\sum_{i=1}^{1}r_{i}\Delta y_{t-i}\notag\\
-\Delta y_{t} & = & \gamma_{2}\left(y_{t-1}-bx_{t-1}\right)+\sum_{i=0}^{1}\delta_{i}\Delta x_{t-i}+\sum_{i=1}^{1}r_{i}\Delta y_{t-i}\label{error correction formulation}\end{eqnarray}
+\Delta y_{t} & = & \gamma_{2}\left(y_{t-1}-bx_{t-1}\right)+\sum_{i=0}^{1}\delta_{i}\Delta x_{t-i}+\sum_{i=1}^{1}r_{i}\Delta y_{t-i}\label{error correction formulation}
+\end{eqnarray}
 
 \end_inset
 
@@ -12563,8 +13442,10 @@ Due serie non stazionarie possono ammettere una relazione stabile di lungo
  periodo, vale a dire che sebbene prese singolarmente le due serie tendano
  a divergere indefinitamente, lo scarto dell'una rispetto all'altra è qualcosa
  di stabile o più propriamente detto qualcosa di stazionario.
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -12589,21 +13470,27 @@ begin{definizione}
 \end_inset
 
  Due serie non stazionarie ed integrate d'ordine 1
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{t} & \sim & I(1)\\
-x_{t} & \sim & I(1)\end{eqnarray*}
+x_{t} & \sim & I(1)
+\end{eqnarray*}
 
 \end_inset
 
 si dicono cointegrate se esiste una relazione lineare tra le due
-\begin_inset Formula \[
-y_{t}-bx_{t}\]
+\begin_inset Formula 
+\[
+y_{t}-bx_{t}
+\]
 
 \end_inset
 
 che è stazionaria
-\begin_inset Formula \[
-y_{t}-bx_{t}\sim I(0)\]
+\begin_inset Formula 
+\[
+y_{t}-bx_{t}\sim I(0)
+\]
 
 \end_inset
 
@@ -12643,8 +13530,10 @@ mente
 
 \begin_layout Enumerate
 Stimare la relazione stazionaria di lungo termine
-\begin_inset Formula \[
-y_{t}=bx_{t}+\varepsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=bx_{t}+\varepsilon_{t}
+\]
 
 \end_inset
 
@@ -12703,10 +13592,12 @@ reference "error correction formulation"
 
 )).
  In questo modello, tutte le variabili esplicative sono stazionarie:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \Delta x_{t-s} & \sim & I(0)\\
 \Delta y_{t-r} & \sim & I(0)\\
-\widehat{\varepsilon}_{t-1} & \sim & I(0)\end{eqnarray*}
+\widehat{\varepsilon}_{t-1} & \sim & I(0)
+\end{eqnarray*}
 
 \end_inset
 
