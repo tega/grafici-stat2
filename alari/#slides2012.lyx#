@@ -8,12 +8,6 @@
 
 \usetheme{Madrid}
 
-%\usetheme{Warsaw}
-% or ...
-
-%\setbeamercovered{transparent}
-% or whatever (possibly just delete it)
-
 \newcounter{esr}
 \newtheorem{esercizio}[esr]{Exercise}
 \end_preamble
