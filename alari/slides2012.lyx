@@ -3978,7 +3978,7 @@ Application
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -3992,64 +3992,16 @@ section{System's reliability}
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout BeginFrame
 System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout FrameSubtitle
 Reliability of a component
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
- Let us consider an electronic system with 
+\begin_layout Standard
+Let us consider an electronic system with 
 \begin_inset Formula $n$
 \end_inset
 
@@ -4057,49 +4009,16 @@ status collapsed
  Define the event 
 \begin_inset Formula 
 \[
-A_{i}:=\textnormal{“The }i-th
+A_{i}:=\textnormal{“The }i-th\mbox{  component is functioning properly ”}.
 \]
 
 \end_inset
 
- component is functioning properly ”.
-\begin_inset ERT
-status collapsed
 
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-]
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{Definition}
-\end_layout
-
-\end_inset
-
- The reliability of component 
+\begin_layout Definition
+The reliability of component 
 \begin_inset Formula $i$
 \end_inset
 
@@ -4114,151 +4033,34 @@ R_{i}=P(A_{i}),
  i.e.
  it is the probability that the component is functioning properly.
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Definition}
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{Definition}
-\end_layout
-
-\end_inset
-
- A series system is a system such that the entire system fails if any one
+\begin_layout Definition
+A series system is a system such that the entire system fails if any one
  of its components fails.
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Definition}
 \end_layout
 
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout BeginFrame
 System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout FrameSubtitle
 Parallel system
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{Definition}
-\end_layout
-
-\end_inset
-
- A parallel system is a system such that the entire system fails only if
+\begin_layout Definition
+A parallel system is a system such that the entire system fails only if
  all its components fail.
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{Definition}
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace -0.2cm
 \end_inset
 
 
@@ -4277,12 +4079,12 @@ begin{theorem}
 
 \end_inset
 
-[Product law of reliabilities for series systems] The reliability of a series
- system decreases 
+Product law of reliabilities for series systems.
+ The reliability of a series system decreases 
 \begin_inset Quotes grd
 \end_inset
 
-quickly ”with an increase in complexity (number of components).
+quickly” with an increase in complexity (number of components).
  
 \begin_inset ERT
 status collapsed
@@ -4294,6 +4096,13 @@ status collapsed
 end{theorem}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.2cm
 \end_inset
 
 
@@ -4354,92 +4163,22 @@ end{proof}
 \end_inset
 
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
 \end_layout
 
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout BeginFrame
 System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout FrameSubtitle
 Parallel redundancy
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
- Let a series system have 
+\begin_layout Example
+Let a series system have 
 \begin_inset Formula $n=5$
 \end_inset
 
@@ -4463,10 +4202,6 @@ R=P(A_{1})^{5}=0.97^{5}=0.859.
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 If we increase 
 \begin_inset Formula $n=10$
 \end_inset
@@ -4492,107 +4227,28 @@ If we increase
 \end_inset
 
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
 \end_layout
 
-\end_inset
+\begin_layout EndFrame
 
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
 \end_layout
 
-\end_inset
+\begin_layout BeginFrame
+System's reliability
+\end_layout
 
-
+\begin_layout FrameSubtitle
+Parallel redundancy
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Parallel redundancy
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- In order to mitigate the problem one possible solution is to implement
- parallel redundancy.
+In order to mitigate the problem one possible solution is to implement parallel
+ redundancy.
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
 \end_layout
 
-\end_inset
-
- Consider a parallel system of 
+\begin_layout Example
+Consider a parallel system of 
 \begin_inset Formula $n$
 \end_inset
 
@@ -4616,105 +4272,22 @@ P(\overline{A})=P(\overline{(A_{1}\cup A_{2}\dots\cup A_{n})})=P(\overline{A}_{1
 \end_inset
 
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
 \end_layout
 
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout BeginFrame
 System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout FrameSubtitle
 Parallel redundancy
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{example}
-\end_layout
-
-\end_inset
-
-[continued] Applying the identity 
+\begin_layout Example
+(continued) Applying the identity 
 \begin_inset Formula $P(\overline{B})=1-P(B)$
 \end_inset
 
@@ -4749,95 +4322,18 @@ R=1-\prod_{i=1}^{n}(1-R_{i}).
 
  The next picture shows the so called Product Law of Unreliabilities.
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{example}
 \end_layout
 
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout BeginFrame
 System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
-Product Law of Unriliabilities
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
-
+\begin_layout FrameSubtitle
+Product Law of Unreliabilities
 \end_layout
 
 \begin_layout Standard
@@ -4852,115 +4348,36 @@ status collapsed
  
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout BeginFrame
 System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout FrameSubtitle
 Law of Diminishing Returns
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
- From the previous picture it is evident one characteristic of parallel
- redundancy: the marginal increase in reliability decreases with increasing
- number of parallel components.
+\begin_layout Standard
+From the previous picture it is evident one characteristic of parallel redundanc
+y: the marginal increase in reliability decreases with increasing number
+ of parallel components.
  This behaviour is called the 
 \series bold
 Law of Diminishing Returns
 \series default
 .
  
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{definition}
 \end_layout
 
-\end_inset
-
-[series-parallel system] A system with both series and parallel parts is
- called a series-parallel system.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{definition}
-\end_layout
-
-\end_inset
-
+\begin_layout Definition
+A system with both series and parallel parts is called a 
+\emph on
+series-parallel system
+\emph default
+.
  
 \begin_inset Float figure
 wide false
@@ -5015,93 +4432,20 @@ name "fig:seriesParallelBlockDiagram"
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{frame}
-\end_layout
-
-\end_inset
-
+\begin_layout EndFrame
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{frame}
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout BeginFrame
 System's reliability
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
-
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-{
-\end_layout
-
-\end_inset
-
+\begin_layout FrameSubtitle
 Structure function
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{definition}
-\end_layout
-
-\end_inset
-
- Let 
+\begin_layout Definition
+Let 
 \begin_inset Formula $X$
 \end_inset
 
@@ -5116,63 +4460,15 @@ begin{definition}
  where 
 \begin_inset Formula 
 \[
-x_{i}=
+x_{i}=\begin{cases}
+1 & \mbox{if component \ensuremath{i} is functioning,}\\
+0 & \mbox{if component \ensuremath{i} has failed.}
+\end{cases}
 \]
 
 \end_inset
 
- has failed.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{definition}
-\end_layout
-
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-right
-\end_layout
-
-\end_inset
-
-.
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-]
-\end_layout
-
-\end_inset
-
- The structure function 
+The structure function 
 \begin_inset Formula $\Phi(X)$
 \end_inset
 
@@ -5180,14 +4476,14 @@ status collapsed
 \begin_inset Formula 
 \[
 \Phi(X)=\left\{ \begin{array}{ll}
-x_{i}=1 & \textnormal{if system is functioning,}\\
-x_{i}=0 & \textnormal{if system has failed.}
+1 & \textnormal{if system is functioning,}\\
+0 & \textnormal{if system has failed.}
 \end{array}\right.
 \]
 
 \end_inset
 
- The reliability of the system is then 
+The reliability of the system is then 
 \begin_inset Formula 
 \[
 R=P(\Phi(X)=1).
@@ -5198,20 +4494,84 @@ R=P(\Phi(X)=1).
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Example communication network
+\end_layout
+
+\begin_layout Example
+Communication network.
+ 
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
 
 \backslash
-end{frame}
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}[b]{0.4
+\backslash
+linewidth} 
+\backslash
+centering 
+\backslash
+includegraphics[width=110pt, keepaspectratio=true]{./exampleCommunicationNetwork.p
+ng} 
+\backslash
+caption{Communication network with five nodes} 
+\backslash
+end{minipage} 
+\backslash
+hspace{0.2cm} 
+\backslash
+begin{minipage}[b]{0.4
+\backslash
+linewidth} 
+\backslash
+centering 
+\backslash
+includegraphics[width=110pt, keepaspectratio=true]{./faultTree.png} 
+\backslash
+label{fig:fault tree} 
+\backslash
+caption{Fault tree for the communication network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
 \end_layout
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout EndFrame
+
 \end_layout
 
 \end_body
