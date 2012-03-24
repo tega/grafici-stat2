@@ -3334,16 +3334,19 @@ Conditional probability of events
 \end_layout
 
 \begin_layout Itemize
-Assume 
-\begin_inset Formula $B\in\mathcal{G}$
+Assume the unconditional probability of 
+\begin_inset Formula $B$
 \end_inset
 
- with 
-\begin_inset Formula $P(B)>0$
+ is 
+\begin_inset Formula $P(B)=0.2$
 \end_inset
 
 .
- The conditional probability of 
+\end_layout
+
+\begin_layout Itemize
+The conditional probability of 
 \begin_inset Formula $B$
 \end_inset
 
@@ -3356,7 +3359,7 @@ Assume
 \end_inset
 
  
-\begin_inset Formula $P(B\mid B)=1.$
+\begin_inset Formula $P(B\mid B)=1!$
 \end_inset
 
  There is no uncertainty regarding the realisation of event 
@@ -3385,11 +3388,7 @@ Assume that
 \end_inset
 
 .
- If 
-\begin_inset Formula $P(B)>0$
-\end_inset
-
- it makes then sense to define for all 
+ Then it makes sense to define for all 
 \begin_inset Formula $s\in S$
 \end_inset
 
@@ -3404,7 +3403,7 @@ P(\{s\}\mid B)=\begin{cases}
 
 \end_inset
 
-In fact, recall that 
+Recall that 
 \begin_inset Formula $B=\bigcup_{s\in B}\{s\}$
 \end_inset
 
@@ -3445,7 +3444,7 @@ Conditional probability of events
 \begin{eqnarray*}
 P(A\mid B) & = & \sum_{s\in A}P(\{s\}\mid B)\\
  & = & \sum_{s\in A\setminus B}P(\{s\}\mid B)+\sum_{s\in A\cap B}P(\{s\}\mid B)\\
- & = & 0+\sum_{s\in A\cap B}\frac{P(\{s\})}{P(B)}\\
+ & = & 0+\sum_{s\in A\cap B}P(\{s\})/P(B)\\
  & = & P(A\cap B)/P(B)
 \end{eqnarray*}
 
@@ -3480,18 +3479,6 @@ All sample points not in
 .
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-Conditional probability
-\end_layout
-
-\begin_layout FrameSubtitle
-Conditional probability of events
-\end_layout
-
 \begin_layout Itemize
 The conditional probability of event 
 \begin_inset Formula $A$
@@ -3514,7 +3501,11 @@ with
 \end_inset
 
 .
- If 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If 
 \begin_inset Formula $P(B)=0$
 \end_inset
 
@@ -3530,13 +3521,14 @@ with
 \uwave off
 \noun off
 \color none
-then 
+
 \begin_inset Formula $P(A\mid B)$
 \end_inset
 
  is undefined.
 \end_layout
 
+\end_deeper
 \begin_layout EndFrame
 
 \end_layout
