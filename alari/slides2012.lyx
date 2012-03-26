@@ -3964,18 +3964,6 @@ Remark
 
 \end_layout
 
-\begin_layout BeginFrame
-Conditional probability
-\end_layout
-
-\begin_layout FrameSubtitle
-Application
-\end_layout
-
-\begin_layout EndFrame
-
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -4009,7 +3997,7 @@ Let us consider an electronic system with
  Define the event 
 \begin_inset Formula 
 \[
-A_{i}:=\textnormal{“The }i-th\mbox{  component is functioning properly ”}.
+A_{i}:=\textnormal{“The }i-th\mbox{ component is functioning properly ”}.
 \]
 
 \end_inset
@@ -4461,8 +4449,8 @@ Let
 \begin_inset Formula 
 \[
 x_{i}=\begin{cases}
-1 & \mbox{if component \ensuremath{i} is functioning,}\\
-0 & \mbox{if component \ensuremath{i} has failed.}
+1 & \mbox{if component \ensuremath{i}is functioning,}\\
+0 & \mbox{if component \ensuremath{i}has failed.}
 \end{cases}
 \]
 
@@ -4565,6 +4553,286 @@ end{minipage}
 end{figure}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Exercises
+\emph default
+: solve Problems 1,2,3,4 of Trivedi, page 35.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Bayes' Theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Bayes' Rule
+\end_layout
+
+\begin_layout Definition
+A list of 
+\begin_inset Formula $n$
+\end_inset
+
+ events 
+\begin_inset Formula $B_{1},B_{2},\dots,B_{n}$
+\end_inset
+
+ that are collectively exhaustive (i.e.
+ 
+\begin_inset Formula $\bigcup B_{i}$
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+) and mutually exclusive (i.e.
+ 
+\begin_inset Formula $B_{i}\cap B_{j}=\emptyset$
+\end_inset
+
+ for 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+) form an event space 
+\begin_inset Formula $S'=\{B_{1},B_{2},\dots,B_{n}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $B$
+\end_inset
+
+ an event and 
+\begin_inset Formula $S'=\{B,\bar{B}\}$
+\end_inset
+
+ the corresponding event space.
+ For any event 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A=(A\cap B)\cup(A\cap\bar{B}).
+\]
+
+\end_inset
+
+It follows (why?) 
+\begin_inset Formula 
+\begin{eqnarray*}
+P(A) & = & P(A\cap B)+P(A\cap\bar{B})\\
+ & = & P(A\mid B)P(B)+P(A\mid\bar{B})P(\bar{B}).
+\end{eqnarray*}
+
+\end_inset
+
+The same formula can be generalized with respect to the event space 
+\begin_inset Formula $S'=\{B_{1},B_{2},\dots,B_{n}\}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bayes' Rule
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+Theorem of total probability
+\emph default
+.
+ Let 
+\begin_inset Formula $S'=\{B_{1},B_{2},\dots,B_{n}\}$
+\end_inset
+
+ be an event space and 
+\begin_inset Formula $A$
+\end_inset
+
+ an event.
+ Then 
+\begin_inset Formula 
+\[
+P(A)=\sum_{i=1}^{n}P(A\mid B_{i})P(B_{i}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename theorem_total_probab.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bayes' Rule
+\end_layout
+
+\begin_layout FrameSubtitle
+Bayes' Theorem
+\end_layout
+
+\begin_layout Standard
+Let us assume that the event 
+\begin_inset Formula $A$
+\end_inset
+
+ is known to have occured but it is not known which of the mutually exclusive
+ and collectively exhaustive events 
+\begin_inset Formula $B_{1},\dots,B_{n}$
+\end_inset
+
+ has occured.
+ In this situation we want to use the available information in an efficent
+ way in order to evaluate 
+\begin_inset Formula $P(B_{i}\mid A)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+Bayes' Theorem.
+ Let
+\emph default
+ 
+\begin_inset Formula $S'=\{B_{1},B_{2},\dots,B_{n}\}$
+\end_inset
+
+ be an event space and 
+\begin_inset Formula $A$
+\end_inset
+
+ and event.
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+P(B_{i}\mid A) & = & \frac{P(B_{i}\cap A)}{P(A)}\\
+ & = & \frac{P(A\mid B_{i})P(B_{i})}{\sum_{j=1}^{n}P(A\mid B_{j})P(B_{j})}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bayes' Rule
+\end_layout
+
+\begin_layout Standard
+Measurements on a certain day indicated that the source of incoming jobs
+ at the North Carolina Super Computing Center (NCSC) is 15% from Duke, 35%
+ from University of North Carolina (UNC) and 50% from North Carolina State
+ (NCS).
+ 
+\end_layout
+
+\begin_layout Itemize
+Probabilities that a job initiated from these universities is a multitasking
+ job are 0.01, 0.05 and 0.02, respectively.
+\end_layout
+
+\begin_layout Itemize
+Find the probability that a job chosen at random at NCSC is a multitasking
+ job.
+ 
+\end_layout
+
+\begin_layout Itemize
+Find the probability that a randomly chosen job comes from UNC, given that
+ it is a multitasking job.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $B_{i}=$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+job is from university 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Formula $A=$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+job uses multitasking
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $\dots$
 \end_inset
 
 

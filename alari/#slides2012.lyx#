@@ -3242,6 +3242,22 @@ end{esercizio}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Conditional probability}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout BeginFrame
 Conditional probability
 \end_layout
@@ -3334,19 +3350,16 @@ Conditional probability of events
 \end_layout
 
 \begin_layout Itemize
-Assume the unconditional probability of 
-\begin_inset Formula $B$
+Assume 
+\begin_inset Formula $B\in\mathcal{G}$
 \end_inset
 
- is 
-\begin_inset Formula $P(B)=0.2$
+ with 
+\begin_inset Formula $P(B)\neq0$
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Itemize
-The conditional probability of 
+ The conditional probability of 
 \begin_inset Formula $B$
 \end_inset
 
@@ -3359,7 +3372,7 @@ The conditional probability of
 \end_inset
 
  
-\begin_inset Formula $P(B\mid B)=1!$
+\begin_inset Formula $P(B\mid B)=1.$
 \end_inset
 
  There is no uncertainty regarding the realisation of event 
@@ -3388,7 +3401,11 @@ Assume that
 \end_inset
 
 .
- Then it makes sense to define for all 
+ If 
+\begin_inset Formula $P(B)\neq0$
+\end_inset
+
+ it makes then sense to define for all 
 \begin_inset Formula $s\in S$
 \end_inset
 
@@ -3403,7 +3420,7 @@ P(\{s\}\mid B)=\begin{cases}
 
 \end_inset
 
-Recall that 
+In fact, recall that 
 \begin_inset Formula $B=\bigcup_{s\in B}\{s\}$
 \end_inset
 
@@ -3444,7 +3461,7 @@ Conditional probability of events
 \begin{eqnarray*}
 P(A\mid B) & = & \sum_{s\in A}P(\{s\}\mid B)\\
  & = & \sum_{s\in A\setminus B}P(\{s\}\mid B)+\sum_{s\in A\cap B}P(\{s\}\mid B)\\
- & = & 0+\sum_{s\in A\cap B}P(\{s\})/P(B)\\
+ & = & 0+\sum_{s\in A\cap B}\frac{P(\{s\})}{P(B)}\\
  & = & P(A\cap B)/P(B)
 \end{eqnarray*}
 
@@ -3479,7 +3496,19 @@ All sample points not in
 .
 \end_layout
 
-\begin_layout Itemize
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Conditional probability
+\end_layout
+
+\begin_layout FrameSubtitle
+Conditional probability of events
+\end_layout
+
+\begin_layout Definition
 The conditional probability of event 
 \begin_inset Formula $A$
 \end_inset
@@ -3491,25 +3520,101 @@ The conditional probability of event
  is therefore defined by
 \begin_inset Formula 
 \[
-P(A\mid B)=\frac{P(A\cap B)}{P(B)}
+P(A\mid B)=\begin{cases}
+\frac{P(A\cap B)}{P(B)} & \mbox{if }P(B)>0\\
+\mbox{undefined} & \mbox{if}P(B)=0
+\end{cases}.
 \]
 
 \end_inset
 
-with 
-\begin_inset Formula $P(B)>0$
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Multiplication rule (MR)
+\emph default
+: rearranging the terms in the definition of 
+\begin_inset Formula $P(A\mid B)$
+\end_inset
+
+ we obtain the following equalities
+\begin_inset Formula 
+\begin{eqnarray*}
+P(A\cap B) & = & \begin{cases}
+P(B)P(A\mid B) & \mbox{if }P(B)\neq0\\
+P(A)P(B\mid A) & \mbox{if }P(A)\neq0\\
+0 & \mbox{otherwise}
+\end{cases}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Conditional probability
+\end_layout
+
+\begin_layout FrameSubtitle
+Exercises
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Solve Problem 1 Trivedi, page 25.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $(S,\mathcal{G},P)$
+\end_inset
+
+ be a probability space and 
+\begin_inset Formula $P(A)\neq0$
 \end_inset
 
 .
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-If 
-\begin_inset Formula $P(B)=0$
+ Show that the set function defined on 
+\begin_inset Formula $\mathcal{G}$
 \end_inset
 
  
+\begin_inset Formula 
+\[
+P_{A}(B)=P(B\mid A)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+is a probability law on 
 \family roman
 \series medium
 \shape up
@@ -3522,13 +3627,1162 @@ If
 \noun off
 \color none
 
-\begin_inset Formula $P(A\mid B)$
+\begin_inset Formula $(S,\mathcal{G})$
 \end_inset
 
- is undefined.
+,
+\end_layout
+
+\begin_layout Enumerate
+satisfies 
+\begin_inset Formula $P_{A}(\bar{A})=0.$
+\end_inset
+
+
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $P$
+\end_inset
+
+ be the uniform distribution on a finite sample space 
+\begin_inset Formula $S$
+\end_inset
+
+ and let 
+\begin_inset Formula $A$
+\end_inset
+
+ be a event on 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ Prove that 
+\begin_inset Formula $P(\mid A)$
+\end_inset
+
+ is the uniform distribution on 
+\begin_inset Formula $A$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Conditional probability
+\end_layout
+
+\begin_layout FrameSubtitle
+Independence
+\end_layout
+
+\begin_layout Standard
+If the probability of the occurrence of an event 
+\begin_inset Formula $A$
+\end_inset
+
+ does not change regardless of whether event 
+\begin_inset Formula $B$
+\end_inset
+
+ has occured, we are likely to conclude that the two events are independent.
+ Formally we have the following definition.
+\end_layout
+
+\begin_layout Definition
+(Independent events).
+ We define two events 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ to be independent if and only if 
+\begin_inset Formula 
+\[
+P(A\cap B)=P(A)P(B).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Remarks
+\emph default
+: 
+\end_layout
+
+\begin_layout Enumerate
+Do not confuse indepent events with mutually exclusive (disjoint) events.
+\end_layout
+
+\begin_layout Enumerate
+If 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are mutually exclusive events, then 
+\begin_inset Formula $A\cap B=\emptyset$
+\end_inset
+
+, which implies 
+\begin_inset Formula $P(A\cap B)=0$
+\end_inset
+
+.
+ Now, if they are independent as well, then 
+\begin_inset Formula $P(A)=0$
+\end_inset
+
+ or 
+\begin_inset Formula $P(B)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If an event 
+\begin_inset Formula $A$
+\end_inset
+
+ is independent of itself, that is, if 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $A$
+\end_inset
+
+ are independent, then 
+\begin_inset Formula $P(A)=0$
+\end_inset
+
+ or 
+\begin_inset Formula $P(A)=1$
+\end_inset
+
+.
+ Why? Try to prove it!
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Conditional probability
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Remarks
+\emph default
+ (continued): 
+\end_layout
+
+\begin_layout Enumerate
+The relation of independence, denoted by 
+\begin_inset Formula $\perp$
+\end_inset
+
+, is not transitive.
+ If 
+\begin_inset Formula $A\perp B$
+\end_inset
+
+ and 
+\begin_inset Formula $B\perp C$
+\end_inset
+
+ it does not follow that 
+\begin_inset Formula $A\perp C$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+If events 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ are independent, then so are events 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+, events 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+ and events 
+\begin_inset Formula $\bar{A}$
+\end_inset
+
+ and 
+\begin_inset Formula $\bar{B}$
+\end_inset
+
+.
+ Prove it!
+\end_layout
+
+\begin_layout Standard
+The concept of independence can be extended to a list of 
+\begin_inset Formula $n$
+\end_inset
+
+ events:
+\end_layout
+
+\begin_layout Definition
+Independence of a set of events.
+ A list of 
+\begin_inset Formula $n$
+\end_inset
+
+ events 
+\begin_inset Formula $A_{1},A_{2},\dots,A_{n}$
+\end_inset
+
+ is mutually independent if and only if for each set of 
+\begin_inset Formula $k$
+\end_inset
+
+ 
+\begin_inset Formula $(2\leq k\leq n)$
+\end_inset
+
+ distinct indices 
+\begin_inset Formula $i_{1},i_{2},\dots,i_{k}$
+\end_inset
+
+ which are elements of 
+\begin_inset Formula $\{1,2,\dots,n\}$
+\end_inset
+
+ we have
+\begin_inset Formula 
+\[
+P(A_{i_{1}}\cap A_{i_{2}}\cap\cdots\cap A_{i_{k}})=P(A_{i_{1}})P(A_{i_{2}})\cdots P(A_{i_{k}}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Remark
+\emph default
+: It is possible to have 
+\begin_inset Formula $P(A\cap B\cap C)=P(A)P(B)P(C)$
+\end_inset
+
+ but 
+\begin_inset Formula $P(A\cap B)$
+\end_inset
+
+ 
+\begin_inset Formula $\neq$
+\end_inset
+
+
+\begin_inset Formula $P(A)P(B)$
+\end_inset
+
+, 
+\begin_inset Formula $P(A\cap C)\neq P(A)P(C)$
+\end_inset
+
+, 
+\begin_inset Formula $P(B\cap C)\neq P(B)P(C)$
+\end_inset
+
+.
+ Under these conditions 
+\begin_inset Formula $A,B$
+\end_inset
+
+ and 
+\begin_inset Formula $C$
+\end_inset
+
+ are not mutually independent.
+ (Trivedi, Example 1.10).
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{System's reliability}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Reliability of a component
+\end_layout
+
+\begin_layout Standard
+Let us consider an electronic system with 
+\begin_inset Formula $n$
+\end_inset
+
+ independent components.
+ Define the event 
+\begin_inset Formula 
+\[
+A_{i}:=\textnormal{“The }i-th\mbox{ component is functioning properly ”}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The reliability of component 
+\begin_inset Formula $i$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+R_{i}=P(A_{i}),
+\]
+
+\end_inset
+
+ i.e.
+ it is the probability that the component is functioning properly.
+ 
+\end_layout
+
+\begin_layout Definition
+A series system is a system such that the entire system fails if any one
+ of its components fails.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Parallel system
+\end_layout
+
+\begin_layout Definition
+A parallel system is a system such that the entire system fails only if
+ all its components fail.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{theorem}
+\end_layout
+
+\end_inset
+
+Product law of reliabilities for series systems.
+ The reliability of a series system decreases 
+\begin_inset Quotes grd
+\end_inset
+
+quickly” with an increase in complexity (number of components).
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -0.2cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Let us consider the event 
+\begin_inset Formula $A=$
+\end_inset
+
+
+\begin_inset Quotes grd
+\end_inset
+
+The system functions properly”.
+ The reliability of a series system of 
+\begin_inset Formula $n$
+\end_inset
+
+ components is then 
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $R=P(A)=P(A_{1}\cap A_{2}\dots\cap A_{n})=\prod_{i=1}^{n}P(A_{i})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Parallel redundancy
+\end_layout
+
+\begin_layout Example
+Let a series system have 
+\begin_inset Formula $n=5$
+\end_inset
+
+ components and 
+\begin_inset Formula $P(A_{i})=0.970$
+\end_inset
+
+ for all components.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 0.75cm
+\end_inset
+
+ The system reliability is then equal to 
+\begin_inset Formula 
+\[
+R=P(A_{1})^{5}=0.97^{5}=0.859.
+\]
+
+\end_inset
+
+If we increase 
+\begin_inset Formula $n=10$
+\end_inset
+
+ the system reliability decreases to 
+\begin_inset Formula $0.738$
+\end_inset
+
+!
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset VSpace 0.75cm
+\end_inset
+
+ What if 
+\begin_inset Formula $n=1'000'000$
+\end_inset
+
+? 
+\begin_inset VSpace 0.5cm
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Parallel redundancy
+\end_layout
+
+\begin_layout Standard
+In order to mitigate the problem one possible solution is to implement parallel
+ redundancy.
+ 
+\end_layout
+
+\begin_layout Example
+Consider a parallel system of 
+\begin_inset Formula $n$
+\end_inset
+
+ independent components.
+ The system runs correctly if at least one of its components runs properly,
+ i.e.
+ 
+\begin_inset Formula 
+\[
+A=(A_{1}\cup A_{2}\dots\cup A_{n}).
+\]
+
+\end_inset
+
+ But this means that 
+\begin_inset Formula 
+\[
+P(\overline{A})=P(\overline{(A_{1}\cup A_{2}\dots\cup A_{n})})=P(\overline{A}_{1}\cap\overline{A}_{2}\dots\cap\overline{A}_{n}))=\prod_{i=1}^{n}P(\overline{A}_{i})
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Parallel redundancy
+\end_layout
+
+\begin_layout Example
+(continued) Applying the identity 
+\begin_inset Formula $P(\overline{B})=1-P(B)$
+\end_inset
+
+ to both sides of the equality and solving w.r.t.
+ 
+\begin_inset Formula $P(A)$
+\end_inset
+
+, we obtain the final formula 
+\begin_inset Formula 
+\[
+P(A)=1-\prod_{i=1}^{n}(1-P(A_{i}))
+\]
+
+\end_inset
+
+ or equivalently, in terms of 
+\begin_inset Formula $R$
+\end_inset
+
+ and 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+R=1-\prod_{i=1}^{n}(1-R_{i}).
+\]
+
+\end_inset
+
+ The next picture shows the so called Product Law of Unreliabilities.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Product Law of Unreliabilities
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename ../../../Dropbox/scuola/USI/Alari/mySlydes/latex/parallelRedundancy1.png
+	width 314pt
+	keepAspectRatio
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Law of Diminishing Returns
+\end_layout
+
+\begin_layout Standard
+From the previous picture it is evident one characteristic of parallel redundanc
+y: the marginal increase in reliability decreases with increasing number
+ of parallel components.
+ This behaviour is called the 
+\series bold
+Law of Diminishing Returns
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Definition
+A system with both series and parallel parts is called a 
+\emph on
+series-parallel system
+\emph default
+.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics
+	filename ../../../Dropbox/scuola/USI/Alari/mySlydes/latex/seriesparalleldiagram.png
+	width 230pt
+	keepAspectRatio
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+series-parallel reliability block diagram
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:seriesParallelBlockDiagram"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Structure function
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a state vector of a system with 
+\begin_inset Formula $n$
+\end_inset
+
+ components so that 
+\begin_inset Formula $X=(x_{1},\dots,x_{n})$
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+x_{i}=\begin{cases}
+1 & \mbox{if component \ensuremath{i}is functioning,}\\
+0 & \mbox{if component \ensuremath{i}has failed.}
+\end{cases}
+\]
+
+\end_inset
+
+The structure function 
+\begin_inset Formula $\Phi(X)$
+\end_inset
+
+ is defined by 
+\begin_inset Formula 
+\[
+\Phi(X)=\left\{ \begin{array}{ll}
+1 & \textnormal{if system is functioning,}\\
+0 & \textnormal{if system has failed.}
+\end{array}\right.
+\]
+
+\end_inset
+
+The reliability of the system is then 
+\begin_inset Formula 
+\[
+R=P(\Phi(X)=1).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+System's reliability
+\end_layout
+
+\begin_layout FrameSubtitle
+Example communication network
+\end_layout
+
+\begin_layout Example
+Communication network.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{figure}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{minipage}[b]{0.4
+\backslash
+linewidth} 
+\backslash
+centering 
+\backslash
+includegraphics[width=110pt, keepaspectratio=true]{./exampleCommunicationNetwork.p
+ng} 
+\backslash
+caption{Communication network with five nodes} 
+\backslash
+end{minipage} 
+\backslash
+hspace{0.2cm} 
+\backslash
+begin{minipage}[b]{0.4
+\backslash
+linewidth} 
+\backslash
+centering 
+\backslash
+includegraphics[width=110pt, keepaspectratio=true]{./faultTree.png} 
+\backslash
+label{fig:fault tree} 
+\backslash
+caption{Fault tree for the communication network}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{figure}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Exercises
+\emph default
+: solve Problems 1,2,3,4 of Trivedi, page 35.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Bayes' Theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Bayes' Rule
+\end_layout
+
+\begin_layout Definition
+A list of 
+\begin_inset Formula $n$
+\end_inset
+
+ events 
+\begin_inset Formula $B_{1},B_{2},\dots,B_{n}$
+\end_inset
+
+ that are collectively exhaustive (i.e.
+ 
+\begin_inset Formula $\bigcup B_{i}$
+\end_inset
+
+
+\begin_inset Formula $=$
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+) and mutually exclusive (i.e.
+ 
+\begin_inset Formula $B_{i}\cap B_{j}=\emptyset$
+\end_inset
+
+ for 
+\begin_inset Formula $i\neq j$
+\end_inset
+
+) form an event space 
+\begin_inset Formula $S'=\{B_{1},B_{2},\dots,B_{n}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $B$
+\end_inset
+
+ an event and 
+\begin_inset Formula $S'=\{B,\bar{B}\}$
+\end_inset
+
+ the corresponding event space.
+ For any event 
+\begin_inset Formula $A$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A=(A\cap B)\cup(A\cap\bar{B}).
+\]
+
+\end_inset
+
+It follows (why?) 
+\begin_inset Formula 
+\begin{eqnarray*}
+P(A) & = & P(A\cap B)+P(A\cap\bar{B})\\
+ & = & P(A\mid B)P(B)+P(A\mid\bar{B})P(\bar{B}).
+\end{eqnarray*}
+
+\end_inset
+
+The same formula can be generalized with respect to the event space 
+\begin_inset Formula $S'=\{B_{1},B_{2},\dots,B_{n}\}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bayes' Rule
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+Theorem of total probability
+\emph default
+.
+ Let 
+\begin_inset Formula $S'=\{B_{1},B_{2},\dots,B_{n}\}$
+\end_inset
+
+ be an event space and 
+\begin_inset Formula $A$
+\end_inset
+
+ an event.
+ Then 
+\begin_inset Formula 
+\[
+P(A)=\sum_{i=1}^{n}P(A\mid B_{i})P(B_{i}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename theorem_total_probab.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bayes' Rule
+\end_layout
+
+\begin_layout FrameSubtitle
+Bayes' Theorem
+\end_layout
+
+\begin_layout Standard
+Let us assume that the event 
+\begin_inset Formula $A$
+\end_inset
+
+ is known to have occured but it is not known which of the mutually exclusive
+ and collectively exhaustive events 
+\begin_inset Formula $B_{1},\dots,B_{n}$
+\end_inset
+
+ has occured.
+ In this situation we want to use the available information in an efficent
+ way in order to evaluate 
+\begin_inset Formula $P(B_{i}\mid A)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+Bayes' Theorem.
+ Let
+\emph default
+ 
+\begin_inset Formula $S'=\{B_{1},B_{2},\dots,B_{n}\}$
+\end_inset
+
+ be an event space and 
+\begin_inset Formula $A$
+\end_inset
+
+ and event.
+ Then
+\begin_inset Formula 
+\begin{eqnarray*}
+P(B_{i}\mid A) & = & \frac{P(B_{i}\cap A)}{P(A)}\\
+ & = & \frac{P(A\mid B_{i})P(B_{i})}{\sum_{j=1}^{n}P(A\mid B_{j})P(B_{j})}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bayes' Rule
+\end_layout
+
+\begin_layout Example
+Measurements on a certain day indicated that the source of incoming jobs
+ at the 
+\end_layout
+
 \begin_layout EndFrame
 
 \end_layout
