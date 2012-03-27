@@ -4778,14 +4778,16 @@ P(B_{i}\mid A) & = & \frac{P(B_{i}\cap A)}{P(A)}\\
 Bayes' Rule
 \end_layout
 
-\begin_layout Standard
-Measurements on a certain day indicated that the source of incoming jobs
+\begin_layout Example
+Trivedi, page 39.
+ Measurements on a certain day indicated that the source of incoming jobs
  at the North Carolina Super Computing Center (NCSC) is 15% from Duke, 35%
  from University of North Carolina (UNC) and 50% from North Carolina State
  (NCS).
  
 \end_layout
 
+\begin_deeper
 \begin_layout Itemize
 Probabilities that a job initiated from these universities is a multitasking
  job are 0.01, 0.05 and 0.02, respectively.
@@ -4838,16 +4840,14 @@ job uses multitasking
 
 \end_layout
 
-\begin_layout EndFrame
-
-\end_layout
-
-\begin_layout BeginFrame
-Bernoulli Trials
-\end_layout
-
+\end_deeper
 \begin_layout Standard
-abc
+
+\emph on
+Exercises
+\emph default
+: solve Problems 1,2,3,4 of Trivedi, pp.
+ 43-44.
 \end_layout
 
 \begin_layout EndFrame
