@@ -4327,9 +4327,8 @@ Product Law of Unreliabilities
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename ../../../Dropbox/scuola/USI/Alari/mySlydes/latex/parallelRedundancy1.png
+	filename parallelRedundancy1.png
 	width 314pt
-	keepAspectRatio
 
 \end_inset
 
@@ -4387,9 +4386,8 @@ centering
 
  
 \begin_inset Graphics
-	filename ../../../Dropbox/scuola/USI/Alari/mySlydes/latex/seriesparalleldiagram.png
+	filename seriesparalleldiagram.png
 	width 230pt
-	keepAspectRatio
 
 \end_inset
 
