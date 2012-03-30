@@ -1,0 +1,658 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{amsfonts}
+\usetheme{Madrid}
+\newcounter{esr}
+\newtheorem{esercizio}[esr]{Exercise}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{framenumber}{45}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Statistics Lecture
+\end_layout
+
+\begin_layout Author
+Claudio Ortelli
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex InstituteMark
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+\begin_inset Flex InstituteMark
+status collapsed
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+ Finance Institute
+\begin_inset Newline newline
+\end_inset
+
+USI
+\end_layout
+
+\begin_layout Date
+Advanced Learning and Research Institute, 2012
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Either use conference name or its abbreviation.
+ 
+\end_layout
+
+\begin_layout Itemize
+Not really informative to the audience, more for people (including yourself)
+ who are reading the slides online
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+ALARI 2012
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+optional, should be abbreviation of conference name
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Bernoulli Trials}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+Consider a random experiment with only two outcomes, 
+\begin_inset Quotes eld
+\end_inset
+
+success
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+failure
+\begin_inset Quotes erd
+\end_inset
+
+, and denote the probability of the two outcomes by 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+, respectively, with 
+\begin_inset Formula $p+q=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+The experiment consisting in observing a sequence of 
+\begin_inset Formula $n$
+\end_inset
+
+ independent repetitions of the above described experiment is called a sequence
+ of Bernoulli trials.
+\end_layout
+
+\begin_layout Examples
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Observe 
+\begin_inset Formula $n$
+\end_inset
+
+ consecutive executions of an if statement, with success = 
+\begin_inset Quotes eld
+\end_inset
+
+then clause is executed
+\begin_inset Quotes erd
+\end_inset
+
+ and failure = 
+\begin_inset Quotes erd
+\end_inset
+
+else clause is executed
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Examine components produced on an assembly line, with success = 
+\begin_inset Quotes erd
+\end_inset
+
+acceptable
+\begin_inset Quotes erd
+\end_inset
+
+ and failure = 
+\begin_inset Quotes erd
+\end_inset
+
+defective
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+Let 0 denote failure and 1 denote success.
+ Let 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ be the sample space of an experiment involving 
+\begin_inset Formula $n$
+\end_inset
+
+ Bernoulli trials
+\begin_inset Formula 
+\begin{eqnarray*}
+S_{1} & = & \{0,1\},\\
+S_{2} & = & \{(0,0),(0,1),(1,0),(1,1)\},\\
+S_{3} & = & \{0,1\}^{n}=\{2^{n}\, n-\mbox{tuples of 0s and 1s}\}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For all sample spaces 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ we define the 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+ algebra 
+\begin_inset Formula $\mathcal{P}(S_{n})$
+\end_inset
+
+ as the relevant 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+ algebra on which to define the probability 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ On 
+\begin_inset Formula $S_{1}$
+\end_inset
+
+ we then have 
+\begin_inset Formula $P(\{0\})=q$
+\end_inset
+
+ and 
+\begin_inset Formula $P(\{1\})=p$
+\end_inset
+
+.
+ We wish to assign probability to points in 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Define 
+\begin_inset Formula $A_{i}=$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+success on trail 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Formula $\overline{A}_{i}=$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+failure on trial 
+\begin_inset Formula $i$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ We then have 
+\begin_inset Formula $P(A_{i})=p$
+\end_inset
+
+ and 
+\begin_inset Formula $P(\bar{A}_{i})=q$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $s$
+\end_inset
+
+ be an outcome of 
+\begin_inset Formula $S_{n}$
+\end_inset
+
+ with 
+\begin_inset Formula $k$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Formula $n-k$
+\end_inset
+
+ 
+\begin_inset Quotes eld
+\end_inset
+
+0
+\begin_inset Quotes erd
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula 
+\[
+s=(1,1,\dots,1,0,0,\dots0)
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+The elementary event 
+\begin_inset Formula $\{s\}$
+\end_inset
+
+ can be written
+\begin_inset Formula 
+\[
+\{s\}=A_{1}\cap A_{2}\cap\dots\cap A_{k}\cap\overline{A}_{k+1}\cap\dots\cap\bar{A}_{n}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Because events 
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ are independent we obtain
+\begin_inset Formula 
+\[
+P(\{s\})=P(A_{1})P(A_{2})\dots P(A_{k})P(\bar{A}_{k+1})\dots P(\bar{A}_{n})
+\]
+
+\end_inset
+
+ so that 
+\begin_inset Formula $P(\{s\})=p^{k}q^{n-k}.$
+\end_inset
+
+ Note that that we can construct 
+\begin_inset Formula $\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)$
+\end_inset
+
+ different outcomes with 
+\begin_inset Formula $k$
+\end_inset
+
+ successes and 
+\begin_inset Formula $n-k$
+\end_inset
+
+ failures, therefore defining 
+\begin_inset Formula $A=$
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+we observe exactly 
+\begin_inset Formula $k$
+\end_inset
+
+ successes in 
+\begin_inset Formula $n$
+\end_inset
+
+ trials
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+P(A)=\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)p^{k}q^{n-k}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since by the binomial theorem 
+\begin_inset Formula $(p+q)^{n}=\sum_{k=0}^{n}\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)p^{k}q^{n-k}=1$
+\end_inset
+
+, 
+\begin_inset Formula $P$
+\end_inset
+
+ is a well defined probability law on 
+\begin_inset Formula $(S_{n},\mathcal{P}(S_{n}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+In connection with reliability theory let us assume that a particular system
+ with 
+\begin_inset Formula $n$
+\end_inset
+
+ components requires at least 
+\begin_inset Formula $k$
+\end_inset
+
+ components to function in order for the entire system to work correctly.
+ Such systems are called 
+\begin_inset Formula $k$
+\end_inset
+
+-out-of-
+\begin_inset Formula $n$
+\end_inset
+
+ systems.
+ 
+\end_layout
+
+\begin_layout Itemize
+If we let 
+\begin_inset Formula $k=n$
+\end_inset
+
+ we have a series system.
+\end_layout
+
+\begin_layout Itemize
+If we let 
+\begin_inset Formula $k=1$
+\end_inset
+
+ we have a system with parallel redundancy.
+\end_layout
+
+\begin_layout Standard
+Assuming all components are statistically identical and function independently
+ of each other, and denoting by 
+\begin_inset Formula $R$
+\end_inset
+
+ the reliability of a component (
+\begin_inset Formula $q=1-R$
+\end_inset
+
+ gives its unreliability), then the experiment of observing the statuses
+ of 
+\begin_inset Formula $n$
+\end_inset
+
+ components can be thouth of as a sequence of 
+\begin_inset Formula $n$
+\end_inset
+
+ bernoulli trials with probability 
+\begin_inset Formula $p=R$
+\end_inset
+
+.
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{k\mid n} & = & P(\mbox{"at least \ensuremath{k} components functioning properly"})\\
+ & = & P(\bigcup_{i=k}^{n}\mbox{"exactly \ensuremath{i} components functioning properly"})
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{k\mid n} & = & \sum_{i=k}^{n}P(\mbox{"exactly \ensuremath{i}components functioning properly"})\\
+ & = & \sum_{i=k}^{n}\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)p^{k}q^{n-k}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Triple modular redundancy (TMR).
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document

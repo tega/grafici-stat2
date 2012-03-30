@@ -311,7 +311,7 @@ nondenumerable
 
 \end_deeper
 \begin_layout Itemize
-A finite or countably finite sample space is called a 
+A finite or countably infinite sample space is called a 
 \emph on
 discrete
 \emph default
@@ -4494,7 +4494,12 @@ Example communication network
 
 \begin_layout Example
 Communication network.
- 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status open
 
@@ -4502,40 +4507,34 @@ status open
 
 
 \backslash
-begin{figure}
+begin{minipage}[b]{0.4
+\backslash
+linewidth} 
+\backslash
+centering
 \end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename exampleCommunicationNetwork.png
+	scale 80
+
+\end_inset
+
+
+\begin_inset Caption
 
 \begin_layout Plain Layout
-
-
-\backslash
-begin{minipage}[b]{0.4
-\backslash
-linewidth} 
-\backslash
-centering 
-\backslash
-includegraphics[width=110pt, keepaspectratio=true]{./exampleCommunicationNetwork.p
-ng} 
-\backslash
-caption{Communication network with five nodes} 
-\backslash
-end{minipage} 
-\backslash
-hspace{0.2cm} 
-\backslash
-begin{minipage}[b]{0.4
-\backslash
-linewidth} 
-\backslash
-centering 
-\backslash
-includegraphics[width=110pt, keepaspectratio=true]{./faultTree.png} 
-\backslash
-label{fig:fault tree} 
-\backslash
-caption{Fault tree for the communication network}
+Communication network with five nodes
 \end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
 
@@ -4544,11 +4543,63 @@ caption{Fault tree for the communication network}
 end{minipage}
 \end_layout
 
+\end_inset
+
+
+\begin_inset ERT
+status open
+
 \begin_layout Plain Layout
 
 
 \backslash
-end{figure}
+begin{minipage}[b]{0.4
+\backslash
+linewidth} 
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename faultTree.png
+	scale 75
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Fault tree for the com\SpecialChar \-
+mu\SpecialChar \-
+ni\SpecialChar \-
+ca\SpecialChar \-
+tion network
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{minipage}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
