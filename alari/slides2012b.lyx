@@ -614,8 +614,8 @@ Assuming all components are statistically identical and function independently
 .
 \begin_inset Formula 
 \begin{eqnarray*}
-R_{k\mid n} & = & P(\mbox{"at least \ensuremath{k} components functioning properly"})\\
- & = & P(\bigcup_{i=k}^{n}\mbox{"exactly \ensuremath{i} components functioning properly"})
+R_{k\mid n} & = & P(\mbox{"at least \ensuremath{k}components functioning properly"})\\
+ & = & P(\bigcup_{i=k}^{n}\mbox{"exactly \ensuremath{i}components functioning properly"})
 \end{eqnarray*}
 
 \end_inset
@@ -637,8 +637,8 @@ Bernoulli Trials
 R_{k\mid n} & = & \sum_{i=k}^{n}P(\mbox{"exactly \ensuremath{i}components functioning properly"})\\
  & = & \sum_{i=k}^{n}\left(\begin{array}{c}
 n\\
-k
-\end{array}\right)p^{k}q^{n-k}.
+i
+\end{array}\right)p^{i}q^{n-i}.
 \end{eqnarray*}
 
 \end_inset
@@ -648,6 +648,118 @@ k
 
 \begin_layout Example
 Triple modular redundancy (TMR).
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename triple_modular_redundant_system.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Bernoulli Trials
+\end_layout
+
+\begin_layout Example
+Applying the above formula with 
+\begin_inset Formula $n=3$
+\end_inset
+
+ and 
+\begin_inset Formula $k=2$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{TMR} & = & \sum_{i=2}^{3}\left(\begin{array}{c}
+3\\
+i
+\end{array}\right)R^{i}(1-R)^{3-i}=3R^{2}(1-R)+R^{3}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename triple_modular_redundancy.pdf
+	width 6.5cm
+	height 5.2cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Inhomogeneous Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+When the components are inhomegeneous w.r.t.
+ the reliability 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+, then the calculation is a bit more complicated
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{k\mid n} & = & 1-\sum_{\mid I\mid>=k}\left(\prod_{i\in I}(1-R_{i})\right)\left(\prod_{i\notin I}R_{i}\right)
+\end{eqnarray*}
+
+\end_inset
+
+where 
+\begin_inset Formula $I$
+\end_inset
+
+ ranges over all choises 
+\begin_inset Formula $i_{1}<i_{2}<\dots<i_{m}$
+\end_inset
+
+ such that 
+\begin_inset Formula $k\leq m\leq n$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout EndFrame
