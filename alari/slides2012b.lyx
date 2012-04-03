@@ -123,37 +123,11 @@ USI
 
 \begin_layout Date
 Advanced Learning and Research Institute, 2012
-\begin_inset Note Note
-status open
-
-\begin_layout Itemize
-Either use conference name or its abbreviation.
- 
-\end_layout
-
-\begin_layout Itemize
-Not really informative to the audience, more for people (including yourself)
- who are reading the slides online
-\end_layout
-
-\end_inset
-
-
 \begin_inset Argument
 status open
 
 \begin_layout Plain Layout
 ALARI 2012
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-optional, should be abbreviation of conference name
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -603,11 +577,11 @@ Assuming all components are statistically identical and function independently
 \begin_inset Formula $n$
 \end_inset
 
- components can be thouth of as a sequence of 
+ components can be thought of as a sequence of 
 \begin_inset Formula $n$
 \end_inset
 
- bernoulli trials with probability 
+ Bernoulli trials with probability 
 \begin_inset Formula $p=R$
 \end_inset
 
@@ -717,8 +691,8 @@ center
 
 \begin_inset Graphics
 	filename triple_modular_redundancy.pdf
-	width 6.5cm
-	height 5.2cm
+	width 6cm
+	height 4.5cm
 
 \end_inset
 
@@ -730,16 +704,13 @@ center
 \end_layout
 
 \begin_layout BeginFrame
-Inhomogeneous Bernoulli Trials
+Non homogeneous Bernoulli Trials
 \end_layout
 
 \begin_layout Standard
-When the components are inhomegeneous w.r.t.
- the reliability 
-\begin_inset Formula $R_{i}$
-\end_inset
-
-, then the calculation is a bit more complicated
+When the components are nonhomegeneous w.r.t.
+ the corresponding reliabilities, then the calculation is a bit more complicated
+:
 \begin_inset Formula 
 \begin{eqnarray*}
 R_{k\mid n} & = & 1-\sum_{\mid I\mid>=k}\left(\prod_{i\in I}(1-R_{i})\right)\left(\prod_{i\notin I}R_{i}\right)
@@ -759,7 +730,742 @@ where
 \begin_inset Formula $k\leq m\leq n$
 \end_inset
 
+ and 
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ denotes the reliability of th 
+\begin_inset Formula $i-$
+\end_inset
+
+th component.
+\end_layout
+
+\begin_layout Example
+Consider a non homogeneous TMR with 
+\begin_inset Formula $n=3$
+\end_inset
+
+ and 
+\begin_inset Formula $k=2$
+\end_inset
+
 .
+\begin_inset Formula 
+\begin{eqnarray*}
+R_{2\mid3} & = & 1-(1-R_{1})(1-R_{2})R_{3}-(1-R_{1})(1-R_{3})R_{2}+\\
+ &  & -(1-R_{2})(1-R_{3})R_{1}-(1-R_{1})(1-R_{2})(1-R_{3})\\
+ & = & R_{1}R_{2}+R_{2}R_{3}+R_{1}R_{3}-2R_{1}R_{2}R_{3}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Generalized Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename generalized_bernoulli_trials1.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Generalized Bernoulli Trials
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename generalized_bernoulli_trials2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Generalized Bernoulli Trials
+\end_layout
+
+\begin_layout Example
+Trivedi, page 52.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename generalized_bernoulli_trials3.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Solve problems 2,3,4 at page 56 and review problem 1 at page 57 of Trivedi.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Random variables
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $(\Omega,\mathcal{G})$
+\end_inset
+
+ denote a measurable space with sample space 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+A random variable is a real valued function 
+\begin_inset Formula $X:\Omega\rightarrow\mathbb{R}$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+X^{-1}(B)\in\mathcal{G}\mbox{ for all events }B\in\mathcal{B}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The following picture clarifies the situation
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename variabileAleatoria1.pdf
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Random variables
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Remarks: 
+\end_layout
+
+\begin_layout Enumerate
+A random variable is a function between two measurable spaces satisfying
+ a 
+\emph on
+measurability
+\emph default
+ condition: the preimage of any event 
+\begin_inset Formula $B\subset\mathbb{R}$
+\end_inset
+
+ must be an event of 
+\begin_inset Formula $\mathcal{G}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+\emph on
+\begin_inset Formula $S$
+\end_inset
+
+ 
+\emph default
+can be finite, countable infinite or uncountable.
+ If the image of 
+\begin_inset Formula $X$
+\end_inset
+
+ is discrete, i.e.
+ finite or countable, then 
+\begin_inset Formula $X$
+\end_inset
+
+ is a discrete random variable.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable and 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ a real number.
+ The event 
+\begin_inset Formula 
+\[
+A_{x}=\left\{ s\in S\mid X(s)=x\right\} 
+\]
+
+\end_inset
+
+ is called the inverse image of the set 
+\begin_inset Formula $\{x\}$
+\end_inset
+
+ and represents the outcomes of the random experiment which are mapped to
+ 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Random variables
+\end_layout
+
+\begin_layout Standard
+It is clear that 
+\begin_inset Formula $A_{x}\cap A_{y}=\emptyset\mbox{ if }x\neq y$
+\end_inset
+
+ and that 
+\begin_inset Formula 
+\[
+\bigcup_{x\in\mathbb{R}}A_{x}=S.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Attention:
+\end_layout
+
+\begin_layout Enumerate
+Unions over an uncountable number of events are not, in general, events
+ (see the definition of 
+\begin_inset Formula $\sigma-$
+\end_inset
+
+algebra).
+\end_layout
+
+\begin_layout Enumerate
+If the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ is discrete, then 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\bigcup_{x\in I}A_{x}$
+\end_inset
+
+ is an event for all 
+\begin_inset Formula $I\subset\mathbb{R}$
+\end_inset
+
+.
+ Why?
+\end_layout
+
+\begin_layout Standard
+Notation:
+\end_layout
+
+\begin_layout Enumerate
+The notation 
+\begin_inset Formula $[X=x]$
+\end_inset
+
+ will be used as an abbreviation for 
+\begin_inset Formula $A_{x}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Similarly, 
+\begin_inset Formula $[X\leq x]$
+\end_inset
+
+ denotes the event 
+\begin_inset Formula $E=\{s\in S\mid X(s)\leq x\}$
+\end_inset
+
+.
+ Analogous definitions apply for the other inequality operators.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Random variables
+\end_layout
+
+\begin_layout Standard
+The set of random variables is closed under addition and scalar multiplication,
+ under maximum, minimum, multiplication and division as well as under limit
+ operation.
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ two random variables defined on the same measurable space 
+\begin_inset Formula $(S,\mathcal{G})$
+\end_inset
+
+.
+ then
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $aX+bY$
+\end_inset
+
+ is a random variable for all 
+\begin_inset Formula $a,b\in\mathbb{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\max\{X,Y\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\min\{X,Y\}$
+\end_inset
+
+ are random variables.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $XY$
+\end_inset
+
+ is random variable.
+\end_layout
+
+\begin_layout Enumerate
+Provided that 
+\begin_inset Formula $Y(s)\neq0$
+\end_inset
+
+ for each 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, 
+\begin_inset Formula $X/Y$
+\end_inset
+
+ is a random variable.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $X_{1},$
+\end_inset
+
+
+\begin_inset Formula $X_{2},\dots$
+\end_inset
+
+ be a sequence of random variables.
+ If 
+\begin_inset Formula 
+\[
+X(s)=\lim_{n\to\infty}X_{n}(s)
+\]
+
+\end_inset
+
+ exists for every 
+\begin_inset Formula $s\in S$
+\end_inset
+
+, the 
+\begin_inset Formula $X$
+\end_inset
+
+ is a random variable.
+\end_layout
+
+\end_deeper
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Probability mass function
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a discrete random variable and 
+\begin_inset Formula $I\subset\mathbb{R}$
+\end_inset
+
+ the image set of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Because 
+\begin_inset Formula $X$
+\end_inset
+
+ is discrete, set 
+\begin_inset Formula $I$
+\end_inset
+
+ is countable and 
+\begin_inset Formula 
+\[
+\sum_{x\in I}P(X=x)=\sum_{x\in I}P(A_{x})=1.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Furthermore, for all 
+\begin_inset Formula $x\notin I$
+\end_inset
+
+, 
+\begin_inset Formula $P(X=x)=0$
+\end_inset
+
+ while for all events 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+ the event 
+\begin_inset Formula $A_{B}=[X\in B]=\{s\in S\mid X(s)\in B\}$
+\end_inset
+
+ so that the probability 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula 
+\[
+P(X\in B)=P(\bigcup_{x\in B}A_{x})=P(\bigcup_{x\in B\cap I}A_{x})=\sum_{x\in B\cap I}P(A_{x}).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The probability of any event 
+\begin_inset Formula $B\in\mathcal{B}$
+\end_inset
+
+ can be computed as a sum over a countable number of points 
+\begin_inset Formula $x\in B\cap I$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Definition
+We define the 
+\emph on
+probability mass function
+\emph default
+ or 
+\emph on
+discrete density function
+\emph default
+ of the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+, denoted by 
+\begin_inset Formula $p_{X}$
+\end_inset
+
+, the function 
+\begin_inset Formula 
+\[
+p_{X}(x)=P(A_{x})\mbox{ for all }x\in\mathbb{R}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Probability mass function
+\end_layout
+
+\begin_layout Example
+A fair die is tossed twice.
+ Let 
+\begin_inset Formula $S$
+\end_inset
+
+ denote the sample space of this random experiment and define 
+\begin_inset Formula $X$
+\end_inset
+
+ to be the sum of the outcomes of the first and second toss.
+ The image of 
+\begin_inset Formula $X$
+\end_inset
+
+ is the set 
+\begin_inset Formula $I=\{2,3,\dots,12\}$
+\end_inset
+
+.
+ The corresponding probability mass function is given in the following plot:
+\end_layout
+
+\begin_layout Example
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename twice_toss_density.pdf
+	scale 28
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Cumulative distribution function
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a discrete random variable and let 
+\begin_inset Formula $A_{(-\infty,t]}$
+\end_inset
+
+ be the preimage of the event 
+\begin_inset Formula $(-\infty,t]$
+\end_inset
+
+, 
+\begin_inset Formula $t\in\mathbb{R}$
+\end_inset
+
+.
+ The 
+\emph on
+cumulative distribution function
+\emph default
+ (CDF) or the probability distribution function or the 
+\emph on
+distribution function
+\emph default
+ of 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{X}(t) & = & P(X\leq t)=P(A_{(-\infty,t]})\\
+ & = & \sum_{x\in(-\infty,t]\cap I}P(A_{x})=\sum_{x\in(-\infty,t]\cap I}p_{X}(x)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename twice_toss_cdf.pdf
+	scale 20
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame

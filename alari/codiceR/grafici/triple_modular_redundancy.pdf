@@ -2,8 +2,8 @@
 %Å‚Å„ÅœÅ”\r
 1 0 obj
 <<
-/CreationDate (D:20120403190110)
-/ModDate (D:20120403190110)
+/CreationDate (D:20120403210236)
+/ModDate (D:20120403210236)
 /Title (R Graphics Output)
 /Producer (R 2.13.1)
 /Creator (R)
@@ -205,6 +205,9 @@ S
 Q q
 BT
 /sRGB cs 0.000 0.000 0.000 scn
+/F3 1 Tf 14.00 0.00 -0.00 14.00 107.47 469.45 Tm [(T) 80 (riple Modular Redundant System with n=3, k=2)] TJ
+ET
+BT
 /F2 1 Tf 12.00 0.00 -0.00 12.00 240.73 18.72 Tm (Reliability) Tj
 ET
 BT
@@ -332,7 +335,7 @@ Q
 endstream
 endobj
 9 0 obj
-5126
+5240
 endobj
 3 0 obj
 <<
@@ -347,7 +350,7 @@ endobj
 4 0 obj
 <<
 /ProcSet [/PDF /Text]
-/Font <</F2 11 0 R >>
+/Font <</F2 11 0 R /F3 12 0 R >>
 /ExtGState << >>
 /ColorSpace << /sRGB 5 0 R >>
 >>
@@ -573,26 +576,34 @@ endobj
 /BaseFont /Helvetica
 /Encoding 10 0 R
 >> endobj
+12 0 obj <<
+/Type /Font
+/Subtype /Type1
+/Name /F3
+/BaseFont /Helvetica-Bold
+/Encoding 10 0 R
+>> endobj
 xref
-0 12
+0 13
 0000000000 65535 f 
 0000000021 00000 n 
 0000000164 00000 n 
-0000005491 00000 n 
-0000005574 00000 n 
-0000005686 00000 n 
-0000005719 00000 n 
+0000005605 00000 n 
+0000005688 00000 n 
+0000005811 00000 n 
+0000005844 00000 n 
 0000000213 00000 n 
 0000000293 00000 n 
-0000005471 00000 n 
-0000015255 00000 n 
-0000015513 00000 n 
+0000005585 00000 n 
+0000015380 00000 n 
+0000015638 00000 n 
+0000015736 00000 n 
 trailer
 <<
-/Size 12
+/Size 13
 /Info 1 0 R
 /Root 2 0 R
 >>
 startxref
-15611
+15839
 %%EOF
