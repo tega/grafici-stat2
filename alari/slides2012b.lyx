@@ -1472,5 +1472,273 @@ center
 
 \end_layout
 
+\begin_layout BeginFrame
+Cumulative distribution function
+\end_layout
+
+\begin_layout Standard
+A cumulative distribution 
+\begin_inset Formula $F$
+\end_inset
+
+ has the following properties:
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $0\leq F(x)\leq1$
+\end_inset
+
+ for 
+\begin_inset Formula $-\infty<x<\infty$
+\end_inset
+
+.
+ This follows because 
+\begin_inset Formula $F$
+\end_inset
+
+ is a probability.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $F$
+\end_inset
+
+ is a monotone increasing function of 
+\begin_inset Formula $x$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $F(x_{1})\leq F(x_{2})$
+\end_inset
+
+ if 
+\begin_inset Formula $x_{1}\leq x_{2}$
+\end_inset
+
+ (think about the corresponding events ...).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\lim_{x\to-\infty}F(x)=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\lim_{x\to\infty}F(x)=1$
+\end_inset
+
+.
+ If the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ has a finite image, then 
+\begin_inset Formula $F(x)=0\mbox{ }(1)$
+\end_inset
+
+ for 
+\begin_inset Formula $x$
+\end_inset
+
+ sufficiently small (large).
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x_{1},x_{2},\dots$
+\end_inset
+
+ the elements of the image 
+\begin_inset Formula $I$
+\end_inset
+
+ of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ has a positive jump equal to 
+\begin_inset Formula $p_{X}(x_{i})$
+\end_inset
+
+ at 
+\begin_inset Formula $i=1,2,\dots$
+\end_inset
+
+ and in the interval 
+\begin_inset Formula $[x_{i},x_{i+1})$
+\end_inset
+
+ 
+\begin_inset Formula $F$
+\end_inset
+
+ has a constant value 
+\begin_inset Formula $F(x_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+It can be shown that any function 
+\begin_inset Formula $F$
+\end_inset
+
+ satisfying properties 1-4 is the distribution function of some discrete
+ random variable!
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Special discrete distributions
+\end_layout
+
+\begin_layout Itemize
+The Bernoulli pmf is the density function of a discrete random variable
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ having 
+\begin_inset Formula $0$
+\end_inset
+
+ or 
+\begin_inset Formula $1$
+\end_inset
+
+ as its only possible values.
+\end_layout
+
+\begin_layout Itemize
+The Binomial pmf is the density function of a discrete random variable 
+\begin_inset Formula $Y_{n}$
+\end_inset
+
+ which denotes the number of successes in 
+\begin_inset Formula $n$
+\end_inset
+
+ independent Bernoulli trials where each of them has a probability of success
+ equal to 
+\begin_inset Formula $p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The geometric pmf is the density function of a random variable 
+\begin_inset Formula $Z$
+\end_inset
+
+ describing the necessary number of independent Bernoulli trials in order
+ to obtain the first success.
+ The sample space of this random experiment is described by 
+\begin_inset Formula 
+\[
+S=\left\{ 0^{i-1}1\mid i=1,2,3,\dots\right\} .
+\]
+
+\end_inset
+
+This sample space has an infinite number of outcomes.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Special discrete distributions
+\end_layout
+
+\begin_layout Itemize
+The negative Binomial pmf is the density function of a random variable 
+\begin_inset Formula $Z$
+\end_inset
+
+ that describes the number of trials of a Bernoulli experiment which are
+ necessary in order to obtain the 
+\begin_inset Formula $r^{th}-$
+\end_inset
+
+success.
+ It generalizes the geometric distribution.
+\end_layout
+
+\begin_layout Itemize
+The Hypergeometric pmf is the density function of a random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ wich computes the number 
+\begin_inset Formula $k$
+\end_inset
+
+ of defective components in a random sample of 
+\begin_inset Formula $m$
+\end_inset
+
+ components, chosen without replacement, from a total of 
+\begin_inset Formula $n$
+\end_inset
+
+ components, 
+\begin_inset Formula $d$
+\end_inset
+
+ of which are defective.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $n$
+\end_inset
+
+, the number of components
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $d$
+\end_inset
+
+, the number of defective components
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m$
+\end_inset
+
+, the number of components to sample (without replacement!)
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k$
+\end_inset
+
+, the number of defective components found in the sample
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+The uniform discrete pmf, the pmf of the constant random variable and the
+ pmf of the indicator R.V.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
 \end_body
 \end_document
