@@ -1740,5 +1740,186 @@ The uniform discrete pmf, the pmf of the constant random variable and the
 
 \end_layout
 
+\begin_layout BeginFrame
+Special discrete distributions
+\end_layout
+
+\begin_layout Standard
+The Poisson distribution is the last discrete distribution we want to study.
+ It is a very popular and very used distribution in probability and statistics
+ because of its peculiarity.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Exercises
+\end_layout
+
+\begin_layout Standard
+Solve problems 2,3,4,5 at page 91 of Trivedi.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Probability generating function
+\end_layout
+
+\begin_layout Standard
+The probability generating function is a convenient tool which simplifies
+ calculations involving nonnegative, integer valued random variables.
+\end_layout
+
+\begin_layout Definition
+The probability generating function of a nonnegative integer valued random
+ variable 
+\begin_inset Formula $X$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+G_{X}(z)=\sum_{i=0}^{\infty}p_{i}z^{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula $G_{X}(z)$
+\end_inset
+
+ is also known as the 
+\begin_inset Formula $z-$
+\end_inset
+
+transform of 
+\begin_inset Formula $X$
+\end_inset
+
+ and converges for all 
+\begin_inset Formula $z\in\mathbb{C}$
+\end_inset
+
+ with 
+\begin_inset Formula $\mid z\mid<1$
+\end_inset
+
+.
+ By definition of 
+\begin_inset Formula $G_{X}$
+\end_inset
+
+ we have that 
+\begin_inset Formula $G_{X}(1)=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+If two discrete random variables 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ have the same 
+\begin_inset Formula $PGF$
+\end_inset
+
+s, then they have the same distributions and probability mass functions.	
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Probability generating function
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+Compute the 
+\begin_inset Formula $PGF$
+\end_inset
+
+
+\lang english
+ of the following discrete distributions:
+\end_layout
+
+\begin_layout Enumerate
+The binomial random variable.
+\end_layout
+
+\begin_layout Enumerate
+The Bernoulli random variable.
+\end_layout
+
+\begin_layout Enumerate
+The Uniform 
+\begin_inset Formula $U[1,n]$
+\end_inset
+
+ distribution.
+\end_layout
+
+\begin_layout Enumerate
+The constant random variable 
+\begin_inset Formula $X=3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+The Poisson distribution.
+\end_layout
+
+\begin_layout Enumerate
+
+Solve probems 1 and 2 at page 99 of Trivedi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
 \end_body
 \end_document
