@@ -1,5 +1,5 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass report
@@ -22,18 +22,26 @@
 \usepackage{babel}
 \end_preamble
 \use_default_options false
+\maintain_unincluded_children false
 \language italian
+\language_package default
 \inputencoding latin9
+\fontencoding global
 \font_roman default
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -41,21 +49,31 @@
 \use_geometry false
 \use_amsmath 2
 \use_esint 2
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Indice
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 1
 \paragraph_separation indent
-\defskip medskip
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -77,7 +95,7 @@ Semestre Estivo
 \begin_inset Newline newline
 \end_inset
 
- 2011
+ 2012
 \end_layout
 
 \begin_layout Standard
@@ -131,7 +149,7 @@ all'avvento di internet
 \end_layout
 
 \begin_layout Itemize
-al diffondersi di database relazionali (vedi informatica I eII)
+al diffondersi di database relazionali (vedi informatica I e II)
 \end_layout
 
 \begin_layout Standard
@@ -1362,8 +1380,10 @@ In questo e nei prossimi capitoli faremo ampio uso del calcolo matriciale
 \end_inset
 
  dei rendimenti attesi, in altre parole 
-\begin_inset Formula \[
-e_{t}:=E[r_{t}].\]
+\begin_inset Formula 
+\[
+e_{t}:=E[r_{t}].
+\]
 
 \end_inset
 
@@ -1397,8 +1417,10 @@ status collapsed
 \begin_layout Plain Layout
 Abbiamo già utilizzato un'ipotesi simile nel modello di regressione classica
  
-\begin_inset Formula \[
-y_{t}=x_{t}^{\prime}\beta+\epsilon_{t}\]
+\begin_inset Formula 
+\[
+y_{t}=x_{t}^{\prime}\beta+\epsilon_{t}
+\]
 
 \end_inset
 
@@ -1440,8 +1462,10 @@ y_{t}=x_{t}^{\prime}\beta+\epsilon_{t}\]
 
 .
  Scriviamo allora semplicemente 
-\begin_inset Formula \begin{equation}
-r_{t}\sim(e,V)\ .\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{t}\sim(e,V)\ .
+\end{equation}
 
 \end_inset
 
@@ -1766,8 +1790,10 @@ prezzo”) del portafoglio al tempo
 
 .
  Formalmente abbiamo
-\begin_inset Formula \[
-w_{it}=\frac{q_{it}P_{it}}{P_{pt}}\;.\]
+\begin_inset Formula 
+\[
+w_{it}=\frac{q_{it}P_{it}}{P_{pt}}\;.
+\]
 
 \end_inset
 
@@ -1861,8 +1887,10 @@ Il rendimento percentuale giornaliero alla data
 \end_inset
 
  è
-\begin_inset Formula \begin{equation}
-r_{it}:=\frac{P_{it}-P_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}=\frac{P_{it}}{P_{i\left(t-1\right)}}-1~.\label{def rendimento percentuale}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{it}:=\frac{P_{it}-P_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}=\frac{P_{it}}{P_{i\left(t-1\right)}}-1~.\label{def rendimento percentuale}
+\end{equation}
 
 \end_inset
 
@@ -1903,8 +1931,10 @@ reference "rendimento percentuale singolo periodo"
 \end_inset
 
  di rendimento percentuale otteniamo l'identità
-\begin_inset Formula \begin{equation}
-1+r_{it}=\frac{P_{it}}{P_{i\left(t-1\right)}}~.\label{def identita rendimento percentuale}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+1+r_{it}=\frac{P_{it}}{P_{i\left(t-1\right)}}~.\label{def identita rendimento percentuale}
+\end{equation}
 
 \end_inset
 
@@ -1953,8 +1983,10 @@ Il rendimento logaritmico giornaliero alla data
 \end_inset
 
  è
-\begin_inset Formula \begin{equation}
-r_{it}:=\ln\left(\frac{P_{it}}{P_{i\left(t-1\right)}}\right)~.\label{def rendimento logaritmico}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{it}:=\ln\left(\frac{P_{it}}{P_{i\left(t-1\right)}}\right)~.\label{def rendimento logaritmico}
+\end{equation}
 
 \end_inset
 
@@ -1997,14 +2029,18 @@ begin{remark}
 
 Ex-Dividend date”, allora il calcolo del rendimento percentuale e logaritmico
  vanno modificati come segue: 
-\begin_inset Formula \[
-r_{it}=\frac{P_{it}+d_{i\left(t-1\right)}-P_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}=\frac{P_{it}+d_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}-1~,\]
+\begin_inset Formula 
+\[
+r_{it}=\frac{P_{it}+d_{i\left(t-1\right)}-P_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}=\frac{P_{it}+d_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}-1~,
+\]
 
 \end_inset
 
  rispettivamente
-\begin_inset Formula \[
-r_{it}=\ln\left(\frac{P_{it}+d_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}\right)~.\]
+\begin_inset Formula 
+\[
+r_{it}=\ln\left(\frac{P_{it}+d_{i\left(t-1\right)}}{P_{i\left(t-1\right)}}\right)~.
+\]
 
 \end_inset
 
@@ -2186,8 +2222,10 @@ name "prop cross section rend perc"
 \end_inset
 
 Il rendimento percentuale del portafoglio soddisfa la seguente relazione
-\begin_inset Formula \begin{equation}
-r_{pt}=w_{t-1}^{\prime}r_{t}\ .\label{combinazione lineare rendimenti}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{pt}=w_{t-1}^{\prime}r_{t}\ .\label{combinazione lineare rendimenti}
+\end{equation}
 
 \end_inset
 
@@ -2370,8 +2408,10 @@ esimo titolo calcolato fra
 \end_inset
 
  giorni) è definito come
-\begin_inset Formula \begin{equation}
-r_{i\left(t-n\right),t}:=\frac{P_{it}-P_{i\left(t-n\right)}}{P_{i\left(t-n\right)}}=\frac{P_{it}}{P_{i\left(t-n\right)}}-1\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{i\left(t-n\right),t}:=\frac{P_{it}-P_{i\left(t-n\right)}}{P_{i\left(t-n\right)}}=\frac{P_{it}}{P_{i\left(t-n\right)}}-1
+\end{equation}
 
 \end_inset
 
@@ -2416,8 +2456,10 @@ Il rendimento percentuale su
 \end_inset
 
  periodi soddisfa la seguente relazione 
-\begin_inset Formula \begin{equation}
-r_{i\left(t-n\right),t}=\prod_{k=1}^{n}\left(1+r_{i\left(t-k+1\right)}\right)-1.\label{prodotto rendimenti perc su singola azione}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{i\left(t-n\right),t}=\prod_{k=1}^{n}\left(1+r_{i\left(t-k+1\right)}\right)-1.\label{prodotto rendimenti perc su singola azione}
+\end{equation}
 
 \end_inset
 
@@ -2513,8 +2555,10 @@ esima azione calcolato fra
 \end_inset
 
  è definito come
-\begin_inset Formula \begin{equation}
-r_{i\left(t-n\right),t}=\ln\left(\frac{P_{it}}{P_{i\left(t-n\right)}}\right)\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{i\left(t-n\right),t}=\ln\left(\frac{P_{it}}{P_{i\left(t-n\right)}}\right)
+\end{equation}
 
 \end_inset
 
@@ -2559,8 +2603,10 @@ Il rendimento logaritmico su
 \end_inset
 
  periodi soddisfa la seguente relazione 
-\begin_inset Formula \begin{equation}
-r_{i\left(t-n\right),t}=\sum_{k=1}^{n}r_{i\left(t-k+1\right)}\ .\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{i\left(t-n\right),t}=\sum_{k=1}^{n}r_{i\left(t-k+1\right)}\ .
+\end{equation}
 
 \end_inset
 
@@ -2801,8 +2847,10 @@ Il rendimento percentuale calcolato fra
 di un portafoglio
 \emph default
  è definito come
-\begin_inset Formula \begin{equation}
-r_{p\left(t-n\right),t}:=\frac{P_{pt}-P_{p\left(t-n\right)}}{P_{p\left(t-n\right)}}=\frac{P_{pt}}{P_{p\left(t-n\right)}}-1~.\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{p\left(t-n\right),t}:=\frac{P_{pt}-P_{p\left(t-n\right)}}{P_{p\left(t-n\right)}}=\frac{P_{pt}}{P_{p\left(t-n\right)}}-1~.
+\end{equation}
 
 \end_inset
 
@@ -2847,8 +2895,10 @@ Il rendimento percentuale su
 \end_inset
 
  periodi soddisfa la seguente relazione
-\begin_inset Formula \begin{equation}
-r_{p\left(t-n\right),t}=\prod_{k=1}^{n}\left(1+r_{p\left(t-k+1\right)}\right)-1,\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{p\left(t-n\right),t}=\prod_{k=1}^{n}\left(1+r_{p\left(t-k+1\right)}\right)-1,
+\end{equation}
 
 \end_inset
 
@@ -2982,8 +3032,10 @@ Il valore
 \end_inset
 
  di un portafoglio composto da solo due titoli è semplicemente 
-\begin_inset Formula \[
-P_{pt}=q_{1}P_{1,t}+q_{2}P_{2,t}\]
+\begin_inset Formula 
+\[
+P_{pt}=q_{1}P_{1,t}+q_{2}P_{2,t}
+\]
 
 \end_inset
 
@@ -3006,20 +3058,26 @@ Dimostrate
 algebricamente
 \emph default
  che il rendimento percentuale del portafoglio 
-\begin_inset Formula \[
-r_{p\left(t+1\right)}=\left(P_{p\left(t+1\right)}-P_{pt}\right)/P_{pt}\]
+\begin_inset Formula 
+\[
+r_{p\left(t+1\right)}=\left(P_{p\left(t+1\right)}-P_{pt}\right)/P_{pt}
+\]
 
 \end_inset
 
  è uguale alla somma ponderata dei rendimenti percentuali 
-\begin_inset Formula \[
-r_{i\left(t+1\right)}=\left(P_{i\left(t+1\right)}-P_{it}\right)/P_{it}\]
+\begin_inset Formula 
+\[
+r_{i\left(t+1\right)}=\left(P_{i\left(t+1\right)}-P_{it}\right)/P_{it}
+\]
 
 \end_inset
 
  su ogni singola azione, ovvero
-\begin_inset Formula \[
-r_{p\left(t+1\right)}=w_{1t}r_{1\left(t+1\right)}+w_{2t}r_{2\left(t+1\right)\ ,}\]
+\begin_inset Formula 
+\[
+r_{p\left(t+1\right)}=w_{1t}r_{1\left(t+1\right)}+w_{2t}r_{2\left(t+1\right)\ ,}
+\]
 
 \end_inset
 
@@ -3198,8 +3256,10 @@ logaritmici
 
  = weekly) in funzione dei rendimenti giornalieri.
  Per definizione essi sono uguali a 
-\begin_inset Formula \[
-r_{it}^{w}:=r_{i\left(t-5\right),t}=\ln(P_{it}/P_{i\left(t-5\right)})=\sum_{k=1}^{5}r_{i\left(t-k+1\right)}.\]
+\begin_inset Formula 
+\[
+r_{it}^{w}:=r_{i\left(t-5\right),t}=\ln(P_{it}/P_{i\left(t-5\right)})=\sum_{k=1}^{5}r_{i\left(t-k+1\right)}.
+\]
 
 \end_inset
 
@@ -3594,7 +3654,8 @@ begin{esempio}
  Data  &  Prezzo in eur  &  Cambio 1 eur = \ensuremath{x}chf  &  Prezzo in chf \\
 \hline 7-Apr-09  &  \ensuremath{23.40} &  \ensuremath{1.516} &  \\
 8-Apr-09  &  \ensuremath{23.43} &  \ensuremath{1.523} &  \\
-9-Apr-09  &  \ensuremath{24.96} &  \ensuremath{1.522} &  \end{tabular}$
+9-Apr-09  &  \ensuremath{24.96} &  \ensuremath{1.522} &  
+\end{tabular}$
 \end_inset
 
 
@@ -3980,14 +4041,18 @@ status collapsed
 \begin_deeper
 \begin_layout Standard
 Suggerimento: 
-\begin_inset Formula \[
-r_{t}=\frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}+P_{usd,t}P_{t-1}^{usd}-P_{usd,t-1}P_{t-1}^{usd}}{P_{usd,t-1}P_{t-1}^{usd}}\]
+\begin_inset Formula 
+\[
+r_{t}=\frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}+P_{usd,t}P_{t-1}^{usd}-P_{usd,t-1}P_{t-1}^{usd}}{P_{usd,t-1}P_{t-1}^{usd}}
+\]
 
 \end_inset
 
  
-\begin_inset Formula \[
-\frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}}{P_{usd,t-1}P_{t-1}^{usd}}=(1+r_{usd,t})r_{t}^{usd}\]
+\begin_inset Formula 
+\[
+\frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}}{P_{usd,t-1}P_{t-1}^{usd}}=(1+r_{usd,t})r_{t}^{usd}
+\]
 
 \end_inset
 
@@ -4267,8 +4332,10 @@ La varianza di una variabile aleatoria
 \end_inset
 
  (scalare) sappiamo essere definita da 
-\begin_inset Formula \begin{equation}
-Var(U):=E\left(U-E\left(U\right)\right)^{2}\label{varianza}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Var(U):=E\left(U-E\left(U\right)\right)^{2}\label{varianza}
+\end{equation}
 
 \end_inset
 
@@ -4277,8 +4344,10 @@ Var(U):=E\left(U-E\left(U\right)\right)^{2}\label{varianza}\end{equation}
 \end_inset
 
  (anch'essa scalare) è uguale
-\begin_inset Formula \begin{equation}
-Cov(U,W):=E\left(U-E\left(U\right)\right)\left(W-E\left(W\right)\right)\ .\label{covarianza}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Cov(U,W):=E\left(U-E\left(U\right)\right)\left(W-E\left(W\right)\right)\ .\label{covarianza}
+\end{equation}
 
 \end_inset
 
@@ -4291,8 +4360,10 @@ Cov(U,W):=E\left(U-E\left(U\right)\right)\left(W-E\left(W\right)\right)\ .\label
 \end_inset
 
  è definito come
-\begin_inset Formula \begin{equation}
-Cor(U,W):=\frac{Cov(U,W)}{\sqrt{Var(U)}\sqrt{Var(W)}}\ .\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Cor(U,W):=\frac{Cov(U,W)}{\sqrt{Var(U)}\sqrt{Var(W)}}\ .
+\end{equation}
 
 \end_inset
 
@@ -4300,20 +4371,26 @@ Cor(U,W):=\frac{Cov(U,W)}{\sqrt{Var(U)}\sqrt{Var(W)}}\ .\end{equation}
  che possono essere ricavate a partire dalla loro definizione utilizzando
  la proprietà di linearità del valore atteso.
  Tali formule sono
-\begin_inset Formula \[
-Var(U)=E\left(U^{2}\right)-\left(E\left(U\right)\right)^{2}\]
+\begin_inset Formula 
+\[
+Var(U)=E\left(U^{2}\right)-\left(E\left(U\right)\right)^{2}
+\]
 
 \end_inset
 
  e
-\begin_inset Formula \[
-Cov(U,W)=E\left(UW\right)-E\left(U\right)E\left(W\right)\ .\]
+\begin_inset Formula 
+\[
+Cov(U,W)=E\left(UW\right)-E\left(U\right)E\left(W\right)\ .
+\]
 
 \end_inset
 
  Poiché nel caso scalare la moltiplicazione è commutativa, vale che 
-\begin_inset Formula \[
-Cov(U,W)=Cov(W,U).\]
+\begin_inset Formula 
+\[
+Cov(U,W)=Cov(W,U).
+\]
 
 \end_inset
 
@@ -4352,14 +4429,18 @@ Cov(U,W)=Cov(W,U).\]
 \end_inset
 
  è definita nel seguente modo (si noti il trasposto nella formula)
-\begin_inset Formula \[
-\underset{\left(r\times c\right)}{Cov(U,W)}=E\left[\left(U-E\left(U\right)\right)\left(W-E\left(W\right)\right)^{\prime}\right]\ .\]
+\begin_inset Formula 
+\[
+\underset{\left(r\times c\right)}{Cov(U,W)}=E\left[\left(U-E\left(U\right)\right)\left(W-E\left(W\right)\right)^{\prime}\right]\ .
+\]
 
 \end_inset
 
  Come nel caso scalare potete dimostrare che 
-\begin_inset Formula \[
-Cov(U,W)=E\left(UW^{\prime}\right)-E\left(U\right)E\left(W\right)^{\prime}\]
+\begin_inset Formula 
+\[
+Cov(U,W)=E\left(UW^{\prime}\right)-E\left(U\right)E\left(W\right)^{\prime}
+\]
 
 \end_inset
 
@@ -4373,8 +4454,10 @@ Cov(U,W)=E\left(UW^{\prime}\right)-E\left(U\right)E\left(W\right)^{\prime}\]
 \end_inset
 
 : 
-\begin_inset Formula \[
-Cov(U,U)=Var(U)=E\left[\left(U-E\left(U\right)\right)\left(U-E\left(U\right)\right)^{\prime}\right]\ .\]
+\begin_inset Formula 
+\[
+Cov(U,U)=Var(U)=E\left[\left(U-E\left(U\right)\right)\left(U-E\left(U\right)\right)^{\prime}\right]\ .
+\]
 
 \end_inset
 
@@ -4455,8 +4538,10 @@ o
 \end_inset
 
  sarà notata 
-\begin_inset Formula \[
-Cor(U)\ .\]
+\begin_inset Formula 
+\[
+Cor(U)\ .
+\]
 
 \end_inset
 
@@ -4493,8 +4578,10 @@ In MS Excel questa è esattamente la formula sottostante alla funzione
 \end_inset
 
 
-\begin_inset Formula \begin{equation}
-\widehat{Var}(U)=\frac{1}{n}\sum_{t=1}^{n}\left(U_{t}-\overline{U}\right)^{2}\ ,\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\widehat{Var}(U)=\frac{1}{n}\sum_{t=1}^{n}\left(U_{t}-\overline{U}\right)^{2}\ ,
+\end{equation}
 
 \end_inset
 
@@ -4506,8 +4593,10 @@ reference "covarianza"
 \end_inset
 
 ) altro non è che
-\begin_inset Formula \begin{equation}
-\widehat{Cov}(U,W)=\frac{1}{n}\sum_{t=1}^{n}\left(U_{t}-\overline{U}\right)\left(W_{t}-\overline{W}\right)\ .\label{covarianza empirica}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\widehat{Cov}(U,W)=\frac{1}{n}\sum_{t=1}^{n}\left(U_{t}-\overline{U}\right)\left(W_{t}-\overline{W}\right)\ .\label{covarianza empirica}
+\end{equation}
 
 \end_inset
 
@@ -4541,14 +4630,19 @@ Il vettore
 \end_inset
 
 :
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \mu=E(Z)=E\left[\left(\begin{array}{c}
 U\\
-W\end{array}\right)\right]=\left(\begin{array}{c}
+W
+\end{array}\right)\right]=\left(\begin{array}{c}
 E\left[U\right]\\
-E\left[W\right]\end{array}\right)=\left(\begin{array}{c}
+E\left[W\right]
+\end{array}\right)=\left(\begin{array}{c}
 \mu_{1}\\
-\mu_{2}\end{array}\right)~.\]
+\mu_{2}
+\end{array}\right)~.
+\]
 
 \end_inset
 
@@ -4632,14 +4726,18 @@ E\left[W\right]\end{array}\right)=\left(\begin{array}{c}
 \end_inset
 
  disponendoli nelle righe di una matrice
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left[\begin{array}{l}
 Z_{1}^{\prime}\\
 Z_{3}^{\prime}\\
-Z_{3}^{\prime}\end{array}\right]=\left[\begin{array}{l}
+Z_{3}^{\prime}
+\end{array}\right]=\left[\begin{array}{l}
 U_{1}~W_{1}\\
 U_{2}~W_{2}\\
-U_{3}~W_{3}\end{array}\right]=\left[x,y\right].\]
+U_{3}~W_{3}
+\end{array}\right]=\left[x,y\right].
+\]
 
 \end_inset
 
@@ -4706,8 +4804,10 @@ reference "covarianza empirica"
 \end_inset
 
 ) come 
-\begin_inset Formula \[
-\widehat{Cov}(U,W)=\frac{1}{3}x^{\prime}My\ ,\]
+\begin_inset Formula 
+\[
+\widehat{Cov}(U,W)=\frac{1}{3}x^{\prime}My\ ,
+\]
 
 \end_inset
 
@@ -4729,8 +4829,10 @@ Consideriamo il prodotto (
 \end_inset
 
  componenti) 
-\begin_inset Formula \[
-\left(y-\mu_{2}S\right)\left(x-\mu_{1}S\right)^{\prime}\ .\]
+\begin_inset Formula 
+\[
+\left(y-\mu_{2}S\right)\left(x-\mu_{1}S\right)^{\prime}\ .
+\]
 
 \end_inset
 
@@ -4743,8 +4845,10 @@ Consideriamo il prodotto (
 Applicando le proprietà di linearità e commutatività della traccia e del
  valore atteso (già viste ed utilizzate per il calcolo del valore atteso
  di una forma quadratica) calcolate il valore atteso di
-\begin_inset Formula \begin{equation}
-\frac{1}{3}\left(x-\mu_{1}S\right)^{\prime}M\left(y-\mu_{2}S\right)\ .\label{forma quadratica centrata}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{3}\left(x-\mu_{1}S\right)^{\prime}M\left(y-\mu_{2}S\right)\ .\label{forma quadratica centrata}
+\end{equation}
 
 \end_inset
 
@@ -4955,8 +5059,10 @@ end{remark}
 \end_inset
 
  (quale?) avremo che lo stimatore 
-\begin_inset Formula \[
-\widehat{Cor}(X,Y):=\frac{\widehat{Cov}(X,Y)}{\sqrt{\widehat{Var}(X)}\sqrt{\widehat{Var}(Y)}}\ \]
+\begin_inset Formula 
+\[
+\widehat{Cor}(X,Y):=\frac{\widehat{Cov}(X,Y)}{\sqrt{\widehat{Var}(X)}\sqrt{\widehat{Var}(Y)}}\ 
+\]
 
 \end_inset
 
@@ -5003,8 +5109,10 @@ end{remark}
 
 .
  Vale allora la relazione
-\begin_inset Formula \begin{equation}
-Cor(Z)=\Lambda^{-1/2}V\Lambda^{-1/2}\ .\label{matrice cor Z}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Cor(Z)=\Lambda^{-1/2}V\Lambda^{-1/2}\ .\label{matrice cor Z}
+\end{equation}
 
 \end_inset
 
@@ -5035,10 +5143,13 @@ begin{esercizio}
 
  componenti di valore atteso nullo e matrice delle varianze e covarianze
  
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 V=\left[\begin{array}{cc}
 4 & -1\\
--1 & 25\end{array}\right]\ .\]
+-1 & 25
+\end{array}\right]\ .
+\]
 
 \end_inset
 
@@ -5228,8 +5339,10 @@ Il caso con due soli titoli è triviale:
 \end_inset
 
  da cui segue semplicemente che
-\begin_inset Formula \begin{equation}
-\sigma_{p}^{2}:=Var(r_{p})=w_{1}^{2}V(r_{1})+w_{2}^{2}V(r_{2})+2w_{1}w_{2}Cov(r_{1},r_{2})\label{varianza portafoglio due titoli}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\sigma_{p}^{2}:=Var(r_{p})=w_{1}^{2}V(r_{1})+w_{2}^{2}V(r_{2})+2w_{1}w_{2}Cov(r_{1},r_{2})\label{varianza portafoglio due titoli}
+\end{equation}
 
 \end_inset
 
@@ -5295,8 +5408,10 @@ Supponiamo che i rendimenti percentuali
 
  dei titoli in portafoglio siano indipendenti ed identicamente distribuiti
  secondo la legge normale:
-\begin_inset Formula \[
-r_{t}\sim i.i.d.\ N(e,V)\text{.}\]
+\begin_inset Formula 
+\[
+r_{t}\sim i.i.d.\ N(e,V)\text{.}
+\]
 
 \end_inset
 
@@ -5412,8 +5527,10 @@ e
 \end_inset
 
 : 
-\begin_inset Formula \[
-\sigma_{p_{1}}^{2}>\sigma_{p_{2}}^{2}\Longleftrightarrow\sigma_{p_{1}}>\sigma_{p_{2}}\ .\]
+\begin_inset Formula 
+\[
+\sigma_{p_{1}}^{2}>\sigma_{p_{2}}^{2}\Longleftrightarrow\sigma_{p_{1}}>\sigma_{p_{2}}\ .
+\]
 
 \end_inset
 
@@ -5613,8 +5730,10 @@ Nel campo
 
 Start in” immettere il percorso della directory creata al punto 1.
  Nel mio caso il percorso è 
-\begin_inset Formula \[
-\text{“}\backslash\backslash usi\backslash dfs\backslash istituti\backslash Documents\backslash ortellic\backslash My\: Documents\backslash R\text{”}.\]
+\begin_inset Formula 
+\[
+\text{“}\backslash\backslash usi\backslash dfs\backslash istituti\backslash Documents\backslash ortellic\backslash My\: Documents\backslash R\text{”}.
+\]
 
 \end_inset
 
@@ -5650,14 +5769,18 @@ Chiudere la finestra delle proprietà della shortcut.
 
 etc” della cartella in cui è stato installato il programma.
  All'USI l'applicazione R è installata in 
-\begin_inset Formula \[
-\text{“}\backslash\backslash usi\backslash dfs\backslash Condivisione\backslash programs\backslash R\backslash2.10.1\text{”}\]
+\begin_inset Formula 
+\[
+\text{“}\backslash\backslash usi\backslash dfs\backslash Condivisione\backslash programs\backslash R\backslash2.10.1\text{”}
+\]
 
 \end_inset
 
  e il file Rprofile.site si troverà quindi in 
-\begin_inset Formula \[
-\text{“}\backslash\backslash usi\backslash dfs\backslash Condivisione\backslash programs\backslash R\backslash2.10.1\backslash etc\text{” .}\]
+\begin_inset Formula 
+\[
+\text{“}\backslash\backslash usi\backslash dfs\backslash Condivisione\backslash programs\backslash R\backslash2.10.1\backslash etc\text{” .}
+\]
 
 \end_inset
 
@@ -5724,8 +5847,10 @@ Attenzione: i file che iniziano con un punto sono normalmente nascosti.
 
 necessario aprire la cartella contenente il file che si desidera visualizzare,
  selezionare il Menu 
-\begin_inset Formula \[
-\emph{Tools\ ->\ Folder\ Options\ ...}\]
+\begin_inset Formula 
+\[
+\emph{Tools\ ->\ Folder\ Options\ ...}
+\]
 
 \end_inset
 
@@ -6143,14 +6268,17 @@ Per quanto riguarda gli operatori matematici semplici quali la somma, la
  sottrazione, la moltiplicazione, la divisione e l'elevamento a potenza,
  R non si differenzia dagli altri linguaggi.
  
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \begin{tabular}{ll}
  Somma  &  \ensuremath{+}\\
 Sottrazione  &  \ensuremath{-}\\
 Moltiplicazione  &  \ensuremath{\ast}\\
 Divisione  &  \ensuremath{/}\\
 Divisione intera  &  \ensuremath{\%/\%}\\
-Elevamento a potenza  &  \ensuremath{\ast\ast}oppure\:\symbol{94}\end{tabular}\]
+Elevamento a potenza  &  \ensuremath{\ast\ast}oppure\:\symbol{94}
+\end{tabular}
+\]
 
 \end_inset
 
@@ -6978,7 +7106,7 @@ reference "operatori matematici semplici"
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="7">
-<features>
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
@@ -7721,7 +7849,7 @@ Le variabili logiche sono variabili binarie, cioè assumono solo due valori
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
-<features>
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
 <row>
@@ -8255,8 +8383,10 @@ Data Frames
 I data frames sono delle tabelle in cui è consentito inserire colonne di
  formato (tipo) diverso fra loro.
  Il comando per generare un data frame è il seguente: 
-\begin_inset Formula \[
-data.frame\ (Elemento1,\ Elemento2,\ ...)\]
+\begin_inset Formula 
+\[
+data.frame\ (Elemento1,\ Elemento2,\ ...)
+\]
 
 \end_inset
 
@@ -8289,7 +8419,7 @@ devono
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="4">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -9139,7 +9269,7 @@ te lasciare vuoto l'indice corrispondete.
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="8">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -9393,7 +9523,7 @@ dati”
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="4">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -9641,7 +9771,7 @@ Così come con i vettori è possibile utilizzare indici negativi sia per le
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="4">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -9969,7 +10099,7 @@ caso
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="5">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -10449,7 +10579,7 @@ row.names()
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="5">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -11009,8 +11139,10 @@ matrix()
 \emph default
 .
  
-\begin_inset Formula \[
-matrix(data=NA,nrow=1,ncol=1,byrow=FALSE)\]
+\begin_inset Formula 
+\[
+matrix(data=NA,nrow=1,ncol=1,byrow=FALSE)
+\]
 
 \end_inset
 
@@ -11031,7 +11163,7 @@ matrix(data=NA,nrow=1,ncol=1,byrow=FALSE)\]
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
@@ -11239,7 +11371,7 @@ nopagebreak
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
-<features>
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
@@ -11585,7 +11717,7 @@ Per default as.matrix mantiene i nomi delle colonne e delle righe.
 \noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -11779,7 +11911,7 @@ Come per i data frames è possibile utilizzare i nomi al posto dei numeri
 \noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="6">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -12031,7 +12163,7 @@ operano componente per componente quando utilizzati con matrici.
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -12207,7 +12339,7 @@ nopagebreak
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -12368,7 +12500,7 @@ solve()
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -12506,7 +12638,7 @@ solve()
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -12807,7 +12939,7 @@ cbind()
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -12956,7 +13088,7 @@ col3 <- c(5,6)
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="4">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -13168,8 +13300,10 @@ apply()
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-apply(X,MARGIN,FUN)\]
+\begin_inset Formula 
+\[
+apply(X,MARGIN,FUN)
+\]
 
 \end_inset
 
@@ -13182,7 +13316,7 @@ apply(X,MARGIN,FUN)\]
 \noindent
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -13439,7 +13573,7 @@ Spiegate il significato del seguente comando:
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="2" columns="6">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -13633,8 +13767,10 @@ Una lista è un vettore le cui componenti possono essere un qualsiasi oggetto
 \end_inset
 
 variabile di tipo lista è la seguente 
-\begin_inset Formula \[
-list\ (elemento1,~elemento2,~\ldots)\]
+\begin_inset Formula 
+\[
+list\ (elemento1,~elemento2,~\ldots)
+\]
 
 \end_inset
 
@@ -13731,7 +13867,7 @@ doppie
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="4">
-<features>
+<features tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
 <column alignment="right" valignment="top" width="0">
@@ -13938,8 +14074,10 @@ mia.lista [[1]]
 \begin_layout Standard
 \noindent
 Se viene utilizzato il comando 
-\begin_inset Formula \[
-list\ (nome1=elemento1,~nome2=elemento2,~\ldots)\]
+\begin_inset Formula 
+\[
+list\ (nome1=elemento1,~nome2=elemento2,~\ldots)
+\]
 
 \end_inset
 
@@ -15164,8 +15302,10 @@ La sintassi del comando è la seguente
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{if (condizione) comando else comando}\]
+\begin_inset Formula 
+\[
+\text{if (condizione) comando else comando}
+\]
 
 \end_inset
 
@@ -15416,8 +15556,10 @@ for()
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{for (var in seq) comando}\]
+\begin_inset Formula 
+\[
+\text{for (var in seq) comando}
+\]
 
 \end_inset
 
@@ -16940,8 +17082,10 @@ In questa sezione parleremo semplicemente di rendimenti intendendo però
 \end_inset
 
  del tipo 
-\begin_inset Formula \begin{equation}
-r_{it}=\alpha_{i}+\beta_{i}r_{xt}+\varepsilon_{it}\hspace{0.5cm}t=1,\ldots,n\label{eq11}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{it}=\alpha_{i}+\beta_{i}r_{xt}+\varepsilon_{it}\hspace{0.5cm}t=1,\ldots,n\label{eq11}
+\end{equation}
 
 \end_inset
 
@@ -16963,8 +17107,10 @@ r_{it}=\alpha_{i}+\beta_{i}r_{xt}+\varepsilon_{it}\hspace{0.5cm}t=1,\ldots,n\lab
 \end_inset
 
  equazioni possono essere scritte in forma compatta come 
-\begin_inset Formula \begin{equation}
-r_{t}=\alpha+\beta r_{xt}+\varepsilon_{t}\hspace{0.5cm}t=1,\ldots,n.\label{eq22}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{t}=\alpha+\beta r_{xt}+\varepsilon_{t}\hspace{0.5cm}t=1,\ldots,n.\label{eq22}
+\end{equation}
 
 \end_inset
 
@@ -17568,8 +17714,10 @@ ce della covarianza stimata di
 \begin_deeper
 \begin_layout Standard
 Le 5 equazioni stimabili avranno tutte forma 
-\begin_inset Formula \[
-r_{i,t}=\alpha_{i}+\beta_{i}r_{x,t}+\varepsilon_{i,t}\;,\; t=1,\ldots,157\]
+\begin_inset Formula 
+\[
+r_{i,t}=\alpha_{i}+\beta_{i}r_{x,t}+\varepsilon_{i,t}\;,\; t=1,\ldots,157
+\]
 
 \end_inset
 
@@ -17790,15 +17938,19 @@ Sappiamo che un portafoglio
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\underset{\{w\}}{\min}\frac{1}{2}w^{\prime}Vw\]
+\begin_inset Formula 
+\[
+\underset{\{w\}}{\min}\frac{1}{2}w^{\prime}Vw
+\]
 
 \end_inset
 
  sotto i vincoli
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 w^{\prime}e & = & E[r_{p}]\\
-w^{\prime}S & = & 1\end{eqnarray*}
+w^{\prime}S & = & 1
+\end{eqnarray*}
 
 \end_inset
 
@@ -17860,16 +18012,20 @@ Formando il lagrangiano
 \end_inset
 
  è soluzione di
-\begin_inset Formula \[
-\underset{\{w,\lambda,\gamma\}}{\min}\mathcal{L=}\frac{1}{2}w^{\prime}Vw+\lambda(E[r_{p}]-w^{\prime}e)+\gamma(1-w^{\prime}S)\]
+\begin_inset Formula 
+\[
+\underset{\{w,\lambda,\gamma\}}{\min}\mathcal{L=}\frac{1}{2}w^{\prime}Vw+\lambda(E[r_{p}]-w^{\prime}e)+\gamma(1-w^{\prime}S)
+\]
 
 \end_inset
 
  ovvero
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \frac{\partial L}{\partial w} & = & Vw_{p}-\lambda e-\gamma S=\underset{(N\times1)}{0}\label{cpo1}\\
 \frac{\partial L}{\partial\lambda} & = & E[r_{p}]-w_{p}^{\prime}e=0\label{cpo2}\\
-\frac{\partial L}{\partial\gamma} & = & 1-w_{p}^{\prime}S=0\label{cpo3}\end{eqnarray}
+\frac{\partial L}{\partial\gamma} & = & 1-w_{p}^{\prime}S=0\label{cpo3}
+\end{eqnarray}
 
 \end_inset
 
@@ -17915,8 +18071,10 @@ reference "cpo1"
 \end_inset
 
  si ottiene
-\begin_inset Formula \begin{equation}
-w_{p}=\lambda V^{-1}e+\gamma V^{-1}S\label{eq2}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+w_{p}=\lambda V^{-1}e+\gamma V^{-1}S\label{eq2}
+\end{equation}
 
 \end_inset
 
@@ -17939,8 +18097,10 @@ reference "cpo2"
 \end_inset
 
 ):
-\begin_inset Formula \begin{equation}
-E[r_{p}]=\lambda e^{\prime}V^{-1}e+\gamma e^{\prime}V^{-1}S\label{eq2a}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+E[r_{p}]=\lambda e^{\prime}V^{-1}e+\gamma e^{\prime}V^{-1}S\label{eq2a}
+\end{equation}
 
 \end_inset
 
@@ -17963,8 +18123,10 @@ reference "cpo1"
 \end_inset
 
 ):
-\begin_inset Formula \begin{equation}
-1=\lambda S^{\prime}V^{-1}e+\gamma S^{\prime}V^{-1}S\label{eq2b}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+1=\lambda S^{\prime}V^{-1}e+\gamma S^{\prime}V^{-1}S\label{eq2b}
+\end{equation}
 
 \end_inset
 
@@ -17992,18 +18154,22 @@ reference "eq2b"
 
 .
  Risolvendo
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \lambda & = & \frac{CE[r_{p}]-A}{D}\label{eq3a}\\
-\gamma & = & \frac{B-AE[r_{p}]}{D}\label{eq3b}\end{eqnarray}
+\gamma & = & \frac{B-AE[r_{p}]}{D}\label{eq3b}
+\end{eqnarray}
 
 \end_inset
 
  dove
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 A & = & S^{\prime}V^{-1}e=e^{\prime}V^{-1}S\\
 B & = & e^{\prime}V^{-1}e\\
 C & = & S^{\prime}V^{-1}S\\
-D & = & BC-A^{2}\end{eqnarray*}
+D & = & BC-A^{2}
+\end{eqnarray*}
 
 \end_inset
 
@@ -18022,14 +18188,18 @@ D & = & BC-A^{2}\end{eqnarray*}
 
 .
  Essendo
-\begin_inset Formula \[
-0\overset{!}{<}(Ae-BS)^{\prime}V^{-1}(Ae-BS)=\underset{>0}{B}(BC-A^{2})\]
+\begin_inset Formula 
+\[
+0\overset{!}{<}(Ae-BS)^{\prime}V^{-1}(Ae-BS)=\underset{>0}{B}(BC-A^{2})
+\]
 
 \end_inset
 
  segue che 
-\begin_inset Formula \[
-(BC-A^{2})>0\]
+\begin_inset Formula 
+\[
+(BC-A^{2})>0
+\]
 
 \end_inset
 
@@ -18054,15 +18224,19 @@ reference "eq2"
 \end_inset
 
 ) così da ottenere
-\begin_inset Formula \begin{equation}
-w_{p}=g+hE[r_{p}]\label{eq4}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+w_{p}=g+hE[r_{p}]\label{eq4}
+\end{equation}
 
 \end_inset
 
  dove
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \underset{(N\times1)}{g} & = & \frac{1}{D}\left[BV^{-1}S-AV^{-1}e\right]\\
-\underset{(N\times1)}{h} & = & \frac{1}{D}\left[CV^{-1}e-AV^{-1}S\right]\end{eqnarray*}
+\underset{(N\times1)}{h} & = & \frac{1}{D}\left[CV^{-1}e-AV^{-1}S\right]
+\end{eqnarray*}
 
 \end_inset
 
@@ -18236,8 +18410,10 @@ status collapsed
 
 .
  Infatti
-\begin_inset Formula \[
-w_{p}=g+h0=g.\]
+\begin_inset Formula 
+\[
+w_{p}=g+h0=g.
+\]
 
 \end_inset
 
@@ -18254,8 +18430,10 @@ w_{p}=g+h0=g.\]
 \end_inset
 
  
-\begin_inset Formula \[
-w_{p}=g+h1=g+h.\]
+\begin_inset Formula 
+\[
+w_{p}=g+h1=g+h.
+\]
 
 \end_inset
 
@@ -18335,8 +18513,10 @@ reference "eq4"
 \end_inset
 
 ) afferma che tale portafoglio avrà pesi uguali a
-\begin_inset Formula \[
-w_{q^{\ast}}=g+hE[r_{q^{\ast}}].\]
+\begin_inset Formula 
+\[
+w_{q^{\ast}}=g+hE[r_{q^{\ast}}].
+\]
 
 \end_inset
 
@@ -18353,8 +18533,10 @@ w_{q^{\ast}}=g+hE[r_{q^{\ast}}].\]
 \end_inset
 
 :
-\begin_inset Formula \[
-\left(1-E[r_{q^{\ast}}]\right)g+E[r_{q^{\ast}}]\left(g+h\right)=g+hE[r_{q^{\ast}}]=w_{q^{\ast}}.\]
+\begin_inset Formula 
+\[
+\left(1-E[r_{q^{\ast}}]\right)g+E[r_{q^{\ast}}]\left(g+h\right)=g+hE[r_{q^{\ast}}]=w_{q^{\ast}}.
+\]
 
 \end_inset
 
@@ -18507,14 +18689,18 @@ begin{proof}
 \end_inset
 
 
-\begin_inset Formula \begin{equation}
-E[r_{p}]=\alpha E[r_{p_{1}}]+(1-\alpha)E[r_{p_{2}}]\label{eq5}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+E[r_{p}]=\alpha E[r_{p_{1}}]+(1-\alpha)E[r_{p_{2}}]\label{eq5}
+\end{equation}
 
 \end_inset
 
  ha quale unica soluzione
-\begin_inset Formula \[
-\alpha^{\ast}=\frac{E[r_{p}]-E[r_{p_{2}}]}{E[r_{p_{1}}]-E[r_{p_{2}}]}.\]
+\begin_inset Formula 
+\[
+\alpha^{\ast}=\frac{E[r_{p}]-E[r_{p_{2}}]}{E[r_{p_{1}}]-E[r_{p_{2}}]}.
+\]
 
 \end_inset
 
@@ -18532,10 +18718,12 @@ E[r_{p}]=\alpha E[r_{p_{1}}]+(1-\alpha)E[r_{p_{2}}]\label{eq5}\end{equation}
 
 .
  Avremo
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \alpha^{\ast}w_{p_{1}}+(1-\alpha^{\ast})w_{p_{2}} & = & \alpha^{\ast}\left(g+hE[r_{p_{1}}]\right)+(1-\alpha^{\ast})\left(g+hE[r_{p_{2}}]\right)\\
  & = & g+h\left(\alpha^{\ast}E[r_{p_{1}}]+(1-\alpha^{\ast})E[r_{p_{2}}]\right)\\
- & = & g+hE[r_{p}]=w_{p}.\end{eqnarray*}
+ & = & g+hE[r_{p}]=w_{p}.
+\end{eqnarray*}
 
 \end_inset
 
@@ -18589,8 +18777,10 @@ La covarianza fra due portafogli frontiera qualsiasi
 \end_inset
 
  è data da
-\begin_inset Formula \begin{equation}
-Cov(r_{p},r_{q})=w_{p}^{\prime}Vw_{q}=\frac{C}{D}\left(E[r_{p}]-\frac{A}{C}\right)\left(E[r_{q}]-\frac{A}{C}\right)+\frac{1}{C}\label{formula covarianza fra due port frontiera}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Cov(r_{p},r_{q})=w_{p}^{\prime}Vw_{q}=\frac{C}{D}\left(E[r_{p}]-\frac{A}{C}\right)\left(E[r_{q}]-\frac{A}{C}\right)+\frac{1}{C}\label{formula covarianza fra due port frontiera}
+\end{equation}
 
 \end_inset
 
@@ -18648,10 +18838,12 @@ end{domanda}
 \end_inset
 
  che potrà essere scritta come
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \sigma_{p}^{2} & = & \frac{C}{D}\left(E[r_{p}]-\frac{A}{C}\right)^{2}+\frac{1}{C}\\
  & = & \frac{1}{D}\left(C(E[r_{p}])^{2}-2AE[r_{p}]+\frac{A^{2}+D}{C}\right)\\
- & = & \frac{1}{D}\left(C(E[r_{p}])^{2}-2AE[r_{p}]+B\right)\end{eqnarray*}
+ & = & \frac{1}{D}\left(C(E[r_{p}])^{2}-2AE[r_{p}]+B\right)
+\end{eqnarray*}
 
 \end_inset
 
@@ -18667,8 +18859,10 @@ che è una parabola nello spazio
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -18682,8 +18876,10 @@ che è una parabola nello spazio
 \begin_layout Standard
 \noindent
 oppure un'iperbole di equazione
-\begin_inset Formula \begin{equation}
-\frac{\sigma_{p}^{2}}{1/C}-\frac{\left(E[r_{p}]-A/C\right)^{2}}{D/C^{2}}=1\label{eq6}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\frac{\sigma_{p}^{2}}{1/C}-\frac{\left(E[r_{p}]-A/C\right)^{2}}{D/C^{2}}=1\label{eq6}
+\end{equation}
 
 \end_inset
 
@@ -18695,8 +18891,10 @@ oppure un'iperbole di equazione
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -18718,8 +18916,10 @@ reference "eq6"
 \end_inset
 
 ):
-\begin_inset Formula \[
-f(x,y)=1\]
+\begin_inset Formula 
+\[
+f(x,y)=1
+\]
 
 \end_inset
 
@@ -18728,15 +18928,19 @@ f(x,y)=1\]
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \frac{x^{2}}{1/C}-\frac{\left(y-\frac{A}{C}\right)^{2}}{D/C^{2}} & = & 1\\
-2Cx\ dx-\frac{C^{2}}{D}2(y-\frac{A}{C})\ dy & = & 0\end{eqnarray*}
+2Cx\ dx-\frac{C^{2}}{D}2(y-\frac{A}{C})\ dy & = & 0
+\end{eqnarray*}
 
 \end_inset
 
  da cui
-\begin_inset Formula \begin{equation}
-\frac{dy}{dx}=\frac{Dx}{Cy-A}\Rightarrow\frac{dE[r_{p}]}{d\sigma_{p}}=\frac{D\sigma_{p}}{CE[r_{p}]-A}\label{stella2}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\frac{dy}{dx}=\frac{Dx}{Cy-A}\Rightarrow\frac{dE[r_{p}]}{d\sigma_{p}}=\frac{D\sigma_{p}}{CE[r_{p}]-A}\label{stella2}
+\end{equation}
 
 \end_inset
 
@@ -18761,9 +18965,11 @@ f(x,y)=1\]
 \end_inset
 
 :
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 a & = & E[r_{p}]-b\sigma_{p}\underset{(\ref{stella2})}{=}E[r_{p}]-\frac{D\sigma_{p}}{CE[r_{p}]-A}\sigma_{p}\notag\\
- & = & E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}\label{temp1}\end{eqnarray}
+ & = & E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}\label{temp1}
+\end{eqnarray}
 
 \end_inset
 
@@ -18786,12 +18992,14 @@ reference "temp1"
 \end_inset
 
 ) otteniamo:
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 a & = & E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}\\
  & = & E[r_{p}]-\frac{\left(E[r_{p}]-\frac{A}{C}\right)^{2}D}{\frac{D}{C^{2}}C\left(CE[r_{p}]-A\right)}-\frac{D}{C}\frac{1}{\left(E[r_{p}]C-A\right)}\\
  & = & E[r_{p}]-\frac{\left(E[r_{p}]-\frac{A}{C}\right)^{2}D}{C^{2}\left(E[r_{p}]-\frac{A}{C}\right)\frac{D}{C^{2}}}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}\\
  & = & E[r_{p}]-\left(E[r_{p}]-\frac{A}{C}\right)-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}\\
- & = & \frac{A}{C}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}\end{eqnarray*}
+ & = & \frac{A}{C}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}
+\end{eqnarray*}
 
 \end_inset
 
@@ -18800,8 +19008,10 @@ a & = & E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}\\
 \end_inset
 
  avrà dunque equazione 
-\begin_inset Formula \begin{equation}
-E[r]=\frac{A}{C}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}+\frac{D\sigma_{p}}{CE[r_{p}]-A}\ \sigma\ .\label{equazione retta tangente frontiera}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+E[r]=\frac{A}{C}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}+\frac{D\sigma_{p}}{CE[r_{p}]-A}\ \sigma\ .\label{equazione retta tangente frontiera}
+\end{equation}
 
 \end_inset
 
@@ -18826,8 +19036,10 @@ Il portafoglio a varianza minima, notato
 \end_inset
 
  ha la seguente proprietà:
-\begin_inset Formula \begin{equation}
-Cov(r_{q},r_{mvp})=Var(r_{mvp})\label{eq123}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Cov(r_{q},r_{mvp})=Var(r_{mvp})\label{eq123}
+\end{equation}
 
 \end_inset
 
@@ -19407,8 +19619,10 @@ reference "ref_cov_port_front"
 \end_inset
 
 :
-\begin_inset Formula \[
-E[r]=\underset{a}{\underbrace{E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}}}+\underset{b}{\underbrace{\frac{D\sigma_{p}}{CE[r_{p}]-A}}}\sigma.\]
+\begin_inset Formula 
+\[
+E[r]=\underset{a}{\underbrace{E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}}}+\underset{b}{\underbrace{\frac{D\sigma_{p}}{CE[r_{p}]-A}}}\sigma.
+\]
 
 \end_inset
 
@@ -19462,9 +19676,11 @@ reference "eq2"
 \end_inset
 
 ) otteniamo
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 Cov(r_{p},r_{q}) & = & w_{p}^{\prime}Vw_{q}=\lambda e^{\prime}V^{-1}Vw_{q}+\gamma S^{\prime}V^{-1}Vw_{q}\\
- & = & \lambda E[r_{q}]+\gamma\end{eqnarray*}
+ & = & \lambda E[r_{q}]+\gamma
+\end{eqnarray*}
 
 \end_inset
 
@@ -19491,8 +19707,10 @@ reference "eq3b"
 \end_inset
 
 :
-\begin_inset Formula \[
-E[r_{q}]=\frac{AE[r_{p}]-B}{CE[r_{p}]-A}+Cov(r_{p},r_{q})\frac{D}{CE[r_{p}]-A}\]
+\begin_inset Formula 
+\[
+E[r_{q}]=\frac{AE[r_{p}]-B}{CE[r_{p}]-A}+Cov(r_{p},r_{q})\frac{D}{CE[r_{p}]-A}
+\]
 
 \end_inset
 
@@ -19501,11 +19719,13 @@ E[r_{q}]=\frac{AE[r_{p}]-B}{CE[r_{p}]-A}+Cov(r_{p},r_{q})\frac{D}{CE[r_{p}]-A}\]
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 E[r_{q}] & = & \frac{A}{C}-\frac{D/C^{2}}{E[r_{p}]-A/C}+\underset{\beta_{q,p}}{\underbrace{\frac{Cov(r_{p},r_{q})}{\sigma_{p}^{2}}}}\underset{\text{tramite (\ref{eq6}) }\sigma_{p}^{2}}{\underbrace{\left[\frac{1}{C}+\frac{\left(E[r_{p}]-A/C\right)^{2}}{D/C}\right]}}\frac{D}{CE[r_{p}]-A}\notag\\
  & = & E[r_{zc(p)}]+\beta_{q,p}\left(E[r_{p}]-A/C+\frac{D/C^{2}}{E[r_{p}]-A/C}\right)\notag\\
  & = & E[r_{zc(p)}]+\beta_{q,p}\left(E[r_{p}]-E[r_{zc(p)}]\right)\\
- & = & \beta_{q,p}E[r_{p}]+(1-\beta_{q,p})E[r_{zc(p)}]\label{eq7}\end{eqnarray}
+ & = & \beta_{q,p}E[r_{p}]+(1-\beta_{q,p})E[r_{zc(p)}]\label{eq7}
+\end{eqnarray}
 
 \end_inset
 
@@ -19695,8 +19915,10 @@ Per un qualsiasi portafoglio frontiera
 \end_inset
 
 
-\begin_inset Formula \begin{equation}
-E[r_{q}]=\beta_{q,zc(p)}E[r_{zc(p)}]+(1-\beta_{q,zc(p)})E[r_{p}]\label{eq8}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+E[r_{q}]=\beta_{q,zc(p)}E[r_{zc(p)}]+(1-\beta_{q,zc(p)})E[r_{p}]\label{eq8}
+\end{equation}
 
 \end_inset
 
@@ -19705,8 +19927,10 @@ E[r_{q}]=\beta_{q,zc(p)}E[r_{zc(p)}]+(1-\beta_{q,zc(p)})E[r_{p}]\label{eq8}\end{
 \end_inset
 
 , l'equazione
-\begin_inset Formula \[
-E[r_{q}]=\alpha E[r_{zc(p)}]+(1-\alpha)E[r_{p}]\]
+\begin_inset Formula 
+\[
+E[r_{q}]=\alpha E[r_{zc(p)}]+(1-\alpha)E[r_{p}]
+\]
 
 \end_inset
 
@@ -19734,8 +19958,10 @@ reference "eq8"
 \end_inset
 
 ) otteniamo la seguente identità:
-\begin_inset Formula \[
-(1-\beta_{q,p})=\alpha^{\ast}=\beta_{q,zc(p)}.\]
+\begin_inset Formula 
+\[
+(1-\beta_{q,p})=\alpha^{\ast}=\beta_{q,zc(p)}.
+\]
 
 \end_inset
 
@@ -19747,8 +19973,10 @@ reference "eq7"
 \end_inset
 
 ) essa può essere riscritta come
-\begin_inset Formula \begin{equation}
-E[r_{q}]=\beta_{q,p}E[r_{p}]+\beta_{q,zc(p)}E[r_{zc(p)}]\label{eq9}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+E[r_{q}]=\beta_{q,p}E[r_{p}]+\beta_{q,zc(p)}E[r_{zc(p)}]\label{eq9}
+\end{equation}
 
 \end_inset
 
@@ -19805,14 +20033,18 @@ Assumiamo ora che esista un asset non rischioso il cui rendimento è certo.
 \end_inset
 
  sarà dunque la soluzione al seguente problema di minimizzazione vincolato:
-\begin_inset Formula \[
-\min\frac{1}{2}w^{\prime}Vw\]
+\begin_inset Formula 
+\[
+\min\frac{1}{2}w^{\prime}Vw
+\]
 
 \end_inset
 
  sotto i vincoli
-\begin_inset Formula \begin{equation}
-w^{\prime}e+(1-w^{\prime}S)r_{f}=E[r_{p}]\label{vincoli somma pesi e rendimento rf}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+w^{\prime}e+(1-w^{\prime}S)r_{f}=E[r_{p}]\label{vincoli somma pesi e rendimento rf}
+\end{equation}
 
 \end_inset
 
@@ -19825,16 +20057,20 @@ w^{\prime}e+(1-w^{\prime}S)r_{f}=E[r_{p}]\label{vincoli somma pesi e rendimento 
 \end_inset
 
  sarà soluzione del seguente problema
-\begin_inset Formula \[
-\underset{\{w,\lambda\}}{\min}\frac{1}{2}w^{\prime}Vw+\lambda\left(E[r_{p}]-w^{\prime}e-(1-w^{\prime}S)r_{f}\right)\]
+\begin_inset Formula 
+\[
+\underset{\{w,\lambda\}}{\min}\frac{1}{2}w^{\prime}Vw+\lambda\left(E[r_{p}]-w^{\prime}e-(1-w^{\prime}S)r_{f}\right)
+\]
 
 \end_inset
 
  Le condizioni di primo ordine saranno
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 Vw_{p} & = & \lambda(e-r_{f}S)\label{cpo1rf}\\
 r_{f}+w_{p}^{\prime}(e-r_{f}S) & = & E[r_{p}]\label{cpo2rf}\\
-\text{da cui \ \ \ \ \ \ \ \ \ \ \ }w_{p} & = & \lambda V^{-1}(e-r_{f}S)\label{cpo3rf}\end{eqnarray}
+\text{da cui \ \ \ \ \ \ \ \ \ \ \ }w_{p} & = & \lambda V^{-1}(e-r_{f}S)\label{cpo3rf}
+\end{eqnarray}
 
 \end_inset
 
@@ -19854,14 +20090,18 @@ reference "cpo3rf"
 \end_inset
 
 
-\begin_inset Formula \[
-\lambda=\left[\underset{H}{\underbrace{(e-r_{f}S)^{\prime}V^{-1}(e-r_{f}S)}}\right]^{-1}\left(E[r_{p}]-r_{f}\right)\]
+\begin_inset Formula 
+\[
+\lambda=\left[\underset{H}{\underbrace{(e-r_{f}S)^{\prime}V^{-1}(e-r_{f}S)}}\right]^{-1}\left(E[r_{p}]-r_{f}\right)
+\]
 
 \end_inset
 
  da cui segue che
-\begin_inset Formula \begin{equation}
-w_{p}=V^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}\label{eq4rf}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+w_{p}=V^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}\label{eq4rf}
+\end{equation}
 
 \end_inset
 
@@ -19870,22 +20110,29 @@ w_{p}=V^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}\label{eq4rf}\end{equation}
 \end_inset
 
 :
-\begin_inset Formula \begin{equation}
-\sigma_{p}^{2}=w_{p}^{\prime}Vw_{p}=\frac{\left(E[r_{p}]-r_{f}\right)^{2}}{H}\label{eq5rf}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\sigma_{p}^{2}=w_{p}^{\prime}Vw_{p}=\frac{\left(E[r_{p}]-r_{f}\right)^{2}}{H}\label{eq5rf}
+\end{equation}
 
 \end_inset
 
  o equivalentemente 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \sigma_{p}=\left\{ \begin{array}{c}
 \ \ \frac{E[r_{p}]-r_{f}}{\sqrt{H}}\text{ se }E[r_{p}]\geq r_{f}\\
--\frac{E[r_{p}]-r_{f}}{\sqrt{H}}\text{ se }E[r_{p}]<r_{f}\end{array}\right.\]
+-\frac{E[r_{p}]-r_{f}}{\sqrt{H}}\text{ se }E[r_{p}]<r_{f}
+\end{array}\right.
+\]
 
 \end_inset
 
  
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -20046,11 +20293,13 @@ status collapsed
 \begin_deeper
 \begin_layout Standard
 In questo caso
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 H & = & (e-Sr_{f})^{\prime}V^{-1}(e-Sr_{f})\\
  & = & e^{\prime}V^{-1}e-r_{f}e^{\prime}V^{-1}S-r_{f}S^{\prime}V^{-1}e+r_{f}^{2}S^{\prime}V^{-1}S\\
  & = & B-2r_{f}A+r_{f}^{2}C\\
- & = & \frac{BC-A^{2}}{C}=\frac{D}{C}>0\end{eqnarray*}
+ & = & \frac{BC-A^{2}}{C}=\frac{D}{C}>0
+\end{eqnarray*}
 
 \end_inset
 
@@ -20068,8 +20317,10 @@ H & = & (e-Sr_{f})^{\prime}V^{-1}(e-Sr_{f})\\
 \end_inset
 
  e 
-\begin_inset Formula \[
-E[r_{p}]=\frac{A}{C}\pm\sqrt{D/C}\sigma.\]
+\begin_inset Formula 
+\[
+E[r_{p}]=\frac{A}{C}\pm\sqrt{D/C}\sigma.
+\]
 
 \end_inset
 
@@ -20080,8 +20331,10 @@ E[r_{p}]=\frac{A}{C}\pm\sqrt{D/C}\sigma.\]
 
  già incontrati nel paragrafi precedenti.
  Abbiamo quindi la seguente situazione:
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -20115,10 +20368,12 @@ reference "eq4rf"
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 S^{\prime}w_{p} & = & S^{\prime}V^{-1}(e-\frac{A}{C}S)\frac{E[r_{p}]-r_{f}}{H}\\
  & = & (A-\frac{A}{C}C)\frac{E[r_{p}]-r_{f}}{H}\\
- & = & 0\end{eqnarray*}
+ & = & 0
+\end{eqnarray*}
 
 \end_inset
 
@@ -20215,8 +20470,10 @@ reference "eq4rf"
 \end_inset
 
  e quindi 
-\begin_inset Formula \[
-Cov(r_{q},r_{p})=w_{q}^{\prime}VV^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}.\]
+\begin_inset Formula 
+\[
+Cov(r_{q},r_{p})=w_{q}^{\prime}VV^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}.
+\]
 
 \end_inset
 
@@ -20233,8 +20490,10 @@ reference "vincoli somma pesi e rendimento rf"
 \end_inset
 
  
-\begin_inset Formula \[
-Cov(r_{q},r_{p})=w_{q}^{\prime}Vw_{p}=\frac{\left(E[r_{q}]-r_{f}\right)\left(E[r_{p}]-r_{f}\right)}{H}\]
+\begin_inset Formula 
+\[
+Cov(r_{q},r_{p})=w_{q}^{\prime}Vw_{p}=\frac{\left(E[r_{q}]-r_{f}\right)\left(E[r_{p}]-r_{f}\right)}{H}
+\]
 
 \end_inset
 
@@ -20250,15 +20509,19 @@ reference "eq5rf"
 \end_inset
 
  otteniamo
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 Cov(r_{q},r_{p}) & = & \frac{\left(E[r_{q}]-r_{f}\right)\left(E[r_{p}]-r_{f}\right)}{H}\ \ \ \mid:\sigma_{p}^{2}\\
-\frac{Cov(r_{q},r_{p})}{\sigma_{p}^{2}} & = & \frac{\left(E[r_{q}]-r_{f}\right)}{\left(E[r_{p}]-r_{f}\right)}\end{eqnarray*}
+\frac{Cov(r_{q},r_{p})}{\sigma_{p}^{2}} & = & \frac{\left(E[r_{q}]-r_{f}\right)}{\left(E[r_{p}]-r_{f}\right)}
+\end{eqnarray*}
 
 \end_inset
 
  da cui è immediato ottenere
-\begin_inset Formula \begin{equation}
-E[r_{q}]=r_{f}+\beta_{qp}\left(E[r_{p}]-r_{f}\right)\end{equation}
+\begin_inset Formula 
+\begin{equation}
+E[r_{q}]=r_{f}+\beta_{qp}\left(E[r_{p}]-r_{f}\right)
+\end{equation}
 
 \end_inset
 
@@ -20268,8 +20531,10 @@ E[r_{q}]=r_{f}+\beta_{qp}\left(E[r_{p}]-r_{f}\right)\end{equation}
 
 .
  Inoltre vale la seguente relazione
-\begin_inset Formula \[
-r_{q}=r_{f}+\beta_{qp}\left(r_{p}-r_{f}\right)+\widetilde{\epsilon}_{qp}\]
+\begin_inset Formula 
+\[
+r_{q}=r_{f}+\beta_{qp}\left(r_{p}-r_{f}\right)+\widetilde{\epsilon}_{qp}
+\]
 
 \end_inset
 
@@ -20328,8 +20593,10 @@ esimo asset,
 
 .
  La sostanza totale nell'economia è dunque 
-\begin_inset Formula \[
-W:=\sum_{i=1}^{I}W_{i}\]
+\begin_inset Formula 
+\[
+W:=\sum_{i=1}^{I}W_{i}
+\]
 
 \end_inset
 
@@ -20389,8 +20656,10 @@ reference "Esercizio 1"
 
  sono chiamati i pesi del portafoglio di mercato.
  Affinché il mercato sia in equilibrio dovrà essere
-\begin_inset Formula \begin{equation}
-\underset{\text{domanda aggregata }j-esimo\text{ asset}}{\underbrace{\sum_{i=1}^{I}W_{i}w_{ij}}}=\underset{\text{capitaliz. }j-esimo\text{ asset}}{\underbrace{w_{j}^{m}W}}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\underset{\text{domanda aggregata }j-esimo\text{ asset}}{\underbrace{\sum_{i=1}^{I}W_{i}w_{ij}}}=\underset{\text{capitaliz. }j-esimo\text{ asset}}{\underbrace{w_{j}^{m}W}}
+\end{equation}
 
 \end_inset
 
@@ -20399,8 +20668,10 @@ reference "Esercizio 1"
 \end_inset
 
  otteniamo
-\begin_inset Formula \begin{equation}
-\sum_{i=1}^{I}\underset{c_{i}\text{ = \% sostanza i-esimo individuo}}{\underbrace{\frac{W_{i}}{W}}\ \ w_{ij}}=w_{j}^{m}\label{combinazione convessa portafoglio mercato}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\sum_{i=1}^{I}\underset{c_{i}\text{ = \% sostanza i-esimo individuo}}{\underbrace{\frac{W_{i}}{W}}\ \ w_{ij}}=w_{j}^{m}\label{combinazione convessa portafoglio mercato}
+\end{equation}
 
 \end_inset
 
@@ -20439,8 +20710,10 @@ reference "combinazione convessa portafoglio mercato"
 \end_inset
 
  può essere riscritta nel modo seguente:
-\begin_inset Formula \begin{equation}
-\sum_{i=1}^{I}\underset{(1\times1)}{c_{i}}\underset{(N\times1)}{w_{i}}=\underset{(N\times1)}{w_{m}}\ .\label{equilibrio capm}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\sum_{i=1}^{I}\underset{(1\times1)}{c_{i}}\underset{(N\times1)}{w_{i}}=\underset{(N\times1)}{w_{m}}\ .\label{equilibrio capm}
+\end{equation}
 
 \end_inset
 
@@ -20475,8 +20748,10 @@ reference "esercizio2 proprieta frontiera"
 \end_inset
 
  visto nel paragrafo precedente.
-\begin_inset Formula \[
-\text{Grafico}\]
+\begin_inset Formula 
+\[
+\text{Grafico}
+\]
 
 \end_inset
 
@@ -20731,8 +21006,10 @@ begin{esempio}
 \end_inset
 
  è data dall'espressione:
-\begin_inset Formula \[
-P_{X}(A)=\sum_{k\in A}\frac{\exp(-\lambda)\lambda^{k}}{k!}\ .\]
+\begin_inset Formula 
+\[
+P_{X}(A)=\sum_{k\in A}\frac{\exp(-\lambda)\lambda^{k}}{k!}\ .
+\]
 
 \end_inset
 
@@ -20794,8 +21071,10 @@ begin{definizione}
 \end_inset
 
  è la funzione 
-\begin_inset Formula \[
-F_{X}:\mathbb{R}\rightarrow\lbrack0,1]\]
+\begin_inset Formula 
+\[
+F_{X}:\mathbb{R}\rightarrow\lbrack0,1]
+\]
 
 \end_inset
 
@@ -20804,8 +21083,10 @@ F_{X}:\mathbb{R}\rightarrow\lbrack0,1]\]
 \end_inset
 
 
-\begin_inset Formula \[
-F_{X}(x)=P\left(X\in\left(-\infty,x\right]\right)\ .\]
+\begin_inset Formula 
+\[
+F_{X}(x)=P\left(X\in\left(-\infty,x\right]\right)\ .
+\]
 
 \end_inset
 
@@ -20886,8 +21167,10 @@ begin{definizione}
 \end_inset
 
  tale che
-\begin_inset Formula \[
-F(x)=\int_{-\infty}^{x}f(y)dy\ .\]
+\begin_inset Formula 
+\[
+F(x)=\int_{-\infty}^{x}f(y)dy\ .
+\]
 
 \end_inset
 
@@ -20934,8 +21217,10 @@ begin{esempio}
 \end_inset
 
  La funzione di densità è uguale a
-\begin_inset Formula \[
-f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{1}{2\sigma^{2}}(x-\mu)^{2}\right)\ .\]
+\begin_inset Formula 
+\[
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{1}{2\sigma^{2}}(x-\mu)^{2}\right)\ .
+\]
 
 \end_inset
 
@@ -20978,8 +21263,10 @@ end{esempio}
 \end_inset
 
  
-\begin_inset Formula \[
-P\left(X\in A\right)=\int_{a}^{b}f(y)dy\ .\]
+\begin_inset Formula 
+\[
+P\left(X\in A\right)=\int_{a}^{b}f(y)dy\ .
+\]
 
 \end_inset
 
@@ -21027,8 +21314,10 @@ Se
 
  possiede dei punti di discontinuità o non è strettamente crescente occorre
  modificare la definizione di quantile nel modo seguente:
-\begin_inset Formula \[
-q_{\alpha}=\inf\left\{ x\in\mathbb{R}:\alpha\leq F(x)\right\} \text{.}\]
+\begin_inset Formula 
+\[
+q_{\alpha}=\inf\left\{ x\in\mathbb{R}:\alpha\leq F(x)\right\} \text{.}
+\]
 
 \end_inset
 
@@ -21047,8 +21336,10 @@ q_{\alpha}=\inf\left\{ x\in\mathbb{R}:\alpha\leq F(x)\right\} \text{.}\]
 \end_inset
 
  come 
-\begin_inset Formula \[
-q_{\alpha}=F^{-1}(\alpha)~.\]
+\begin_inset Formula 
+\[
+q_{\alpha}=F^{-1}(\alpha)~.
+\]
 
 \end_inset
 
@@ -21061,8 +21352,10 @@ q_{\alpha}=F^{-1}(\alpha)~.\]
 \end_inset
 
  soddisfa la seguente identità:
-\begin_inset Formula \[
-P(X\leq q_{\alpha})=\alpha\]
+\begin_inset Formula 
+\[
+P(X\leq q_{\alpha})=\alpha
+\]
 
 \end_inset
 
@@ -21104,10 +21397,13 @@ begin{esempio}
 \end_inset
 
  distribuita secondo la legge esponenziale è uguale a 
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 F(x)=\left\{ \begin{array}{cc}
 0 & x<0\\
-1-\exp(-\lambda x) & x\geq0\end{array}\right.\]
+1-\exp(-\lambda x) & x\geq0
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -21117,8 +21413,10 @@ F(x)=\left\{ \begin{array}{cc}
 
  è un parametro detto intensità.
  La funzione quantile è uguale a 
-\begin_inset Formula \[
-q_{\alpha}=F^{-1}(\alpha)=-\frac{\ln(1-\alpha)}{\lambda}\ .\]
+\begin_inset Formula 
+\[
+q_{\alpha}=F^{-1}(\alpha)=-\frac{\ln(1-\alpha)}{\lambda}\ .
+\]
 
 \end_inset
 
@@ -21189,8 +21487,10 @@ Densità di funzioni di
 
 .
  Definiamo la nuova variabile aleatoria 
-\begin_inset Formula \[
-Y=g(X)\]
+\begin_inset Formula 
+\[
+Y=g(X)
+\]
 
 \end_inset
 
@@ -21208,8 +21508,10 @@ Y=g(X)\]
 \end_inset
 
  è variabile aleatoria assolutamente continua con funzione di densità 
-\begin_inset Formula \[
-f_{Y}(y)=f_{X}(g^{-1}(y))\ \mid\left(g^{-1}\right)^{\prime}(y)\mid~.\]
+\begin_inset Formula 
+\[
+f_{Y}(y)=f_{X}(g^{-1}(y))\ \mid\left(g^{-1}\right)^{\prime}(y)\mid~.
+\]
 
 \end_inset
 
@@ -21282,8 +21584,10 @@ Funzione di densità:
 \begin_deeper
 \begin_layout Standard
 La distribuzione lognormale ha densità uguale a 
-\begin_inset Formula \[
-f(x)=\exp\{-\frac{\left(ln(x)-a\right)^{2}}{2b^{2}}\}/\left(x\sqrt{2\pi}b\right)\text{ per }x>0\text{.}\]
+\begin_inset Formula 
+\[
+f(x)=\exp\{-\frac{\left(ln(x)-a\right)^{2}}{2b^{2}}\}/\left(x\sqrt{2\pi}b\right)\text{ per }x>0\text{.}
+\]
 
 \end_inset
 
@@ -21305,8 +21609,10 @@ reference "Esercizi sulla lognormale"
 \end_inset
 
 ) che la sua funzione di ripartizione è data da 
-\begin_inset Formula \[
-F(x)=G\{[-a+ln(x)]/b\}\text{ per }x>0\text{,}\]
+\begin_inset Formula 
+\[
+F(x)=G\{[-a+ln(x)]/b\}\text{ per }x>0\text{,}
+\]
 
 \end_inset
 
@@ -21334,8 +21640,10 @@ Funzione quantile:
 \begin_deeper
 \begin_layout Standard
 La funzione quantile di una variabile aleatoria lognormale è data da 
-\begin_inset Formula \[
-F^{-1}(\alpha)=exp\left[a+bG^{-1}(\alpha)\right]\text{ per }0<\alpha<1.\]
+\begin_inset Formula 
+\[
+F^{-1}(\alpha)=exp\left[a+bG^{-1}(\alpha)\right]\text{ per }0<\alpha<1.
+\]
 
 \end_inset
 
@@ -21358,8 +21666,10 @@ Valore atteso e varianza in funzione dei parametri
 \begin_deeper
 \begin_layout Itemize
 Il valore atteso di una variabile aleatoria lognormale è uguale a 
-\begin_inset Formula \[
-E(X)=exp(a+b^{2}/2).\]
+\begin_inset Formula 
+\[
+E(X)=exp(a+b^{2}/2).
+\]
 
 \end_inset
 
@@ -21368,8 +21678,10 @@ E(X)=exp(a+b^{2}/2).\]
 
 \begin_layout Itemize
 La varianza è uguale a 
-\begin_inset Formula \[
-V(X)=exp[2(a+b^{2})]-exp(2a+b^{2}).\]
+\begin_inset Formula 
+\[
+V(X)=exp[2(a+b^{2})]-exp(2a+b^{2}).
+\]
 
 \end_inset
 
@@ -21440,8 +21752,10 @@ Mostrate che la funzione di ripartizione di
 \end_inset
 
  può essere scritta come 
-\begin_inset Formula \[
-F(y)=G\{[-\mu+ln(y)]/\sigma\}\text{ per }y>0\text{,}\]
+\begin_inset Formula 
+\[
+F(y)=G\{[-\mu+ln(y)]/\sigma\}\text{ per }y>0\text{,}
+\]
 
 \end_inset
 
@@ -21473,8 +21787,10 @@ Ricavate la funzione quantile di
 \end_inset
 
  
-\begin_inset Formula \[
-q_{\alpha}=F^{-1}(\alpha)=exp\left[\mu+\sigma G^{-1}(\alpha)\right]\text{ per }0<\alpha<1.\]
+\begin_inset Formula 
+\[
+q_{\alpha}=F^{-1}(\alpha)=exp\left[\mu+\sigma G^{-1}(\alpha)\right]\text{ per }0<\alpha<1.
+\]
 
 \end_inset
 
@@ -21772,8 +22088,10 @@ La variabile aleatoria
 
 .
  Per dimostrare questo basta notare che 
-\begin_inset Formula \[
-P(Y\leq c)\underset{(1)}{=}P(F^{-1}\left(X\right)\leq c)\underset{(2)}{=}P(X\leq F(c))\underset{(3)}{=}F(c)\]
+\begin_inset Formula 
+\[
+P(Y\leq c)\underset{(1)}{=}P(F^{-1}\left(X\right)\leq c)\underset{(2)}{=}P(X\leq F(c))\underset{(3)}{=}F(c)
+\]
 
 \end_inset
 
@@ -21830,8 +22148,10 @@ Indichiamo come d'abitudine il prezzo al tempo
 \end_inset
 
  segua un processo del tipo 
-\begin_inset Formula \begin{equation}
-P_{t+\Delta t}=P_{t}\exp(\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t}),\text{ \ \ }\varepsilon_{t}\sim i.i.d.~N(0,1),~\sigma>0.\label{delta_t}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+P_{t+\Delta t}=P_{t}\exp(\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t}),\text{ \ \ }\varepsilon_{t}\sim i.i.d.~N(0,1),~\sigma>0.\label{delta_t}
+\end{equation}
 
 \end_inset
 
@@ -21858,8 +22178,10 @@ diffusione
 \end_inset
 
  il modello si ridurrebbe ad un'equazione deterministica: 
-\begin_inset Formula \[
-P_{t+\Delta t}=P_{t}\exp(\mu\Delta t),\]
+\begin_inset Formula 
+\[
+P_{t+\Delta t}=P_{t}\exp(\mu\Delta t),
+\]
 
 \end_inset
 
@@ -22012,14 +22334,18 @@ reference "delta_t"
 \end_inset
 
 ), il modello può essere scritto come 
-\begin_inset Formula \[
-\ln(P_{t+\Delta t})=\ln(P_{t})+\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t}\]
+\begin_inset Formula 
+\[
+\ln(P_{t+\Delta t})=\ln(P_{t})+\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t}
+\]
 
 \end_inset
 
  e ridefinendo appropriatamente i termini otteniamo 
-\begin_inset Formula \begin{equation}
-X_{t+\Delta t}=X_{t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+\Delta t}\text{.}\label{notazione_semplificata}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+X_{t+\Delta t}=X_{t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+\Delta t}\text{.}\label{notazione_semplificata}
+\end{equation}
 
 \end_inset
 
@@ -22061,10 +22387,12 @@ reference "notazione_semplificata"
 \end_inset
 
 ), sviluppiamo in modo ricorsivo 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 X_{t+\Delta t} & = & X_{t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+\Delta t}\text{,}\\
 X_{t+2\Delta t} & = & X_{t+\Delta t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+2\Delta t}=X_{t}+2\widetilde{\mu}+\widetilde{\varepsilon}_{t+2\Delta t}+\widetilde{\varepsilon}_{t+\Delta t}\text{,}\\
-X_{t+3\Delta t} & = & X_{t+2\Delta t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+3\Delta t}=X_{t}+3\widetilde{\mu}+\widetilde{\varepsilon}_{t+3\Delta t}+\widetilde{\varepsilon}_{t+2\Delta t}+\widetilde{\varepsilon}_{t+\Delta t}\text{,}\end{eqnarray*}
+X_{t+3\Delta t} & = & X_{t+2\Delta t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t+3\Delta t}=X_{t}+3\widetilde{\mu}+\widetilde{\varepsilon}_{t+3\Delta t}+\widetilde{\varepsilon}_{t+2\Delta t}+\widetilde{\varepsilon}_{t+\Delta t}\text{,}
+\end{eqnarray*}
 
 \end_inset
 
@@ -22073,8 +22401,10 @@ X_{t+3\Delta t} & = & X_{t+2\Delta t}+\widetilde{\mu}+\widetilde{\varepsilon}_{t
 \end_inset
 
  passi avremo che 
-\begin_inset Formula \begin{equation}
-X_{t+n\Delta t}=X_{t}+n\widetilde{\mu}+\sum_{i=1}^{n}\widetilde{\varepsilon}_{t+i\Delta t}\label{random_walk_sviluppato}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+X_{t+n\Delta t}=X_{t}+n\widetilde{\mu}+\sum_{i=1}^{n}\widetilde{\varepsilon}_{t+i\Delta t}\label{random_walk_sviluppato}
+\end{equation}
 
 \end_inset
 
@@ -22168,8 +22498,10 @@ Se invece
 \end_inset
 
  fosse anch'esso aleatorio potremmo calcolare media e varianza di 
-\begin_inset Formula \[
-\underset{\ln(P_{t+n\Delta t}/P_{t})}{\underbrace{X_{t+n\Delta t}-X_{t}}}=n\widetilde{\mu}+\sum_{i=1}^{n}\widetilde{\varepsilon}_{t+i\Delta t}\]
+\begin_inset Formula 
+\[
+\underset{\ln(P_{t+n\Delta t}/P_{t})}{\underbrace{X_{t+n\Delta t}-X_{t}}}=n\widetilde{\mu}+\sum_{i=1}^{n}\widetilde{\varepsilon}_{t+i\Delta t}
+\]
 
 \end_inset
 
@@ -22205,14 +22537,18 @@ random walk, deriva dal fatto che sono i logaritmi del prezzo a seguire
 \begin_layout Standard
 Tornando al modello iniziale è immediato vedere che il modello presuppone
  rendimenti logaritmici normali: 
-\begin_inset Formula \[
-r_{t,t+\Delta t}=\ln(P_{t+\Delta t}/P_{t})=\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t},\]
+\begin_inset Formula 
+\[
+r_{t,t+\Delta t}=\ln(P_{t+\Delta t}/P_{t})=\mu\Delta t+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t},
+\]
 
 \end_inset
 
  e quindi 
-\begin_inset Formula \[
-r_{t,t+\Delta t}\sim N(\mu\Delta t,\sigma^{2}\Delta t).\]
+\begin_inset Formula 
+\[
+r_{t,t+\Delta t}\sim N(\mu\Delta t,\sigma^{2}\Delta t).
+\]
 
 \end_inset
 
@@ -22221,14 +22557,18 @@ r_{t,t+\Delta t}\sim N(\mu\Delta t,\sigma^{2}\Delta t).\]
 \end_inset
 
  periodi, sulla base dei calcoli svolti in precedenza abbiamo che 
-\begin_inset Formula \begin{equation}
-r_{t,t+n\Delta t}=\ln(P_{t+n\Delta t}/P_{t})=n\mu\Delta t+\sigma\sqrt{\Delta t}\sum_{i=1}^{n}\varepsilon_{t+i\Delta t}\label{claudio}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r_{t,t+n\Delta t}=\ln(P_{t+n\Delta t}/P_{t})=n\mu\Delta t+\sigma\sqrt{\Delta t}\sum_{i=1}^{n}\varepsilon_{t+i\Delta t}\label{claudio}
+\end{equation}
 
 \end_inset
 
  e quindi 
-\begin_inset Formula \[
-r_{t,t+n\Delta t}\sim N(n\mu\Delta t,n\sigma^{2}\Delta t)\text{.}\]
+\begin_inset Formula 
+\[
+r_{t,t+n\Delta t}\sim N(n\mu\Delta t,n\sigma^{2}\Delta t)\text{.}
+\]
 
 \end_inset
 
@@ -22792,8 +23132,10 @@ reference "claudio"
 .
  Utilizzando la formula per il calcolo del valore atteso di una v.a.
  lognormale otteniamo che 
-\begin_inset Formula \[
-E(S_{T})=\exp\left(\ln\left(S_{0}\right)+T\mu+\frac{\sigma^{2}T}{2}\right)=S_{0}\exp\left((\mu+\frac{\sigma^{2}}{2})T\right).\]
+\begin_inset Formula 
+\[
+E(S_{T})=\exp\left(\ln\left(S_{0}\right)+T\mu+\frac{\sigma^{2}T}{2}\right)=S_{0}\exp\left((\mu+\frac{\sigma^{2}}{2})T\right).
+\]
 
 \end_inset
 
@@ -22822,8 +23164,10 @@ Per quanto riguarda il calcolo del VaR di quest'azione con un orizzonte
 \end_inset
 
 : 
-\begin_inset Formula \[
-q_{1\%}=\exp\left(\ln\left(S_{0}\right)+T\mu+\sigma\sqrt{T}G^{-1}(1\%)\right)=S_{0}\exp(T\mu+\sigma\sqrt{T}G^{-1}(1\%)).\]
+\begin_inset Formula 
+\[
+q_{1\%}=\exp\left(\ln\left(S_{0}\right)+T\mu+\sigma\sqrt{T}G^{-1}(1\%)\right)=S_{0}\exp(T\mu+\sigma\sqrt{T}G^{-1}(1\%)).
+\]
 
 \end_inset
 
@@ -22873,8 +23217,10 @@ Avremmo pure potuto calcolare il quantile
 
  del rendimento e non del valore dell'azione.
  Infatti, sapendo che 
-\begin_inset Formula \[
-\ln\left(S_{T}/S_{0}\right)=T\mu+\sigma\sqrt{T}U,\]
+\begin_inset Formula 
+\[
+\ln\left(S_{T}/S_{0}\right)=T\mu+\sigma\sqrt{T}U,
+\]
 
 \end_inset
 
@@ -22891,8 +23237,10 @@ Avremmo pure potuto calcolare il quantile
 \end_inset
 
 : 
-\begin_inset Formula \[
-q_{1\%}=T\mu+\sigma\sqrt{T}G^{-1}(1\%)=10\%+30\%\cdot(-2.326)=-0.5979\;.\]
+\begin_inset Formula 
+\[
+q_{1\%}=T\mu+\sigma\sqrt{T}G^{-1}(1\%)=10\%+30\%\cdot(-2.326)=-0.5979\;.
+\]
 
 \end_inset
 
@@ -22941,8 +23289,10 @@ cizio 2 della serie 4 che il rendimento logaritmico di un portafoglio,
 , è diverso dalla somma pesata dei rendimenti logaritmici sulle singole
  posizioni.
  Tuttavia, sempre nella serie 4, avete dimostrato che 
-\begin_inset Formula \begin{equation}
-\left(V_{T}-V_{0}\right)/V_{0}=\sum\limits _{i=1}^{N}w_{i,0}\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\label{basandoci}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left(V_{T}-V_{0}\right)/V_{0}=\sum\limits _{i=1}^{N}w_{i,0}\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\label{basandoci}
+\end{equation}
 
 \end_inset
 
@@ -22976,8 +23326,10 @@ Per
 \end_inset
 
  
-\begin_inset Formula \[
-\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\simeq\ln\left(1+\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\right)=\ln\left(P_{i,T}/P_{i.0}\right)\thicksim N\left(T\mu_{i},\sigma_{i}^{2}T\right)\]
+\begin_inset Formula 
+\[
+\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\simeq\ln\left(1+\frac{P_{i,T}-P_{i,0}}{P_{i,0}}\right)=\ln\left(P_{i,T}/P_{i.0}\right)\thicksim N\left(T\mu_{i},\sigma_{i}^{2}T\right)
+\]
 
 \end_inset
 
