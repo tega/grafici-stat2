@@ -1858,13 +1858,10 @@ begin{esercizio}
 
 \end_inset
 
-
 Compute the 
 \begin_inset Formula $PGF$
 \end_inset
 
-
-\lang english
  of the following discrete distributions:
 \end_layout
 
@@ -1897,7 +1894,6 @@ The Poisson distribution.
 \end_layout
 
 \begin_layout Enumerate
-
 Solve probems 1 and 2 at page 99 of Trivedi.
 \end_layout
 
@@ -1915,6 +1911,171 @@ end{esercizio}
 \end_inset
 
 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Discrete random vector
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Motivation:
+\series default
+ We are often interested in the relationship between two or more (discrete)
+ random variables.
+ Assume we have two softwares implementing the same functionality.
+ We are interested in the execution time in seconds (rounded to the nearest
+ integer).
+ Let us denote by 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ the execution time of the first and second software, respectively.
+ Examples of events on which we could be interested in are 
+\begin_inset Formula $\{X_{1}>4,X_{2}>X_{1}\}$
+\end_inset
+
+, 
+\begin_inset Formula $\{X_{1}\leq5,X_{2}\leq4\}$
+\end_inset
+
+ and so on.
+\end_layout
+
+\begin_layout Definition
+A random vector 
+\begin_inset Formula $X=(X_{1},\dots,X_{r})$
+\end_inset
+
+ is an 
+\begin_inset Formula $r-$
+\end_inset
+
+dimensional vector-valued function 
+\begin_inset Formula $X:S\to\mathbb{R}^{r}$
+\end_inset
+
+, 
+\begin_inset Formula $s\mapsto X(s)=(X_{1}(s),\dots,X_{r}(s))$
+\end_inset
+
+.
+ A discrete 
+\begin_inset Formula $r-$
+\end_inset
+
+dimentional random vector is a function from 
+\begin_inset Formula $S$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbb{R}^{r}$
+\end_inset
+
+ taking on finite or countably infinite set of vector values 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Discrete random vector
+\end_layout
+
+\begin_layout Definition
+The compound (or joint) pmf for a random vector 
+\begin_inset Formula $X$
+\end_inset
+
+ is defined to be
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{X}(x) & = & P(X=x)\\
+ & = & P(X_{1}=x_{1},\dots,X_{r}=x_{r}).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Fact
+The joint pmf of a discrete random vector has the following 4 properties:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $p_{X}(x)\geq0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\mathbb{R}^{r}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+The set 
+\begin_inset Formula $\{x\in\mathbb{R}^{r}\mid p_{X}(x)\geq0\}$
+\end_inset
+
+ is a finite or countable infinite subset of 
+\begin_inset Formula $\mathbb{R}^{r}$
+\end_inset
+
+ which is denoted by 
+\begin_inset Formula $\{x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,2,\dots\}$
+\end_inset
+
+ ;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $P(X\in A)=\sum_{x\in A}p_{X}(x)$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\sum_{i=1}^{\infty}p_{X}(x_{i})=1$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Every real valued function defined on 
+\begin_inset Formula $\mathbb{R}^{r}$
+\end_inset
+
+satisfying properties 1-4 is the joint pmf of some discrete 
+\begin_inset Formula $r-$
+\end_inset
+
+dim.
+ random vector.
 \end_layout
 
 \begin_layout EndFrame
