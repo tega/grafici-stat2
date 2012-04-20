@@ -2082,5 +2082,596 @@ dim.
 
 \end_layout
 
+\begin_layout BeginFrame
+Discrete random vector
+\end_layout
+
+\begin_layout Example
+Consider a program with two modules with stochastic execution times 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+, respectively.
+ Assume for simplicity that the images of the discrete random variables
+ 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are 
+\begin_inset Formula $\{1,2\}$
+\end_inset
+
+ and 
+\begin_inset Formula $\{1,2,3,4\}$
+\end_inset
+
+.
+ The joint pmf of the random vector 
+\begin_inset Formula $Z=(X,Y)'$
+\end_inset
+
+ is described by the following table: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=4$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{16}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{16}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X=2$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{16}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{8}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{4}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{16}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+\noindent
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\end_layout
+
+\begin_layout Example
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+The marginal pmf of the random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ is by definition 
+\begin_inset Formula $p_{X}(x)$
+\end_inset
+
+ 
+\begin_inset Formula $=$
+\end_inset
+
+ 
+\begin_inset Formula $P(X=x)$
+\end_inset
+
+ and can be derived from the joint pmf by 
+\begin_inset Quotes eld
+\end_inset
+
+integrating out
+\begin_inset Quotes erd
+\end_inset
+
+ the unrelevant random variables (
+\begin_inset Formula $Y$
+\end_inset
+
+ in this case).
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Discrete random vector
+\end_layout
+
+\begin_layout Example
+(Continued).
+ 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{X}(x) & = & P(X=X)=P(\bigcup_{j}\{X=x,Y=y_{j}\})\\
+ & = & \sum_{j}P(X=x,Y=y_{j})\\
+ & = & \sum_{j}p_{Z}(x,y_{j}).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Discrete random vector
+\end_layout
+
+\begin_layout Examples
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be two random variables, each with image 
+\begin_inset Formula $\{1,2\}$
+\end_inset
+
+ and with a joint pmf given by 
+\end_layout
+
+\begin_layout Examples
+\begin_inset Formula 
+\begin{eqnarray*}
+P_{X,Y}(1,1) & = & P_{X,Y}(2,2)=a,\\
+P_{X,Y}(1,2) & = & P_{X,Y}(2,1)=1/2-a,\mbox{ for }0\leq a\leq\frac{1}{2}.
+\end{eqnarray*}
+
+\end_inset
+
+ It is easy to see that 
+\begin_inset Formula $p_{X}(1)=p_{X}(2)=p_{Y}(1)=p_{Y}(2)=\frac{1}{2}$
+\end_inset
+
+, whatever be the value of 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ This means we have uncountable many distinct joint pmf's associated with
+ the same marginal pmf's!
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Discrete random vector
+\end_layout
+
+\begin_layout Examples
+The multinomial pmf.
+ Consider a sequence of 
+\begin_inset Formula $n$
+\end_inset
+
+ generalized Bernoulli trials where at each trial there are the same finite
+ number of distinct outcomes having probabilities 
+\begin_inset Formula $p_{1},p_{2},\dots,p_{r}$
+\end_inset
+
+ where 
+\begin_inset Formula $\sum_{i=1}^{r}p_{i}=1$
+\end_inset
+
+.
+ Define the random vector 
+\begin_inset Formula $X=(X_{1},X_{2},\dots,X_{r})$
+\end_inset
+
+ such that 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ is the number of trials that resulted in the 
+\begin_inset Formula $i-th$
+\end_inset
+
+ outcome.
+ The joint pmf of 
+\begin_inset Formula $X$
+\end_inset
+
+ is then given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{X}(n) & = & P(X_{1}=n_{1},X_{2}=n_{2},\dots,X_{r}=n_{r})\\
+ & = & \underset{\frac{n!}{n_{1}!n_{2}!\cdots n_{r}!}}{\underbrace{\left(\begin{array}{c}
+n\\
+n_{1}n_{2}\cdots n_{r}
+\end{array}\right)}}p_{1}^{n_{1}}p_{1}^{n_{1}}\cdots p_{r}^{n_{r}}
+\end{eqnarray*}
+
+\end_inset
+
+See Trivedi, page 102 for a practical example involving the multinomial
+ distribution!
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Discrete random vector
+\end_layout
+
+\begin_layout Examples
+An inspection plan calls for inspecting five chips and for either accepting
+ each chip, rejecting each chip or submitting it for reinspection, with
+ probabilities of 
+\begin_inset Formula $p_{1}=0.70$
+\end_inset
+
+, 
+\begin_inset Formula $p_{2}=0.20$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{3}=0.10$
+\end_inset
+
+, respectively.
+ Questions:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+What is the probability that all five chips must be reinspected?
+\end_layout
+
+\begin_layout Enumerate
+What is the probability that none of the chips must be reinspected?
+\end_layout
+
+\begin_layout Enumerate
+What is the probability that at least one of the chips must be reinspected?
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Solve problems 1 and 2 at page 104 of Trivedi.
+\end_layout
+
+\begin_layout Definition
+(Independent Random Variables).
+ Two discrete random variables 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are defined to be independent if and only if their joint pmf is the product
+ of their marginal pmf's, i.e.
+\begin_inset Formula 
+\[
+P_{X,Y}(x,y)=p_{X}(x)p_{Y}(y)\mbox{ for all }x\mbox{ and }y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Independen random variables
+\end_layout
+
+\begin_layout Standard
+\noindent
+Let assume 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be two independent random variables.
+ Define the random variable 
+\begin_inset Formula $Z=X+Y$
+\end_inset
+
+.
+ The event 
+\begin_inset Formula $\{Z=t\}$
+\end_inset
+
+ can be represented by all the outcomes on the line 
+\begin_inset Formula $X+Y=t$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename X_plus_Y_event_points.png
+	scale 25
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray*}
+P(Z=t) & = & \sum_{x=0}^{t}P(X=x,Y=t-x)\\
+ & = & \sum_{x=0}^{t}P(X=x)P(Y=t-x)
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Independen random variables
+\end_layout
+
+\begin_layout Standard
+\noindent
+From previous formula it follows that
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{Z}(t) & = & \sum_{x=0}^{t}p_{X}(x)P_{Y}(t-x).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+This summation is called the discrete convolution and it gives the formula
+ for the pmf of the sum of two nonnegative, indipendent, discrete random
+ variables.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
 \end_body
 \end_document
