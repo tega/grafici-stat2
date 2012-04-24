@@ -1776,8 +1776,8 @@ The probability generating function is a convenient tool which simplifies
 \end_layout
 
 \begin_layout Definition
-The probability generating function of a nonnegative integer valued random
- variable 
+The probability generating function (PGF) of a nonnegative integer valued
+ random variable 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2577,7 +2577,7 @@ P_{X,Y}(x,y)=p_{X}(x)p_{Y}(y)\mbox{ for all }x\mbox{ and }y.
 \end_layout
 
 \begin_layout BeginFrame
-Independen random variables
+Independent random variables
 \end_layout
 
 \begin_layout Standard
@@ -2646,7 +2646,7 @@ P(Z=t) & = & \sum_{x=0}^{t}P(X=x,Y=t-x)\\
 \end_layout
 
 \begin_layout BeginFrame
-Independen random variables
+Independent random variables
 \end_layout
 
 \begin_layout Standard
@@ -2667,6 +2667,179 @@ p_{Z}(t) & = & \sum_{x=0}^{t}p_{X}(x)P_{Y}(t-x).
 This summation is called the discrete convolution and it gives the formula
  for the pmf of the sum of two nonnegative, indipendent, discrete random
  variables.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X_{1},X_{2},\dots,X_{r}$
+\end_inset
+
+ be 
+\begin_inset Formula $r$
+\end_inset
+
+ discrete random variable with pmf's 
+\begin_inset Formula $p_{X_{1}}$
+\end_inset
+
+,
+\begin_inset Formula $p_{X_{2}}$
+\end_inset
+
+, 
+\begin_inset Formula $\dots$
+\end_inset
+
+, 
+\begin_inset Formula $p_{X_{r}}$
+\end_inset
+
+, respectively.
+ The R.V.
+ are said to be 
+\emph on
+mutually independent 
+\emph default
+if and only if their joint pmf is given by 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{X_{1},X_{2},\dots X_{r}}(x_{1},x_{2},\dots x_{r}) & = & p_{x_{1}}(x_{1})p_{x_{2}}(x_{2})\cdots p_{x_{r}}(x_{r}).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Remark: it is possible for every pair of R.V.
+ in the set 
+\begin_inset Formula $\{X_{1},\dots,X_{r}\}$
+\end_inset
+
+ to be pairwise independent without the entire set to be mutually independent.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Independent random variables
+\end_layout
+
+\begin_layout Example
+\noindent
+Consider a sequence of two Bernoulli trials and define 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ as the number of successes on the first and second trials, respectively.
+ Let 
+\begin_inset Formula $X_{3}$
+\end_inset
+
+ define the number of matches on the two trials.
+ Then it can be shown that the pairs 
+\begin_inset Formula $(X_{1},X_{2}),$
+\end_inset
+
+ 
+\begin_inset Formula $(X_{1},X_{3})$
+\end_inset
+
+ and 
+\begin_inset Formula $(X_{2},X_{3})$
+\end_inset
+
+ are each independent, but that the set 
+\begin_inset Formula $\{X_{1},X_{2},X_{3}\}$
+\end_inset
+
+ is not mutally independent.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Restricting our attention to nonnegative integer-valued R.V.
+ and recalling the definition of probability generating function PGF, the
+ PGF of the sum of two independent random variables is the product of their
+ PGFs:
+\begin_inset Formula 
+\begin{eqnarray*}
+G_{Z}(z) & = & G_{X+Y}(z)\\
+ & = & G_{X}(z)G_{Y}(z).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Independent random variables
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Proof:
+\emph default
+
+\begin_inset Formula 
+\begin{eqnarray*}
+G_{Z}(z) & = & \sum_{t=0}^{\infty}p_{Z}(t)z^{t}\\
+ & = & \sum_{t=0}^{\infty}z^{t}\sum_{x=0}^{t}p_{X}(x)p_{Y}(t-x)\\
+ & = & \sum_{t=0}^{\infty}\sum_{x=0}^{t}z^{t}p_{X}(x)p_{Y}(t-x)\\
+ & = & \sum_{x=0}^{\infty}\sum_{t=x}^{\infty}z^{t}p_{X}(x)p_{Y}(t-x)\\
+ & = & \sum_{x=0}^{\infty}z^{x}p_{X}(x)\sum_{t=x}^{\infty}z^{t-x}p_{Y}(t-x)\\
+ & = & G_{X}(z)G_{Y}(z).
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout BeginFrame
+Independent random variables
+\end_layout
+
+\begin_layout Standard
+Why is this theorem important?
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+center
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename chiusura rispetto somma.png
+	scale 40
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout EndFrame
