@@ -1843,7 +1843,56 @@ Special discrete distributions
 \begin_layout Standard
 The Poisson distribution is the last discrete distribution we want to study.
  It is a very popular and very used distribution in probability and statistics
- because of its peculiarity.
+ because of its peculiarity having a pmf equal to
+\begin_inset Formula 
+\[
+f(k;\alpha)=e^{-\alpha}\frac{\alpha^{k}}{k!}\mbox{ with }k=0,1,2,\dots
+\]
+
+\end_inset
+
+The Poisson distribution can be derived as a limit problem involving the
+ binomial distribution.
+ Suppose we want to observe the arrival of jobs to a large database server
+ for the time interval 
+\begin_inset Formula $[0,t)$
+\end_inset
+
+.
+ It is reasonable to assume that for a small interval of duration 
+\begin_inset Formula $\triangle t$
+\end_inset
+
+ the probability of a new job arrival is 
+\begin_inset Formula $\lambda\cdot\triangle t$
+\end_inset
+
+, where 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is a constant depending on the population using the server.
+ If 
+\begin_inset Formula $\triangle t$
+\end_inset
+
+ is sufficiently small, the probability of observing two or more arrivals
+ in an interval 
+\begin_inset Formula $\triangle t$
+\end_inset
+
+ can be neglected.
+ We are interested in calculating the probability of 
+\begin_inset Formula $k$
+\end_inset
+
+ jobs arriving in the interval 
+\begin_inset Formula $[0,t)$
+\end_inset
+
+ under this hypothesis.
+ It can be shown that the limit distribution of the problem is the Poisson
+ distribution (see Trivedi, pages 82-83).
 \end_layout
 
 \begin_layout EndFrame
