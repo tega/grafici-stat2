@@ -1,0 +1,7371 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usepackage{amsfonts}
+\usetheme{Madrid}
+\newcounter{esr}
+\newtheorem{esercizio}[esr]{Exercise}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family rmdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{framenumber}{174}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Statistics Lecture
+\end_layout
+
+\begin_layout Author
+Claudio Ortelli
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Flex InstituteMark
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Institute
+\begin_inset Flex InstituteMark
+status collapsed
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+ Finance Institute
+\begin_inset Newline newline
+\end_inset
+
+USI
+\end_layout
+
+\begin_layout Date
+Advanced Learning and Research Institute, 2012
+\begin_inset Argument
+status open
+
+\begin_layout Plain Layout
+ALARI 2012
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Conditional distribution and expectation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ be two events and 
+\begin_inset Formula $P(B)\neq0$
+\end_inset
+
+.
+ The conditional probability of the event 
+\begin_inset Formula $A$
+\end_inset
+
+, given that event 
+\begin_inset Formula $B$
+\end_inset
+
+ is realized, is by definition 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P(A\mid B)=\frac{P(A\cap B)}{P(B)}.
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable and define 
+\series bold
+
+\begin_inset Formula $B$
+\end_inset
+
+
+\series default
+ to be the event that 
+\begin_inset Formula $X=x$
+\end_inset
+
+.
+ The conditional probability 
+\begin_inset Formula $P(A\mid X=x)$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ of the event 
+\begin_inset Formula $A$
+\end_inset
+
+ is then 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+
+\begin_inset Formula 
+\[
+P(A\mid X=x)=\frac{P(A\mbox{ and }X=x)}{P(X=x)}=\frac{P(A\cap[X=x])}{P(X=x)}=
+\]
+
+\end_inset
+
+provided of course that 
+\begin_inset Formula $P(X=x)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+1) Conditional pmf
+\series default
+.
+ Let 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be discrete random variables with joint pmf 
+\begin_inset Formula $p(x,y)$
+\end_inset
+
+.
+ The conditional pmf of 
+\begin_inset Formula $Y$
+\end_inset
+
+ given 
+\begin_inset Formula $X$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{Y\mid X}(y\mid x) & = & P(Y=y\mid X=x)\\
+ & = & \frac{P(Y=y,X=x)}{P(X=x)}=\frac{p(x,y)}{p_{x}(x)}
+\end{eqnarray*}
+
+\end_inset
+
+if 
+\begin_inset Formula $p_{X}(x)\neq0$
+\end_inset
+
+ and 
+\begin_inset Formula $0$
+\end_inset
+
+ otherwise.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+2) The conditional distribution function
+\series default
+ of a random Variable 
+\begin_inset Formula $Y$
+\end_inset
+
+ (not necessarily descrete) given a discrete random variable 
+\begin_inset Formula $X$
+\end_inset
+
+ is
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+F_{Y\mid X}(y\mid x)=P(Y\leq y\mid X=x)=\frac{P(Y\leq y\mbox{ and }X=x)}{P(X=x)}
+\]
+
+\end_inset
+
+for all 
+\begin_inset Formula $y$
+\end_inset
+
+ and all 
+\begin_inset Formula $x$
+\end_inset
+
+ such that 
+\begin_inset Formula $P(X=x)\neq0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Server cluster with two servers labeled 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Incoming jobs are independently routed to 
+\begin_inset Formula $A$
+\end_inset
+
+ and 
+\begin_inset Formula $B$
+\end_inset
+
+ with probability 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q=1-p$
+\end_inset
+
+, respectively.
+\end_layout
+
+\begin_layout Itemize
+The number 
+\begin_inset Formula $X$
+\end_inset
+
+ of arriving jobs per unit of time is Poisson distributed with intensity
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Determine the number of jobs, 
+\begin_inset Formula $Y$
+\end_inset
+
+, received by server 
+\begin_inset Formula $A$
+\end_inset
+
+, per unit of time.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+\begin_inset Formula 
+\[
+P_{Y\mid X}(k,n)=\begin{cases}
+P_{Y\mid X}(Y=k,X=n)=\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)p^{k}q^{n-k}, & 0\leq k\leq n.\\
+0 & \mbox{otherwise.}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+(Continued) Recall that 
+\begin_inset Formula $P(X=n)=e^{-\lambda}\lambda^{n}/n!$
+\end_inset
+
+ so that 
+\begin_inset Formula 
+\begin{eqnarray*}
+p_{Y}(k) & = & \sum_{n=k}^{\infty}p_{Y\mid X}(k\mid n)p_{X}(n)\\
+ & = & \sum_{n=k}^{\infty}\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)p^{k}q^{n-k}\frac{e^{-\lambda}\lambda^{n}}{n!}\\
+ & = & \lambda^{k}p^{k}e^{-\lambda}\sum_{n=k}^{\infty}\left(\begin{array}{c}
+n\\
+k
+\end{array}\right)\frac{1}{n!}q^{n-k}\lambda^{n-k}\\
+ & = & \frac{\left(\lambda p\right)^{k}}{k!}e^{-\lambda}\sum_{n=k}^{\infty}\frac{\left(q\lambda\right)^{n-k}}{(n-k)!}
+\end{eqnarray*}
+
+\end_inset
+
+so that finally 
+\begin_inset Formula $p_{Y}(k)=\frac{\left(\lambda p\right)^{k}}{k!}e^{-\lambda}e^{q\lambda}=\frac{\left(\lambda p\right)^{k}}{k!}e^{-\lambda p}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $Y$
+\end_inset
+
+ is Poisson distributed with intensity 
+\begin_inset Formula $\lambda p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $X$
+\end_inset
+
+ is a continuous random variable then 
+\begin_inset Formula $P(X=x)=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ so that the previous definition 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\frac{P(Y=y,X=x)}{P(X=x)}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ of conditional probability is not satisfactory.
+\end_layout
+
+\begin_layout Standard
+However when 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are jointly continuous we can define the conditional pdf of 
+\begin_inset Formula $Y$
+\end_inset
+
+ given 
+\begin_inset Formula $X$
+\end_inset
+
+:
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ be continuous r.v.
+ with joint pdf 
+\begin_inset Formula $f(x,y).$
+\end_inset
+
+ The conditional density 
+\begin_inset Formula $f_{Y\mid X}$
+\end_inset
+
+ is 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+f_{Y\mid X}(y\mid x)=\begin{cases}
+\frac{f(x,y)}{f_{X}(x)}, & \mbox{if }0<f_{X}(x)<\infty,\\
+0 & \mbox{otherwise.}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the definition of conditional density it follows that
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(x,y)=f_{Y\mid X}(y\mid x)f_{X}(x)=f_{X\mid Y}(x\mid y)f_{Y}(y),
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and if 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are independent, then 
+\begin_inset Formula 
+\[
+f(x,y)=f_{X}(x)f_{Y}(y).
+\]
+
+\end_inset
+
+Furthermore,
+\begin_inset Formula 
+\[
+f_{Y}(y)=\int_{-\infty}^{\infty}f(x,y)dx=\int_{-\infty}^{\infty}f_{Y\mid X}(y\mid x)f_{X}(x)dx
+\]
+
+\end_inset
+
+which is the continuous analog of the thorem of total probability.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The conditional pdf can be used to obtain the conditional probability:
+\begin_inset Formula 
+\[
+P(a\leq Y\leq b\mid X=x)=\int_{a}^{b}f_{Y\mid X}(y\mid x)dy,\qquad a\leq b.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The conditional distribution function is defined analogously
+\begin_inset Formula 
+\begin{eqnarray*}
+F_{Y\mid X}(y\mid x) & = & P(Y\leq y\mid X=x)\\
+ & = & \frac{\int_{-\infty}^{y}f(x,t)dt}{f_{X}(x)}\\
+ & = & \int_{-\infty}^{y}f_{Y\mid X}(t\mid x)dt.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+Consider a series system of two 
+\emph on
+independent
+\emph default
+ components with respective lifetime distributions 
+\begin_inset Formula $X\sim EXP(\lambda_{1})$
+\end_inset
+
+ and 
+\begin_inset Formula $Y\sim EXP(\lambda_{2})$
+\end_inset
+
+.
+ We are interested in the probability of envent 
+\begin_inset Formula $A$
+\end_inset
+
+ that component 2 causes the system failure, i.e.
+ 
+\begin_inset Formula 
+\[
+P(A)=P(X\geq Y).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The conditional pdf is 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $F_{X\mid Y}(t,t)=P(X\leq t\mid Y=t)=F_{X}(t)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ by the independence of 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ By the total prob.
+ theorem (continuous version)
+\begin_inset Formula 
+\begin{eqnarray*}
+P(A) & = & \int_{0}^{\infty}P(X\geq t,Y=t)f_{Y}(t)dt\\
+ & = & \int_{0}^{\infty}[1-F_{X}(t)]f_{Y}(t)dt=\frac{\lambda_{2}}{\lambda_{1}+\lambda_{2}}.
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+ Consider the three-dimensional vector 
+\begin_inset Formula $X=(X_{1},X_{2},X_{3})$
+\end_inset
+
+ having the following joint density function
+\begin_inset Formula 
+\[
+f_{X}(x_{1},x_{2},x_{3})=\begin{cases}
+6x_{1}x_{2}^{2}x_{3}, & \mbox{if }0\leq x_{1}\leq1,\,0\leq x_{x}\leq1,\,0\leq x_{3}\leq\sqrt{2}.\\
+0, & \mbox{otherwise.}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Compute the conditional density functions 
+\begin_inset Formula $f_{X_{1},X_{2}\mid X_{3}}(x_{1},x_{2}\mid x_{3})$
+\end_inset
+
+ and 
+\begin_inset Formula $f_{X_{3}\mid X_{1}}(x_{3}\mid x_{1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Verify if the three random variables 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $X_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{3}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+ are independent.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ are independent r.
+ v.
+ with Poisson distribution, having respective parameters 
+\begin_inset Formula $\alpha_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha_{2}$
+\end_inset
+
+.
+ Show that the conditional 
+\begin_inset Formula $pmf$
+\end_inset
+
+ of 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ given 
+\begin_inset Formula $X_{1}+X_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $p_{X_{1}\mid X_{1}+X_{2}}(X_{1}=x_{1}\mid X_{1}+X_{2}=y)$
+\end_inset
+
+, is binomial.
+ Determine its parameters.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Let the execution times 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ of two independent parallel processes be uniformly distributed over 
+\begin_inset Formula $(0,t_{X})$
+\end_inset
+
+ and 
+\begin_inset Formula $(0,t_{Y})$
+\end_inset
+
+, respectively, with 
+\begin_inset Formula $t_{X}\leq t_{Y}.$
+\end_inset
+
+ Find the probability that the former process finishes execution before
+ the later.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Mixture distributions}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Mixture distributions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Consider a file server whose workload may be divided into 
+\begin_inset Formula $r$
+\end_inset
+
+ distinct classes.
+\end_layout
+
+\begin_layout Itemize
+For a job of class 
+\begin_inset Formula $i$
+\end_inset
+
+ (
+\begin_inset Formula $1\leq i\leq r$
+\end_inset
+
+) the CPU time is exponentially distributed with parameter 
+\begin_inset Formula $\lambda_{i}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Let 
+\begin_inset Formula $Y$
+\end_inset
+
+ denote the service time of a job and let 
+\begin_inset Formula $X$
+\end_inset
+
+ be the job class.
+ Then
+\begin_inset Formula 
+\[
+f_{Y\mid X}(y\mid i)=\lambda_{i}e^{-\lambda_{i}y},\qquad y>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Assume that the probability 
+\begin_inset Formula $p_{X}(i)$
+\end_inset
+
+ that a randomly chosen job belongs to class 
+\begin_inset Formula $i$
+\end_inset
+
+ is equal to 
+\begin_inset Formula $\alpha_{i}>0$
+\end_inset
+
+.
+ It follows 
+\begin_inset Formula $\sum_{i=1}^{r}\alpha_{i}=1.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The joint density of 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ is then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(i,y)=f_{Y\mid X}(y\mid i)p_{X}(i)=\alpha_{i}\lambda_{i}e^{-\lambda_{i}y},\qquad y>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Mixture distributions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The marginal density of 
+\begin_inset Formula $Y$
+\end_inset
+
+ is then 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f_{Y}(y)=\sum_{i=1}^{r}f(i,y)=\sum_{i=1}^{r}\alpha_{i}\lambda_{i}e^{-\lambda_{i}y},\qquad y>0,\mbox{ i.e.}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename mixtureDistribution.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $Y$
+\end_inset
+
+ has an 
+\begin_inset Formula $r-$
+\end_inset
+
+stage hyperexponential distribution!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Mixture distributions
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In general the conditional distribution of 
+\begin_inset Formula $Y$
+\end_inset
+
+ does not have to be exponential! Denoting 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $f_{Y\mid X}(y\mid i)=f_{Y_{i}}(y)$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{Y\mid X}(y\mid i)=F_{i}(y)$
+\end_inset
+
+ then the unconditional pdf of 
+\begin_inset Formula $Y$
+\end_inset
+
+ is 
+\begin_inset Formula 
+\[
+f_{Y}(y)=\sum_{i=1}^{r}\alpha_{i}f_{i}(y)
+\]
+
+\end_inset
+
+ and the unconditional CDF of 
+\begin_inset Formula $Y$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+F_{Y}(y)=\sum_{i=1}^{r}\alpha_{i}F_{i}(y).
+\]
+
+\end_inset
+
+Applying the definition of the mean and higher moments we obtain
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{eqnarray*}
+E[Y] & = & \sum_{i=1}^{r}\alpha_{i}E[Y_{i}],\\
+E[Y^{k}] & = & \sum_{i=1}^{r}\alpha_{i}E[Y_{i}^{k}].
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are continuous random variables, we can for instance compute the conditional
+ density 
+\begin_inset Formula $f_{Y\mid X}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Since 
+\begin_inset Formula $f_{Y\mid X}$
+\end_inset
+
+ has all properties of a density function of a continuous random variable,
+ we can talk about its moments.
+\end_layout
+
+\begin_layout Itemize
+Its mean (if exists) is called the conditional expectation of 
+\begin_inset Formula $Y$
+\end_inset
+
+ given 
+\begin_inset Formula $X=x$
+\end_inset
+
+ and is denoted 
+\begin_inset Formula $E[Y\mid X=x]$
+\end_inset
+
+ or 
+\begin_inset Formula $E[Y\mid x]$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{eqnarray*}
+E[Y\mid x] & = & \begin{cases}
+\int_{-\infty}^{\infty}yf(y\mid x)dy, & \mbox{ if }0<f(x)<\infty\\
+0 & \mbox{otherwise.}
+\end{cases}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+In case the random variables 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are discrete, 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $E[Y\mid x]$
+\end_inset
+
+ is defined as
+\begin_inset Formula 
+\[
+E[Y\mid X=x]=\sum_{y}yP(Y=y\mid X=x)=\sum_{y}yp_{Y\mid X}(y\mid x).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Similar arguments hold when 
+\begin_inset Formula $X$
+\end_inset
+
+ and 
+\begin_inset Formula $Y$
+\end_inset
+
+ are discrete.
+ The conditional expectation is then defined as
+\begin_inset Formula 
+\[
+E[Y\mid X=x]=\sum_{y}yP(Y=y\mid X=x)=\sum_{y}yp_{Y\mid X}(y\mid x).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The quantity 
+\begin_inset Formula 
+\[
+m(x)=E[Y\mid x]
+\]
+
+\end_inset
+
+considered as a function of 
+\begin_inset Formula $x$
+\end_inset
+
+ is known as the 
+\emph on
+regression function
+\emph default
+ of 
+\begin_inset Formula $Y$
+\end_inset
+
+ on 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Conditional Distribution and Expectation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The conditional expectation of a function 
+\begin_inset Formula $\phi(Y)$
+\end_inset
+
+ is defined as 
+\begin_inset Formula 
+\[
+E[\phi(Y)\mid X=x]=\begin{cases}
+\int_{-\infty}^{\infty}\phi(y)f_{Y\mid X}(y\mid x)dy, & \mbox{if }Y\mbox{ is continuous,}\\
+\sum_{i}\phi(y_{i})p_{Y\mid X}(y_{i}\mid x), & \mbox{if }Y\mbox{ is discrete.}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+We may take expectation of the regression function to obtain the unconditional
+ expectation of 
+\begin_inset Formula $\phi(Y)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+E[\phi(Y)]=\begin{cases}
+\sum_{x}E[\phi(Y)\mid X=x]p_{X}(x), & \mbox{if }X\mbox{ is discrete,}\\
+\int_{-\infty}^{\infty}E[\phi(Y)\mid X=x]f_{X}(x)dx, & \mbox{\mbox{if }\ensuremath{X}\mbox{ is continuous}.}
+\end{cases}
+\]
+
+\end_inset
+
+This last formula is known as the 
+\series bold
+theorem of total expectation
+\series default
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Limit Theorems}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Definitions}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+(Chebyshev) Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable with expected value 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and finite variance 
+\begin_inset Formula $\sigma^{2}<\infty$
+\end_inset
+
+.
+ The, for all 
+\begin_inset Formula $t>0$
+\end_inset
+
+, the following inequality holds
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+P\left(\mid X-\mu\mid\geq t\right)\leq\frac{\sigma^{2}}{t^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(Convergence in probability) Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be a sequence of random variables.
+ We say that the sequence converges in probability to 
+\begin_inset Formula $c\in\mathbb{R}$
+\end_inset
+
+, write 
+\begin_inset Formula $X_{n}\underset{p}{\rightarrow}c$
+\end_inset
+
+ or 
+\begin_inset Formula $p\lim X_{n}=c$
+\end_inset
+
+, if, for all 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}P\left(\mid X_{n}-c\mid\geq\epsilon\right)=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be a sequence of random variables with common expectation 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and finite variance 
+\begin_inset Formula $\sigma_{n}^{2}<\infty$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\lim_{n\rightarrow\infty}\sigma_{n}^{2}=0$
+\end_inset
+
+, then 
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+X_{n}\underset{p}{\rightarrow}\mu.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+Apply Chebyshev inequality.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be an 
+\begin_inset Formula $i.i.d.\sim(\mu,\sigma^{2})$
+\end_inset
+
+ (independent and identically distributed) sequence of random variables.
+ Define the sequence 
+\begin_inset Formula $\overline{X}_{n}=\frac{1}{n}\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+.
+ From the linearity of the expectation and the properties of the variance
+ we know that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $\bar{X}_{n}\sim(\mu,\frac{\sigma^{2}}{n})$
+\end_inset
+
+.
+ The sequence 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+
+\begin_inset Formula $\left\{ \bar{X}_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ converges in probability to 
+\begin_inset Formula $\mu$
+\end_inset
+
+: 
+\begin_inset Formula $p\lim\bar{X}_{n}=\mu$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The result in the previous Example is also known as the 
+\series bold
+weak law of large numbers
+\series default
+ (WLLN).
+ In order for the WLLN to apply the existence of the second moment (the
+ variance) is not required.
+ The WLLN holds just under the assumption that the 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+ sequence have finite expected value 
+\begin_inset Formula $\mu$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Theorem
+Consider two sequences 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\left\{ Y_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ of random variables converging in probability to 
+\begin_inset Formula $a<\infty$
+\end_inset
+
+ and 
+\begin_inset Formula $b<\infty$
+\end_inset
+
+, respectively.
+ Then
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\lim\left(X_{n}+Y_{n}\right)=p\lim X_{n}+p\lim Y_{n}=a+b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $p\lim\left(X_{n}\cdot Y_{n}\right)=p\lim X_{n}\cdot p\lim Y_{n}=a\cdot b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $b\ne0$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+p\lim\left(\frac{X_{n}}{Y_{n}}\right)=\frac{p\lim X_{n}}{p\lim Y_{n}}=\frac{a}{b}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Function 
+\begin_inset Formula $g$
+\end_inset
+
+ continuous in 
+\begin_inset Formula $a:$
+\end_inset
+
+ 
+\begin_inset Formula $p\lim g(X_{n})=g\left(p\lim X_{n}\right)=g(a).$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Standardization}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+(Standardization) Let 
+\begin_inset Formula $X$
+\end_inset
+
+ be a random variable with expected value 
+\begin_inset Formula $\mu$
+\end_inset
+
+ and finite variance 
+\begin_inset Formula $\sigma^{2}$
+\end_inset
+
+.
+ The location and scale trasform 
+\begin_inset Formula 
+\[
+Z=\frac{X-\mu}{\sigma}
+\]
+
+\end_inset
+
+defines the standardization of 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ From the properties of expectation it is straightforward to prove that
+ 
+\begin_inset Formula $Z\sim(0,1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Example
+Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be an indipendent sequence of random variables with 
+\begin_inset Formula $X_{n}\sim(\mu,\sigma^{2})$
+\end_inset
+
+ for all 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+.
+ Define the sequence 
+\begin_inset Formula $\overline{X}_{n}=\frac{1}{n}\sum_{i=1}^{n}X_{i}$
+\end_inset
+
+.
+ Then 
+\begin_inset Formula 
+\[
+Z_{n}=\frac{\sqrt{n}\left(\overline{X}_{n}-\mu\right)}{\sigma}\sim(0,1)\mbox{ for all }n\in\mathbb{N}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Central Limit Theorem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+The Central Limit Theorem (CLT).
+ Let 
+\begin_inset Formula $\left\{ X_{n}\right\} _{n\in\mathbb{N}}$
+\end_inset
+
+ be independent random variables with a finite mean 
+\begin_inset Formula $E[X_{n}]=\mu_{n}$
+\end_inset
+
+ and a finite variance 
+\begin_inset Formula $Var(X_{n})=\sigma_{n}^{2}$
+\end_inset
+
+.
+ Define the normalized random variable
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+Z_{n}=\frac{\sum_{i=1}^{n}X_{i}-\sum_{i=1}^{n}\mu_{i}}{\sqrt{\sum_{i=1}^{n}\sigma_{i}^{2}}}
+\]
+
+\end_inset
+
+ so that 
+\begin_inset Formula $E[Z_{n}]=0$
+\end_inset
+
+ and 
+\begin_inset Formula $Var(Z_{n})=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ Then under regularity conditions the limiting distribution of 
+\begin_inset Formula $Z_{n}$
+\end_inset
+
+ is standard normal, denoted 
+\begin_inset Formula $Z_{n}\rightarrow N(0,1),$
+\end_inset
+
+ i.e.
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Formula 
+\[
+\lim_{n\rightarrow\infty}F_{Z_{n}}(t)=\lim_{n\rightarrow\infty}P(Z_{n}\leq t)=\int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}}e^{-y^{2}/2}dy.
+\]
+
+\end_inset
+
+Remark: the special condition 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+ independent with 
+\begin_inset Formula $Var(X_{n})=\sigma^{2}$
+\end_inset
+
+ for all 
+\begin_inset Formula $n$
+\end_inset
+
+ is sufficient for the CTL to apply.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Limit Theorems
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exercises ...
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+section{Statistical inference}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Parameter Estimation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Parameter estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The object under study is 
+\end_layout
+
+\begin_layout Enumerate
+the probability distribution function 
+\begin_inset Formula $F$
+\end_inset
+
+ of a random experiment or random variable 
+\begin_inset Formula $X$
+\end_inset
+
+, or
+\end_layout
+
+\begin_layout Enumerate
+the statistical distribution function 
+\begin_inset Formula $F$
+\end_inset
+
+ of a given attribute of a population of individuals, users, devices, ...
+ .
+\end_layout
+
+\begin_layout Standard
+We assume that 
+\begin_inset Formula $F$
+\end_inset
+
+ is known up to a vector of unknown parameters 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+The family of distributions 
+\begin_inset Formula $\mathcal{P}=\{F_{\theta}\}_{\Theta\subseteq\mathbb{R}^{n}}$
+\end_inset
+
+, 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset
+
+ finite, is called parametric model.
+ The parametric model is usually specified in terms of probability mass
+ or density functions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Parameter estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+We assume that the number of e-mails per minute arriving to an e-mail server
+ follows a Poisson distribution.
+ The Poisson family of distributions is parametrized by a single parameter
+ 
+\begin_inset Formula $\lambda>0$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{P}=\left\{ p_{\lambda}(j)=\frac{\lambda^{j}}{j!}\exp^{-\lambda},\; j=0,1,\ldots\mid\lambda>0\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The delivery time of the Google search engine is normal distributed.
+ The Normal family is parametrized by two parameters 
+\begin_inset Formula $\theta=(\mu,\sigma)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{P}=\left\{ f_{\theta}(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp^{-\frac{1}{2\sigma\text{²}}(x-\mu)^{2}}\;\mid\mu\in\mathbb{R},\:\sigma>0\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Parameter estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+In the previous Example, instead of assuming the Normal distribution, we
+ use the Logistic distribution, that is defined by the following distribution
+ function (in this case 
+\begin_inset Formula $\theta=(\mu,\beta)):$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\mathcal{P}=\left\{ F_{\theta}(x)=\frac{1}{1+\exp^{-(x-\mu)/\beta}}\;\mid\mu\in\mathbb{R},\:\beta>0\right\} .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+We are interested in the percentage of female students at USI.
+ The distribution of the gender attribute of the USI population is Bernoulli
+ distributed with parameter 
+\begin_inset Formula $\theta\in[0,1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In all previous examples the 
+\begin_inset Quotes eld
+\end_inset
+
+true
+\begin_inset Quotes erd
+\end_inset
+
+ vector 
+\begin_inset Formula $\theta$
+\end_inset
+
+ of parameters identifying the correct distribution within the corresponding
+ family is 
+\emph on
+unknown
+\emph default
+ and must be estimated by means of a sample (a random drawn subset of the
+ population).
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Parameter estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Parametric estimation theory deals with the problem of approximating the
+ unknown parameters by means of the information collected from the sample.
+\end_layout
+
+\begin_layout Example
+In order to estimate the percentage of female students we randomly select
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ students (sampling with replacement).
+ In this way we obtain 
+\begin_inset Formula $n$
+\end_inset
+
+ independent realizations of Bernoulli distributed random variables 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+P(X_{i}="female")=\theta.
+\]
+
+\end_inset
+
+Identifying with 1 the female gender, the sample space is composed by 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ points 
+\begin_inset Formula $x=(x_{1},...,x_{n})$
+\end_inset
+
+, where 
+\begin_inset Formula $x_{i}\in\{0,1\}$
+\end_inset
+
+ and 
+\begin_inset Formula $p_{\theta}(x)=\theta^{m(x)}(1-\theta)^{n-m(x)}$
+\end_inset
+
+ with 
+\begin_inset Formula $m(x)=\sum_{i=1}^{n}x_{i}$
+\end_inset
+
+.
+ Given a sample 
+\begin_inset Formula $x$
+\end_inset
+
+ it seems reasonable to estimate 
+\begin_inset Formula $\theta$
+\end_inset
+
+ by the proportion of successes i.e.
+ 
+\begin_inset Formula $m(x)/n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+The set of random variables 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+ is said to constitute a 
+\emph on
+random sample
+\emph default
+ of size 
+\begin_inset Formula $n$
+\end_inset
+
+ from the population with the distribution function 
+\begin_inset Formula $F(x)$
+\end_inset
+
+, provided that they are 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+, i.e.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+mutually independent
+\end_layout
+
+\begin_layout Itemize
+identically distributed
+\end_layout
+
+\end_deeper
+\begin_layout Definition
+with distribution function 
+\begin_inset Formula $F_{X_{i}}(x)=F(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $i$
+\end_inset
+
+ and all 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Estimator}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The basic situation in point estimation is as follows.
+\end_layout
+
+\begin_layout Itemize
+We observe a realization of random variables 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The joint distribution function of 
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+ depends on an unknown parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+ that is known to be in some given set 
+\begin_inset Formula $\Theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The problem to find the value of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is a problem of point estimation.
+\end_layout
+
+\begin_layout Itemize
+We estimate 
+\begin_inset Formula $\theta$
+\end_inset
+
+ by some function of the observations 
+\begin_inset Formula $x_{1},...,x_{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Any function of the random variables that are being observed, say 
+\begin_inset Formula $\hat{\Theta}(X_{1},...,X_{n}),$
+\end_inset
+
+ is called a 
+\emph on
+statistic
+\emph default
+.
+ It is also called an 
+\emph on
+estimator of
+\emph default
+ 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+ Since 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ are random variables, 
+\begin_inset Formula $\hat{\Theta}$
+\end_inset
+
+ is a random variable too.
+ A particular realization of the estimator, say 
+\begin_inset Formula $\hat{\Theta}(x_{1},...,x_{n}),$
+\end_inset
+
+ is called an 
+\emph on
+estimate of 
+\emph default
+
+\begin_inset Formula $\theta$
+\end_inset
+
+ and denoted by 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Remarks:
+\end_layout
+
+\begin_layout Itemize
+The function 
+\begin_inset Formula $\hat{\Theta}$
+\end_inset
+
+ must be known, that is, it does not have to depend on unknown parameters:
+ 
+\begin_inset Formula $\hat{\Theta}=\overline{X}_{n}$
+\end_inset
+
+ is a statistics, 
+\begin_inset Formula $\hat{\Theta}=\overline{X}_{n}-\mu$
+\end_inset
+
+ is not a statistics if 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is unknown.
+\end_layout
+
+\begin_layout Itemize
+The distribution of the estimator 
+\begin_inset Formula $\hat{\Theta}$
+\end_inset
+
+ is called the sampling distribution.
+\end_layout
+
+\begin_layout Itemize
+Since the joint distribution of 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ depends on 
+\begin_inset Formula $\theta$
+\end_inset
+
+, the sampling distribution will depends on 
+\begin_inset Formula $\theta$
+\end_inset
+
+ too.
+ 
+\end_layout
+
+\begin_layout Example
+Let 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $X_{1},...,X_{n}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ be an 
+\begin_inset Formula $i.i.d.$
+\end_inset
+
+ sequence of 
+\begin_inset Formula $N(\mu,1)$
+\end_inset
+
+ distributed random variables.
+ From the properties of the Normal distribution we know that the sample
+ distribution of 
+\begin_inset Formula $\hat{\Theta}=\overline{X}_{n}$
+\end_inset
+
+ is 
+\begin_inset Formula $N(\mu,\frac{1}{n})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In many cases the sampling distribution is an unknown function of 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Unbiased estimator}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We would like our estimator of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ to be exactly 
+\begin_inset Formula $\theta$
+\end_inset
+
+ on average.
+ 
+\end_layout
+
+\begin_layout Definition
+We say that 
+\begin_inset Formula $\hat{\Theta}(X_{1},...,X_{n})$
+\end_inset
+
+ is an unbiased estimator of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ if 
+\begin_inset Formula 
+\[
+E\left[\hat{\Theta}(X_{1},...,X_{n})\right]=\theta.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The function
+\begin_inset Formula 
+\[
+\hat{\Theta}(X_{1},...,X_{n})=\frac{1}{n}\sum_{i=1}^{n}(X_{i}-\bar{X})^{2}
+\]
+
+\end_inset
+
+is an estimator of the population variance.
+ It is possible to show (see Trivedi, page 642) that this estimator is biased,
+ i.e.
+\begin_inset Formula 
+\[
+E\left[\hat{\Theta}(X_{1},...,X_{n})\right]=\sigma^{2}-\frac{1}{n}\sigma^{2}\neq\sigma^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The formula 
+\begin_inset Formula 
+\[
+\hat{\Theta}(X_{1},...,X_{n})=\sum_{i=1}^{n}a_{i}X_{i}
+\]
+
+\end_inset
+
+ is an unbiased estimator of the expected value 
+\begin_inset Formula $\mu=E[X]$
+\end_inset
+
+ provided that the real weights 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ satisfy the condition 
+\begin_inset Formula $\sum_{i=1}^{n}a_{i}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The previous example shows that many unbiased estimators of the same parameter
+ may exist.
+\end_layout
+
+\begin_layout Itemize
+We need a criterion to choose the 
+\begin_inset Quotes eld
+\end_inset
+
+best
+\begin_inset Quotes erd
+\end_inset
+
+ unbiased estimator.
+\end_layout
+
+\begin_layout Itemize
+Recall that if 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\hat{\Theta}$
+\end_inset
+
+ is unbiased, then from chebyshev's inequalit
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+y
+\begin_inset Formula 
+\[
+P\left(|\hat{\Theta}-\theta|\geq\epsilon\right)\leq\frac{Var[\hat{\Theta}]}{\epsilon^{2}}\mbox{ for }\epsilon>0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Efficiency}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Efficiency
+\series default
+.
+ An estimator 
+\begin_inset Formula $\hat{\Theta}_{1}$
+\end_inset
+
+ is said to be a more efficient estimator of the parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+ than the estimator 
+\begin_inset Formula $\hat{\Theta}_{2}$
+\end_inset
+
+, provided that
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\hat{\Theta}_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\Theta}_{2}$
+\end_inset
+
+ are both unbiased estimators of 
+\begin_inset Formula $\theta$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Var[\hat{\Theta}_{1}]\leq Var[\hat{\Theta}_{2}]$
+\end_inset
+
+, for all 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $Var[\hat{\Theta}_{1}]<Var[\hat{\Theta}_{2}]$
+\end_inset
+
+, for some 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Example
+The sample mean 
+\begin_inset Formula 
+\[
+\bar{X}=\frac{1}{n}\sum_{i=1}^{n}X_{i}
+\]
+
+\end_inset
+
+is the most efficient (minimum-variance) linear estimator of the population
+ mean 
+\begin_inset Formula $\mu$
+\end_inset
+
+ (provided 
+\begin_inset Formula $\mu$
+\end_inset
+
+ exists).
+ We also say that 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\bar{X}$
+\end_inset
+
+ is BLUE
+\family default
+\series default
+\shape default
+\size default
+\emph on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ (Best Linear Unbiased Estimator) for 
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+(see Trivedi, page 644).
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Consistency}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As in the case of the sample mean, the variance of the sampling distribution
+ of an estimator generally decreases with increasing 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ This fact leads us to the following property of an estimator.
+\end_layout
+
+\begin_layout Definition
+
+\series bold
+Consistency
+\series default
+.
+ An estimator 
+\begin_inset Formula $\hat{\Theta}$
+\end_inset
+
+ of the parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is said to be consistent if 
+\begin_inset Formula $p\lim\hat{\Theta}=\theta$
+\end_inset
+
+, i.e.
+ if
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}P(|\hat{\Theta}-\theta|\geq\epsilon)=0.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From the Chebyshev inequality we conclude that any unbiased estimator 
+\begin_inset Formula $\hat{\Theta}$
+\end_inset
+
+ of the parameter 
+\begin_inset Formula $\theta$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+\lim_{n\to\infty}Var[\hat{\Theta}]=0
+\]
+
+\end_inset
+
+ is consistent.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Point estimation problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Example
+The empirical distribution function, 
+\begin_inset Formula 
+\[
+\hat{F}(x)=\frac{\#\mbox{ observations }\leq x}{n}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+is for all 
+\begin_inset Formula $x\in\mathbb{R}$
+\end_inset
+
+ a consistent estimator of the true distribution function 
+\begin_inset Formula $F(x)$
+\end_inset
+
+.
+ Proof: see Trivedi, page 645.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Method of least squares}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Method of least squares
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Starting point:
+\end_layout
+
+\begin_layout Itemize
+We observe a random sample 
+\begin_inset Formula $y_{1}$
+\end_inset
+
+, ..., 
+\begin_inset Formula $y_{n}$
+\end_inset
+
+ from a population with distribution function 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+We are interested in estimating the mean 
+\begin_inset Formula $\theta$
+\end_inset
+
+ of the distribution.
+\end_layout
+
+\begin_layout Standard
+We rewrite our model as 
+\begin_inset Formula 
+\[
+y_{i}=\theta+\epsilon_{i}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\epsilon_{i}:=y_{i}-\theta$
+\end_inset
+
+ is the zero mean deviation error of the 
+\begin_inset Formula $i-th$
+\end_inset
+
+ observation from the mean of the underlying distribution.
+ Note that 
+\begin_inset Formula $Var[\epsilon_{i}]=Var[y_{i}]=\sigma\text{²}$
+\end_inset
+
+ for all observations.
+ One possible criterion to estimate 
+\begin_inset Formula $\theta$
+\end_inset
+
+ is to choose an estimate such that the sum of squared errors is as small
+ as possible, i.e.
+\begin_inset Formula 
+\[
+\hat{\theta}(y_{1},...,y_{n})=\min_{\theta}\sum_{i=1}^{n}\epsilon_{i}^{2}=\min_{\theta}\sum_{i=1}^{n}(y_{i}-\theta)^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The solution is 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\hat{\theta}(y_{1},...,y_{n})=\bar{y}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ the mean of the sample!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Method of least squares
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can extend the argument to the case where the expected value of the random
+ variable 
+\begin_inset Formula $Y_{i}$
+\end_inset
+
+ depends on a concomitant 
+\series bold
+deterministic
+\series default
+ and 
+\series bold
+observable
+\series default
+ variable 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+.
+ If the dependence is linear, we have that 
+\begin_inset Formula 
+\[
+E[Y_{i}]=\theta_{1}+\theta_{2}x_{i},
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $\theta'=(\theta_{1},\theta_{2})$
+\end_inset
+
+ is a vector of unknown parameters.
+ As before, under this further assumptions we can write our model as
+\begin_inset Formula 
+\[
+y_{i}=\theta_{1}+\theta_{2}x_{i}+\epsilon_{i}
+\]
+
+\end_inset
+
+and estimate 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+ by those number minimizing
+\begin_inset Formula 
+\[
+\min_{\theta}\sum_{i=1}^{n}\epsilon_{i}^{2}=\min_{\theta}\sum_{i=1}^{n}(y_{i}-\theta_{1}-\theta_{2}x_{i})^{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Method of least squares
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, we can generalize the argument to the case of 
+\begin_inset Formula $K$
+\end_inset
+
+ explanatory variables 
+\begin_inset Formula $x_{i}'=(x_{i,1},\ldots,x_{i,K})$
+\end_inset
+
+.
+ This means that, for the 
+\begin_inset Formula $i-th$
+\end_inset
+
+ observation 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, the model is 
+\begin_inset Formula 
+\begin{eqnarray*}
+y_{i} & = & \theta_{1}x_{i,1}+\theta_{2}x_{i,2}+...+\theta_{K}x_{i,K}+\epsilon_{i}\\
+y_{i} & = & x_{i}'\theta+\epsilon_{i}
+\end{eqnarray*}
+
+\end_inset
+
+We can rewrite the model in a more compact way using matrix notation
+\begin_inset Formula 
+\[
+\underset{(n\times1)}{y}=\underset{(n\times K)}{X}\underset{(K\times1)}{\theta}+\underset{(n\times1)}{\epsilon}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $y'=(y_{1},...,y_{n})$
+\end_inset
+
+, 
+\begin_inset Formula $\epsilon'=(\epsilon_{1},...,\epsilon_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula 
+\[
+X=\left[\begin{array}{c}
+x_{1}'\\
+x_{2}'\\
+\vdots\\
+x_{n}'
+\end{array}\right]=\left[\begin{array}{cccc}
+x_{1,1} & x_{1,2} & \ldots & x_{1,K}\\
+x_{2,1} & x_{2,2} & \ldots & x_{2,K}\\
+\vdots & \vdots & \ddots & \vdots\\
+x_{n,1} & x_{n,2} & \ldots & x_{n,K}
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Method of least squares
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Again, the estimates of the 
+\begin_inset Formula $K$
+\end_inset
+
+ parameters 
+\begin_inset Formula $\theta_{j}$
+\end_inset
+
+, 
+\begin_inset Formula $j=1,...,K$
+\end_inset
+
+ are obtained by minimizing the sum of squared
+\begin_inset Formula 
+\[
+\min_{\theta}\sum_{i=1}^{n}\epsilon_{i}^{2}=\min_{\theta}\epsilon'\epsilon=\min_{\theta}\left(y-X\theta\right)'\left(y-X\theta\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+This method of estimation is called the 
+\family default
+\series default
+\shape default
+\size default
+\emph on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+method of least squares
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Any minimizing value 
+\begin_inset Formula $\hat{\theta}(y)$
+\end_inset
+
+ is called the 
+\family default
+\series default
+\shape default
+\size default
+\emph on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+least-square estimate
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ of 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+The function 
+\begin_inset Formula $\hat{\theta}:\mathbb{R}^{n}\rightarrow\mathbb{R}^{K}$
+\end_inset
+
+ is a 
+\family default
+\series default
+\shape default
+\size default
+\emph on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+least-squares estimator
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+.
+\end_layout
+
+\begin_layout Standard
+The solution of the minimization problem is obtained by differentiating
+ with respect to 
+\begin_inset Formula $\theta$
+\end_inset
+
+ the quadratic form 
+\begin_inset Formula $\left(y-X\theta\right)'\left(y-X\theta\right)$
+\end_inset
+
+ and solving the first order conditions 
+\begin_inset Formula 
+\[
+X'X\theta=X'y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Method of least squares
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Any solution of the system of equations 
+\begin_inset Formula $X'X\theta=X'y$
+\end_inset
+
+ is a least-square estimate.
+ If rank 
+\begin_inset Formula $X=K$
+\end_inset
+
+, then 
+\begin_inset Formula $X'X$
+\end_inset
+
+ is non-singular and the unique least-square estimate is 
+\begin_inset Formula 
+\[
+\hat{\theta}(y)=(X'X)^{-1}X'y.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+If rank 
+\begin_inset Formula $X<K$
+\end_inset
+
+, then 
+\begin_inset Formula $X'X$
+\end_inset
+
+ is singular and there is a family of least-square estimates.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume the following regression model
+\begin_inset Formula 
+\[
+y_{i}=\theta+\epsilon_{i}\quad i=1,\ldots,n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Express the model in matrix form and give the dimension and the content
+ of the matrix 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $\hat{\theta}(y)=(X'X)^{-1}X'y=\bar{y}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Method of least squares
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Assume the following regression model
+\begin_inset Formula 
+\[
+y_{i}=\theta_{1}+\theta_{2}x_{i}+\epsilon_{i}\quad i=1,\ldots,n.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Express the model in matrix form and give the dimension and the content
+ of the matrix 
+\begin_inset Formula $X$
+\end_inset
+
+ in terms of the constant 
+\begin_inset Formula $1$
+\end_inset
+
+ and the explanatory variable 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,...,n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Show that 
+\begin_inset Formula $\hat{\theta}_{1}=\bar{y}-\hat{\theta}_{2}\bar{x}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{\theta}_{2}=\frac{\sum_{i}(x_{i}-\bar{x})y_{i}}{\sum_{i}(x_{i}-\bar{x})^{2}}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esercizio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Maximum likelihood estimation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Suppose that each night a certain lion has three possible states of activity:
+\end_layout
+
+\begin_layout Enumerate
+very active, denoted by 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+moderately active, denoted by 
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Enumerate
+lethargic, denoted by 
+\begin_inset Formula $\theta_{3}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Each night this lion eats 
+\begin_inset Formula $i$
+\end_inset
+
+ people with probability 
+\begin_inset Formula $p(i|\theta),\:\theta\in\Theta$
+\end_inset
+
+ where 
+\begin_inset Formula $\Theta=\{\theta_{j},\; j=1,2,3\}$
+\end_inset
+
+.
+ The numerical values are given in the following table:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="5">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $i$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p(i|\theta_{1})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.90
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p(i|\theta_{2})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.05
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.80
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $p(i|\theta_{3})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.90
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.08
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.02
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0.00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question:
+\series default
+ If we know that 
+\begin_inset Formula $X=i_{0}$
+\end_inset
+
+ people were eaten last night, how should we estimate the lion's activity
+ state?
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Answer:
+\series default
+ take as the estimate of 
+\begin_inset Formula $\theta$
+\end_inset
+
+ that 
+\begin_inset Formula $\theta_{j}\in\Theta$
+\end_inset
+
+ for which the probability 
+\begin_inset Formula $p(i_{0}|\theta)$
+\end_inset
+
+ is largest! In this example we have 
+\begin_inset Formula $\hat{\theta}(i_{0}=0)=\theta_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\theta}(i_{0}=1)=\theta_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\theta}(i_{0}=2)=\theta_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\hat{\theta}(i_{0}=3)=\theta_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+Suppose that we know for sure that 
+\begin_inset Formula $\theta\in\Theta'=\{\theta_{1},\theta_{2}\}$
+\end_inset
+
+.
+ The estimate is no longer unique since it can be either 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ or 
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Definition
+Let 
+\begin_inset Formula $X_{1},...,\; X_{n}$
+\end_inset
+
+be 
+\begin_inset Formula $n$
+\end_inset
+
+ random variables with distribution function 
+\begin_inset Formula $F(x_{1},...,x_{n}|\theta)$
+\end_inset
+
+ where 
+\begin_inset Formula $\theta\in\Theta$
+\end_inset
+
+ is unknown.
+ The 
+\emph on
+likelihood function
+\emph default
+ is 
+\end_layout
+
+\begin_layout Definition
+\begin_inset Formula 
+\[
+L(\theta)=\left\{ \begin{array}{cc}
+f_{X_{1},...,X_{n}}(x_{1},...,x_{n}|\theta), & \mbox{if \ensuremath{F}has a density function \ensuremath{f},}\\
+p_{X_{1},...,X_{n}}(x_{1},...,x_{n}|\theta), & \mbox{if \ensuremath{F}has a prob. function \ensuremath{p}. }
+\end{array}\right.
+\]
+
+\end_inset
+
+Any 
+\begin_inset Formula $\hat{\theta}=\hat{\Theta}(X_{1},...,X_{n})\in\Theta$
+\end_inset
+
+ such that 
+\begin_inset Formula 
+\[
+L(\hat{\theta})=sup\{L(\theta):\theta\in\Theta\}
+\]
+
+\end_inset
+
+is called 
+\emph on
+maximum-likelihood estimator
+\emph default
+ (MLE) of 
+\begin_inset Formula $\theta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Remark:
+\series default
+ Those 
+\begin_inset Formula $\hat{\theta}$
+\end_inset
+
+'s that maximize the likelihood function 
+\begin_inset Formula $L(\theta)$
+\end_inset
+
+ are precisely those that maximize the 
+\emph on
+log-likelihood function
+\emph default
+ 
+\begin_inset Formula $\log L(\theta).$
+\end_inset
+
+ It turns out that maximization of the log-likelihood function is often
+ easier.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename example1 maximumLikelihood.png
+	width 12.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename example2 maximumLikelihood.png
+	width 12.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename example3 maximumLikelihood.png
+	width 12.4cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename example4 maximumLikelihood.png
+	width 12.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename example5 maximumLikelihood.png
+	width 12.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename example6 maximumLikelihood.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Maximum likelihood estimation
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename example7 maximumLikelihood.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename example8 maximumLikelihood.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{The method of moments}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The method of moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename mme1.png
+	width 12.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The method of moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename mme2.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+The method of moments
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename mme3.png
+	height 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Test of hypothesis}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Test of hypothesis
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing1.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Test of hypothesis
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing2.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Test of hypothesis
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing3.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Test of hypothesis
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exercises
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing4.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+subsection{Hypothesis testing problem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypothesis testing problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing5.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypothesis testing problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing6.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypothesis testing problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing7.png
+	height 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypothesis testing problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing8.png
+	height 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypothesis testing problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exercises
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing9.png
+	width 12.3cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{frame}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Hypothesis testing problem
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Exercise
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename testing10.png
+	width 12.2cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{frame}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
