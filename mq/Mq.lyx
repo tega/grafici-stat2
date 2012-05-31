@@ -4612,7 +4612,7 @@ Per testare l'autocorrelazione positiva (che è il caso tipicamente incontrato
 \end_inset
 
  contro l'ipotesi alternativa 
-\begin_inset Formula $H_{0}:\rho>0\Leftrightarrow d<2$
+\begin_inset Formula $H_{A}:\rho>0\Leftrightarrow d<2$
 \end_inset
 
 .
