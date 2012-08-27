@@ -93,7 +93,7 @@
 
 \shape smallcaps
 \size small
-university of lugano
+università della svizzera italiana
 \shape default
 \size default
 
@@ -411,19 +411,24 @@ Compute the marginal mass function of
 \end_inset
 
  as a function of 
-\begin_inset Formula $p$
+\begin_inset Formula $P_{ij}$
 \end_inset
 
 .
+ Write explicitly the relation between the 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+ probabilities and 
+\begin_inset Formula $p$
+\end_inset
+
+ in this general case.
 \end_layout
 
 \begin_layout Enumerate
 Prove that 
-\begin_inset Formula $P_{01}=P_{10}$
-\end_inset
-
-
-\begin_inset Formula $.$
+\begin_inset Formula $P_{01}=P_{10}.$
 \end_inset
 
 
@@ -438,7 +443,7 @@ What are the values of
 \begin_inset Formula $P_{01}$
 \end_inset
 
-,
+, 
 \begin_inset Formula $P_{10}$
 \end_inset
 
@@ -446,7 +451,11 @@ What are the values of
 \begin_inset Formula $P_{11}$
 \end_inset
 
-if 
+ as a function of 
+\begin_inset Formula $p$
+\end_inset
+
+ if 
 \begin_inset Formula $X$
 \end_inset
 
@@ -477,9 +486,9 @@ We remove now the independence assumption an replace it with the assumption
 \begin_inset Formula $P_{ij}$
 \end_inset
 
- are the same as those calculated in (b).
- (Hint: Compute the covariance as a function of the unknown probabilities.
- Use the information on the marginal probabilities).
+ are the same as those calculated in (c).
+ Hint: Compute the covariance as a function of the unknown probabilities.
+ Use the information derived in (a) and (b).
 \end_layout
 
 \begin_layout Standard
@@ -783,12 +792,6 @@ Joint probability mass function
 
 \end_inset
 
-
-\end_layout
-
-\begin_deeper
-\begin_layout Labeling
-\labelwidthstring 00.00.0000
 As a function of the parameters 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -800,6 +803,7 @@ As a function of the parameters
 : 
 \end_layout
 
+\begin_deeper
 \begin_layout Enumerate
 compute the marginal probabilities mass functions of 
 \begin_inset Formula $X$
@@ -857,7 +861,14 @@ For which values of
 \end_layout
 
 \end_deeper
-\begin_layout Enumerate
+\begin_layout Standard
+\noindent
+
+\series bold
+Problem 3
+\end_layout
+
+\begin_layout Standard
 Let 
 \begin_inset Formula $X$
 \end_inset
@@ -866,7 +877,10 @@ Let
  by 
 \begin_inset Formula 
 \[
-f(x)=\lambda exp\left(-\lambda x\right).
+f(x)=\begin{cases}
+\lambda e^{-\lambda x} & x>0,\:\lambda>0\\
+0 & \mbox{otherwise}
+\end{cases}.
 \]
 
 \end_inset
@@ -878,7 +892,6 @@ and
 .
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
 Compute the density function of 
 \begin_inset Formula $Y$
@@ -895,8 +908,14 @@ Compute
  using the previously derived density.
 \end_layout
 
-\end_deeper
-\begin_layout Enumerate
+\begin_layout Standard
+\noindent
+
+\series bold
+Problem 4
+\end_layout
+
+\begin_layout Standard
 Let 
 \begin_inset Formula $X_{1},\dots,X_{n}$
 \end_inset
@@ -905,7 +924,7 @@ Let
  distribution:
 \begin_inset Formula 
 \[
-P(X=k)=(1-p)^{k-1}p,\ k=1,2,3,\dots
+p(x)=(1-p)^{x-1}p,\ x=1,2,3,\dots
 \]
 
 \end_inset
@@ -913,7 +932,6 @@ P(X=k)=(1-p)^{k-1}p,\ k=1,2,3,\dots
 
 \end_layout
 
-\begin_deeper
 \begin_layout Enumerate
 Which kind of experiment is described by the geometric distribution?
 \end_layout
@@ -930,6 +948,5 @@ Compute the maximum likelihood estimator of the parameter
 .
 \end_layout
 
-\end_deeper
 \end_body
 \end_document
