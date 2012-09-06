@@ -425,7 +425,7 @@ Let
 \begin_inset Formula 
 \[
 f(x)=\begin{cases}
-\lambda*exp(-\lambda x), & x>=0,\\
+\lambda*exp(-\lambda x), & x\geq0,\\
 0 & \mbox{otherwise}
 \end{cases}
 \]
