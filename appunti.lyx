@@ -97,7 +97,7 @@ Semestre Autunnale
 \begin_inset Newline newline
 \end_inset
 
- 2011
+ 2012
 \end_layout
 
 \begin_layout Standard
@@ -811,7 +811,14 @@ begin{esempio}
 
 \end_inset
 
- Lancio di un dado.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "esempio lancio di un dado"
+
+\end_inset
+
+Lancio di un dado.
  
 \begin_inset Formula $\Omega=\{1,2,3,4,5,6\}$
 \end_inset
@@ -973,6 +980,13 @@ Il numero di eventi diversi fra loro di uno spazio campionario finito
 
  di 
 \begin_inset Formula $\Omega$
+\end_inset
+
+ dell'Esempio 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "esempio lancio di un dado"
+
 \end_inset
 
 .
