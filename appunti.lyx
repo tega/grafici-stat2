@@ -14925,7 +14925,7 @@ c & = & \frac{n}{N}.
  Per un campione stratificato proporzionale vale dunque la relazione
 \begin_inset Formula 
 \begin{equation}
-n_{h}=\frac{N_{h}}{N}n\text{ o equivalentemente }\frac{n_{h}}{n}=\frac{N_{h}}{N}\text{\ }\forall h.\label{calcolo numerosita strato}
+n_{h}=\frac{N_{h}}{N}n\text{ o equivalentemente }\frac{n_{h}}{n}=\frac{N_{h}}{N}=\pi_{h}\text{\ }\forall h.\label{calcolo numerosita strato}
 \end{equation}
 
 \end_inset
@@ -28020,7 +28020,7 @@ begin{definizione}
  del test
 \begin_inset Formula 
 \[
-R:=\left\{ (x_{1},...,x_{n})\in\Omega^{2}\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{ oppure }S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} 
+R:=\left\{ (x_{1},...,x_{n})\in\Omega^{n}\mid S(x_{1},...,x_{n})\leq k_{s,\alpha}\text{ oppure }S(x_{1},...,x_{n})\geq k_{d,\alpha}\right\} 
 \]
 
 \end_inset
