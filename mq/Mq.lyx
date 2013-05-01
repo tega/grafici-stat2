@@ -8331,7 +8331,7 @@ VarAs(\hat{\beta}_{vs})=\frac{\sigma^{2}}{n}\left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^
 Sarà stimata in maniera convergente con: 
 \begin_inset Formula 
 \[
-\widehat{VarAs}(\hat{\beta}_{vs})=\hat{\sigma}^{2}\left[Q_{XZ}Q_{Z}^{-1}Q_{ZX}\right]^{-1}
+\widehat{VarAs}(\hat{\beta}_{vs})=\hat{\sigma}^{2}\left[X'Z(Z'Z)^{-1}Z'X\right]^{-1}
 \]
 
 \end_inset
