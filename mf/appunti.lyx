@@ -3288,7 +3288,8 @@ Esplicitate la sommatoria che definisce
 \end_inset
 
 .
- Notate sovrapposizioni fra i colori? Interpretate il risultato? 
+ Notate sovrapposizioni fra i colori? Interpretate il risultato.
+ 
 \end_layout
 
 \begin_layout Enumerate
@@ -3336,7 +3337,9 @@ Suggerimento: per ciascuna coppia
 \begin_inset Formula $(r_{i\left(t-l\right)}^{w},r_{it}^{w})$
 \end_inset
 
- eseguite il disegno dell'asse temporale 
+ eseguite il di\SpecialChar \-
+se\SpecialChar \-
+gno dell'asse temporale 
 \begin_inset Formula $t$
 \end_inset
 
