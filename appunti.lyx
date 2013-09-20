@@ -4,10 +4,12 @@
 \begin_header
 \textclass report
 \begin_preamble
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{amsfonts}\usepackage{amsthm}\usepackage{multicol}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage[italian]{babel}
 
-\setcounter{MaxMatrixCols}{10}
+% modificato 2013-09-20 \setcounter{MaxMatrixCols}{10}
 
 \newcounter{ese}\newcounter{esr}\newcounter{def}\newcounter{domand}\theoremstyle{remark}\newcounter{theor}\newcounter{theorem}\newtheorem{esempio}[ese]{Esempio}\newtheorem{esercizio}[esr]{Esercizio}\newtheorem{definizione}[def]{Definizione}\newtheorem{remark}{Osservazione}\newtheorem{theorem}[theor]{Teorema}\newtheorem{domanda}[domand]{Domanda}
 
@@ -97,7 +99,7 @@ Semestre Autunnale
 \begin_inset Newline newline
 \end_inset
 
- 2012
+ 2013
 \end_layout
 
 \begin_layout Standard
@@ -1289,7 +1291,11 @@ reference "def insieme degli eventi"
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- è misurabile, nel senso che è possibile assegnare una probabilità a ciascun
+ è mi\SpecialChar \-
+su\SpecialChar \-
+ra\SpecialChar \-
+bi\SpecialChar \-
+le, nel senso che è possibile assegnare una probabilità a ciascun
  evento in maniera 
 \begin_inset Quotes eld
 \end_inset
@@ -1839,7 +1845,10 @@ Abbiamo visto che per ottenere un esperimento aleatorio è necessario definire
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- sul quale sarà definta la legge di probabilità 
+ sul quale sarà de\SpecialChar \-
+fi\SpecialChar \-
+ni\SpecialChar \-
+ta la legge di probabilità 
 \begin_inset Formula $P$
 \end_inset
 
@@ -2555,7 +2564,11 @@ Nel corso di Statistica I sono state presentate alcune particolari distribuzioni
  probabilità.
  La distribuzione Normale (caso continuo) e la distribuzione di Poisson
  (caso discreto) sono due esempi a voi noti.
- Per quanto riguarda la distribuzione Normale, essa è caratterizzata da
+ Per quanto riguarda la di\SpecialChar \-
+stri\SpecialChar \-
+bu\SpecialChar \-
+zio\SpecialChar \-
+ne Normale, essa è caratterizzata da
  due 
 \begin_inset Formula $\emph{parametri}$
 \end_inset
@@ -2685,7 +2698,11 @@ reference "Flo:graficoConfrontoDueNormali"
 
 .
  In generale si parlerà di famiglia parametrica di distribuzioni per indicare
- un preciso insieme di distribuzioni la cui funzione di probabilità, funzione
+ un preciso insieme di di\SpecialChar \-
+stri\SpecialChar \-
+bu\SpecialChar \-
+zio\SpecialChar \-
+ni la cui funzione di probabilità, funzione
  di ripartizione o funzione di densità è identica a meno di un numero finito
  di parametri.
  I parametri assumono valori in 
@@ -4357,7 +4374,9 @@ reference "esempio pino1"
 \end_inset
 
 .
- A questo punto dobbiamo chiederci se la campagna pubblicitaria (ed i relativi
+ A questo punto dob\SpecialChar \-
+bia\SpecialChar \-
+mo chiederci se la campagna pubblicitaria (ed i relativi
  costi) sia veramente necessaria.
  Infatti, potrebbe essere che il vero valore di 
 \begin_inset Formula $p$
@@ -5009,7 +5028,10 @@ Conclusione: Socrate è mortale
 \noindent
 Per contro, l'apprendimento per via induttiva consiste nel trovare delle
  leggi universalmente valide partendo da osservazioni particolari.
- Il processo di estensione dal particolare al generale è chiamato inferenza
+ Il processo di e\SpecialChar \-
+sten\SpecialChar \-
+sio\SpecialChar \-
+ne dal particolare al generale è chiamato inferenza
  induttiva.
  Questo tipo di estensione della conoscenza è tuttavia soggetto ad incertezza:
  l'induzione non dimostra niente, essa è corretta solo nella totalità dei
@@ -5033,7 +5055,11 @@ distribuzione
 popolazione obiettivo
 \emph default
  si intende la totalità degli elementi (individui, aziende, famiglie, cantoni,
- regioni, ...) per i quali desideriamo ottenere tali informazioni.
+ regioni, ...) per i quali de\SpecialChar \-
+si\SpecialChar \-
+de\SpecialChar \-
+ria\SpecialChar \-
+mo ottenere tali informazioni.
  In questo caso la popolazione obiettivo è finita ed indicheremo con la
  lettera 
 \begin_inset Formula $N$
@@ -5086,7 +5112,11 @@ tutta
 \begin_layout Standard
 \noindent
 Nel caso di un esperimento aleatorio formalizzato tramite uno spazio di
- probabilità 
+ pro\SpecialChar \-
+ba\SpecialChar \-
+bi\SpecialChar \-
+li\SpecialChar \-
+tà 
 \begin_inset Formula $(\Omega,\mathcal{E},P)$
 \end_inset
 
@@ -5124,8 +5154,10 @@ iche aleatorie.
 \begin_layout Standard
 \noindent
 Per studiare la legge di probabilità di un dato esperimento aleatorio è
- necessario ripetere l'esperimento ed osservarne un certo numero di risultati
- .
+ ne\SpecialChar \-
+ces\SpecialChar \-
+sa\SpecialChar \-
+rio ripetere l'esperimento ed osservarne un certo numero di risultati.
  La teoria della stima si occupa di come utilizzare l'informazione disponibile
  per risalire alla legge di probabilità 
 \begin_inset Formula $P$
@@ -7481,7 +7513,7 @@ name "esperimento lancio 3 volte moneta"
 \[
 \begin{array}{cccc}
 \omega_{1}=(t,t,t) & \omega_{2}=(c,t,t) & \omega_{3}=(t,c,t) & \omega_{4}=(t,t,c)\\
-\omega_{5}=(t,c,c) & \omega_{6}=(c,t,c) & \omega_{7}=(t,c,c) & \omega_{8}=(c,c,c)
+\omega_{5}=(t,c,c) & \omega_{6}=(c,t,c) & \omega_{7}=(c,c,t) & \omega_{8}=(c,c,c)
 \end{array}.
 \]
 
