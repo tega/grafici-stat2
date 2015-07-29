@@ -1,11 +1,11 @@
-%% LyX 2.0.2 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[12pt,a4paper,english,italian]{report}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\usepackage[active]{srcltx}
+%%\usepackage[active]{srcltx}
 \usepackage{float}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -54,7 +54,7 @@
 
 
 \date{Semestre Autunnale\\
- 2013}
+ }
 
 \maketitle
 \tableofcontents{}
@@ -352,7 +352,7 @@ misura della sua struttura daremo per scontato che $\mathcal{E}$
 soddisfa le condizioni enunciate nella Definizione \ref{def insieme degli eventi}.
 Se tale condizioni sono verificate diremo che l'insieme degli eventi
 $\mathcal{E}$ è mi\-su\-ra\-bi\-le, nel senso che è possibile
-assegnare una probabilità a ciascun evento in maniera ``consistente\textquotedblright{}.
+assegnare una probabilità a ciascun evento in maniera ``consistente\textquotedblright .
 La proprietà importante da ricordare è che l'insieme degli eventi
 $\mathcal{E}$ contiene dei \emph{sottoinsiemi} di $\Omega$: ogni
 elemento $E$ di $\mathcal{E}$ è un sottoinsieme di $\Omega$, vedi
@@ -363,7 +363,7 @@ Figura \ref{fig:eventi e esiti}.
 \includegraphics[scale=0.6]{codiceR/grafici/eventi_e_esiti}
 \par\end{centering}
 
-\caption{Lancio di un dado. Spazio campionario e insieme degli eventi.\label{fig:eventi e esiti}}
+\protect\caption{Lancio di un dado. Spazio campionario e insieme degli eventi.\label{fig:eventi e esiti}}
 \end{figure}
 
 
@@ -499,7 +499,7 @@ massimo uguale al valore $x$.
 \begin{remark} Facciamo notare che $P$ ed $F$ sono funzioni diverse.
 $F$ è una funzione definita su $\mathbb{R}$ mentre $P$ è\ una
 funzione definita su $\mathcal{E}$, l'insieme degli eventi. È possibile
-dimostrare come $P$ ed $F$ siano ``le due facce della stessa moneta\textquotedblright{}\ nel
+dimostrare come $P$ ed $F$ siano ``le due facce della stessa moneta\textquotedblright \ nel
 senso che da $P$ segue univocamente $F$ e viceversa. \end{remark}
 
 \begin{esempio} Distribuzione uniforme discreta con $\Omega=\{0.2,0.4,0.6,0.8,1\}$.
@@ -507,7 +507,7 @@ senso che da $P$ segue univocamente $F$ e viceversa. \end{remark}
 
 \begin{center}
 \begin{figure}[H]
-\noindent \centering{} \includegraphics[scale=0.4]{codiceR/grafici/funzioneRipartizioneUniformeDiscreta}\caption{Distribuzione uniforme discreta}
+\noindent \centering{} \includegraphics[scale=0.4]{codiceR/grafici/funzioneRipartizioneUniformeDiscreta}\protect\caption{Distribuzione uniforme discreta}
 \end{figure}
 
 \par\end{center}
@@ -515,7 +515,7 @@ senso che da $P$ segue univocamente $F$ e viceversa. \end{remark}
 \begin{esempio} Distribuzione uniforme continua $U[0,1]$. \end{esempio}
 
 \begin{figure}[H]
-\noindent \centering{} \includegraphics[scale=0.4]{codiceR/grafici/funzioneRipartizioneUniformeContinua}\caption{Distribuzione uniforme continua}
+\noindent \centering{} \includegraphics[scale=0.4]{codiceR/grafici/funzioneRipartizioneUniformeContinua}\protect\caption{Distribuzione uniforme continua}
 \end{figure}
 
 
@@ -545,7 +545,7 @@ esame scegliamo il sesso e il numero di scarpe di ciascun studente.
 La Figura \ref{fig:Frequenze-relative-popolazione studenti} riporta
 il grafico delle frequenze relative per le due caratteristiche.
 \begin{figure}
-\noindent \centering{}\includegraphics[scale=0.4]{codiceR/grafici/numeroScarpeUomoDonnaFreqRelative}\includegraphics[scale=0.4]{codiceR/grafici/numeroScarpeFreqRelative}\caption{\label{fig:Frequenze-relative-popolazione studenti}Frequenze relative
+\noindent \centering{}\includegraphics[scale=0.4]{codiceR/grafici/numeroScarpeUomoDonnaFreqRelative}\includegraphics[scale=0.4]{codiceR/grafici/numeroScarpeFreqRelative}\protect\caption{\label{fig:Frequenze-relative-popolazione studenti}Frequenze relative
 popolazione studenti Statistica II - 2009}
 \end{figure}
 
@@ -577,7 +577,7 @@ F(x)=\frac{\#\text{ unità con caratteristica }\leq x}{\#\text{ unità della popol
  \end{definizione}
 
 \begin{figure}
-\centering{}\includegraphics[scale=0.4]{codiceR/grafici/numeroScarpeFunzioneRipartizione}\caption{Funzione di ripartizione del numero di scarpe della popolazione studenti
+\centering{}\includegraphics[scale=0.4]{codiceR/grafici/numeroScarpeFunzioneRipartizione}\protect\caption{Funzione di ripartizione del numero di scarpe della popolazione studenti
 Statistica II - 2009 }
 \end{figure}
 
@@ -643,7 +643,7 @@ la cui interpretazione varierà da distribuzione a distribuzione. \end{remark}
 quanto affermato mostrando la funzione di densità della distribuzione
 Normale per due diversi valori di $(\mu,\sigma^{2})$.
 \begin{figure}
-\centering{}\includegraphics[scale=0.4]{codiceR/grafici/confrontoDueDensitaNormali}\caption{\label{Flo:graficoConfrontoDueNormali}Due funzioni di densità della
+\centering{}\includegraphics[scale=0.4]{codiceR/grafici/confrontoDueDensitaNormali}\protect\caption{\label{Flo:graficoConfrontoDueNormali}Due funzioni di densità della
 famiglia parametrica Normale}
 \end{figure}
  Nella Figura \ref{Flo:graficoConfrontoDueNormali} la formula della
@@ -831,7 +831,7 @@ di intervalli di confidenza relativi ai parametri stimati permettono
 di misurare l'attendibilità dei risultati.
 
 \end{itemize}
-\noindent \begin{esempio} \label{esempio pino1}Pino, il responsabile
+\noindent \begin{esempio} \label{esempio pino1}Claudio, il responsabile
 del settore marketing di una grossa azienda, desidera conoscere il
 grado di visibilità sul mercato di un proprio prodotto. Il motivo
 di questo interesse consiste nel fatto che si vuole capire se lo scarso
@@ -898,7 +898,7 @@ o come costruire l'intervallo di confidenza utilizzando le informazioni
 disponibili (dati). \end{esempio}
 
 \begin{esempio} Continuiamo l'Esempio \ref{esempio pino1}. Supponiamo
-che, nel caso in cui $p$ fosse insufficiente, Pino abbia intenzione
+che, nel caso in cui $p$ fosse insufficiente, Claudio abbia intenzione
 di condurre una vasta campagna pubblicitaria e che il valore stimato
 di $p$ sia $\widehat{p}=29\%$. A questo punto dob\-bia\-mo chiederci
 se la campagna pubblicitaria (ed i relativi costi) sia veramente necessaria.
@@ -914,8 +914,8 @@ errore, quanto bassa deve essere la stima $\widehat{p}$ per decidere
 di effettuare la campagna pubblicitaria e quindi rifiutare l'ipotesi
 che $p$ sia discreto o buono? Per dare una risposta a questa domanda
 si costruirà un test statistico. Sarà innanzi tutto necessario una
-formalizzazione matematica della nostra ipotesi. Per Pino, che non
-ha seguito nessun corso di statistica ed è uomo d'azione, $\widehat{p}=29\%$
+formalizzazione matematica della nostra ipotesi. Per Claudio, che
+non ha seguito nessun corso di statistica ed è uomo d'azione, $\widehat{p}=29\%$
 è un valore più che sufficiente per eseguire la campagna pubblicitaria
 e spendere un sacco di soldi.
 
@@ -924,7 +924,7 @@ e spendere un sacco di soldi.
 
 \noindent Sappiamo che tanto più la campagna pubblicitaria sarà efficace,
 tanto più aumenterà il grado di visibilità. Il manager dell'azienda
-non è soddisfatto del modo come Pino ha condotto la campagna pubblicitaria
+non è soddisfatto del modo come Claudio ha condotto la campagna pubblicitaria
 e desidera verificarne immediatamente l'efficacia. Ordina quindi ad
 una società indipendente e specializzata in sondaggi di intervistare
 un nuovo campione da cui stimare il nuovo grado di visibilità del
@@ -934,20 +934,20 @@ prodotto che indicheremo ora con
 \]
  $p_{new}$ è il grado di visibilità \emph{dopo} la campagna pubblicitaria.
 Il manager utilizzerà la seguente regola per decidere la sorte di
-Pino:
+Claudio:
 \[
 \begin{array}{cc}
 p_{new}=p & p_{new}\geq p\\
-\text{licenzio Pino} & \text{non licenzio pino}
+\text{licenzio Claudio} & \text{non licenzio Claudio}
 \end{array}
 \]
  La stima puntuale di $p_{new}$, notata $\widehat{p}_{new}$ risulta
 essere del $34\%$, un valore di poco superiore al precedente $29\%$
-calcolato prima della campagna pubblicitaria. Pino è felice. Il suo
-capo gli fa però notare che l'esiguo aumento del $5\%$ rispetto alla
-precedente stima potrebbe essere semplicemente dovuto al caso. Pino
-vi chiede allora di quantificare sulla base dei dati a disposizione
-il livello di evidenza per cui l'ipotesi $p=p_{new}$ (licenzio Pino)
+calcolato prima della campagna pubblicitaria. Claudio è felice. Il
+suo capo gli fa però notare che l'esiguo aumento del $5\%$ rispetto
+alla precedente stima potrebbe essere semplicemente dovuto al caso.
+Claudio vi chiede allora di quantificare sulla base dei dati a disposizione
+il livello di evidenza per cui l'ipotesi $p=p_{new}$ (licenzio Claudio)
 possa essere rigettata. È compito della verifica d'ipotesi fornire
 una risposta a questa domanda. \end{esempio}
 
@@ -1286,7 +1286,7 @@ uniforme discreta (dado non truccato). Gli esiti dell'esperimento
 statistico possono essere rappresentati graficamente come segue:
 
 \begin{figure}[H]
-\centering{}\includegraphics[scale=0.4]{codiceR/grafici/esitiEsperimentoStat}\caption{Esiti dell'esperimento statistico: lancio di due dadi.}
+\centering{}\includegraphics[scale=0.4]{codiceR/grafici/esitiEsperimentoStat}\protect\caption{Esiti dell'esperimento statistico: lancio di due dadi.}
 \end{figure}
 
 
@@ -1320,7 +1320,7 @@ l'insieme degli eventi definiti su $\Omega^{n}$.
 
 \begin{center}
 \begin{figure}[H]
-\includegraphics[scale=0.4]{codiceR/grafici/prodottoCartesianoEventi}\includegraphics[scale=0.4]{codiceR/grafici/eventoGenerico}\caption{Esempi di eventi dello spazio campionario prodotto}
+\includegraphics[scale=0.4]{codiceR/grafici/prodottoCartesianoEventi}\includegraphics[scale=0.4]{codiceR/grafici/eventoGenerico}\protect\caption{Esempi di eventi dello spazio campionario prodotto}
 
 
 \label{Flo:eventiEsperimentoStatistico}
@@ -1388,8 +1388,8 @@ E_{1}\times E_{2}\times E_{3}
  dove 
 \begin{itemize}
 \item $E_{1}=\{\text{\textquotedblleft La prima lampadina si spegne dopo 3 ore\textquotedblright}\}=[3,\infty)$, 
-\item $E_{2}=\{$``La seconda lampadina dura meno di 20 minuti\textquotedblright{}$\}=[0,\frac{1}{3}),$ 
-\item $E_{3}=\{$``La terza lampadina prima o poi si spegne\textquotedblright{}$\}=[0,\infty).$ 
+\item $E_{2}=\{$``La seconda lampadina dura meno di 20 minuti\textquotedblright $\}=[0,\frac{1}{3}),$ 
+\item $E_{3}=\{$``La terza lampadina prima o poi si spegne\textquotedblright $\}=[0,\infty).$ 
 \end{itemize}
 \noindent \medskip{}
 
@@ -1456,7 +1456,7 @@ codominio di $g$. Un esempio in cui il codominio di $g$ non è numerico
 \includegraphics[scale=0.8]{codiceR/grafici/variabileAleatoria1}
 \par\end{centering}
 
-\centering{}\caption{Variabile aleatoria - diagramma di Venn}
+\centering{}\protect\caption{Variabile aleatoria - diagramma di Venn}
 \label{Flo: variabile aleatoria diag Venn}
 \end{figure}
 
@@ -1502,7 +1502,7 @@ vedi Figura \ref{fig:costi traversata}.
 \includegraphics[scale=0.4]{codiceR/grafici/costi_traversata}
 \par\end{centering}
 
-\caption{Funzione dei costi\label{fig:costi traversata}}
+\protect\caption{Funzione dei costi\label{fig:costi traversata}}
 \end{figure}
 
 
@@ -1520,7 +1520,7 @@ variabile aleatoria.
 \end{definizione}
 
 \begin{figure}[h]
-\centering{}\includegraphics[scale=0.8]{codiceR/grafici/variabileAleatoria}\caption{Preimmagine}
+\centering{}\includegraphics[scale=0.8]{codiceR/grafici/variabileAleatoria}\protect\caption{Preimmagine}
 \label{Flo:preimmagine}
 \end{figure}
 
@@ -1543,7 +1543,7 @@ agli eventi $E'$ di $\mathbb{R}.$
 
 \begin{center}
 \begin{figure}
-\centering{}\includegraphics[scale=0.4]{codiceR/grafici/variabileAleatoria2}\caption{Variabile aleatoria}
+\centering{}\includegraphics[scale=0.4]{codiceR/grafici/variabileAleatoria2}\protect\caption{Variabile aleatoria}
 \label{Flo: variabile aleatoria}
 \end{figure}
 
@@ -2144,7 +2144,7 @@ e quindi $P(E)=\frac{N_{1}}{N}=0.45$. La situazione è rappresentata
 graficamente nella Figura \ref{Flo:graficoColoreNero}.
 \begin{figure}
 \begin{centering}
-\includegraphics[scale=0.8]{codiceR/grafici/automobiliNere}\caption{Estrazione colore automobile}
+\includegraphics[scale=0.8]{codiceR/grafici/automobiliNere}\protect\caption{Estrazione colore automobile}
 \label{Flo:graficoColoreNero}
 \par\end{centering}
 
@@ -2167,7 +2167,7 @@ la situazione è riportata graficamente nella Figura \ref{Flo:estrazioneCilindrat
 
 
 \begin{centering}
-\includegraphics[scale=0.8]{codiceR/grafici/automobiliCilindrata}\caption{Estrazione cilindrata automobile}
+\includegraphics[scale=0.8]{codiceR/grafici/automobiliCilindrata}\protect\caption{Estrazione cilindrata automobile}
 \label{Flo:estrazioneCilindrataAutomobile}
 \par\end{centering}
 
@@ -2367,7 +2367,7 @@ P(X_{2}=\text{\textquotedblleft}rosso\text{\textquotedblright}\mid X_{1}=\text{\
 P(X_{2}=\text{\textquotedblleft}rosso\text{\textquotedblright}\mid X_{1}\neq\text{\textquotedblleft}rosso\text{\textquotedblright})=\frac{k}{N-1}.
 \]
  Se $X_{1}$ e $X_{2}$ fossero indipendenti le due probabilità condizionate
-appena calcolate dovrebbero essere uguali fra loro e uguali a $P(X_{2}=$``$rosso$\textquotedblright{}$)$.
+appena calcolate dovrebbero essere uguali fra loro e uguali a $P(X_{2}=$``$rosso$\textquotedblright $)$.
 Le due probabilità condizionate sono fra loro diverse e da ciò concludiamo
 che $X_{1}$ e $X_{2}$ non sono indipendenti. Questa conclusione
 è generalizzabile alle $n$ variabili aleatorie $X_{1},...,X_{n}$
@@ -2533,7 +2533,7 @@ il primo e $y-\mu_{Y}$ il secondo. Questo prodotto è ulteriormente
 moltiplicato per la rispettiva%
 \footnote{Ricordiamo che nel caso di variabili aleatorie continue la funzione
 di densità non indica la probabilità di un esito.%
-} ``probabilità\textquotedblright{}. Poiché la funzione di densità
+} ``probabilità\textquotedblright . Poiché la funzione di densità
 è sempre maggiore o uguale a zero ma mai negativa il prodotto 
 \[
 (x-\mu_{X})(y-\mu_{Y})f_{x,y}(x,y)
@@ -2541,8 +2541,8 @@ di densità non indica la probabilità di un esito.%
  sarà negativo quando $(x-\mu_{X})$ e $(y-\mu_{Y})$ possiedono segno
 diverso ($+\ -$ oppure $-$ $+$) e positivo quando $(x-\mu_{X})$
 e $(y-\mu_{Y})$ hanno lo stesso segno ($+$ $+$ o $-$ $-$). La
-covarianza è la ``somma\textquotedblright{}\ su tutti i possibili
-esiti pesati per la rispettiva ``probabilità\textquotedblright{}.
+covarianza è la ``somma\textquotedblright \ su tutti i possibili
+esiti pesati per la rispettiva ``probabilità\textquotedblright .
 Essa sarà dunque positiva se, mediamente, quando $X$ è sopra o sotto
 il suo valore atteso lo è anche $Y$. La covarianza sarà invece negativa
 se, mediamente, quando $X$ è sopra (sotto)\ il proprio valore atteso
@@ -3509,7 +3509,7 @@ per il calcolo di $\overline{X}_{str,n}$ è semplificabile. Infatti
 \end{eqnarray*}
  \end{remark} 
 \begin{table}[H]
-\caption{Tabella riassuntiva}
+\protect\caption{Tabella riassuntiva}
 
 
 \vspace{0.3cm}
@@ -3517,13 +3517,13 @@ per il calcolo di $\overline{X}_{str,n}$ è semplificabile. Infatti
 \centering{}%
 \begin{tabular}{cccccccc}
 \hline 
-{\scriptsize Strato}  & $h$  & $1,$  & $...,$  & $h,$  & $...,$  & $H$  & {\scriptsize Popolazione} \tabularnewline
+{\scriptsize{}Strato}  & $h$  & $1,$  & $...,$  & $h,$  & $...,$  & $H$  & {\scriptsize{}Popolazione} \tabularnewline
 \hline 
-\multicolumn{1}{l}{{\scriptsize \# Unità componenti}} & $\left(N_{h}\right)$  & $N_{1},$  & $...,$  & $N_{h},$  & $...,$  & $N_{H}$  & $N$ \tabularnewline
-\multicolumn{1}{l}{{\scriptsize Peso}} & $\left(\pi_{h}=\frac{N_{h}}{N}\right)$  & $\pi_{1},$  & $...,$  & $\pi_{h},$  & $...,$  & $\pi_{H}$  & $1$ \tabularnewline
-\multicolumn{1}{l}{{\scriptsize Varianza}} & $\left(\sigma_{h}^{2}\right)$  & $\sigma_{1}^{2},$  & $...,$  & $\sigma_{h}^{2},$  & $...,$  & $\sigma_{H}^{2}$  & $\sigma^{2}$ \tabularnewline
-\multicolumn{1}{l}{{\scriptsize Unità campionarie}} & $\left(n_{h}\right)$  & $n_{1},$  & $...,$  & $n_{h},$  & $...,$  & $n_{H}$  & $n$ \tabularnewline
-\multicolumn{1}{l}{{\scriptsize Frazione di campionamento}} & $\left(f_{h}\right)$  & $f_{1},$  & $...,$  & $f_{h},$  & $...,$  & $f_{H}$  & $f$ \tabularnewline
+\multicolumn{1}{l}{{\scriptsize{}\# Unità componenti}} & $\left(N_{h}\right)$  & $N_{1},$  & $...,$  & $N_{h},$  & $...,$  & $N_{H}$  & $N$ \tabularnewline
+\multicolumn{1}{l}{{\scriptsize{}Peso}} & $\left(\pi_{h}=\frac{N_{h}}{N}\right)$  & $\pi_{1},$  & $...,$  & $\pi_{h},$  & $...,$  & $\pi_{H}$  & $1$ \tabularnewline
+\multicolumn{1}{l}{{\scriptsize{}Varianza}} & $\left(\sigma_{h}^{2}\right)$  & $\sigma_{1}^{2},$  & $...,$  & $\sigma_{h}^{2},$  & $...,$  & $\sigma_{H}^{2}$  & $\sigma^{2}$ \tabularnewline
+\multicolumn{1}{l}{{\scriptsize{}Unità campionarie}} & $\left(n_{h}\right)$  & $n_{1},$  & $...,$  & $n_{h},$  & $...,$  & $n_{H}$  & $n$ \tabularnewline
+\multicolumn{1}{l}{{\scriptsize{}Frazione di campionamento}} & $\left(f_{h}\right)$  & $f_{1},$  & $...,$  & $f_{h},$  & $...,$  & $f_{H}$  & $f$ \tabularnewline
 \hline 
 \end{tabular}
 \end{table}
@@ -3856,7 +3856,7 @@ Scegliamo, senza perdita di generalità, $\mu=1$ e $\sigma^{2}=4$.
 \includegraphics[scale=0.4]{codiceR/grafici/convergenzaDensityMedia}
 \par\end{centering}
 
-\caption{Funzione di densità di $\overline{X}_{1}$, $\overline{X}_{2}$ (blu)
+\protect\caption{Funzione di densità di $\overline{X}_{1}$, $\overline{X}_{2}$ (blu)
 e $\overline{X}_{16}$(rossa) }
 \end{figure}
 
@@ -3885,7 +3885,7 @@ a $1$ al crescere di $n$ all'infinito.
 \includegraphics[scale=0.4]{codiceR/grafici/convergenzaInProbabilita1}
 \par\end{centering}
 
-\caption{Legge dei grandi numeri}
+\protect\caption{Legge dei grandi numeri}
 
 
 \end{figure}
@@ -4455,7 +4455,7 @@ Figura \ref{fig:Primo-e-secondo poisson}).
 \includegraphics[scale=0.4]{codiceR/grafici/momento1E2Poisson}
 \par\end{centering}
 
-\caption{\label{fig:Primo-e-secondo poisson}Primo e secondo momento della
+\protect\caption{\label{fig:Primo-e-secondo poisson}Primo e secondo momento della
 distribuzione di Poisson in funzione del parametro $\theta$.}
 
 
@@ -4663,7 +4663,7 @@ appena descritto.
 \includegraphics[scale=0.4]{codiceR/grafici/momento3Poisson}
 \par\end{centering}
 
-\caption{\label{fig:Terzo-momento-della}Terzo momento della distribuzione
+\protect\caption{\label{fig:Terzo-momento-della}Terzo momento della distribuzione
 di Poisson in funzione di $\theta$.}
 \end{figure}
 
@@ -4810,7 +4810,7 @@ f(6;p)=C_{25,6}\ p^{6}(1-p)^{19}\ \ \ \ \ \text{per }0\leq p\leq1\text{.}\label{
 \includegraphics[scale=0.4]{codiceR/grafici/funzioneVerosimiglianzaDiP}
 \par\end{centering}
 
-\caption{\label{fig:Funzione-di-verosimiglianza}Funzione di verosimiglianza
+\protect\caption{\label{fig:Funzione-di-verosimiglianza}Funzione di verosimiglianza
 con $x=6$ e $n=25$.}
 
 
@@ -4934,7 +4934,7 @@ monotona crescente (cf. il suo grafico, Figura \ref{fig:Grafico-del-logaritmo}).
 \includegraphics[scale=0.4]{codiceR/grafici/logNaturale}
 \par\end{centering}
 
-\caption{\label{fig:Grafico-del-logaritmo}Grafico del logaritmo naturale.}
+\protect\caption{\label{fig:Grafico-del-logaritmo}Grafico del logaritmo naturale.}
 
 
 \end{figure}
@@ -4946,7 +4946,7 @@ sono gli stessi.
 \includegraphics[scale=0.4]{codiceR/grafici/logTrasformazione}
 \par\end{centering}
 
-\caption{\label{fig:Generica-funzione-g}Generica funzione $g$ e suo logaritmo.}
+\protect\caption{\label{fig:Generica-funzione-g}Generica funzione $g$ e suo logaritmo.}
 
 
 \end{figure}
@@ -5085,7 +5085,7 @@ ln\left(L(\mu,\sigma^{2})\right) & = & -2\ln(2\pi)-2\ln(\sigma^{2})+\\
 e $\sigma^{2}$. \end{esempio}
 \begin{figure}
 \noindent \begin{centering}
-\includegraphics[scale=0.4]{codiceR/grafici/maxLik3D}\caption{\label{fig:Max Likelihood Normale}Funzione di verosimiglianza $L(\mu,\sigma^{2})$
+\includegraphics[scale=0.4]{codiceR/grafici/maxLik3D}\protect\caption{\label{fig:Max Likelihood Normale}Funzione di verosimiglianza $L(\mu,\sigma^{2})$
 dell'Esempio \ref{Max Likelihood Normale}.}
 
 \par\end{centering}
@@ -5107,11 +5107,11 @@ quadrati, la cui presentazione è rimandata al corso di Introduzione
 all'Econometria, potrebbe essere un ulteriore esempio. Vista l'abbondanza
 di stimatori la domanda che vogliamo affrontare in questo paragrafo
 è la seguente: ``Dati due stimatori esiste un modo per decidere quale
-dei due sia il migliore?\textquotedblright{}. Per decidere questo
-è necessario chiarire in che senso uno stimatore è migliore di un
-altro. A tal fine definiremo alcune proprietà che uno stimatore può
-possedere oppure no. Esse ci aiuteranno a decidere se e in che misura
-uno stimatore è migliore di un altro.
+dei due sia il migliore?\textquotedblright . Per decidere questo è
+necessario chiarire in che senso uno stimatore è migliore di un altro.
+A tal fine definiremo alcune proprietà che uno stimatore può possedere
+oppure no. Esse ci aiuteranno a decidere se e in che misura uno stimatore
+è migliore di un altro.
 
 \bigskip{}
 
@@ -5191,7 +5191,7 @@ ma con una varianza in assoluto inferiore, anche rispetto a $\widehat{\mu}_{2}$.
 \includegraphics[scale=0.4]{codiceR/grafici/densityEstimatorBiasedUnBiased}
 \par\end{centering}
 
-\caption{Confronto fra due stimatori}
+\protect\caption{Confronto fra due stimatori}
 \end{figure}
 Se decidessimo di restringere la ricerca dello stimatore migliore
 all'interno della classe di stimatori corretti, ovviamente $\widehat{\mu}_{2}$
@@ -5251,7 +5251,7 @@ $(-\sqrt{2/3},\sqrt{2/3})$ (confronta Figura \ref{fig:Confronto-EQM-}).
 \includegraphics[scale=0.4]{codiceR/grafici/confrontoBias}
 \par\end{centering}
 
-\caption{\label{fig:Confronto-EQM-}Confronto EQM $\hat{\mu}_{2}$ e $\hat{\mu}_{5}$.}
+\protect\caption{\label{fig:Confronto-EQM-}Confronto EQM $\hat{\mu}_{2}$ e $\hat{\mu}_{5}$.}
 
 
 \end{figure}
@@ -5297,7 +5297,7 @@ a $1$. Uno stimatore consistente ci garantisce che all'aumentare
 dell'informazione (numero di osservazioni) il valore stimato si avvicinerà
 con probabilità cre\-scen\-te al vero valore.
 \begin{figure}
-\noindent \centering{}\includegraphics[scale=0.4]{codiceR/grafici/convergenzaInProbabilita2}\caption{\label{fig:Convergenza-in-probabilit=0000E0}Convergenza in probabilità
+\noindent \centering{}\includegraphics[scale=0.4]{codiceR/grafici/convergenzaInProbabilita2}\protect\caption{\label{fig:Convergenza-in-probabilit=0000E0}Convergenza in probabilità
 di $\hat{\theta}_{n}=T(X_{1},\ldots,X_{n})$.}
 \end{figure}
 
@@ -5625,7 +5625,7 @@ famiglia parametrica di densità è dunque data da
 \includegraphics[scale=0.4]{codiceR/grafici/densityPenneSfereH0}
 \par\end{centering}
 
-\caption{\label{fig:DensityPenneH0}Densità della V.A. $X$ sotto $H_{0}$
+\protect\caption{\label{fig:DensityPenneH0}Densità della V.A. $X$ sotto $H_{0}$
 dell'Esempio \ref{esempio produttore penne p1}.}
 \end{figure}
 
@@ -5642,7 +5642,7 @@ ipotesi nulla (vedi Figura \ref{fig:DensityPenneH0}):
 H_{0}:\text{ la macchina è tarata correttamente.}
 \]
  L'alternativa all'ipotesi nulla, chiamata \emph{ipotesi alternativa},
-verrà indicata con ``$H_{A}:$\textquotedblright{}. In questo primo
+verrà indicata con ``$H_{A}:$\textquotedblright . In questo primo
 esempio essa può essere espressa matematicamente come
 \[
 H_{A}:\;\mu\neq0.6\text{.}
@@ -5666,13 +5666,13 @@ il valore di $\mu$ sarebbe conosciuto ed uguale a $-0.545$. Sia
 la distribuzione di $X$ che la distribuzione campionaria $f(x_{1},...,x_{n})$
 sarebbero conosciuti. Per contro, qualora il latte venisse diluito
 con acqua, la sua temperatura di gelo sarebbe superiore a quella del
-latte ``puro\textquotedblright{}. Avremmo quindi%
+latte ``puro\textquotedblright . Avremmo quindi%
 \footnote{Si assume ragionevolmente che l'annacquamento del latte non modifichi
 $\sigma^{2}$.%
 } $\mu>-0.545$. Tuttavia, non conoscendo la percentuale di acqua aggiunta
 al latte, l'esatto valore di $\mu$ non sarebbe calcolabile. Inoltre
 la legge afferma che ``chiunque è presunto innocente fino a quando
-la sua colpevolezza non sia dimostrata dinanzi alla Corte\textquotedblright{}.
+la sua colpevolezza non sia dimostrata dinanzi alla Corte\textquotedblright .
 Quindi la nostra ipotesi nulla sarà la seguente
 \[
 H_{0}:\text{ Il latte non è annacquato (}\Leftrightarrow\text{il fornitore è onesto)}
@@ -5698,7 +5698,7 @@ H_{A}:\;\mu>-0.545\text{.}
 \includegraphics[scale=0.4]{codiceR/grafici/densityLatteH0}
 \par\end{centering}
 
-\caption{\label{fig:Distribuzione media latte H0}Funzione di densità di $\bar{X}_{5}$
+\protect\caption{\label{fig:Distribuzione media latte H0}Funzione di densità di $\bar{X}_{5}$
 sotto $H_{0}$.}
 \end{figure}
 
@@ -5799,7 +5799,7 @@ P_{H_{0}}(\overline{X}\geq-0.536) & = & P_{H_{0}}(\overline{X}+0.545\geq0.009)\\
 \includegraphics[scale=0.4]{codiceR/grafici/densityLatteH0Pvalore}
 \par\end{centering}
 
-\caption{\label{fig:latte P-valore}Calcolo del $p$-value (test unilaterale
+\protect\caption{\label{fig:latte P-valore}Calcolo del $p$-value (test unilaterale
 destro).}
 \end{figure}
 
@@ -5887,7 +5887,7 @@ tra valore atteso e media campionaria anche alla destra di $\mu$
 \includegraphics[scale=0.4]{codiceR/grafici/densityPenneSfereH0Pvalore}
 \par\end{centering}
 
-\caption{\label{fig:calcolo p-value sfere}Calcolo del $p$-value (test bilaterale).}
+\protect\caption{\label{fig:calcolo p-value sfere}Calcolo del $p$-value (test bilaterale).}
 \end{figure}
 
 
@@ -5912,7 +5912,7 @@ ottenere la distribuzione della variabile aleatoria $X$ nonché la
 distribuzione campionaria $f(x_{1},\ldots,x_{n})$. Spesso l'ipotesi
 nulla è qualcosa del tipo ``... è uguale a ...'' oppure ``... nessun
 problema ...\textquotedblright{} oppure ``... nessun effetto ...\textquotedblright{}
-oppure ``... nessuna differenza ...\textquotedblright{}. 
+oppure ``... nessuna differenza ...\textquotedblright . 
 \item L'ipotesi alternativa, $H_{A}$, è da intendersi come una ``direzione
 contro l'ipotesi nulla''. Nel primo esempio con $H_{A}:\mu\neq0.6$
 parleremo di test bilaterale, in quanto l'alternativa non specifica
@@ -6013,7 +6013,7 @@ P_{H_{0}}(\overline{X}\geq k_{5\%})=0.05.\label{k alpha media}
 \includegraphics[scale=0.4]{codiceR/grafici/k005TestUnilateraleDestro}
 \par\end{centering}
 
-\caption{\label{fig:Valore-critico test unilaterale destro}Valore critico
+\protect\caption{\label{fig:Valore-critico test unilaterale destro}Valore critico
 di un test unilaterale destro.}
 
 
@@ -6106,7 +6106,7 @@ $R$. Ad esempio, nella Figura \ref{fig:Esempio-di-regione critica}
 \includegraphics[scale=0.4]{codiceR/grafici/regioneCriticaTestUnilDestro}
 \par\end{centering}
 
-\caption{\label{fig:Esempio-di-regione critica}Esempio di regione critica
+\protect\caption{\label{fig:Esempio-di-regione critica}Esempio di regione critica
 (test unilaterale destro).}
 \end{figure}
 
@@ -6215,7 +6215,7 @@ ovvero se
 \includegraphics[scale=0.4]{codiceR/grafici/k005TestBilaterale}
 \par\end{centering}
 
-\caption{\label{fig:Valori-critici-test bilaterale}Test bilaterale e valori
+\protect\caption{\label{fig:Valori-critici-test bilaterale}Test bilaterale e valori
 critici con $S=\bar{X}$ e $n=25$.}
 \end{figure}
 
@@ -6253,7 +6253,7 @@ P_{H_{0}}(S\in(-\infty,k_{s,\alpha}])=P_{H_{0}}(S\in[k_{d,\alpha},\infty))=\frac
 \includegraphics[scale=0.4]{codiceR/grafici/regioneCriticaTestBilaterale}
 \par\end{centering}
 
-\caption{\label{fig:regione critica bilaterale}Regione critica di un test
+\protect\caption{\label{fig:regione critica bilaterale}Regione critica di un test
 bilaterale con $S=\bar{X}$ ($n=2$).}
 \end{figure}
 
@@ -6263,7 +6263,7 @@ bilaterale con $S=\bar{X}$ ($n=2$).}
 \hspace{-0.4cm}\includegraphics[scale=0.9]{codiceR/grafici/testBilaterale}
 \par\end{raggedright}
 
-\caption{\label{fig:Test-bilaterale-con regione critica}Test bilaterale con
+\protect\caption{\label{fig:Test-bilaterale-con regione critica}Test bilaterale con
 $S=\bar{X}$ e regione critica ($n=2$).}
 \end{figure}
 
@@ -6413,7 +6413,7 @@ densità di $S$. Derivando entrambi i lati rispetto ad $s$ otteniamo
 \includegraphics[scale=0.4]{codiceR/grafici/confrontoFxMinFxMedio}
 \par\end{centering}
 
-\caption{Densità di $S=\min(X_{1},...,X_{5})$ e $\overline{X}_{5}$ sotto
+\protect\caption{Densità di $S=\min(X_{1},...,X_{5})$ e $\overline{X}_{5}$ sotto
 $H_{0}$.}
 \end{figure}
 
@@ -6509,7 +6509,7 @@ livello di significatività del $5\%$, sono diversi.
 \includegraphics[scale=0.4]{codiceR/grafici/regioneCriticaTestMinimo}
 \par\end{centering}
 
-\caption{Regione critica con $S=min(X_{1},\ldots,X_{n})$ e $n=2$.}
+\protect\caption{Regione critica con $S=min(X_{1},\ldots,X_{n})$ e $n=2$.}
 
 
 \end{figure}
@@ -6602,7 +6602,7 @@ al minimo le possibilità d'errore.
 \smallskip{}
 
 
-\noindent Possiamo dunque chiederci come si decide di \textquotedblright{}Rifiutare
+\noindent Possiamo dunque chiederci come si decide di \textquotedblright Rifiutare
 $H_{0}$\textquotedblright{} sulla base dei dati disponibili. Nei
 paragrafi precedenti abbiamo definito dei test d'ipotesi basati su
 una statistica $S$ ed una regione critica $R$, quest'ultima definita
@@ -6680,7 +6680,7 @@ z_{\alpha} & -1.645 & -1.96 & -2.33
 \]
  \end{esempio}
 
-\begin{remark} Come già accennato, il livello \textquotedblright{}tipico\textquotedblright{}\ di
+\begin{remark} Come già accennato, il livello \textquotedblright tipico\textquotedblright \ di
 significatività è del 5\%. In medicina si indica con 
 \begin{itemize}
 \item n.s. : se il risultato non è significativo al 5\% ($H_{0}$ non rifiutata), 
@@ -6710,7 +6710,7 @@ di densità di $X$ sotto le due ipotesi è riportato nella Figura \ref{fig:Distrib
 \includegraphics[scale=0.4]{codiceR/grafici/dueDensitaNormali}
 \par\end{centering}
 
-\caption{\label{fig:Distribuzione-Normale-sotto}Distribuzione Normale sotto
+\protect\caption{\label{fig:Distribuzione-Normale-sotto}Distribuzione Normale sotto
 l'ipotesi nulla e alternativa.}
 \end{figure}
 Poiché in questo caso l'ipotesi alternativa è situata alla destra
@@ -6747,7 +6747,7 @@ per costruzione, con una probabilità uguale ad $1-\alpha=95\%$.
 \includegraphics[scale=0.4]{codiceR/grafici/errorePrimaESecondaSpecie}
 \par\end{centering}
 
-\caption{\label{fig:errore prima e sconda specie}Errore di prima e seconda
+\protect\caption{\label{fig:errore prima e sconda specie}Errore di prima e seconda
 specie, $\alpha=5\%$.}
 \end{figure}
 
@@ -6840,7 +6840,7 @@ passando dal $36.13\%$ al $48.4\%$.
 \includegraphics[scale=0.4]{codiceR/grafici/errorePrimaESecondaSpecie2}
 \par\end{centering}
 
-\caption{\label{fig:Errore-di-prima-e-seconda2}Errore di prima e seconda specie,
+\protect\caption{\label{fig:Errore-di-prima-e-seconda2}Errore di prima e seconda specie,
 $\alpha=2.5\%$ .}
 
 
@@ -6961,7 +6961,7 @@ del valore del parametro $\mu$.
 \includegraphics[scale=0.4]{codiceR/grafici/potenzaXMin}
 \par\end{centering}
 
-\caption{\label{fig:Potenza-del-test}Potenza del test dell'Esempio \ref{esempio caseificio p1}
+\protect\caption{\label{fig:Potenza-del-test}Potenza del test dell'Esempio \ref{esempio caseificio p1}
 con $S=\overline{X}$.}
 
 
@@ -7016,7 +7016,7 @@ al test sul minimo per qualsiasi ipotesi alternativa semplice $H_{A}:\:\mu=\wide
 \includegraphics[scale=0.4]{codiceR/grafici/potenzaMediaEpotenzaXMin}
 \par\end{centering}
 
-\caption{\label{fig:Potenza-del-test2}Potenza del test dell'Esempio \ref{esempio caseificio p1}
+\protect\caption{\label{fig:Potenza-del-test2}Potenza del test dell'Esempio \ref{esempio caseificio p1}
 con $S=min$.}
 
 
@@ -7654,7 +7654,7 @@ $1-\beta$ minimo.
 \end{itemize}
 \begin{table}
 \vspace{-1.2cm}
- \caption{Elenco gioielli}
+ \protect\caption{Elenco gioielli}
 
 
 \vspace{0.2cm}
@@ -7713,7 +7713,7 @@ Totale  & 50'000  & 202'000  & \tabularnewline
 
 \begin{table}
 \vspace{-1.2cm}
- \caption{Elenco gioielli ordinati secondo $P_{r}/P_{s}$}
+ \protect\caption{Elenco gioielli ordinati secondo $P_{r}/P_{s}$}
 
 
 \vspace{0.2cm}
@@ -8161,7 +8161,7 @@ Attenzione: la funzione $CHIDIST(x,m)=P(V>x)$.
 \includegraphics[scale=0.4]{codiceR/grafici/densitaChi2}
 \par\end{centering}
 
-\caption{Funzione di densità della distribuzione $\chi_{m}^{2}$, $m=2,5.$}
+\protect\caption{Funzione di densità della distribuzione $\chi_{m}^{2}$, $m=2,5.$}
 
 
 \end{figure}
@@ -8193,7 +8193,7 @@ avvicina sempre più alla distribuzione Normale standard.
 \includegraphics[scale=0.4]{codiceR/grafici/densitaStudent}
 \par\end{centering}
 
-\caption{Confronto tra la densità Normale standard e la Student.}
+\protect\caption{Confronto tra la densità Normale standard e la Student.}
 
 
 \end{figure}
@@ -8227,7 +8227,7 @@ con $\overline{X}$. Poiché
 \[
 \sum\limits _{i=1}^{n}\left(X_{i}-\overline{X}\right)=0
 \]
- abbiamo in realtà solo $n-1$ gradi di libertà nella \textquotedblright{}scelta\textquotedblright{}
+ abbiamo in realtà solo $n-1$ gradi di libertà nella \textquotedblright scelta\textquotedblright{}
 di $X_{1}-\overline{X}$, $X_{2}-\overline{X}$, ..., $X_{n}-\overline{X}$:
 l'ultima osservazione non può essere scelta come si vuole in quanto
 la somma deve essere $0$.%
@@ -8296,7 +8296,7 @@ sotto esame ha subito un cambiamento.%
 
 \begin{center}
 \begin{tabular}{c|cc}
- & \textquotedblright{}treatment\textquotedblright{}  & controllo \tabularnewline
+ & \textquotedblright treatment\textquotedblright{}  & controllo \tabularnewline
 \hline 
 medicina  & nuovo farmaco  & placebo \tabularnewline
 didattica  & nuovo programma  & vecchio programma \tabularnewline
@@ -8455,7 +8455,7 @@ Prendiamo quale statistica del test
 \[
 S(X_{1},...,X_{n})=\frac{\widehat{\sigma}^{2}}{\sigma_{0}^{2}},
 \]
- con $\sigma^{2}$ stimata col \textquotedblright{}solito\textquotedblright{}
+ con $\sigma^{2}$ stimata col \textquotedblright solito\textquotedblright{}
 stimatore 
 \[
 \widehat{\sigma}^{2}=\frac{1}{n-1}\sum_{i=1}^{n}\left(X_{i}-\overline{X}\right)^{2}.
@@ -8487,7 +8487,7 @@ rifiuto l'ipotesi nulla $H_{0}$ altrimenti non la rifiuto.
 \includegraphics[scale=0.4]{codiceR/grafici/Test_densitaChi2}
 \par\end{centering}
 
-\caption{Test per la dispersione su singolo campione ($n=6,\alpha=5\%$).}
+\protect\caption{Test per la dispersione su singolo campione ($n=6,\alpha=5\%$).}
 
 
 \end{figure}
@@ -8565,7 +8565,7 @@ $F$ con $m-1$ e $n-1$ gradi di libertà.
 
 \subsection{Test di conformità}
 
-Il test di conformità (\textquotedblright{}goodness-of-fit\textquotedblright{}
+Il test di conformità (\textquotedblright goodness-of-fit\textquotedblright{}
 test) non è un test su un'ipotesi parametrica. Infatti, con il test
 di conformità si desidera verificare se la distribuzione della popolazione
 dalla quale è estratto il campione corrisponde ad una distribuzione
@@ -8621,7 +8621,7 @@ p_{k}=P_{H_{0}}(l_{k}\leq X<l_{k+1}).
 \noindent Su $n$ estrazioni indipendenti il numero atteso di osservazioni
 nell'intervallo $\left[l_{k},l_{k+1}\right)$, notato $E_{k}$, sarà
 semplicemente $n\ p_{k}$. Il test consiste nel confrontare le frequenze
-assolute empiriche con quelle teoriche. Se le differenze sono \textquotedblright{}grandi\textquotedblright{},
+assolute empiriche con quelle teoriche. Se le differenze sono \textquotedblright grandi\textquotedblright ,
 avremo evidenza contro l'ipotesi nulla. Per misurare tali discrepanze
 si calcolano gli scarti al quadrato tra le frequenze assolute empiriche
 e quelle teoriche, debitamente ``standardizzate''. Al fine di eseguire

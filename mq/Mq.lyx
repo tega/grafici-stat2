@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass report
@@ -25,13 +25,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -42,15 +42,24 @@
 \use_hyperref false
 \papersize a4paper
 \use_geometry false
-\use_amsmath 2
-\use_esint 1
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Indice
 \shortcut idx
@@ -2635,7 +2644,7 @@ status open
 
 \begin_layout Plain Layout
  
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Specchietto riassuntivo
@@ -2660,9 +2669,9 @@ name "tab:Spe"
  
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -13145,8 +13154,8 @@ e sottraendo da entrambi i lati
  si ottiene la forma finale
 \begin_inset Formula 
 \begin{eqnarray*}
-y_{t}-y_{t-1} & = & a^{\ast}+\gamma_{1}x_{t-1}+\underset{\gamma_{2}}{\underbrace{\left(\alpha_{1}^{\ast}+\ldots+\alpha_{r}^{\ast}-1\right)}}y_{t-1}+\sum_{i=0}^{s-1}\delta_{s}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon_{t}\ \\
-\Delta y_{t} & = & a^{\ast}+\gamma_{1}x_{t-1}+\gamma_{2}y_{t-1}+\sum_{i=0}^{s-1}\delta_{s}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{s}\Delta y_{t-i}+\varepsilon_{t}
+y_{t}-y_{t-1} & = & a^{\ast}+\gamma_{1}x_{t-1}+\underset{\gamma_{2}}{\underbrace{\left(\alpha_{1}^{\ast}+\ldots+\alpha_{r}^{\ast}-1\right)}}y_{t-1}+\sum_{i=0}^{s-1}\delta_{i}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{i}\Delta y_{t-i}+\varepsilon_{t}\ \\
+\Delta y_{t} & = & a^{\ast}+\gamma_{1}x_{t-1}+\gamma_{2}y_{t-1}+\sum_{i=0}^{s-1}\delta_{i}\Delta x_{t-i}+\sum_{i=1}^{r-1}q_{i}\Delta y_{t-i}+\varepsilon_{t}
 \end{eqnarray*}
 
 \end_inset
