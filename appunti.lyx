@@ -1127,7 +1127,7 @@ Lo spazio campionario è elemento di
 \end_layout
 
 \begin_layout Enumerate
-Dato un qualsiasi elemento 
+Dato un qualsiasi evento 
 \begin_inset Formula $E$
 \end_inset
 
@@ -1135,7 +1135,7 @@ Dato un qualsiasi elemento
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- allora anche il suo complemento deve appartenere a 
+ allora anche il suo complemento è un evento, cioè deve appartenere a 
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
@@ -1148,11 +1148,11 @@ Se
 \begin_inset Formula $E_{1},E_{2},\ldots$
 \end_inset
 
- è una successione di elementi qualsiasi di 
+ è una successione di eventi qualsiasi di 
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
-, allora anche la loro unione deve appartenere ad 
+, allora anche la loro unione è un evento, cioè deve appartenere ad 
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
@@ -1322,7 +1322,7 @@ sottoinsiemi
 \begin_inset Formula $\Omega$
 \end_inset
 
-: ogni elemento 
+ chiamati apputno eventi: ogni elemento 
 \begin_inset Formula $E$
 \end_inset
 
@@ -1339,6 +1339,15 @@ sottoinsiemi
 LatexCommand ref
 reference "fig:eventi e esiti"
 
+\end_inset
+
+.
+ Non tutti i sottoinsiemi di 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ sono eventi, solo quelli presenti nell'insieme 
+\begin_inset Formula $\mathcal{E}$
 \end_inset
 
 .
