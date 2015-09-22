@@ -411,7 +411,7 @@ Regole di calcolo:
 \begin{eqnarray*}
 \mu_{X+bY} & = & \mu_{X}+b\mu_{Y}\\
 \sigma_{a+bX}^{2} & = & b^{2}\sigma_{X}^{2}\\
-\sigma_{X}^{2} & = & \mu_{X^{2}}+\left(\mu_{X}\right)^{2}
+\sigma_{X}^{2} & = & \mu_{X^{2}}-\left(\mu_{X}\right)^{2}
 \end{eqnarray*}
 
 \end_inset
@@ -5566,7 +5566,7 @@ o quali sono i parametri che la caratterizzano.
 
 \begin_layout Enumerate
 Assegnate dei valori al/ai parametro/i.
- In Excel o Openoffice eseguite i grafici della funzione di densità e della
+ In Excel o Libreoffice eseguite i grafici della funzione di densità e della
  funzione di ripartizione.
  Calcolate la probabilità degli eventi 
 \begin_inset Formula $E_{1}=$
@@ -29074,7 +29074,7 @@ F_{X}(s)=\int\limits _{-\infty}^{s}f_{X}(x)dx
 \begin_inset Formula $f_{S}$
 \end_inset
 
- potrebbero essere calcolate in Excel o Openoffice utilizzando la funzione
+ potrebbero essere calcolate in Excel o Libreoffice utilizzando la funzione
  NORMDIST().
  
 \end_layout
@@ -96433,7 +96433,7 @@ P(X\leq x)=\int\limits _{0}^{x}f(y,m)dy
 
 \end_inset
 
- oppure in Excel o Openoffice tramite la funzione 
+ oppure in Excel o Libreoffice tramite la funzione 
 \begin_inset Formula $CHIDIST(x,m)$
 \end_inset
 
