@@ -4199,8 +4199,8 @@ Claudio, il responsabile del settore marketing di una grossa azienda, desidera
 \begin_inset Formula 
 \[
 \begin{tabular}{ccc}
- \ensuremath{p<30\%} &  \ensuremath{30\%\leq p<60\%} &  \ensuremath{60\%\leq p}\\
-insufficiente  &  discreto  &  buono 
+ \ensuremath{p<30\%}  &  \ensuremath{30\%\leq p<60\%}  &  \ensuremath{60\%\leq p}\\
+ insufficiente  &  discreto  &  buono 
 \end{tabular}
 \]
 
@@ -6699,7 +6699,7 @@ name "Flo: variabile aleatoria diag Venn"
 Ricordiamo che per definizione 
 \begin_inset Formula 
 \[
-g^{-1}(E')=\{\omega\in\Omega\:|\: g(\omega)\in E'\}.
+g^{-1}(E')=\{\omega\in\Omega\:|\:g(\omega)\in E'\}.
 \]
 
 \end_inset
@@ -7618,8 +7618,8 @@ il numero di croci ottenute” che in pratica consiste nel contare il numero
 \begin_inset Formula 
 \[
 \begin{array}{cccc}
-X(\omega_{1})=0 & ,\: X(\omega_{2})=1 & ,\: X(\omega_{3})=1 & ,\: X(\omega_{4})=1\\
-X(\omega_{5})=2 & ,\: X(\omega_{6})=2 & ,\: X(\omega_{7})=2 & ,\: X(\omega_{8})=3
+X(\omega_{1})=0 & ,\:X(\omega_{2})=1 & ,\:X(\omega_{3})=1 & ,\:X(\omega_{4})=1\\
+X(\omega_{5})=2 & ,\:X(\omega_{6})=2 & ,\:X(\omega_{7})=2 & ,\:X(\omega_{8})=3
 \end{array}.
 \]
 
@@ -12372,10 +12372,10 @@ e
 \begin_inset Formula 
 \[
 \begin{tabular}{l|cc}
-  &  \ensuremath{Y_{1}} &  \ensuremath{Y_{2}}\\
-\hline \ensuremath{X_{1}} &  \ensuremath{c_{11}} &  \ensuremath{c_{12}}\\
-\ensuremath{X_{2}} &  \ensuremath{c_{21}} &  \ensuremath{c_{22}}\\
-\ensuremath{X_{3}} &  \ensuremath{c_{31}} &  \ensuremath{c_{32}}
+  &  \ensuremath{Y_{1}}  &  \ensuremath{Y_{2}}\\
+\hline  \ensuremath{X_{1}}  &  \ensuremath{c_{11}}  &  \ensuremath{c_{12}}\\
+ \ensuremath{X_{2}}  &  \ensuremath{c_{21}}  &  \ensuremath{c_{22}}\\
+ \ensuremath{X_{3}}  &  \ensuremath{c_{31}}  &  \ensuremath{c_{32}} 
 \end{tabular}
 \]
 
@@ -12396,10 +12396,10 @@ e
 \begin_inset Formula 
 \[
 \begin{tabular}{l|cc}
-  &  \ensuremath{1Y_{1}} &  \ensuremath{-2Y_{2}}\\
-\hline \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \ensuremath{c_{11}} &  \ensuremath{c_{12}}\\
-\multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \ensuremath{c_{21}} &  \ensuremath{c_{22}}\\
-\multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \ensuremath{c_{31}} &  \ensuremath{c_{32}}
+  &  \ensuremath{1Y_{1}}  &  \ensuremath{-2Y_{2}}\\
+\hline  \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \ensuremath{c_{11}}  &  \ensuremath{c_{12}}\\
+ \multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \ensuremath{c_{21}}  &  \ensuremath{c_{22}}\\
+ \multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \ensuremath{c_{31}}  &  \ensuremath{c_{32}} 
 \end{tabular}
 \]
 
@@ -12409,10 +12409,10 @@ e
 \begin_inset Formula 
 \[
 \begin{tabular}{l|cc}
-  &  \ensuremath{1Y_{1}} &  \ensuremath{-2Y_{2}}\\
-\hline \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{2\cdot1\cdot c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot(-2)\cdot c_{12}}} \\
-\multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot(-2)\cdot c_{22}}} \\
-\multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot1\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-2)\cdot c_{32}}} 
+  &  \ensuremath{1Y_{1}}  &  \ensuremath{-2Y_{2}}\\
+\hline  \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{2\cdot1\cdot c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot(-2)\cdot c_{12}}} \\
+ \multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot(-2)\cdot c_{22}}} \\
+ \multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot1\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-2)\cdot c_{32}}} 
 \end{tabular}
 \]
 
@@ -12533,10 +12533,10 @@ Costruiamo la tabella delle covarianze fra
 \begin_inset Formula 
 \[
 \begin{tabular}{l|ccc}
-  &  \ensuremath{X_{1}} &  \ensuremath{X_{2}} &  \ensuremath{X_{3}}\\
-\hline \multicolumn{1}{r|}{\ensuremath{X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{c_{12}}}  &  \multicolumn{1}{r}{\ensuremath{c_{13}}} \\
-\multicolumn{1}{r|}{\ensuremath{X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{c_{22}}}  &  \multicolumn{1}{r}{\ensuremath{c_{23}}} \\
-\multicolumn{1}{r|}{\ensuremath{X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{c_{33}}} 
+  &  \ensuremath{X_{1}}  &  \ensuremath{X_{2}}  &  \ensuremath{X_{3}}\\
+\hline  \multicolumn{1}{r|}{\ensuremath{X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{c_{12}}}  &  \multicolumn{1}{r}{\ensuremath{c_{13}}} \\
+ \multicolumn{1}{r|}{\ensuremath{X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{c_{22}}}  &  \multicolumn{1}{r}{\ensuremath{c_{23}}} \\
+ \multicolumn{1}{r|}{\ensuremath{X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{c_{33}}} 
 \end{tabular}
 \]
 
@@ -12648,10 +12648,10 @@ Per il calcolo della varianza procediamo come per il calcolo della covarianza
 \begin_inset Formula 
 \[
 \begin{tabular}{l|ccc}
-  &  \ensuremath{2X_{1}} &  \ensuremath{-3X_{2}} &  \ensuremath{1X_{3}}\\
-\hline \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{2^{2}\cdot c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot(-3)\cdot c_{12}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot1\cdot c_{13}}} \\
-\multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{(-3)\cdot2\cdot c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{(-3)^{2}\cdot c_{22}}}  &  \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{23}}} \\
-\multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot2\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-3)\cdot c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{1^{2}\cdot c_{33}}} 
+  &  \ensuremath{2X_{1}}  &  \ensuremath{-3X_{2}}  &  \ensuremath{1X_{3}}\\
+\hline  \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{2^{2}\cdot c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot(-3)\cdot c_{12}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot1\cdot c_{13}}} \\
+ \multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{(-3)\cdot2\cdot c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{(-3)^{2}\cdot c_{22}}}  &  \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{23}}} \\
+ \multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot2\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-3)\cdot c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{1^{2}\cdot c_{33}}} 
 \end{tabular}
 \]
 
@@ -13619,12 +13619,12 @@ Possiamo riassumere il tutto nella seguente tabella
 \begin_inset Formula 
 \[
 \begin{tabular}{ccccccccc}
-  &   &  Indiv. \ensuremath{1} &   &  Indiv. \ensuremath{2} &   &   &   &  Indiv. \ensuremath{N}\\
-\ensuremath{X_{1}} &  \ensuremath{=} &  \ensuremath{a_{1}U_{11}} &  \ensuremath{+} &  \ensuremath{a_{2}U_{12}} &  \ensuremath{+} &  \ensuremath{\ldots} &  \ensuremath{+} &  \ensuremath{a_{N}U_{1N}}\\
-\ensuremath{X_{2}} &  \ensuremath{=} &  \ensuremath{a_{1}U_{21}} &  \ensuremath{+} &  \ensuremath{a_{2}U_{22}} &  \ensuremath{+} &  \ensuremath{\ldots} &  \ensuremath{+} &  \ensuremath{a_{N}U_{2N}}\\
-\ensuremath{\vdots} &   &  \ensuremath{\vdots} &   &  \ensuremath{\vdots} &   &   &   &  \ensuremath{\vdots}\\
-\ensuremath{X_{n}} &  \ensuremath{=} &  \ensuremath{a_{1}U_{n1}} &  \ensuremath{+} &  \ensuremath{a_{2}U_{n2}} &  \ensuremath{+} &  \ensuremath{\ldots} &  \ensuremath{+} &  \ensuremath{a_{N}U_{nN}}\\
-\hline \ensuremath{\sum_{i=1}^{n}X_{i}} &  \ensuremath{=} &  \ensuremath{a_{1}\underset{T_{1}}{\underbrace{\sum_{i=1}^{n}U_{i1}}}} &  \ensuremath{+} &  \ensuremath{a_{2}\underset{T_{2}}{\underbrace{\sum_{i=1}^{n}U_{i2}}}} &  \ensuremath{+} &  \ensuremath{\ldots} &  \ensuremath{+} &  \ensuremath{a_{N}\underset{T_{N}}{\underbrace{\sum_{i=1}^{n}U_{iN}}}}
+  &   &  Indiv. \ensuremath{1}  &   &  Indiv. \ensuremath{2}  &   &   &   &  Indiv. \ensuremath{N}\\
+ \ensuremath{X_{1}}  &  \ensuremath{=}  &  \ensuremath{a_{1}U_{11}}  &  \ensuremath{+}  &  \ensuremath{a_{2}U_{12}}  &  \ensuremath{+}  &  \ensuremath{\ldots}  &  \ensuremath{+}  &  \ensuremath{a_{N}U_{1N}}\\
+ \ensuremath{X_{2}}  &  \ensuremath{=}  &  \ensuremath{a_{1}U_{21}}  &  \ensuremath{+}  &  \ensuremath{a_{2}U_{22}}  &  \ensuremath{+}  &  \ensuremath{\ldots}  &  \ensuremath{+}  &  \ensuremath{a_{N}U_{2N}}\\
+ \ensuremath{\vdots}  &   &  \ensuremath{\vdots}  &   &  \ensuremath{\vdots}  &   &   &   &  \ensuremath{\vdots}\\
+ \ensuremath{X_{n}}  &  \ensuremath{=}  &  \ensuremath{a_{1}U_{n1}}  &  \ensuremath{+}  &  \ensuremath{a_{2}U_{n2}}  &  \ensuremath{+}  &  \ensuremath{\ldots}  &  \ensuremath{+}  &  \ensuremath{a_{N}U_{nN}}\\
+\hline  \ensuremath{\sum_{i=1}^{n}X_{i}}  &  \ensuremath{=}  &  \ensuremath{a_{1}\underset{T_{1}}{\underbrace{\sum_{i=1}^{n}U_{i1}}}}  &  \ensuremath{+}  &  \ensuremath{a_{2}\underset{T_{2}}{\underbrace{\sum_{i=1}^{n}U_{i2}}}}  &  \ensuremath{+}  &  \ensuremath{\ldots}  &  \ensuremath{+}  &  \ensuremath{a_{N}\underset{T_{N}}{\underbrace{\sum_{i=1}^{n}U_{iN}}}} 
 \end{tabular}
 \]
 
@@ -13864,7 +13864,7 @@ Ricordiamo che gli elementi
  Il risultato è dunque 
 \begin_inset Formula 
 \[
-n\, D_{N-1}^{n-1}=\frac{n\ \left(N-1\right)!}{(N-1-(n-1))!}=\frac{n\ \left(N-1\right)!}{(N-n)!}.
+n\,D_{N-1}^{n-1}=\frac{n\ \left(N-1\right)!}{(N-1-(n-1))!}=\frac{n\ \left(N-1\right)!}{(N-n)!}.
 \]
 
 \end_inset
@@ -14236,11 +14236,8 @@ reference "selezione sistematica"
 
  unità della popolazione.
  La probabilità di includere un particolare individuo nel campione è uguale
- alla probabilità di selezionare il suo gruppo d'appartenenza:
-\begin_inset space \space{}
-\end_inset
-
-poiché in totale ci sono 
+ alla probabilità di selezionare il suo gruppo d'appartenenza: poiché in
+ totale ci sono 
 \begin_inset Formula $k$
 \end_inset
 
@@ -14328,7 +14325,7 @@ g_{j}:=\sum_{i=1}^{n}a_{ji}
 
 \end_inset
 
- dove 
+dove 
 \begin_inset Formula $a_{ji}$
 \end_inset
 
@@ -21480,9 +21477,9 @@ f(x;p)=C_{n,x}\ p^{x}q^{n-x}\ \ \ \ \ \ \text{per }x=0,1,2,...,n,
 \begin_inset Formula 
 \[
 \begin{tabular}{c|c|c|c|c}
-\hline  Esito: \ensuremath{x} &  \ensuremath{0} &  \ensuremath{1} &  \ensuremath{2} &  \ensuremath{3}\\
-\hline \ensuremath{f(x;\frac{3}{4})} &  \ensuremath{\frac{1}{64}} &  \ensuremath{\frac{9}{64}} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{27}{64}}\\
-\hline \ensuremath{f(x;\frac{1}{4})} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{27}{64}} &  \ensuremath{\frac{9}{64}} &  \ensuremath{\frac{1}{64}}
+\hline  Esito: \ensuremath{x}  &  \ensuremath{0}  &  \ensuremath{1}  &  \ensuremath{2}  &  \ensuremath{3}\\
+\hline  \ensuremath{f(x;\frac{3}{4})}  &  \ensuremath{\frac{1}{64}}  &  \ensuremath{\frac{9}{64}}  &  \ensuremath{\frac{27}{64}}  &  \ensuremath{\frac{27}{64}}\\
+\hline  \ensuremath{f(x;\frac{1}{4})}  &  \ensuremath{\frac{27}{64}}  &  \ensuremath{\frac{27}{64}}  &  \ensuremath{\frac{9}{64}}  &  \ensuremath{\frac{1}{64}} 
 \\\hline \end{tabular}
 \]
 
@@ -21593,7 +21590,7 @@ decide” il valore di
 , in modo tale che 
 \begin_inset Formula 
 \[
-f(x;\widehat{p})>f(x;p)\:\forall\, p\neq\widehat{p}.
+f(x;\widehat{p})>f(x;p)\:\forall\,p\neq\widehat{p}.
 \]
 
 \end_inset
@@ -29404,19 +29401,19 @@ Per quanto riguarda invece gli errori abbiamo due tipi di errori evidenziati
 \[
 \begin{tabular}{l|c|c|}
  \cline{2-3}  &  \ensuremath{H_{0}}\:\ vera  &  \ensuremath{H_{0}}\:\ falsa \\
-\hline \multicolumn{1}{|l|}{Rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
+\hline  \multicolumn{1}{|l|}{Rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
-\multicolumn{1}{c}{\ensuremath{\alpha}} 
+ \multicolumn{1}{c}{\ensuremath{\alpha}} 
 \end{tabular}  &  \begin{tabular}{l}
  decisione corretta \\
-\multicolumn{1}{c}{\ensuremath{\beta}} 
+ \multicolumn{1}{c}{\ensuremath{\beta}} 
 \end{tabular} \\
-\hline \multicolumn{1}{|l|}{Non rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
+\hline  \multicolumn{1}{|l|}{Non rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
  decisione corretta \\
-\multicolumn{1}{c}{\ensuremath{1-\alpha}} 
+ \multicolumn{1}{c}{\ensuremath{1-\alpha}} 
 \end{tabular}  &  \multicolumn{1}{|l|}{\begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
-\multicolumn{1}{c}{\ensuremath{1-\beta}} 
+ \multicolumn{1}{c}{\ensuremath{1-\beta}} 
 \end{tabular}} 
 \\\hline \end{tabular}
 \]
@@ -98158,17 +98155,17 @@ end{esempio}
 \hline  {\small Classe}  &  \ensuremath{\begin{array}{c}
 \text{{\small Intervallo}}\\
 \text{{\small Mia Fr.}}
-\end{array}} &  {\small\# osservazioni}  &  \ensuremath{\begin{array}{c}
+\end{array}}  &  {\small\# osservazioni}  &  \ensuremath{\begin{array}{c}
 \text{{\small\# osservazioni}}\\
 \text{{\small atteso sotto Ho}}
-\end{array}} &  {\small Deviazioni}  &  \ensuremath{\frac{\left({\small O}_{i}-{\small E}_{i}\right)^{2}}{{\small E}_{i}}}\\
-\hline\hline \ensuremath{c_{1}} &  \ensuremath{\left[{\small0,30}\right)} &  \ensuremath{O_{1}} &  \ensuremath{n\ p_{1}=E_{1}} &  \ensuremath{O_{1}-E_{1}} &  \ensuremath{\frac{\left({\small O}_{1}-{\small E}_{1}\right)^{2}}{{\small E}_{1}}}\\
-\ensuremath{c_{2}} &  \ensuremath{\left[{\small30,50}\right)} &  \ensuremath{O_{2}} &  \ensuremath{n\ p_{2}=E_{2}} &  \ensuremath{O_{2}-E_{2}} &  \ensuremath{\frac{\left({\small O}_{2}-{\small E}_{2}\right)^{2}}{{\small E}_{2}}}\\
-\ensuremath{\vdots} &  \ensuremath{\vdots} &  \ensuremath{\vdots} &  \ensuremath{\vdots} &  \ensuremath{\vdots} &  \ensuremath{\vdots}\\
-\ensuremath{c_{k}} &  \ensuremath{\left[{\small100,120}\right)} &  \ensuremath{O_{k}} &  \ensuremath{n\ p_{k}=E_{k}} &  \ensuremath{O_{k}-E_{k}} &  \ensuremath{\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}}\\
-\ensuremath{\vdots} &  \ensuremath{\vdots} &  \ensuremath{\vdots} &  \ensuremath{\vdots} &  \ensuremath{\vdots} &  \ensuremath{\vdots}\\
-\ensuremath{c_{K}} &  \ensuremath{\left[{\small200,+}\right)} &  \ensuremath{O_{K}} &  \ensuremath{n\ p_{K}=E_{K}} &  \ensuremath{O_{K}-E_{K}} &  \ensuremath{\frac{\left({\small O}_{K}-{\small E}_{K}\right)^{2}}{{\small E}_{K}}}\\
-\hline {\small Totale}  &   &  \ensuremath{n=\sum_{k=1}^{K}O_{k}} &  \ensuremath{n} &  \ensuremath{0} &  \ensuremath{\chi^{2}=\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}}
+\end{array}}  &  {\small Deviazioni}  &  \ensuremath{\frac{\left({\small O}_{i}-{\small E}_{i}\right)^{2}}{{\small E}_{i}}}\\
+\hline\hline  \ensuremath{c_{1}}  &  \ensuremath{\left[{\small0,30}\right)}  &  \ensuremath{O_{1}}  &  \ensuremath{n\ p_{1}=E_{1}}  &  \ensuremath{O_{1}-E_{1}}  &  \ensuremath{\frac{\left({\small O}_{1}-{\small E}_{1}\right)^{2}}{{\small E}_{1}}}\\
+ \ensuremath{c_{2}}  &  \ensuremath{\left[{\small30,50}\right)}  &  \ensuremath{O_{2}}  &  \ensuremath{n\ p_{2}=E_{2}}  &  \ensuremath{O_{2}-E_{2}}  &  \ensuremath{\frac{\left({\small O}_{2}-{\small E}_{2}\right)^{2}}{{\small E}_{2}}}\\
+ \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}\\
+ \ensuremath{c_{k}}  &  \ensuremath{\left[{\small100,120}\right)}  &  \ensuremath{O_{k}}  &  \ensuremath{n\ p_{k}=E_{k}}  &  \ensuremath{O_{k}-E_{k}}  &  \ensuremath{\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}}\\
+ \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}  &  \ensuremath{\vdots}\\
+ \ensuremath{c_{K}}  &  \ensuremath{\left[{\small200,+}\right)}  &  \ensuremath{O_{K}}  &  \ensuremath{n\ p_{K}=E_{K}}  &  \ensuremath{O_{K}-E_{K}}  &  \ensuremath{\frac{\left({\small O}_{K}-{\small E}_{K}\right)^{2}}{{\small E}_{K}}}\\
+\hline  {\small Totale}  &   &  \ensuremath{n=\sum_{k=1}^{K}O_{k}}  &  \ensuremath{n}  &  \ensuremath{0}  &  \ensuremath{\chi^{2}=\sum_{k=1}^{K}\frac{\left({\small O}_{k}-{\small E}_{k}\right)^{2}}{{\small E}_{k}}} 
 \\\hline \end{tabular}$
 \end_inset
 

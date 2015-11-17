@@ -152,7 +152,18 @@ status open
 
 \end_inset
 
- 
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\shape smallcaps
+\size large
+Proposta di programma
+\series bold
+\shape default
+
 \begin_inset VSpace 0.2cm
 \end_inset
 
@@ -978,7 +989,7 @@ status collapsed
 
 \end_inset
 
-Strategia verso tattica di investimento
+Gestione individuale e di fondi di investimento
 \end_layout
 
 \begin_layout Enumerate
@@ -993,6 +1004,31 @@ status collapsed
 \end_inset
 
 7.3
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+Strategia verso tattica di investimento
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+7.4
 \begin_inset ERT
 status collapsed
 
@@ -1031,7 +1067,7 @@ status collapsed
 
 \end_inset
 
-7.4
+7.5
 \begin_inset ERT
 status collapsed
 
@@ -1328,7 +1364,7 @@ Tramite futuri
 \end_layout
 
 \begin_layout Enumerate
-Tramite indici di volatilità implicita
+Tramite volatilità
 \end_layout
 
 \end_deeper
@@ -1356,12 +1392,52 @@ underline{Testi e documenti di riferimento}
 \end_layout
 
 \begin_layout Itemize
+Back, Kerry E., 
+\emph on
+Asset pricing and portfolio choice theory,
+\emph default
+ Oxford Univ.
+ Press (2010).
+\end_layout
+
+\begin_layout Itemize
+Benninga, Simon, 
+\emph on
+Financial Modeling
+\emph default
+, MIT Press, (2008).
+\end_layout
+
+\begin_layout Itemize
+Carol Alexander, 
+\emph on
+Value-at-Risk Models
+\emph default
+, Wiley (2009).
+\end_layout
+
+\begin_layout Itemize
 Chi-fu Huang e Robert H.
  Litzenberger, 
 \emph on
 Foundations for financial economics
 \emph default
 , Prentice Hall (1988).
+\end_layout
+
+\begin_layout Itemize
+Holton, Glyn A., 
+\emph on
+Value-at-Risk: Theory and Practice
+\emph default
+, second edition, e-book at http://value-at-risk.net (2014).
+\end_layout
+
+\begin_layout Itemize
+Hull, John C., 
+\emph on
+Options, futures, and other derivatives, 9th ed., Upper Saddle River, NJ
+ (2015).
 \end_layout
 
 \begin_layout Itemize
@@ -1374,26 +1450,7 @@ Investments
 \end_layout
 
 \begin_layout Itemize
-Carol Alexander, 
-\emph on
-Value-at-Risk Models
-\emph default
-, Wiley (2009).
-\end_layout
-
-\begin_layout Itemize
-Holton, Glyn A.
- (2014).
- 
-\emph on
-Value-at-Risk: Theory and Practice
-\emph default
-, second edition, e-book at http://value-at-risk.net.
-\end_layout
-
-\begin_layout Itemize
-John M.
- Chambers, 
+Chambers, John M., 
 \emph on
 Software for Data Analysis Programming with R
 \emph default

@@ -157,7 +157,7 @@ la matrice delle variabili esplicative
 \begin_inset Formula 
 \[
 X=\left[\begin{tabular}{l|l}
- \ensuremath{\underset{\left(n\times K_{1}\right)}{X_{1}}} &  \ensuremath{\underset{\left(n\times K_{2}\right)}{X_{2}}}\end{tabular}\right]
+ \ensuremath{\underset{\left(n\times K_{1}\right)}{X_{1}}}  &  \ensuremath{\underset{\left(n\times K_{2}\right)}{X_{2}}}\end{tabular}\right]
 \]
 
 \end_inset
@@ -348,7 +348,7 @@ X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_
 \begin{eqnarray}
 \left(X_{2}^{\prime}X_{2}-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}\right)\widehat{\beta}_{2} & = & X_{2}^{\prime}y-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y\notag\\
 X_{2}^{\prime}\left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)y\notag\\
-X_{2}^{\prime}\ M_{1}\ X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\ M_{1}\; y.\label{sistema 3bis}
+X_{2}^{\prime}\ M_{1}\ X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\ M_{1}\;y.\label{sistema 3bis}
 \end{eqnarray}
 
 \end_inset
@@ -394,8 +394,8 @@ soltanto che essa è formata a partire da
 \[
 \begin{tabular}{l}
  \ensuremath{\bullet\ M_{1}^{\prime}=M_{1}}e \ensuremath{M_{1}M_{1}=M_{1}\text{ (è simmetrica e idempotente)}}\\
-\ensuremath{\bullet\ rg(M_{1})=tr(M_{1})=n-K_{1}}\\
-\ensuremath{\bullet\ M_{1}X_{1}=0}
+ \ensuremath{\bullet\ rg(M_{1})=tr(M_{1})=n-K_{1}}\\
+ \ensuremath{\bullet\ M_{1}X_{1}=0} 
 \end{tabular}
 \]
 
@@ -956,7 +956,7 @@ La stessa interpretazione vale per ogni colonna di
 \begin_inset Formula 
 \[
 M_{1}X_{2}=\left[\begin{tabular}{l|l|l|l}
- \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,1}} &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,2}} &  \ensuremath{\ldots} &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,K_{2}}}\end{tabular}\right]
+ \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,1}}  &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,2}}  &  \ensuremath{\ldots}  &  \ensuremath{M_{1}\left(X_{2}\right)_{\cdot,K_{2}}}\end{tabular}\right]
 \]
 
 \end_inset
@@ -9052,7 +9052,7 @@ S_{t-1}=a+bV_{t}^{\ast}+\varepsilon_{t-1} & \ \ \ (b)
 S_{t}-(1-\gamma)S_{t-1} & = & \gamma a+b(V_{t+1}^{\ast}-(1-\gamma)V_{t}^{\ast})+\varepsilon_{t}-(1-\gamma)\ \varepsilon_{t-1}\\
  & = & \gamma a+b\gamma V_{t}+\varepsilon_{t}-(1-\gamma)\ \varepsilon_{t-1}\\
 S_{t} & = & \gamma a+b\gamma V_{t}+(1-\gamma)S_{t-1}+\varepsilon_{t}-(1-\gamma)\ \varepsilon_{t-1}\\
-S_{t} & = & \beta_{1}+\beta_{2}S_{t-1}+\beta_{3}V_{t}+u_{t}
+S_{t} & = & \beta_{1}+\beta_{2}V_{t}+\beta_{3}S_{t-1}+u_{t}
 \end{eqnarray*}
 
 \end_inset
@@ -9501,9 +9501,9 @@ Se a torto utilizzassimo la formula per la varianza di
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-Var(\widehat{\alpha}) & = & \frac{\widehat{\sigma}^{2}}{\sum y_{t-1}^{2}},\\
+\hat{Var}(\widehat{\alpha}) & = & \frac{\widehat{\sigma}^{2}}{\sum y_{t-1}^{2}},\\
 \widehat{\sigma}^{2}=\frac{1}{n-1}\sum\widehat{\varepsilon}_{t}^{2}=\frac{1}{n-1}\sum\left(y_{t}-\widehat{\alpha}y_{t-1}\right)^{2}\\
-Var(\widehat{\alpha}) & \simeq & \frac{\frac{1}{n}\sum\left(y_{t}^{2}-2\widehat{\alpha}y_{t}y_{t-1}+\widehat{\alpha}^{2}y_{t-1}^{2}\right)}{\sum y_{t-1}^{2}}\\
+\hat{Var}(\widehat{\alpha}) & \simeq & \frac{\frac{1}{n}\sum\left(y_{t}^{2}-2\widehat{\alpha}y_{t}y_{t-1}+\widehat{\alpha}^{2}y_{t-1}^{2}\right)}{\sum y_{t-1}^{2}}\\
  & = & \frac{1}{n}\frac{\sum y_{t}^{2}-\widehat{\alpha}\sum y_{t}y_{t-1}}{\sum y_{t-1}^{2}}\simeq\frac{1}{n}\left(1-\widehat{\alpha}^{2}\right)
 \end{eqnarray*}
 
