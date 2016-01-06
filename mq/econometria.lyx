@@ -12355,7 +12355,7 @@ L'effetto dinamico di lungo periodo:
 \begin_layout Standard
 \begin_inset Formula 
 \[
-b=B(1)_{\infty}=\frac{\beta(1)}{\alpha(1)}=\frac{0.48}{0.64}=0.8\text{ (propensione marginale di L.P.)}
+b=B(1)_{\infty}=\frac{\beta(1)}{\alpha(1)}=\frac{0.64}{0.8}=0.8\text{ (propensione marginale di L.P.)}
 \]
 
 \end_inset
@@ -13409,22 +13409,6 @@ reference "error correction formulation"
  Questa equazione è alla base dell'approccio delle serie storiche per il
  concetto di cointegrazione.
  L'equazione (
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "error correction formulation"
-
-\end_inset
-
-) non è direttamente stimabile in quanto il parametro 
-\begin_inset Formula $b$
-\end_inset
-
- non è conosciuto.
-\end_layout
-
-\begin_layout Standard
-\noindent
-L'equazione (
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "error correction formulation"
