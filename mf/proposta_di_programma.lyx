@@ -107,7 +107,7 @@ Prof.
 
 \shape smallcaps
 \size small
-semestre estivo
+semestre primaverile
 \end_layout
 
 \begin_layout Standard
@@ -504,7 +504,32 @@ status collapsed
 
 \end_inset
 
- Portafoglio efficiente: concetti generali e definizione 
+ Teoria delle decisioni 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+2.6
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Portafoglio efficiente
 \end_layout
 
 \end_deeper
@@ -1436,8 +1461,13 @@ Value-at-Risk: Theory and Practice
 \begin_layout Itemize
 Hull, John C., 
 \emph on
-Options, futures, and other derivatives, 9th ed., Upper Saddle River, NJ
- (2015).
+Options, futures, and other derivatives, 9th ed.,
+\emph default
+ Upper Saddle River, NJ (2015).
+\end_layout
+
+\begin_layout Itemize
+Pennacchi, George, Theory of Asset Pricing, Prentice Hall (2008).
 \end_layout
 
 \begin_layout Itemize
@@ -1466,8 +1496,9 @@ Law of 17 December 2010 relating to undertakings for collective investment,
 Committee of European Security Regulators, 
 \emph on
 CERS’s Guidelines on Risk Measurement and the Calculation of Global Exposure
- and Counterparty Risk for UCITS, CESR/10-788 (2010)
+ and Counterparty Risk for UCITS,
 \emph default
+ CESR/10-788 (2010).
  
 \end_layout
 
