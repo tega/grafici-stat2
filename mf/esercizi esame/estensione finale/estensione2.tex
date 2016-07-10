@@ -1,0 +1,95 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.00.0.2312}
+%TCIDATA{LastRevised=Monday, July 04, 2005 15:51:57}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\input{tcilatex}
+
+\begin{document}
+
+
+{\Large Esercizio 2}
+
+\bigskip
+
+E' dato un portafoglio con valuta di riferimento chf. Il vostro universo
+titoli comprende $UBS$, $BASF$ ed un conto corrente in euro. Il portafoglio 
+\`{e} costituito da una posizione azionaria in chf, diciamo $1^{\prime }000$
+chf in $UBS$ ed una posizione cash di $1^{\prime }000$ Euro ad interesse 0.
+Il prezzo di $UBS$ oggi \`{e} di chf $100.-$, quello di $BASF$ (in euro) 
+\`{e} di $55.-$ ed infine il cambio euro franco \`{e} pari a $1.55$.
+
+\begin{enumerate}
+\item Quanti sono i fattori di rischio di questo portafoglio e perch\'{e}?
+
+\item Calcolate il valore del portafoglio in chf e le posizioni percentuali
+investite nei due strumenti.
+
+\item Avete a disposizione la seguente matrice di covarianza, stimata
+utilizzando i rendimenti logaritmici giornalieri e poi \emph{annualizzata}:%
+\[
+\Sigma =\left[ 
+\begin{array}{cccc}
+& UBS & BASF & EUR \\ 
+UBS & 0.02643 & 0.00966 & 0.00057 \\ 
+BASF &  & 0.02486 & 0.00018 \\ 
+EUR &  &  & 0.00081%
+\end{array}%
+\right] 
+\]%
+Allo stesso modo il vettore dei rendimenti logaritmici attesi \`{e} dato da%
+\[
+\mu =\left[ 
+\begin{array}{cc}
+UBS & 5\% \\ 
+BASF & 8\% \\ 
+EUR & 1\%%
+\end{array}%
+\right] .
+\]%
+Si noti che per quanto riguarda $BASF$ si tratta di rendimenti in valuta
+locale, cio\'{e} in \emph{euro}!
+
+\begin{enumerate}
+\item Calcolate il vettore dei rendimenti logaritmici attesi in moneta di
+riferimento, cio\'{e} in chf.
+
+\item Calcolate la matrice delle covarianze dei rendimenti logaritmici in
+chf.
+
+\item Calcolate il vettore delle volatilit\`{a} annue.
+\end{enumerate}
+
+Supponiamo ora un random walk geometrico con drift quale modello generatore
+dei rendimenti ed un orizzonte temporale per il calcolo de VaR pari ad 1
+mese. 
+
+\item Calcolate il rendimento atteso e la varianza a un mese del portafoglio
+attuale.
+
+\item Calcolate il VaR a 1 mese del portafoglio attuale ad un livello di
+confidenza del $5\%$.
+
+\item Avete a disposizione i sequenti rendimenti logaritmici storici \emph{%
+giornalieri} e desiderate calcolare il VaR:%
+\[
+\begin{array}{cccc}
+& UBS & BASF & EUR \\ 
+t=1 & 0.009 & 0.022 & 0.001 \\ 
+t=2 & 0.011 & -0.012 & 0.002 \\ 
+t=3 & -0.002 & -0.003 & 0.015%
+\end{array}%
+\]
+
+\begin{enumerate}
+\item Eseguite un solo campionamento utilizzando la tecnica di simulazione
+storica scegliendo una qualsiasi delle tre date.
+
+\item Secondo quale distribuzione discreta devono essere campionate le date?
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

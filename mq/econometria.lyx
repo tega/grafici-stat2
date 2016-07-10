@@ -11068,19 +11068,16 @@ I pesi
 
 \begin_layout Standard
 Questo ci permette di definire il profilo dei ritardi, cioé il grafico dei
- coefficienti "standardizzati".
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
+ coefficienti "standardizzati", vedi Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "esempio profilo dei ritardi"
 
 \end_inset
 
-
-\begin_inset VSpace 5cm
+.
+ 
+\begin_inset VSpace medskip
 \end_inset
 
 
@@ -11088,11 +11085,53 @@ Questo ci permette di definire il profilo dei ritardi, cioé il grafico dei
 
 \begin_layout Standard
 \noindent
-È possibile definire il ritardo medio
+È possibile infine definire il ritardo medio
 \begin_inset Formula 
 \[
 \overline{R}=\sum_{i=0}^{\infty}ip_{i}=\sum_{i=0}^{\infty}i\frac{b_{i}}{b}=\frac{\sum_{i=0}^{\infty}ib_{i}}{\sum_{i=0}^{\infty}b_{i}}
 \]
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename profilo_dei_ritardi.ps
+	scale 40
+	scaleBeforeRotation
+	rotateAngle -90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di profilo dei ritardi
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "esempio profilo dei ritardi"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -11330,15 +11369,41 @@ Come in precedenza si ammette un numero
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename profilo_ritardi_lineare.ps
+	scale 40
+	rotateAngle -90
 
 \end_inset
 
 
-\begin_inset VSpace 5cm
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di profilo lineare
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -11431,15 +11496,41 @@ Nel caso specifico abbiamo generato i coefficienti
 .
  Questo profilo è troppo restrittivo.
  Un profilo che all'inizio aumenta e poi diminuisce
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename profilo_ritardi_quadratico.ps
+	scale 40
+	rotateAngle -90
 
 \end_inset
 
 
-\begin_inset VSpace 5cm
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di profilo quadratico
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
 \end_inset
 
 
@@ -11455,24 +11546,7 @@ b_{i}=h_{0}+h_{1}i+h_{2}i^{2}
 
 \end_inset
 
-mentre un profilo 
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
-
-\end_inset
-
-
-\begin_inset VSpace 5cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-con un polinomio di terzo grado 
+mentre un polinomio di terzo grado 
 \begin_inset Formula 
 \[
 b_{i}=h_{0}+h_{1}i+h_{2}i^{2}+h_{3}i^{3}
@@ -11480,7 +11554,56 @@ b_{i}=h_{0}+h_{1}i+h_{2}i^{2}+h_{3}i^{3}
 
 \end_inset
 
+ può approssimare profili come quelli presentati in Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "profilo terzo grado"
 
+\end_inset
+
+.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename profilo_ritardi_cubico.ps
+	scale 40
+	rotateAngle -90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di profilo di grado 3
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "profilo terzo grado"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -11498,6 +11621,22 @@ b_{i}=h_{0}+h_{1}i+\ldots+h_{s}i^{s}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\series bold
+Osservazione
+\series default
+: negli esempi precedenti è stato utilizzato un ritardo massimo di 
+\begin_inset Formula $10$
+\end_inset
+
+.
+ Ovviamente questo è solo un esempio.
+ Nella realtà i ritardi potrebbero essere inferiori o superiori a seconda
+ del modello e della frequenza di campionamento dei dati.
 \end_layout
 
 \begin_layout Section
@@ -11544,35 +11683,7 @@ name "progressione geo"
 
 \end_inset
 
-La progressione geometrica decrescente
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
-
-\end_inset
-
-
-\begin_inset VSpace 5cm
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{esempio}
-\end_layout
-
-\end_inset
-
-
+La progressione geometrica decrescente 
 \end_layout
 
 \begin_layout Standard
@@ -11584,6 +11695,40 @@ b_{2} & = & b_{0}c^{2}\\
  &  & \vdots\\
 b_{s} & = & b_{0}c^{s}
 \end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename profilo_progressione_geom1.ps
+	scale 40
+	rotateAngle -90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Profilo dei ritardi - progressione geometrica decrescente
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -11694,6 +11839,22 @@ status open
 
 
 \backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
 begin{esempio}
 \end_layout
 
@@ -11726,19 +11887,6 @@ end{esempio}
 \noindent
 È immaginabile che la progressione geometrica decrescente si manifesti non
  già all'inizio ma soltanto a partire da un certo ritardo.
- 
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
-
-\end_inset
-
-
-\begin_inset VSpace 5cm
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -11754,6 +11902,45 @@ b_{4} & = & b_{2}c^{2}\\
 
 \end_inset
 
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename profilo_progressione_geom2.ps
+	scale 40
+	rotateAngle -90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Secondo esempio di progressione geometrica decrescente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
 In una situazione del genere, applicando la tecnica utilizzata precedentemente,
  si ottiene
 \begin_inset Formula 
@@ -12447,15 +12634,37 @@ b & = & b_{0}+b_{1}+b_{2}+\ldots\\
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Formula 
-\[
-\text{grafico}
-\]
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename profilo_esempio_funzione_consumo.ps
+	scale 40
+	rotateAngle -90
 
 \end_inset
 
 
-\begin_inset VSpace 5cm
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Profilo dei ritardi della funzione di consumo
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -12594,21 +12803,6 @@ La covarianza fra due termini della serie è unicamente funzione della distanza
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
-
-\end_inset
-
-
-\begin_inset VSpace 5cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -12622,14 +12816,35 @@ begin{esempio}
 \end_inset
 
  Rumore bianco (White Noise) 
-\begin_inset ERT
-status open
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename esempio_white_noise.ps
+	scale 30
+	rotateAngle -90
+
+\end_inset
 
 
-\backslash
-end{esempio}
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Serie storica stazionaria white noise.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -12646,9 +12861,23 @@ end{esempio}
 \end_inset
 
 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\noindent
 \begin_inset ERT
 status open
 
@@ -12693,6 +12922,44 @@ u_{t}\sim iid(0,\sigma^{2})\\
 |\rho|<1
 \end{array}\right.
 \]
+
+\end_inset
+
+
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename esempio_ar1.ps
+	scale 30
+	rotateAngle -90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Serie storica stazionaria AR(1) con 
+\begin_inset Formula $\rho=0.99$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -12742,6 +13009,40 @@ begin{esempio}
 \end_inset
 
  
+\end_layout
+
+\begin_layout Standard
+\noindent
+Un modello 
+\begin_inset Formula $ARMA(1,2)$
+\end_inset
+
+ è definito dalla seguente equazione:
+\begin_inset Formula 
+\begin{eqnarray*}
+x_{t} & = & a+b_{1}x_{t-1}+u_{t}+c_{1}u_{t-1}+c_{2}u_{t-2}.\\
+u_{t} & \sim & iid(0,\sigma^{2})
+\end{eqnarray*}
+
+\end_inset
+
+Il coefficiente 
+\begin_inset Formula $p$
+\end_inset
+
+ indica il numero di ritardi nella variabile endogena 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+ mentre il coefficiente 
+\begin_inset Formula $q$
+\end_inset
+
+ indica il numero di ritardi nel termine d'errore 
+\begin_inset Formula $u_{t}$
+\end_inset
+
+.
 \begin_inset ERT
 status open
 
@@ -12780,15 +13081,38 @@ La correlazione fra due termini della serie tende verso uno quando la distanza
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename CPI_US_SADJ.ps
+	scale 40
+	rotateAngle -90
 
 \end_inset
 
 
-\begin_inset VSpace 5cm
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Serie storica CPI US (seasonal adjusted).
+ Fonte: Datastream.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -12883,11 +13207,8 @@ Due autori sono arrivati alla conclusione che quasi tutte le variabili macroecon
 omiche sono non stazionarie (Nelson e Plosser).
  Si cerca quindi di rendere stazionarie le variabili prima di eseguire l'analisi
  econometrica.
-\end_layout
-
-\begin_layout Standard
-\noindent
-Una serie 
+ Introduciamo a tal fine il concetto di serie storica integrata: una serie
+ 
 \begin_inset Formula $\left\{ \varepsilon_{t}\right\} $
 \end_inset
 
@@ -13431,15 +13752,38 @@ Due serie non stazionarie possono ammettere una relazione stabile di lungo
  periodo, vale a dire che sebbene prese singolarmente le due serie tendano
  a divergere indefinitamente, lo scarto dell'una rispetto all'altra è qualcosa
  di stabile o più propriamente detto qualcosa di stazionario.
-\begin_inset Formula 
-\[
-\text{Grafico}
-\]
+ 
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename esempio_cointegrazione.ps
+	scale 40
+	rotateAngle -90
 
 \end_inset
 
 
-\begin_inset VSpace 5cm
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Esempio di serie storiche cointegrate.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 

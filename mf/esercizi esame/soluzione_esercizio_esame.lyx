@@ -1,0 +1,798 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language italian
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part*
+
+\size larger
+Esercizio d'esame
+\end_layout
+
+\begin_layout Section*
+Soluzione
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+E' dato un portafoglio la cui valuta di riferimento è il franco svizzero
+ (
+\begin_inset Formula $CHF$
+\end_inset
+
+).
+ Il vostro universo titoli comprende azioni di 
+\begin_inset Formula $UBS$
+\end_inset
+
+ in 
+\begin_inset Formula $CHF$
+\end_inset
+
+, azioni di 
+\begin_inset Formula $BASF$
+\end_inset
+
+ in euro (
+\begin_inset Formula $EUR$
+\end_inset
+
+) ed un conto corrente in 
+\begin_inset Formula $EUR$
+\end_inset
+
+.
+ Le posizioni attuali in portafoglio comprendono
+\end_layout
+
+\begin_layout Itemize
+una posizione in azioni 
+\begin_inset Formula $UBS$
+\end_inset
+
+ del valore di 1'000 
+\begin_inset Formula $CHF$
+\end_inset
+
+; 
+\end_layout
+
+\begin_layout Itemize
+una posizone cash in conto corrente di 1'000 
+\begin_inset Formula $EUR$
+\end_inset
+
+ (zero interesse).
+\end_layout
+
+\begin_layout Standard
+Il prezzo attuale di 
+\begin_inset Formula $UBS$
+\end_inset
+
+ è di 
+\begin_inset Formula $CHF$
+\end_inset
+
+ 
+\begin_inset Formula $100.-$
+\end_inset
+
+, quello di 
+\begin_inset Formula $BASF$
+\end_inset
+
+ è di 
+\begin_inset Formula $EUR$
+\end_inset
+
+ 
+\begin_inset Formula $55.-$
+\end_inset
+
+ ed infine il cambio euro franco è pari a 
+\begin_inset Formula $1.55$
+\end_inset
+
+ 
+\begin_inset Formula $CHF/EUR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Quanti sono i fattori di rischio di questo portafoglio e perché?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+I fattori di rischio presenti al momento nel portafoglio sono solo 2.
+ In particolare, la posizione cash essendo in euro è soggetta al rischio
+ di cambio.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calcolate il valore del portafoglio in 
+\begin_inset Formula $CHF$
+\end_inset
+
+ e le posizioni percentuali investite nei due strumenti.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $V_{0}=1000+1000\ast1.55=2550$
+\end_inset
+
+ 
+\begin_inset Formula $CHF$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w=\left[\begin{array}{cc}
+UBS & 1000/2550\\
+BASF & 0\\
+EUR & 1550/2550
+\end{array}\right]=\left[\begin{array}{cc}
+UBS & 39\%\\
+BASF & 0\\
+EUR & 61\%
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Avete a disposizione la seguente matrice di covarianza, stimata utilizzando
+ i rendimenti logaritmici giornalieri e poi 
+\emph on
+annualizzata
+\emph default
+:
+\begin_inset Formula 
+\[
+\Sigma=\left[\begin{array}{cccc}
+ & UBS & BASF & EUR\\
+UBS & 0.02643 & 0.00966 & 0.00057\\
+BASF &  & 0.02486 & 0.00018\\
+EUR &  &  & 0.00081
+\end{array}\right]
+\]
+
+\end_inset
+
+Allo stesso modo il vettore dei rendimenti logaritmici attesi è dato da
+\begin_inset Formula 
+\[
+\mu=\left[\begin{array}{cc}
+UBS & 5\%\\
+BASF & 8\%\\
+EUR & 1\%
+\end{array}\right].
+\]
+
+\end_inset
+
+Si noti che per quanto riguarda 
+\begin_inset Formula $BASF$
+\end_inset
+
+ si tratta del rendimento atteso in valuta locale, cioé in 
+\begin_inset Formula $EUR$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Calcolate il vettore dei rendimenti logaritmici attesi in moneta di riferimento.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dalla relazione 
+\begin_inset Formula 
+\[
+P_{BASF}^{chf}=P_{BASF}^{eur}\ast e
+\]
+
+\end_inset
+
+si ricava semplicemente applicando la definizione di rendimento logaritmico
+ e la proprietà della funzione 
+\begin_inset Formula $\ln$
+\end_inset
+
+ che
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+r_{BASF}^{chf}=r_{BASF}^{eur}+r_{e}.\label{eq1}
+\end{equation}
+
+\end_inset
+
+Avremo quindi che 
+\begin_inset Formula 
+\[
+\mu^{chf}=\left[\begin{array}{cc}
+UBS & 5\%\\
+BASF & 8\%+1\%\\
+EUR & 1\%
+\end{array}\right]=\left[\begin{array}{cc}
+UBS & 5\%\\
+BASF & 9\%\\
+EUR & 1\%
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calcolate la matrice delle covarianze dei rendimenti logaritmici in moneta
+ di riferimento.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Dalla (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq1"
+
+\end_inset
+
+) abbiamo: 
+\begin_inset Formula 
+\begin{eqnarray*}
+V(r_{BASF}^{chf}) & = & V(r_{BASF}^{eur})+V(r_{e})+2Cov(r_{BASF}^{eur},r_{e})\\
+ & = & 0.02486+0.00081+0.00018\\
+ & = & 0.02585\\
+Cov(r_{BASF}^{chf},r_{e}) & = & Cov(r_{BASF}^{eur},r_{e})+Cov(r_{e},r_{e})\\
+ & = & Cov(r_{BASF}^{eur},r_{e})+V(r_{e})\\
+ & = & 0.00018+0.00081\\
+ & = & 0.00099\\
+Cov(r_{BASF}^{chf},r_{UBS}) & = & Cov(r_{BASF}^{eur},r_{UBS})+Cov(r_{e},r_{UBS})\\
+ & = & 0.00966+0.00057\\
+ & = & 0.01023
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La matrice di covarianza in chf è pertanto uguale a 
+\begin_inset Formula 
+\[
+\Sigma^{chf}=\left[\begin{array}{cccc}
+ & UBS & BASF & EUR\\
+UBS & 0.02643 & 0.01023 & 0.00057\\
+BASF &  & 0.02585 & 0.00099\\
+EUR &  &  & 0.00081
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calcolate il vettore delle volatilità annue in moneta di riferimento.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma^{chf}=\sqrt{diag(\Sigma^{chf})}=\left[\begin{array}{cc}
+UBS & 16.25\%\\
+BASF & 16.07\%\\
+EUR & 2.84\%
+\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Supponiamo ora un random walk geometrico con drift quale modello generatore
+ dei rendimenti ed un orizzonte temporale per il calcolo de VaR pari ad
+ 1 mese.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calcolate il rendimento atteso e la varianza a un mese del portafoglio attuale.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Vedete calcolo foglio excel allegato per il calcolo del rendimento atteso
+ e la varianza.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calcolate il VaR a 1 mese del portafoglio attuale ad un livello di confidenza
+ del 
+\begin_inset Formula $5\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Il 
+\begin_inset Formula $VaR(5\%,1m)$
+\end_inset
+
+ sarà dato da meno il 5%-quantile di una variabile aleatoria 
+\begin_inset Formula $N(\mu_{1m},\sigma_{1m}^{2})$
+\end_inset
+
+ cioè 
+\begin_inset Formula 
+\begin{eqnarray*}
+VaR(5\%,1Mese) & = & -\left(\mu_{1mese}+\sigma_{1mese}\ast q_{5\%}\right)\\
+ & = & 2.49\%
+\end{eqnarray*}
+
+\end_inset
+
+(per il calcolo si veda foglio excel)
+\end_layout
+
+\begin_layout Standard
+Quindi con una probabilità del 
+\begin_inset Formula $5\%$
+\end_inset
+
+ sull'arco del prossimo mese il portafoglio potrà perdere 
+\begin_inset Formula $2.49\%$
+\end_inset
+
+ (63.50 
+\begin_inset Formula $CHF$
+\end_inset
+
+) o più.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Avete a disposizione i sequenti rendimenti logaritmici storici 
+\emph on
+giornalieri
+\emph default
+ (in moneta locale) e desiderate calcolare il VaR:
+\begin_inset Formula 
+\[
+\begin{array}{cccc}
+ & UBS & BASF & EUR\\
+t=1 & 0.009 & 0.022 & 0.001\\
+t=2 & 0.011 & -0.012 & 0.002\\
+t=3 & -0.002 & -0.003 & 0.015
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Eseguite un solo campionamento utilizzando la tecnica di simulazione storica
+ scegliendo una qualsiasi delle tre date.
+ Spiegate come procedereste.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Abbiamo a disposizione dati giornalieri dai quali abbiamo stimato il rendimento
+ atteso e la varianza (le covarianze non ci interessano in questo caso)
+ utilizzando il modello random walk con drift che nella sua generalità è
+ scritto come 
+\begin_inset Formula 
+\begin{equation}
+r_{t+\Delta t}=\Delta t\mu+\sigma\sqrt{\Delta t}\varepsilon_{t+\Delta t},\;con\varepsilon_{t+\Delta t}\sim N(0,1)
+\end{equation}
+
+\end_inset
+
+Scegliendo quindi 
+\begin_inset Formula $t=giorni$
+\end_inset
+
+ e 
+\begin_inset Formula $\Delta t=1$
+\end_inset
+
+ otteniamo 
+\begin_inset Formula 
+\begin{equation}
+r_{t+1}=\mu_{1g}+\sigma_{1g}\varepsilon_{t+1}\label{eq2}
+\end{equation}
+
+\end_inset
+
+e risolvendo rispetto a 
+\begin_inset Formula $\varepsilon_{t+1}$
+\end_inset
+
+ si ottiene 
+\begin_inset Formula 
+\[
+\varepsilon_{t+1}=\frac{r_{t+1}-\mu_{1g}}{\sigma_{1g}}.
+\]
+
+\end_inset
+
+Avendo a disposizione una stima di 
+\begin_inset Formula $\mu$
+\end_inset
+
+ e 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, diciamo 
+\begin_inset Formula $\widehat{\mu}$
+\end_inset
+
+ e 
+\begin_inset Formula $\widehat{\sigma}$
+\end_inset
+
+, possiamo calcolare l'errore stimato 
+\begin_inset Formula $\widehat{\varepsilon}_{t+1}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\widehat{\varepsilon}_{t+1}=\frac{r_{t+1}-\widehat{\mu}_{1g}}{\widehat{\sigma}_{1g}}.
+\]
+
+\end_inset
+
+Possiamo in questo modo, utilizzando i rendimenti giornalieri ed i parametri
+ stimati 
+\begin_inset Formula $\widehat{\mu}_{1g}$
+\end_inset
+
+ e 
+\begin_inset Formula $\widehat{\sigma}_{1g}$
+\end_inset
+
+, ottenere una serie di innovazioni stimate 
+\begin_inset Formula $\widehat{\varepsilon}_{t},\;t=1,\ldots N$
+\end_inset
+
+ estratte da una 
+\begin_inset Formula $N(0,1)$
+\end_inset
+
+.
+ Queste realizzazioni verranno utilizzate nel modesimo modello con 
+\begin_inset Formula $t=mesi$
+\end_inset
+
+.
+ Infatti, sappiamo che se scegliamo 
+\begin_inset Formula $t=mesi$
+\end_inset
+
+ e 
+\begin_inset Formula $\Delta t=1$
+\end_inset
+
+, avremo l'analogo dell'equazione (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq2"
+
+\end_inset
+
+), e cioè 
+\begin_inset Formula 
+\begin{equation}
+r_{t+1}=\mu_{1m}+\sigma_{1m}\varepsilon_{t+1},\;\varepsilon_{t+1}\sim N(0,1)\label{eq3}
+\end{equation}
+
+\end_inset
+
+Ora, scalando propriamente il rendimento atteso e la varianza stimati possiamo
+ simulare rendimenti mensili utilizzando l'equazione (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq3"
+
+\end_inset
+
+) e le innovazioni 
+\begin_inset Formula $\widehat{\varepsilon}_{t}$
+\end_inset
+
+ stimate su dati giornalieri.
+ La procedura è la seguente:
+\end_layout
+
+\begin_layout Enumerate
+Campioniamo casualmente un numero compreso fra 
+\begin_inset Formula $1$
+\end_inset
+
+ ed 
+\begin_inset Formula $N$
+\end_inset
+
+, nel nostro caso 
+\begin_inset Formula $N=3$
+\end_inset
+
+.
+ Supponiamo d'aver ottenuto 2.
+\end_layout
+
+\begin_layout Enumerate
+Calcoliamo una simulazione mensile di 
+\begin_inset Formula $r_{1m}$
+\end_inset
+
+, notata 
+\begin_inset Formula $\widetilde{r}_{1m}$
+\end_inset
+
+ utilizzando la (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq3"
+
+\end_inset
+
+), cioè
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\widetilde{r}_{1m}=\widehat{\mu}_{1m}+\widehat{\sigma}_{1m}\widehat{\varepsilon}_{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Conoscendo il valore attuale dello strumento 
+\begin_inset Formula $P_{0}$
+\end_inset
+
+ e sapendo che 
+\begin_inset Formula $r_{1m}=\ln\left(P_{1m}/P_{0}\right)$
+\end_inset
+
+ otteniamo che 
+\begin_inset Formula 
+\begin{equation}
+\widetilde{P}_{1m}=P_{0}\exp(\widetilde{r}_{1m})\label{eq4}
+\end{equation}
+
+\end_inset
+
+Questa tuttavia non è la formula finale.
+ Partendo dalla (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq4"
+
+\end_inset
+
+) possiamo scrivere 
+\begin_inset Formula $\widetilde{P}_{1m}$
+\end_inset
+
+ in funzione di 
+\begin_inset Formula $\widehat{\mu}_{1m},\;\widehat{\sigma}_{1m},\;\mu_{1g},\;\sigma_{1g}\;$
+\end_inset
+
+ed il rendimento giornaliero 
+\begin_inset Formula $r_{2}:$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{eqnarray}
+\widetilde{P}_{1m} & = & P_{0}\exp(\widehat{\mu}_{1m}+\widehat{\sigma}_{1m}\widehat{\varepsilon}_{2})=P_{0}\exp\left(\widehat{\mu}_{1m}+\widehat{\sigma}_{1m}\frac{r_{2}-\widehat{\mu}_{1g}}{\widehat{\sigma}_{1g}}\right)\nonumber \\
+ & = & P_{0}\exp\left(\widehat{\mu}_{1m}+\frac{\widehat{\sigma}_{1m}}{\widehat{\sigma}_{1g}}\left(r_{2}-\widehat{\mu}_{1g}\right)\right)\nonumber \\
+ & = & P_{0}\exp\left(\widehat{\mu}_{1m}+\sqrt{21}\left(r_{2}-\widehat{\mu}_{1g}\right)\right)\nonumber \\
+ & = & P_{0}\exp\left(\widehat{\mu}_{1m}-\sqrt{21}\widehat{\mu}_{1g}+\sqrt{21}r_{2}\right)\nonumber \\
+ & = & P_{0}\exp\left(\sqrt{21}\widehat{\mu}_{1g}(\sqrt{21}-1)+\sqrt{21}r_{2}\right)\label{eq5}
+\end{eqnarray}
+
+\end_inset
+
+L'ultima equazione, equazione (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq5"
+
+\end_inset
+
+) è la formula finale.
+ Da questa formula si nota che al lato pratico non è necessario calcolare
+ 
+\begin_inset Formula $\widehat{\varepsilon}_{2}$
+\end_inset
+
+ per eseguire la simulazione storica.
+ Noi l'abbiamo calcolato a fini didattici, cioè per meglio comprendere l'idea
+ sottostante e, in ultima analisi, perché e come si giunge all'equazione
+ (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq5"
+
+\end_inset
+
+).
+ Come vedete, non è necessario calcolare le covarianze fra rendimenti di
+ strumenti diversi.
+ Tuttavia sarà obbligatorio campionare 
+\family typewriter
+per tutti gli strumenti rendimenti dello stesso istante
+\family default
+, nel nostro esempio cioè con 
+\begin_inset Formula $t=2.$
+\end_inset
+
+ Un'ultima osservazione: su orizzonti brevi, cioè 1 giorno, 1 o 2 settimane
+ è possibile porre 
+\begin_inset Formula $\widehat{\mu}_{1g}=0$
+\end_inset
+
+ così da ottenere la semplice espressione 
+\begin_inset Formula 
+\[
+\widetilde{P}_{1m}=P_{0}\exp\left(\sqrt{21}r_{t}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Avendo ricalcolato tutti i prezzi dei fattori di rischio rivalutate il portafogl
+io così da ottenere un valore simulato 
+\begin_inset Formula $\widetilde{V}_{1m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Ripetete il tutto 1000 volte ed utilizzate la distribuzione empirica delle
+ simulazioni per calcolare il quantile.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Secondo quale distribuzione discreta devono essere campionate le date? 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Le date devono essere estratte casualmente campionando in maniera uniforme
+ tramite la tecnica di selezione con reinserimento.
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_body
+\end_document

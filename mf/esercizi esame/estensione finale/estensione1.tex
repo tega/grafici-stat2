@@ -1,0 +1,107 @@
+
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=4.00.0.2312}
+%TCIDATA{LastRevised=Friday, July 08, 2005 08:57:18}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+\input{tcilatex}
+
+\begin{document}
+
+
+{\Large Esercizio 1}
+
+\bigskip
+
+Sono date due azioni $A$ e $B$ i cui prezzi alla data $t$ sono notati con $%
+S_{t}^{A}$ rispettivamente $S_{t}^{B}$. Per quanto riguarda la dinamica dei
+prezzi azionari si assume per entrambe le azioni un modello di tipo random
+walk geometrico con drift, cio\'{e}
+
+\begin{eqnarray}
+\ln S_{t+\Delta t}^{A} &=&\ln S_{t}^{A}+\mu ^{A}\Delta t+\sigma ^{A}\sqrt{%
+\Delta t}\ \varepsilon _{t+\Delta t}^{A}  \label{eq1} \\
+\ln S_{t+\Delta t}^{B} &=&\ln S_{t}^{B}+\mu ^{B}\Delta t+\sigma ^{B}\sqrt{%
+\Delta t}\ \varepsilon _{t+\Delta t}^{B}  \label{eq2}
+\end{eqnarray}
+
+Riguardo alle propriet\`a stocastiche dei termini d'errore vale quanto segue:
+
+\begin{itemize}
+\item $\{\varepsilon_{t}^A\}$ i.i.d. $N(0,1)$.
+
+\item $\{\varepsilon_{t}^B\}$ i.i.d. $N(0,1)$.
+
+\item $cov(\varepsilon_{t}^A,\varepsilon_{t}^B)=\rho \ \forall \ t$, con $%
+-1\leq \rho \leq 1$.
+
+\item $cov(\varepsilon_{t}^A,\varepsilon_{s}^B)=0, \ t \neq s$.
+\end{itemize}
+
+Notiamo che poich\'{e} la varianza degli errori \`{e} pari ad uno, $\rho $
+corrisponde al coefficiente di correlazione. Da esso dipende la covarianza
+fra i rendimenti di $A$ e $B$.
+
+\begin{enumerate}
+\item La messa in piega del modello
+
+Riscriviamo le due equazioni precedenti in forma matriciale nel modo
+seguente: 
+\begin{equation}
+\ln S_{t+\Delta t}=\ln S_{t}+\Delta t\,\mu +\sqrt{\Delta t}D\ \varepsilon
+_{t+\Delta t}  \label{eq3}
+\end{equation}
+
+\begin{enumerate}
+\item Date dimensione e contenuto di ogni simbolo.
+
+\item Calcolate la matrice di covarianza di $\varepsilon _{t+\Delta t}$,
+notata $\Omega $.
+\end{enumerate}
+
+\item Vettore dei rendimenti logaritmici
+
+Il vettore dei rendimenti logaritmici, notato $r_{t+\Delta t}$, \`{e}
+definito come 
+\begin{equation}
+r_{t+\Delta t}:=\ln S_{t+\Delta t}-\ln S_{t}=\Delta t\,\mu +\sqrt{\Delta t}%
+D\ \varepsilon _{t+\Delta t}.  \label{eq4}
+\end{equation}%
+Notate che poich\'{e} $\ln S_{t+\Delta t}$ \`{e} un vettore, non ha pi\`{u}
+senso scrivere $\ln S_{t+\Delta t}/S_{t}$! $r_{t+\Delta t}$ corrisponde come
+nel caso univariato al rendimento logaritmico riferito ad un arco temporale
+di lunghezza\footnote{%
+Ricordiamo che la scelta di $\Delta t$ dipende dall'unit\`{a} di misura di $t
+$. Se $t$ fosse misurato in anni e $\Delta t$ rappresentasse un giorno,
+allora $\Delta t=1/252\;$\ (in un anno ci sono approssimativamente $21\times
+12=252$ giorni lavorativi), mentre se $\Delta t$ rappresentasse un mese,
+allora $\Delta t=1/12$. Se invece scegliessimo quale unit\`{a} di misura di $%
+t$ il giorno, allora un $\Delta t$ di un mese sarebbe pari a $\Delta t=21$.} 
+$\Delta t$.
+
+\begin{enumerate}
+\item Si dia il significato di $\mu $ e di $D$.
+\end{enumerate}
+
+\item La matrice di varianza covarianza
+
+\begin{enumerate}
+\item Utilizzando le propriet\`{a} di una trasformazione lineare di un
+vettore aleatorio calcolate valore atteso e matrice delle covarianze di $%
+r_{t+\Delta t}$.
+
+\item Dimostrate che valore atteso e varianza del rendimento su $n\,\Delta t$
+periodi, $\ln S_{t+n\Delta t}-\ln S_{t}$, \`{e} pari a $n\,\Delta t\,\mu $
+rispettivamente $n\,\Delta tD\Omega D$. Date esplicitamente il contenuto di $%
+n\,\Delta tD\Omega D$ in funzione di $\Delta t,$\ $\sigma ^{A},$\ $\sigma
+^{B}$ e $\rho $.
+
+\item Avete stimato la matrice di covarianza utilizzando dati giornalieri
+dalla quale estraete $\widehat{cov}(r^{A},r^{B})=1.4$. Date la covarianza
+fra i rendimenti mensili.
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,287 @@
+
+\documentclass[a4paper,12pt]{article}
+
+
+\begin{document}
+
+
+\noindent{\Large Soluzione esercizio 2}
+
+\bigskip
+
+E' dato un portafoglio con valuta di riferimento chf. Il vostro universo
+titoli comprende $UBS$, $BASF$ ed un conto corrente in euro. Il portafoglio
+\`{e} costituito da una posizione azionaria in chf, diciamo $1^{\prime }000$
+chf in $UBS$ ed una posizione cash di $1^{\prime }000$ Euro ad interesse 0.
+Il prezzo di $UBS$ oggi \`{e} di chf $100.-$, quello di $BASF$ (in euro)
+\`{e} di $55.-$ ed infine il cambio euro franco \`{e} pari a $1.55$.
+
+\begin{enumerate}
+\item  Quanti sono i fattori di rischio di questo portafoglio e perch\'{e}?
+
+I fattori di rischio presenti al momento nel portafoglio sono solo 2. In
+particolare, la posizione cash essendo in euro \`{e} soggetta al rischio di
+cambio.
+
+\item  Calcolate il valore del portafoglio in chf e le posizioni percentuali
+investite nei tre strumenti.
+
+$V_{0}=1000+1000\ast 1.55=2550$ chf.
+
+\[
+w=\left[ 
+\begin{array}{cc}
+UBS & 1000/2550 \\ 
+BASF & 0 \\ 
+EUR & 1550/2550
+\end{array}
+\right] =\left[ 
+\begin{array}{cc}
+UBS & 39\% \\ 
+BASF & 0 \\ 
+EUR & 61\%
+\end{array}
+\right] 
+\]
+
+\item  Avete a disposizione la seguente matrice di covarianza, stimata
+utilizzando i rendimenti logaritmici giornalieri e poi \emph{annualizzata}:
+\[
+\Sigma =\left[ 
+\begin{array}{cccc}
+& UBS & BASF & EUR \\ 
+UBS & 0.02643 & 0.00966 & 0.00057 \\ 
+BASF &  & 0.02486 & 0.00018 \\ 
+EUR &  &  & 0.00081
+\end{array}
+\right] 
+\]
+Allo stesso modo il vettore dei rendimenti logaritmici attesi \`{e} dato da
+\[
+\mu =\left[ 
+\begin{array}{cc}
+UBS & 5\% \\ 
+BASF & 8\% \\ 
+EUR & 1\%
+\end{array}
+\right] .
+\]
+Si noti che per quanto riguarda $BASF$ si tratta di rendimenti in valuta
+locale, cio\'{e} in \emph{euro}!
+
+\begin{enumerate}
+\item  Calcolate il vettore dei rendimenti logaritmici attesi in moneta di
+riferimento, cio\'{e} in chf.
+
+Dalla relazione 
+\[
+P_{BASF}^{chf}=P_{BASF}^{eur}\ast e
+\]
+si ricava semplicemente applicando la definizione di rendimento logaritmico
+e la propriet\`{a} della funzione $\ln $ che
+
+\begin{equation}
+r_{BASF}^{chf}=r_{BASF}^{eur}+r_e.  \label{eq1}
+\end{equation}
+Avremo quindi che 
+\[
+\mu ^{chf}=\left[ 
+\begin{array}{cc}
+UBS & 5\% \\ 
+BASF & 8\%+1\% \\ 
+EUR & 1\%
+\end{array}
+\right] =\left[ 
+\begin{array}{cc}
+UBS & 5\% \\ 
+BASF & 9\% \\ 
+EUR & 1\%
+\end{array}
+\right] .
+\]
+
+\item  Calcolate la matrice delle covarianze dei rendimenti logaritmici in
+chf.
+
+Dalla (\ref{eq1}) abbiamo:
+\begin{eqnarray*}
+V(r_{BASF}^{chf}) &=&V(r_{BASF}^{eur})+V(r_e)+2Cov(r_{BASF}^{eur},r_e) \\
+&=&0.02486+0.00081+0.00018  \nonumber \\
+&=&0.02585  \nonumber \\
+Cov(r_{BASF}^{chf},r_e) &=&Cov(r_{BASF}^{eur},r_e)+Cov(r_e,r_e)  \nonumber \\
+&=&Cov(r_{BASF}^{eur},r_e)+V(r_e) \\
+&=&0.00018+0.00081  \nonumber \\
+&=&0.00099  \nonumber \\
+Cov(r_{BASF}^{chf},r_{UBS}) &=&Cov(r_{BASF}^{eur},r_{UBS})+Cov(r_e,r_{UBS}) \\
+&=&0.00966+0.00057  \nonumber \\
+&=&0.01023  \nonumber
+\end{eqnarray*}
+
+La matrice di covarianza in chf \`{e} pertanto uguale a
+\[
+\Sigma ^{chf}=\left[ 
+\begin{array}{cccc}
+& UBS & BASF & EUR \\ 
+UBS & 0.02643 & 0.01023 & 0.00057 \\ 
+BASF &  & 0.02585 & 0.00099 \\ 
+EUR &  &  & 0.00081
+\end{array}
+\right] 
+\]
+
+\item  Calcolate il vettore delle volatilit\`{a} annue.
+
+\[
+\sigma ^{chf}=\sqrt{diag(\Sigma ^{chf})}=\left[ 
+\begin{array}{cc}
+UBS & 16.25\% \\ 
+BASF & 16.07\% \\ 
+EUR & 2.84\%
+\end{array}
+\right] 
+\]
+\end{enumerate}
+
+Supponiamo ora un random walk geometrico con drift quale modello generatore
+dei rendimenti ed un orizzonte temporale per il calcolo de VaR pari ad 1
+mese.
+
+\item  Calcolate il rendimento atteso e la varianza a un mese del
+portafoglio attuale.
+
+Vedete calcolo foglio excel allegato per il calcolo del rendimento atteso e
+la varianza.
+
+\item  Calcolate il VaR a 1 mese del portafoglio attuale ad un livello di
+confidenza del $5\%$.
+
+Il $VaR(5\%,1m)$ sar\`{a} dato da meno il 5\%-quantile di una variabile
+aleatoria $N(\mu _{1m},\sigma _{1m}^{2})$ cio\`{e}
+\begin{eqnarray*}
+VaR(5\%,1Mese) &=&-\left( \mu _{1mese}+\sigma _{1mese}\ast q_{5\%}\right)  \\
+&=&2.49\% 
+\end{eqnarray*}
+(per il calcolo si veda foglio excel)
+
+Quindi con una probabilit\`a del 5\% sull'arco del prossimo mese il portafoglio potr\`a
+perdere 2.49\% (63.50 chf) o pi\`u. 
+\item  Avete a disposizione i sequenti rendimenti logaritmici storici \emph{%
+giornalieri} e desiderate calcolare il VaR:
+\[
+\begin{array}{cccc}
+& UBS & BASF & EUR \\ 
+t=1 & 0.009 & 0.022 & 0.001 \\ 
+t=2 & 0.011 & -0.012 & 0.002 \\ 
+t=3 & -0.002 & -0.003 & 0.015
+\end{array}
+\]
+
+\begin{enumerate}
+\item  Eseguite un solo campionamento utilizzando la tecnica di simulazione
+storica scegliendo una qualsiasi delle tre date.
+
+Abbiamo a disposizione dati giornalieri dai quali abbiamo stimato il
+rendimento atteso e la varianza (le covarianze non ci interessano in questo
+caso) utilizzando il modello random walk con drift che nella sua generalit%
+\`{a} \`{e} scritto come
+\begin{equation}
+r_{t+\Delta t}=\Delta t\mu +\sigma \sqrt{\Delta t}\varepsilon _{t+\Delta
+t},\; con \varepsilon _{t+\Delta t}\sim N(0,1)
+\end{equation}
+Scegliendo quindi $t=giorni$ e $\Delta t=1$ otteniamo
+\begin{equation}
+r_{t+1}=\mu _{1g}+\sigma _{1g}\varepsilon _{t+1}  \label{eq2}
+\end{equation}
+e risolvendo rispetto a $\varepsilon _{t+1}$ si ottiene
+\[
+\varepsilon _{t+1}=\frac{r_{t+1}-\mu _{1g}}{\sigma _{1g}}.
+\]
+Avendo a disposizione una stima di $\mu $ e $\sigma $, diciamo $\widehat{\mu 
+}$ e $\widehat{\sigma }$, possiamo calcolare l'errore stimato $\widehat{%
+\varepsilon }_{t+1}$:
+\[
+\widehat{\varepsilon }_{t+1}=\frac{r_{t+1}-\widehat{\mu }_{1g}}{\widehat{%
+\sigma }_{1g}}.
+\]
+Possiamo in questo modo, utilizzando i rendimenti giornalieri ed i parametri
+stimati $\widehat{\mu }_{1g}$ e $\widehat{\sigma }_{1g}$, ottenere una serie
+di innovazioni $\widehat{\varepsilon }_{t},\;t=1,\ldots N$ estratte da una $%
+N(0,1)$. Queste realizzazioni verranno utilizzate nel modesimo modello con $%
+t=mesi$. Infatti, sappiamo che se scegliamo $t=mesi$ e $\Delta t=1$, avremo
+l'analogo dell'equazione (\ref{eq2}), e cio\`{e}
+\begin{equation}
+r_{t+1}=\mu _{1m}+\sigma _{1m}\varepsilon _{t+1},\;  %
+\varepsilon _{t+1}\sim N(0,1)  \label{eq3}
+\end{equation}
+Ora, scalando propriamente il rendimento atteso e la varianza stimati
+possiamo simulare rendimenti mensili utilizzando l'equazione (\ref{eq3}) e
+le innovazioni $\widehat{\varepsilon }_{t}$ stimate su dati giornalieri. La
+procedura \`{e} la seguente:
+
+\begin{enumerate}
+\item  Campioniamo casualmente un numero compreso fra $1$ ed $N$, nel nostro caso $N=3$.
+ Supponiamo d'aver ottenuto 2.
+
+\item  Calcoliamo una simulazione mensile di $r_{1m}$, notata $\widetilde{r}%
+_{1m}$ utilizzando la  (\ref{eq3}), cio\`{e}
+
+\[
+\widetilde{r}_{1m}=\widehat{\mu }_{1m}+\widehat{\sigma }_{1m}\widehat{%
+\varepsilon }_{2}
+\]
+
+\item  Conoscendo il valore attuale dello strumento $P_{0}$ e sapendo che $%
+r_{1m}=\ln \left( P_{1m}/P_{0}\right) $ otteniamo che
+\begin{equation}
+\widetilde{P}_{1m}=P_{0}\exp (\widetilde{r}_{1m})  \label{eq4}
+\end{equation}
+Questa tuttavia non \`{e} la formula finale. Partendo dalla (\ref{eq4})
+possiamo scrivere $\widetilde{P}_{1m}$ in funzione di $\widehat{\mu }_{1m},\;%
+\widehat{\sigma }_{1m},\;\mu _{1g},\;\sigma _{1g}\;$ed il rendimento
+giornaliero $r_{2}:$%
+\begin{eqnarray}
+\widetilde{P}_{1m} &=&P_{0}\exp (\widehat{\mu }_{1m}+\widehat{\sigma }_{1m}%
+\widehat{\varepsilon }_{2})=P_{0}\exp \left( \widehat{\mu }_{1m}+\widehat{%
+\sigma }_{1m}\frac{r_{2}-\widehat{\mu }_{1g}}{\widehat{\sigma }_{1g}}\right) 
+\nonumber \\
+&=&P_{0}\exp \left( \widehat{\mu }_{1m}+\frac{\widehat{\sigma }_{1m}}{%
+\widehat{\sigma }_{1g}}\left( r_{2}-\widehat{\mu }_{1g}\right) \right)  
+\nonumber \\
+&=&P_{0}\exp \left( \widehat{\mu }_{1m}+\sqrt{21}\left( r_{2}-\widehat{\mu }%
+_{1g}\right) \right)   \nonumber \\
+&=&P_{0}\exp \left( \widehat{\mu }_{1m}-\sqrt{21}\widehat{\mu }_{1g}+\sqrt{21%
+}r_{2}\right)   \nonumber \\
+&=&P_{0}\exp \left( \sqrt{21}\widehat{\mu }_{1g}(\sqrt{21}-1)+\sqrt{21}%
+r_{2}\right)   \label{eq5}
+\end{eqnarray}
+L'ultima equazione, equazione (\ref{eq5}) \`{e} la formula finale. Da questa
+formula si nota che al lato pratico non \`{e} necessario calcolare $\widehat{%
+\varepsilon }_{2}$ per eseguire la simulazione storica. Noi l'abbiamo
+calcolato a fini didattici, cio\`{e} per meglio comprendere l'ideona
+sottostante e in ultima analisi perch\'{e} e come si giunge all'equazione (%
+\ref{eq5}). Come vedete, non \`{e} necessario calcolare le covarianze fra
+rendimenti di strumenti diversi. Tuttavia sar\`{a} obbligatorio campionare
+per tutti gli strumenti rendimenti dello stesso istante, nel nostro esempio 
+cio\`{e} con $t=2.$
+Un'ultima osservazione: su orizzonti brevi, cio\`{e} 1 giorno, 1 o 2
+settimane \`{e} possibile porre $\widehat{\mu }_{1g}=0$ cos\`{i} da ottenere
+la semplice espressione
+\[
+\widetilde{P}_{1m}=P_{0}\exp \left( \sqrt{21}r_{t}\right) .
+\]
+
+\item  Avendo ricalcolato tutti i prezzi dei fattori di rischio rivalutate
+il portafoglio cos\`{i} da ottenere un valore simulato $\widetilde{V}_{1m}$.
+
+\item  Ripetete il tutto 1000 volte ed utilizzate la distribuzione empirica
+delle simulazioni per calcolare il quantile.
+\end{enumerate}
+
+\item  Secondo quale distribuzione discreta devono essere campionate le date?
+
+Le date devono essere estratte casualmente campionando in maniera uniforme.
+\end{enumerate}
+Tornando all'esercizio avremo quindi: 
+\end{enumerate}
+
+\end{document}
