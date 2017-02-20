@@ -103,7 +103,7 @@ LatexCommand tableofcontents
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Part*
 \begin_inset ERT
 status open
 
@@ -1264,7 +1264,1392 @@ utilizzato per l'identificazione dell'ordine
 -process).
 \end_layout
 
-\begin_layout Part
+\begin_layout Chapter
+Le variabili qualitative
+\end_layout
+
+\begin_layout Standard
+In economia così come in altre discipline (biologia, medicina, sociologia,
+ ...) esistono variabili esplicative che non sono misurabili.
+ Ad esempio una variabile non misurabile che influenza il salario di una
+ persona è il livello di formazione:
+\end_layout
+
+\begin_layout Itemize
+Apprendistato
+\end_layout
+
+\begin_layout Itemize
+Scuole superiori (maturità professionale, SUPSI, ...)
+\end_layout
+
+\begin_layout Itemize
+Università 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Per lo studio della domanda di alcuni beni si potrebbe pensare di introdurre
+ una variabile qualitativa quale ad esempio il sesso (prodotti cosmetici)
+ oppure la religione o la provenienza geografica (alcuni beni alimentari).
+ Come fare per tener conto dell'influsso di queste variabili qualitative
+ sulla variabile dipendente? Spieghiamo il concetto tramite un esempio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Il modello
+\begin_inset Formula 
+\begin{equation}
+y_{i}=a+bx_{i}+\varepsilon_{i}\ ,\ \ \ i=1,\ldots,n\label{dummy 0}
+\end{equation}
+
+\end_inset
+
+dove
+\begin_inset Formula 
+\begin{eqnarray*}
+i & : & =\text{ individuo "}i\text{"}\\
+y_{i} & : & =\text{ salario}\\
+x_{i} & : & =\text{ anni d'esperienza}
+\end{eqnarray*}
+
+\end_inset
+
+Supponiamo che il livello di formazione abbia un influsso sul salario e
+ supponiamo per questa variabile esplicativa di definire due soli attributi:
+\begin_inset Formula 
+\[
+\text{formazione:}\left\{ \begin{array}{l}
+\text{universitaria, oppure}\\
+\text{non universitaria}
+\end{array}\right.
+\]
+
+\end_inset
+
+Al fine di modellare l'influsso della formazione definiamo una variabile
+ "dummy" per ciascun attributo nel modo seguente:
+\begin_inset Formula 
+\begin{eqnarray*}
+d_{1i} & = & \left\{ \begin{array}{cl}
+1 & \text{se l'individuo }i\text{ ha una formazione universitaria}\\
+0 & \text{altrimenti}
+\end{array}\right.,\\
+d_{2i} & = & \left\{ \begin{array}{cl}
+1 & \text{se l'individuo }i\text{ non ha una formazione universitaria}\\
+0 & \text{altrimenti}
+\end{array}\right..
+\end{eqnarray*}
+
+\end_inset
+
+A questo punto possiamo completare il modello (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dummy 0"
+
+\end_inset
+
+) con le due variabili dummy
+\begin_inset Formula 
+\begin{equation}
+y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+bx_{i}+\varepsilon_{i}\ .\label{dummy 1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Specificazione I
+\end_layout
+
+\begin_layout Standard
+Il modello (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dummy 1"
+
+\end_inset
+
+) corrisponde alla prima specificazione possibile per un modello a variabili
+ qualitative.
+ Nel caso generale di una sola variabile qualitatita a 
+\begin_inset Formula $s$
+\end_inset
+
+ attributi avremo una specificazione del tipo
+\begin_inset Formula 
+\begin{equation}
+y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+\ldots+a_{s}d_{si}+bx_{i}+\varepsilon_{i}\ .\label{dummy 2}
+\end{equation}
+
+\end_inset
+
+Le 
+\begin_inset Formula $s$
+\end_inset
+
+ variabili dummy dovranno soddisfare le seguenti condizioni:
+\end_layout
+
+\begin_layout Enumerate
+Esaustività
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Ogni attributo presente nel campione deve avere la sua "dummy".
+ Non inserire attributi se non sono rappresentati nel campione.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Esclusività
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Le 
+\begin_inset Formula $s$
+\end_inset
+
+ variabili dummy 
+\begin_inset Formula $\underset{(n\times1)}{d_{1}},\ldots,\underset{(n\times1)}{d_{s}}$
+\end_inset
+
+ devono essere mutualmente esclusive (ortogonali).
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\noindent
+Se le condizioni 1.
+ e 2.
+ sono soddisfatte segue che 
+\begin_inset Formula 
+\begin{equation}
+\sum_{j=1}^{s}d_{ji}=1\text{ per ogni individuo }i.\label{dummy x1}
+\end{equation}
+
+\end_inset
+
+La condizione (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dummy x1"
+
+\end_inset
+
+) significa che per ogni individuo esiste sempre una ed una sola dummy uguale
+ a 1 mentre le altre sono tutte 0!
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{esempio}
+\end_layout
+
+\end_inset
+
+ Supponiamo di avere osservazioni su 
+\begin_inset Formula $n=4$
+\end_inset
+
+ individui.
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ rappresenta il salario.
+ Le variabili esplicative sono rappresentate da 
+\begin_inset Formula $x$
+\end_inset
+
+, gli anni d'esperienza, e la variabile qualitativa "livello di formazione"
+ a 3 attributi:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+- apprendistato
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+- medio superiore
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+- universitario
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+par 
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace medskip
+\end_inset
+
+Definiamo
+\begin_inset Formula 
+\begin{eqnarray*}
+d_{1i} & = & \left\{ \begin{array}{cl}
+1 & \text{se la formazione di }i\text{ termina con l'apprendistato}\\
+0 & \text{altrimenti}
+\end{array}\right.,\\
+d_{2i} & = & \left\{ \begin{array}{cl}
+1 & \text{se }i\text{ possiede un grado di formazione medio superiore}\\
+0 & \text{altrimenti}
+\end{array}\right.,\\
+d_{3i} & = & \left\{ \begin{array}{cl}
+1 & \text{se l'individuo }i\text{ ha una formazione universitaria}\\
+0 & \text{altrimenti}
+\end{array}\right..
+\end{eqnarray*}
+
+\end_inset
+
+avremo dunque
+\begin_inset Formula 
+\[
+y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+a_{3}d_{3i}+bx_{i}+\varepsilon_{i}.
+\]
+
+\end_inset
+
+Scriviamo il modello in forma matriciale scomposta
+\begin_inset Formula 
+\[
+y=\left[\begin{array}{ccc}
+1 & 0 & 0\\
+0 & 1 & 0\\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array}\right]\left[\begin{array}{c}
+a_{1}\\
+a_{2}\\
+a_{3}
+\end{array}\right]+\left[\begin{array}{c}
+7\\
+3\\
+5\\
+1
+\end{array}\right]b+\varepsilon\ .
+\]
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{esempio}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Osservazione: non confondete il numero di variabili qualitative presenti
+ nel modello con il numero di attributi ad esse associati.
+ Quanti apprendisti ci sono nel campione?
+\end_layout
+
+\begin_layout Standard
+\noindent
+Notiamo che per quanto riguarda la matrice delle variabili dummy:
+\end_layout
+
+\begin_layout Itemize
+In ogni riga c'è uno ed un solo 1.
+ Tutte le altre componenti sono 0.
+\end_layout
+
+\begin_layout Itemize
+La somma delle tre colonne dà il vettore somma 
+\begin_inset Formula $S$
+\end_inset
+
+ il che equivale alla condizione (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dummy x1"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+Le tre colonne sono fra loro ortogonali, mutualmente esclusive.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Domanda: sarebbe possibile introdurre nel modello anche la costante? Risposta:
+ evidentemente no!
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Attenzione: è necessario che ogni attributo abbia almeno un individuo che
+ lo rappresenti, altrimenti avremmo delle colonne di 0 e la matrice 
+\begin_inset Formula $X$
+\end_inset
+
+ non avrebbe rango 
+\begin_inset Formula $K$
+\end_inset
+
+ con la conseguenza che 
+\begin_inset Formula $X^{\prime}X$
+\end_inset
+
+ non sarebbe invertibile.
+\end_layout
+
+\begin_layout Section
+Specificazione II
+\end_layout
+
+\begin_layout Standard
+Partendo dal caso generale (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dummy 2"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\[
+y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+\ldots+a_{s}d_{si}+bx_{i}+\varepsilon_{i}
+\]
+
+\end_inset
+
+utilizziamo la proprietà 
+\begin_inset Formula $d_{1i}+d_{2i}+\ldots+d_{si}=1$
+\end_inset
+
+ per risolvere rispetto a 
+\begin_inset Formula $d_{si}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+d_{si}=1-d_{1i}-d_{2i}-\ldots-d_{s-1,i}
+\]
+
+\end_inset
+
+ed inserire il risultato nella (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dummy 2"
+
+\end_inset
+
+) 
+\begin_inset Formula 
+\begin{equation}
+y_{i}=a_{s}+(a_{1}-a_{s})d_{1i}+\ldots+(a_{s-1}-a_{s})d_{s-1,i}+bx_{i}+\varepsilon_{i}\label{dummy 3}
+\end{equation}
+
+\end_inset
+
+così da ottenere la specificazione II di un modello con dummy
+\begin_inset Formula 
+\begin{equation}
+y_{i}=c_{0}+c_{1}d_{1i}+\ldots+c_{s-1}d_{s-1,i}+bx_{i}+\varepsilon_{i}\label{dummy 4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Osservazioni:
+\end_layout
+
+\begin_layout Enumerate
+È questo un modello con costante e 
+\begin_inset Formula $s-1$
+\end_inset
+
+ attributi.
+ La costante corrisponde al coefficiente dell'attributo mancante.
+ Il coefficiente 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $i=1,\ldots,s-1$
+\end_inset
+
+ corrisponde allo scarto del coefficiente dell'
+\begin_inset Formula $i-$
+\end_inset
+
+esimo attributo 
+\begin_inset Formula $\left(a_{i}\right)$
+\end_inset
+
+ dal coefficiente dell'attributo mancante 
+\begin_inset Formula $\left(a_{s}\right)$
+\end_inset
+
+.
+ Quindi non il valore assoluto, ma quello in eccesso su 
+\begin_inset Formula $a_{s}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+La scelta di eliminare l'attributo 
+\begin_inset Formula $s$
+\end_inset
+
+ è arbitraria.
+ Avremmo potuto eliminare un qualsiasi altro attributo.
+\end_layout
+
+\begin_layout Enumerate
+Come testereste l'ipotesi nulla: il tipo di formazione non è influente per
+ la determinazione del reddito? 
+\end_layout
+
+\begin_layout Section
+Specificazione I in forma matriciale scomposta
+\end_layout
+
+\begin_layout Standard
+Riscriviamo la specificazione I per un modello con una variabile qualitativa
+ a 3 attributi
+\begin_inset Formula 
+\[
+y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+a_{3}d_{3i}+bx_{i}+\varepsilon_{i}\ ,
+\]
+
+\end_inset
+
+in forma matriciale scomposta
+\begin_inset Formula 
+\begin{equation}
+\underset{(n\times1)}{y}=\underset{(n\times3)}{D}\underset{(3\times1)}{a}+\underset{(n\times1)}{X}\underset{(1\times1)}{\beta}+\underset{(n\times1)}{\varepsilon}\ .\label{dummy 5}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Specificazione III
+\end_layout
+
+\begin_layout Standard
+Il modello ridotto corrispondente (che fa sparire la 
+\begin_inset Formula $D$
+\end_inset
+
+) si ottiene premoltiplicando la (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "dummy 5"
+
+\end_inset
+
+) per 
+\begin_inset Formula $M_{D}=I-D(D^{\prime}D)^{-1}D^{\prime},$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\widetilde{y}=\widetilde{X}\beta+\widetilde{\varepsilon}\ \ \ \text{con }\left\{ \begin{array}{l}
+\widetilde{y}=M_{D}y\\
+\widetilde{X}=M_{D}X
+\end{array}\right.\text{.}
+\]
+
+\end_inset
+
+La matrice 
+\begin_inset Formula $M_{D}$
+\end_inset
+
+ trasforma le variabili in scarti alla media degli individui del medesimo
+ attributo, e dunque si ottiene la specificazione III
+\begin_inset Formula 
+\[
+\left(y_{i}-\overline{y}_{ai}\right)=\left(x_{i}-\overline{x}_{ai}\right)\beta_{1}+\widetilde{\varepsilon}_{i}\ ,
+\]
+
+\end_inset
+
+dove 
+\begin_inset Formula $\overline{y}_{ai}$
+\end_inset
+
+ corrisponde alla media degli 
+\begin_inset Formula $y$
+\end_inset
+
+ calcolata solo sugli individui del medesimo attributo di 
+\begin_inset Formula $i$
+\end_inset
+
+.
+ Infatti
+\begin_inset Formula 
+\begin{eqnarray*}
+D^{\prime}D & = & \left[\begin{array}{ccc}
+n_{1} & 0 & 0\\
+0 & n_{2} & 0\\
+0 & 0 & n_{3}
+\end{array}\right]\ \ \ n_{i}=\left\{ \begin{array}{l}
+\text{numero di individui con }\\
+\text{la formazione }i
+\end{array}\right.\\
+\left(D^{\prime}D\right)^{-1} & = & \left[\begin{array}{ccc}
+\frac{1}{n_{1}} & 0 & 0\\
+0 & \frac{1}{n_{2}} & 0\\
+0 & 0 & \frac{1}{n_{3}}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+e
+\begin_inset Formula 
+\begin{eqnarray*}
+D\left(D^{\prime}D\right)^{-1}D^{\prime} & = & \underset{(n\times3)}{\underbrace{\left[\begin{array}{ccc}
+\underset{(n\times1)}{d_{1}} & \underset{(n\times1)}{d_{2}} & \underset{(n\times1)}{d_{3}}\end{array}\right]}}\left[\begin{array}{ccc}
+\frac{1}{n_{1}} & 0 & 0\\
+0 & \frac{1}{n_{2}} & 0\\
+0 & 0 & \frac{1}{n_{3}}
+\end{array}\right]\underset{(3\times n)}{\left[\begin{array}{c}
+d_{1}^{\prime}\\
+d_{2}^{\prime}\\
+d_{3}^{\prime}
+\end{array}\right]}\\
+ & = & \left[\begin{array}{ccc}
+d_{1} & d_{2} & d_{3}\end{array}\right]\left[\begin{array}{c}
+\frac{1}{n_{1}}d_{1}^{\prime}\\
+\frac{1}{n_{2}}d_{2}^{\prime}\\
+\frac{1}{n_{3}}d_{3}^{\prime}
+\end{array}\right]
+\end{eqnarray*}
+
+\end_inset
+
+e
+\begin_inset Formula 
+\[
+\widetilde{y}=M_{D}y=y-D\left[\begin{array}{c}
+\frac{1}{n_{1}}d_{1}^{\prime}\\
+\frac{1}{n_{2}}d_{2}^{\prime}\\
+\frac{1}{n_{3}}d_{3}^{\prime}
+\end{array}\right]y=y-D\left[\begin{array}{c}
+\overline{y}_{1}\\
+\overline{y}_{2}\\
+\overline{y}_{3}
+\end{array}\right].
+\]
+
+\end_inset
+
+Considerando la prima riga:
+\begin_inset Formula 
+\begin{eqnarray*}
+\widetilde{y}_{1} & = & y_{1}-\left[\begin{array}{ccc}
+d_{11} & d_{21} & d_{31}\end{array}\right]\left[\begin{array}{c}
+\overline{y}_{1}\\
+\overline{y}_{2}\\
+\overline{y}_{3}
+\end{array}\right]\\
+ & = & \left\{ \begin{array}{l}
+y_{1}-\overline{y}_{1}\text{ se l'individuo 1 ha apprendistato}\\
+y_{1}-\overline{y}_{2}\text{ se l'individuo 2 ha formazione medio sup.}\\
+y_{1}-\overline{y}_{3}\text{ se l'individuo 3 ha formazione universitaria}
+\end{array}\right..
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Quando ci sono due o più variabili qualitative
+\end_layout
+
+\begin_layout Standard
+Supponiamo che il nostro modello contempli oltre alla variabile qualitativa
+ formazione a 3 attributi anche la variabile qualitativa razza a 4 attributi:
+ "bianco", "nero", "giallo", "rosso".
+ Potremmo utilizzare un tale modello per verificare se c'è discriminazione
+ raziale nei confronti delle persone di colore.
+ Utilizzando la specificazione I, potremmo pensare di aggiungere al modello
+ di partenza 
+\begin_inset Formula 
+\[
+y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+a_{3}d_{3i}+bx_{i}+\varepsilon_{i}
+\]
+
+\end_inset
+
+il termine "
+\begin_inset Formula $c_{1}e_{1i}+c_{2}e_{2i}+c_{3}e_{3i}+c_{4}e_{4i}$
+\end_inset
+
+" dove
+\begin_inset Formula 
+\[
+\begin{array}{cc}
+e_{1i}=\left\{ \begin{array}{cl}
+1 & \text{se l'individuo }i\text{ è bianco}\\
+0 & \text{altrimenti}
+\end{array}\right. & e_{2i}=\left\{ \begin{array}{cl}
+1 & \text{se l'individuo }i\text{ è nero}\\
+0 & \text{altrimenti}
+\end{array}\right.\\
+e_{3i}=\left\{ \begin{array}{cl}
+1 & \text{se l'individuo }i\text{ è giallo}\\
+0 & \text{altrimenti}
+\end{array}\right. & e_{4i}=\left\{ \begin{array}{cl}
+1 & \text{se l'individuo }i\text{ è rosso}\\
+0 & \text{altrimenti}
+\end{array}\right.
+\end{array}
+\]
+
+\end_inset
+
+e 
+\begin_inset Formula $c_{1},c_{2},c_{3},c_{4}$
+\end_inset
+
+ sono i coefficienti associati alle dummy "razza".
+ È possibile un modello del genere? La risposta è
+\begin_inset space \space{}
+\end_inset
+
+no!
+\begin_inset space \space{}
+\end_inset
+
+Il modello non sarebbe identificato.
+ Infatti avremmo la seguente situazione
+\begin_inset Formula 
+\[
+y_{i}=\underset{\text{c`è sempre esattamente un }d_{ji}=1}{\underbrace{a_{1}d_{1i}+a_{2}d_{2i}+a_{3}d_{3i}}}+\underset{\text{c`è sempre esattamente un }e_{ji}=1}{\underbrace{c_{1}e_{1i}+c_{2}e_{2i}+c_{3}e_{3i}+c_{4}e_{4i}}}+bx_{i}+\varepsilon_{i}.
+\]
+
+\end_inset
+
+La matrice 
+\begin_inset Formula $X$
+\end_inset
+
+ in questo caso sarebbe
+\begin_inset Formula 
+\[
+X=\left[\begin{array}{c}
+\underset{S=\sum_{j=1}^{3}d_{j}}{\underbrace{\begin{array}{ccc}
+1 & 0 & 0\\
+1 & 0 & 0\\
+0 & 1 & 0\\
+\vdots & \vdots & \vdots\\
+0 & 0 & 1
+\end{array}}}\end{array}\begin{array}{c}
+\underset{S=\sum_{j=1}^{4}c_{j}}{\underbrace{\begin{array}{cccc}
+0 & 1 & 0 & 0\\
+1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1\\
+\vdots & \vdots & \vdots & \vdots\\
+1 & 0 & 0 & 0
+\end{array}}}\begin{array}{c}
+x_{1}\\
+x_{2}\\
+x_{3}\\
+\vdots\\
+x_{n}
+\end{array}\end{array}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+È sufficiente tralasciare un attributo della seconda variabile qualitativa
+ "razza", ad esempio 
+\begin_inset Formula $e_{4i}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+a_{3}d_{3i}+c_{1}e_{1i}+c_{2}e_{2i}+c_{3}e_{3i}+bx_{i}+\varepsilon_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Apprendista
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Scuole superiori
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Università
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rosso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bianco
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}+c_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{a_{2}+c_{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{3}+c_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nero
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}+c_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}+c_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{a_{3}+c_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+giallo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{1}+c_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a_{2}+c_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{a_{3}+c_{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+Osservazioni:
+\end_layout
+
+\begin_layout Itemize
+Togliendo un attributo (in questo caso 
+\begin_inset Formula $e_{4i}$
+\end_inset
+
+) manteniamo l'identificabilità (evitiamo la perfetta collinearità delle
+ dummy) ottenendo l'univocità.
+\end_layout
+
+\begin_layout Itemize
+Quale attributo togliere è indifferente! 
+\end_layout
+
+\begin_layout Standard
+\noindent
+La scelta di mantenere tutte le dummy della variabile qualitativa "livello
+ di formazione" e togliere un attributo della variabile dummy "razza" è
+ arbitraria.
+ Avremmo potuto fare il contrario.
+ Per tale motivo e per avere una regola semplice da ricordare nel caso ci
+ siano due o più variabili qualitative si procede come segue:
+\end_layout
+
+\begin_layout Enumerate
+Si lascia la costante nel modello di regressione.
+\end_layout
+
+\begin_layout Enumerate
+Per ogni variabile qualitativa 
+\begin_inset Formula $j$
+\end_inset
+
+ si introducono 
+\begin_inset Formula $m_{j}-1$
+\end_inset
+
+ variabili indicatrici dove 
+\begin_inset Formula $m_{j}$
+\end_inset
+
+ è il numero di attributi della 
+\begin_inset Formula $j$
+\end_inset
+
+-esima variabile qualitativa.
+ 
+\end_layout
+
+\begin_layout Standard
+\noindent
+Nel nostro esempio abbiamo 
+\begin_inset Formula $j=2$
+\end_inset
+
+ variabili qualitative ("livello di formazione" e "razza").
+\begin_inset Formula 
+\begin{eqnarray*}
+m_{1} & = & 3:\left\{ \begin{array}{l}
+\text{apprendistato (tralasciato)}\\
+\text{scuole superiori}\\
+\text{università}
+\end{array}\right.\\
+m_{2} & = & 4:\left\{ \begin{array}{l}
+\text{bianco}\\
+\text{nero}\\
+\text{giallo}\\
+\text{rosso (tralasciato)}
+\end{array}\right.
+\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y_{i}=a+a_{2}d_{2i}+a_{3}d_{3i}+c_{1}e_{1i}+c_{2}e_{2i}+c_{3}e_{3i}+bx_{i}+\varepsilon_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Apprendista
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Scuole superiori
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Università
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+rosso
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a+a_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a+a_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bianco
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a+c_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{a+a_{2}+c_{1}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a+a_{3}+c_{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+nero
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a+c_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a+a_{2}+c_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{a+a_{3}+c_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+giallo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a+c_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $a+a_{2}+c_{3}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\ensuremath{a+a_{3}+c_{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
 La regressione generalizzata
 \end_layout
 
@@ -5268,7 +6653,7 @@ Infine un processo stocastico generale frequentemente incontrato in economia
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Part*
 La regressione stocastica
 \end_layout
 
@@ -8353,7 +9738,7 @@ dove:
  
 \end_layout
 
-\begin_layout Part
+\begin_layout Part*
 Modelli dinamici
 \end_layout
 
