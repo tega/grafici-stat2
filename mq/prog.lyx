@@ -1,0 +1,1110 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{LastRevised=Wednesday, February 17, 2010 14:24:35}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+\topmargin-0.7cm\headheight0cm\headsep0cm\textheight26cm\parindent0cm
+
+
+
+\usepackage{babel}
+\end_preamble
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding iso8859-15
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 0
+\use_package cancel 0
+\use_package esint 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle empty
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+\shape smallcaps
+\size small
+universita' della svizzera italiana
+\shape default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\shape smallcaps
+facolta' di scienze economiche
+\shape default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\shape smallcaps
+claudio ortelli
+\shape default
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\shape smallcaps
+semestre autunnale
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.4cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+ECONOMETRIA
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 0.1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Assistente: da nominare 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace 0.4cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size large
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+LA STIMA DEI MODELLI ECONOMETRICI
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+[0pt]
+\end_layout
+
+\end_inset
+
+ 
+\series bold
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+(al di la' della regressione classica)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Complementi al modello classico di regressione}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+La regressione scomposta 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+Le variabili qualitative (dummy variables)
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Parte prima: La regressione generalizzata}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+
+Il modello generale 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.1
+\end_layout
+
+\end_inset
+
+Introduzione 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Breve ritorno sulla regressione classica 
+\end_layout
+
+\begin_layout Itemize
+Modelli econometrici che non soddisfano le ipotesi classiche 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.2
+\end_layout
+
+\end_inset
+
+Il modello e le ipotesi 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.3
+\end_layout
+
+\end_inset
+
+Quando la matrice delle varianze-covarianze e' conosciuta: i minimi quadrati
+ generalizzati 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Gli stimatori e le loro proprieta' 
+\end_layout
+
+\begin_layout Itemize
+L'induzione statistica 
+\end_layout
+
+\begin_layout Itemize
+La previsione 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.4
+\end_layout
+
+\end_inset
+
+Le conseguenze dell'applicazione dei minimi quadrati ordinari
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Correttezza e perdita di efficienza 
+\end_layout
+
+\begin_layout Itemize
+Stima convergente della varianza dello stimatore dei minimi quadrati ordinari
+ 
+\end_layout
+
+\begin_layout Itemize
+Casi in cui i minimi quadrati ordinari ed i minimi quadrati generalizzati
+ sono equivalenti 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.5
+\end_layout
+
+\end_inset
+
+Quando la matrice delle varianze-covarianze dipende da parametri sconosciuti
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I minimi quadrati generalizzati a due tappe 
+\end_layout
+
+\begin_layout Itemize
+Il massimo di verosimiglianza
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+
+L'autocorrelazione 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4.1
+\end_layout
+
+\end_inset
+
+Il modello markoviano di primo ordine 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Ipotesi e proprieta' 
+\end_layout
+
+\begin_layout Itemize
+Il test dell'autocorrelazione 
+\end_layout
+
+\begin_layout Itemize
+I metodi di stima 
+\end_layout
+
+\begin_layout Itemize
+La previsione 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4.2
+\end_layout
+
+\end_inset
+
+Altre forme d'autocorrelazione 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Parte seconda: La regressione stocastica}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+
+Elementi di analisi asintotica 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5.1
+\end_layout
+
+\end_inset
+
+Convergenza in probabilita' 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Definizione e proprieta' 
+\end_layout
+
+\begin_layout Itemize
+Convergenza in media quadratica 
+\end_layout
+
+\begin_layout Itemize
+Convergenza dei momenti del campione 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5.2
+\end_layout
+
+\end_inset
+
+Convergenza in distribuzione 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Un esempio 
+\end_layout
+
+\begin_layout Itemize
+Teorema del limite centrale 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5.3
+\end_layout
+
+\end_inset
+
+Analisi asintotica della regressione classica 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+
+Il modello di regressione stocastica 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.1
+\end_layout
+
+\end_inset
+
+Il modello e le ipotesi 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.2
+\end_layout
+
+\end_inset
+
+Quando i regressori e gli errori sono indipendenti 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+6.3
+\end_layout
+
+\end_inset
+
+Quando sono correlati 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+La non convergenza degli stimatori dei minimi quadrati 
+\end_layout
+
+\begin_layout Itemize
+Il metodo delle variabili strumentali 
+\end_layout
+
+\begin_layout Itemize
+La scelta degli strumenti 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Parte terza: Modelli Dinamici}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+
+Variabili endogene ritardate 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.1
+\end_layout
+
+\end_inset
+
+Esempi economici 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.1.1
+\end_layout
+
+\end_inset
+
+La formazione di abitudini: effetti immediati ed effetti di lungo periodo
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.1.2
+\end_layout
+
+\end_inset
+
+Il modello d'aggiustamento parziale 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.1.3
+\end_layout
+
+\end_inset
+
+Il modello ad aspettative adattive 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.2.
+\end_layout
+
+\end_inset
+
+La stima dei modelli a variabili endogene ritardate 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.2.1
+\end_layout
+
+\end_inset
+
+Errori indipendenti 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.2.2
+\end_layout
+
+\end_inset
+
+Quando gli errori sono autocorrelati 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.2.3
+\end_layout
+
+\end_inset
+
+Il test di autocorrelazione 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.2.4
+\end_layout
+
+\end_inset
+
+Stima convergente ed asintoticamente efficiente 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+
+Modelli con ritardi distribuiti 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.1
+\end_layout
+
+\end_inset
+
+Specificazione e proprieta'.
+ Moltiplicatori d'impatto, moltiplicatori dinamici, ritardo medio 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.1.1
+\end_layout
+
+\end_inset
+
+Specificazione 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.2
+\end_layout
+
+\end_inset
+
+Distribuzione dei ritardi finita 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.2.1
+\end_layout
+
+\end_inset
+
+Il caso generale 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.2.2
+\end_layout
+
+\end_inset
+
+Distribuzione di Almon 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.3
+\end_layout
+
+\end_inset
+
+Distribuzione dei ritardi infinita 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.3.1
+\end_layout
+
+\end_inset
+
+Il modello 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.3.2
+\end_layout
+
+\end_inset
+
+Distribuzione razionale dei ritardi: idea introduttiva 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.3.3
+\end_layout
+
+\end_inset
+
+L'operatore di ritardo 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.3.4
+\end_layout
+
+\end_inset
+
+Il modello dinamico di Jorgenson 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9
+\end_layout
+
+\end_inset
+
+Serie macroeconomiche non stazionarie 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9.1
+\end_layout
+
+\end_inset
+
+Stazionarieta' e non stazionarieta' 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9.1.1
+\end_layout
+
+\end_inset
+
+Stazionarieta' 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9.1.2
+\end_layout
+
+\end_inset
+
+Non stazionarieta' 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9.1.3
+\end_layout
+
+\end_inset
+
+Una riparametrizzazione del modello dinamico classico (Jorgenson) 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9.1.4
+\end_layout
+
+\end_inset
+
+Introduzione alla cointegrazione 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace 1.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{Testi di riferimento}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+BALTAGI, Badi H., Econometrics, Springer, 1998 
+\end_layout
+
+\begin_layout Itemize
+GREENE, W.H., Econometric Analysis, 3.rd Ed., Prentice Hall, 1997 
+\end_layout
+
+\begin_layout Itemize
+HAYASHI, F., Econometrics, Princeton University Press, 2000 
+\end_layout
+
+\begin_layout Itemize
+MADDALA, G.S., Introduction to Econometrics, 2.nd Ed., Prentice Hall, 1992 
+\end_layout
+
+\end_body
+\end_document
