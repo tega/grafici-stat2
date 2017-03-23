@@ -1,4 +1,4 @@
-%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \documentclass[a4paper,english,italian]{report}
 \usepackage[T1]{fontenc}
@@ -7,6 +7,7 @@
 \setcounter{tocdepth}{1}
 \usepackage{babel}
 \usepackage{float}
+\usepackage{mathrsfs}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -20,8 +21,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
 \special{papersize=\the\paperwidth,\the\paperheight}
 
-%% Because html converters don't know tabularnewline
-\providecommand{\tabularnewline}{\\}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -34,8 +33,9 @@
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{Language=American English}
 \newcounter{ese}\newcounter{esr}\newcounter{def}\newcounter{prop}\newcounter{doman}\newcounter{ipot}\theoremstyle{remark}\newcounter{theor}\newcounter{theorem}\newtheorem{esempio}[ese]{Esempio}\newtheorem{esercizio}[esr]{Esercizio}\newtheorem{definizione}[def]{Definizione}\newtheorem{remark}{Osservazione}\newtheorem{theorem}[theor]{Teorema}\newtheorem{proprieta}[prop]{Propriet\`a}\newtheorem{domanda}[doman]{Domanda}\newtheorem{ipotesi}[ipot]{Ipotesi}
+\usepackage{tikz}
+\usetikzlibrary{trees}
 
-\usepackage{subcaption}
 
 \makeatother
 
@@ -48,9 +48,7 @@
 \title{Metodi Quantitativi per la Finanza\\
  Appunti del corso}
 
-
 \author{Claudio Ortelli}
-
 
 \date{Semestre Estivo\\
  }
@@ -58,9 +56,7 @@
 \maketitle
 \tableofcontents{}
 
-
 \chapter{Fonti e raccolta di dati finanziari}
-
 
 \section{Fornitori di dati finanziari}
 
@@ -129,7 +125,6 @@ generale economica nazionale e mondiale. Fra le principali citiamo
 \end{itemize}
 \bigskip{}
 
-
 \noindent All'Università della Svizzera italiana sono a disposizione
 due importanti fonti di dati finanziari: Datastream, che sarà oggetto
 di approfondimento nel corso di questo capitolo e l'applicazione Reuters
@@ -153,7 +148,6 @@ fine della loro valutazione)
 \end{itemize}
 \end{remark}
 
-
 \section{Codici d'identificazione}
 
 Quando cerchiamo i dati di un qualsiasi prodotto o strumento finanziario
@@ -170,27 +164,21 @@ quanto segue:
 \begin{itemize}
 \item ISIN
 
-
 ISIN = International Securites Identification Number. An ISO coding
 system that uniquely identifies a specific securities issue. The organization
 that allocates ISINs in any particular country is the National Numbering
 Agency (NNA).
-
 \item SEDOL
-
 
 SEDOL = Stock Exchange Daily Official List. The stock code used to
 identify all securities issued in the UK or Eire. It is the basis
 of the ISIN code for UK securities, and is composed of a 7-digit number
 allocated by the master file service of the London Stock Exchange.
-
 \end{itemize}
-
 Conoscere uno di questi due identificativi è particolarmente utile
 poiché, soprattutto per quanto riguarda il codice ISIN, praticamente
 tutti i data provider lo riconoscono. Ad esempio, la banca dati Datastream
 accetta entrambi questi codici.
-
 \item In Svizzera è ancora molto utilizzato il numero di valore (in tedesco:
 Valorennummer). Tuttavia il codice ISIN sembra lentamente ma inesorabilmente
 avere il sopravvento. 
@@ -207,17 +195,14 @@ per area geografica. Fra queste scegliamo quattro esempi:
 \begin{itemize}
 \item \emph{\href{http://www.swx.com/index_en.html}{Mercato svizzero}}
 \end{itemize}
-
 Seguite poi \href{http://www.six-swiss-exchange.com/shares/overview_en.html}{Shares}
 ... Company -> List of Companies
-
 
 -> ABB LTD -> Share details {[}VN: ... ISIN: CH0012221716 ... Trading
 currency: ...{]}
 \begin{itemize}
 \item \emph{\href{http://omxgroup.com/nordicexchange/}{Mercato svedese}}
 \end{itemize}
-
 Cercate ABB e controllate il codice ISIN e la moneta in cui è quotata
 l'azione. Come potrete notare la medesima azione (il codice ISIN è
 identico, cioè CH0012221716) è quotata in valuta diversa!
@@ -225,29 +210,21 @@ identico, cioè CH0012221716) è quotata in valuta diversa!
 \item \emph{\href{http://www.londonstockexchange.com}{Mercato inglese}}
 \item \emph{\href{http://www.borsaitalia.it/homepage/homepage.htm}{Mercato italiano}}
 
-
 -> Quotazioni -> Cerca Strumento -> Azioni -> Roma -> ISIN: IT0001008876
-
 \item \emph{\href{http://www.nyse.com/}{Titoli azionari americani}}
-
 
 -> SYMBOL LOOKUP (The Coca-Cola Company)
 
-
 Symbol: KO
 
-
 \href{http://www.coca-cola.com}{Website Coca Cola}: http://www.coca-cola.com
-
 \end{itemize}
 \item Datastream
-
 
 Il codice alfanumerico ISIN può essere d'aiuto nella ricerca dell'azione
 desiderata. Datastream infatti contiene questo codice nel suo \textquotedblright mnemonic\textquotedblright{}
 (è questo il nome del codice interno a Datastream che identifica univocamente
 ogni singola serie).
-
 
 Ad esempio la Roma ha quale codice alfanumerico ASR e Datastream ha
 quale mnemonic ``I:ASR\textquotedblright . La Coca-Cola ha quale
@@ -259,7 +236,6 @@ ricordarsi questa costruzione laddove non è stato possibile rintracciare
 il codice ISIN poiché Datastream permette una ricerca per \textquotedblright mnemonic\textquotedblright{}
 (è inoltre possibile utilizzare nella ricerca caratteri jolly quali
 ``{*}\textquotedblright ).
-
 \end{enumerate}
 
 \section{Datastream, classi di strumenti finanziari e tipologie di dati}
@@ -325,11 +301,9 @@ ha codice uguale a P. Discutiamo ora i seguenti tipi:
 \end{enumerate}
 \noindent \vspace{0.3cm}
 
-
 \noindent Come potrete constatare voi stessi, cambiando la classe
 di strumenti finanziari e selezionando nuovamente il bottone \emph{Datatype}
 la lista di tipi di dato fra cui scegliere cambierà.\vspace{0.3cm}
-
 
 \noindent Datastream prevede\footnote{Si veda la Figura \ref{fig:Request-table}.}
 la possibilità di scaricare le serie storiche direttamente in un file
@@ -342,7 +316,6 @@ utilizzando la grande flessibilità di VBA (Visual Basic for Applications).
 Un esempio verrà presentato in classe. L'Help di Datastream Advance
 alla voce \emph{Creating time series requests in Excel} è un buon
 punto di partenza.\vspace{0.3cm}
-
 
 \begin{esercizio}Il primo esercizio consiste nel simulare la gestione
 di un portafoglio azionario. Lo studente dovrà inizialmente selezionare
@@ -408,9 +381,7 @@ Scatter plot dell'indice SMI con ciascuna delle 3 serie scaricate.
 Cosa osservate? 
 \item Che differenza c'è con lo SMIC index?
 
-
 \hfill{}$\square$\vspace{0.35in}
-
 
 \end{enumerate}
 \end{esercizio}
@@ -421,17 +392,14 @@ Cosa osservate?
 \noindent \centering{}\includegraphics[scale=0.33,angle=90]{datastream}\caption{L'applicativo Datastream.}
 \end{figure}
 
-
 \pagebreak{}
 
 \begin{figure}[H]
 \noindent \begin{centering}
 \includegraphics[scale=0.45,angle=90]{datastricerca}
 \par\end{centering}
-
 \caption{Criteri di ricerca di un titolo azionario.}
 \end{figure}
-
 
 \pagebreak{}
 
@@ -439,7 +407,6 @@ Cosa osservate?
 \noindent \centering{}\includegraphics[scale=0.45,angle=90]{datatypes}
 \caption{Selezione dei ``datatypes'' azionari.}
 \end{figure}
-
 
 \pagebreak{}
 
@@ -449,9 +416,7 @@ Cosa osservate?
 \end{figure}
 
 
-
 \chapter{Portfolio Models - Introduction}
-
 
 \section{Notazione}
 
@@ -498,7 +463,6 @@ $N\times1$). Infatti, l'ipotesi di stazionarietà dei primi due momenti
 r_{t}\sim(e,V)\ .
 \end{equation}
 
-
 \begin{esempio} \label{esempio1 benninga}Nell'esempio a pagina 240
 di Benninga troviamo $N=2$ titoli (azioni in questo caso) con i relativi
 prezzi. Le $n=61$ osservazioni riportate sono a frequenza mensile:
@@ -517,14 +481,12 @@ $t$ è il mese.} $t$ ma questa colonna non fa parte della matrice $X$.
 \noindent \begin{centering}
 \includegraphics[scale=0.6]{tabellaDatiBenninga}
 \par\end{centering}
-
 \caption{\label{fig:Esempio calcolo rendimenti}Esempio con $N=2$ titoli,
 Benninga Capitolo 8.2 .}
 \end{figure}
 \end{esempio}
 
 \noindent \medskip{}
-
 
 \noindent Riserveremo gli indici $i$ e $j$ per indicare l'$i-$
 esimo ed il $j-$ esimo titolo: $V_{ij}=Cov(r_{it},r_{jt})$. Avremo
@@ -612,7 +574,6 @@ di azioni che, a sua volta, va ad incidere sul calcolo del rendimento
 per il periodo successivo (si veda l'esempio numerico a pagina 256
 di Benninga).\bigskip{}
 
-
 \begin{esempio} Continuando con l'esempio precedente (vedi pag. 240
 di Benninga) possiamo calcolare i rendimenti logaritimici \emph{mensili}
 delle due azioni $WMT$ e $TGT$ utilizzando la funzione $LN$ (logaritmo
@@ -624,7 +585,6 @@ avrà una riga in meno rispetto alla matrice dei prezzi osservati (vedi
 Figura \ref{fig:Esempio calcolo rendimenti}).
 
 \hfill{}$\square$ \end{esempio}
-
 
 \subsection{Aggregazione cross-section dei rendimenti}
 
@@ -644,7 +604,6 @@ r_{pt}=w_{t-1}^{\prime}r_{t}\ .\label{combinazione lineare rendimenti}
 \noindent \medskip{}
  Quando i rendimenti sono logaritmici la proprietà 1 non è più mantenuta.\medskip{}
 
-
 \noindent \begin{proprieta} \label{prop cross section rend log}La
 Proprietà \ref{prop cross section rend perc} non è soddisfatta dal
 rendimento logaritmico.\medskip{}
@@ -660,7 +619,6 @@ opposta, ovvero cosa capita quando l'aggregazione è temporale e non
 rispetto ai titoli in portafoglio. Questo implica analizzare il rendimento
 di \emph{un singolo titolo} su un periodo di $n$ giorni in funzione
 degli $n$ rendimenti giornalieri.
-
 
 \subsection{Aggregazione temporale dei rendimenti}
 
@@ -749,7 +707,6 @@ un orizzonte temporale di $5$ periodi.
 
 \noindent \smallskip{}
 
-
 Consideriamo ora \emph{un intero portafoglio} e chiediamoci se l'uguaglianza
 (\ref{prodotto rendimenti perc su singola azione}) è valida anche
 per un portafoglio composto da più titoli. La risposta è sì, ma con
@@ -787,7 +744,6 @@ totale del portafoglio tenderà a variare nel tempo.\medskip{}
 \begin{enumerate}
 \item Dimensione $\emph{cross-section}$ dei rendimenti
 
-
 Il valore $P_{pt}$ al tempo $t$ di un portafoglio composto da solo
 due titoli è semplicemente 
 \[
@@ -820,7 +776,6 @@ valido per i rendimenti logaritmici.
 \end{enumerate}
 \item Variazione nel tempo della composizione percentuale del portafoglio
 
-
 Per risolvere quest'esercizio utilizzate le serie storiche contenute
 nel \emph{Sheet1} del file \emph{Esercizio2.xls}. Consideriamo un
 portafoglio costituito da un'azione di $Ubs$ ed un'azione di $Roche$. 
@@ -840,7 +795,6 @@ percentuali di $Ubs$, $Roche$ ed i pesi $w_{t}$. Verificate che
 essi corrispondano ai rendimenti calcolati al punto ($e)$. 
 \end{enumerate}
 \item Rendimenti su più periodi: aggregazione temporale
-
 
 \noindent Consideriamo dapprima i rendimenti \emph{logaritmici} settimanali
 di un'azione $i$, notati $r_{it}^{w}$ ($w$ = weekly) in funzione
@@ -866,13 +820,11 @@ Cosa possiamo dedurre riguardo
 \item alla covarianza fra due rendimenti settimanali $Cov(r_{i\left(t-l\right)}^{w},r_{it}^{w})$?
 Calcolate la covarianza per valori di $l$ pari a $1,2,5$ e $6$.
 
-
 Suggerimento: per ciascuna coppia $(r_{i\left(t-l\right)}^{w},r_{it}^{w})$
 eseguite il di\-se\-gno dell'asse temporale $t$ ed indicate, con
 colori diversi, i due intervalli di tempo utilizzati per colcolare
 i rendimenti logaritmici settimanali corrispondenti. Calcolate i periodi
 in comune e confrontate con il valore della covarianza.
-
 \end{enumerate}
 \item Se i rendimenti logaritmici giornalieri $r_{i,t}$ fossero $i.i.d.\sim(\mu,\sigma^{2})$,
 cambierebbe qualcosa nei risultati del punto precedente? Argomentate
@@ -880,10 +832,8 @@ la vostra risposta.
 \item Se i rendimenti logaritmici giornalieri $r_{i,t}$ fossero $i.i.d.\sim N(\mu,\sigma^{2})$,
 quale sarebbe la distribuzione di $r_{it}^{w}$ e perché?
 
-
 Consideriamo ora i rendimenti \emph{percentuali} sempre di un'unica
 azione $i$
-
 \item Qual è la formula che esprime i rendimenti percentuali settimanali
 di un'azione $i$ in funzione dei suoi rendimenti percentuali giornalieri? 
 \item Se i rendimenti percentuali giornalieri $r_{i,t}$ fossero non correlati
@@ -943,11 +893,9 @@ in franchi, cioè $P_{it}=P_{eur,t}P_{it}^{eur}$. Il termine $P_{eur,t}$
 denota quindi il tasso di cambio fra $EUR$ e $CHF$ alla data $t$:
 ad esempio $P_{eur,t}=1.43\ Fr/Eur$.\medskip{}
 
-
 \noindent \begin{esempio} Un investitore svizzero ha acquistato 10
 azioni della BASF. L'azione della BASF è quotata in euro. La tabella
 seguente riporta i prezzi a tre date successive.\vspace{0.5cm}
-
 
 $\begin{tabular}{|c|c|c|c|}
  Data  &  Prezzo in eur  &  Cambio 1 eur = \ensuremath{x}chf  &  Prezzo in chf \\
@@ -966,7 +914,6 @@ BASF in eur e i movimenti del tasso di cambio.
 \noindent \medskip{}
  Quattro sono le domande che concernono i rendimenti di titoli quotati
 in moneta estera:\vspace{0.5cm}
-
 
 \noindent \begin{domanda} Dato l'$i-$esimo titolo, che relazione
 sussiste fra il suo rendimento percentuale in $CHF$ ed il suo rendimento
@@ -1002,7 +949,6 @@ il suo rendimento percentuale, abbiamo la semplice relazione $P_{t}=P_{usd,t}P_{
 $r_{t}:=\left(P_{t}-P_{t-1}\right)/P_{t-1}$ ai rendimenti percentuali
 giornalieri $r_{usd,t}$ e $r_{t}^{usd}$. Cosa notate?
 
-
 Suggerimento: 
 \[
 r_{t}=\frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}+P_{usd,t}P_{t-1}^{usd}-P_{usd,t-1}P_{t-1}^{usd}}{P_{usd,t-1}P_{t-1}^{usd}}
@@ -1012,7 +958,6 @@ r_{t}=\frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}+P_{usd,t}P_{t-1}^{usd}-P
 \frac{P_{usd,t}P_{t}^{usd}-P_{usd,t}P_{t-1}^{usd}}{P_{usd,t-1}P_{t-1}^{usd}}=(1+r_{usd,t})r_{t}^{usd}
 \]
 
-
 \item [D2.] Mostrate che il rendimento giornaliero logaritmico in $chf$
 è uguale alla somma dei due rendimenti logaritmici giornalieri e cioè
 quello sul prezzo in valuta locale più quello sul tasso di cambio. 
@@ -1020,10 +965,8 @@ quello sul prezzo in valuta locale più quello sul tasso di cambio.
 in $CHF$ fra $t-n$ e $t$, notato $r_{\left(t-n\right),t}$, ai
 rendimenti percentuali $r_{usd,\left(t-n\right),t}$ e $r_{\left(t-n\right),t}^{usd}$.
 
-
 Suggerimento: riutilizzate, adattando l'indice temporale, il suggerimento
 del punto 1.
-
 \item [D3.] Parte 2. Ricavate la formula per il calcolo del rendimento
 $r_{\left(t-n\right),t}$ a partire dai rendimenti percentuali sui
 singoli periodi $r_{usd,t}$ e $r_{t}^{usd}$. 
@@ -1038,12 +981,9 @@ dei rendimenti logaritmici formino una successione $i.i.d.\sim N(\mu,\Sigma)$.
 Cosa possiamo concludere riguardo alla successione di rendimenti logaritmici
 in $chf$ $r_{t}$?
 
-
 \hfill{}$\square$
-
 \end{enumerate}
 \end{esercizio}
-
 
 \section{Flashback: varianze, covarianze e coefficiente di correlazione}
 
@@ -1125,7 +1065,6 @@ che
 \widehat{Cov}(U,W)=\frac{1}{n}\sum_{t=1}^{n}\left(U_{t}-\overline{U}\right)\left(W_{t}-\overline{W}\right)\ .\label{covarianza empirica}
 \end{equation}
 
-
 \begin{esercizio} Consideriamo il vettore aleatorio\footnote{Il vettore $\mu$ è semplicemente il vettore dei valori attesi di
 $Z$:
 \[
@@ -1174,13 +1113,13 @@ della $W$.
 in fuzione della matrice $V$. 
 \item Riscrivete la (\ref{covarianza empirica}) come 
 \[
-\widehat{Cov}(U,W)=\frac{1}{3}x^{\prime}My\ ,
+\widehat{Cov}(U,W)=\frac{1}{3}y\prime Mx\ ,
 \]
  e date esplicitamente il contenuto della matrice $M$. Di che matrice
 si tratta? Quali sono le sue caratteristiche? 
 \item Consideriamo il prodotto ($S$ è il vettore somma a $3$ componenti)
 \[
-\left(y-\mu_{2}S\right)\left(x-\mu_{1}S\right)^{\prime}\ .
+\left(x-\mu_{1}S\right)\left(y-\mu_{2}S\right)^{\prime}\ .
 \]
  Date dimensione e contenuto di ogni simbolo ed esplicitate il prodotto.
 Calcolatene poi il valore atteso. 
@@ -1188,7 +1127,7 @@ Calcolatene poi il valore atteso.
 e del valore atteso (già viste ed utilizzate per il calcolo del valore
 atteso di una forma quadratica) calcolate il valore atteso di
 \begin{equation}
-\frac{1}{3}\left(x-\mu_{1}S\right)^{\prime}M\left(y-\mu_{2}S\right)\ .\label{forma quadratica centrata}
+\frac{1}{3}\left(y-\mu_{2}S\right)^{\prime}M\left(x-\mu_{1}S\right)\ .\label{forma quadratica centrata}
 \end{equation}
  e mostrate che è uguale a $\frac{2}{3}Cov(U,W)$. 
 \item Dopo aver sciolto le parentesi della (\ref{forma quadratica centrata})
@@ -1196,9 +1135,7 @@ calcolate il valore atteso di ciascun termine. Utilizzando il risultato
 del punto precedente date $E\left(\widehat{Cov}(U,W)\right)$. 
 \item Generalizzate il risultato al caso con $n$ osservazioni.
 
-
 \hfill{}$\square$
-
 \end{enumerate}
 \end{esercizio}
 
@@ -1235,7 +1172,6 @@ la relazione
 Cor(Z)=\Lambda^{-1/2}V\Lambda^{-1/2}\ .\label{matrice cor Z}
 \end{equation}
 
-
 \noindent \begin{esercizio} Sia $Z=(X\ Y)^{\prime}$ un vettore aleatorio
 a $N=2$ componenti di valore atteso nullo e matrice delle varianze
 e covarianze 
@@ -1260,7 +1196,6 @@ $\Lambda^{-1/2}$.
 \end{enumerate}
 \end{esercizio}
 
-
 \section{Valore atteso e varianza del rendimento di un portafoglio}
 
 Abbiamo dimostrato che il rendimento percentuale $r_{p(t-n),t}$ di
@@ -1268,11 +1203,10 @@ un portafoglio è la somma ponderata dei rendimenti $r_{i(t-n),t}$
 delle azioni che lo compongono. Il vettore di questa combinazione
 lineare è $w_{(t-n)}$. Esso contiene le posizioni percentuali ad
 inizio periodo. Per semplicità di notazione assumiamo $n=1$, tralasciando
-l'indice temporale sia dei pesi che dei rendimenti. Poiché il vettore
-dei rendimenti $r\sim(e,V)$ e $r_{p}=w^{\prime}r$, avremo per la
-famosissima formula $AVA^{\prime}$, che $Var(r_{p})=w^{\prime}Vw$.
+per il momento l'indice temporale sia dei pesi che dei rendimenti.
+Poiché il vettore dei rendimenti $r\sim(e,V)$ e $r_{p}=w^{\prime}r$,
+avremo per la famosissima formula $AVA^{\prime}$, che $Var(r_{p})=w^{\prime}Vw$.
 Il valore atteso di $r_{p}$ sarà invece uguale a $\mu_{p}=w^{\prime}e$.
-
 
 \subsection{Caso con due soli titoli}
 
@@ -1287,18 +1221,48 @@ da cui segue semplicemente che
 ovvero della varianza di $r_{p}$ in funzione del peso $w_{1}$. Il
 tutto è lasciato come semplice esercizio.
 
-
 \subsection{Caso generale}
 
-Il caso con $N$ titoli è praticamente già stato discusso nell'introduzione.
+Il caso con $N$ titoli è praticamente già stato discusso nell'introduzione
+dove è stato detto che $Var(r_{p})=w^{\prime}Vw$. Possiamo considerare
+il caso più generale della covarianza tra i rendimenti di due portafogli
+$p_{1}$ e $p_{2}$ definiti tramite i rispettivi \emph{vettori} di
+pesi $w_{1}$ e $w_{2}$ . In questo caso $w_{1}$ indica il vettore
+di pesi del portafoglio 1 e non la prima componente del vettore di
+pesi $w$. Per definizione della covarianza abbiamo 
+\begin{eqnarray*}
+Cov\left(r_{p_{1}},r_{p_{2}}\right) & = & E\left(\left(w_{1}'r-w_{1}'e\right)\left(w_{2}'r-w_{2}'e\right)'\right)\\
+ & = & E\left(w_{1}'\left(r-e\right)\left(r-e\right)'w_{2}\right)\\
+ & = & w_{1}'E\left(\left(r-e\right)\left(r-e\right)'\right)w_{2}\\
+ & = & w_{1}'\Sigma w_{2}
+\end{eqnarray*}
+La covarianza tra i rendimenti di due portafogli definiti sul medesimo
+universo di titoli è dunque uguale al prodotto dei vettori dei pesi
+per la matrice delle varianze e covarianze dei rendimenti dei titoli. 
 
+Il calcolo della covarianza tra due portafogli può essere ulteriormente
+generalizzato al caso di due portafogli definiti su due universi titoli
+parzialmente o solo in parte diversi. Chiamiamo con $r_{A}$ e $r_{B}$
+i rendimenti aleatori dei due universi titoli $A$ e $B$. I rendimenti
+attesi saranno indicati rispettivamente con $e_{A}$ ed $e_{B}$.
+La covarianza tra i rendimenti aleatori $r_{p_{A}}=w_{A}'r_{A}$ e
+$r_{p_{B}}=w_{B}'r_{B}$ dei due portafogli $P_{A}$ e $P_{B}$ è
+data da 
+\begin{eqnarray*}
+Cov(r_{P_{A}},r_{P_{B}}) & = & E\left(\left(w_{A}'r_{A}-w_{A}'e_{A}\right)\left(w_{B}'r_{B}-w_{B}'e_{B}\right)'\right)\\
+ & = & \dots\\
+ & = & w_{A}'Cov(r_{A},r_{B})w_{B}\\
+ & = & w_{A}\Sigma_{A,B}w_{B}
+\end{eqnarray*}
+dove la matrice $\Sigma_{A,B}$ rappresenta la matrice di covarianza
+di dimensione $N_{A}\times N_{B}$ tra i vettori aleatori $r_{A}$
+e $r_{B}$. 
 
-\section{Theory of Choice}
+\section{Teoria delle decisioni}
 
+\subsection{Relazione di preferenza e funzione di utilità di tipo ordinale}
 
-\subsection{Introduzione}
-
-La teoria della decisone (decision theory, preference theory) riferita
+La teoria delle decisioni (decision theory, preference theory) riferita
 alla scelta individuale (single -person choice theory) riguarda la
 formulazione assiomatica di una teoria che spieghi o descriva il modo
 in cui i singoli agenti economoci effettuino le loro scelte fra due
@@ -1307,28 +1271,313 @@ effettuare una scelta può includere anche situazioni di incertezza
 in cui la conseguenza della scelta non è conosciuta al momento della
 decisione. 
 
-Prendiamo ad esempio una distribuzione di probabilità semplice definita
-sull'intervallo $[0,100]$. Una distribuzione di probabilità semplice
-assegna probabilità positive ad un numero finito di esiti (si parla
-in questo caso di una distribuzione di probabilità discreta con supporto
-finito). Un esempio grafico potrebbe essere rappresentato dalle 3
-figure sottostanti:
+La teoria della decisione si basa sul principio secondo il quale un
+individuo è in grado di attribuire un ``valore'' a panieri di beni
+e servizi secondo le sue preferenze. Assumiamo che esistano $n$ beni.
+Un paniere è rappresentato da un vettore $x$ la cui $i-$esima componete
+$x_{i}$ rappresenta la quantità dell'$i-$esimo bene nel paniere
+$x$. Ogni consumatore seleziona il proprio paniere $x$ attingendo
+dall'insieme $\mathscr{X}$ dei panieri. 
 
+Le preferenze di un individuo sono descritte da un relazione di preferenza
+solitamente chiamata relazione di preordinamento totale $\gtrsim$
+sull'insieme $\mathscr{X}$ .
+
+\begin{remark} Una relazione binaria $\gtrsim$ su un insieme $\mathscr{X}$
+(cioè un sottoinsieme del prodotto cartesiano $\mathscr{X}\times\mathscr{X}$
+) si dice un preordine se soddisfa le seguenti proprietà per ogni
+$x,\,y,\,z\in\mathscr{X}$ :\pagebreak{}
+\begin{enumerate}
+\item[A1] Riflessività: per ogni $x\in\mathscr{X}$ vale $x\gtrsim x$.
+\item[A2] Transitività: se $x\gtrsim y$ e $y\gtrsim z$ allora $x\gtrsim z$.
+\item[A3] Completezza: il preordinamento è detto totale (o lineare) se presi
+due qualsiasi $x,\,y\in\mathscr{X}$ vale che 
+\end{enumerate}
+\[
+x\gtrsim y\mbox{ oppure }y\gtrsim x.
+\]
+
+\end{remark}
+
+Assumiamo quindi che la relazione di preferenza soddisfi gli assiomi
+A1-A3. Le proprietà di riflessività sembra essere evidente ed intuitiva
+quando applicata al contesto economico. L'espressione $x\gtrsim y$
+è da interpretare come ``il paniere di beni $x$ è debolmente preferito
+al paniere$y$''. Una relazione di preordinamento $\gtrsim$ introduce
+anche i concetti di preferenza stretta $\succ$ ed indifferenza $\sim$,
+definiti rispettivamente da
+\begin{itemize}
+\item $x\succ z$ se $x\succeq z$ ma non $z\succeq x$
+\item $x\sim z$ se $x\succeq z$ e $z\succeq x$
+\end{itemize}
+e sono da leggersi come ``il paniere di beni $x$ è (strettamente)
+preferito al paniere$y$'' e ``il paniere di beni $x$ è equivalente
+al paniere$y$''.
+
+La domanda che ci poniamo ora è la seguente: dato un individuo con
+una relazione di preordinamento totale su $\mathscr{X}$ è possibile
+costruire una funzione di utilità \emph{ordinale} che rappresenti
+le preferenze dell'individuo? Ricordiamo che una funzione di utilità
+ordinale su $\mathscr{X}$, notata $\Upsilon$ è una funzione da $\mathscr{X}$
+in $\mathbb{R}$ tale per cui 
+
+\begin{eqnarray}
+\Upsilon(x) & > & \Upsilon(y)\iff x\succ y\\
+\Upsilon(x) & = & \Upsilon(y)\iff x\sim y
+\end{eqnarray}
+
+La risposta alla domanda data è negativa. Al fine di assicurare l'esistenza
+di una funzione di utilità ordinale occorre un'ulteriore condizione
+detta di continuità che riportiamo di seguito senza ulteriori commenti:
+\begin{enumerate}
+\item[A4] Continuità: per qualsiasi paniere $x\in\mathscr{X}$, l'insieme $A$
+dei panieri strettamente preferiti a $x$ e l'insieme $B$ dei panieri
+strettamente peggiori di $x$ sono entrambi insiemi aperti.
+\end{enumerate}
+Siamo ora pronti a dare il seguente teorema
+
+\begin{theorem}Per ogni preordinamento totale definito su un insieme
+chiuso e convesso $\mathscr{X}$ di panieri per cui la condizione
+di continuità è soddisfatta esiste una funzione di utilità ordinale
+$\Upsilon$ continua che mappa $\mathscr{X}$ in $\mathbb{R}$.\end{theorem} 
+
+La funzione di utilità ordinale così ricavata, fatta eccezione per
+la sua continuità, contiene le medesime informazioni sulle preferenze
+del preordinamento totale. Al livello di utilità $\Upsilon(x)$ del
+paniere $x$ non può essere attribuito alcun altro significato se
+non nell'ambito della relazione ``maggiore di''. Infatti \emph{non}
+è corretto affermare che $x$ è doppiamente miglore di $z$ se $\Upsilon(x)=2\Upsilon(z)$.
+Analogamente non è possibile affermare che $x$ incrementa maggiormente
+l'utilità rispetto ad $y$ di quanto non lo faccia $y$ rispetto a
+$z$ se $\Upsilon(x)-\Upsilon(y)>\Upsilon(y)-\Upsilon(z)>0$.
+
+Da questo punto di vista quindi, se una particolare funzione di utilità
+$\Upsilon$ è una rappresentazione valida di una data relazione di
+preordinamento totale, allora lo sarà anche $\Phi(x):=h\left(\Upsilon(x)\right)$,
+dove $h$ è una qualsiasi funzione strettamente crescente.
+
+Generalmente nella teoria microeconomica si è soliti assumere la seguente
+ulteriore ipotesi 
+
+\begin{ipotesi} La funzione di utilità $\Upsilon$ è due volte differenziabile,
+crescente e strettamente concava.\end{ipotesi} 
+
+Quest'ultima ipotesi garantisce che le derivate parziali prime siano
+positive. Questo implica che un incremento di reddito speso su un
+qualsiasi bene darà sicuramente un incremento di utilità. L'ipotesi
+di concavità garantisce che le curve di indifferenza abbiano la ``solita
+forma all'insù'' (concava) ed indirettamente che la scelta ottimale
+di un consumatore sia unica.
+
+Indicando con $W$ (wealth) il patrimonio del consumatore, il problema
+di allocazione da risolvere è il seguente
+
+\begin{eqnarray*}
+\max\Upsilon(x) & \mbox{sotto il vincolo} & p'x\le W.
+\end{eqnarray*}
+
+La soluzione di questo problema di massimizzazione è dato dal Lagrangiano
+\begin{equation}
+L=\Upsilon(x)+\lambda(W-p'x)
+\end{equation}
+e le condizioni di primo ordine che ne derivano. Poiché sappiamo che
+la funzione di utilità è monotona crescente possiamo sostituire il
+segno di uguaglianza al vincolo di disuguaglianza $p'x\le W$ ottenendo
+in questo modo le equazioni
+\begin{eqnarray}
+\frac{\partial L}{\partial x} & = & \frac{\partial\Upsilon}{\partial x}-\lambda p=0,\label{eq:condizioni di primo ordine consumatore}\\
+\frac{\partial L}{\partial\lambda} & = & W-p'x=0.
+\end{eqnarray}
+Dalla condizione (\ref{eq:condizioni di primo ordine consumatore})
+si ricava facilmente che 
+\begin{equation}
+\frac{\partial\Upsilon/\partial x_{i}}{\partial\Upsilon/\partial x_{j}}=\frac{p_{i}}{p_{j}}
+\end{equation}
 \begin{figure}
-
-\begin{subfigure}{.5\textwidth}   \centering   \includegraphics[scale=.8\linewidth]{"figura1.1a"}   \caption{1a}   \label{fig:sfig1} \end{subfigure}% \begin{subfigure}{.5\textwidth}   \centering   \includegraphics[scale=.8\linewidth]{"figura1.1b"}   \caption{1b}   \label{fig:sfig2} \end{subfigure}% \begin{subfigure}{.5\textwidth}   \centering   \includegraphics[scale=.8\linewidth]{"figura1.1c_modificata"}   \caption{1c}   \label{fig:sfig2} \end{subfigure} \caption{plots of....} \label{fig:fig} \end{figure}
-
-
-
-
-\subsection{Relazione di preferenza}
-
-
-\subsection{Funzione di utilità di tipo ordinale}
+\begin{centering}
+\includegraphics[scale=0.5]{consumer_maximization_problem}
+\par\end{centering}
+\caption{Soluzione grafica al problema di massimizzazione}
+\end{figure}
 
 
 \subsection{Scelta sotto incertezza}
 
+Nella realtà ci sono situazioni in cui è necessario effettuare delle
+scelte sotto condizione di incertezza. Ad esempio, un investitore
+che deve decidere oggi come investire il proprio patrimonio non sa
+come evolveranno i prezzi dei singoli titoli ed il reddito che verrà
+versato. L'investitore dovrà informarsi sulle caratteristiche di rischio
+e le prospettive di rendimento dei titoli su cui desidera investire
+in maniera tale da poterne valutare la convenienza. 
+
+L'obiettivo di questa sezione è quello di estendere il discorso presentato
+nei paragrafi precedenti in maniera da coprire situazioni di incertezza
+riguardo alle conseguenze delle decisioni prese. La scelta che un
+individuo dovrà compiere è definita rispetto a delle ``lotterie''.
+Una lotteria è descritta da un vettore di payoff $(x_{1},\dots,x_{m})$
+con le relative probabilità $\pi=(\pi_{1},\dots,\pi_{m}).$ In questo
+caso $x_{i}$ rappresenta l'$i-$esimo paniere che la lotterie potrebbe
+distribuire e $\pi_{i}$ corrisponde alla propabilità di ottenere
+il paniere $i$. I precdenti assiomi $A1-A4$ sono sempre validi e
+definiscono le preferenze sui singoli panieri presenti nelle lotterie.
+Assumiamo inoltre che le preferenze dell'individuo siano tali per
+cui esiste un preordinamento totale sull'insieme delle lotterie e
+che questo preordinamento soddisfi i seguenti ulteriori assiomi:
+\begin{enumerate}
+\item[A1] Completezza: per qualsiasi coppia $L_{1}$, $L_{2}$ di lotterie
+vale che $L_{1}\succeq L_{2}$ oppure $L_{2}\succeq L_{1}$. Le relazioni
+di preferenza stretta $\succ$ e di indifferenza $\sim$ sono definite
+in maniera analoga al caso dei semplici panieri.
+\item[A2] Riflessività: data una qualsiasi lotteria $L$ vale $L\succeq L$.
+\item[A3] Transitività: se $L_{1}\succeq L_{2}$ e $L_{2}\succeq L_{3}$ allora
+$L_{1}\succeq L_{3}.$
+\end{enumerate}
+Gli assiomi A1-A3 sono equivalenti a quelli visti in precedenza ma
+si applicano sull'insieme delle lotterie e possiedono la medesima
+interpretazione. Grazie ad essi è possibile dimostrare che le scelte
+dell'individuo sono consistenti con l'esistenza di una funzione di
+utilità ordinale definita su lotterie. 
+
+I prossimi tre assiomi sono utili a sviluppare il concetto di scelta
+tramite la massimizzazione del valore atteso di una funzione di utilità
+cardinale definita su payoff di panieri.
+\begin{enumerate}
+\item[A5] Indipendenza: siano date le due lotterie $L_{1}=\left\{ \left(\left(x_{1},\dots,x_{v},\dots,x_{m}\right),\pi\right)\right\} $
+e $L_{2}=\left\{ \left(\left(x_{1},\dots,z,\dots,x_{m}\right),\pi\right)\right\} $.
+Se $x_{v}\sim z$, allora $L_{1}\sim L_{2}$. Facciamo notare che
+$z$ può essere un paniere o una lotteria. Se $z$ è una lotteria,
+cioè $z=\left\{ \left(\left(x_{1}^{z},x_{2}^{z},\dots,x_{n}^{z}\right),\pi^{z}\right)\right\} $
+allora deve valere 
+\begin{eqnarray*}
+L_{1}\sim L_{2} & \sim & \left\{ \left(x_{1},\dots,x_{v-1},x_{1}^{z},\dots,x_{n}^{z},x_{v+1}\dots,x_{m}\right),\right.\\
+ &  & \left(\left.\left(\pi_{1},\dots,\pi_{v-1},\pi_{v}\pi^{z},\pi_{v+1},\dots,\pi_{m}\right)\right\} \right)
+\end{eqnarray*}
+\end{enumerate}
+Nel precedente assioma A5 l'interpretazione del vettore di propabilità
+$\pi_{v}\pi^{z}$ è importante. Il vettore $\pi^{z}$ è da interpretarsi
+come le probabilità condizionate di ricevere i panieri $x^{z}$ condizionatamente
+al fatto che nella lotteria $L_{1}$ si sia verificato l'esito $v$.
+Il prodotto $\pi_{v}\pi^{z}$ corrisponde quindi alle probabilità
+non condizionate di ricevere i panieri $x_{i}^{z}$ in $x^{z}$. L'assioma
+A5 afferma che il meccanismo aleatorio con cui vengono assegnati i
+premi non ha nessun impatto sulle preferenze individuali. Una lotteria
+di lotterie o un'unica grande lotteria sono equivalente fin tanto
+che i panieri e le rispettive probabilità coincidono. Non esistono
+quindi preferenze rispetto al ``gioco'' in se o al meccanismo aleatorio
+che genera incertezza.
+\begin{enumerate}
+\item[A6] Continuità: se $x_{1}\succeq x_{2}\succeq x_{3}$, allora esiste
+una probabilità $\pi\in[0,1]$ tale per cui $x_{2}\sim\left\{ \left(x_{1},x_{3}\right),\left(\pi_{1},1-\pi_{1}\right)'\right\} $.
+Inoltre la probabilità è unica a meno che $x_{1}\sim x_{3}$.
+\item[A7] Dominanza: sia $L_{1}\left\{ \left(x_{1},x_{2}\right),\left(\pi_{1},1-\pi_{1}\right)'\right\} $
+e $L_{2}\left\{ \left(x_{1},x_{2}\right),\left(\pi_{2},1-\pi_{2}\right)'\right\} $.
+Se $x_{1}\succ x_{2}$, allora $L_{1}\succ L_{2}$ se e solo se $\pi_{1}>\pi_{2}$.
+\end{enumerate}
+\begin{theorem}Sotto le ipotesi degli assiomi A1-A7 la scelta effettuata
+da un individuo che deve scegliere tra due o più lotterie sarà quella
+con l'utilità attesa più alta. In oltre parole, la scelta massimizza
+$\sum\pi_{i}\Psi(x_{i})$, dove $\Psi$ è una particolare funzione
+di utilità cardinale.\end{theorem}
+
+La funzione di utilità $\Psi$ appena introdotta è chiamata funzione
+di utilità di von Neumann-Morgenstern. Essa possiede le caratteristiche
+di una funzione di utilità ordinale ma, in aggiunta, essa è anche
+una misura cardinale dell'utilità. In contrapposizione ad una funzione
+di utilità ordinale, il valore numerico dell'utilità possiede un preciso
+significato (a meno di un fattore di scala) che va al di là del semplice
+ordinamento di numeri.
+
+Per vedere quanto appena detto assumiamo l'esistenza di un singolo
+bene e consideriamo una lotteria che paga 0 o 9 unità del bene in
+maniera equiprobabile ed una seconda lotteria che paga 4 unità per
+certo. Sotto la funzione di utilità $\Psi(x)=x$ la prima lotteria
+possiede un'utilità attesa di 4.5 ed è preferità alla seconda. Ma
+se applichiamo la trasformazione monotona crescente $h(s)=\sqrt{s}$
+a $\Psi$ ecco che l'utilità attesa della prima lotteria scende a
+1.5 mentre l'utilità del payoff certo va a 2. Il nuovo ordinamento
+è però in contraddizione col primo e questo dimostra che arbitrarie
+trasformazioni monotone di funzioni di utilità cardinali $\Psi$ non
+mantengono l'ordine sulle lotterie. Per contro è facile verificare
+che grazie alla proprietà di linearità del valore atteso una qualsiasi
+trasformazione lineare monotona crescente $h(s)=a+bs$ ($b>0)$ della
+funzione di utilità $\Psi$ non modifica l'ordine di preferenza delle
+lotterie. La funzione di utilità di von Neumann-Morgenstern è dunque
+univocamente determinata a meno di una trasformazione lineare monotona
+crescente.
+
+È dunque possibile definire una funzione di utilità ordinale sulle
+lotterie tramite 
+\begin{equation}
+Q\left[\pi_{X}\right]=\mathbb{E}\left[\Psi(X)\right]:=\int\Psi(x)\pi(x)dx
+\end{equation}
+
+Sino ad ora abbiamo misurato gli esiti in termini di panieri di beni
+di consumo. In finanza si è però soliti misurare gli esiti in termini
+monetari dove l'utilità esprime il livello di soddisfazione associato
+ad un particolare livello di denaro (patrimonio). 
+
+\begin{esempio}Assumiamo che i payoff di una lotteria provengano
+da una stessa famiglia parametrica di distribuzioni, la distribuzione
+lognormale (cioè $ln(x)$ è distribuito $N\left(\mu,\sigma^{2}\right)$,
+si veda anche il Capitolo \ref{sec:La-distribuzione-lognormale})
+ed indichiamo con $\Psi(x)=x^{\gamma}/\gamma$ la funzione di utilità
+cardinale del consumatore. 
+\begin{eqnarray*}
+\mathbb{E}\left[\Psi(X)\right] & = & \int\frac{x^{\gamma}}{\gamma}\frac{1}{x\sigma\sqrt{2\pi}}exp\left(-\frac{\left(ln(x)-\mu\right)^{2}}{2\sigma^{2}}\right)dx\\
+ & = & \frac{1}{\gamma}\int exp(\gamma y)\frac{1}{\sigma\sqrt{2\pi}}exp\left(-\frac{\left(y-\mu\right)^{2}}{2\sigma^{2}}\right)dy\\
+ & = & \frac{1}{\gamma}\int\frac{1}{\sigma\sqrt{2\pi}}exp\left(-\frac{\left(y-\mu\right)^{2}-2\gamma y\sigma^{2}}{2\sigma^{2}}\right)dy\\
+ & = & \frac{1}{\gamma}\int\frac{1}{\sigma\sqrt{2\pi}}exp\left(-\frac{\left(y-\left(\mu+\gamma\sigma^{2}\right)\right)^{2}-\left(\mu+\gamma\sigma^{2}\right)^{2}+\mu^{2}}{2\sigma^{2}}\right)dy\\
+ & = & \frac{1}{\gamma}exp\left(\frac{\left(\mu+\gamma\sigma^{2}\right)^{2}-\mu^{2}}{2\sigma^{2}}\right)\int\frac{1}{\sigma\sqrt{2\pi}}exp\left(-\frac{\left(y-\left(\mu+\gamma\sigma^{2}\right)\right)^{2}}{2\sigma^{2}}\right)dy\\
+ & = & \frac{1}{\gamma}exp\left(\frac{\left(\mu+\gamma\sigma^{2}\right)^{2}-\mu^{2}}{2\sigma^{2}}\right)=\frac{1}{\gamma}exp\left(\frac{\mu^{2}+2\mu\gamma\sigma^{2}+\gamma^{2}\sigma^{4}-\mu^{2}}{2\sigma^{2}}\right)\\
+ & = & \frac{1}{\gamma}exp\left(\mu\gamma+\frac{\gamma^{2}\sigma^{2}}{2}\right)
+\end{eqnarray*}
+La funzione di utilità ordinale $Q$ sull'insieme delle lotterie è
+allora data da\footnote{Il valore atteso $\mathbb{E}\left[\Psi(X)\right]$è in questo caso
+definito da 
+\[
+\int\frac{x^{\gamma}}{\gamma}\frac{1}{x\sigma\sqrt{2\pi}}exp\left(-\frac{\left(ln(x)-\mu\right)^{2}}{2\sigma^{2}}\right)dx
+\]
+ In Appendice troviamo il calcolo relativo.} 
+\begin{equation}
+Q\left[\pi_{x}\right]=\frac{1}{\gamma}exp\left[\gamma\mu+\frac{\gamma^{2}\sigma^{2}}{2}\right]:=\Upsilon(\mu,\sigma).
+\end{equation}
+I parametri $\mu$ e $\sigma$ possono essere ora considerati i ``beni''.
+Poiché questa è un'utilità ordinale, è possibile utilizzare quale
+criterio equivalente per massimizzare l'utilità sulle lotterie la
+trasformazione monotona 
+\begin{equation}
+\Phi(\mu,\sigma):=\frac{ln\left[\gamma\Upsilon(\mu,\sigma)\right]}{\gamma}=\mu+\frac{\gamma\sigma^{2}}{2}.
+\end{equation}
+ 
+
+\end{esempio}
+
+\subsection{Funzione di utilità quadratica}
+
+In questo paragrafo assumiamo che un investitore debba pianificare
+i propri investimenti sull'arco di un determinato orizzonte temporale
+$T$. Supponiamo inoltre che egli abbia una funzione di utilità quadratica
+definita rispetto al patrimonio di fine periodo notato $W_{T}$. Utilizzando
+il rendimento lordo $Z:=W_{T}/W_{0}$ possiamo riscrivere $W_{T}=W_{0}Z$.
+Poiché la funzione di utilità è identificata a meno di una trasformazione
+lineare monotona crescente, possiamo senza perdita di generalità utilizzare
+la sua rappresentazione senza la costante in funzione di $Z$ 
+\begin{equation}
+\Psi(Z)=Z-b\frac{Z^{2}}{2}.
+\end{equation}
+Calcoliamo ora l'utilità attesa 
+\begin{equation}
+\mathbb{E}\left(\Psi(Z)\right)=\mu_{Z}-\frac{b}{2}\mathbb{E}\left(Z^{2}\right)=\mu_{Z}-\frac{b}{2}\left(\sigma_{Z}^{2}+\mu_{Z}^{2}\right).
+\end{equation}
+È dunque facile notare come per funzioni di utilità quadratiche l'utilità
+attesa dipenda unicamente dal valore atteso e dalla varianza del rendimento.
+Se restringiamo il dominio della funzione alla parte in cui è crescente,
+$\Psi(z)'>0$, otteniamo la condizione $Z<1/b$. Per valori di $\mu_{z}<1/b$
+abbiamo $\partial\mathbb{E}\left(\Psi(Z)\right)/\partial\mu_{Z}=1-b\mu_{Z}>0$
+e $\partial\mathbb{E}\left(\Psi(Z)\right)/\partial\sigma_{z}=-b<0$.
+La funzione di utilità attesa è quindi crescente rispetto al rendimento
+atteso e decrescente rispetto alla volatilità (varianza) del rendimento. 
 
 \section{Portafoglio efficiente: concetti generali e de\-fi\-ni\-zio\-ne}
 
@@ -1342,20 +1591,27 @@ dei rendimenti dei singoli titoli, sarà pertanto una variabile aleatoria
 distribuita secondo la legge normale, di valore atteso $\mu_{p}$
 e varianza $\sigma_{p}^{2}$.\smallskip{}
 
-
 Sappiamo inoltre che per caratterizzare una variabile aleatoria normale
 è necessario e sufficiente specificare il suo valore atteso e la sua
 varianza. Un investitore avrà dunque quali unici parametri di scelta
 il valore atteso e la varianza del portafoglio. È quindi ovvio che
 se i rendimenti sono variabili aleatorie normali, un individuo \emph{razionale}
-ed \emph{avverso al rischio} preferirà investire in un portafoglio
-$A$ a bassa volatilità anziché in un portafoglio $B$ di medesimo
-rendimento atteso ma volatilità superiore. È dunque legittimo chiedersi
-se, per un fisso rendimento atteso $\mu_{p}=c$, esiste un portafoglio
-a varianza minima fra tutti i portafogli di rendimento atteso uguale
-a $c$. Un simile portafoglio, se esiste, sarà chiamato portafoglio
-frontiera (``envelope portfolio\textquotedblright ).\smallskip{}
-
+ed \emph{avverso al rischio}\footnote{Abbiamo evitato di dare una definizione formale di avversione al rischio.
+A titolo indicativo e senza pretese di completezza diciamo che un
+individuo è avverso al rischio ad un determinato livello di patrimonio
+$W$ se la sua funzione di utilità $\Psi$ soddisfa la condizione
+$\Psi(W)>\mathbb{E}\left[\Psi\left(W+\tilde{\epsilon}\right)\right]$
+per qualsiasi lotteria $\tilde{\epsilon}$ per cui$\mathbb{E}\left(\tilde{\epsilon}\right)=0$
+e la dispersione è positiva.} preferirà investire in un portafoglio $A$ a bassa volatilità anziché
+in un portafoglio $B$ di medesimo rendimento atteso ma volatilità
+superiore\footnote{Quale alternativa alla presente argomentazione abbiamo precedentemente
+osservato che sotto l'ipotesi di una funzione di utilità quadratica
+l'utilità attesa è una funzione crescente rispetto al rendimento atteso
+del portafoglio e decrescente rispetto alla sua varianza (deviazione
+standard).}. È dunque legittimo chiedersi se, per un fisso rendimento atteso
+$\mu_{p}=c$, esiste un portafoglio a varianza minima fra tutti i
+portafogli di rendimento atteso uguale a $c$. Un simile portafoglio,
+se esiste, sarà chiamato portafoglio frontiera (``envelope portfolio\textquotedblright ).\smallskip{}
 
 Tuttavia nulla ci impedisce di ragionare partendo dal rischio associato
 al por\-ta\-fo\-glio, identificato da $\sigma_{p}^{2}=d$. In tal
@@ -1365,7 +1621,6 @@ massimo uguale a $\sigma_{p}^{2}$. Un portafoglio del genere, se
 esiste, è chiamato portafoglio efficiente. 
 
 \smallskip{}
-
 
 Nel definire il portafoglio frontiera ed il portafoglio efficiente
 abbiamo utilizzato nel nostro ragionamento la varianza del portafoglio.
@@ -1377,1932 +1632,70 @@ trasformazione monotona crescente: dati due portafogli $p_{1}$e $p_{2}$:
 \sigma_{p_{1}}^{2}>\sigma_{p_{2}}^{2}\Longleftrightarrow\sigma_{p_{1}}>\sigma_{p_{2}}\ .
 \]
 
-
 \noindent 
 \begin{figure}
 \vspace{7cm}
-
 
 \caption{Portafogli frontiera}
 \end{figure}
 
 
+\chapter{\textsc{Stima della Matrice delle Varianze e Covarianze}}
 
-\chapter{Introduzione al linguaggio di programmazione R}
+\section{Introduzione}
 
-
-\section{Premessa}
-
-R è un ambiente di sviluppo per l'analisi dei dati nato come estensione
-del linguaggio di programmazione S sviluppato negli anni 80 nei Laboratori
-Bell americani dell'AT\&T. R è un ambiente statistico aperto e di
-pubblico dominio (``open source\textquotedblright ) che, nel rispetto
-dei diritti d'autore, può essere copiato, distribuito e modificato
-da chiunque. Inizialmente scritto da Ross Ihaka e Robert Gentleman
-del Dipartimento di Statistica dell'Università di Auckland, Nuova
-Zelanda, dal 1997 lo sviluppo di R è affidato ad un gruppo internazionale
-denominato ``R Core Team\textquotedblright . Il codice sorgente e
-gli eseguibili del programma di base e delle varie librerie aggiuntive
-possono essere scaricati accedendo all'indirizzo web \href{http://www.r-project.org}{http://www.r-project.org}
-dove sono scaricabili le versioni del linguaggio per diversi sistemi
-operativi (Linux, Mac, Windows, ...). 
-
-Questo documento non è un manuale ma vuole essere semplicemente una
-traccia o un riassunto di quanto presentato in classe. Per ulteriori
-approfondimenti e precisazioni dei temi trattati, oltre ai manuali
-ed alla ricca documentazione disponibile all'indirizzo sopraccitato,
-si vedano i riferimenti bibliografici indicati all'indirizzo \href{http://www.r-project.org/doc/bib/R-publications.html}{http://www.r-project.org/doc/bib/R-publications.html}.
-Buona documentazione in varie lingue fra cui l'italiano è pure ottenibile
-all'in\-di\-riz\-zo \href{http://stat.ethz.ch/CRAN/other-docs.html}{http://stat.ethz.ch/CRAN/other-docs.html}.
-
-
-\section{Installazione}
-
-\noindent Il programma R è stato installato sul disco ``Condivisione\textquotedblright{}
-nella cartella \emph{programs/R/} (la versione attuale è la 2.10.1).
-Tuttavia i normali utenti non hanno diritto di scrittura su tale disco
-e pertanto prima di lanciare il programma dovete creare una shortcut
-in una cartella sulla quale avete diritto di lettura e scrittura.
-In \ pratica dovete seguire i seguenti passi: 
+In questa parte del corso studieremo alcuni modi per stimare la matrice
+delle varianze e covarianze del vettore aleatorio $r$ di dimensione
+$N\times1$ dei rendimenti (logaritmici o percentuali che siano).
+Una prima condizione necessaria (ma non sufficiente) per ottenere
+una matrice delle varianze e covarianze stimata\emph{ definita positiva}
+è che il numero di osservazioni nel tempo, $n$ sia almeno uguale
+o superiore al numero di asset in portafoglio: $n\ge N$. Al fine
+di eseguire una stima occorre tener conto dei seguenti punti:
 \begin{enumerate}
-\item Creare una cartella che verrà utilizzata come home di R. Suggerisco
-di creare la cartella ``R\textquotedblright{} nella directory ``My
-Documents\textquotedblright . In tal modo sarà possibile accedere
-ai dati da qualsiasi pc interno ed esterno all'USI. 
-\item Andate poi in ``\textbackslash{}\textbackslash{}usi\textbackslash{}dfs\textbackslash{}Condivisione\textbackslash{}programs\textbackslash{}R\textbackslash{}2.10.1\textbackslash{}bin\textquotedblright . 
-\item Create una shortcut di ``Rgui.exe\textquotedblright{} sul vostro
-desktop. L'icona ``Rgui.exe\textquotedblright{} verrà utilizzata
-per lanciare R. 
-\item Selezionare l'icona della shortcut appena creata col tasto destro
-del mouse e scegliere dal menu a cascata la voce properties. 
-\item Nel campo ``Start in\textquotedblright{} immettere il percorso della
-directory creata al punto 1. Nel mio caso il percorso è 
-\[
-\text{\textquotedblleft}\backslash\backslash usi\backslash dfs\backslash istituti\backslash Documents\backslash ortellic\backslash My\:Documents\backslash R\text{\textquotedblright}.
-\]
- Voi dovreste avere un percorso simile ma con ``ortellic\textquotedblright{}
-rimpiazzato dal vostro identificativo d'accesso (login name). 
-\item Chiudere la finestra delle proprietà della shortcut. 
+\item Definire l'orizzonte del rendimento e la frequenza di osservazione.
+Normalmente l'orizzonte e la frequenza corrispondono. In caso contrario
+accertarsi che la frequenza con cui si effettua l'osservazione non
+sia superiore all'orizzonte per il quale si calcola il rendimento.
+Un esempio che non pone problemi consiste nel calcolare le varianze
+e covarianze di rendimenti giornalieri (orizzonte di 1 giorno) utilizzando
+dati a frequenza giornaliera. Problematico sarebbe invece calcolare
+varianze e covarianze di rendimenti settimanali osservati a frequenza
+giornaliera. Come abbiamo già discusso precedentemente, in una situazione
+simile le osservazioni adiacenti nel tempo sono correlate e questo
+fatto influenza la stima.
+\item Associare un calendario ad ogni serie storica per identificare correttamente
+le date in cui non ci sono prezzi in quanto la borsa era chiusa. Spesso
+i fornitori di dati riportano quale valore il prezzo del giorno precedente.
+Tuttavia questo genera un numero eccessivo di rendimenti nulli che
+ovviamente può influenzare anche in maniera importante la stima della
+varianza e delle correlazioni.
+\item Decidere un algoritmo per sostituire i valori mancanti nella stima
+della matrice delle varianze covarianze. Soluzioni possibili sono
+(lista non esaustiva):
+
+\begin{enumerate}
+\item Prendere il valore del giorno precedente
+\item Interpolare linearmente i valori mancanti. Questa soluzione è equivalente
+ad assumere una dinamica dei prezzi di tipo ``random walk''.
+\item Eliminare dal campione le date per cui esiste almeno un valore mancante
+nella lista degli $N$ prezzi.
+\item Lasciare i buchi nella serie storica dei prezzi, calcolare i rendimenti
+e considerare di volta in volta per ciascuna coppia di osservazioni
+unicamente le date in cui entrambi i rendimenti sono presenti.
 \end{enumerate}
-\medskip{}
- Ora siete pronti ad avviare la vostra prima sessione di R!
-
-\noindent \medskip{}
- È possibile configurare R andando ad aggiungere, eliminare o modificare
-il contenuto del file Rprofile.site che si trova nella sottocartella
-``etc\textquotedblright{} della cartella in cui è stato installato
-il programma. All'USI l'applicazione R è installata in 
-\[
-\text{\textquotedblleft}\backslash\backslash usi\backslash dfs\backslash Condivisione\backslash programs\backslash R\backslash2.10.1\text{\textquotedblright}
-\]
- e il file Rprofile.site si troverà quindi in 
-\[
-\text{\textquotedblleft}\backslash\backslash usi\backslash dfs\backslash Condivisione\backslash programs\backslash R\backslash2.10.1\backslash etc\text{\textquotedblright\ .}
-\]
- Tuttavia, poiché non avete diritto di scrittura è necessario operare
-diversamente. Anziché modificare il file Rprofile.site ne facciamo
-una copia e la mettiamo nella cartella di home di R (da noi creata
-in precedenza al punto 1). All'avvio di R il programma cerca automaticamente
-nella cartella di home la presenza del file ``$.Rprofile$\textquotedblright{}
-e ne legge il contenuto. Modifichiamo il contenuto di Rprofile.site
-e in seguito cambiamo il suo nome\footnote{In Windows XP non è possibile rinominare un file da explorer con un
-nome che inizia con un punto. È necessario farlo da linea di comando
-(command prompt). Evito per ragioni di tempo di spiegare come aggirare
-il problema. La semplice alternativa è quella di copiare un file già
-esistente per poi modificarlo secondo le proprie necessità. Voi potete
-utilizzare il file .Rprofile disponibile su \href{http://www.iCorsi.ch}{www.iCorsi.ch}.
-Con Windows 7 questo problema non sussiste.} in ``$.Rprofile$\textquotedblright . In tal modo ci assicuriamo
-che dopo l'avvio di R il programma abbia caricato la configurazione
-da noi desiderata. Un esempio di .Rprofie è dato qui di seguito\footnote{Attenzione: i file che iniziano con un punto sono normalmente nascosti.
-Per vederli è\ necessario aprire la cartella contenente il file che
-si desidera visualizzare, selezionare il Menu 
-\[
-\emph{Tools\ ->\ Folder\ Options\ ...}
-\]
- selezionare l'etichetta ``View\textquotedblright{} e selezionare
-l'opzione ``Show hidden files and folders\textquotedblright .}:
-
-\noindent \# Things you might want to change
-
-options(papersize=\textquotedbl{}a4\textquotedbl{})
-
-\# options(editor=\textquotedbl{}notepad\textquotedbl{})
-
-\# options(pager=\textquotedbl{}internal\textquotedbl{})
-
-\# to prefer Compiled HTML help
-
-options(chmhelp=FALSE)
-
-\# to prefer HTML help
-
-options(htmlhelp=TRUE)
-
-\medskip{}
- Il carattere ``$\#$\textquotedblright{} serve per commentare il
-codice. Una linea che inizia con tale carattere non verà eseguita!
-
-\noindent \medskip{}
- Se desiderate installare R a casa dovete scaricare il programma: 
-\begin{enumerate}
-\item Andate al sito \emph{\href{http://www.r-project.org}{www.r-project.org}}
-.
-\item Cliccate su CRAN sul lato sinistro della finestra. Dopodiché selezionate
-un ``CRAN Mirrors\textquotedblright , io generalmente seleziono quello
-dell'ETH-Zurigo: \href{http://cran.ch.r-project.org/}{http://cran.ch.r-project.org/}.
-In base alla piattaforma scaricate l'ultima versione di R, al momento
-la 2.12.2 ed installatela (a giorni dovrebbe essere rilasciata la
-versione 2.13.0). 
-\end{enumerate}
-\noindent \begin{remark} Gli utilizzatori del sistema operativo Linux
-trovano R nei pacchetti della loro distribuzione preferita. \end{remark}
-
-
-\section{La linea di comando}
-
-Alla sua apertura il programma R mostra una sola finestra. Questa
-finestra è chiamata \foreignlanguage{english}{\emph{finestra di comando}}
-in quanto essa contiene la \emph{linea di comando}, cioè il luogo
-dove scrivere i comandi che verranno poi eseguiti dal programma. A
-prima vista il tutto può sembrare molto scomodo, soprattutto per coloro
-che sono abituati a lavorare tramite mouse, menu a cascata, bottoni
-ecc. . Questo in parte è vero ... ma solo nella fase iniziale. Infatti,
-man mano che apprenderete i comandi di R vi accorgerete della velocità
-e dei vantaggi di questo sistema.
-
-\medskip{}
- Particolarmente importante, soprattutto durante la fase di apprendimento,
-è il comando $\emph{help(}^{\prime}nome^{\prime}\emph{)}$. Con questo
-comando richiamate la pagina del manuale di R che descrive la sintassi
-ed il funzionamento del comando $\prime nome\prime$. Per esempio,
-digitando \emph{help(help)} appare la pagina con la descrizione del
-comando help. Potete leggere in tale pagina che una scorciatoia al
-comando help() è data dal punto interrogativo \emph{'?'}. Al posto
-di help(help) avremmo anche potuto scrivere ?help. Ancora un'osservazione
-prima di iniziare. Se voi digitate \emph{help }senza aggiungere le
-parentesi tonde verrà visualizzato il codice della funzione help.
-Questo comportamento vale per tutti i comandi di R. Infine, per ricerche
-avanzate digitare \emph{help.start()}.
-
-\medskip{}
- Un primo grande vantaggio della linea di comando è dato dal fatto
-di poter richiamare e quindi ripetere velocemente un comando o una
-serie di comandi impartiti in precedenza. Utilizzando le frecce ``in
-alto\textquotedblright{} e ``in basso\textquotedblright{} è possibile
-scorrere la storia dei comandi impartiti. Per ottenere una lista degli
-ultimi comandi eseguiti digitare il comando \emph{history()}. Il numero
-massimo di comandi tenuti a mente è 512 (questo parametro è tuttavia
-modificabile). Di default \emph{history()} propone la lista degli
-ultimi 25 comandi. È possibile tramite l'argomento \emph{max.show}
-aumentare o diminuire il numero di comandi mostrati: history(max.show=3).
-
-
-\section{Strutture semplici e strutture di dati}
-
-Cominciamo utilizzando R come un'elementare macchina calcolatrice.
-
-
-\subsubsection{Operatori matematici\label{operatori matematici semplici}}
-
-Per quanto riguarda gli operatori matematici semplici quali la somma,
-la sottrazione, la moltiplicazione, la divisione e l'elevamento a
-potenza, R non si differenzia dagli altri linguaggi. 
-\[
-\begin{tabular}{ll}
- Somma  &  \ensuremath{+}\\
- Sottrazione  &  \ensuremath{-}\\
- Moltiplicazione  &  \ensuremath{\ast}\\
- Divisione  &  \ensuremath{/}\\
- Divisione intera  &  \ensuremath{\%/\%}\\
- Elevamento a potenza  &  \ensuremath{\ast\ast}oppure\:\symbol{94} 
-\end{tabular}
-\]
-
-
-\noindent Ad esempio\medskip{}
-
-
-\noindent \textbf{> 5+7{*}3}
-
-\textbf{{[}1{]} 26}\medskip{}
-
-
-\noindent Per modificare le priorità in una sequenza di operazioni
-si utilizzano le parentesi tonde:\medskip{}
-
-
-\noindent \textbf{> (5+7){*}3}
-
-\textbf{{[}1{]}\ 36}
-
-\noindent \textbf{> 2{*}3\symbol{94}2}
-
-\textbf{{[}1{]} 18}
-
-\noindent \textbf{> (2{*}3)\symbol{94}2}
-
-\textbf{{[}1{]} 36}\bigskip{}
-
-
-
-\subsubsection{Assegnamenti}
-
-\noindent In R si assegna alla variabile $x$ il valore 2 tramite
-l'operatore '$=$' oppure '{ }<-':\medskip{}
-
-
-\noindent \textbf{> x <- 2}\medskip{}
-
-
-\noindent Per visualizzare il contenuto di $x$ basta eseguire\medskip{}
-
-
-\noindent \textbf{> x}\medskip{}
-
-
-\noindent oppure\medskip{}
-
-
-\noindent \textbf{> print(x)}\medskip{}
-
-
-\noindent Per rimuovere la variabile $x$ si utilizza il comando remove:
-'rm()' \medskip{}
-
-
-\noindent \textbf{> rm(x)}\medskip{}
-
-
-\noindent Per visualizzare la lista degli oggetti in memoria (variabili,
-funzioni, ecc.) si usa il comando 'objects()':\medskip{}
-
-
-\noindent \textbf{> objects()}\medskip{}
-
-
-\begin{remark} Un'assegnazione può essere effettuata anche da sinistra
-verso destra. In altre parole\medskip{}
- \end{remark}
-
-\noindent \textbf{> 3 -> z}\medskip{}
-
-
-\noindent è un comando valido di R. Infatti\medskip{}
-
-
-\noindent \textbf{> z}
-
-\textbf{{[}1{]} 3}\bigskip{}
-
-
-
-\subsubsection{Successioni}
-
-\noindent Spesso è necessario creare delle successioni di numeri.
-In R esiste il comando \emph{seq (limite inferiore, limite superiore,
-incremento):}\medskip{}
-
-
-\noindent \textbf{> seq (1,5,1)}
-
-\textbf{{[}1{]} 1 2 3 4 5}
-
-\noindent \textbf{> seq (1996, 2003,1)}
-
-\textbf{{[}1{]} 1996 1997 1998 1999 2000 2001 2002 2003}
-
-\noindent > \textbf{seq (1, 0, -0.2)}
-
-\textbf{{[}1{]} 1.0 0.8 0.6 0.4 0.2 0.0}\medskip{}
-
-
-\noindent Il limite inferiore così come l'incremento sono definiti
-per default uguali ad 1. Così avremo che\medskip{}
-
-
-\noindent \textbf{> a <- seq(5)}
-
-\noindent \textbf{> a}
-
-\textbf{{[}1{]} 1 2 3 4 5}\medskip{}
-
-
-\noindent Quest'ultima operazione può essere svolta anche con l'operatore
-``due punti\textquotedblright :\medskip{}
-
-
-\noindent \textbf{> b <- 1:5}
-
-\noindent \textbf{> b}
-
-\textbf{{[}1{]} 1 2 3 4 5}\medskip{}
-
-
-\noindent Sono pure ammesse oltre che molto utili espressioni del
-tipo\medskip{}
-
-
-\noindent > 0:5/10
-
-{[}1{]} 0.0 0.1 0.2 0.3 0.4 0.5\bigskip{}
-
-
-
-\subsubsection{Concatenamento e copie multiple di elementi}
-
-\noindent L'operatore \emph{c() }serve a concatenare più elementi
-fra loro.\medskip{}
-
-
-\noindent \textbf{> nome.cognome <- c(\textquotedblright Claudio\textquotedblright ,\textquotedblright Ortelli\textquotedblright )}
-
-\noindent \textbf{> nome.cognome}
-
-\textbf{{[}1{]} ''Claudio'' ''Ortelli''}\medskip{}
-
-
-\noindent L'oggetto creato è un vettore le cui componenti sono tutto
-del medesimo tipo (\emph{character} in questo caso). Se si tenta di
-concatenare oggetti di formato diverso la funzione \emph{c()} trasformerà
-tutti i dati nel tipo più generale, nel prossimo esempio in formato
-stringa:\medskip{}
-
-
-\noindent \textbf{> c(1,2.5,''nome'')}
-
-\textbf{{[}1{]} ''1'' ''2.5'' ''nome''}\medskip{}
-
-
-\noindent Lavorare con vettori è utile in quanto è possibile sfruttare
-la capacità di R di effettuare determinate operazioni su ogni componente
-del vettore tramite un unico comando. Oltre ad un tempo d'esecuzione
-inferiore rispetto ad un ciclo \emph{for} si ottiene anche una migliore
-leggibilità del codice.\medskip{}
-
-
-\noindent \textbf{> x <- c(2,3,-1)}
-
-\noindent \textbf{> x\symbol{94}2}
-
-\textbf{{[}1{]} 4 9 1}\medskip{}
-
-
-\noindent Tramite la funzione \emph{rep (oggetto, numero ripetizioni)
-}è possibile copiare un oggetto un certo numero di volte. Per esempio\medskip{}
-
-
-\noindent > \textbf{rep(1,5)}
-
-\textbf{{[}1{]} 1 1 1 1 1}
-
-\noindent \textbf{> rep(x,2)}
-
-\textbf{{[}1{]} 2 3 -1 2 3 -1}\medskip{}
-
-
-\noindent 'numero ripetizioni' può essere un vettore contenente numeri
-interi non negativi. In tal caso anche 'oggetto' deve essere un vettore
-della medesima lunghezza. Il risultato sarà un vettore dove ogni componente
-del vettore 'oggetto' è ripetuta tante volte quanto è indicato alla
-posizione corrispondente del vettore 'numero ripetizioni'.\medskip{}
-
-
-\noindent \textbf{> x}
-
-\textbf{{[}1{]} 2 3 -1}
-
-\noindent \textbf{> rep(x,c(3,2,1))}
-
-\textbf{{[}1{]} 2 2 2 3 3 -1}\bigskip{}
-
-
-
-\subsubsection{Operazioni matematiche}
-
-Abbiamo visto le operazioni matematiche su scalari al punto (\ref{operatori matematici semplici}).
-Cosa accade se applichiamo tali aperazioni fra due vettori numerici?
-La risposta è semplice: gli operatori aritmetici agiscono su vettori
-componente per componente. La prossima tabella mostra tale proprietà.\medskip{}
-
-
-\noindent > b <- 1:4
-
-\noindent > a <- 2{*}(0:3)\medskip{}
-
-
-\begin{center}
-\begin{tabular}{ll|lllll}
-\hline 
-a  & b  & a+b  & a-b  & a{*}b  & a/b  & a\symbol{94}b \tabularnewline
-\hline 
-0  & 1  & 1  & -1  & 0  & 0  & 0 \tabularnewline
-2  & 2  & 4  & 0  & 4  & 1  & 4 \tabularnewline
-4  & 3  & 7  & 1  & 12  & 1.33  & 64 \tabularnewline
-6  & 4  & 10  & 2  & 24  & 1.5  & 1296 \tabularnewline
-\hline 
-\end{tabular}\medskip{}
- 
-\par\end{center}
-
-\noindent È quindi possibile scrivere formule anche relativamente
-complesse.\medskip{}
-
-
-\noindent \textbf{> z <- (a\symbol{94}2 - b\symbol{%
-94}2)\symbol{94}2 / (a\symbol{94}2 + b\symbol{94}2)}
-
-\noindent \textbf{> z}
-
-{[}1{]} 1.000000 0.000000 1.960000 7.692308\bigskip{}
-
-
-
-\subsubsection{Tipi di parentesi e loro significato}
-
-\noindent R possiede tre tipi di parentesi: parentesi tonde, quadre
-e graffe. Le parentesi tonde servono a definire l'ordine nel quale
-le operazioni matematiche vanno eseguite. Le parentesi quadre invece
-servono a definire le componenti di un vettore o di una matrice sulle
-quali vogliamo operare (vedremo più tardi come definire una matrice
-in R). Infine, le parentesi graffe servono a delimitare blocchi di
-codice come ad esempio in caso di istruzioni if \{ ...\} else \{ ...\}.
-
-\noindent Definiamo ora un vettore qualsiasi di 3 componenti, per
-esempio\medskip{}
-
-
-\noindent \textbf{> x <- 1:3{*}10}
-
-\noindent \textbf{> x}
-
-\textbf{{[}1{]} 10 20 30}
-
-\noindent \textbf{> x{[}1{]}\qquad{}\qquad{}\#accesso al primo elemento}
-
-\textbf{{[}1{]} 10}
-
-\noindent \textbf{> x{[}2{]}\qquad{}\qquad{}\#accesso al secondo
-elemento}
-
-\textbf{{[}1{]} 20}
-
-\noindent \textbf{> x{[}3{]}\qquad{}\qquad{}\#accesso al terzo elemento}
-
-\textbf{{[}1{]} 30}
-
-\noindent \textbf{> x{[}4{]}\qquad{}\qquad{}\#accesso al quarto
-elemento}
-
-\textbf{{[}1{]} NA}\medskip{}
-
-
-\noindent Il termine \textbf{NA} significa ``not available\textquotedblright .
-È possibile dare un vettore di interi quale argomento all'interno
-delle parentesi quadre:\medskip{}
-
-
-\noindent \textbf{> x{[}rep(1,5){]}}
-
-{[}1{]} 10 10 10 10 10
-
-\noindent \textbf{> x{[}c(1,3){]}}
-
-{[}1{]} 10 30
-
-\noindent Indici negativi significano ``non voglio\textquotedblright ,
-cioè
-
-\noindent \textbf{> x{[}-1{]}\qquad{}\qquad{}\#non voglio il primo
-elemento}
-
-\textbf{{[}1{]} 20 30}
-
-\noindent \textbf{> x{[}-c(1,3){]}\qquad{}\#non voglio il primo \&
-il terzo elemento}
-
-{[}1{]} 20
-
-\noindent Tuttavia non è possibile mischiare indici positivi e negativi:
-\textbf{x{[}c(-1,3){]}} non funziona.\bigskip{}
-
-
-
-\subsubsection{Operatori logici}
-
-Le variabili logiche sono variabili binarie, cioè assumono solo due
-valori vero (1 o TRUE) e falso (0 o FALSE). In R si definisce una
-variabile logica assegnandole il valore TRUE o FALSE, esattamente
-come si usa fare con una qualsiasi altra variabile numerica o di tipo
-stringa. Spesso le variabili logiche sono il risultato di un operatore
-logico quale ad esempio ``>=\textquotedblright , ``<\textquotedblright :\medskip{}
-
-
-\noindent \textbf{> 5 >=4}
-
-\textbf{{[}1{]} TRUE}
-
-\medskip{}
- In R troviamo i seguenti operatori logici:
-
-\noindent \begin{center}
-\begin{tabular}{ll}
-Operatore  & Funzione \tabularnewline
-<  & minore a \tabularnewline
->  & maggiore a \tabularnewline
-<=  & minore o uguale a \tabularnewline
->=  & maggiore o uguale a \tabularnewline
-==  & uguale a \tabularnewline
-!=  & diverso da\tabularnewline
-\end{tabular}\medskip{}
- 
-\par\end{center}
-
-\noindent \textbf{> 5!=1}
-
-\textbf{{[}1{]} TRUE}\medskip{}
-
-
-\noindent Così come gli operatori matematici, anche gli operatori
-logici operano componente per componente quando vengono applicati
-a vettori o matrici.\medskip{}
-
-
-\noindent \textbf{> x <- 1:3}
-
-\noindent \textbf{> x < 3}
-
-\textbf{{[}1{]} TRUE TRUE FALSE}
-
-\noindent \textbf{> y <- 3:1}
-
-\noindent \textbf{> y}
-
-\textbf{{[}1{]} 3 2 1}
-
-\noindent \textbf{> x<y}
-
-\textbf{{[}1{]} TRUE FALSE FALSE}\medskip{}
-
-
-\noindent Una caratteristica molto utile degli operatori logici applicati
-a vettori consiste nel fatto che è possibile contare il numero di
-componenti che soddisfano una certa condizione. Per esempio, supponiamo
-di voler sapere quali componenti del vettore 1:10 sono maggiori o
-uguali a 7.\medskip{}
-
-
-\noindent \textbf{> 1:10 >= 7}
-
-\textbf{{[}1{]} FALSE FALSE FALSE FALSE FALSE FALSE TRUE TRUE TRUE
-TRUE}
-
-\noindent \textbf{> sum(1:10 >= 7)}
-
-\textbf{{[}1{]} 4}\medskip{}
-
-
-\noindent La funzione \emph{sum()} ha tramutato FALSE\ in 0 e TRUE\ in
-1 e sommato tutte le componenti.\bigskip{}
-
-
-
-\subsubsection{Estrazione di indici}
-
-I valori logici sono molto utilizzati per estrarre da strutture piu'
-complesse solo quelle parti che soddisfano determinate condizioni.
-Per esempio, supponiamo di avere osservazioni sull'altezza e sul peso
-di 9 individui,\medskip{}
-
-
-\noindent \textbf{> nome <- c(\textquotedblright Claudio\textquotedblright ,
-\textquotedblright Maria\textquotedblright , \textquotedblright Marco\textquotedblright ,
-\textquotedblright Matteo\textquotedblright , \textquotedblright Francesca\textquotedblright ,
-\textquotedblright Giovanni\textquotedblright , \textquotedblright Marta\textquotedblright ,
-\textquotedblright Giorgio\textquotedblright , \textquotedblright Alberto\textquotedblright )}
-
-\noindent \textbf{> altezza <- 140:148}
-
-\noindent \textbf{> peso <- c(seq(50, 64, 2),59)}\medskip{}
-
-
-\noindent Quali sono gli individui che hanno un peso superiore a 60
-Kg? Per rispondere a questa domanda è sufficiente eseguire il comando\medskip{}
-
-
-\noindent > \textbf{nome{[}peso>60{]}}
-
-\textbf{{[}1{]} ''Marta'', ''Giorgio''}\medskip{}
-
-
-\noindent E quanto sono alti?\medskip{}
-
-
-\noindent \textbf{> altezza{[}peso>60{]}}
-
-\textbf{{[}1{]} 146 147}\medskip{}
-
-
-\noindent È possibile specificare più condizioni, legandole fra loro
-tramite gli operatori \& (\textquotedblright logical and\textquotedblright ),
-$|$ (\textquotedblright logical or\textquotedblright ). Ad esempio\medskip{}
-
-
-\noindent \textbf{> nome{[}peso>60 \& peso != 64{]}}
-
-\textbf{{[}1{]} ''Marta''}
-
-
-\subsection{Strutture di dati}
-
-Nel precedente paragrafo abbiamo visto come costruire una struttura
-\textquotedbl{}vettore\textquotedbl{} partendo da semplici variabili
-scalari (tramite la funzione di concatenamento \textbf{c()}). Come
-ben sapete dai vari corsi di statistica, matematica ed econometria,
-in molte circostanze è indispensabile generalizzare il concetto di
-vettore a strutture multidimensionali (chiamate generalmente arrays)
-di cui le matrici sono l'esempio più noto. Conosceremo ora le strutture
-multidimensionali contenute in R.
-
-
-\subsubsection{Data Frames}
-
-I data frames sono delle tabelle in cui è consentito inserire colonne
-di formato (tipo) diverso fra loro. Il comando per generare un data
-frame è il seguente: 
-\[
-data.frame\ (Elemento1,\ Elemento2,\ ...)
-\]
- Tutti gli argomenti che vengono elencati in data.frame \emph{devono}
-avere il medesimo numero di righe. Tornando all'esempio precedente
-dei nove individui:\medskip{}
-
-
-\noindent \textbf{> tabella <- data.frame(nome,altezza,peso)}
-
-\noindent \textbf{> tabella}
-
-\begin{tabular}{rrrr}
- & \textbf{nome}  & \textbf{altezza}  & \textbf{peso} \tabularnewline
-\textbf{1}  & \textbf{Claudio}  & \textbf{141}  & \textbf{50} \tabularnewline
-\textbf{2}  & \textbf{Maria}  & \textbf{142}  & \textbf{52} \tabularnewline
-\textbf{3}  & \textbf{Marco}  & \textbf{143}  & \textbf{54} \tabularnewline
-\textbf{4}  & \textbf{Matteo}  & \textbf{144}  & \textbf{56} \tabularnewline
-\textbf{5}  & \textbf{Francesca}  & \textbf{145}  & \textbf{58} \tabularnewline
-\textbf{6}  & \textbf{Giovanni}  & \textbf{146}  & \textbf{60} \tabularnewline
-\textbf{7}  & \textbf{Marta}  & \textbf{147}  & \textbf{62} \tabularnewline
-\textbf{8}  & \textbf{Giorgio}  & \textbf{148}  & \textbf{64} \tabularnewline
-\textbf{9}  & \textbf{Alberto}  & \textbf{149}  & \textbf{59}\tabularnewline
-\end{tabular}
-
-\medskip{}
- Un esempio importante per la creazione di un data.frame è costituito
-dall'importazione di dati da una tabella in formato csv. Il comando
-da utililzzare è \textbf{read.table }(si veda la documentazione per
-la descrizione dettagliata digitando ``help(read.table)\textquotedblright :
-
-\noindent \textbf{> dati <- read.table(\textquotedblright //usi/dfs/istituti/Documents/ortellic/}
-
-\nopagebreak\textbf{My Documents/R/daticorso.csv\textquotedblright ,header=TRUE,sep=\textquotedblright ;\textquotedblright ,}
-
-\nopagebreak\textbf{colClasses=c(\textquotedblright character\textquotedblright ,rep(\textquotedblright numeric\textquotedblright ,6)))}\medskip{}
-
-
-\noindent Il primo argomento indica il nome del file da aprire. Si
-noti che mentre Windows utilizza il carattere \textbf{``}\\
-textbf{\textquotedblright } per separare nomi di cartelle, R utilizza
-lo standard unix e cioè il carattere \textbf{``}/\textbf{\textquotedblright }.
-Quando il file da importare si trova nell'attuale cartella di lavoro
-(cioè la cartella indicata nel campo \textbf{``}start in\textbf{\textquotedblright{}}
-dell'icona con cui avviate il programma), è sufficiente indicare il
-nome del file. Avremmo dunque potuto anche scrivere\medskip{}
-
-
-\noindent \textbf{> dati <- read.table(''daticorso.csv'', header=TRUE,
-sep='';'', }
-
-\textbf{colClasses=c(''character'',rep(''numeric'',6)))}\medskip{}
-
-
-\noindent Il secondo argomento indica se la prima riga di dati contiene
-le intestazioni delle colonne. Il parametro \textbf{sep }determina
-il carattere utilizzato per separare il contenuto delle colonne. L'ultimo
-argomento, \textbf{colCasses}, determina il tipo di dato contenuto
-in ciascuna colonna (logical, integer, real, complex e character sono
-i tipi di vettori (colonne) che si possono importare in un data frame).
-
-\noindent Prima di eseguire l'importazione è bene dare un'occhiata
-al file contenente i dati. Aprite dunque il file con un semplice elaboratore
-di testo (Notepad) e verificate che il carattere di separazione sia
-la virgola, il punto e virgola o qualche altro carattere particolare.
-Modificate il comando di conseguenza (\textbf{sep=\textquotedbl{}{*}\textquotedbl{}}).
-
-\medskip{}
- Per accedere a dati contenuti in un data frame si usano le parentesi
-quadre. Al loro interno vanno indicati i numeri delle righe e delle
-colonne che si vogliono estrarre. Se si desiderano tutte le righe
-o tutte le colonne di un data frame è sufficiente lasciare vuoto l'indice
-corrispondete. Per esempio\medskip{}
-
-
-\noindent \textbf{> dati{[}1,{]}}
-
-\textbf{\ }%
-\begin{tabular}{rrrrrrrr}
- & \textbf{date }  & \textbf{SP100 }  & \textbf{MIB30 }  & \textbf{DAX }  & \textbf{SMI }  & \textbf{EUR }  & \textbf{CHF }\tabularnewline
-\textbf{1 }  & \textbf{1/1/1999 }  & \textbf{604.03 }  & \textbf{35152 }  & \textbf{5002.39 }  & \textbf{7160.7 }  & \textbf{0.8516 }  & \textbf{1.413}\tabularnewline
-\end{tabular}\medskip{}
-
-
-\noindent Per vedere la prima, la terza e l'ultima riga delle prime
-3 colonne del data frame ``dati\textquotedblright \medskip{}
-
-
-\noindent \textbf{> dati{[}c(1,3,1141)},\textbf{1:3}{]}
-
-\begin{tabular}{rrrr}
- & \textbf{date}  & \textbf{SP100}  & \textbf{MIB30} \tabularnewline
-\textbf{1}  & \textbf{1/1/1999}  & \textbf{604.03}  & \textbf{35152} \tabularnewline
-\textbf{3}  & \textbf{1/5/1999}  & \textbf{615.38}  & \textbf{37807} \tabularnewline
-\textbf{1141}  & \textbf{5/16/2003}  & \textbf{475.72}  & \textbf{24740}\tabularnewline
-\end{tabular}\medskip{}
-
-
-\noindent Così come con i vettori è possibile utilizzare indici negativi
-sia per le righe che per le colonne di un data frame. Ricordo che
-non è possibile avere indici di segno opposto per indicare rispettivamente
-escludere righe o colonne.\medskip{}
-
-
-\noindent \textbf{> dati{[}c(1,3,1141),-(2:5){]}}
-
-\begin{tabular}{rrrr}
- & \textbf{date}  & \textbf{EUR}  & \textbf{CHF} \tabularnewline
-\textbf{1}  & \textbf{1/1/1999}  & \textbf{0.8516}  & \textbf{1.4130} \tabularnewline
-\textbf{3}  & \textbf{1/5/1999}  & \textbf{0.8486}  & \textbf{1.3697} \tabularnewline
-\textbf{1141}  & \textbf{5/16/2003}  & \textbf{0.8665}  & \textbf{1.3250}\tabularnewline
-\end{tabular}
-
-\medskip{}
- Diamo alcuni comandi molto utili per lavorare con oggetti di tipo
-data frame. 
-\begin{enumerate}
-\item Dimensioni di un data frame:
-
-
-Il comando \textbf{dim }restituisce un vettore contenente il numero
-di righe e di colonne del data frame.\medskip{}
-
-
-
-\textbf{> dim(dati)}
-
-
-\qquad{}\textbf{{[}1{]} 1141 7}
-
-\item Aggiungere una colonna ad un data frame
-
-
-Per aggiungere una colonna utilizzare il comando \textbf{cbind()}:\medskip{}
-
-
-
-\textbf{> \#genera 5 numeri aleatori normali di media 0 e deviazione
-standard 1}
-
-
-> \textbf{caso <- rnorm(5)}
-
-
-\textbf{dati.test <- cbind(dati{[}1:5,1:3{]}, caso)}\medskip{}
-
-
-
-Da notare che R assegna quale nome della nuova colonna il nome della
-variabile utilizzata e cioè \textbf{caso}.\medskip{}
-
-
-
-\textbf{> dati.test}
-
-
-\begin{tabular}{rrrrr}
- & \textbf{date}  & \textbf{SP100}  & \textbf{MIB30}  & \textbf{caso} \tabularnewline
-\textbf{1}  & \textbf{1/1/1999}  & \textbf{604.03}  & \textbf{35152}  & \textbf{0.26866637} \tabularnewline
-\textbf{2}  & \textbf{1/4/1999}  & \textbf{604.93}  & \textbf{37417}  & \textbf{-0.03481095} \tabularnewline
-\textbf{3}  & \textbf{1/5/1999}  & \textbf{615.38}  & \textbf{37807}  & \textbf{-0.50321912} \tabularnewline
-\textbf{4}  & \textbf{1/6/1999}  & \textbf{631.00}  & \textbf{37807}  & \textbf{-0.37532667} \tabularnewline
-\textbf{5}  & \textbf{1/7/1999}  & \textbf{632.76}  & \textbf{37797}  & \textbf{0.07938619}\tabularnewline
-\end{tabular}
-
-\item Per modificare il nome delle colonne di un data frame utilizzare il
-comando \textbf{names()}:\medskip{}
-
-
-
-\textbf{> names(dati.test) <- c(\textquotedblright Data\textquotedblright ,\textquotedblright S\&P100\textquotedblright ,\textquotedblright MIB\textquotedblright ,\textquotedblright Simulazione\textquotedblright )}
-
-
-Il risultato del comando names è un vettore. Quindi se volessimo modificare
-solo alcuni dei nomi dovremmo utilizzare le parentesi quadre:\medskip{}
-
-
-
-\textbf{> names(dati.test) {[}c(2,4){]} <- c(\textquotedblright S\&P\textquotedblright ,\textquotedblright Sim\textquotedblright )}
-
-\item Per modificare il nome delle righe di un data frame utilizzare il
-comando \textbf{row.names()}:\medskip{}
-
-
-
-\textbf{> row.names(dati.test)\ {[}1:3{]} <- c(\textquotedblright uno\textquotedblright ,\textquotedblright due\textquotedblright ,\textquotedblright tre\textquotedblright )}
-
-
-\textbf{> dati.test}
-
-
-\begin{tabular}{rrrrr}
- & \textbf{Data}  & \textbf{S\&P}  & \textbf{MIB}  & \textbf{Sim} \tabularnewline
-\textbf{uno}  & \textbf{1/1/1999}  & \textbf{604.03}  & \textbf{35152}  & \textbf{0.26866637} \tabularnewline
-\textbf{due}  & \textbf{1/4/1999}  & \textbf{604.93}  & \textbf{37417}  & \textbf{-0.03481095} \tabularnewline
-\textbf{tre}  & \textbf{1/5/1999}  & \textbf{615.38}  & \textbf{37807}  & \textbf{-0.50321912} \tabularnewline
-\textbf{4}  & \textbf{1/6/1999}  & \textbf{631.00}  & \textbf{37807}  & \textbf{-0.37532667} \tabularnewline
-\textbf{5}  & \textbf{1/7/1999}  & \textbf{632.76}  & \textbf{37797}  & \textbf{0.07938619}\tabularnewline
-\end{tabular}\bigskip{}
-
-
-\end{enumerate}
-\noindent Per accedere ai dati di un data frame è pure possibile scrivere
-i nomi delle colonne/righe\medskip{}
-
-
-\noindent \textbf{> dati.test{[}\textquotedblright uno\textquotedblright ,\textquotedblright MIB\textquotedblright {]}}
-
-\textbf{{[}1{]} 35152}\medskip{}
-
-
-\noindent mentre per accedere ai dati di un'intera colonna, oltre
-al comando \textbf{dati.test{[},\textquotedblright MIB\textquotedblright {]},
-}è consentita la sintassi\medskip{}
-
-
-\noindent \textbf{> dati.test\$MIB}
-
-\textbf{{[}1{]} 35152 37417 37807 37807 37797}\medskip{}
-
-
-\noindent Il comando attach() permette di utilizzare direttamente
-i nomi delle colonne di un data frame senza doverne anteporre il nome.
-Ciò significa che dopo l'esecuzione del comando\medskip{}
-
-
-\noindent \textbf{> attach(dati.test)}\medskip{}
-
-
-\noindent anziché scrivere \textbf{dati.test\$MIB} sarà consentito
-scrivere solo\medskip{}
-
-
-\noindent \textbf{> MIB}\medskip{}
-
-
-\noindent Data frames diversi possono contenere colonne (variabili)
-con nomi identici. Nel caso che due o più data frames contenenti variabili
-col medesimo nome siano stati richiamati col comando \textbf{attach()},
-R andrà a prendere i dati dall'ultimo data frame richiamato. Ad ogni
-modo esiste il comando \textbf{detach('nome') }che elimina il data
-frame 'nome' dalla lista.
-
-
-\subsubsection{Matrici ed arrays}
-
-Le matrici sono degli arrays a due dimensioni. Gli elementi di una
-matrice sono indicati tramite due indici, l'indice riga e l'indice
-colonna. In R un array può avere fino ad 8 dimensioni. Come i vettori
-anche le matrici (e più in generale gli arrays dunque) devono essere
-omogenee rispetto al formato dei dati. Per intenderci, non è possibile
-che una matrice contenga una colonna di stringhe ed una colonna di
-numeri interi. Per creare una matrice si usa il comando \emph{matrix()}.
-\[
-matrix(data=NA,nrow=1,ncol=1,byrow=FALSE)
-\]
- Per default la matrice è riempita per colonne.\medskip{}
-
-
-\noindent \textbf{> matrix(1:6,nrow=3)}
-
-\begin{tabular}{lll}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{4}}\tabularnewline
-\textbf{{[}2,{]}}  & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{5}}\tabularnewline
-\textbf{{[}3,{]}}  & \multicolumn{1}{r}{\textbf{3}} & \multicolumn{1}{r}{\textbf{6}}\tabularnewline
-\end{tabular}\bigskip{}
-
-
-\noindent Se viene indicato il numero delle righe ma non quello delle
-colonne, R aggiunge tante colonne quante sono necessarie ad esaurire
-i dati che gli sono stati passati. È bene prestare molta attenzione
-quando si costruisce una matrice. Quando il numero di dati non corrisponde
-al numero di elementi della matrice, R ci avverte con un messaggio.
-Quando il numero di elementi della matrice è inferiore al numero di
-dati, R\ utilizza solo una parte di essi. Nel caso contrario R riutilizza
-i dati più volte fino al completamento della matrice.\medskip{}
-
-
-\noindent \textbf{> matrix(1:2,nrow=3,ncol=4)}
-
-\nopagebreak%
-\begin{tabular}{lllll}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}}  & \textbf{{[},3{]}}  & \textbf{{[},4{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}}\tabularnewline
-\textbf{{[}2,{]}}  & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{1}}\tabularnewline
-\textbf{{[}3,{]}}  & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}} & \multicolumn{1}{r}{\textbf{1}} & \multicolumn{1}{r}{\textbf{2}}\tabularnewline
-\end{tabular}\bigskip{}
-
-
-\noindent Il comando \textbf{as.matrix()} tenta di convertire in matrice
-l'argomento che gli viene dato. Un'immediata applicazione è la conversione
-della parte numerica del data frame 'dati' in matrice\footnote{Il comando as.data.frame(serie) converte la matrice 'serie' in un
-oggetto di classe data frame mantenendone le dimensioni ed il tipo.}:\medskip{}
-
-
-\noindent \textbf{> serie <- as.matrix(dati{[},2:7{]})}\medskip{}
-
-
-Per default as.matrix mantiene i nomi delle colonne e delle righe.
-Come per un data frame anche per una matrice è possibile assegnare
-o modificare i nomi delle righe/colonne. Il comando è tuttavia leggermente
-diverso. Ecco un esempio:\medskip{}
-
-
-\noindent \textbf{> dim(serie)}
-
-\textbf{{[}1{]} 1141 6}
-
-\noindent \textbf{> indice.riga <- paste(\textquotedblright riga\textquotedblright ,1:1141,sep=\textquotedblright \textquotedblright )}
-
-\noindent \textbf{> dimnames(serie){[}{[}1{]}{]} <- indice.riga}
-
-\noindent \textbf{> serie{[}1:3,1:2{]}}
-
-\noindent %
-\begin{tabular}{rrr}
- & \textbf{SP100}  & \textbf{MIB30} \tabularnewline
-\textbf{riga1}  & \textbf{604.03}  & \textbf{35152} \tabularnewline
-\textbf{riga2}  & \textbf{604.93}  & \textbf{37417} \tabularnewline
-\textbf{riga3}  & \textbf{615.38}  & \textbf{37807}\tabularnewline
-\end{tabular}\medskip{}
-
-
-\noindent Come per i data frames è possibile utilizzare i nomi al
-posto dei numeri di riga/colonna\medskip{}
-
-
-\noindent \textbf{> serie{[}\textquotedblright riga14\textquotedblright ,{]}}
-
-\noindent %
-\begin{tabular}{rrrrrr}
-\textbf{SP100}  & \textbf{MIB30}  & \textbf{DAX}  & \textbf{SMI}  & \textbf{EUR}  & \textbf{CHF} \tabularnewline
-\textbf{626.0100}  & \textbf{35382.0000}  & \textbf{5143.0600}  & \textbf{7300.2000}  & \textbf{0.8642}  & \textbf{1.3887}\tabularnewline
-\end{tabular}\medskip{}
-
-
-
-\subsubsection{Calcolo matriciale}
-
-Il grosso vantaggio nell'aver trasformato il data frame 'dati' nella
-matrice 'serie' consiste nel fatto di poter utilizzare il calcolo
-matriciale. Gli operatori \textbf{+}, \textbf{-}, \textbf{{*}}, \textbf{/}
-e \textbf{\symbol{94%
-}}operano componente per componente quando utilizzati con matrici.\medskip{}
-
-
-\noindent \textbf{> A <- matrix(1:4, nrow=2,ncol=2)}
-
-\noindent \textbf{> B <- matrix(4, nrow=2,ncol=2)}
-
-\noindent \textbf{> A-B}
-
-\begin{tabular}{rrr}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \textbf{-3}  & \textbf{-1} \tabularnewline
-\textbf{{[}2,{]}}  & \textbf{-2}  & \textbf{0}\tabularnewline
-\end{tabular}\medskip{}
-
-
-\noindent Quando applichiamo una funzione matematica ad una matrice,
-ad esempio la funzione esponenziale \textbf{exp() }o la sua inversa
-\textbf{log()}, è come se applicassimo la funzione\ ad ogni componente
-della matrice:\medskip{}
-
-
-\textbf{> exp(matrix(c(1,0,0,1),nrow=2))}
-
-\nopagebreak%
-\begin{tabular}{rrr}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \textbf{2.718282}  & \textbf{1.000000} \tabularnewline
-\textbf{{[}2,{]}}  & \textbf{1.000000}  & \textbf{2.718282}\tabularnewline
-\end{tabular}\medskip{}
-
-
-\noindent La moltiplicazione matriciale vera e propria è definita
-tramite l'operatore \textbf{\%{*}\%}, mentre per matrici quadrate
-non singolari l'inversione è data dalla funzione \textbf{solve()}:\medskip{}
-
-
-\noindent \textbf{> solve (A-B)}
-
-\begin{tabular}{rrr}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \textbf{0}  & \textbf{-0.5} \tabularnewline
-\textbf{{[}2,{]}}  & \textbf{-1}  & \textbf{1.5}\tabularnewline
-\end{tabular}
-
-\noindent \textbf{> solve(A-B) \%{*}\% (A-B)}
-
-\begin{tabular}{rrr}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{0} \tabularnewline
-\textbf{{[}2,{]}}  & \textbf{0}  & \textbf{1}\tabularnewline
-\end{tabular}\medskip{}
-
-
-\begin{remark} La funzione \textbf{solve() }permette di risolvere
-sistemi lineari del tipo $A\ x=b$. Per motivi di carattere numerico
-si raccomanda di utilizzare la funzione $\mathbf{solve(A,b)}$ anziché
-$solve(A)~\%\ast\%~b$ per il calcolo di espressioni quali $A^{-1}b$.\medskip{}
- \end{remark}
-
-\noindent Tra le molte funzioni matriciali ecco alcune di particolare
-importanza: 
-\begin{itemize}
-\item \textbf{t(A)}: ritorna la trasposta di A. 
-\item \textbf{det(A)}: calcola il determinante di A. 
-\item \textbf{eigen (A)}: ritorna una variabile di tipo 'list' contenente
-il vettore degli autovalori e la matrice degli autovettori di A. (Rimandiamo
-al punto \ref{liste} per la spiegazione delle variabili di classe
-'list'). 
-\item \textbf{diag (A)}: se A è una matrice ritorna gli elementi della diagonale
-principale di A, se A è un vettore ritorna una matrice diagonale dove
-gli elementi della diagonale principale sono le componenti del vettore
-A. 
-\end{itemize}
-\begin{domanda} Come fareste a calcolare la traccia di una matrice?
-\end{domanda}
-
-
-\subsubsection{Concatenamento di matrici}
-
-\noindent Capita spesso di dover aggiungere righe e/o colonne ad una
-matrice. I comandi \textbf{rbind()} e \textbf{cbind()} servono a tal
-fine.\medskip{}
-
-
-\noindent \textbf{> A}
-
-\begin{tabular}{rrr}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{3} \tabularnewline
-\textbf{{[}2,{]}}  & \textbf{2}  & \textbf{4}\tabularnewline
-\end{tabular}
-
-\noindent \textbf{>} \textbf{col3 <- c(5,6)}
-
-\noindent \textbf{> cbind(A,col3)}
-
-\begin{tabular}{rrrr}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}}  & \textbf{col3} \tabularnewline
-\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{3}  & \textbf{5} \tabularnewline
-\textbf{{[}2,{]}}  & \textbf{2}  & \textbf{4}  & \textbf{6}\tabularnewline
-\end{tabular}
-
-
-\subsubsection{La funzione apply()}
-
-La funzione \textbf{apply()} permette di applicare una qualsiasi funzione
-(fra cui in particolare funzioni matematiche quali ad esempio \textbf{mean()},
-\textbf{max()} o \textbf{min())} rispetto ad una delle $k$ dimensioni
-di un array $k$ dimensionale. Noi per semplicità abbiamo trattato
-solo matrici ($k=2)$ ma l'uso di \textbf{apply()} si estende ad un
-qualsiasi array multidimensionale. La sintassi è la seguente
-
-\[
-apply(X,MARGIN,FUN)
-\]
- \textbf{> A}
-
-\noindent %
-\begin{tabular}{rrr}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{3} \tabularnewline
-\textbf{{[}2,{]}}  & \textbf{2}  & \textbf{4}\tabularnewline
-\end{tabular}
-
-\noindent \textbf{> apply(A,1,sum) }\# applica la funzione \textbf{sum}
-alle righe di A
-
-\textbf{{[}1{]} 4 6}
-
-\noindent \textbf{> apply(A,2,mean)}
-
-\textbf{{[}1{]} 1.5 3.5}
-
-
-\subsubsection{Calcolo di returns e di log returns}
-
-Ora che abbiamo i dati nella matrice serie possiamo calcolare agevolmente
-i returns,\medskip{}
-
-
-\noindent \textbf{> returns <- (serie{[}2:1141,{]}-serie{[}1:1140,{]})/serie{[}1:1140,{]}}\medskip{}
-
-
-\noindent e i log returns\medskip{}
-
-
-\noindent \textbf{> r <- log(serie{[}2:1141,{]}/serie{[}1:1140,{]})}\medskip{}
-
-
-\noindent oppure anche il comando (si veda\textbf{\ help(diff)})\medskip{}
-
-
-\noindent \textbf{> r <- apply(log(serie{[}1:1141,{]}),2,diff)}\medskip{}
-
-
-\noindent Spiegate il significato del seguente comando:\medskip{}
-
-
-\noindent \textbf{> apply(r==0,2,sum)}
-
-\begin{tabular}{rrrrrr}
-\textbf{SP100}  & \textbf{MIB30}  & \textbf{DAX}  & \textbf{SMI}  & \textbf{EUR}  & \textbf{CHF} \tabularnewline
-\textbf{41}  & \textbf{35}  & \textbf{33}  & \textbf{40}  & \textbf{22}  & \textbf{36}\tabularnewline
-\end{tabular}
-
-
-\subsubsection{Liste\label{liste}}
-
-Una lista è un vettore le cui componenti possono essere un qualsiasi
-oggetto di R. Le liste sono particolarmente utili per raggruppare
-in maniera ordinata scalari, vettori, matrici, arrays di formato e
-dimensione diversa. Una lista può contenere altre liste. La sintassi
-per creare una \ variabile di tipo lista è la seguente 
-\[
-list\ (elemento1,~elemento2,~\ldots)
-\]
-
-
-\begin{esempio} Costruzione di una lista.
-
-\noindent \textbf{> mia.lista <- list(matrix(1:6,nrow=2),c(\textquotedblright Nome\textquotedblright ,\textquotedblright Cognome\textquotedblright ),
-dati)}
-
-\noindent \textbf{> is.list(mia.lista)}
-
-\noindent \textbf{{[}1{]} TRUE}\medskip{}
- \end{esempio}
-
-\noindent La variabile 'mia.lista' contiene ora tre oggetti: il primo
-è una matrice $(2\times3)$ di numeri interi, il secondo è un vettore
-di stringhe ed il terzo è un data frame. Per accedere ad uno o più
-elementi della lista è\ necessario utilizzare le \textbf{doppie}
-parentesi quadre:\medskip{}
-
-
-\noindent \textbf{> mia.lista {[}{[}1{]}{]}}
-
-\begin{tabular}{rrrr}
- & \textbf{{[},1{]}}  & \textbf{{[},2{]}}  & \textbf{{[},3{]}} \tabularnewline
-\textbf{{[}1,{]}}  & \textbf{1}  & \textbf{3}  & \textbf{5} \tabularnewline
-\textbf{{[}2,{]}}  & \textbf{2}  & \textbf{4}  & \textbf{6}\tabularnewline
-\end{tabular}\medskip{}
-
-
-\noindent Per accedere direttamente ad elementi della matrice \textbf{mia.lista
-{[}{[}1{]}{]} }è sufficiente aggiungere le parentesi quadre con i
-rispettivi indici desiderati\medskip{}
-
-
-\noindent \textbf{> mia.lista {[}{[}1{]}{]}{[}2,{]}}
-
-\textbf{{[}1{]} 2 4 6}\medskip{}
-
-
-\noindent Se viene utilizzato il comando 
-\[
-list\ (nome1=elemento1,~nome2=elemento2,~\ldots)
-\]
-
-
-\noindent è possibile riferirsi direttamente ai singoli elementi della
-lista utilizzando il loro nome (come nel caso dei data frames):\medskip{}
-
-
-\noindent \textbf{> mia.lista <- list(A=matrix(1:6,nrow=2),b=c(\textquotedblright Nome\textquotedblright ,\textquotedblright Cognome\textquotedblright ),
-dati=dati)}
-
-\noindent \textbf{> mia.lista\$b}
-
-\textbf{{[}1{]} \textquotedblright Nome\textquotedblright \ \textquotedblright Cognome\textquotedblright{}}
-
-\noindent \textbf{> mia.lista\$A{[}2,{]}}
-
-\textbf{{[}1{]} 2 4 6}\medskip{}
-
-
-\noindent Per sapere la lunghezza della lista (il numero di elementi)
-utilizzate il comando \textbf{length()}:\medskip{}
-
-
-\noindent \textbf{> length(mia.lista)}
-
-\textbf{{[}1{]} 3}\medskip{}
-
-
-\noindent Per aggiungere un nuovo elemento alla lista:\medskip{}
-
-
-\noindent \textbf{mia.lista{[}{[}5{]}{]} <- c(\textquotedblright Il\textquotedblright ,\textquotedblright mio\textquotedblright ,\textquotedblright nuovo\textquotedblright ,\textquotedblright elemento\textquotedblright )}\medskip{}
-
-
-\noindent Come avrete forse notato, non è obbligatorio utilizzare
-indici adiacenti. Ora però mia.lista ha un \textquotedbl{}buco\textquotedbl{}.\medskip{}
-
-
-\noindent \textbf{> mia.lista{[}{[}4{]}{]}}
-
-\textbf{NULL}\medskip{}
-
-
-\noindent L'elemento in posizione 5 della lista non ha un nome. Un
-metodo alternativo per ampliare una lista è quello di utilizzare direttamente
-il nome desiderato, cioè\medskip{}
-
-
-\noindent \textbf{> mia.lista\$ultimo <- \textquotedblright Ultimo
-elemento\textquotedblright{}}
-
-\noindent \textbf{> mia.lista\$ultimo}
-
-\textbf{{[}1{]} \textquotedbl{}Ultimo elemento\textquotedbl{}}\medskip{}
-
-
-\noindent la lista viene ampliata di un elemento (posizione 6)\ ed
-è possibile accedere a quest'ultimo col suo nome.
-
-\noindent Per eliminare un elemento è sufficiente assegnare il valore
-\textbf{NULL}.\medskip{}
-
-
-\noindent > \textbf{mia.lista{[}{[}4{]}{]} <- NULL}\medskip{}
-
-
-\noindent Quando si elimina un elemento da una lista, tutti gli elementi
-con indice superiore a quello eliminato vengono scalati di uno. Ciò
-significa che ora la lista mia.lista nella posizione 4 contiene ...\medskip{}
-
-
-\noindent \textbf{> mia.lista{[}{[}4{]}{]}}
-
-\textbf{{[}1{]} \textquotedblright Il\textquotedblright{} \textquotedblright mio\textquotedblright{}
-\textquotedblright nuovo\textquotedblright \
-\textquotedblright elemento\textquotedblright }\medskip{}
-
-
-\noindent Non è possibile utilizzare indici multipli con le liste.
-Un comando del tipo \textbf{mia.lista{[}{[}2:3{]}{]}} non è accettato.
-
-\medskip{}
- Concludiamo questo paragrafo sulle liste dicendo che le liste sono
-utilizzate per raccogliere l'output di comandi complessi, si veda
-ad esempio il comando utilizzato per stimare modelli lineari (\textquotedbl{}?lm\textquotedbl{}).
-
-
-\subsection{Grafici}
-
-\noindent Come vedremo fra poco R è particolarmente adatto all'analisi
-grafica di dati. Inizialmente occorre un investimento per apprendre
-i principali comandi. Il comando principale è \textbf{plot()}. Ecco
-un esempio.\medskip{}
-
-
-\noindent \textbf{> \#creazione di un vettore contenente i nomi delle
-serie}
-
-\noindent \textbf{> nomi <- dimnames(r) {[}{[}2{]}{]}}
-
-\noindent \textbf{> i <- 1}
-
-\noindent \textbf{> \#plot della prima serie di returns}
-
-\noindent \textbf{> plot (r{[},i{]}, }
-
-\textbf{type=\textquotedblright l\textquotedblright , }
-
-\textbf{main= paste(\textquotedblright Log returns di\textquotedblright ,nomi{[}i{]}), }
-
-\textbf{sub=paste(\textquotedblright Media:\textquotedblright , }
-
-\textbf{format(mean(r{[},i{]}),digits=2)), }
-
-\textbf{xlab=\textquotedblright Osservazione\textquotedblright , }
-
-\textbf{ylab=nomi{[}i{]})}\medskip{}
-
-
-\noindent Per avere un'idea di quanto due serie storiche possano essere
-correlate fra loro è utile fare un plot di una serie sull'altra.\medskip{}
-
-
-\noindent \textbf{> i <- 1; j <- 2}
-
-\noindent \textbf{> plot\ (r{[},i{]},r{[},j{]}, }
-
-\textbf{main = paste (nomi{[}i{]}, \textquotedblright vs\textquotedblright ,
-nomi{[}j{]}), }
-
-\textbf{xlab=nomi{[}i{]}, }
-
-\textbf{ylab=nomi{[}j{]}, }
-
-\textbf{col=\textquotedblright blue\textquotedblright )}\medskip{}
-
-
-\noindent \textbf{help(par)} indica tutte le opzioni disponibili.
-
-
-\subsubsection{Inserimento di elementi grafici}
-\begin{itemize}
-\item Il comando \textbf{abline(a=0,b=1) }inserisce un linea retta di pendenza
-\textbf{b} ed intercetta \textbf{a} nella finestra grafica attiva
-\medskip{}
-
-
-
-\textbf{> abline(a=0,b=1)}\medskip{}
-
-
-\item Per inserire una linea orizzontale lungo i punti 0.01, 0.02 e 0.03
-utilizzare\medskip{}
-
-
-
-\textbf{> abline(h=c(0.01,0.02,0.03))}\medskip{}
-
-
-
-mentre per linee verticali\medskip{}
-
-
-
-\textbf{abline(v=c(0.01,0.02,0.03))}\medskip{}
-
-
-\item Per inserire una freccia utilizzare arrows(x1,y1,x2,y2) dove (x1,y1)
-sono le coordinate della coda e (x2,y2) quelle della punta della freccia.\medskip{}
-
-
-
-\textbf{> arrows(-0.06,0,-0.04,0.05)}
-
-\item Per inserire del testo utilizzare il comando \textbf{text(x,y,text)}
-
-
-\textbf{> arrows(-0.04,0.05,\textquotedblright Guarda che bel grafico\textquotedblright )}
-
-\end{itemize}
-
-\subsubsection{Altri tipi di grafici}
-\begin{itemize}
-\item Il comando \textbf{pairs()}:\ matrici di grafici
-
-
-Il comando \textbf{pairs() }genera una matrice.contenente i crossplot
-di tutte le coppie (x,y) di variabili (colonne) di una matrice di
-dati.\medskip{}
-
-
-
-\textbf{> pairs(r{[},1:4{]})}
-
-\item Istogramma\medskip{}
-
-
-
-\textbf{> i <- 1}
-
-
-\textbf{> hist (r{[},i{]},}
-
-
-\qquad{}\textbf{probability=TRUE,}
-
-
-\qquad{}\textbf{main=paste(\textquotedblright Istogramma di\textquotedblright ,nomi{[}i{]}),}
-
-
-\qquad{}\textbf{xlab=nomi{[}i{]},}
-
-
-\qquad{}\textbf{breaks=17)}
-
-\item Q-Q plot rispetto alla normale\medskip{}
-
-
-
-\textbf{> qqnorm(r{[},i{]},main=paste(''Normal Q-Q Plot per'',nomi{[}i{]}),}
-
-
-\qquad{}\textbf{xlab=''Quantili teorici'',ylab=''Quantili empirici'')}
-
-
-\textbf{> qqline(r{[},i{]})}
-
-\item Q-Q plot\medskip{}
-
-
-
-\textbf{> i <- 1; j <- 2}
-
-
-\textbf{> qqplot(r{[},i{]},r{[},j{]},main=paste(''Q-Q Plot fra'',nomi{[}i{]},''e'',nomi{[}j{]}),}
-
-
-\qquad{}\textbf{xlab=nomi{[}i{]},ylab=nomi{[}j{]})}
-
-\item Il comando \textbf{acf()} stima la funzione di autocovarianza o autocorrelazione
-e per default ne esegue il grafico \ Esempio:\medskip{}
-
-
-
-\textbf{> acf(r{[},i{]},lag.max=10,type=\textquotedblright correlation\textquotedblright ,main=nomi{[}i{]})}
-
-\item Il comando \textbf{ccf()} calcola ed esegue il grafico della cross-correlation,
-cross-covariance function.Esempio:\medskip{}
-
-
-
-\textbf{> i <- 2}
-
-
-\textbf{> j <- 3}
-
-
-\textbf{> ccf(r{[},i{]},r{[},j{]},lag.max=10, type=\textquotedblright correlation\textquotedblright ,
-main=}
-
-
-\qquad{}\textbf{paste(\textquotedblright Correlazione dei returns
-di \textquotedblright ,nomi{[}i{]},\textquotedblright e\textquotedblright ,nomi{[}j{]},}
-
-
-\qquad{}\textbf{sep=\textquotedblright{} \textquotedblright ))}\medskip{}
-
-
-\end{itemize}
-\begin{domanda} Come interpretate quest'ultimo grafico? \end{domanda}
-
-
-\subsubsection{Alcuni utili comandi grafici}
-\begin{itemize}
-\item Il comando \textbf{windows()} apre una nuova finestra grafica e la
-rende attiva. Ciò significa che il prossimo grafico sarà visualizzato
-nella finestra appena aperta. Quando ci sono più finestre grafiche
-aperte il comando \textbf{dev.set('\#device')} permette di scegliere
-quale deve essere la finestra in cui ridirigere l'output. \textbf{'\#device'}
-indica il numero della finestra o più precisamente del device. Per
-ottenere il vettore contenente tutti i numeri di device aperti al
-momento utilizzare il comando \textbf{dev.list()}. Il comando \textbf{dev.cur()}
-restituisce il numero del device attivo al momento ('\emph{cur'} da
-'\emph{current'}) mentre \textbf{dev.off('\#device')} chiude il device
-specificato (per default chiude il device corrente). 
-\item Il comando \textbf{par(mfcol=c(}$nr,nc$\textbf{)) }e \textbf{par(mfrow=c(}$nr,nc$\textbf{))}
-apre una finestra il cui contenuto sarà una matrice di $nr\times nc$
-grafici. Se è utilizzato il primo (secondo) comando, la matrice verrà
-riempita per colonne (righe). 
-\item Il comando \textbf{postscript(''miofile.ps'')} apre come device
-un file testo di nome ''miofile.ps''. Esempio:\medskip{}
-
-
-
-\textbf{> postscript(''foo.ps'',paper=''a4'',width=5,height=4,bg=''yellow'')}
-
-
-\textbf{> plot(r{[},6{]},main=paste(\textquotedblright Log-returns
-di \textquotedblright ,nomi{[}6{]},sep=\textquotedblright \textquotedblright ), }
-
-
-\qquad{}\textbf{type=\textquotedblright l\textquotedblright ,xlab=\textquotedblright Osservazioni\textquotedblright ,ylab=nomi{[}6{]})}
-
-
-\textbf{> dev.off()}\medskip{}
-
-
-
-Le dimensioni della larghezza e dell'altezza del grafico sono date
-in pollici (1 pollice = 2.54 centrimetri). È importante ricordarsi
-di chiudere il device una volta terminato!
-
-\item I comandi \textbf{pdf()}, \textbf{bpm()}, \textbf{jpeg()} e \textbf{png()}
-sono simili al comando \textbf{postscipt()} e servono a generare grafici
-nei rispettivi formati. 
-\end{itemize}
-
-\subsection{Comandi if, for, while, repeat}
-
-
-\subsubsection{Il comando if}
-
-La sintassi del comando è la seguente
-
-\[
-\text{if (condizione) comando else comando}
-\]
-
-
-\begin{esempio} Comando if semplice. \end{esempio}
-
-\textbf{> if (rnorm(1) > 0) print (''Maggiore di 0'') else print
-(''Minore o uguale a 0'')}\medskip{}
-
-
-\noindent Se si desidera eseguire più comandi, è necessario racchiudere
-il codice fra parentesi graffe \textquotedblright\{ ...\}\textquotedblright .
-
-\begin{esempio} Comando if. \end{esempio}
-
-\noindent \textbf{> if (rnorm(1)>0) \{}
-
-\textbf{plot (rnorm(10),main=''Normale'')}
-
-\textbf{print (''Terminato'')}
-
-\textbf{\} else \{}
-
-\textbf{plot (rt(10,df=6),main=''t-6'')}
-
-\textbf{print (''Terminato'')}
-
-\textbf{\}}\medskip{}
-
-
-\begin{remark} Abbiamo visto in precedenza che se x ed y sono due
-vettori il comando x == y verifica l'uguaglianza componente per componente
-ed il risultato consiste in un vettore di TRUE/FALSE. Per tale motivo
-l'utilizzo di un'espressione del genere nel contesto dell'istruzione
-\textbf{if} può porre dei problemi se l'operatore binario \textbf{==}
-non è utilizzato su scalari. R risolve il problema nella misura in
-cui considera solo la prima componente del vettore x==y. Per testare
-l'uguaglianza fra due oggetti (matrici, liste, vettori) si utilizza
-il comando \textbf{identical()}. \end{remark}
-
-
-\subsubsection{Il ciclo for}
-
-Capita sovente di eseguire più volte lo stesso comando o di dover
-applicare ripetutamente la stessa funzione ma con argomenti di valore
-diverso. La prima \ possibilità in situazioni del genere è quella
-di utilizzare il comando \textbf{for()}, la cui sintassi è
-
-\[
-\text{for (var in seq) comando}
-\]
-
-
-\begin{esempio} Comando for.
-
-\textbf{> for (nome in nomi) print (nome)}\medskip{}
- \end{esempio}
-
-\noindent Dall'esempio precedente vi sarete resi conto che è possibile
-eseguire un ciclo \textbf{for} utilizzando un vettore numerico o non
-numerico quale fonte dei dati \ con cui eseguire il ciclo. In maniera
-simile al comando \textbf{if, }se si desidera eseguire più comandi
-è necessario utilizzare le parentesi graffe.
-
-\begin{esempio} Comando for. \end{esempio}
-
-\noindent > \textbf{for (indice in 1:10) \{}
-
-\textbf{\ x <- rnorm(1000)}
-
-\textbf{\ if (exists(''media'')) \{}
-
-\textbf{\ \ \ \ media <- c(media,mean(x))}
-
-\textbf{\ \} else \{}
-
-\textbf{\ \ \ \ media <- mean(x)}
-
-\textbf{\ \}}
-
-\textbf{if (exists(\textquotedblright varianza\textquotedblright ))
-\{}
-
-\textbf{\ varianza <- c(varianza,var(x))}
-
-\textbf{\ \} else \{}
-
-\textbf{\ varianza <- var(x)}
-
-\textbf{\ \}}
-
-\noindent \textbf{\}}\medskip{}
-
-
-\noindent È possibile terminare anzitempo un ciclo for utilizzando
-il comando \textbf{break}:\medskip{}
-
-
-\noindent \textbf{> for (i in 1:10) \{}
-
-\textbf{if (i > 5) break}
-
-\textbf{print (i)}
-
-\noindent \textbf{\}}
-
-
-\subsubsection{Il ciclo while}
-
-Con un ciclo di tipo \textbf{for} il numero di ripetizioni è determinato
-anzitempo. Con il comando \textbf{while()} è invece possibile stabilire
-dinamicamente quante volte ripetere il ciclo: il ciclo viene ripetuto
-fin tanto che la condizione precisata fra parentesi tonde è vera.\medskip{}
-
-
-\noindent \textbf{> i <- 1}
-
-\noindent \textbf{> while (i <= 5) \{}
-
-\textbf{print (i)}
-
-\textbf{i <- i + 1}
-
-\noindent \textbf{\}}
-
-\begin{remark} Se la condizione precisata nel comando \textbf{while}
-non è inizialmente vera, il ciclo non verrà mai eseguito. Come con
-il comando \textbf{for} è possibile interrompere l'esecuzione di un
-ciclo \textbf{while} utilizzando il comando \textbf{break}. \end{remark}
-
-
-\subsubsection{Il ciclo repeat}
-
-L'ultimo comando per generare dei cicli è il comando \textbf{repeat}.
-Repeat non necessita un condizione iniziale come il comando while
-e questo assicura che il ciclo venga sempre eseguito almeno una volta.
-Per terminare un ciclo \textbf{repeat }è necessario utilizzare il
-comando \textbf{if} associato al comando \textbf{break}.
-
-\begin{esempio} Comando break. \end{esempio}
-
-\noindent \textbf{> i <- 1}
-
-\noindent \textbf{> repeat \{}
-
-\textbf{print (i)}
-
-\textbf{i <- i + 1}
-
-\textbf{if (i > 5) break}
-
-\noindent \textbf{\}}
-
-
-\subsubsection{Il comando next}
-
-\noindent Il comando next può essere adoperato in un qualsiasi ciclo
-\textbf{for}, \textbf{whil}e o \textbf{repeat.} Il suo scopo è quello
-di interrompere l'esecuzione del codice all'interno del ciclo e saltare
-immediatamente all'inizio del ciclo. Ecco un esempio:\medskip{}
-
-
-\noindent \textbf{x <- rnorm(10)}
-
-\noindent \textbf{for (i in 1:10) \{}
-
-\textbf{if (x{[}i{]} <0 ) next}
-
-\textbf{print (sqrt(x{[}i{]}))}
-
-\noindent \textbf{\}}
-
-
-\subsubsection{Vettorizzazione di cicli}
-
-Per ragioni di efficienza e velocità d'esecuzione è opportuno evitare,
-quando possibile, i cicli \textbf{for}, \textbf{while} o \textbf{repeat}
-in quanto rallentano l'esecuzione del programma. Spesso possiamo riscrivere
-un ciclo in forma vettoriale. Prendendo ad esempio l'ultimo ciclo
-appena trattato (quello del comando \textbf{next}) esso può essere
-riscritto come segue:\medskip{}
-
-
-\noindent \textbf{> x <- rnorm(10)}
-
-\noindent \textbf{> sqrt(x{[}x>0{]})}\medskip{}
-
-
-\noindent È questa una caratteristica molto importante di R (ed altri
-linguaggi di alto livello). Tuttavia ciò può avere anche degli svantaggi,
-come ad esempio un più largo uso della memoria.
-
-
-\subsection{Funzioni}
-
-Una funzione non è altro che un insieme ordinato di comandi che vengono
-raggruppati sotto un medesimo nome. Le funzioni possono ma non devono
-avere degli argomenti di input ed allo stesso modo possono ma non
-devono restituire un risultato. Vediamo un esempio:\medskip{}
-
-
-\noindent \textbf{> cubo <- function (x=10) \{ return(x\symbol{94}3)
-\}}\medskip{}
-
-
-\noindent Con questo comando abbiamo definito la funzione \textbf{cubo}.
-Essa è ora contenuta nella lista degli oggetti con le altre variabili
-(\textbf{objects()}). Per cancellare la funzione \textbf{cubo()} si
-utilizza il comando \textbf{rm(cubo)}.\medskip{}
-
-
-\noindent Alla sinistra del comando d'assegnazione troviamo sempre
-il nome della funzione che vogliamo creare mentre alla sua destra
-avremo la parola chiave \textbf{function} seguita in parentesi tonde
-dagli argomenti che vogliamo passare. È possibile assegnare ad ogni
-argomento un valore di default, nel nostro esempio 10, tramite l'operatore
-di uguaglianza. Ciò significa che se al momento della chiamata non
-viene specificato nessun valore per la variabile \textbf{x}, allora
-la funzione \textbf{cubo} assume un valore di \textbf{x} pari a 10.
-Infatti, provate a scrivere ``\textbf{cubo()\textquotedblright }!
-Per finire viene specificato il codice fra parentesi graffe.\medskip{}
-
-
-\noindent Valgono inoltre le seguenti osservazioni. 
-\begin{enumerate}
-\item È ammesso utilizzare qualsiasi variabile per cui l'esecuzione del
-codice è ben definita. Nel nostro primo esempio \textbf{x} potrebbe
-essere un qualsiasi vettore, data frame o matrice di soli numeri. 
-\item Se vogliamo che la funzione ritorni il risultato ma senza che appaia
-sullo schermo occorre utilizzare il comando \textbf{return(invisible(x))}.
-In questo caso il comando\medskip{}
-
-
-
-\noindent \textbf{> cubo(4)}\medskip{}
-
-
-
-\noindent calcola il cubo di 4 ma senza mostrare il risultato.\medskip{}
-
-
-
-\noindent \textbf{> y <- cubo(4)}
-
-
-\noindent \textbf{> y}
-
-
-\noindent \textbf{{[}1{]} 64}\medskip{}
-
-
-\item Le variabili dichiarate all'interno di una funzione cessano di esistere
-una volta che la funzione è terminata. Tuttavia se l'assegnazione
-è fatta utilizzando l'operatore '\textbf{<<-'}, anziché creare una
-variabile locale alla funzione, R genera una variabile globale, cioè
-una variabile definita a livello dello spazio di lavoro interattivo. 
-\item Ci possono essere situazioni in cui il numero di argomenti che vengono
-passati alla funzione sono variabili: si pensi alla funzione di concatenamento
-\textbf{c()}. R permette quindi di creare funzioni alle quali è possibile
-passare un numero qualsiasi di argomenti. Il simbolo per indicare
-ciò è dato dai tre puntini '\textbf{...}'. Si veda il manuale di R
-per maggiori informazioni. 
-\item È possibile testare l'esistenza di un argomento utilizzando il comando
-\textbf{missing()}. Esempio:\medskip{}
-
-
-
-\noindent \textbf{> cubo <- function (x) \{ if (missing(x)) }
-
-
-\qquad{}\textbf{print(\textquotedblright Argomento non specificato\textquotedblright )
-else return(x\symbol{94}3) \}}
-
-
-\noindent \textbf{> cubo()}
-
-
-\qquad{}\textbf{{[}1{]} \textquotedblright Argomento non specificato\textquotedblright }\medskip{}
-
-
-\item Quando ci sono più argomenti è importante l'ordine con il quale essi
-vengono dati alla funzione. Esempio:\medskip{}
-
-
-
-\noindent \textbf{> potenza <- function (base,esponente) \{ return(base\symbol{94}esponente)\}}
-
-
-\noindent \textbf{> potenza (1,2)}
-
-
-\noindent \qquad{}\textbf{{[}1{]} 1}
-
-
-\noindent \textbf{> potenza (2,1)}
-
-
-\noindent \qquad{}\textbf{{[}1{]} 2}\medskip{}
-
-
-
-\noindent Se si è incerti si può sempre assegnare esplicitamente i
-valori alle variabili al momento della chiamata.\medskip{}
-
-
-
-\noindent \textbf{> potenza(esponente=2,base=1)}
-
-
-\noindent \qquad{}\textbf{{[}1{]} 1}
-
-
-\noindent R permette la chiamata alla funzione anche con nomi incompleti.
-Ad esempio\medskip{}
-
-
-
-\noindent \textbf{> potenza(esp=2,ba=1)}
-
-
-\noindent \qquad{}\textbf{{[}1{]} 1}
-
+\item Verificare che la matrice delle varianze e covarianze stimata, notata
+$\hat{\Sigma}$, sia una matrice (semi-) definita positiva. In caso
+contrario applicare una trasformazione che porti $\hat{\Sigma}$ ad
+essere (semi-) definita positiva. (Vedi discussione in classe ed esempio
+in R).
 \end{enumerate}
 
-\subsubsection{La distribuzione dei log-returns}
+\section{Stima in Excel}
 
-Vogliamo analizzare più in dettaglio la distribuzione e le proprietà
-statistiche dei rendimenti logaritmici o log-returns. Ci interessiamo
-dapprima ai quantili. In R è possibile ottenere i quantili desiderati
-utilizzando la funzione \textbf{quantile().}\medskip{}
+Rimandiamo alla discussione in classe.
 
-
-\noindent \textbf{> i <- 1}
-
-\noindent \textbf{> quantile(r{[},i{]}, seq(0,1,0.1))}\medskip{}
-
-
-\noindent La funzione quantile può essere utilizzata per fare il plot
-della funzione di ripartizione empirica dei nostri dati:\medskip{}
-
-
-\noindent \textbf{> plot(quantile(r{[},i{]}, seq(0, 1, 0.01)), seq(0,
-1, 0.01), type=\textquotedblright l\textquotedblright , }
-
-\noindent \textbf{main=nomi{[}i{]}, xlab=\textquotedblright Return\textquotedblright ,ylab=\textquotedblright Probability\textquotedblright )}\medskip{}
-
-
-\noindent Per stimare la funzione di densità esiste il comando \textbf{density():}\medskip{}
-
-
-\noindent \textbf{> plot(density(r{[},i{]}), main=paste(\textquotedblright Densità
-stimata dei log-returns di \textquotedblright , nomi{[}i{]}))}
-
-
-\section{Funzioni e programmazione da Excel}
-
-È possibile utilizzare R direttamente da Excel tramite Visual Basic.
-Per fare questo è necessario installare uno o più pacchetti reperibili
-al seguente indirizzo 
-
-\noindent \begin{center}
-\href{http://sunsite.univie.ac.at/rcom}{http://sunsite.univie.ac.at/rcom}. 
-\par\end{center}
-
-\noindent La descrizione del processo d'installazione va oltre lo
-scopo di questa introduzione. All'utente inesperto si consiglia l'installazione
-del paccetto \emph{RAndFriendsLight} reperibile all'indirizzo 
-
-\noindent \begin{center}
-\href{http://sunsite.univie.ac.at/rcom/download.html}{http://sunsite.univie.ac.at/rcom/download.html}
-\par\end{center}
-
-\noindent (selezionate l'etichetta \textbf{Download} del precedente
-link) il quale installa e configura automaticamente, oltre che il
-pacchetto base di R, anche tutte le altre componenti necessarie al
-funzionamento e la comunicazione di R con Microsoft Excel.
-
-
-\chapter{Calculating the Variance-Covariance Matrix}
-
-
-\section{In Excel}
-
-Si vedano le dispense tratte dal Capitolo 8 di Benninga.
-
-
-\section{In R}
+\section{Stima in R}
 
 Supponiamo che i prezzi azionari siano in una matrice $\left(n\times N\right)$
 $P$ dove ad ogni colonna corrispondono le osservazioni dei prezzi
@@ -3313,43 +1706,28 @@ nel seguente modo:\bigskip{}
 \begin{enumerate}
 \item Calcola il logaritmo dei prezzi
 
-
 \textbf{> lnP <- log(P)}
 
-
 > \textbf{nrOss <- nrow(lnP)}
-
 \item Calcola i rendimenti storici
 
-
 \textbf{> lnRet <- lnP{[}-1,{]}-lnP{[}-nrOss,{]}}
-
 \item Calcola i rendimenti storici medi
 
-
 \textbf{> lnRetMedio <- mean(lnRet)}
-
 \item Calcola la matrice di covarianza
 
-
 \textbf{> V <- cov(lnRet,use=\textquotedbl{}pair\textquotedbl{})}
-
 \item Calcola le volatilità storiche
-
 
 \textbf{> volStoriche <- sqrt(diag(V))}
 
-
 \textbf{> names(volStoriche)\ <- colnames(V)}
-
 \item Calcola la matrice di correlazione
-
 
 \textbf{> rho <- cor(lnRet,use=\textquotedbl{}pair\textquotedbl{})}
 
-
 O in alternativa potremmo calcolare \textbf{rho} nel modo seguente
-
 \item \textbf{rho <- diag(1/volStoriche) \%{*}\% V \%{*}\% diag(1/volStoriche)}\medskip{}
  
 \end{enumerate}
@@ -3359,19 +1737,14 @@ confrontate il codice con la formula (\ref{matrice cor Z}). \end{domanda}
 \noindent Come potete vedere il calcolo di tutte queste quantità è
 estremamente semplice e rapido.
 
-
-\section{The Single-Index Model}
+\section{Applicazione: the Single-Index Model}
 
 Nel corso del semestre invernale avete incontrato un modello chiamato
-\textquotedblright The single-factor model\textquotedblright{} (Haugen,
-pp. 136). Questo modello lo ritroviamo ora in Benninga con il nome
-di \textquotedblright The Single-Index Model\textquotedblright{} (Capitolo
-10, pp. 304). Evidenzieremo ora alcune proprietà del modello applicandolo
-a dati svizzeri.\medskip{}
+\textquotedblright The single-factor model\textquotedblright . Evidenzieremo
+ora alcune proprietà del modello applicandolo a dati svizzeri.\medskip{}
 
-
-\noindent Consideriamo dunque $N=5$ azioni incluse nello SMI\ e
-i cui rendimenti lo\-ga\-rit\-mi\-ci\footnote{In questa sezione parleremo semplicemente di rendimenti intendendo
+\noindent Consideriamo dunque $N=5$ azioni incluse nello SMI e i
+cui rendimenti lo\-ga\-rit\-mi\-ci\footnote{In questa sezione parleremo semplicemente di rendimenti intendendo
 però rendimenti logaritmici.} sono delle variabili aleatorie notate $r_{i},$ $i=1,\ldots,5$.
 Il rendimento dell'indice di mercato, lo SMI nel nostro caso, sarà
 indicato con $r_{x}$. E' ipotizzata una relazione lineare fra $r_{i}$
@@ -3385,7 +1758,6 @@ Le $N$ equazioni possono essere scritte in forma compatta come
 \begin{equation}
 r_{t}=\alpha+\beta r_{xt}+\varepsilon_{t}\hspace{0.5cm}t=1,\ldots,n.\label{eq22}
 \end{equation}
-
 
 \begin{remark} La (\ref{eq22}) è dunque un sistema di $N=5$ equazioni:
 benvenuti nel mondo multivariato!\medskip{}
@@ -3443,13 +1815,10 @@ e $Cov(r_{it},r_{jt})$ quando $i\neq j$.
 e covarianze di $r_{t}$, notata $V$), in funzione di $\beta,$ $\sigma_{x}^{2}$
 e $\Sigma$.\medskip{}
 
-
-
 Il file '\textbf{esercizio\ref{esercizio single-index model}.xls}'
 contiene $158\times6$ prezzi osservati a frequenza \emph{settimanale}.
 Le sei serie storiche considerate si riferiscono a $N=5$ azioni svizzere
 ed all'indice SMI.
-
 \item \label{risultato2}Per tutte e sei le serie storiche di prezzi calcolate
 dapprima i rendimenti ed in seguito il rendimento medio. Utilizzando
 sempre i rendimenti calcolatene la matrice di covarianza, facendo
@@ -3457,24 +1826,20 @@ in modo di lasciare quale ultima serie l'indice SMI. Della matrice
 di covarianza appena calcolata evidenziate in rosso la sottomatrice
 della covarianza stimata di $r_{t}$, denotata $\widehat{V}_{dati}$.
 
-
 Le 5 equazioni stimabili avranno tutte forma 
 \[
 r_{i,t}=\alpha_{i}+\beta_{i}r_{x,t}+\varepsilon_{i,t}\;,\;t=1,\ldots,157
 \]
 
-
 \item Utilizzando esclusivamente i risultati del punto precedente (dunque
 senza eseguire la regressione) calcolate per ciascuna equazione le
 stime di $\alpha_{i}$, $\beta_{i}$ ed il vettore dei residui stimati.
-
 
 Suggerimento: Nella parte comune quando abbiamo trattato la regressione
 stocastica abbiamo visto che i coefficienti stimati di una regressione
 semplice (costante più una sola variabile esplicativa) sono funzioni
 delle varianze e covarianze stimate. Adattate questo risultato al
 caso in esame.
-
 \item Calcolate per ogni equazione la varianza stimata di $\varepsilon_{it}$,
 notata $\widehat{\sigma}_{i}^{2}$. 
 \item Proponete $\widehat{\Sigma}$, lo stimatore della matrice $\Sigma$
@@ -3484,13 +1849,65 @@ calcolate $\widehat{V}$ (cf. punto \ref{risultato1}). Confrontate
 poi $\widehat{V}$ con $\widehat{V}_{dati}$. Notate delle differenze?
 Se sì, come le spiegate?
 
-
 \hfill{}$\square$
-
 \end{enumerate}
 
-\chapter{Calculating Efficient Portfolios When are No Short-Sale Restrictions}
+\chapter{\textsc{Caratteristiche Empiriche di Rischio Rendimento delle Principali
+Classi di Attività}}
 
+\section{Definizione di Asset Class}
+
+Nell'ambito della gestione patrimoniale si è soliti raggruppare gli
+investimenti rispetto a determinati criteri o attributi. Tali classi
+di investimenti o ``asset class'' sono dei gruppi di strumenti di
+investimento che presentano quindi caratteristiche simili o omogenee
+da un punto di vista 
+\begin{itemize}
+\item dei fattori di rischio (di mercato, di credito o di liquidità) e di
+rendimento
+\item della legge e delle regolamentazioni; 
+\end{itemize}
+che li contraddistinguono. L'utilità di classificare gli investimenti
+per asset class consiste nel fatto che così facendo si facilità la
+definizione della politica di investimento di una gestione patrimoniale
+o di un fondo di investimento nonché la sua caratterizzazione in termini
+di rendimento atteso e rischio. Inoltre sia nella gestione patrimoniale
+privata che nella gestione di fondi di investimento si è soliti specificare
+quali asset class sono consentite e quali non lo sono nonché dei vincoli
+massimi o minimi di investimento per asset class o gruppi di asset
+class (si vedano i due esempi relativi alle gestioni UBS ed al contratto
+di mandato dell'Organismo di Autodisciplina dei Fiduciari del Cantone
+Ticino (OAD-FCT)). Nella pratica si osserva come sia altresì utile
+partizionare una asset class in categorie (asset class categories).
+Prendendo l'asset class reddito fisso (fixed income) è possibile ad
+esempio individuare le categorie obbligazioni a breve, media e lunga
+scadenza. I criteri di definizione delle singole categorie di asset
+class dipendono dall'asset class stessa.
+
+\section{Le Asset Class tradizionali e quelle alternative}
+
+Le classi di asset tradizionali presenti nelle gestioni patrimoniali
+e di fondi di investimento sono le seguenti:
+\begin{enumerate}
+\item Cash
+\item Money market (short-term fixed income investments)
+\item Fixed income
+\item Equity
+\item Real estate
+\item Commodities
+\end{enumerate}
+A queste possiamo aggiungere le altre asset class che rientrano sotto
+l'appellativo di asset class non tradizionali 
+\begin{enumerate}
+\item Fondi hedge
+\item Private equity (azioni non scambiate pubblicamente in borsa)
+\item Volatility
+\end{enumerate}
+
+\section{La storia insegna: un'occhiata ai rendimenti, misure di rischio e
+correlazioni realizzate delle varie Asset Class}
+
+\chapter{Calculating Efficient Portfolios When are No Short-Sale Restrictions}
 
 \section{Notazione e definizioni preliminari}
 
@@ -3531,7 +1948,6 @@ w^{\prime}e & = & E[r_{p}]\\
 w^{\prime}S & = & 1
 \end{eqnarray*}
 
-
 \begin{remark} Grazie all'ipotesi che gli $N$ asset non hanno tutti
 il medesimo rendimento atteso ed alla possibilità di vendere allo
 scoperto è possibile costruire portafogli aventi un qualsiasi rendimento
@@ -3540,7 +1956,6 @@ soddisfa il primo vincolo e quindi, per qualsiasi rendimento atteso
 desiderato, il problema ha sempre soluzione. Ovviamente se ulteriori
 vincoli dovessero essere aggiunti ai due precedenti l'esistenza di
 una soluzione non sarebbe più garantita. \end{remark}
-
 
 \subsection{La soluzione}
 
@@ -3555,7 +1970,6 @@ Formando il lagrangiano $\mathcal{L}(w,\lambda,\gamma)$, $w_{p}$
 \frac{\partial L}{\partial\lambda} & = & E[r_{p}]-w_{p}^{\prime}e=0\label{cpo2}\\
 \frac{\partial L}{\partial\gamma} & = & 1-w_{p}^{\prime}S=0\label{cpo3}
 \end{eqnarray}
-
 
 Poiché $V$ è definita positiva, le condizioni di primo ordine (\ref{cpo1}),
 (\ref{cpo2}) e (\ref{cpo3}) sono necessarie e sufficienti per un
@@ -3608,7 +2022,6 @@ w_{p}=g+hE[r_{p}]\label{eq4}
 \end{eqnarray*}
 
 
-
 \subsection{Proprietà della frontiera}
 
 \noindent Le equazioni (\ref{cpo1}), (\ref{cpo2}) e (\ref{cpo3})
@@ -3620,7 +2033,6 @@ in termini di $g$ e $h$ . Per contro, se $w_{p}$ è rappresentabile
 tramite la (\ref{eq4}), $w_{p}$ soddisfa le (\ref{cpo1}), (\ref{cpo2})
 e (\ref{cpo3}) e quindi esso è sulla frontiera.\medskip{}
 
-
 L'interpretazione dei portafogli associati al vettore di pesi $g$
 e $g+h$ è la seguente: 
 \begin{itemize}
@@ -3629,7 +2041,6 @@ $0$ \textquotedbl{}expected return\textquotedbl{}. Infatti
 \[
 w_{p}=g+h0=g.
 \]
-
 \item $g+h$ corrisponde al vettore di pesi del portafoglio frontiera con
 rendimento atteso $1$ 
 \[
@@ -3689,7 +2100,6 @@ e $p_{2}$ di pesi $\{\alpha^{\ast},1-\alpha^{\ast}\}$. Avremo
 , abbiamo dimostrato che anche con $p_{1}$ e $p_{2}$ è possibile
 costruire l'intera frontiera. \end{proof}
 
-
 \subsection{\label{ref_cov_port_front}La covarianza fra portafogli frontiera}
 
 La covarianza fra due portafogli frontiera qualsiasi $p$ e $q$ è
@@ -3713,14 +2123,12 @@ che potrà essere scritta come
  & = & \frac{1}{D}\left(C(E[r_{p}])^{2}-2AE[r_{p}]+B\right)
 \end{eqnarray*}
 
-
 che è una parabola nello spazio $\left(\sigma^{2},E[r]\right)$.
 
 \[
 \text{Grafico}
 \]
  \vspace{6cm}
-
 
 \noindent oppure un'iperbole di equazione
 \begin{equation}
@@ -3732,7 +2140,6 @@ che è una parabola nello spazio $\left(\sigma^{2},E[r]\right)$.
 \text{Grafico}
 \]
  \vspace{6cm}
-
 
 \noindent Calcoliamo ora il differenziale totale della funzione definita
 implicitamente dalla (\ref{eq6}):
@@ -3752,7 +2159,7 @@ f(x,y)=1
 possiamo ora calcolare il coefficiente $a$ della tangente $y=a+bx$
 alla frontiera nel punto $p$:
 \begin{eqnarray}
-a & = & E[r_{p}]-b\sigma_{p}\underset{(\ref{stella2})}{=}E[r_{p}]-\frac{D\sigma_{p}}{CE[r_{p}]-A}\sigma_{p}\notag\\
+a & = & E[r_{p}]-b\sigma_{p}\underset{(\ref{stella2})}{=}E[r_{p}]-\frac{D\sigma_{p}}{CE[r_{p}]-A}\sigma_{p}\nonumber \\
  & = & E[r_{p}]-\frac{D\sigma_{p}^{2}}{CE[r_{p}]-A}\label{temp1}
 \end{eqnarray}
  Risolvendo rispetto a $\sigma_{p}^{2}$ nella (\ref{eq6}) e sostituendo
@@ -3769,7 +2176,6 @@ avrà dunque equazione
 \begin{equation}
 E[r]=\frac{A}{C}-\frac{D}{C^{2}}\frac{1}{\left(E[r_{p}]-\frac{A}{C}\right)}+\frac{D\sigma_{p}}{CE[r_{p}]-A}\ \sigma\ .\label{equazione retta tangente frontiera}
 \end{equation}
-
 
 
 \subsection{Il portafoglio a varianza minima}
@@ -3801,9 +2207,7 @@ avremo che $p=mvp$. Quanto vale dunque il parametro $a?$
 \item Inserite il valore di $a$ dedotto al punto precedente nell'equazione
 $(c1)$ e dimostrate la (\ref{eq123}).
 
-
 \hfill{}$\square$
-
 \end{enumerate}
 
 \subsection{La frontiera efficiente}
@@ -3854,7 +2258,6 @@ allora $p$ è un portafoglio efficiente.
 \end{enumerate}
 \end{esercizio}
 
-
 \subsection{Portafogli frontiera a 0 covarianza}
 
 Una proprietà importante della frontiera è che per qualsiasi portafoglio
@@ -3863,7 +2266,6 @@ $zc(p)$, tale che $Cov(r_{p},r_{zc(p)})=0$. Utilizzando l'equazione
 caratterizzante la covarianza fra due portafogli frontiera è possibile
 determinare il rendimento atteso del portafoglio $zc(p)$ semplicemente
 eguagliando la $Cov(r_{p},r_{zc(p)})$ a $0$.\bigskip{}
-
 
 \noindent Nel paragrafo \ref{ref_cov_port_front} abbiamo calcolato
 la tangente alla frontiera nel punto $(\sigma_{p},E[r_{p}])$:
@@ -3875,7 +2277,6 @@ atteso del portafoglio $zc(p)$. Questo implica che il rendimento
 del portafoglio a covarianza $0$ di un portafoglio $p$ può essere
 trovato graficamente trovando il punto di intersezione fra l'asse
 delle ordinate e la retta tangente alla frontiera nel punto $(\sigma_{p},E[r_{p}])$.
-
 
 \subsection{La security market line}
 
@@ -3894,8 +2295,8 @@ E[r_{q}]=\frac{AE[r_{p}]-B}{CE[r_{p}]-A}+Cov(r_{p},r_{q})\frac{D}{CE[r_{p}]-A}
 \]
  e tramite l'equazione$\ (\ref{eq6})$
 \begin{eqnarray}
-E[r_{q}] & = & \frac{A}{C}-\frac{D/C^{2}}{E[r_{p}]-A/C}+\underset{\beta_{q,p}}{\underbrace{\frac{Cov(r_{p},r_{q})}{\sigma_{p}^{2}}}}\underset{\text{tramite (\ref{eq6}) }\sigma_{p}^{2}}{\underbrace{\left[\frac{1}{C}+\frac{\left(E[r_{p}]-A/C\right)^{2}}{D/C}\right]}}\frac{D}{CE[r_{p}]-A}\notag\\
- & = & E[r_{zc(p)}]+\beta_{q,p}\left(E[r_{p}]-A/C+\frac{D/C^{2}}{E[r_{p}]-A/C}\right)\notag\\
+E[r_{q}] & = & \frac{A}{C}-\frac{D/C^{2}}{E[r_{p}]-A/C}+\underset{\beta_{q,p}}{\underbrace{\frac{Cov(r_{p},r_{q})}{\sigma_{p}^{2}}}}\underset{\text{tramite (\ref{eq6}) }\sigma_{p}^{2}}{\underbrace{\left[\frac{1}{C}+\frac{\left(E[r_{p}]-A/C\right)^{2}}{D/C}\right]}}\frac{D}{CE[r_{p}]-A}\nonumber \\
+ & = & E[r_{zc(p)}]+\beta_{q,p}\left(E[r_{p}]-A/C+\frac{D/C^{2}}{E[r_{p}]-A/C}\right)\nonumber \\
  & = & E[r_{zc(p)}]+\beta_{q,p}\left(E[r_{p}]-E[r_{zc(p)}]\right)\\
  & = & \beta_{q,p}E[r_{p}]+(1-\beta_{q,p})E[r_{zc(p)}]\label{eq7}
 \end{eqnarray}
@@ -3931,7 +2332,6 @@ E[r_{q}]=\beta_{q,p}E[r_{p}]+\beta_{q,zc(p)}E[r_{zc(p)}]\label{eq9}
 \end{equation}
  Le relazioni (\ref{eq7}), (\ref{eq8}) e (\ref{eq9}) sono tutte
 equivalenti fra loro.
-
 
 \subsection{Asset non rischioso}
 
@@ -3984,13 +2384,11 @@ w_{p}=V^{-1}(e-r_{f}S)\frac{E[r_{p}]-r_{f}}{H}\label{eq4rf}
 \]
  \vspace{6cm}
 
-
 \noindent La frontiera di tutti gli asset è composta da due semirette
 originate in $\left(0,r_{f}\right)$ con pendenza $\sqrt{H}$ e $-\sqrt{H}$.
 Tre i casi possibili: 
 \begin{enumerate}
 \item $r_{f}<\frac{A}{C}$
-
 
 $T$ è il punto di tangenza fra la semiretta $r_{f}+\sqrt{H}\sigma$
 e la frontiera. 
@@ -4004,12 +2402,9 @@ tramite posizioni negative (short) in $T$.
 \end{itemize}
 \item $r_{f}>\frac{A}{C}$
 
-
 Situazione \textquotedbl{}simmetrica\textquotedbl{} rispetto alla
 precedente.
-
 \item $r_{f}=\frac{A}{C}$
-
 
 In questo caso
 \begin{eqnarray*}
@@ -4031,8 +2426,6 @@ Abbiamo quindi la seguente situazione:
 \]
  \vspace{6cm}
 
-
-
 La frontiera di tutti gli asset non è generata da una combinazione
 tra il riskless asset ed un portafoglio di asset rischiosi. Infatti,
 sostituendo nella (\ref{eq4rf}) $r_{f}=\frac{A}{C}$ e premoltiplicando
@@ -4046,7 +2439,6 @@ S^{\prime}w_{p} & = & S^{\prime}V^{-1}(e-\frac{A}{C}S)\frac{E[r_{p}]-r_{f}}{H}\\
 è costruito investendo tutto nel risk free asset e tenendo un cosìddetto
 \textquotedbl{}arbitrage portfolio\textquotedbl{}: un portafoglio
 i cui pesi sommano a zero.
-
 \end{enumerate}
 
 \subsection{La Security market line rivista}
@@ -4080,7 +2472,6 @@ r_{q}=r_{f}+\beta_{qp}\left(r_{p}-r_{f}\right)+\widetilde{\epsilon}_{qp}
  dove $\widetilde{\epsilon}_{qp}:=r_{q}-r_{f}-\beta_{qp}\left(r_{p}-r_{f}\right)$.
 È immediato verificare che per qualsiasi portafoglio frontiera $p$
 diverso $r_{f}$ vale che $Cov(\widetilde{\epsilon}_{qp},r_{p})=E(\widetilde{\epsilon}_{qp})=0$.
-
 
 \subsection{CAPM}
 
@@ -4134,9 +2525,69 @@ paragrafo precedente.
  \vspace{6cm}
 
 
+\chapter{\textsc{Media-Varianza in Pratica: Top-Down vs Bottom-Up}}
+
+In pratica il modello di ottimizzazione media-varianza presenta alcune
+problematiche che possono rendere la sua implementazione difficoltosa.
+Discutiamo qui di seguito alcuni aspetti.
+
+\section{Selezione dell'universo investibile}
+
+Il primo passo consiste nell'identificare il cosiddetto universo investibile,
+ovvero l'insieme degli strumenti su cui investire. Nella gestione
+patrimoniale privata l'universo investibile è derivato direttamente
+o indirettamente dal contenuto del contratto di mandato di gestione
+patrimoniale. Occorre considerare
+\begin{itemize}
+\item quali asset class sono espressamente indicate come investibili e quali
+no 
+\item eventuali vincoli riguardanti aree geografiche, monete, limiti di
+rating o duration
+\item se l'utilizzo di derivati è consentito
+\item gli obiettivi della gestione e la propensione e capacità al rischio
+del cliente
+\item eventuali limiti di volatilità, drawdown, ecc.
+\end{itemize}
+Al termine dell'analisi si giungerà al cosiddetto universo investibile:
+l'insieme dei titoli e fondi acquistabili. Il loro numero può tranquillamente
+superare il migliaio. Poiché il modello media-varianza prevede l'utilizzo
+di un rendimento atteso per ogni strumento investibile è facile immaginarsi
+che il lavoro di analisi e sintesi sia in tal caso enorme. 
+
+\section{Problematiche legate all'universo investibile}
+
+Il modello di media-varianza richiede quattro tipi di input: l'orizzonte
+di investimento, il vettore di rendimenti attesi, la matrice delle
+varianze-covarianze, l'insieme dei vincoli semplici e/o multipli della
+politica di investimento. Per quanto riguarda l'orizzonte di investimento,
+la sua scelta dipende dal tipo di gestione. Una possibilità è quella
+di utilizzare un approccio di medio lungo termine (4 o più anni) per
+il quale si prevede di intervenire unicamente per ribilanciare i pesi
+di portafoglio qualora questi si scostino significativamente dai valori
+iniziali. In tal caso i rendimenti attesi dovranno essere di medio-lungo
+termine. Una seconda possibilità consiste nell'eseguire una gestione
+attiva del portafoglio utilizzando una previsione a breve termine
+(1 anno o meno) e ribilanciando i pesi di portafoglio anche più volte
+l'anno, ogni qualvolta l'arrivo di nuove informazioni generi revisioni
+significative dei rendimenti attesi e, tramite l'ottimizzatore, dei
+nuovi pesi. Discutiamo qui di seguito questi aspetti.
+
+\subsection{Rendimenti attesi}
+
+Come accennato il calcolo del rendimento atteso richiede un notevole
+lavoro di analisi e sintesi. Questo lavoro sarà ovviamente maggiore
+per gli orizzonti brevi. Non esiste una regola unica e uniforme su
+come giungere al rendimento atteso
+\begin{enumerate}
+\item Varianze e covarianze
+\item Instabilità dei portafogli frontiera
+\end{enumerate}
+
+\section{Strategie di investimento Top-Down e Bottom-Up}
+
+\section{Esempi}
 
 \chapter{The Lognormal Distribution}
-
 
 \section{Introduzione: il cammino dei prezzi azionari}
 
@@ -4206,7 +2657,6 @@ In un primo passo, utilizzando i dati a disposizione, si stimeranno
 i parametri del modello dai quali, in una seconda fase, si dedurranno
 le informazioni cercate.
 
-
 \section{Flashback: Funzione di ripartizione, di densità, quantile}
 
 A una variabile aleatoria $X$ (continua o dicreta) è sempre associata
@@ -4254,7 +2704,6 @@ F(x)=\int_{-\infty}^{x}f(y)dy\ .
 f(x)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{1}{2\sigma^{2}}(x-\mu)^{2}\right)\ .
 \]
 
-
 \hfill{}$\square$ \end{esempio}
 
 \medskip{}
@@ -4268,7 +2717,6 @@ P\left(X\in A\right)=\int_{a}^{b}f(y)dy\ .
 analitica dell'integrale precedente. In taluni casi, come ad esempio
 con la distribuzione normale, il valore dell'integrale deve essere
 approssimato tramite procedure numeriche.\medskip{}
-
 
 \noindent \begin{definizione} Per semplicità consideriamo variabili
 aleatore le cui funzioni di ripartizione $F$ sono assolutamente continue
@@ -4304,9 +2752,7 @@ F(x)=\left\{ \begin{array}{cc}
 q_{\alpha}=F^{-1}(\alpha)=-\frac{\ln(1-\alpha)}{\lambda}\ .
 \]
 
-
 \hfill{}$\square$ \end{esempio} \medskip{}
-
 
 \begin{theorem} \label{densita di funzioni di VA}Densità di funzioni
 di $V.A.$. Sia $X$ una variabile aleatoria assolutamente continua
@@ -4322,8 +2768,7 @@ f_{Y}(y)=f_{X}(g^{-1}(y))\ \mid\left(g^{-1}\right)^{\prime}(y)\mid~.
 \]
  \end{theorem}
 
-
-\section{La distribuzione lognormale}
+\section{\label{sec:La-distribuzione-lognormale}La distribuzione lognormale}
 
 \textbf{Definizione}: Una variabile casuale $X$ ha distribuzione
 lognormale, con parametri $a$ e $b^{2}$, se $\ln(X)$ ha distribuzione
@@ -4332,15 +2777,12 @@ dove $Y\sim N(a,b^{2})$.
 \begin{itemize}
 \item Funzione di densità:
 
-
 La distribuzione lognormale ha densità uguale a 
 \[
 f(x)=\exp\{-\frac{\left(ln(x)-a\right)^{2}}{2b^{2}}\}/\left(x\sqrt{2\pi}b\right)\text{ per }x>0\text{.}
 \]
 
-
 \item Funzione di ripartizione:
-
 
 E' possibile dimostrare (vedi Esercizio \ref{Esercizi sulla lognormale})
 che la sua funzione di ripartizione è data da 
@@ -4349,16 +2791,13 @@ F(x)=G\{[-a+ln(x)]/b\}\text{ per }x>0\text{,}
 \]
  dove $G$ rappresenta la funzione di ripartizione della distribuzione
 normale standard, cioè\ $N(0,1)$.
-
 \item Funzione quantile:
-
 
 La funzione quantile di una variabile aleatoria lognormale è data
 da 
 \[
 F^{-1}(\alpha)=exp\left[a+bG^{-1}(\alpha)\right]\text{ per }0<\alpha<1.
 \]
-
 
 \item Valore atteso e varianza in funzione dei parametri $a$ e $b^{2}$
 
@@ -4367,7 +2806,6 @@ F^{-1}(\alpha)=exp\left[a+bG^{-1}(\alpha)\right]\text{ per }0<\alpha<1.
 \[
 E(X)=exp(a+b^{2}/2).
 \]
-
 \item La varianza è uguale a 
 \[
 V(X)=exp[2(a+b^{2})]-exp(2a+b^{2}).
@@ -4388,18 +2826,13 @@ F(y)=G\{[-\mu+ln(y)]/\sigma\}\text{ per }y>0\text{,}
  dove $G$ rappresenta la funzione di ripartizione della distribuzione
 normale \emph{standard}.
 
-
 Suggerimento: Sappiamo che $F(y)=P(Y\leq y)=P(\exp(X)\leq y)$ \ldots{}
-
 \item Ricavate la funzione quantile di $Y$ 
 \[
 q_{\alpha}=F^{-1}(\alpha)=exp\left[\mu+\sigma G^{-1}(\alpha)\right]\text{ per }0<\alpha<1.
 \]
 
-
-
 \hfill{}$\square$
-
 \end{enumerate}
 
 \section{Simulazione di variabili aleatorie}
@@ -4424,7 +2857,6 @@ deterministica ...). In pratica, due simulazioni aventi il medesimo
 Random seed saranno identiche. Se la casella Random seed viene lasciata
 vuota si otterranno simulazioni diverse.
 
-
 \subsubsection{Una procedura generale}
 
 E' possibile generare numeri aleatori campionati dalla distribuzione
@@ -4446,7 +2878,6 @@ P(Y\leq c)\underset{(1)}{=}P(F^{-1}\left(X\right)\leq c)\underset{(2)}{=}P(X\leq
 applicando $F$ ad entrambi i lati della disuguaglianza e l'ultimo
 è una semplice conseguenza del fatto che $X$ è una variabile aleatoria
 uniforme $\left[0,1\right]$.
-
 
 \section{The Geometric random walk with drift}
 
@@ -4474,13 +2905,11 @@ e da $\sigma$.
 
 \bigskip{}
 
-
 \begin{esercizio} Dimostrate che se i prezzi sono generati dall'equazione
 \ref{delta_t}, condizionatamente a $P_{t}$ il prezzo $P_{t+\Delta t}$
 è distribuito secondo la legge lognormale. \end{esercizio}
 
 \bigskip{}
-
 
 \noindent L'intervallo temporale $\Delta t$ può essere interpretato
 come la distanza di tempo fra un'osservazione e l'altra (intervallo
@@ -4490,7 +2919,6 @@ temporali dei prezzi osservati saranno nell'insieme $\left(\ldots,\ t-\Delta t,\
 E' questa una notazione un po' insolita in quanto generalmente $\Delta t=1$.
 In realtà si tratta solo di un modo diverso e più generale di indicizzare
 le osservazioni.
-
 
 \subsection{Caratteristiche del modello}
 
@@ -4557,7 +2985,6 @@ crescita esponenziale).
 
 \bigskip{}
 
-
 Tornando al modello iniziale è immediato vedere che il modello presuppone
 rendimenti logaritmici normali: 
 \[
@@ -4588,7 +3015,6 @@ permette di giungere? \end{esercizio}
 
 \bigskip{}
 
-
 \begin{esercizio} Simulazione del modello ``geometric random walk''
 
 \noindent Supponiamo che $t$ indichi il tempo in anni. Noi desideriamo
@@ -4599,9 +3025,7 @@ rispettivamente uguali al $10\%$ e $20\%$ e che il prezzo iniziale
 dell'azione sia di \$25. Simulate un anno di osservazioni giornaliere.\newpage{}
 \end{esercizio}
 
-
 \chapter{Value at Risk - VaR}
-
 
 \section{Introduzione}
 
@@ -4610,28 +3034,20 @@ i seguenti tipi di rischi
 \begin{enumerate}
 \item Market risk
 
-
 Rischio causato da movimenti inattesi ed avversi di prezzi, tassi
 d'interesse e tassi di cambio.
-
 \item Credit risk
-
 
 Rischio generato da un possibile fallimento della controparte relativamente
 ad un contratto finanziario (per esempio obbligazioni Parmalat).
-
 \item Liquidity risk
-
 
 Rischio dovuto alla poca liquidità dell'asset ed alla conseguente
 impossibilità d'acquisto/vendita sul mercato in caso di necessità.
-
 \item Operational risk
-
 
 Rischio causato da errori nell'esecuzioni di ordini d'acquisto/vendita,
 frodi, ecc.
-
 \end{enumerate}
 Il Value at Risk (VaR) è attualmente la più utilizzata misura di rischio
 di mercato. Il VaR di un portafoglio di assets (non necessariamente
@@ -4642,12 +3058,9 @@ assoluti o percentuali) su di un orizzonte temporale di $T$ periodi.
 \noindent \begin{centering}
 \includegraphics[width=8.9534cm,height=5.4059cm]{graficoVar}
 \par\end{centering}
-
 \caption{}
 
-
 \end{figure}
-
 
 Nel calcolo del VaR abbiamo quindi due \textquotedbl{}gradi di libertà\textquotedbl{},
 ovvero possiamo decidere il livello di significatività $\alpha$ e
@@ -4676,7 +3089,6 @@ ed infine calcolare il VaR.
 Abbiamo visto il modello lognormale dei rendimenti azionari, ed è
 questo il modello che vogliamo ora analizzare in relazione al VaR.
 
-
 \section{VaR con rendimenti lognormali}
 
 Partendo dalla definizione di una variabile aleatoria lognormale $X$
@@ -4701,7 +3113,6 @@ E(S_{T})=\exp\left(\ln\left(S_{0}\right)+T\mu+\frac{\sigma^{2}T}{2}\right)=S_{0}
  Notate che $E(S_{T})\neq S_{0}\exp(\mu T)=\exp(E\left[\ln\left(S_{T}\right)\right])$!
 
 \bigskip{}
-
 
 Per quanto riguarda il calcolo del VaR di quest'azione con un orizzonte
 di $T$ anni ad un livello di confidenza del $99\%$: 
@@ -4729,7 +3140,6 @@ o uguale a $-0.5979$. Ora, essendo $S_{T}=S_{0}\exp(r_{T})$ otteniamo
 $S_{T}=80\exp(-0.5979)=44$, che corrisponde ad un $VaR$ del $45\%$
 calcolato come $-100\frac{44-80}{80}$.
 
-
 \section{A Three-Asset Problem}
 
 Nel caso che il portafoglio consista in due o più azioni abbiamo visto
@@ -4747,7 +3157,6 @@ serie 4, avete dimostrato che
  approssimiamo la distribuzione multivariata dei rendimenti percentuali
 $r_{0,T}$ con la distribuzione normale multivariata dei rendimenti
 logaritmici $\ln\left(P_{T}/P_{0}\right)$.
-
 
 \section{Historical simulation}
 
@@ -4812,6 +3221,13 @@ tabella corrispondono a tutti i rendimenti del medesimo strumento
 mentre le righe della tabella corrispondono ai rendimenti di tutti
 gli strumenti ad una certa data, ecco allora che l'algoritmo appena
 descritto seleziona a caso una riga prendendo l'intero blocco di rendimenti.
-\item Questa metodologia è chiamata col nome di historical simulation. \end{enumerate}
+\item Questa metodologia è chiamata col nome di historical simulation. 
+\end{enumerate}
 
+\chapter*{Appendice}
+
+\section{Calcolo integrale }
+
+Utilizzando l'integrale per sostituzione, con $y=ln(x)$ e quindi
+$dy=\frac{1}{x}dx$, otteniamo 
 \end{document}
