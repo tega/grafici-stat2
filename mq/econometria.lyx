@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \begin_preamble
 
@@ -22,16 +24,16 @@
 \language_package default
 \inputencoding auto
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -346,8 +348,8 @@ X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_
 
 \begin_inset Formula 
 \begin{eqnarray}
-\left(X_{2}^{\prime}X_{2}-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}\right)\widehat{\beta}_{2} & = & X_{2}^{\prime}y-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y\notag\\
-X_{2}^{\prime}\left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)y\notag\\
+\left(X_{2}^{\prime}X_{2}-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}\right)\widehat{\beta}_{2} & = & X_{2}^{\prime}y-X_{2}^{\prime}X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y\nonumber \\
+X_{2}^{\prime}\left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\left(I-X_{1}\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\right)y\nonumber \\
 X_{2}^{\prime}\ M_{1}\ X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}\ M_{1}\;y.\label{sistema 3bis}
 \end{eqnarray}
 
@@ -529,7 +531,7 @@ reference "sistema 3bis"
 ) abbiamo
 \begin_inset Formula 
 \begin{eqnarray}
-X_{2}^{\prime}M_{1}X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}M_{1}y.\notag\\
+X_{2}^{\prime}M_{1}X_{2}\widehat{\beta}_{2} & = & X_{2}^{\prime}M_{1}y.\nonumber \\
 \widehat{\beta}_{2} & = & \left(X_{2}^{\prime}M_{1}X_{2}\right)^{-1}X_{2}^{\prime}M_{1}y\label{sistema 4}
 \end{eqnarray}
 
@@ -586,6 +588,10 @@ Punto sulla situazione:
 y=X\beta+\varepsilon
 \]
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -668,6 +674,10 @@ y=X_{1}\beta_{1}+X_{2}\beta_{2}+\varepsilon
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -679,8 +689,8 @@ premoltiplicando per
 
 \begin_inset Formula 
 \begin{eqnarray}
-M_{1}y & = & \underset{=0}{\underbrace{M_{1}X_{1}}}\beta_{1}+M_{1}X_{2}\beta_{2}+M_{1}\varepsilon\notag\\
-\underset{\left(n\times n\right)\left(n\times1\right)}{M_{1}y} & = & \underset{\left(n\times n\right)\left(n\times K_{2}\right)}{M_{1}X_{2}}\beta_{2}+M_{1}\varepsilon\notag\\
+M_{1}y & = & \underset{=0}{\underbrace{M_{1}X_{1}}}\beta_{1}+M_{1}X_{2}\beta_{2}+M_{1}\varepsilon\nonumber \\
+\underset{\left(n\times n\right)\left(n\times1\right)}{M_{1}y} & = & \underset{\left(n\times n\right)\left(n\times K_{2}\right)}{M_{1}X_{2}}\beta_{2}+M_{1}\varepsilon\nonumber \\
 \widetilde{y} & = & \widetilde{X}_{2}\beta_{2}+\widetilde{\varepsilon}\label{sistema 5}
 \end{eqnarray}
 
@@ -1404,6 +1414,10 @@ Le
 
 \begin_layout Enumerate
 Esaustività
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1415,6 +1429,10 @@ Ogni attributo presente nel campione deve avere la sua "dummy".
 \end_deeper
 \begin_layout Enumerate
 Esclusività
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2073,6 +2091,10 @@ y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+a_{3}d_{3i}+c_{1}e_{1i}+c_{2}e_{2i}+c_{3}e_{3i}+bx
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2080,7 +2102,7 @@ y_{i}=a_{1}d_{1i}+a_{2}d_{2i}+a_{3}d_{3i}+c_{1}e_{1i}+c_{2}e_{2i}+c_{3}e_{3i}+bx
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2404,6 +2426,10 @@ y_{i}=a+a_{2}d_{2i}+a_{3}d_{3i}+c_{1}e_{1i}+c_{2}e_{2i}+c_{3}e_{3i}+bx_{i}+\vare
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2411,7 +2437,7 @@ y_{i}=a+a_{2}d_{2i}+a_{3}d_{3i}+c_{1}e_{1i}+c_{2}e_{2i}+c_{3}e_{3i}+bx_{i}+\vare
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -2708,6 +2734,10 @@ sulle variabili esplicative: non stocastiche
 
 \begin_layout Enumerate
 sugli errori:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2859,6 +2889,10 @@ status open
 \end_inset
 
  Sulle variabili esplicative
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -2945,6 +2979,10 @@ status open
 \end_inset
 
  Sugli errori
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3289,6 +3327,10 @@ reference "esempio_mqg_puri"
 
 \begin_layout Enumerate
 L'idea
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3425,6 +3467,10 @@ Dunque il modello così trasformato soddisfa appieno le ipotesi della regression
 \end_deeper
 \begin_layout Enumerate
 L'esempio formalizzato
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3624,6 +3670,10 @@ Gli stimatori dei
 \end_inset
 
  sul modello trasformato
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3688,7 +3738,7 @@ premoltiplicando
  
 \begin_inset Formula 
 \begin{eqnarray}
-\underset{\tilde{y}}{\underbrace{Py}} & = & \underset{\tilde{X}}{\underbrace{PX}}\ \beta+\underset{\tilde{\epsilon}}{\underbrace{P\epsilon}}\notag\\
+\underset{\tilde{y}}{\underbrace{Py}} & = & \underset{\tilde{X}}{\underbrace{PX}}\ \beta+\underset{\tilde{\epsilon}}{\underbrace{P\epsilon}}\nonumber \\
 \tilde{y} & = & \tilde{X}\beta+\tilde{\epsilon}\label{modello trasformato}
 \end{eqnarray}
 
@@ -3832,6 +3882,10 @@ Lo stimatore dei
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -3913,6 +3967,10 @@ Il vettore d'errori stimati sul modello di partenza
 \hat{\epsilon}=y-X\beta^{\ast}
 \]
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -4054,7 +4112,7 @@ name "tab:Spe"
  
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="2">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
@@ -4198,6 +4256,10 @@ Proprietà di
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4238,6 +4300,10 @@ e poiché
 
 \begin_layout Itemize
 È efficiente (BLUE)!
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -5006,6 +5072,10 @@ Strategia per la stima:
 
 \begin_layout Enumerate
 Prima possibilità
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -5037,6 +5107,10 @@ minimi quadrati generalizzati a due tappe
 \end_deeper
 \begin_layout Enumerate
 Seconda possibiiltà
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -5375,7 +5449,7 @@ Salvo il termine
 \begin_inset Formula $\epsilon_{t-2}$
 \end_inset
 
-, \SpecialChar \ldots{}
+, \SpecialChar ldots
 
 \begin_inset space \space{}
 \end_inset
@@ -5397,8 +5471,12 @@ Salvo il termine
 \begin_inset Formula $\epsilon_{t-3}$
 \end_inset
 
-, \SpecialChar \ldots{}
+, \SpecialChar ldots
  .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -5436,6 +5514,10 @@ Per
 
 \begin_layout Enumerate
 Sostituzione per ricorrenza
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -5451,9 +5533,9 @@ Sostituendo recursivamente otteniamo la rappresenzatione di
 : 
 \begin_inset Formula 
 \begin{eqnarray}
-\epsilon_{t} & = & u_{t}+\underset{\underset{\epsilon_{t-1}=u_{t-1}+\rho\epsilon_{t-2}}{\Uparrow}}{\rho\epsilon_{t-1}}\notag\\
- & = & u_{t}+\rho u_{t-1}+\underset{\underset{\epsilon_{t-2}=u_{t-2}+\rho\epsilon_{t-3}}{\Uparrow}}{\rho^{2}\epsilon_{t-2}}\notag\\
- & \vdots & \notag\\
+\epsilon_{t} & = & u_{t}+\underset{\underset{\epsilon_{t-1}=u_{t-1}+\rho\epsilon_{t-2}}{\Uparrow}}{\rho\epsilon_{t-1}}\nonumber \\
+ & = & u_{t}+\rho u_{t-1}+\underset{\underset{\epsilon_{t-2}=u_{t-2}+\rho\epsilon_{t-3}}{\Uparrow}}{\rho^{2}\epsilon_{t-2}}\nonumber \\
+ & \vdots\nonumber \\
  & = & \sum_{j=0}^{\infty}\rho^{j}u_{t-j}\ .\label{rappresentazione ma}
 \end{eqnarray}
 
@@ -5784,6 +5866,10 @@ Il test d'ipotesi
 
 \begin_layout Enumerate
 Test informale
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -5819,6 +5905,10 @@ si osserva una persistenza di errori dello stesso segno, allora c'è evidenza
 \end_deeper
 \begin_layout Enumerate
 Test formale: Durbin-Watson
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -5840,6 +5930,10 @@ Per
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -6267,6 +6361,9 @@ Abbiamo stimato il modello con i
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Separator latexpar
+\end_inset
+
 
 \end_layout
 
@@ -6282,6 +6379,10 @@ la forma funzionale che lega le variabili esplicative alla variabile dipendente
 
 \begin_layout Itemize
 forma dinamica invece che statica:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -6318,6 +6419,10 @@ Dopo aver considerato tutte le osservazioni [1], se l'autocorrelazione persiste
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -6348,6 +6453,10 @@ status open
 \end_inset
 
  a due tappe
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -6397,6 +6506,10 @@ Seconda tappa:
 \end_inset
 
  calcolabili
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -6670,6 +6783,10 @@ Nel contesto di una stima del modello econometrico, con l'analisi asintotica
 
 \begin_layout Enumerate
 Un motivo teorico.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -6693,6 +6810,10 @@ Quando la numerosità del campione aumenta, l'informazione disponibile diventa
 \end_deeper
 \begin_layout Enumerate
 Un motivo pratico
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -6941,6 +7062,10 @@ status open
 end{definizione}
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -8086,6 +8211,10 @@ status open
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -8185,6 +8314,10 @@ status open
 }
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -8315,6 +8448,10 @@ status open
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -8329,6 +8466,10 @@ La distorsione:
 \begin_layout Itemize
 La varianza: 
 \begin_inset Formula $V(\hat{\beta})=\sigma^{2}(X^{\prime}X)^{-1}=\frac{\sigma^{2}}{n}(\frac{X^{\prime}X}{n})^{-1}$
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -8417,6 +8558,10 @@ ogni termine è una somma di prodotti incrociati divisi per
 \end_inset
 
  poiché le variabili esplicative sono indipendenti dagli errori.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -8454,6 +8599,10 @@ status open
 }
 \end_layout
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -9625,6 +9774,10 @@ La convergenza in probabilità
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10224,6 +10377,10 @@ Consideriamo questi tre punti in dettaglio.
 
 \begin_layout Enumerate
 L'equazione stimata
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10252,6 +10409,10 @@ S_{t} & = & \beta_{1}+\beta_{2}V_{t}+\beta_{3}S_{t-1}+u_{t}
 \end_deeper
 \begin_layout Enumerate
 L'identificazione dei parametri strutturali
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10302,6 +10463,10 @@ unica
 \end_deeper
 \begin_layout Enumerate
 Le proprietà statistiche dell'equazione stimabile
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10323,6 +10488,10 @@ Proprietà degli errori:
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10364,7 +10533,7 @@ In una certa industria il volume delle scorte,
 \begin_inset Formula 
 \begin{eqnarray}
 S_{t} & = & a+bV_{t+1}^{\ast}+\varepsilon_{t}\label{scorte aspettative adattive}\\
-\varepsilon_{t} & \sim & iid(0,\sigma^{2})\notag
+\varepsilon_{t} & \sim & iid(0,\sigma^{2})\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -10383,6 +10552,10 @@ Le imprese aggiornano le loro previsioni in funzione degli errori di previsione
 
 \begin_layout Enumerate
 L'equazione stimata
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10452,6 +10625,10 @@ dove
 \end_deeper
 \begin_layout Enumerate
 L'identificazione dei parametri strutturali
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10473,6 +10650,10 @@ L'identificazione dei parametri strutturali
 \end_deeper
 \begin_layout Enumerate
 Le proprietà statistiche dell'equazione stimabile
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10783,6 +10964,10 @@ reference "ar1 bis"
 
 \begin_layout Enumerate
 Convergenza
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -10841,13 +11026,17 @@ Il denominatore
 \end_deeper
 \begin_layout Enumerate
 Distribuzione asintotica
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\sqrt{n}\left(\widehat{\alpha}-\alpha\right)=\underset{p\lim\ldots=\frac{\sigma^{2}}{1-\alpha^{2}}}{\underbrace{\left(\frac{1}{n}\sum y_{t-1}^{2}\right)^{-1}}}\underset{\overset{D}{\longrightarrow}N\left(0,\sigma^{4}/(1-\alpha^{2})\right)}{\underbrace{\frac{1}{\sqrt{n}}\sum\varepsilon_{t}y_{t-1}}}\overset{D}{\longrightarrow}N\left(0,1-\alpha^{2}\right)
+\sqrt{n}\left(\widehat{\alpha}-\alpha\right)=\left(\underset{p\lim\ldots=\frac{\sigma^{2}}{1-\alpha^{2}}}{\underbrace{\frac{1}{n}\sum y_{t-1}^{2}}}\right)^{-1}\underset{\overset{D}{\longrightarrow}N\left(0,\sigma^{4}/(1-\alpha^{2})\right)}{\underbrace{\frac{1}{\sqrt{n}}\sum\varepsilon_{t}y_{t-1}}}\overset{D}{\longrightarrow}N\left(0,1-\alpha^{2}\right)
 \]
 
 \end_inset
@@ -10989,7 +11178,7 @@ y_{t-1} & = & \alpha y_{t-2}+\varepsilon_{t-1} & (b)
 :
 \begin_inset Formula 
 \begin{eqnarray}
-y_{t}-\rho y_{t-1} & = & \alpha y_{t-1}-\alpha\rho y_{t-2}+\varepsilon_{t}-\rho\varepsilon_{t-1}\notag\\
+y_{t}-\rho y_{t-1} & = & \alpha y_{t-1}-\alpha\rho y_{t-2}+\varepsilon_{t}-\rho\varepsilon_{t-1}\nonumber \\
 y_{t} & = & \underset{\beta_{1}}{\underbrace{(\alpha+\rho)}}y_{t-1}\underset{\beta_{2}}{+\underbrace{-\alpha\rho}}y_{t-2}+u_{t}\label{ar2_con_errore_indipendenti}
 \end{eqnarray}
 
@@ -11586,7 +11775,7 @@ Consideriamo il modello generale
 \begin_inset Formula 
 \begin{eqnarray}
 y_{t} & = & \underset{K\text{ variabili esogene}}{x_{t}^{\prime}\beta}+\underset{p\text{ ritardi nella variabile endogena}}{\alpha_{1}y_{t-1}+\ldots+\alpha_{p}y_{t-p}}+\varepsilon_{t}\label{k variabili esogene e p}\\
-\varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\ \ \ u_{t}\sim iid(0,\sigma^{2})\notag
+\varepsilon_{t} & = & \rho\varepsilon_{t-1}+u_{t}\ \ \ u_{t}\sim iid(0,\sigma^{2})\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -11699,6 +11888,10 @@ dove
 \end_inset
 
  quale ad esempio
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -12738,7 +12931,7 @@ Come in precedenza si ammette un numero
 \end_inset
 
  fisso di ritardi.
- Un numero appropriato dipenderà dai dati (annuali, trimestrali, \SpecialChar \ldots{}
+ Un numero appropriato dipenderà dai dati (annuali, trimestrali, \SpecialChar ldots
  ) dal
  numero di osservazioni e da quanto suggerito dalla teoria economica.
  Supponiamo che l'effetto sia positivo 
@@ -13551,9 +13744,9 @@ Riprendiamo il modello generale
 \begin_inset Formula 
 \begin{eqnarray}
 y_{t} & = & a+b_{0}x_{t}+b_{1}x_{t-1}+b_{2}x_{t-2}+\ldots\label{equazione di partenza}\\
- & = & a+b_{0}x_{t}+b_{1}Lx_{t}+b_{2}L^{2}x_{t}+\ldots\notag\\
- & = & a+\left(b_{0}+b_{1}L+b_{2}L^{2}+\ldots\right)x_{t}\notag\\
- & = & a+B(L)_{\infty}x_{t}\notag
+ & = & a+b_{0}x_{t}+b_{1}Lx_{t}+b_{2}L^{2}x_{t}+\ldots\nonumber \\
+ & = & a+\left(b_{0}+b_{1}L+b_{2}L^{2}+\ldots\right)x_{t}\nonumber \\
+ & = & a+B(L)_{\infty}x_{t}\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -13607,7 +13800,7 @@ con
 Introduciamo l'approssimazione nel modello:
 \begin_inset Formula 
 \begin{eqnarray}
-y_{t} & = & a+\frac{\beta(L)_{s}}{\alpha(L)_{r}}x_{t}\notag\\
+y_{t} & = & a+\frac{\beta(L)_{s}}{\alpha(L)_{r}}x_{t}\nonumber \\
 \alpha(L)_{r}y_{t} & = & \alpha(L)_{r}a+\beta(L)_{s}x_{t}\label{formulazone partenza}\\
 \left(1+\alpha_{1}L+\ldots+\alpha_{r}L^{r}\right)y_{t} & = & a^{\ast}+\left(\beta_{0}+\beta_{1}L+\ldots+\beta_{s}L^{s}\right)x_{t}\label{forma canonica}
 \end{eqnarray}
@@ -13656,7 +13849,7 @@ equazione stimabile
  di questo modello:
 \begin_inset Formula 
 \begin{eqnarray}
-y_{t} & = & a^{\ast}+\beta_{0}x_{t}+\beta_{1}x_{t-1}+\ldots+\beta_{s}x_{t-s}-\alpha_{1}y_{t-1}-\ldots-\alpha_{r}y_{t-r}+\varepsilon_{t}\notag\\
+y_{t} & = & a^{\ast}+\beta_{0}x_{t}+\beta_{1}x_{t-1}+\ldots+\beta_{s}x_{t-s}-\alpha_{1}y_{t-1}-\ldots-\alpha_{r}y_{t-r}+\varepsilon_{t}\nonumber \\
 y_{t} & = & a^{\ast}+\beta_{0}x_{t}+\beta_{1}x_{t-1}+\ldots+\beta_{s}x_{t-s}+\alpha_{1}^{\ast}y_{t-1}+\ldots+\alpha_{r}^{\ast}y_{t-r}+\varepsilon_{t}\label{equazione_stimabile_jorgenson}
 \end{eqnarray}
 
@@ -13738,6 +13931,10 @@ per la quarta sfruttiamo la ricorrenza.
 
 \begin_layout Enumerate
 L'effetto immediato
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -13755,6 +13952,10 @@ b_{0}=B(0)_{\infty}=\frac{\beta(0)}{\alpha(0)}=\frac{\beta_{0}}{1}=\beta_{0}
 \end_deeper
 \begin_layout Enumerate
 L'effetto di lungo periodo
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -13857,6 +14058,10 @@ C_{t}-0.2C_{t-1} & = & 160+0.30R_{t}+0.20R_{t-1}+0.14R_{t-2}\\
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -13921,6 +14126,10 @@ L'effetto immediato:
 
 \begin_layout Itemize
 L'effetto dinamico di lungo periodo:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -13951,6 +14160,10 @@ Il ritardo medio
 
 \begin_layout Itemize
 Il profilo dei ritardi
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -14091,7 +14304,7 @@ reference "formulazone partenza"
 da cui otteniamo la relazione di lungo periodo
 \begin_inset Formula 
 \begin{eqnarray}
-y^{\ast} & = & \frac{a^{\ast}}{\alpha(1)}+\frac{\beta(1)}{\alpha(1)}x^{\ast}\notag\\
+y^{\ast} & = & \frac{a^{\ast}}{\alpha(1)}+\frac{\beta(1)}{\alpha(1)}x^{\ast}\nonumber \\
 y^{\ast} & = & a+bx^{\ast}\label{equazione di lungo periodo}
 \end{eqnarray}
 
@@ -14718,6 +14931,10 @@ Relazione di lungo termine:
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -14774,6 +14991,10 @@ reference "equazione_stimabile_jorgenson"
 \end_inset
 
 ), ovvero
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -14896,6 +15117,10 @@ y_{t} & = & \underset{\delta_{0}}{\underbrace{\beta_{0}}}\ \underset{\Delta x_{t
 \Delta y_{t} & = & \gamma_{1}x_{t-1}+\gamma_{2}y_{t-1}+\gamma_{3}\Delta x_{t}+\gamma_{4}\Delta x_{t-1}+\gamma_{5}\Delta y_{t-1}+\varepsilon_{t}
 \end{eqnarray}
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -15041,7 +15266,7 @@ reference "modello ridefinito"
 ) nel seguente modo:
 \begin_inset Formula 
 \begin{eqnarray}
-\Delta y_{t} & = & \gamma_{2}\left(y_{t-1}+\frac{\gamma_{1}}{\gamma_{2}}x_{t-1}\right)+\sum_{i=0}^{1}\delta_{i}\Delta x_{t-i}+\sum_{i=1}^{1}r_{i}\Delta y_{t-i}\notag\\
+\Delta y_{t} & = & \gamma_{2}\left(y_{t-1}+\frac{\gamma_{1}}{\gamma_{2}}x_{t-1}\right)+\sum_{i=0}^{1}\delta_{i}\Delta x_{t-i}+\sum_{i=1}^{1}r_{i}\Delta y_{t-i}\nonumber \\
 \Delta y_{t} & = & \gamma_{2}\left(y_{t-1}-bx_{t-1}\right)+\sum_{i=0}^{1}\delta_{i}\Delta x_{t-i}+\sum_{i=1}^{1}r_{i}\Delta y_{t-i}\label{error correction formulation}
 \end{eqnarray}
 
