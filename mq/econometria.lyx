@@ -9492,7 +9492,7 @@ Gli strumenti posseggono dei momenti finiti di ordine 2.
  
 \begin_inset Formula 
 \[
-p\lim\frac{1}{n}\sum{Z^{\prime}Z}=Q_{Z},\hspace{0.5cm}d.p.
+p\lim\frac{1}{n}{Z^{\prime}Z}=Q_{Z},\hspace{0.5cm}d.p.
 \]
 
 \end_inset
@@ -9524,7 +9524,7 @@ La costante è indipendente da
 \begin_layout Enumerate
 \begin_inset Formula 
 \[
-\frac{1}{n}\sum{Z^{\prime}X}=\left[\begin{array}{cc}
+\frac{1}{n}{Z^{\prime}X}=\left[\begin{array}{cc}
 1 & \overline{R}\\
 \overline{I} & \frac{1}{n}\sum R_{t}I_{t}
 \end{array}\right],\text{ di rango 2}\Longleftrightarrow m_{IR}\neq0
@@ -12688,7 +12688,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename profilo_dei_ritardi.ps
+	filename profiloDeiRitardi.ps
 	scale 40
 	scaleBeforeRotation
 	rotateAngle -90
