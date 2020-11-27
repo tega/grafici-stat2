@@ -12194,7 +12194,7 @@ reference "modello trasformato per efficienza asintotica"
  In altre parole il modello trasformato da utilizzare è
 \begin_inset Formula 
 \begin{equation}
-y_{t}-\rho y_{t-1}=(x_{t}^{\prime}-\rho x_{t-1}^{\prime})\beta+\alpha(y_{t-1}-\rho y_{t-2})+d\widehat{\varepsilon}_{t-1}+u_{t}.\label{modello trasformato per efficienza asintotica1}
+y_{t}-\hat{\rho}y_{t-1}=(x_{t}^{\prime}-\hat{\rho}x_{t-1}^{\prime})\beta+\alpha(y_{t-1}-\hat{\rho}y_{t-2})+d\widehat{\varepsilon}_{t-1}+u_{t}.\label{modello trasformato per efficienza asintotica1}
 \end{equation}
 
 \end_inset
