@@ -13373,7 +13373,7 @@ dipende da soli 3 parametri:
 \begin{eqnarray*}
 y_{t-1} & = & a+b_{0}x_{t-1}+b_{0}cx_{t-2}+b_{0}c^{2}x_{t-3}+\ldots\ \ \ \ \ \\
 \ \mid\cdot c\\
-y_{t}-cy_{t-1} & = & a(1-c)+b_{0}c
+y_{t}-cy_{t-1} & = & a(1-c)+b_{0}x_{t}
 \end{eqnarray*}
 
 \end_inset
@@ -15294,7 +15294,7 @@ reference "modello ridefinito"
 \end_inset
 
 : scarto (errore) dall'equilibrio di lungo termine, 
-\begin_inset Formula $\varepsilon_{t-1}$
+\begin_inset Formula $\varepsilon_{t-1}^{*}$
 \end_inset
 
 
