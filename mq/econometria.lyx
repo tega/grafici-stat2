@@ -1074,7 +1074,7 @@ reference "sistema 3"
 \begin_inset Formula 
 \begin{eqnarray*}
 \widehat{\beta}_{1} & = & \left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}\left(y-X_{2}\widehat{\beta}_{2}\right)\\
- & = & \underset{\text{Stimatore di }\widehat{\beta}_{1}\text{\ sul modello parziale}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y}}-\ \ \ \underset{\text{Fattore d'aggiustamento}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}\widehat{\beta}_{2}}}
+ & = & \underset{\text{Stimatore di }\beta_{1}\text{\ sul modello parziale}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}y}}-\ \ \ \underset{\text{Fattore d'aggiustamento}}{\underbrace{\left(X_{1}^{\prime}X_{1}\right)^{-1}X_{1}^{\prime}X_{2}\widehat{\beta}_{2}}}
 \end{eqnarray*}
 
 \end_inset
