@@ -1,7 +1,9 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 474
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
+\save_transient_properties true
+\origin unavailable
 \textclass report
 \begin_preamble
 \usepackage{amsfonts}
@@ -30,16 +32,18 @@
 \language_package default
 \inputencoding iso8859-15
 \fontencoding global
-\font_roman default
-\font_sans default
-\font_typewriter default
-\font_math auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
-\font_sf_scale 100
-\font_tt_scale 100
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 1
@@ -70,6 +74,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 0
+\use_minted 0
 \index Indice
 \shortcut idx
 \color #008000
@@ -78,7 +83,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -620,6 +628,10 @@ La funzione di probabilità
 
 \begin_layout Itemize
 Le variabili aleatorie di cui avete visto
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -1300,10 +1312,10 @@ reference "def insieme degli eventi"
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- è mi\SpecialChar \-
-su\SpecialChar \-
-ra\SpecialChar \-
-bi\SpecialChar \-
+ è mi\SpecialChar softhyphen
+su\SpecialChar softhyphen
+ra\SpecialChar softhyphen
+bi\SpecialChar softhyphen
 le, nel senso che è possibile assegnare una probabilità a ciascun
  evento in maniera 
 \begin_inset Quotes eld
@@ -1322,7 +1334,7 @@ sottoinsiemi
 \begin_inset Formula $\Omega$
 \end_inset
 
- chiamati apputno eventi: ogni elemento 
+ chiamati appunto eventi: ogni elemento 
 \begin_inset Formula $E$
 \end_inset
 
@@ -1863,9 +1875,9 @@ Abbiamo visto che per ottenere un esperimento aleatorio è necessario definire
 \begin_inset Formula $\mathcal{E}$
 \end_inset
 
- sul quale sarà de\SpecialChar \-
-fi\SpecialChar \-
-ni\SpecialChar \-
+ sul quale sarà de\SpecialChar softhyphen
+fi\SpecialChar softhyphen
+ni\SpecialChar softhyphen
 ta la legge di probabilità 
 \begin_inset Formula $P$
 \end_inset
@@ -2105,6 +2117,10 @@ end{esempio}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2280,18 +2296,18 @@ end{definizione}
 \end_layout
 
 \begin_layout Section
-Statistica descrittiva e teoria della pro\SpecialChar \-
-ba\SpecialChar \-
-bi\SpecialChar \-
-li\SpecialChar \-
+Statistica descrittiva e teoria della pro\SpecialChar softhyphen
+ba\SpecialChar softhyphen
+bi\SpecialChar softhyphen
+li\SpecialChar softhyphen
 tà
 \end_layout
 
 \begin_layout Standard
 Nel corso di Statistica I avete studiato che il punto di partenza di qualunque
- a\SpecialChar \-
-na\SpecialChar \-
-li\SpecialChar \-
+ a\SpecialChar softhyphen
+na\SpecialChar softhyphen
+li\SpecialChar softhyphen
 si statistica è la definizione di una popolazione obiettivo (o popolazione
  di riferimento) nonché della caratteristica della popolazione a cui si
  è interessati.
@@ -2354,8 +2370,8 @@ Frequenze relative popolazione studenti Statistica II - 2009
 \begin_layout Standard
 \noindent
 Notiamo che la seconda caratteristica è numerica.
- In questo semplice e\SpecialChar \-
-sem\SpecialChar \-
+ In questo semplice e\SpecialChar softhyphen
+sem\SpecialChar softhyphen
 pio non abbiamo definito delle classi di valore:
  tutti i numeri di scarpe osservati figurano nell'istogramma.
  Tuttavia se avessimo studiato un'altra caratteristica quale ad esempio
@@ -2582,10 +2598,10 @@ Nel corso di Statistica I sono state presentate alcune particolari distribuzioni
  probabilità.
  La distribuzione Normale (caso continuo) e la distribuzione di Poisson
  (caso discreto) sono due esempi a voi noti.
- Per quanto riguarda la di\SpecialChar \-
-stri\SpecialChar \-
-bu\SpecialChar \-
-zio\SpecialChar \-
+ Per quanto riguarda la di\SpecialChar softhyphen
+stri\SpecialChar softhyphen
+bu\SpecialChar softhyphen
+zio\SpecialChar softhyphen
 ne Normale, essa è caratterizzata da
  due 
 \begin_inset Formula $\emph{parametri}$
@@ -2716,10 +2732,10 @@ reference "Flo:graficoConfrontoDueNormali"
 
 .
  In generale si parlerà di famiglia parametrica di distribuzioni per indicare
- un preciso insieme di di\SpecialChar \-
-stri\SpecialChar \-
-bu\SpecialChar \-
-zio\SpecialChar \-
+ un preciso insieme di di\SpecialChar softhyphen
+stri\SpecialChar softhyphen
+bu\SpecialChar softhyphen
+zio\SpecialChar softhyphen
 ni la cui funzione di probabilità, funzione
  di ripartizione o funzione di densità è identica a meno di un numero finito
  di parametri.
@@ -2857,7 +2873,7 @@ discreta
  
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3110,7 +3126,7 @@ hspace*{-2cm}
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3369,7 +3385,7 @@ hspace*{-2.3cm}
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3619,7 +3635,7 @@ Varianza
  
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3860,7 +3876,7 @@ Varianza
  
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -4119,6 +4135,10 @@ Nella seconda parte del corso (Statistica II) verranno affrontati i temi
 
 \begin_layout Itemize
 La teoria del campionamento
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4131,6 +4151,10 @@ La teoria del campionamento trae la sua ragion d'essere dalla necessità
 \end_deeper
 \begin_layout Itemize
 La teoria della stima
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4143,6 +4167,10 @@ La teoria della stima utilizza le informazioni così raccolte (più eventuali
 \end_deeper
 \begin_layout Itemize
 La verifica d'ipotesi
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -4392,8 +4420,8 @@ reference "esempio pino1"
 \end_inset
 
 .
- A questo punto dob\SpecialChar \-
-bia\SpecialChar \-
+ A questo punto dob\SpecialChar softhyphen
+bia\SpecialChar softhyphen
 mo chiederci se la campagna pubblicitaria (ed i relativi
  costi) sia veramente necessaria.
  Infatti, potrebbe essere che il vero valore di 
@@ -5043,9 +5071,9 @@ Conclusione: Socrate è mortale
 \noindent
 Per contro, l'apprendimento per via induttiva consiste nel trovare delle
  leggi universalmente valide partendo da osservazioni particolari.
- Il processo di e\SpecialChar \-
-sten\SpecialChar \-
-sio\SpecialChar \-
+ Il processo di e\SpecialChar softhyphen
+sten\SpecialChar softhyphen
+sio\SpecialChar softhyphen
 ne dal particolare al generale è chiamato inferenza
  induttiva.
  Questo tipo di estensione della conoscenza è tuttavia soggetto ad incertezza:
@@ -5070,10 +5098,10 @@ distribuzione
 popolazione obiettivo
 \emph default
  si intende la totalità degli elementi (individui, aziende, famiglie, cantoni,
- regioni, ...) per i quali de\SpecialChar \-
-si\SpecialChar \-
-de\SpecialChar \-
-ria\SpecialChar \-
+ regioni, ...) per i quali de\SpecialChar softhyphen
+si\SpecialChar softhyphen
+de\SpecialChar softhyphen
+ria\SpecialChar softhyphen
 mo ottenere tali informazioni.
  In questo caso la popolazione obiettivo è finita ed indicheremo con la
  lettera 
@@ -5127,10 +5155,10 @@ tutta
 \begin_layout Standard
 \noindent
 Nel caso di un esperimento aleatorio formalizzato tramite uno spazio di
- pro\SpecialChar \-
-ba\SpecialChar \-
-bi\SpecialChar \-
-li\SpecialChar \-
+ pro\SpecialChar softhyphen
+ba\SpecialChar softhyphen
+bi\SpecialChar softhyphen
+li\SpecialChar softhyphen
 tà 
 \begin_inset Formula $(\Omega,\mathcal{E},P)$
 \end_inset
@@ -5169,9 +5197,9 @@ iche aleatorie.
 \begin_layout Standard
 \noindent
 Per studiare la legge di probabilità di un dato esperimento aleatorio è
- ne\SpecialChar \-
-ces\SpecialChar \-
-sa\SpecialChar \-
+ ne\SpecialChar softhyphen
+ces\SpecialChar softhyphen
+sa\SpecialChar softhyphen
 rio ripetere l'esperimento ed osservarne un certo numero di risultati.
  La teoria della stima si occupa di come utilizzare l'informazione disponibile
  per risalire alla legge di probabilità 
@@ -6139,6 +6167,10 @@ Avendo definito lo spazio campionario di un esperimento statistico dovremo
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -7104,6 +7136,10 @@ Lasciamo ai matematici lo studio delle condizioni rispetto alle quali una
 
  di 
 \begin_inset Formula $\mathbb{R}.$
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -9693,10 +9729,10 @@ ni utilizzate a priori per la scelta del campione.
 o basati sulla selezione casuale delle unità (individui) della popolazione
  obiettivo.
  In particolare vedremo le tecniche di campionamento casuale semplice, di
- campionamento stratificato, di cam\SpecialChar \-
-pio\SpecialChar \-
-na\SpecialChar \-
-men\SpecialChar \-
+ campionamento stratificato, di cam\SpecialChar softhyphen
+pio\SpecialChar softhyphen
+na\SpecialChar softhyphen
+men\SpecialChar softhyphen
 to sistematico.
  Tutti questi tipi di campionamento si basano su delle tecniche di selezione.
 \end_layout
@@ -9708,11 +9744,11 @@ name "sec:CampionamentoConReinser"
 
 \end_inset
 
-Campionamento tramite selezione con re\SpecialChar \-
-in\SpecialChar \-
-se\SpecialChar \-
-ri\SpecialChar \-
-men\SpecialChar \-
+Campionamento tramite selezione con re\SpecialChar softhyphen
+in\SpecialChar softhyphen
+se\SpecialChar softhyphen
+ri\SpecialChar softhyphen
+men\SpecialChar softhyphen
 to
 \end_layout
 
@@ -9798,8 +9834,8 @@ Supponiamo di avere una scheda per ogni automobile immatricolata.
 \begin_inset Formula $\Omega$
 \end_inset
 
- verso l'insieme dei co\SpecialChar \-
-lo\SpecialChar \-
+ verso l'insieme dei co\SpecialChar softhyphen
+lo\SpecialChar softhyphen
 ri 
 \begin_inset Formula $\Omega'=\left\{ \text{“nero”,“bianco”,“rosso”}\right\} $
 \end_inset
@@ -10587,11 +10623,11 @@ name "sec:Campionamento-no-reins"
 
 \end_inset
 
-Campionamento tramite selezione senza re\SpecialChar \-
-in\SpecialChar \-
-se\SpecialChar \-
-ri\SpecialChar \-
-men\SpecialChar \-
+Campionamento tramite selezione senza re\SpecialChar softhyphen
+in\SpecialChar softhyphen
+se\SpecialChar softhyphen
+ri\SpecialChar softhyphen
+men\SpecialChar softhyphen
 to
 \end_layout
 
@@ -10896,9 +10932,9 @@ o essere uguali fra loro e uguali a
 \end_layout
 
 \begin_layout Section
-Campionamento tramite selezione siste\SpecialChar \-
-ma\SpecialChar \-
-ti\SpecialChar \-
+Campionamento tramite selezione siste\SpecialChar softhyphen
+ma\SpecialChar softhyphen
+ti\SpecialChar softhyphen
 ca
 \begin_inset CommandInset label
 LatexCommand label
@@ -12115,6 +12151,10 @@ f(x_{1}+x_{2},y)=f(x_{1},y)+f(x_{2},y),
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -12154,6 +12194,10 @@ Per qualsiasi
 f(x,y_{1}+y_{2})=f(x,y_{1})+f(x,y_{2}),
 \end{equation}
 
+\end_inset
+
+
+\begin_inset Separator latexpar
 \end_inset
 
 
@@ -12397,9 +12441,9 @@ e
 \[
 \begin{tabular}{l|cc}
   &  \ensuremath{1Y_{1}}  &  \ensuremath{-2Y_{2}}\\
-\hline  \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \ensuremath{c_{11}}  &  \ensuremath{c_{12}}\\
- \multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \ensuremath{c_{21}}  &  \ensuremath{c_{22}}\\
- \multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \ensuremath{c_{31}}  &  \ensuremath{c_{32}} 
+\hline \multicolumn{1}{r|}{\ensuremath{2X_{1}} } &  \ensuremath{c_{11}}  &  \ensuremath{c_{12}}\\
+\multicolumn{1}{r|}{\ensuremath{-3X_{2}} } &  \ensuremath{c_{21}}  &  \ensuremath{c_{22}}\\
+\multicolumn{1}{r|}{\ensuremath{1X_{3}} } &  \ensuremath{c_{31}}  &  \ensuremath{c_{32}} 
 \end{tabular}
 \]
 
@@ -12410,9 +12454,9 @@ e
 \[
 \begin{tabular}{l|cc}
   &  \ensuremath{1Y_{1}}  &  \ensuremath{-2Y_{2}}\\
-\hline  \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{2\cdot1\cdot c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot(-2)\cdot c_{12}}} \\
- \multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot(-2)\cdot c_{22}}} \\
- \multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot1\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-2)\cdot c_{32}}} 
+\hline \multicolumn{1}{r|}{\ensuremath{2X_{1}} } & \multicolumn{1}{|r}{\ensuremath{2\cdot1\cdot c_{11}} } & \multicolumn{1}{r}{\ensuremath{2\cdot(-2)\cdot c_{12}} }\\
+\multicolumn{1}{r|}{\ensuremath{-3X_{2}} } & \multicolumn{1}{|r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{21}} } & \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot(-2)\cdot c_{22}} }\\
+\multicolumn{1}{r|}{\ensuremath{1X_{3}} } & \multicolumn{1}{|r}{\ensuremath{1\cdot1\cdot c_{31}} } & \multicolumn{1}{r}{\ensuremath{1\cdot(-2)\cdot c_{32}} }
 \end{tabular}
 \]
 
@@ -12520,7 +12564,7 @@ Costruiamo la tabella delle covarianze fra
 \begin_inset Formula $X_{1},X_{2},X_{3}$
 \end_inset
 
- e \SpecialChar \ldots{}
+ e \SpecialChar ldots
 
 \begin_inset space \space{}
 \end_inset
@@ -12534,9 +12578,9 @@ Costruiamo la tabella delle covarianze fra
 \[
 \begin{tabular}{l|ccc}
   &  \ensuremath{X_{1}}  &  \ensuremath{X_{2}}  &  \ensuremath{X_{3}}\\
-\hline  \multicolumn{1}{r|}{\ensuremath{X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{c_{12}}}  &  \multicolumn{1}{r}{\ensuremath{c_{13}}} \\
- \multicolumn{1}{r|}{\ensuremath{X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{c_{22}}}  &  \multicolumn{1}{r}{\ensuremath{c_{23}}} \\
- \multicolumn{1}{r|}{\ensuremath{X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{c_{33}}} 
+\hline \multicolumn{1}{r|}{\ensuremath{X_{1}} } & \multicolumn{1}{|r}{\ensuremath{c_{11}} } & \multicolumn{1}{r}{\ensuremath{c_{12}} } & \multicolumn{1}{r}{\ensuremath{c_{13}} }\\
+\multicolumn{1}{r|}{\ensuremath{X_{2}} } & \multicolumn{1}{|r}{\ensuremath{c_{21}} } & \multicolumn{1}{r}{\ensuremath{c_{22}} } & \multicolumn{1}{r}{\ensuremath{c_{23}} }\\
+\multicolumn{1}{r|}{\ensuremath{X_{3}} } & \multicolumn{1}{|r}{\ensuremath{c_{31}} } & \multicolumn{1}{r}{\ensuremath{c_{32}} } & \multicolumn{1}{r}{\ensuremath{c_{33}} }
 \end{tabular}
 \]
 
@@ -12649,9 +12693,9 @@ Per il calcolo della varianza procediamo come per il calcolo della covarianza
 \[
 \begin{tabular}{l|ccc}
   &  \ensuremath{2X_{1}}  &  \ensuremath{-3X_{2}}  &  \ensuremath{1X_{3}}\\
-\hline  \multicolumn{1}{r|}{\ensuremath{2X_{1}}}  &  \multicolumn{1}{|r}{\ensuremath{2^{2}\cdot c_{11}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot(-3)\cdot c_{12}}}  &  \multicolumn{1}{r}{\ensuremath{2\cdot1\cdot c_{13}}} \\
- \multicolumn{1}{r|}{\ensuremath{-3X_{2}}}  &  \multicolumn{1}{|r}{\ensuremath{(-3)\cdot2\cdot c_{21}}}  &  \multicolumn{1}{r}{\ensuremath{(-3)^{2}\cdot c_{22}}}  &  \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{23}}} \\
- \multicolumn{1}{r|}{\ensuremath{1X_{3}}}  &  \multicolumn{1}{|r}{\ensuremath{1\cdot2\cdot c_{31}}}  &  \multicolumn{1}{r}{\ensuremath{1\cdot(-3)\cdot c_{32}}}  &  \multicolumn{1}{r}{\ensuremath{1^{2}\cdot c_{33}}} 
+\hline \multicolumn{1}{r|}{\ensuremath{2X_{1}} } & \multicolumn{1}{|r}{\ensuremath{2^{2}\cdot c_{11}} } & \multicolumn{1}{r}{\ensuremath{2\cdot(-3)\cdot c_{12}} } & \multicolumn{1}{r}{\ensuremath{2\cdot1\cdot c_{13}} }\\
+\multicolumn{1}{r|}{\ensuremath{-3X_{2}} } & \multicolumn{1}{|r}{\ensuremath{(-3)\cdot2\cdot c_{21}} } & \multicolumn{1}{r}{\ensuremath{(-3)^{2}\cdot c_{22}} } & \multicolumn{1}{r}{\ensuremath{\left(-3\right)\cdot1\cdot c_{23}} }\\
+\multicolumn{1}{r|}{\ensuremath{1X_{3}} } & \multicolumn{1}{|r}{\ensuremath{1\cdot2\cdot c_{31}} } & \multicolumn{1}{r}{\ensuremath{1\cdot(-3)\cdot c_{32}} } & \multicolumn{1}{r}{\ensuremath{1^{2}\cdot c_{33}} }
 \end{tabular}
 \]
 
@@ -12669,9 +12713,9 @@ ione lineare.
 \begin_inset Formula 
 \begin{eqnarray}
 V(2X_{1}-3X_{2}+X_{3}) & = & 4c_{11}+9c_{22}+c_{33}+\label{varianza di una somma 1}\\
- &  & -6c_{12}+2c_{13}+\notag\\
- &  & -6c_{21}-3c_{23}+\notag\\
- &  & +2c_{13}-3c_{32}\notag
+ &  & -6c_{12}+2c_{13}+\nonumber \\
+ &  & -6c_{21}-3c_{23}+\nonumber \\
+ &  & +2c_{13}-3c_{32}\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -12691,7 +12735,7 @@ reference "varianza di una somma 1"
 \begin_inset Formula 
 \begin{eqnarray}
 V(2X_{1}-3X_{2}+X_{3}) & = & 4c_{11}+9c_{22}+c_{33}+\\
- &  & -12c_{12}+4c_{13}-6c_{23}\notag
+ &  & -12c_{12}+4c_{13}-6c_{23}\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -12730,8 +12774,8 @@ In generale, data una qualsiasi trasformazione lineare delle
 \begin_inset Formula 
 \begin{eqnarray}
 V\left(\sum_{i=1}^{n}a_{i}X_{i}\right) & = & \sum_{i=1}^{n}\sum_{j=1}^{n}a_{i}a_{j}Cov(X_{i},X_{j})\label{formula varianza di comb lineare}\\
- & = & \sum_{i=1}^{n}a_{i}^{2}V(X_{i})+\underset{i\neq j}{\sum_{i=1}^{n}\sum_{j=1}^{n}}a_{i}a_{j}Cov(X_{i},X_{j})\notag\\
- & = & \sum_{i=1}^{n}a_{i}^{2}V(X_{i})+2\underset{i>j}{\sum_{i=1}^{n}\sum_{j=1}^{n}}a_{i}a_{j}Cov(X_{i},X_{j})\ .\notag
+ & = & \sum_{i=1}^{n}a_{i}^{2}V(X_{i})+\underset{i\neq j}{\sum_{i=1}^{n}\sum_{j=1}^{n}}a_{i}a_{j}Cov(X_{i},X_{j})\nonumber \\
+ & = & \sum_{i=1}^{n}a_{i}^{2}V(X_{i})+2\underset{i>j}{\sum_{i=1}^{n}\sum_{j=1}^{n}}a_{i}a_{j}Cov(X_{i},X_{j})\ .\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -13261,8 +13305,8 @@ V(X_{i})=E\left(\left(X_{i}-\mu\right)^{2}\right)=\sum_{j=1}^{N}\left(a_{j}-\mu\
  avremo quindi 
 \begin_inset Formula 
 \begin{eqnarray}
-E(\overline{X}_{n}) & = & E\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n}\sum_{i=1}^{n}E\left(X_{i}\right)=\mu\notag\\
-V(\overline{X}_{n}) & = & V\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n^{2}}V\left(\sum_{i=1}^{n}X_{i}\right)\notag\\
+E(\overline{X}_{n}) & = & E\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n}\sum_{i=1}^{n}E\left(X_{i}\right)=\mu\nonumber \\
+V(\overline{X}_{n}) & = & V\left(\frac{1}{n}\sum_{i=1}^{n}X_{i}\right)=\frac{1}{n^{2}}V\left(\sum_{i=1}^{n}X_{i}\right)\nonumber \\
  & = & \frac{1}{n^{2}}\sum_{i=1}^{n}V\left(X_{i}\right)=\frac{\sigma^{2}}{n}.\label{varianza media con reimmissione}
 \end{eqnarray}
 
@@ -13709,7 +13753,7 @@ reference "def media x"
 :
 \begin_inset Formula 
 \begin{eqnarray}
-\overline{X}_{n} & = & \frac{1}{n}\sum_{i=1}^{n}X_{i}=\frac{1}{n}\sum_{i=1}^{n}\sum_{j=1}^{N}a_{j}U_{ij}=\frac{1}{n}\sum_{j=1}^{N}\sum_{i=1}^{n}a_{j}U_{ij}\notag\\
+\overline{X}_{n} & = & \frac{1}{n}\sum_{i=1}^{n}X_{i}=\frac{1}{n}\sum_{i=1}^{n}\sum_{j=1}^{N}a_{j}U_{ij}=\frac{1}{n}\sum_{j=1}^{N}\sum_{i=1}^{n}a_{j}U_{ij}\nonumber \\
  & = & \frac{1}{n}\sum_{j=1}^{N}a_{j}\sum_{i=1}^{n}U_{ij}=\frac{1}{n}\sum_{j=1}^{N}a_{j}T_{j}.\label{x medio come somma pesata dei T}
 \end{eqnarray}
 
@@ -13906,7 +13950,7 @@ V(T_{j})=E(T_{j}^{2})-(E(T_{j}))^{2}=\frac{n}{N}-\left(\frac{n}{N}\right)^{2}=\f
 \begin_inset Formula 
 \begin{eqnarray}
 Cov(T_{j},T_{k}) & = & E(T_{j}T_{k})-E(T_{j})E(T_{k})\label{covarianza T1 T2 tmp}\\
- & = & E(T_{j}T_{k})-\left(\frac{n}{N}\right)^{2}.\notag
+ & = & E(T_{j}T_{k})-\left(\frac{n}{N}\right)^{2}.\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -13955,6 +13999,10 @@ E(T_{j}T_{k}) & = & 0P(T_{j}=0,T_{k}=0)+0P(T_{j}=1,T_{k}=0)\\
 
 \begin_layout Enumerate
 Esiti favorevoli
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -14036,9 +14084,9 @@ reference "covarianza T1 T2 tmp"
 
 ) otteniamo (si noti il segno dell'espressione finale) 
 \begin_inset Formula 
-\begin{equation}
-Cov(T_{j},T_{k})=\frac{n(n-1)}{N(N-1)}-\left(\frac{n}{N}\right)^{2}=-\frac{n(N-n)}{N^{2}(N-1)}.\notag
-\end{equation}
+\[
+Cov(T_{j},T_{k})=\frac{n(n-1)}{N(N-1)}-\left(\frac{n}{N}\right)^{2}=-\frac{n(N-n)}{N^{2}(N-1)}.
+\]
 
 \end_inset
 
@@ -14069,9 +14117,9 @@ E(\overline{X}_{n}) & = & E\left(\frac{1}{n}\sum_{j=1}^{N}a_{j}T_{j}\right)=\fra
  Quando il campionamento è effettuato senza reinserimento la media campionaria
  è uno stimatore corretto del valore atteso della popolazione.
  Questo risultato è identico a quello ottenuto nel caso di campionamento
- con reinse\SpecialChar \-
-ri\SpecialChar \-
-men\SpecialChar \-
+ con reinse\SpecialChar softhyphen
+ri\SpecialChar softhyphen
+men\SpecialChar softhyphen
 to.
  Sarà dunque interessante confrontare le varianze della media campionaria
  nei due casi per vedere quale delle due tecniche di campionamento fornisce
@@ -14114,18 +14162,18 @@ V(\overline{X}_{n}) & = & V(\frac{1}{n}\sum_{j=1}^{N}a_{j}T_{j})=\frac{1}{n^{2}}
 
  
 \begin_inset Formula 
-\begin{eqnarray}
-V(\overline{X}_{n}) & = & \frac{1}{n^{2}}\left(\frac{n(N-n)}{N^{2}}\sum_{j=1}^{N}a_{j}^{2}-\frac{n(N-n)}{N^{2}(N-1)}\underset{j\neq s}{\sum_{j=1}^{N}\sum_{s=1}^{N}}a_{j}a_{s}\right)\notag\\
- & = & \frac{1}{n^{2}}\frac{n(N-n)}{N^{2}(N-1)}\left((N-1)\sum_{j=1}^{N}a_{j}^{2}-\underset{j\neq s}{\sum_{j=1}^{N}\sum_{s=1}^{N}}a_{j}a_{s}\right)\notag
-\end{eqnarray}
+\begin{eqnarray*}
+V(\overline{X}_{n}) & = & \frac{1}{n^{2}}\left(\frac{n(N-n)}{N^{2}}\sum_{j=1}^{N}a_{j}^{2}-\frac{n(N-n)}{N^{2}(N-1)}\underset{j\neq s}{\sum_{j=1}^{N}\sum_{s=1}^{N}}a_{j}a_{s}\right)\\
+ & = & \frac{1}{n^{2}}\frac{n(N-n)}{N^{2}(N-1)}\left((N-1)\sum_{j=1}^{N}a_{j}^{2}-\underset{j\neq s}{\sum_{j=1}^{N}\sum_{s=1}^{N}}a_{j}a_{s}\right)
+\end{eqnarray*}
 
 \end_inset
 
  
 \begin_inset Formula 
 \begin{eqnarray}
- & = & \frac{1}{n}\frac{N-n}{N^{2}(N-1)}\left(N\sum_{j=1}^{N}a_{j}^{2}-\sum_{j=1}^{N}\sum_{s=1}^{N}a_{j}a_{s}\right)\notag\\
- & = & \frac{1}{n}\frac{N-n}{N^{2}(N-1)}\left(N\sum_{j=1}^{N}a_{j}^{2}-\left(\sum_{j=1}^{N}a_{i}\right)\left(\sum_{s=1}^{N}a_{s}\right)\right)\notag\\
+ & = & \frac{1}{n}\frac{N-n}{N^{2}(N-1)}\left(N\sum_{j=1}^{N}a_{j}^{2}-\sum_{j=1}^{N}\sum_{s=1}^{N}a_{j}a_{s}\right)\nonumber \\
+ & = & \frac{1}{n}\frac{N-n}{N^{2}(N-1)}\left(N\sum_{j=1}^{N}a_{j}^{2}-\left(\sum_{j=1}^{N}a_{i}\right)\left(\sum_{s=1}^{N}a_{s}\right)\right)\nonumber \\
  & = & \frac{1}{n}\frac{N-n}{N-1}\left(\frac{1}{N}\sum_{j=1}^{N}a_{j}^{2}-\mu^{2}\right)\label{equazione d'esempio}
 \end{eqnarray}
 
@@ -15200,7 +15248,7 @@ vspace{0.3cm}
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="8">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -16601,6 +16649,10 @@ Quando
 \end_inset
 
  non è noto.
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -17629,8 +17681,8 @@ reference "esempio sequenza normale"
 
 .
  Ancora una volta, grazie alla proprietà della distribuzione Normale, dopo
- la standardiz\SpecialChar \-
-za\SpecialChar \-
+ la standardiz\SpecialChar softhyphen
+za\SpecialChar softhyphen
 zione le variabili aleatorie 
 \begin_inset Formula $Y_{n}$
 \end_inset
@@ -18129,12 +18181,12 @@ P(|Z|\leq1.96)=P(-1.96\leq Z\leq1.96).
 
 \end_inset
 
- Detto a parole stiamo semplicemente calcolando la probabilità che la re\SpecialChar \-
-a\SpecialChar \-
-liz\SpecialChar \-
-za\SpecialChar \-
+ Detto a parole stiamo semplicemente calcolando la probabilità che la re\SpecialChar softhyphen
+a\SpecialChar softhyphen
+liz\SpecialChar softhyphen
+za\SpecialChar softhyphen
 zi
-o\SpecialChar \-
+o\SpecialChar softhyphen
 ne di 
 \begin_inset Formula $Z$
 \end_inset
@@ -19659,9 +19711,9 @@ begin{esempio}
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
- della distribuzione è sco\SpecialChar \-
-no\SpecialChar \-
-sciu\SpecialChar \-
+ della distribuzione è sco\SpecialChar softhyphen
+no\SpecialChar softhyphen
+sciu\SpecialChar softhyphen
 ta.
  In questo caso il parametro sconosciuto 
 \begin_inset Formula $\theta$
@@ -20586,9 +20638,9 @@ Osservando un
 \begin_inset Formula $r$
 \end_inset
 
--esimo momento (centrato) cam\SpecialChar \-
-pio\SpecialChar \-
-na\SpecialChar \-
+-esimo momento (centrato) cam\SpecialChar softhyphen
+pio\SpecialChar softhyphen
+na\SpecialChar softhyphen
 rio 
 \begin_inset Formula $M_{r,n}$
 \end_inset
@@ -21811,9 +21863,9 @@ reference "fig:Funzione-di-verosimiglianza"
 \begin_inset Formula $x$
 \end_inset
 
-, la funzione di proba\SpecialChar \-
-bi\SpecialChar \-
-li\SpecialChar \-
+, la funzione di proba\SpecialChar softhyphen
+bi\SpecialChar softhyphen
+li\SpecialChar softhyphen
 tà 
 \family roman
 \series medium
@@ -21844,11 +21896,11 @@ tà
 
 .
  La definizione generale di stimatore di massima verosimiglianza necessita
- dapprima la definizione di funzione di ve\SpecialChar \-
-ro\SpecialChar \-
-si\SpecialChar \-
-mi\SpecialChar \-
-glian\SpecialChar \-
+ dapprima la definizione di funzione di ve\SpecialChar softhyphen
+ro\SpecialChar softhyphen
+si\SpecialChar softhyphen
+mi\SpecialChar softhyphen
+glian\SpecialChar softhyphen
 za.
 \begin_inset VSpace bigskip
 \end_inset
@@ -22047,8 +22099,8 @@ verosimiglianza
 \begin_inset Formula $\widehat{\theta}$
 \end_inset
 
- è soluzione di un problema di massimizzazione! Il va\SpecialChar \-
-lo\SpecialChar \-
+ è soluzione di un problema di massimizzazione! Il va\SpecialChar softhyphen
+lo\SpecialChar softhyphen
 re di 
 \begin_inset Formula $\widehat{\theta}$
 \end_inset
@@ -22475,8 +22527,8 @@ Quando il numero di parametri sconosciuti è
 \begin_inset Formula $k$
 \end_inset
 
-, la funzione di vero\SpecialChar \-
-si\SpecialChar \-
+, la funzione di vero\SpecialChar softhyphen
+si\SpecialChar softhyphen
 miglianza dipende da 
 \begin_inset Formula $\theta_{1},\theta_{2},...\theta_{k}$
 \end_inset
@@ -23214,9 +23266,9 @@ reference "Stimatore momenti N_mu_sigma"
 \end_inset
 
  lo dimostra.
- Nel me\SpecialChar \-
-de\SpecialChar \-
-si\SpecialChar \-
+ Nel me\SpecialChar softhyphen
+de\SpecialChar softhyphen
+si\SpecialChar softhyphen
 mo esempio abbiamo studiato il comportamento asintotico (cioè
  quando 
 \begin_inset Formula $n\rightarrow\infty$
@@ -23238,9 +23290,9 @@ status collapsed
 
 \begin_layout Plain Layout
 Finora avete incontrato stimatori relativamente semplici quali la media
- cam\SpecialChar \-
-pio\SpecialChar \-
-na\SpecialChar \-
+ cam\SpecialChar softhyphen
+pio\SpecialChar softhyphen
+na\SpecialChar softhyphen
 ria 
 \begin_inset Formula $\overline{X}_{n}$
 \end_inset
@@ -23540,7 +23592,7 @@ begin{theorem}
 \begin_inset Formula 
 \begin{eqnarray}
 EQM_{T} & = & \underset{\text{Varianza di }T}{V(T)}+\underset{\text{quadrato della distorsione}}{\left(E(T)-\theta\right)^{2}}\label{scomposizione mse}\\
- & = & V(T)+\left(B\left(\theta\right)\right)^{2}\text{.}\notag
+ & = & V(T)+\left(B\left(\theta\right)\right)^{2}\text{.}\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -23921,11 +23973,11 @@ end{remark}
 \begin_layout Standard
 \noindent
 La consistenza di uno stimatore è dunque una proprietà asintotica.
- Al cre\SpecialChar \-
-sce\SpecialChar \-
-re dell'informazione disponibile la pre\SpecialChar \-
-ci\SpecialChar \-
-sio\SpecialChar \-
+ Al cre\SpecialChar softhyphen
+sce\SpecialChar softhyphen
+re dell'informazione disponibile la pre\SpecialChar softhyphen
+ci\SpecialChar softhyphen
+sio\SpecialChar softhyphen
 ne della stima, misurata
  tramite la probabilità di trovarsi in prossimità del vero valore, deve
  essere totale e cioè la probabilità deve tendere a 
@@ -23935,8 +23987,8 @@ ne della stima, misurata
 .
  Uno stimatore consistente ci garantisce che all'aumentare dell'informazione
  (numero di osservazioni) il valore stimato si avvicinerà con probabilità
- cre\SpecialChar \-
-scen\SpecialChar \-
+ cre\SpecialChar softhyphen
+scen\SpecialChar softhyphen
 te al vero valore.
 \begin_inset Float figure
 wide false
@@ -24002,10 +24054,10 @@ reference "fig:Convergenza-in-probabilità"
 \begin_inset Formula $n\rightarrow\infty$
 \end_inset
 
- la pro\SpecialChar \-
-ba\SpecialChar \-
-bi\SpecialChar \-
-li\SpecialChar \-
+ la pro\SpecialChar softhyphen
+ba\SpecialChar softhyphen
+bi\SpecialChar softhyphen
+li\SpecialChar softhyphen
 tà tende a concentrarsi sempre più attorno al vero valore 
 \begin_inset Formula $\theta$
 \end_inset
@@ -24375,10 +24427,10 @@ reference "distribuzione media non standardizzata"
 
 \end_inset
 
-) è quella generalmente utilizzata per presentare la distribuzione a\SpecialChar \-
-sin\SpecialChar \-
-to\SpecialChar \-
-ti\SpecialChar \-
+) è quella generalmente utilizzata per presentare la distribuzione a\SpecialChar softhyphen
+sin\SpecialChar softhyphen
+to\SpecialChar softhyphen
+ti\SpecialChar softhyphen
 ca
  dello stimatore di massima verosimiglianza (dopo le opportune modifiche
  di notazione).
@@ -25203,8 +25255,8 @@ Verifica d'ipotesi
 \end_layout
 
 \begin_layout Standard
-Dopo aver trattato alcuni argomenti propri della teoria della stima affronte\SpecialChar \-
-re\SpecialChar \-
+Dopo aver trattato alcuni argomenti propri della teoria della stima affronte\SpecialChar softhyphen
+re\SpecialChar softhyphen
 mo
  in questo capitolo il secondo grande tema della statistica inferenziale:
  la verifica d'ipotesi.
@@ -25553,9 +25605,9 @@ name "esempio caseificio p1"
 
 Un caseificio ha il forte sospetto che un suo fornitore diluisca il latte
  con acqua.
- Dalle numerose misurazioni eseguite in passato dal La\SpecialChar \-
-bo\SpecialChar \-
-ra\SpecialChar \-
+ Dalle numerose misurazioni eseguite in passato dal La\SpecialChar softhyphen
+bo\SpecialChar softhyphen
+ra\SpecialChar softhyphen
 torio cantonale
  si sa che la temperatura di gelo di un campione di latte è una variabile
  aleatoria 
@@ -25827,10 +25879,10 @@ Nei due ultimi esempi abbiamo definito l'ipotesi nulla e l'ipotesi alternativa
 \begin_inset Formula $X$
 \end_inset
 
- è completamente spe\SpecialChar \-
-ci\SpecialChar \-
-fi\SpecialChar \-
-ca\SpecialChar \-
+ è completamente spe\SpecialChar softhyphen
+ci\SpecialChar softhyphen
+fi\SpecialChar softhyphen
+ca\SpecialChar softhyphen
 ta.
  In generale diremo che un'ipotesi statistica (nulla o alternativa che sia)
  è 
@@ -25963,10 +26015,10 @@ Il problema è come determinare tale regola.
 
 in sintonia” con l'ipotesi non la rifiuteremo.
  Le osservazioni forniranno evidenza pro o contro l'ipotesi.
- Tale evidenza sarà ge\SpecialChar \-
-ne\SpecialChar \-
-ral\SpecialChar \-
-men\SpecialChar \-
+ Tale evidenza sarà ge\SpecialChar softhyphen
+ne\SpecialChar softhyphen
+ral\SpecialChar softhyphen
+men\SpecialChar softhyphen
 te misurata in termini di probabilità.
  Illustriamo quanto appena detto sviluppando i due esempi precedenti.
 \end_layout
@@ -26178,10 +26230,10 @@ puro” registreremmo una media
  uguale o superiore a quanto osservato meno di una volta su cento.
  Ci troviamo di fronte ad un evento raro in quanto la sua probabilità è
  bassa.
- Una pro\SpecialChar \-
-ba\SpecialChar \-
-bi\SpecialChar \-
-li\SpecialChar \-
+ Una pro\SpecialChar softhyphen
+ba\SpecialChar softhyphen
+bi\SpecialChar softhyphen
+li\SpecialChar softhyphen
 tà dello 
 \begin_inset Formula $0.59\%$
 \end_inset
@@ -26514,9 +26566,9 @@ reference "esempio produttore penne p1"
 \begin_inset Formula $S$
 \end_inset
 
- la media cam\SpecialChar \-
-pio\SpecialChar \-
-na\SpecialChar \-
+ la media cam\SpecialChar softhyphen
+pio\SpecialChar softhyphen
+na\SpecialChar softhyphen
 ria 
 \begin_inset Formula $\overline{X}$
 \end_inset
@@ -26577,8 +26629,8 @@ reference "esempio caseificio p1"
 \begin_inset Formula $0.5985$
 \end_inset
 
- (più estremo sulla si\SpecialChar \-
-ni\SpecialChar \-
+ (più estremo sulla si\SpecialChar softhyphen
+ni\SpecialChar softhyphen
 stra della distribuzione) o superiore a 
 \begin_inset Formula $0.6015$
 \end_inset
@@ -26795,6 +26847,10 @@ direzione contro l'ipotesi nulla
 
 ) .
  Riassumendo:
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -26961,9 +27017,9 @@ Abbiamo la seguente situazione:
 \end_layout
 
 \begin_layout Enumerate
-Vogliamo testare l'ipotesi riguardante la composizione del latte ac\SpecialChar \-
-qui\SpecialChar \-
-sta\SpecialChar \-
+Vogliamo testare l'ipotesi riguardante la composizione del latte ac\SpecialChar softhyphen
+qui\SpecialChar softhyphen
+sta\SpecialChar softhyphen
 to
  da un certo fornitore sospettato di annacquare il latte.
  
@@ -27772,12 +27828,12 @@ Ma cos'è la regione critica? Rigetteremo l'ipotesi nulla se osserveremo
  sfere potrebbe essere maggiore o minore rispetto al valore indicato nell'ipotes
 i nulla), dobbiamo considerare valori estremi della statistica in ambo le
  direzioni.
- Ciò è possibile assegnando metà del livello di si\SpecialChar \-
-gni\SpecialChar \-
-fi\SpecialChar \-
-ca\SpecialChar \-
-ti\SpecialChar \-
-vi\SpecialChar \-
+ Ciò è possibile assegnando metà del livello di si\SpecialChar softhyphen
+gni\SpecialChar softhyphen
+fi\SpecialChar softhyphen
+ca\SpecialChar softhyphen
+ti\SpecialChar softhyphen
+vi\SpecialChar softhyphen
 tà al lato
  sinistro della distribuzione e l'altra metà al lato destro.
  Dovremo quindi calcolare due quantili della distribuzione della statistica
@@ -28849,8 +28905,8 @@ F_{S}(s)=1-\prod_{i=1}^{5}\left[1-P(X_{i}\leq s)\right].\label{Fss parziale}
 \begin_inset Formula $(X_{1},...,X_{5})$
 \end_inset
 
- di va\SpecialChar \-
-ria\SpecialChar \-
+ di va\SpecialChar softhyphen
+ria\SpecialChar softhyphen
 bili aleatorie indipendenti.
  Per ottenere la formula (
 \begin_inset CommandInset ref
@@ -28878,7 +28934,7 @@ reference "Fss parziale"
 ) è semplificabile: 
 \begin_inset Formula 
 \begin{eqnarray}
-F_{S}(s) & = & 1-\left[1-P(X\leq s)\right]^{5}\notag\\
+F_{S}(s) & = & 1-\left[1-P(X\leq s)\right]^{5}\nonumber \\
  & = & 1-\left[1-F_{X}(s)\right]^{5}.\label{formula finale minimo}
 \end{eqnarray}
 
@@ -29086,6 +29142,10 @@ H_{A}:\:\mu>-0.545\text{.}
 \end_inset
 
 
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -29120,10 +29180,10 @@ Come con la media campionaria
 \begin_inset Formula $\overline{X}$
 \end_inset
 
- prendiamo un livello di signifi\SpecialChar \-
-ca\SpecialChar \-
-ti\SpecialChar \-
-vi\SpecialChar \-
+ prendiamo un livello di signifi\SpecialChar softhyphen
+ca\SpecialChar softhyphen
+ti\SpecialChar softhyphen
+vi\SpecialChar softhyphen
 tà 
 \begin_inset Formula $\alpha=5\%$
 \end_inset
@@ -29223,8 +29283,8 @@ Calcolo della regione critica.
 \begin{eqnarray}
 P_{H_{0}}(S\geq k_{5\%}) & = & 0.05\label{k_alpha minimo}\\
 F_{S}(k_{5\%}) & = & 0.95\\
-k_{5\%} & = & F_{S}^{-1}(0.95)\notag\\
-k_{5\%} & = & -0.546\notag
+k_{5\%} & = & F_{S}^{-1}(0.95)\nonumber \\
+k_{5\%} & = & -0.546\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -29401,20 +29461,20 @@ Per quanto riguarda invece gli errori abbiamo due tipi di errori evidenziati
 \[
 \begin{tabular}{l|c|c|}
  \cline{2-3}  &  \ensuremath{H_{0}}\:\ vera  &  \ensuremath{H_{0}}\:\ falsa \\
-\hline  \multicolumn{1}{|l|}{Rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
+\hline \multicolumn{1}{|l|}{Rifiutare \ensuremath{H_{0}} } &  \begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
- \multicolumn{1}{c}{\ensuremath{\alpha}} 
+\multicolumn{1}{c}{\ensuremath{\alpha} }
 \end{tabular}  &  \begin{tabular}{l}
  decisione corretta \\
- \multicolumn{1}{c}{\ensuremath{\beta}} 
+\multicolumn{1}{c}{\ensuremath{\beta} }
 \end{tabular} \\
-\hline  \multicolumn{1}{|l|}{Non rifiutare \ensuremath{H_{0}}}  &  \begin{tabular}{l}
+\hline \multicolumn{1}{|l|}{Non rifiutare \ensuremath{H_{0}} } &  \begin{tabular}{l}
  decisione corretta \\
- \multicolumn{1}{c}{\ensuremath{1-\alpha}} 
-\end{tabular}  &  \multicolumn{1}{|l|}{\begin{tabular}{l}
+\multicolumn{1}{c}{\ensuremath{1-\alpha} }
+\end{tabular}  & \multicolumn{1}{|l|}{\begin{tabular}{l}
  decisione incorretta\ensuremath{^{\ast}}\\
- \multicolumn{1}{c}{\ensuremath{1-\beta}} 
-\end{tabular}} 
+\multicolumn{1}{c}{\ensuremath{1-\beta} }
+\end{tabular} }
 \\\hline \end{tabular}
 \]
 
@@ -30474,11 +30534,11 @@ Abbiamo così calcolato la probabilità di rifiutare
 \begin_inset Formula $H_{0}$
 \end_inset
 
- condi\SpecialChar \-
-zio\SpecialChar \-
-na\SpecialChar \-
-ta\SpecialChar \-
-men\SpecialChar \-
+ condi\SpecialChar softhyphen
+zio\SpecialChar softhyphen
+na\SpecialChar softhyphen
+ta\SpecialChar softhyphen
+men\SpecialChar softhyphen
 te al fatto che essa sia falsa e che sia invece vera 
 \begin_inset Formula $H_{A}$
 \end_inset
@@ -30556,8 +30616,8 @@ La densità tratteggiata corrisponde alla funzione di densità di
 \end_inset
 
  è l'errore di seconda specie.
- In questo semplice e\SpecialChar \-
-sem\SpecialChar \-
+ In questo semplice e\SpecialChar softhyphen
+sem\SpecialChar softhyphen
 pio ad un errore di prima specie del 
 \begin_inset Formula $5\%$
 \end_inset
@@ -91610,7 +91670,7 @@ centering
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="42" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="right" valignment="top">
 <column alignment="right" valignment="top">
@@ -93413,7 +93473,7 @@ centering
  
 \begin_inset Tabular
 <lyxtabular version="3" rows="41" columns="4">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="right" valignment="top">
 <column alignment="right" valignment="top">
@@ -95525,7 +95585,7 @@ reference "uguaglianza quantile standard"
  
 \begin_inset Formula 
 \begin{eqnarray}
-\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}} & = & z_{1-\alpha}\notag\\
+\frac{k_{\alpha}-\mu_{0}}{\sigma/\sqrt{n}} & = & z_{1-\alpha}\nonumber \\
 k_{\alpha} & = & \mu_{0}+z_{1-\alpha}\frac{\sigma}{\sqrt{n}}\text{.}\label{valore critico test sulla media normale}
 \end{eqnarray}
 
@@ -95606,7 +95666,7 @@ esso rimane costante
 \begin_inset Formula 
 \begin{eqnarray}
 \beta & = & 1-P\left(Z\leq z_{1-\alpha}-\left(\mu_{1}-\mu_{0}\right)\frac{\sqrt{n}}{\sigma}\right)\label{formula potenza media}\\
- & = & 1-\Phi\left(z_{1-\alpha}-\left(\mu_{1}-\mu_{0}\right)\frac{\sqrt{n}}{\sigma}\right)\notag
+ & = & 1-\Phi\left(z_{1-\alpha}-\left(\mu_{1}-\mu_{0}\right)\frac{\sqrt{n}}{\sigma}\right)\nonumber 
 \end{eqnarray}
 
 \end_inset
@@ -95708,6 +95768,10 @@ reference "formula potenza media"
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -95755,6 +95819,10 @@ Quando il livello di significatività
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -95796,6 +95864,10 @@ il test discrimina meglio fra l'ipotesi nulla e l'alternativa.
 \end_inset
 
 .
+\begin_inset Separator latexpar
+\end_inset
+
+
 \end_layout
 
 \begin_deeper
@@ -96962,7 +97034,7 @@ Può capitare che la popolazione sia la stessa, ma i campionamenti siano
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="3">
-<features rotate="0" tabularvalignment="middle">
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
